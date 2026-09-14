@@ -190,11 +190,6 @@
    drops files named by paragraph number and nothing in the JSON has to change.
    Until a file exists, a deliberate placeholder card shows in its place. */
 const $ = id => document.getElementById(id);
-// The standalone build inlines every JSON file as window.__ADVENTURE__ so the whole
-// site is one file that runs from disk with no server. Served normally, this is absent
-// and the app fetches the files as usual.
-const EMBED = window.__ADVENTURE__ || null;
-const getJSON = async path => (EMBED && EMBED[path]!==undefined) ? EMBED[path] : (await fetch(path)).json();
 let MANIFEST=null, BOOK=null, LEX={}, level=null, node=null;
 let flags=new Set(), seen=new Set(), maxDepth=0, depth={}, haveImg=new Set();
 
@@ -211,8 +206,8 @@ const pad=n=>String(n).padStart(2,"0");
 const imgBase=()=>`images/${BOOK.series}/ep-${pad(BOOK.episode)}`;
 
 async function boot(){
-  MANIFEST=await getJSON("manifest.json");
-  const lex=await getJSON(MANIFEST.lexicon);
+  MANIFEST=await (await fetch("manifest.json")).json();
+  const lex=await (await fetch(MANIFEST.lexicon)).json();
   const src=lex.entries||lex; LEX={};
   for(const k in src) LEX[k.toLowerCase()]=src[k];
   $("episode").innerHTML=MANIFEST.episodes
@@ -223,7 +218,7 @@ async function boot(){
 }
 
 async function openEpisode(file,preferLevel,intro){
-  BOOK=await getJSON(file);
+  BOOK=await (await fetch(file)).json();
   $("episode").value=file;
   const meta=MANIFEST.episodes.find(e=>e.file===file)||{};
   haveImg=new Set(meta.images||[]);
