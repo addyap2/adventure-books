@@ -136,6 +136,40 @@ pedagogy: understanding the paragraph changes the outcome.
   a speaker's check first — a wrong gloss the learner cannot detect is worse than none. This is
   the one hard gate between "done" and "launched", and it is what makes the flagship trustworthy.
 
+### 6a. Why three levels (A2/B1/B2), and no more
+
+The set is deliberate, and it is the standard for every book in the series:
+
+- **It matches the audience — who are also the protagonist.** The reader is a new arrival looking
+  for work in a system that does not see them; that is exactly who elementary-to-intermediate
+  learners often are. A2 as the floor fits them; B2 as the ceiling serves the classroom's stronger
+  readers. The band is aimed where the learners actually sit.
+- **It delivers the core promise cleanly.** "A mixed-level class reads the same story and discusses
+  it together" works best across a contiguous A2 → B1 → B2 span — one band apart each, no gaps.
+- **Three respects the 3× cost.** Every level is a full prose rewrite plus a gloss pass. For a
+  series of 10–15 books, a fourth level is +33% of authoring on every book, forever.
+
+**Not A1, not C1, by default.** A1 fights the format — a near-beginner cannot hold the multi-clause
+paragraph the genre's "understand it to choose correctly" mechanic depends on; A2 is the sensible
+floor. C1 is diminishing returns — B2 is already sophisticated and this realist subject has a
+natural vocabulary ceiling, so C1 readers read B2 comfortably. The validator already defines A1 and
+C1 bands, so a specific market can be served later **without re-architecting** — the extensibility
+is there; we simply do not pay for it now.
+
+### 6b. The caveat: CEFR governs the language, not the puzzle
+
+CEFR bands make the *sentences* level-appropriate, but the branching graph, the flags, and — above
+all — **the inference needed to pick the right choice are identical across all three levels** (same
+graph, same decisions). So the *cognitive* demand (reading a scam correctly, noticing the letters
+matter) is constant while the *language* gets easier. A true A2 reader can meet words they can read
+but reasoning that runs ahead of them.
+
+**Design rule that follows from this:** get the **A2 *choices*, not only the A2 prose, right.** At
+A2 the choice text must be unambiguous and low-inference, so the difficulty the learner meets is
+language — never a logic puzzle they cannot yet read their way through. **This is a required check
+in the pedagogy/native review** (see §6, launch gate): review each A2 choice for clarity and single,
+obvious meaning, independently of whether the prose passes its band.
+
 ---
 
 ## 7. Art (for the visual team)
