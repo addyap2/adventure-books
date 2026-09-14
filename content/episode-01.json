@@ -62,6 +62,10 @@
         {
           "text": "⟨STUB⟩ Wait a moment and watch who else gets off the train.",
           "goto": 41
+        },
+        {
+          "text": "⟨STUB⟩ Take stock of what you are actually carrying.",
+          "goto": 69
         }
       ]
     },
@@ -122,6 +126,10 @@
         {
           "text": "⟨STUB⟩ Check what you are carrying before you decide.",
           "goto": 42
+        },
+        {
+          "text": "⟨STUB⟩ Check your phone before you decide.",
+          "goto": 72
         }
       ]
     },
@@ -148,6 +156,10 @@
             "B2": "Close your eyes, just for a minute."
           },
           "goto": 8
+        },
+        {
+          "text": "⟨STUB⟩ Watch the city from the bus window.",
+          "goto": 79
         }
       ]
     },
@@ -770,6 +782,10 @@
             "rested",
             "dodged_scam"
           ]
+        },
+        {
+          "text": "⟨STUB⟩ Walk the waking quay first.",
+          "goto": 89
         }
       ]
     },
@@ -889,6 +905,10 @@
             "B2": "Say you must be lost, and walk away."
           },
           "goto": 34
+        },
+        {
+          "text": "⟨STUB⟩ Wait for her on the step as the office opens.",
+          "goto": 88
         }
       ],
       "note": "The patient route. Waiting at the wrong address turns out to be right, which rewards trusting the letter."
@@ -1140,6 +1160,10 @@
         {
           "text": "⟨STUB⟩ Wait — she has a question for you first.",
           "goto": 120
+        },
+        {
+          "text": "⟨STUB⟩ She shows you into her office.",
+          "goto": 85
         }
       ],
       "note": "The final comprehension check: the reader has to notice that HER mistake is their advantage."
@@ -1210,6 +1234,10 @@
         {
           "text": "⟨STUB⟩ Keep to yourself and go to the information desk.",
           "goto": 2
+        },
+        {
+          "text": "⟨STUB⟩ A guard is turning the lights off — you cannot linger.",
+          "goto": 77
         }
       ]
     },
@@ -1224,6 +1252,10 @@
         {
           "text": "⟨STUB⟩ Head out into the night, each your own way.",
           "goto": 3
+        },
+        {
+          "text": "⟨STUB⟩ Work out whether you can share the cost.",
+          "goto": 75
         }
       ]
     },
@@ -1657,6 +1689,10 @@
         {
           "text": "⟨STUB⟩ Wait by the water, and watch the door.",
           "goto": 31
+        },
+        {
+          "text": "⟨STUB⟩ Go up to reception and wait.",
+          "goto": 84
         }
       ]
     },
@@ -1671,6 +1707,238 @@
         {
           "text": "⟨STUB⟩ Keep to the water until nine.",
           "goto": 25
+        },
+        {
+          "text": "⟨STUB⟩ The agency man notices you watching.",
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "text": "⟨STUB⟩ In your bag there is the letter, a little money that will not last long, and a photograph you do not take out. You read the letter again, though you know every word.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Go and ask at the information desk.",
+          "goto": 2
+        },
+        {
+          "text": "⟨STUB⟩ Go out into the night.",
+          "goto": 3
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "text": "⟨STUB⟩ Your phone has one bar of battery left. You could use it now to look up the firm, or save it for something worse.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Use the last of it to search the firm.",
+          "goto": 73
+        },
+        {
+          "text": "⟨STUB⟩ Save it, and ask people instead.",
+          "goto": 4
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "text": "⟨STUB⟩ An old page loads, slowly: the firm's address is not Rosewater Street at all, but somewhere on the river. Then the screen goes black and stays black.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Take the bus — you know it is the river now.",
+          "goto": 4,
+          "sets": [
+            "knows_river"
+          ]
+        },
+        {
+          "text": "⟨STUB⟩ Walk, now that you know where.",
+          "goto": 5,
+          "sets": [
+            "knows_river"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "text": "⟨STUB⟩ Mara has more sense than money, and you have more money than sense. Between you there might be enough to do this properly.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Share a taxi, and drop Mara off first.",
+          "goto": 6
+        },
+        {
+          "text": "⟨STUB⟩ Take the bus together.",
+          "goto": 4
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "text": "⟨STUB⟩ A guard walks the concourse, turning off lights. \"Station's closing, love. You can't sit here.\" He is not unkind, only tired, and he means it.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Move on, out into the night.",
+          "goto": 3
+        },
+        {
+          "text": "⟨STUB⟩ Ask him the way before you go.",
+          "goto": 2
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "text": "⟨STUB⟩ From the bus window the city slides past, dark and wet and unfamiliar. You could get off early and find your own feet, or stay on to the proper stop.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Get off early and walk the last part.",
+          "goto": 5
+        },
+        {
+          "text": "⟨STUB⟩ Stay on to the Rosewater stop.",
+          "goto": 7
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "text": "⟨STUB⟩ Reception is warm and smells of coffee. The woman behind the desk is kind, and looks at you a moment longer than she needs to — last night is written all over you.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ She squeezes you in to see Ms Rowe.",
+          "goto": 35
+        },
+        {
+          "text": "⟨STUB⟩ No room today — but she takes your details.",
+          "goto": 37
+        },
+        {
+          "text": "⟨STUB⟩ A waiting candidate warns you about the agency too.",
+          "goto": 91
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "text": "⟨STUB⟩ Ms Rowe's office looks out over the water. On the desk is a folder, and on top of the folder is a letter you recognise: your own, sent to the wrong street, come back again.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ She slides it across: 'this came back to us twice'.",
+          "goto": 86
+        },
+        {
+          "text": "⟨STUB⟩ She sets it aside and asks about you.",
+          "goto": 120
+        },
+        {
+          "text": "⟨STUB⟩ You recognise the bridge you crossed in the dark.",
+          "goto": 92
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "text": "⟨STUB⟩ \"Someone here has been posting the old address for two years,\" she says, turning the returned letter over. \"You are not the first it sent the wrong way. You are the first to arrive anyway.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Offer to be the one who fixes the letters.",
+          "goto": 141
+        },
+        {
+          "text": "⟨STUB⟩ Just say you found them, anyway.",
+          "goto": 37
+        },
+        {
+          "text": "⟨STUB⟩ She calls in the colleague who kept sending them.",
+          "goto": 94
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "text": "⟨STUB⟩ She reaches the step with a coffee in one hand and keys in the other, and sees you waiting. \"You look like someone who has been up all night,\" she says. \"Come in.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Help her with the door, and walk in together.",
+          "goto": 35
+        },
+        {
+          "text": "⟨STUB⟩ Hang back, suddenly unsure.",
+          "goto": 34
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "text": "⟨STUB⟩ The quay is waking: gulls on the grey water, a coffee cart, delivery vans humming along the stone. You have time, for once, and clean hands, for once.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Walk the quay a while to steady your nerves.",
+          "goto": 67
+        },
+        {
+          "text": "⟨STUB⟩ Go straight in to reception.",
+          "goto": 30
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "text": "⟨STUB⟩ The man in the good suit from the agency sees you seeing him. For a second neither of you moves. Then he lets himself into the unmarked building and is gone.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Go in to reception before he can.",
+          "goto": 30
+        },
+        {
+          "text": "⟨STUB⟩ Look away, and keep to the water.",
+          "goto": 25
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "text": "⟨STUB⟩ \"They wanted money off me too,\" the other candidate says quietly. \"For 'registration'. I nearly paid it.\" You are not the only one, then, who nearly did.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Take the warning to heart.",
+          "goto": 35
+        },
+        {
+          "text": "⟨STUB⟩ Keep to yourself, and wait.",
+          "goto": 37
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "text": "⟨STUB⟩ Through the window you can see the bridge you crossed in the dark, and the black water under it, ordinary and grey now. It does not look far at all by daylight.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Look closer at the folder and the letter.",
+          "goto": 86
+        },
+        {
+          "text": "⟨STUB⟩ Keep your eyes on Ms Rowe.",
+          "goto": 120
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "text": "⟨STUB⟩ She calls in a younger colleague, who goes red to the ears. \"The old letterhead,\" she says, not unkindly. \"We will sort it. And you\" — to you — \"can help us sort it.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Your first job will be the letters.",
+          "goto": 141
+        },
+        {
+          "text": "⟨STUB⟩ She lets it go, for now.",
+          "goto": 37
         }
       ]
     }
