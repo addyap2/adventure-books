@@ -1515,7 +1515,7 @@
       "id": 41,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The last doors close and the platform empties around you. A few travellers hurry towards the exit with their collars up. One of them, a young traveller with a heavy rucksack, stops under a light and reads a scrap of paper, then reads it again — the way you keep reading your own letter. They look as lost as you feel.",
+        "B1": "The last doors close and the platform empties around you. A few travellers hurry towards the exit with their collars up. One of them stops under a light — a young traveller with a heavy rucksack — and reads a scrap of paper, then reads it again. They look as lost as you feel.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -1673,7 +1673,7 @@
       "id": 46,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "You almost miss it: a narrow side door, half behind the hoarding, with a thin line of light along the bottom. Someone is inside after all.",
+        "B1": "You almost miss it: a narrow side door, half hidden behind the hoarding. A thin line of light runs along the bottom of it. Someone is inside after all, this late. For a moment you simply stand and look at that small yellow line.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -1744,7 +1744,7 @@
       "id": 48,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "On the next bench a man sits with no bag and no coat, only a paper cup. He is not asking for anything. He has missed the last train and has nowhere to be until morning — the same as you, except that he has done this on many more nights than you have.",
+        "B1": "On the next bench a man sits with no bag and no coat, only a paper cup. He is not asking for anything. He has missed the last train, and has nowhere to be until morning. The same as you — except that he has done this on many more nights than you have.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -1770,7 +1770,7 @@
       "id": 120,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "Ms Rowe sits back in her chair and looks at you for a moment. \"Tell me,\" she says, \"why I should take on someone I have never met, who found us more or less by accident.\" It is a fair question, and she waits for your answer without hurrying you.",
+        "B1": "Ms Rowe sits back in her chair and looks at you for a moment. \"Tell me,\" she says. \"Why should I take on someone I have never met, who found us more or less by accident?\" It is a fair question. She waits for the answer, and does not hurry you.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -1796,7 +1796,7 @@
       "id": 121,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "You tell her about the bright office and the man in the good suit, and the two hundred he wanted before he would find you any work at all. She listens without a flicker. \"There is one of those on every corner now,\" she says quietly. \"You were right to walk away.\"",
+        "B1": "You tell her about the bright office, and the man in the good suit, and the two hundred he wanted up front. She listens without a flicker. \"There is one of those on every corner now,\" she says quietly. \"You were right to walk away.\"",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -1861,7 +1861,7 @@
       "id": 145,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "You share what little you have. The job does not come — the diary is full, the timing wrong. But the man from the bench, it turns out, has a room, a kettle and a spare key, and a brother who is always looking for hands. You are not hired. You are also, for the first time since the train, not alone.",
+        "B1": "You share what little you have. The job does not come — the diary is full, the timing wrong. But the man from the bench, it turns out, has a room, a kettle, a spare key. He has a brother, too, always looking for hands. You are not hired. You are also, for the first time since the train, not alone.",
         "B2": "⟨B2 pending⟩"
       },
       "ending": "neutral"
@@ -1879,7 +1879,7 @@
       "id": 147,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The morning comes up grey over the station bench, and you let it. You are too cold and too tired to move, and you tell yourself it is only for a minute. By the time you can feel your feet again, nine o'clock has come and gone — and so has the only reason you came to this city.",
+        "B1": "The morning comes up grey over the station bench, and you let it. You are too cold and too tired to move. It is only for a minute, you tell yourself. But by the time you can feel your feet, nine o'clock has gone — and so has the reason you came.",
         "B2": "⟨B2 pending⟩"
       },
       "ending": "bad"
@@ -1888,7 +1888,7 @@
       "id": 49,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "You take a wrong turn, and then another. The same shuttered shop goes past twice. The map in your hand has stopped meaning anything.",
+        "B1": "You take a wrong turn, and then another. The same shuttered shop slides past twice. The map in your hand has stopped meaning anything at all. The streets have gone quiet in the way they do at one in the morning, when the city belongs to no one.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -1922,7 +1922,7 @@
       "id": 50,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The light is a launderette, open all night, empty except for one attendant folding towels. He is glad of the company and knows the streets by heart.",
+        "B1": "The light comes from a launderette, open all night and empty except for one attendant folding towels. He is glad of the company. He knows these streets by heart, he says, and draws the way in the air with a warm, certain hand.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -1954,7 +1954,7 @@
       "id": 51,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "On the glass of an inner door at the back, a painted name is half scraped away: you can still read ROWE under the marks. Someone left in a hurry, or someone wanted it gone.",
+        "B1": "On the glass of an inner door at the back, a painted name is half scraped away. You can still read ROWE under the marks. Someone left in a hurry once, or someone wanted the name gone. In the dark, it is hard to say which is worse.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -1988,7 +1988,7 @@
       "id": 52,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "An upstairs window at number 16 is lit. A girl of about ten watches you from behind the glass, quite calm, the way children watch when they are used to strangers at odd hours.",
+        "B1": "An upstairs window at number 16 is lit. A girl of about ten watches you from behind the glass, quite calm. She is used to strangers at odd hours. She does not wave. She only looks, and waits to see what you will do.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2014,7 +2014,7 @@
       "id": 53,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "A night bus swings around the far corner, its windows warm and yellow, heading the way you think the river lies. It will not wait.",
+        "B1": "A night bus swings round the far corner, its windows warm and yellow, heading the way you think the river lies. It does not slow down. You have a few seconds to decide, and your feet are already tired of deciding.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2040,7 +2040,7 @@
       "id": 54,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "A bridge crosses the black water. On the far side the new offices stand dark and clean, all glass — except one window, high up, where a single light is still on.",
+        "B1": "A bridge crosses the black water. On the far side the new offices stand dark and clean, all glass. Only one window is lit, high up, a single square of light. You stand on the bridge a moment and watch it, and it does not go out.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2066,7 +2066,7 @@
       "id": 55,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "A night watchman leans out of a lit hut at the gate. \"Kessler and Rowe? Second floor. But there's nobody in till nine, love. Go and get warm.\" He says it kindly.",
+        "B1": "A night watchman leans out of a lit hut by the gate. \"Kessler and Rowe? Second floor. But there's nobody in till nine, love.\" He says it kindly, and nods you towards the warmth of the hut. \"Go on. Get out of the cold.\"",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2106,7 +2106,7 @@
       "id": 56,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The Blue Kettle is shut, but there is a light in the back and the shape of someone stacking chairs. The business card is still taped inside the window.",
+        "B1": "The Blue Kettle is shut, but there is a light in the back, and the shape of someone stacking chairs. The business card is still taped inside the window, exactly where it was. You cup your hands to the glass and breathe, and wait to be noticed.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2140,7 +2140,7 @@
       "id": 57,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The woman inside lets you say your piece through a gap in the door. \"Kessler and Rowe? Ada Rowe, you mean. She's down at the river now. Comes in here for her coffee.\"",
+        "B1": "The woman inside lets you say your piece through a gap in the door. \"Kessler and Rowe? Ada Rowe, you mean. She's down at the river now.\" She almost smiles. \"Comes in here for her coffee, every morning. You'll not miss her.\"",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2172,7 +2172,7 @@
       "id": 58,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The cleaner who woke you is not unkind about it. She pours you half a cup from a flask before you can say no, and asks, without much curiosity, where you have come from.",
+        "B1": "The cleaner who woke you is not unkind about it. She pours you half a cup from a flask before you can say no. \"Where've you come from, then,\" she asks, without much curiosity, in the way of someone who has asked it many times before.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2206,7 +2206,7 @@
       "id": 59,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "At breakfast, Mara is there too — she took a room here as well. \"There is an agency across the road,\" she says, low. \"They wanted money off me last night. Don't.\"",
+        "B1": "At breakfast, Mara is there too; she took a room here as well. She leans across the little table. \"There's an agency across the road,\" she says, low. \"They wanted money off me last night, before they'd find me anything. Don't. Whatever they say, don't.\"",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2240,7 +2240,7 @@
       "id": 60,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "A queue has formed outside WORK FOR EVERYONE before it is even open. Tired faces, early light. A woman near the front counts out the last of her notes, twice.",
+        "B1": "A queue has already formed outside WORK FOR EVERYONE, before it is even open. Tired faces, early light, breath showing in the cold. Near the front a woman counts out the last of her notes, twice, as if the number might change if she is careful enough.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2274,7 +2274,7 @@
       "id": 61,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The man in the good suit slides a form across. \"Two hundred for registration, then we place you today.\" The small print underneath is grey and very small.",
+        "B1": "The man in the good suit slides a form across the desk. \"Two hundred for registration, then we place you today. Everybody pays it.\" The small print underneath is grey and very small. He is already reaching for your money before you have read a word.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2306,7 +2306,7 @@
       "id": 62,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "Outside, a man leans on the wall with a receipt like the one you would have had. \"Paid them last week,\" he says. \"They never called. You didn't, did you?\"",
+        "B1": "Outside, a man leans on the wall with a receipt like the one you would have had. \"Paid them last week,\" he says. \"They never called.\" He looks at you, almost sorry for you. \"You didn't, did you. Tell me you didn't.\"",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2340,7 +2340,7 @@
       "id": 63,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "On the reception desk there is a tray of returned post — old letters, each with the Rosewater Street address crossed out by hand. Your own letter, you realise, is one of these.",
+        "B1": "On the reception desk there is a tray of returned post — old letters, each with the Rosewater Street address crossed out by hand. You look again. One of them, you realise slowly, is your own: the letter that brought you across a country to the wrong door.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2366,7 +2366,7 @@
       "id": 65,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The driver settles into the story as he drives. \"They all moved to the river — glass offices, very smart. And watch the work agencies near the station. They are not what they look like.\"",
+        "B1": "The driver settles into the story as he drives. \"They all moved to the river. Glass offices, very smart.\" He catches your eye in the mirror. \"And watch the work agencies near the station. They are not what they look like. Not for people like you.\"",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2398,7 +2398,7 @@
       "id": 67,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "First light comes up grey over Mill Quay. A coffee cart is opening; delivery vans hum along the water. You are early, and for once you know exactly where you are.",
+        "B1": "First light comes up grey over Mill Quay. A coffee cart is opening; delivery vans hum along the water. You are early, and you are clean. For the first time since the train, you know where you are, and where you are going.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2440,7 +2440,7 @@
       "id": 68,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "Watching the other doors along the quay, you see the man in the good suit from the agency let himself into a building two doors down — no sign, no name on it at all.",
+        "B1": "Watching the other doors along the quay, you see him: the man in the good suit from the agency. He lets himself into a building two doors down. There is no sign on it, and no name. Something about the way he looks around first tells you everything.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2474,7 +2474,7 @@
       "id": 69,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "In your bag there is the letter, a little money that will not last long, and a photograph you do not take out. You read the letter again, though you know every word.",
+        "B1": "In your bag there is the letter, a little money that will not last long, and a photograph you do not take out. You read the letter again, though you know every word by heart. It is as if the words might have changed while you slept.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2500,7 +2500,7 @@
       "id": 72,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "Your phone has one bar of battery left. You could use it now to look up the firm, or save it for something worse.",
+        "B1": "Your phone has one bar of battery left. One. You could use it now to look up the firm and settle the question, or save it for something worse later on. In a strange city at night, a dying phone is a kind of clock, counting down.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2526,7 +2526,7 @@
       "id": 73,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "An old page loads, slowly: the firm's address is not Rosewater Street at all, but somewhere on the river. Then the screen goes black and stays black.",
+        "B1": "An old page loads, slowly. The firm's address is not Rosewater Street at all, but somewhere down on the river. Then the screen goes black and stays black, and you are alone again with a paper letter and whatever you can remember.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2558,7 +2558,7 @@
       "id": 75,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "Mara has more sense than money, and you have more money than sense. Between you there might be enough to do this properly.",
+        "B1": "Mara has more sense than money, and you have a little more money than sense. Between you there might be just enough to do this properly. Otherwise you will both walk half the night the wrong way, too proud to say you are lost.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2584,7 +2584,7 @@
       "id": 77,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "A guard walks the concourse, turning off lights. \"Station's closing, love. You can't sit here.\" He is not unkind, only tired, and he means it.",
+        "B1": "A guard walks the concourse, turning off the lights one bank at a time. \"Station's closing. You can't sit here.\" He is not unkind, only tired, and he means it. Behind him the big hall goes dark in pieces, and the cold comes in.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2610,7 +2610,7 @@
       "id": 79,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "From the bus window the city slides past, dark and wet and unfamiliar. You could get off early and find your own feet, or stay on to the proper stop.",
+        "B1": "From the bus window the city slides past, dark and wet and unfamiliar. You could get off early and find your own feet. Or you could stay on to the proper stop, and trust the driver to know his route better than you.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2636,7 +2636,7 @@
       "id": 84,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "Reception is warm and smells of coffee. The woman behind the desk is kind, and looks at you a moment longer than she needs to — last night is written all over you.",
+        "B1": "Reception is warm and smells of coffee. The woman behind the desk is kind, and she looks at you a moment longer than she needs to. Last night is written all over you — the creased coat, the tired eyes — and she reads it without a word.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2670,7 +2670,7 @@
       "id": 85,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "Ms Rowe's office looks out over the water. On the desk is a folder, and on top of the folder is a letter you recognise: your own, sent to the wrong street, come back again.",
+        "B1": "Ms Rowe's office looks out over the water. On the desk is a folder, and on top of the folder is a letter you recognise. It is your own — sent to the wrong street, and come back here again. She sees you see it, and says nothing yet.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2738,7 +2738,7 @@
       "id": 88,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "She reaches the step with a coffee in one hand and keys in the other, and sees you waiting. \"You look like someone who has been up all night,\" she says. \"Come in.\"",
+        "B1": "She reaches the step with a coffee in one hand and keys in the other, and sees you waiting there. She does not seem surprised. \"You look like someone who has been up all night,\" she says, unlocking the door. \"Come in, before we both freeze.\"",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2764,7 +2764,7 @@
       "id": 89,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The quay is waking: gulls on the grey water, a coffee cart, delivery vans humming along the stone. You have time, for once, and clean hands, for once.",
+        "B1": "The quay is waking around you: gulls on the grey water, a coffee cart, delivery vans humming along the stone. You have time, for once, and clean hands, for once. It is a strange thing, after such a night, to be simply early.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2790,7 +2790,7 @@
       "id": 90,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The man in the good suit from the agency sees you seeing him. For a second neither of you moves. Then he lets himself into the unmarked building and is gone.",
+        "B1": "The man in the good suit from the agency sees you seeing him. For a second neither of you moves. Then he lets himself into the unmarked building and is gone. You understand, standing there, exactly what kind of place you walked out of.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2816,7 +2816,7 @@
       "id": 91,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "\"They wanted money off me too,\" the other candidate says quietly. \"For 'registration'. I nearly paid it.\" You are not the only one, then, who nearly did.",
+        "B1": "\"They wanted money off me too,\" the other candidate says quietly. \"For registration, they called it. I nearly paid.\" She shakes her head at herself. You are not the only one, then. That is worth something, though you could not say quite what.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2842,7 +2842,7 @@
       "id": 92,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "Through the window you can see the bridge you crossed in the dark, and the black water under it, ordinary and grey now. It does not look far at all by daylight.",
+        "B1": "Through the window you can see the bridge you crossed in the dark. The black water under it is ordinary and grey now. It does not look far at all by daylight. Most things do not, you are learning, by daylight.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2868,7 +2868,7 @@
       "id": 94,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "She calls in a younger colleague, who goes red to the ears. \"The old letterhead,\" she says, not unkindly. \"We will sort it. And you\" — to you — \"can help us sort it.\"",
+        "B1": "She calls in a younger colleague, who goes red to the ears. \"The old letterhead,\" she says, not unkindly. \"We'll sort it.\" Then she turns back to you. \"And you can help us sort it. You clearly know the way better than we do.\"",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2894,7 +2894,7 @@
       "id": 95,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The kiosk woman calls after you: \"There's a back way into number 14 — through the yard. The front door hasn't opened in years.\"",
+        "B1": "The kiosk woman calls after you, pulling the shutter the last of the way down. \"There's a back way into number 14, through the yard. The front door hasn't opened in years.\" She points with her chin, already turning for home.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2920,7 +2920,7 @@
       "id": 96,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "In the yard a low window is lit. Inside, on a desk, there is a tray of envelopes, stamped and ready — all addressed, you see with a chill, to Rosewater Street.",
+        "B1": "In the yard a low window is lit. Inside, on a desk, there is a tray of envelopes, stamped and ready to post. You lean closer, and the cold goes through you: every one of them is addressed to Rosewater Street. To here. To no one at all.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2946,7 +2946,7 @@
       "id": 97,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "Before you go, the upstairs window opens and the girl leans out. \"They're by the river now,\" she says, matter-of-fact. \"Ada Rowe. My dad used to work for her.\"",
+        "B1": "Before you go, the upstairs window opens and the girl leans out into the cold. \"They're by the river now,\" she says, matter-of-fact, as if you should have known. \"Ada Rowe. My dad used to work for her, before all this.\"",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -2972,7 +2972,7 @@
       "id": 98,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "\"Three Mill Quay,\" she says, as if everyone knows. \"Take the number four in the morning.\" Then her father calls her in, and the window shuts.",
+        "B1": "\"Three Mill Quay,\" she says, as if everyone knows it. \"Take the number four in the morning. It stops right outside.\" Then her father's voice calls her back inside. The window shuts, and the street is yours again.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3006,7 +3006,7 @@
       "id": 99,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "By the water you lose the thread of the streets entirely. But a boathouse has its lights on, early, and there is the knock of oars being carried down to the river.",
+        "B1": "By the water you lose the thread of the streets entirely. But a boathouse has its lights on, early. You can hear long oars being carried down to the river. There are low voices too — people with somewhere to be.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3032,7 +3032,7 @@
       "id": 100,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "\"Mill Quay? Straight along, past the second bridge.\" The rower barely breaks step. \"Ten minutes. You're nearly there.\"",
+        "B1": "\"Mill Quay? Straight along, past the second bridge. Ten minutes.\" The rower barely breaks step, an oar balanced on one shoulder. \"You're nearly there,\" he adds, seeing your face. \"Whatever it is, you're nearly there now.\"",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3064,7 +3064,7 @@
       "id": 101,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The new development has a glass lobby, lit and empty, a guard's cap on an untended desk. Everything here is two years newer than the letter in your bag.",
+        "B1": "The new development has a glass lobby, lit and empty, a guard's cap left on an untended desk. Everything here is two years newer than the letter in your bag. You stand outside it in last night's clothes, and feel every one of those two years.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3090,7 +3090,7 @@
       "id": 102,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "You wait for the café to open. The sky goes from black to the colour of dishwater, and a light comes on inside at last.",
+        "B1": "You wait for the café to open. The sky goes slowly from black to the colour of dishwater. Your feet have stopped hurting, which you suspect is worse than if they still did. At last a light comes on inside, and a chair scrapes.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3116,7 +3116,7 @@
       "id": 103,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "One of the early regulars looks up. \"Kessler and Rowe? I did their books, years back. Good people. Bad with letters.\" He laughs at his own joke.",
+        "B1": "One of the early regulars looks up from his tea. \"Kessler and Rowe? I did their books, years back. Good people.\" He laughs at some private joke. \"Bad with letters, mind. Always were. Ask anyone who ever waited on one.\"",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3142,7 +3142,7 @@
       "id": 104,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The hotel man leans on the desk. \"Word of advice — that agency across the way, the yellow sign? Don't. They took a lad's last money on Tuesday.\"",
+        "B1": "The hotel man leans on the desk, in no hurry. \"Word of advice,\" he says. \"That agency across the way, the yellow sign? Don't. They took a lad's last money on Tuesday, and he's still in my lobby, too ashamed to go home.\"",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3168,7 +3168,7 @@
       "id": 105,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The first bus of the day sighs up to the stop, warm and almost empty. It will go towards Rosewater, or you could change for the river.",
+        "B1": "The first bus of the day sighs up to the stop, warm and almost empty, its windows running with the cold. It will go towards Rosewater, or you could change for the river. Either way it is moving, which is more than you have managed all night.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3194,7 +3194,7 @@
       "id": 106,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The address the agency gave you is an empty lot behind a fence. There was never any job. There was only the two hundred, and it is gone.",
+        "B1": "The address the agency gave you turns out to be an empty lot behind a fence — weeds, a burnt mattress, nothing else. There was never any job here. There was only the two hundred, and the man in the good suit, and both are long gone.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3220,7 +3220,7 @@
       "id": 107,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "A woman near you in the queue reads the form, folds it, and hands it back. \"It's a swindle,\" she says, loud enough for the others. \"Come on.\" A few of you leave together.",
+        "B1": "A woman near you in the queue reads the form, folds it in half, and hands it back. \"It's a swindle,\" she says, loud enough for the others to hear. \"Come on. All of you.\" And a few of you, hardly believing it, follow her out into the light.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3246,7 +3246,7 @@
       "id": 108,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The taxi carries you through streets with nobody on them, past shuttered shops and one all-night café throwing yellow light on the wet road.",
+        "B1": "The taxi carries you through streets with nobody on them. Shuttered shops, one all-night café throwing yellow light on the wet road, a fox at a corner. The driver hums to the radio. For a few minutes it is almost restful, being carried, deciding nothing.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3272,7 +3272,7 @@
       "id": 109,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The man at the desk draws you a better map on the back of a receipt, and marks the river with a small square. \"That's where the smart ones went,\" he says.",
+        "B1": "The man at the desk draws you a better map on the back of a receipt, and marks the river with a small careful square. \"That's where the smart ones went,\" he says, sliding it under the glass. \"Off you go, then. Mind how you go.\"",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3298,7 +3298,7 @@
       "id": 110,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "You walk to the quay in the growing light, past people going to work who know exactly where they are going. For the first time, so do you.",
+        "B1": "You walk to the quay in the growing light, past people going to work who know exactly where they are going. For the first time, so do you. It changes how you walk, knowing where you are going. You had forgotten that it would.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3324,7 +3324,7 @@
       "id": 111,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The young woman from number 16 is going the same way. \"Number four,\" she says, nodding at the bus. \"I'll show you where to get off.\"",
+        "B1": "The young woman from number 16 is going the same way. \"Number four,\" she says, nodding at the bus. \"I'll show you where to get off.\" She says it easily, as if helping a stranger to work were nothing at all. Perhaps, here, it is.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3350,7 +3350,7 @@
       "id": 112,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "You go to the office to explain yourself, late and out of breath, rehearsing the words on the stairs.",
+        "B1": "You go to the office to explain yourself, late and out of breath, rehearsing the words on the stairs. None of them sound right. All of them begin with sorry. And you have a feeling, climbing, that sorry is not going to be enough this morning.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3376,7 +3376,7 @@
       "id": 113,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The woman at the coffee cart takes one look at you and puts an extra shot in, no charge. \"Long night,\" she says. It is not a question.",
+        "B1": "The woman at the coffee cart takes one look at you and puts an extra shot in, no charge. \"Long night,\" she says. It is not a question. You hold the hot cup in both hands and feel it in your fingers first, and then, slowly, everywhere else.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3402,7 +3402,7 @@
       "id": 114,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "You sit with the cold coffee and decide, finally, to trust the letter that brought you here — or at least the person who wrote it.",
+        "B1": "You sit with the cold coffee and decide, finally, to trust the letter that brought you here. Or at least to trust the person who wrote it; someone, somewhere, meant you to come. That has to count for something. You fold the letter away and stand up.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3428,7 +3428,7 @@
       "id": 115,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "You cross an empty market square, the stalls folded away, a single fox trotting along the gutter as though it owns the hour.",
+        "B1": "You cross an empty market square, the stalls folded away for the night, wet cobbles shining under one lamp. A single fox trots along the gutter as though it owns the hour. It glances at you once, and decides you are nothing to worry about.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3454,7 +3454,7 @@
       "id": 116,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "A taxi idles at the kerb, its light on, the driver reading a paper. It would cost you, but it would end the walking.",
+        "B1": "A taxi idles at the kerb, its light on, the driver reading a paper by the dashboard glow. It would cost you more than you want to spend. But it would end the walking, and the walking has begun to feel like the whole of your life.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3480,7 +3480,7 @@
       "id": 117,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The cleaner sighs and props the door. \"Leave a note if you must,\" she says. \"I'll put it on Ada's desk. No promises.\"",
+        "B1": "The cleaner sighs and props the door with her foot. \"Leave a note if you must,\" she says. \"I'll put it on Ada's desk in the morning. No promises, mind.\" She holds out a hand for it, already looking past you at all she has to do.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3506,7 +3506,7 @@
       "id": 118,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "You take a photograph of the half-scraped name, twice, so you have it whatever happens. Proof, of a kind, that you were here and looked.",
+        "B1": "You take a photograph of the half-scraped name, twice, in case one comes out blurred. Proof, of a kind, that you were here and looked, and did not simply give up. You are not sure who you are proving it to. Yourself, probably. It will have to do.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3532,7 +3532,7 @@
       "id": 119,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "You wait outside the café for it to open, stamping your feet against the cold, watching the card in the window as if it might change its mind.",
+        "B1": "You wait outside the café for it to open, stamping your feet against the cold. You watch the card in the window as if it might change its mind. It does not. It says exactly what it said an hour ago. But it is something to watch, and you are past being proud.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3558,7 +3558,7 @@
       "id": 122,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The late worker is going your way and splits a cab. \"You'll never find it on foot in the dark,\" she says. \"And you look done in.\"",
+        "B1": "The late worker is going your way and splits a cab with you. \"You'll never find it on foot in the dark,\" she says, not unkindly. \"And you look done in.\" You get in gratefully. The heater is on, and for ten minutes you let someone else know the way.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3584,7 +3584,7 @@
       "id": 123,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The watchman waves you into the warm of his hut and pours something from a flask. \"Nine o'clock,\" he says again, kindly. \"Not a minute before.\"",
+        "B1": "The watchman waves you into the warmth of his hut and pours something from a flask into a tin cup. \"Nine o'clock,\" he says again, kindly. \"Not a minute before. So you may as well be warm about it.\" You wrap both hands round the cup and stay.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3610,7 +3610,7 @@
       "id": 124,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "In the coffee-cart queue you hear the name before you see anyone: \"...Ada Rowe wants the Thursday figures...\" Two people from the second floor, talking shop.",
+        "B1": "In the coffee-cart queue you hear the name before you see anyone. \"...Ada Rowe wants the Thursday figures...\" Two people from the second floor, talking shop, coats over their arms. You are close now. You can hear the ordinary morning of the place you have been trying all night to reach.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3636,7 +3636,7 @@
       "id": 125,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "Mara is at breakfast with the same idea as you. \"The river,\" she says. \"We could go together. Safer, and I hate arriving alone.\"",
+        "B1": "Mara is at breakfast with the same idea as you. \"The river,\" she says. \"We could go together. Safer, and I hate arriving alone.\" She says the last part quietly, and you understand it completely, because so do you. So you finish your coffee and go together.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3662,7 +3662,7 @@
       "id": 126,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "The cleaner has worked the station twenty years. \"Kessler and Rowe,\" she says. \"They did right by my sister once. Go and find them. Don't sleep your chance away.\"",
+        "B1": "The cleaner has worked this station for twenty years. \"Kessler and Rowe,\" she says, leaning on her machine. \"They did right by my sister once, when nobody else would.\" She looks at you steadily. \"Go and find them. Don't sleep your chance away on my bench.\"",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3688,7 +3688,7 @@
       "id": 127,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "You leave your name and number with the counter man, just in case. \"If they come in,\" you say. He nods as if he has heard it before, which he has.",
+        "B1": "You leave your name and number with the counter man, just in case. \"If they come in,\" you say. He writes it on the back of a docket and nods, as if he has heard it many times before. Which, you understand, he has. Everyone here is looking for someone.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3714,7 +3714,7 @@
       "id": 128,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "Dawn on the bench. Your back is ruined and your money is nearly gone, but you are not, it turns out, ready to give up. Not quite yet.",
+        "B1": "Dawn on the bench. Your back is ruined and your money is nearly gone. But you are not, it turns out, ready to give up. Not quite yet. You sit up. The morning is grey and ordinary and full of buses, and one of them is going your way.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
@@ -3740,7 +3740,7 @@
       "id": 129,
       "text": {
         "A2": "⟨A2 pending⟩",
-        "B1": "You cannot afford the room. The man behind the desk sees it, and something in him gives. \"Sit in the lobby till it's light,\" he says. \"I never saw you.\"",
+        "B1": "You cannot afford the room, and the man behind the desk sees it, and something in him gives. \"Sit in the lobby till it's light,\" he says, turning back to his book. \"There's a radiator by the window. I never saw you.\" You sit. You could have wept, but you sit.",
         "B2": "⟨B2 pending⟩"
       },
       "choices": [
