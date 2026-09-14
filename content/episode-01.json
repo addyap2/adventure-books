@@ -26,7 +26,13 @@
   "state_in": [],
   "state_out": [
     "has_card",
-    "knows_name"
+    "knows_name",
+    "knows_river",
+    "dodged_scam",
+    "paid_scam",
+    "rested",
+    "rough_night",
+    "told_truth"
   ],
   "nodes": [
     {
@@ -52,6 +58,10 @@
             "B2": "Go outside and find the street under your own steam."
           },
           "goto": 3
+        },
+        {
+          "text": "⟨STUB⟩ Wait a moment and watch who else gets off the train.",
+          "goto": 41
         }
       ]
     },
@@ -78,6 +88,10 @@
             "B2": "Walk instead; on the map it looks simple enough."
           },
           "goto": 5
+        },
+        {
+          "text": "⟨STUB⟩ Ask the man if others have come looking for this firm.",
+          "goto": 43
         }
       ]
     },
@@ -104,6 +118,10 @@
             "B2": "Take a taxi and buy yourself some time."
           },
           "goto": 6
+        },
+        {
+          "text": "⟨STUB⟩ Check what you are carrying before you decide.",
+          "goto": 42
         }
       ]
     },
@@ -173,7 +191,10 @@
             "B1": "Ask him to take you there anyway.",
             "B2": "Ask him to take you there regardless."
           },
-          "goto": 7
+          "goto": 7,
+          "sets": [
+            "knows_river"
+          ]
         },
         {
           "text": {
@@ -181,7 +202,10 @@
             "B1": "Ask him to take you to a cheap hotel instead.",
             "B2": "Ask him to take you somewhere cheap to sleep instead."
           },
-          "goto": 10
+          "goto": 10,
+          "sets": [
+            "knows_river"
+          ]
         }
       ]
     },
@@ -215,7 +239,14 @@
             "B1": "Give up for tonight and find somewhere to sleep.",
             "B2": "Give up for tonight and find somewhere to sleep."
           },
-          "goto": 13
+          "goto": 13,
+          "sets": [
+            "rough_night"
+          ]
+        },
+        {
+          "text": "⟨STUB⟩ Read the notices on the builders' hoarding.",
+          "goto": 45
         }
       ]
     },
@@ -233,7 +264,10 @@
             "B1": "Look for somewhere to sleep near here.",
             "B2": "Look for somewhere to sleep within walking distance."
           },
-          "goto": 13
+          "goto": 13,
+          "sets": [
+            "rough_night"
+          ]
         },
         {
           "text": {
@@ -241,7 +275,10 @@
             "B1": "Start walking back across the city.",
             "B2": "Start walking back across the city on foot."
           },
-          "goto": 14
+          "goto": 14,
+          "sets": [
+            "rough_night"
+          ]
         }
       ]
     },
@@ -285,7 +322,10 @@
             "B1": "Take the room and sleep.",
             "B2": "Take the room and sleep on it."
           },
-          "goto": 16
+          "goto": 16,
+          "sets": [
+            "rested"
+          ]
         },
         {
           "text": {
@@ -293,7 +333,10 @@
             "B1": "Decide it is too expensive and sleep at the station.",
             "B2": "Decide it is too expensive and go back to sleep at the station."
           },
-          "goto": 13
+          "goto": 13,
+          "sets": [
+            "rough_night"
+          ]
         }
       ]
     },
@@ -320,6 +363,10 @@
             "B2": "Knock on the glass and see who comes."
           },
           "goto": 18
+        },
+        {
+          "text": "⟨STUB⟩ Try the side door you can just make out.",
+          "goto": 46
         }
       ]
     },
@@ -339,7 +386,8 @@
           },
           "goto": 17,
           "sets": [
-            "knows_name"
+            "knows_name",
+            "knows_river"
           ]
         },
         {
@@ -350,7 +398,8 @@
           },
           "goto": 19,
           "sets": [
-            "knows_name"
+            "knows_name",
+            "knows_river"
           ]
         }
       ],
@@ -379,6 +428,10 @@
             "B2": "Buy a coffee you cannot really afford and think."
           },
           "goto": 21
+        },
+        {
+          "text": "⟨STUB⟩ Notice someone worse off than you nearby.",
+          "goto": 48
         }
       ]
     },
@@ -404,7 +457,10 @@
             "B1": "Keep walking until nine o'clock.",
             "B2": "Keep walking until nine and arrive exhausted."
           },
-          "goto": 22
+          "goto": 22,
+          "sets": [
+            "rough_night"
+          ]
         }
       ]
     },
@@ -580,6 +636,10 @@
             "B2": "Give up on all this and try the agency instead."
           },
           "goto": 24
+        },
+        {
+          "text": "⟨STUB⟩ Leave your name at the empty office and go.",
+          "goto": 143
         }
       ]
     },
@@ -632,6 +692,10 @@
             "B2": "Ask someone at the stop whether they have heard of the company."
           },
           "goto": 29
+        },
+        {
+          "text": "⟨STUB⟩ Stay on the bench and let the morning pass.",
+          "goto": 147
         }
       ]
     },
@@ -658,6 +722,14 @@
             "B2": "Wait outside for a while and watch who goes in."
           },
           "goto": 31
+        },
+        {
+          "text": "⟨STUB⟩ Walk straight in — rested, clear-headed, nothing owed.",
+          "goto": 142,
+          "requires": [
+            "rested",
+            "dodged_scam"
+          ]
         }
       ]
     },
@@ -675,7 +747,10 @@
             "B1": "Pay him the two hundred.",
             "B2": "Pay the two hundred and be done with it."
           },
-          "goto": 32
+          "goto": 32,
+          "sets": [
+            "paid_scam"
+          ]
         },
         {
           "text": {
@@ -683,7 +758,10 @@
             "B1": "Say no thank you and leave.",
             "B2": "Say no thank you, and leave while you still can."
           },
-          "goto": 33
+          "goto": 33,
+          "sets": [
+            "dodged_scam"
+          ]
         }
       ],
       "note": "Comprehension check: the reader must notice 'everybody pays it' is the sales line, not a fact."
@@ -809,7 +887,8 @@
           },
           "goto": 23,
           "sets": [
-            "has_card"
+            "has_card",
+            "knows_river"
           ]
         },
         {
@@ -818,7 +897,10 @@
             "B1": "Go back to Rosewater Street first.",
             "B2": "Go back to Rosewater Street first, just to be sure."
           },
-          "goto": 34
+          "goto": 34,
+          "sets": [
+            "knows_river"
+          ]
         }
       ]
     },
@@ -845,6 +927,10 @@
             "B2": "Apologise, thank her, and leave."
           },
           "goto": 37
+        },
+        {
+          "text": "⟨STUB⟩ Give only your name and the reference number.",
+          "goto": 144
         }
       ]
     },
@@ -953,6 +1039,10 @@
             "B2": "Go back to the station and call it a day."
           },
           "goto": 40
+        },
+        {
+          "text": "⟨STUB⟩ Reach Mill Quay at last — twenty past nine.",
+          "goto": 146
         }
       ]
     },
@@ -970,7 +1060,10 @@
             "B1": "Tell her the whole story of last night.",
             "B2": "Tell her the whole story of the last twelve hours."
           },
-          "goto": 36
+          "goto": 36,
+          "sets": [
+            "told_truth"
+          ]
         },
         {
           "text": {
@@ -979,6 +1072,10 @@
             "B2": "Say nothing about the night and talk only about the job."
           },
           "goto": 37
+        },
+        {
+          "text": "⟨STUB⟩ Wait — she has a question for you first.",
+          "goto": 120
         }
       ],
       "note": "The final comprehension check: the reader has to notice that HER mistake is their advantage."
@@ -1037,6 +1134,199 @@
       "ending": "bad",
       "choices": [],
       "note": "Giving up. Deliberately quiet rather than dramatic — the cost is what you don't see."
+    },
+    {
+      "id": 41,
+      "text": "⟨STUB⟩ The platform empties. You watch who else got off the late train — among them a young traveller reading an address on a scrap of paper, the way you are.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Fall into step with the young traveller.",
+          "goto": 42
+        },
+        {
+          "text": "⟨STUB⟩ Keep to yourself and go to the information desk.",
+          "goto": 2
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "text": "⟨STUB⟩ The young traveller is Mara, also here for work, also new. For a few minutes in a cold station you are not quite alone.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Ask the newsstand man about your address.",
+          "goto": 43
+        },
+        {
+          "text": "⟨STUB⟩ Head out into the night, each your own way.",
+          "goto": 3
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "text": "⟨STUB⟩ The night-shift man at the newsstand reads your letter. \"Rosewater Street? Third one this month I've sent that way. Somebody up there still posts the old address.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Ask what he means — 'third one this month'.",
+          "goto": 44
+        },
+        {
+          "text": "⟨STUB⟩ Just take the bus he points you to.",
+          "goto": 4,
+          "sets": [
+            "knows_river"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "text": "⟨STUB⟩ He shrugs. \"They moved to the river years back. But the letters still go out with the old street on them. Not my business.\" It is, you think, somebody's business.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Take the bus to Rosewater Street anyway.",
+          "goto": 4,
+          "sets": [
+            "knows_river"
+          ]
+        },
+        {
+          "text": "⟨STUB⟩ Walk, to save the fare.",
+          "goto": 5,
+          "sets": [
+            "knows_river"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "text": "⟨STUB⟩ On the builders' hoarding a torn notice still carries the firm's name. Under it, in marker, someone has written a single word and an arrow: MOVED →, pointing east, toward the water.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Follow the arrow toward the river.",
+          "goto": 19,
+          "sets": [
+            "knows_river"
+          ]
+        },
+        {
+          "text": "⟨STUB⟩ Try number 16 first.",
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "text": "⟨STUB⟩ There is a narrow side door you had not seen, and a thread of light under it.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ A cleaner opens it and waves you off.",
+          "goto": 18
+        },
+        {
+          "text": "⟨STUB⟩ Wait quietly on the side step.",
+          "goto": 47
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "text": "⟨STUB⟩ A woman comes out pulling on her coat — a late worker, not a stranger to the place. \"Nobody here now,\" she says, not unkindly. \"They're by the river. Or ask at the café.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Head for the river at first light.",
+          "goto": 17,
+          "sets": [
+            "knows_river"
+          ]
+        },
+        {
+          "text": "⟨STUB⟩ Go to the café on the corner.",
+          "goto": 15
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "text": "⟨STUB⟩ By the bench you find someone worse off than you — cold, no ticket, no plan. You have almost nothing yourself. Almost.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Share what little you have.",
+          "goto": 145
+        },
+        {
+          "text": "⟨STUB⟩ Keep it, and keep moving.",
+          "goto": 21
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "text": "⟨STUB⟩ Ms Rowe sits back. \"Tell me why I should take on someone I have never met, who found us by accident.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Answer plainly, about the work you can do.",
+          "goto": 141
+        },
+        {
+          "text": "⟨STUB⟩ Tell her about the agency you almost paid.",
+          "goto": 121
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "text": "⟨STUB⟩ You tell her how close you came to handing two hundred to a man in a good suit for a receipt with no address on it. She listens without a flicker.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Tell her the whole night, too.",
+          "goto": 36,
+          "sets": [
+            "told_truth"
+          ]
+        },
+        {
+          "text": "⟨STUB⟩ Leave it there, and keep it professional.",
+          "goto": 37
+        }
+      ]
+    },
+    {
+      "id": 141,
+      "text": "⟨STUB⟩ You answer plainly, and it is enough. \"We can use someone like that,\" she says. \"Start Monday.\" Not a story — just work, honestly won.",
+      "ending": "good"
+    },
+    {
+      "id": 142,
+      "text": "⟨STUB⟩ You walk in rested, having owed nothing to anyone who tried to sell you hope, and it shows. \"You had a good night, for a stranger,\" she says. \"Start Monday.\"",
+      "ending": "good"
+    },
+    {
+      "id": 143,
+      "text": "⟨STUB⟩ There is no job today. But your name is written down, by a real hand, and kept. You are in the city now, and someone in it knows you came.",
+      "ending": "neutral"
+    },
+    {
+      "id": 144,
+      "text": "⟨STUB⟩ Name, number, reference. It all goes smoothly and you are hired by lunchtime. Nobody asked how you got here. You got what you came for, and it feels like nothing.",
+      "ending": "neutral"
+    },
+    {
+      "id": 145,
+      "text": "⟨STUB⟩ You share what you have. The job does not come — but the person you helped has a floor, a kettle, a spare key. You are not hired. You are also not alone.",
+      "ending": "neutral"
+    },
+    {
+      "id": 146,
+      "text": "⟨STUB⟩ Twenty past nine. The diary is closed, the chairs are full, and the woman at reception is kind and final. \"Try us in the spring,\" she says, meaning no.",
+      "ending": "bad"
+    },
+    {
+      "id": 147,
+      "text": "⟨STUB⟩ The morning comes up grey over the bench and you let it. By the time you can feel your feet again, nine o'clock has been and gone, and so has the reason you came.",
+      "ending": "bad"
     }
   ],
   "lexicon": {
