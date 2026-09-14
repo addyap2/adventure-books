@@ -1,0 +1,1295 @@
+{
+  "schema": 2,
+  "series": "new-city",
+  "episode": 1,
+  "title": "The Address",
+  "levels": [
+    "A2",
+    "B1",
+    "B2"
+  ],
+  "start": 1,
+  "language_focus": {
+    "A2": [
+      "present simple and there is/are",
+      "the city: travel, directions, places"
+    ],
+    "B1": [
+      "present perfect and modals of deduction",
+      "work, money and arrangements"
+    ],
+    "B2": [
+      "inference and hedging",
+      "bureaucracy, trust and the city"
+    ]
+  },
+  "state_in": [],
+  "state_out": [
+    "has_card",
+    "knows_name"
+  ],
+  "nodes": [
+    {
+      "id": 1,
+      "text": {
+        "A2": "The train arrives at eleven o'clock at night. You are new here. You do not know anybody in this city. In your bag there is one letter. It says: Kessler and Rowe, 14 Rosewater Street. Tuesday, nine o'clock. The station is big and cold, and almost empty.",
+        "B1": "The train gets in at eleven o'clock at night. You have never been to this city before, and you do not know a single person in it. In your bag there is one letter: Kessler and Rowe, 14 Rosewater Street, Tuesday at nine. That letter is the reason you are here. The station is big and cold and nearly empty.",
+        "B2": "The train gets in at eleven at night, which is not the hour you would have chosen to arrive anywhere. You have never been to this city before and you do not know a single person in it. In your bag there is one letter — Kessler and Rowe, 14 Rosewater Street, Tuesday at nine — and that letter is the entire reason you are standing here. The station is vast, cold, and almost completely empty."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Ask at the information desk.",
+            "B1": "Ask for directions at the information desk.",
+            "B2": "Ask for directions at the information desk before it closes."
+          },
+          "goto": 2
+        },
+        {
+          "text": {
+            "A2": "Go outside and find the street yourself.",
+            "B1": "Go outside and find the street on your own.",
+            "B2": "Go outside and find the street under your own steam."
+          },
+          "goto": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": {
+        "A2": "A man sits behind the glass at the information desk. He looks at your letter. \"Rosewater Street,\" he says. \"They are rebuilding it. Bus number nine goes there. But it is late. Are you sure?\" He gives you a small map.",
+        "B1": "A tired man sits behind the glass at the information desk. He reads your letter twice. \"Rosewater Street,\" he says. \"They have been rebuilding it for two years. Bus number nine will get you there, but it is nearly midnight. Are you sure you want to go tonight?\" He pushes a small map under the glass.",
+        "B2": "A tired man sits behind the glass at the information desk and reads your letter twice, which is once more than seems necessary. \"Rosewater Street,\" he says. \"They have been rebuilding it for two years now. Number nine bus will get you there. Though it is nearly midnight, and I am not sure what you expect to find.\" He pushes a small paper map under the glass without quite looking at you."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take bus number nine.",
+            "B1": "Take the number nine bus.",
+            "B2": "Take the number nine bus anyway."
+          },
+          "goto": 4
+        },
+        {
+          "text": {
+            "A2": "Walk. The map looks easy.",
+            "B1": "Walk instead — the map looks simple enough.",
+            "B2": "Walk instead; on the map it looks simple enough."
+          },
+          "goto": 5
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": {
+        "A2": "Outside, the air is cold and wet. Three taxi drivers stand by their cars and watch you. There is also a bus stop. The bus is cheap. The taxi is not.",
+        "B1": "Outside the air is cold and wet and smells of the river. Three taxi drivers stand beside their cars, watching you the way people watch someone who has just arrived. There is a bus stop as well. The bus costs almost nothing; the taxi will cost most of what you have.",
+        "B2": "Outside, the air is cold and wet and smells faintly of a river you have not seen yet. Three taxi drivers lean against their cars, watching you with the particular attention people reserve for someone who has obviously just arrived. There is a bus stop too. The bus costs almost nothing. The taxi will cost most of what is in your pocket."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Wait for bus number nine.",
+            "B1": "Wait for the number nine bus.",
+            "B2": "Wait for the number nine and keep your money."
+          },
+          "goto": 4
+        },
+        {
+          "text": {
+            "A2": "Take a taxi.",
+            "B1": "Take a taxi and save the time.",
+            "B2": "Take a taxi and buy yourself some time."
+          },
+          "goto": 6
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": {
+        "A2": "The bus is warm and nearly empty. You read the letter again. Kessler and Rowe. Tuesday, nine o'clock. Today is Monday. You have the whole night. Outside, the streets get darker and quieter.",
+        "B1": "The bus is warm and almost empty. You read the letter again, although you know it by heart: Kessler and Rowe, Tuesday at nine. Today is Monday, so you have the whole night in front of you. Outside the window the streets are getting darker and emptier.",
+        "B2": "The bus is warm and almost empty, and you read the letter again although you have known it by heart for a fortnight. Kessler and Rowe. Tuesday at nine. Today is Monday, which means you have an entire night to fill in a city where you know nobody. Outside the window the streets grow darker and emptier the further you go."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Get off at Rosewater Street.",
+            "B1": "Get off when the bus reaches Rosewater Street.",
+            "B2": "Get off when the bus finally reaches Rosewater Street."
+          },
+          "goto": 7
+        },
+        {
+          "text": {
+            "A2": "Close your eyes for a minute.",
+            "B1": "Close your eyes for just a minute.",
+            "B2": "Close your eyes, just for a minute."
+          },
+          "goto": 8
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": {
+        "A2": "You walk. The map is small and the streets are long. After twenty minutes you do not know where you are. A woman is closing a kiosk on the corner. She is the only person you can see.",
+        "B1": "You walk. The map is small, the streets are long, and after twenty minutes you have to admit that you are lost. A woman is closing up a kiosk on the corner, pulling down a metal shutter. She is the only person on the street.",
+        "B2": "You walk. The map is small, the streets are long, and after twenty minutes you are forced to admit that you have no idea where you are. On the corner a woman is closing up a kiosk, hauling down a metal shutter that has clearly needed oiling for years. She is the only other person on the street."
+      },
+      "glossary": {
+        "A2": [
+          "kiosk"
+        ],
+        "B1": [
+          "kiosk"
+        ],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Show her the letter.",
+            "B1": "Show her the address on the letter.",
+            "B2": "Show her the address on the letter and hope."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "Say nothing and keep walking.",
+            "B1": "Say nothing and keep walking.",
+            "B2": "Say nothing, keep walking, and trust the map."
+          },
+          "goto": 7
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": {
+        "A2": "The taxi driver reads the address and laughs. \"Rosewater Street? There is nothing there. All the offices moved.\" You ask when. \"Two years ago? Three?\" He starts the car.",
+        "B1": "The taxi driver reads the address and laughs, not unkindly. \"Rosewater Street? There is nothing there any more. All the offices moved out.\" You ask him when. \"Two years ago. Maybe three.\" He starts the car anyway, still shaking his head.",
+        "B2": "The driver reads the address and laughs, not unkindly, which is somehow worse. \"Rosewater Street? There is nothing down there now. The offices all moved out years ago, the lot of them.\" You ask when, exactly. \"Two years. Three, maybe.\" He starts the car anyway, still shaking his head at the windscreen, and pulls out into a road with no other traffic on it."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Ask him to take you there.",
+            "B1": "Ask him to take you there anyway.",
+            "B2": "Ask him to take you there regardless."
+          },
+          "goto": 7
+        },
+        {
+          "text": {
+            "A2": "Ask him for a cheap hotel.",
+            "B1": "Ask him to take you to a cheap hotel instead.",
+            "B2": "Ask him to take you somewhere cheap to sleep instead."
+          },
+          "goto": 10
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": {
+        "A2": "Rosewater Street is dark. Number 14 is a grey building with white dust on the windows. Above the door there is an old sign: KESSLER AND ROWE. Under it, the door has no handle. It is nearly midnight.",
+        "B1": "Rosewater Street is dark and half of it is behind builders' fencing. Number 14 is a grey building with white dust on the inside of the windows. Above the door an old sign still reads KESSLER AND ROWE, and below it the door has no handle at all. It is nearly midnight.",
+        "B2": "Rosewater Street is dark, and half of it stands behind builders' fencing that looks as though it has been there for years. Number 14 is a grey building with white dust on the inside of the windows. Above the door an old sign still reads KESSLER AND ROWE, in letters someone once paid good money for. Below it, the door has no handle at all. It is nearly midnight."
+      },
+      "glossary": {
+        "A2": [
+          "dust"
+        ],
+        "B1": [
+          "dust"
+        ],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Look through the window.",
+            "B1": "Look in through the dusty window.",
+            "B2": "Put your face to the glass and look in."
+          },
+          "goto": 11
+        },
+        {
+          "text": {
+            "A2": "Knock at number 16.",
+            "B1": "Knock on the door of number 16.",
+            "B2": "Knock on the door of number 16 and apologise later."
+          },
+          "goto": 12
+        },
+        {
+          "text": {
+            "A2": "Find somewhere to sleep.",
+            "B1": "Give up for tonight and find somewhere to sleep.",
+            "B2": "Give up for tonight and find somewhere to sleep."
+          },
+          "goto": 13
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": {
+        "A2": "You open your eyes. The bus is stopping and the driver is looking at you. \"Last stop,\" he says. You are on the wrong side of the city, and it is one o'clock in the morning.",
+        "B1": "You open your eyes because the engine has stopped. The driver is standing in the aisle, looking at you. \"Last stop,\" he says. You are on the wrong side of the city, it is one in the morning, and there will be no more buses tonight.",
+        "B2": "You open your eyes because the engine has stopped. The driver is standing in the aisle, looking down at you with the patience of a man who has done this many times. \"Last stop.\" You are on the wrong side of the city, it is one in the morning, and there will not be another bus until five."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Look for a place to sleep.",
+            "B1": "Look for somewhere to sleep near here.",
+            "B2": "Look for somewhere to sleep within walking distance."
+          },
+          "goto": 13
+        },
+        {
+          "text": {
+            "A2": "Walk back across the city.",
+            "B1": "Start walking back across the city.",
+            "B2": "Start walking back across the city on foot."
+          },
+          "goto": 14
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": {
+        "A2": "The woman reads the letter. \"Kessler and Rowe? They are not there now.\" She points down the street. \"There is a cafe on the corner. The Blue Kettle. Ask there in the morning. They know everything.\"",
+        "B1": "The woman reads the letter carefully, holding it up to the streetlight. \"Kessler and Rowe? They have not been there for a long time.\" She points down the street with her chin. \"There is a cafe on that corner, the Blue Kettle. Ask in there in the morning — they know everything on this street.\"",
+        "B2": "The woman takes the letter and holds it up to the streetlight, reading it with more care than you expected. \"Kessler and Rowe? They have not been at that address for a long time.\" She nods down the street. \"There is a cafe on the corner — the Blue Kettle. Ask in there in the morning. Nothing happens on this street that they do not hear about first.\""
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go and look at number 14 anyway.",
+            "B1": "Go and look at number 14 anyway.",
+            "B2": "Go and look at number 14 for yourself anyway."
+          },
+          "goto": 7
+        },
+        {
+          "text": {
+            "A2": "Go to the cafe now.",
+            "B1": "Walk down to the cafe now.",
+            "B2": "Walk down to the cafe now, late as it is."
+          },
+          "goto": 15
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": {
+        "A2": "The hotel is small and clean and costs more than you want to pay. The man at the desk is kind. \"Looking for work?\" he asks. \"There is an agency across the road. They find jobs for new people.\"",
+        "B1": "The hotel is small and clean and costs more than you would like. The man behind the desk is kind about it. \"Looking for work?\" he asks, as if it were obvious. \"There is an agency just across the road. They find jobs for people who have only just arrived.\"",
+        "B2": "The hotel is small and clean and costs rather more than you would like it to. The man behind the desk is kind about the whole thing. \"Looking for work?\" he asks, as though it were written on your face. \"There is an agency directly across the road. They find jobs for people who have only just got here.\""
+      },
+      "glossary": {
+        "A2": [
+          "agency"
+        ],
+        "B1": [
+          "agency"
+        ],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take the room.",
+            "B1": "Take the room and sleep.",
+            "B2": "Take the room and sleep on it."
+          },
+          "goto": 16
+        },
+        {
+          "text": {
+            "A2": "It is too expensive. Sleep at the station.",
+            "B1": "Decide it is too expensive and sleep at the station.",
+            "B2": "Decide it is too expensive and go back to sleep at the station."
+          },
+          "goto": 13
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": {
+        "A2": "You clean the glass with your hand. Inside there are empty desks and one chair. On the wall there is a calendar. It is two years old. At the back of the office, a small light is on.",
+        "B1": "You rub a circle in the dust with your sleeve and look in. There are empty desks and one chair on its side. A calendar on the wall stopped two years ago. At the very back of the office, behind a glass door, a small light is on.",
+        "B2": "You rub a circle in the dust with your sleeve. Empty desks. One chair lying on its side, as though somebody left in a hurry and nobody has been in since. A calendar on the wall, stopped two years ago in March. And at the very back of the office, behind an inner glass door, a small light is on."
+      },
+      "glossary": {
+        "A2": [
+          "calendar"
+        ],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Wait until the morning.",
+            "B1": "Give up for tonight and come back at nine.",
+            "B2": "Give up for tonight and come back at nine, as the letter says."
+          },
+          "goto": 17
+        },
+        {
+          "text": {
+            "A2": "Knock on the window.",
+            "B1": "Knock on the window and see who comes.",
+            "B2": "Knock on the glass and see who comes."
+          },
+          "goto": 18
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": {
+        "A2": "A man opens the door of number 16. He is angry because it is late. \"They went to the new place by the river,\" he says. \"Ms Rowe still comes here on Fridays. Only Fridays.\" Then he closes the door.",
+        "B1": "A man opens the door of number 16 in a dressing gown, and he is not pleased about the hour. \"They moved to the new place by the river,\" he says. \"Ms Rowe still comes back here on Fridays, for the post. Only Fridays.\" Then he shuts the door before you can thank him.",
+        "B2": "The door of number 16 opens on a man in a dressing gown who is not remotely pleased about the hour, and says so with his face rather than his words. \"They moved. New place by the river.\" A pause. \"Ms Rowe still comes back here Fridays, for the post. Only Fridays.\" And he shuts the door before you can thank him, which is probably fair."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Sleep, and come back at nine.",
+            "B1": "Find somewhere to sleep and come back at nine.",
+            "B2": "Find somewhere to sleep and come back at nine."
+          },
+          "goto": 17,
+          "sets": [
+            "knows_name"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Go and look for the river.",
+            "B1": "Go and look for the river tonight.",
+            "B2": "Go and look for this river of his tonight."
+          },
+          "goto": 19,
+          "sets": [
+            "knows_name"
+          ]
+        }
+      ],
+      "note": "Both choices set knows_name. The information is the reward for knocking, not for a particular route after it."
+    },
+    {
+      "id": 13,
+      "text": {
+        "A2": "You sleep on a bench in the station. It is not comfortable, but it is warm and it is free. At six o'clock a cleaner wakes you. Your back hurts and your money is nearly gone.",
+        "B1": "You sleep on a bench in the station, which is neither comfortable nor dignified but is warm and free. At six in the morning a cleaner wakes you with the edge of her machine. Your back hurts, your neck hurts, and you have very little money left.",
+        "B2": "You sleep on a bench in the station, which is neither comfortable nor dignified, but is warm and costs nothing. At six a cleaner wakes you by running her machine into the leg of the bench, twice, in a way that does not feel accidental. Your back hurts. So does your neck. And there is very little money left in your pocket."
+      },
+      "glossary": {
+        "A2": [
+          "bench",
+          "cleaner"
+        ],
+        "B1": [
+          "bench"
+        ],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Wash and go to Rosewater Street.",
+            "B1": "Wash in the station and go to Rosewater Street.",
+            "B2": "Wash in the station toilets and go straight to Rosewater Street."
+          },
+          "goto": 20
+        },
+        {
+          "text": {
+            "A2": "Buy a coffee and think.",
+            "B1": "Buy a coffee and think it through.",
+            "B2": "Buy a coffee you cannot really afford and think."
+          },
+          "goto": 21
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": {
+        "A2": "You walk for two hours. The city is empty and cold. When you finally stop, you are near the station again. It is three o'clock in the morning.",
+        "B1": "You walk for the best part of two hours through streets that are completely empty. When you finally stop, you are somewhere near the station again. It is three in the morning, and you have learnt nothing except that the city is bigger than it looks.",
+        "B2": "You walk for the best part of two hours through streets so empty they feel switched off. When you finally stop you are somewhere near the station again, and it is three in the morning. The only thing you have learnt is that this city is a great deal larger than it looked on a paper map."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Sleep in the station.",
+            "B1": "Go into the station and sleep there.",
+            "B2": "Go into the station and sleep there after all."
+          },
+          "goto": 20
+        },
+        {
+          "text": {
+            "A2": "Keep walking until nine.",
+            "B1": "Keep walking until nine o'clock.",
+            "B2": "Keep walking until nine and arrive exhausted."
+          },
+          "goto": 22
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": {
+        "A2": "The cafe is closed. But there is a card in the window, next to the opening times. It says: KESSLER AND ROWE — NOW AT 3 MILL QUAY. You take a photo of it.",
+        "B1": "The cafe is closed, of course, but there is a business card taped inside the window next to the opening times. It reads: KESSLER AND ROWE — NOW AT 3 MILL QUAY. You take a photograph of it with your phone, twice, because your hands are cold.",
+        "B2": "The cafe is shut, naturally, but somebody has taped a business card inside the window beside the opening times, and it has clearly been there a while. KESSLER AND ROWE — NOW AT 3 MILL QUAY. You photograph it twice, partly because your hands are cold and partly because you do not entirely trust your luck."
+      },
+      "glossary": {
+        "A2": [
+          "quay"
+        ],
+        "B1": [
+          "quay"
+        ],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Sleep, and go there at nine.",
+            "B1": "Find a bed, and go to Mill Quay at nine.",
+            "B2": "Find a bed somewhere and go to Mill Quay at nine."
+          },
+          "goto": 17,
+          "sets": [
+            "has_card"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Go to Mill Quay now.",
+            "B1": "Set off for Mill Quay right now.",
+            "B2": "Set off for Mill Quay right now, in the dark."
+          },
+          "goto": 23,
+          "sets": [
+            "has_card"
+          ]
+        }
+      ],
+      "note": "has_card is the delayed consequence: it unlocks the direct route at §17 and, with knows_name, the best ending."
+    },
+    {
+      "id": 16,
+      "text": {
+        "A2": "The room is small. You sleep well. In the morning you look out of the window and see the agency across the road. A big yellow sign says: WORK FOR EVERYONE. TODAY.",
+        "B1": "The room is small, but the bed is good. You sleep better than you expected. In the morning you look out of the window and there is the agency across the road, exactly as the man said. A big yellow sign reads: WORK FOR EVERYONE — TODAY.",
+        "B2": "The room is small but the bed is a good one, and you sleep better than you had any right to. In the morning you look out of the window. There is the agency across the road, exactly where the man said it would be, under a yellow sign large enough to read from a moving vehicle: WORK FOR EVERYONE — TODAY."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go to the agency first.",
+            "B1": "Go across to the agency first.",
+            "B2": "Go across to the agency first — it is only a road away."
+          },
+          "goto": 24
+        },
+        {
+          "text": {
+            "A2": "Go to Rosewater Street first.",
+            "B1": "Go to Rosewater Street first, as planned.",
+            "B2": "Go to Rosewater Street first, as you originally planned."
+          },
+          "goto": 20
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "text": {
+        "A2": "It is Tuesday, eight o'clock. You are on Rosewater Street again. The building is still empty and still grey. Your interview is in one hour, and you do not know where it is.",
+        "B1": "It is Tuesday, eight in the morning, and you are standing on Rosewater Street again. The building is exactly as empty as it was last night. Your interview is in one hour and you still do not know where in this city it is happening.",
+        "B2": "Tuesday, eight in the morning, and you are back on Rosewater Street, which in daylight looks less sinister and considerably sadder. The building is exactly as empty as it was at midnight. Your interview is in one hour, and you still have no reliable idea where in this city it is actually taking place."
+      },
+      "glossary": {
+        "A2": [
+          "interview"
+        ],
+        "B1": [
+          "interview"
+        ],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go straight to 3 Mill Quay.",
+            "B1": "Go straight to 3 Mill Quay.",
+            "B2": "Go straight to 3 Mill Quay and be early."
+          },
+          "goto": 25,
+          "requires": [
+            "has_card"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Ask at number 16 again.",
+            "B1": "Try number 16 again in daylight.",
+            "B2": "Try number 16 again, now that it is a civilised hour."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "Wait outside number 14.",
+            "B1": "Wait outside number 14 until nine.",
+            "B2": "Wait outside number 14 until nine and see who turns up."
+          },
+          "goto": 27
+        }
+      ],
+      "note": "Central bottleneck. Every route arrives here; has_card opens the fast lane."
+    },
+    {
+      "id": 18,
+      "text": {
+        "A2": "A woman with a cleaning machine opens the door. \"There is nobody here,\" she says. \"They moved.\" You ask where. She looks at you for a long moment. \"Ask at the cafe,\" she says, and closes the door.",
+        "B1": "A woman with a cleaning machine opens the inner door and looks out at you. \"There is nobody here,\" she says. \"They moved out.\" You ask her where to. She looks at you for a long moment, deciding something. \"Ask at the cafe on the corner,\" she says, and shuts the door.",
+        "B2": "The inner door opens on a woman with a cleaning machine, who looks at you through the gap with no surprise at all. \"There is nobody here. They moved out.\" You ask where to. She looks at you for a long moment, visibly deciding how much of her evening you are worth. \"Ask at the cafe on the corner,\" she says, and shuts the door."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Wait until nine and try again.",
+            "B1": "Wait until nine and try the street again.",
+            "B2": "Wait until nine and try the street again."
+          },
+          "goto": 17
+        },
+        {
+          "text": {
+            "A2": "Go and find the cafe.",
+            "B1": "Go and find the cafe on the corner.",
+            "B2": "Go and find this cafe of hers."
+          },
+          "goto": 15
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "text": {
+        "A2": "You walk towards the river. It takes a long time. When you get there it is nearly two o'clock and everything is closed. You can see new office buildings on the other side of the water.",
+        "B1": "You walk towards the river, which takes far longer than it should because you keep having to guess. When you arrive it is nearly two in the morning and everything is shut. Across the water you can see new office buildings, all glass, all dark.",
+        "B2": "You walk towards the river, which takes considerably longer than it should because every third street forces you to guess. When you finally get there it is nearly two in the morning and everything is shut. Across the water stand new office buildings, all glass and all dark, of the kind that get built in places that used to be something else."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Sleep somewhere and come back at nine.",
+            "B1": "Find somewhere to sleep and come back at nine.",
+            "B2": "Find somewhere to sleep and come back at nine."
+          },
+          "goto": 17
+        },
+        {
+          "text": {
+            "A2": "Look for number 3 now.",
+            "B1": "Look for number 3 in the dark.",
+            "B2": "Look for number 3 now, in the dark, like a sensible person."
+          },
+          "goto": 28
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "text": {
+        "A2": "It is morning. You are tired and cold and your money is nearly finished. You have one hour. You are standing outside an empty building with a letter in your hand.",
+        "B1": "It is morning and you are tired, cold and nearly out of money. You have one hour left before the interview. You are standing outside an empty building, holding a letter that says it should be happening here.",
+        "B2": "It is morning. You are tired, cold and very nearly out of money, and you have one hour before an interview that is supposed to be happening inside a building nobody has worked in for two years. You are holding the letter that says so, which is beginning to feel like a joke at your expense."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [
+          "interview"
+        ],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Wait here and see who comes.",
+            "B1": "Stay here and see who turns up.",
+            "B2": "Stay where you are and see who turns up."
+          },
+          "goto": 17
+        },
+        {
+          "text": {
+            "A2": "Try the agency instead.",
+            "B1": "Give up on this and try the agency instead.",
+            "B2": "Give up on all this and try the agency instead."
+          },
+          "goto": 24
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "text": {
+        "A2": "The coffee is hot and costs too much. You sit by the window and think. You have a letter with the wrong address, very little money, and one hour. But somebody wrote that letter, and somebody wanted to meet you.",
+        "B1": "The coffee is hot and costs more than it should. You sit by the window and think it through properly. You have a letter with an address that is two years out of date, almost no money, and one hour. But somebody wrote that letter, and somebody, somewhere, is expecting you.",
+        "B2": "The coffee is hot and costs a good deal more than it ought to. You sit by the window and think the thing through properly for the first time. You have a letter with an address two years out of date, almost no money, and one hour. But somebody sat down and wrote that letter, and somebody, somewhere in this city, is expecting you at nine."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go back to Rosewater Street.",
+            "B1": "Go back to Rosewater Street.",
+            "B2": "Go back to Rosewater Street with that thought."
+          },
+          "goto": 17
+        },
+        {
+          "text": {
+            "A2": "Ask in this cafe about them.",
+            "B1": "Ask the people in this cafe about them.",
+            "B2": "Ask whoever is behind the counter here about them."
+          },
+          "goto": 29
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "text": {
+        "A2": "By eight o'clock you cannot feel your feet. You have walked all night. You find a bench near a bus stop and sit down. For a moment, you think about going home.",
+        "B1": "By eight o'clock you can no longer feel your feet. You have walked all night for no good reason. You find a bench near a bus stop, sit down heavily, and for one long moment you seriously think about going home.",
+        "B2": "By eight o'clock you have stopped being able to feel your feet. You have walked all night, achieved nothing, and learnt the layout of a city you may not stay in. You find a bench near a bus stop, sit down rather harder than you meant to, and for one long and honest moment you consider going home."
+      },
+      "glossary": {
+        "A2": [
+          "bench"
+        ],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Get on the next bus to Rosewater Street.",
+            "B1": "Get the next bus back to Rosewater Street.",
+            "B2": "Get the next bus back to Rosewater Street and finish this."
+          },
+          "goto": 20
+        },
+        {
+          "text": {
+            "A2": "Ask somebody about the company.",
+            "B1": "Ask somebody at the stop about the company.",
+            "B2": "Ask someone at the stop whether they have heard of the company."
+          },
+          "goto": 29
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "text": {
+        "A2": "Mill Quay is by the water. Number 3 is new: glass, clean stone, a green plant behind the door. On the wall there is a list of companies. The fourth name is KESSLER AND ROWE, floor 2.",
+        "B1": "Mill Quay runs along the water. Number 3 is new — glass, clean stone, a large green plant standing behind the door. Beside the entrance there is a list of the companies inside, and the fourth name down is KESSLER AND ROWE, second floor.",
+        "B2": "Mill Quay runs along the water, and number 3 is the newest thing on it: glass, clean pale stone, an enormous green plant standing behind the door like a receptionist. Beside the entrance there is a brushed steel list of the companies inside, and fourth from the top, in letters far smaller than the ones on Rosewater Street, is KESSLER AND ROWE. Second floor."
+      },
+      "glossary": {
+        "A2": [
+          "quay"
+        ],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go in.",
+            "B1": "Go in and speak to reception.",
+            "B2": "Go in and present yourself at reception."
+          },
+          "goto": 30
+        },
+        {
+          "text": {
+            "A2": "Wait outside and watch the door.",
+            "B1": "Wait outside and watch who goes in.",
+            "B2": "Wait outside for a while and watch who goes in."
+          },
+          "goto": 31
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "text": {
+        "A2": "The agency is bright and warm. A man in a good suit smiles at you. \"We have work today,\" he says. \"Kitchen, cleaning, building. But first, registration. Two hundred. Everybody pays it.\"",
+        "B1": "The agency is bright and warm and smells of new carpet. A man in a very good suit smiles at you before you have said anything. \"We have work today,\" he says. \"Kitchens, cleaning, building sites. But first there is registration. Two hundred. Everybody pays it, it is completely normal.\"",
+        "B2": "The agency is bright and warm and smells strongly of new carpet. A man in a very good suit is smiling at you before you have said a word, which is the first thing that bothers you. \"We have work today. Kitchens, cleaning, building sites.\" A small pause. \"There is a registration fee, of course. Two hundred. Everybody pays it — it is completely standard.\""
+      },
+      "glossary": {
+        "A2": [
+          "agency"
+        ],
+        "B1": [
+          "agency"
+        ],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Pay the two hundred.",
+            "B1": "Pay him the two hundred.",
+            "B2": "Pay the two hundred and be done with it."
+          },
+          "goto": 32
+        },
+        {
+          "text": {
+            "A2": "Say no and leave.",
+            "B1": "Say no thank you and leave.",
+            "B2": "Say no thank you, and leave while you still can."
+          },
+          "goto": 33
+        }
+      ],
+      "note": "Comprehension check: the reader must notice 'everybody pays it' is the sales line, not a fact."
+    },
+    {
+      "id": 25,
+      "text": {
+        "A2": "You are at Mill Quay at half past eight. The river is grey and quiet. You are early, you are clean, and you know exactly where you are going. This is the first good moment since you arrived.",
+        "B1": "You reach Mill Quay at half past eight. The river is grey and quiet and there are gulls on the water. You are early, you are reasonably clean, and for the first time since you got off that train you know exactly where you are going.",
+        "B2": "You reach Mill Quay at half past eight. The river is grey and quiet, with gulls sitting on it like they are waiting for something too. You are early, you are reasonably clean, and for the first time since you stepped off that train you know precisely where you are going and why. It is a better feeling than it has any right to be."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go in and wait in reception.",
+            "B1": "Go in and wait in reception.",
+            "B2": "Go in and wait in reception where it is warm."
+          },
+          "goto": 30
+        },
+        {
+          "text": {
+            "A2": "Wait by the water until nine.",
+            "B1": "Wait by the water until nine.",
+            "B2": "Wait by the water until nine and watch the door."
+          },
+          "goto": 31
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "text": {
+        "A2": "A young woman opens the door of number 16 this time. \"My father told you about the river,\" she says. \"Three Mill Quay. Take the number four bus, it is quicker.\" She looks at your face. \"Good luck.\"",
+        "B1": "This time a young woman opens the door of number 16. \"My father says he told you last night,\" she says. \"The river. Three Mill Quay. Take the number four bus from the corner, it is quicker than walking.\" She looks at your face for a second longer than necessary. \"Good luck.\"",
+        "B2": "This time it is a young woman who opens the door of number 16. \"My father says he already told you.\" She does not sound annoyed, only tired on his behalf. \"The river. Three Mill Quay. Take the number four from the corner, it is quicker than walking and you look like you have walked enough.\" She holds the door a moment longer. \"Good luck.\""
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take the bus to Mill Quay.",
+            "B1": "Take the number four to Mill Quay.",
+            "B2": "Take the number four to Mill Quay."
+          },
+          "goto": 23
+        },
+        {
+          "text": {
+            "A2": "Go back and wait at number 14.",
+            "B1": "Go back and wait outside number 14 anyway.",
+            "B2": "Go back and wait outside number 14 anyway."
+          },
+          "goto": 27
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "text": {
+        "A2": "You wait outside number 14. At five past nine a woman arrives with a key in her hand. She stops when she sees you. \"Are you waiting for Kessler and Rowe?\" she asks. \"So am I. I am Kessler and Rowe.\"",
+        "B1": "You wait outside number 14. At five past nine a woman arrives with a key already in her hand, and stops when she sees you standing there. \"Are you waiting for Kessler and Rowe?\" she asks. Then, before you can answer: \"So am I, in a manner of speaking. I am Kessler and Rowe.\"",
+        "B2": "You wait outside number 14, because it is what the letter said and you have run out of better ideas. At five past nine a woman arrives with a key already in her hand and stops short when she sees you. \"Are you waiting for Kessler and Rowe?\" And then, before you can arrange an answer: \"So am I, in a manner of speaking. I am Kessler and Rowe.\""
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Say yes, and give her the letter.",
+            "B1": "Say yes, and hand her the letter.",
+            "B2": "Say yes, and hand her the letter without further comment."
+          },
+          "goto": 35
+        },
+        {
+          "text": {
+            "A2": "Say you are lost and walk away.",
+            "B1": "Say you are lost, and walk away.",
+            "B2": "Say you must be lost, and walk away."
+          },
+          "goto": 34
+        }
+      ],
+      "note": "The patient route. Waiting at the wrong address turns out to be right, which rewards trusting the letter."
+    },
+    {
+      "id": 28,
+      "text": {
+        "A2": "In the dark, all the buildings look the same. You find a number 3, but it is a car park. You sit down by the water and wait for the light. It is very cold, and very long.",
+        "B1": "In the dark all the buildings along the quay look identical. You do find a number 3, but it turns out to be the entrance to a car park. You sit down by the water to wait for daylight. It is cold, and it takes a very long time to arrive.",
+        "B2": "In the dark, every building along the quay looks like every other building along the quay. You do eventually find a number 3, and it turns out to be the entrance to an underground car park. You sit down by the water to wait for daylight, which is cold, and which takes a very great deal longer to arrive than you would have believed possible."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Wait here until nine.",
+            "B1": "Wait here by the water until nine.",
+            "B2": "Wait here by the water until nine."
+          },
+          "goto": 23
+        },
+        {
+          "text": {
+            "A2": "Go back across the city.",
+            "B1": "Walk back across the city.",
+            "B2": "Walk back across the city and admit defeat."
+          },
+          "goto": 34
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "text": {
+        "A2": "\"Kessler and Rowe?\" says the man behind the counter. \"They moved to the river. Everybody asks me this.\" He writes an address on a napkin: 3 MILL QUAY. \"You are the third person this year.\"",
+        "B1": "\"Kessler and Rowe?\" says the man behind the counter, without looking up. \"They moved down to the river years ago. Everybody asks me this.\" He writes an address on a paper napkin and pushes it across: 3 MILL QUAY. \"You are the third person to ask me that this year.\"",
+        "B2": "\"Kessler and Rowe?\" The man behind the counter does not look up. \"Moved down to the river years back. Everybody asks me this.\" He writes an address on a paper napkin and pushes it across the counter without ceremony: 3 MILL QUAY. \"You are the third person this year. They really ought to update their letters.\""
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go to Mill Quay.",
+            "B1": "Go straight to Mill Quay.",
+            "B2": "Go straight to Mill Quay and stop wasting the morning."
+          },
+          "goto": 23,
+          "sets": [
+            "has_card"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Go back to Rosewater Street first.",
+            "B1": "Go back to Rosewater Street first.",
+            "B2": "Go back to Rosewater Street first, just to be sure."
+          },
+          "goto": 34
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "text": {
+        "A2": "Reception is warm and quiet. The woman behind the desk looks for your name on her screen. She looks again. \"I am sorry,\" she says. \"There is no interview here today. Are you sure about the date?\"",
+        "B1": "Reception is warm and quiet and smells of coffee. The woman behind the desk types your name, waits, and types it again. \"I am sorry,\" she says, and she does look sorry. \"There is no interview in the diary for today. Are you certain about the date?\"",
+        "B2": "Reception is warm and quiet and smells faintly of good coffee. The woman behind the desk types your name, waits, frowns, and types it again. \"I am sorry.\" She does look genuinely sorry, which somehow makes it worse. \"There is nothing in the diary for today at all. Are you quite certain about the date?\""
+      },
+      "glossary": {
+        "A2": [
+          "reception",
+          "interview"
+        ],
+        "B1": [
+          "reception",
+          "interview"
+        ],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Show her the letter.",
+            "B1": "Show her the letter and ask her to look again.",
+            "B2": "Show her the letter and ask her to look once more."
+          },
+          "goto": 35
+        },
+        {
+          "text": {
+            "A2": "Apologise and go.",
+            "B1": "Apologise and leave.",
+            "B2": "Apologise, thank her, and leave."
+          },
+          "goto": 37
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "text": {
+        "A2": "You wait by the water. At ten to nine, a woman walks to the door. She has a coffee in one hand and keys in the other. She is about sixty. On her bag there is a small yellow label: R. ROWE.",
+        "B1": "You wait by the water and watch the door. At ten to nine a woman walks up to it with a coffee in one hand and keys in the other. She is about sixty, and there is a small yellow luggage label on her bag with a name on it: R. ROWE.",
+        "B2": "You wait by the water and watch the door, which turns out to be the most useful thing you have done since the train. At ten to nine a woman approaches it with a coffee in one hand and a set of keys in the other. She is about sixty. On the strap of her bag there is a small yellow luggage label, the kind that survives one airport and then stays forever, and it reads: R. ROWE."
+      },
+      "glossary": {
+        "A2": [
+          "label"
+        ],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Say her name.",
+            "B1": "Say her name before she reaches the door.",
+            "B2": "Say her name before she reaches the door."
+          },
+          "goto": 38,
+          "requires": [
+            "knows_name"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Follow her in and go to reception.",
+            "B1": "Follow her in and ask at reception.",
+            "B2": "Follow her in and do it properly, at reception."
+          },
+          "goto": 30
+        }
+      ],
+      "note": "The best ending is here: knows_name from §12 plus the label seen at §31. Two pieces of information from different routes, combined."
+    },
+    {
+      "id": 32,
+      "text": {
+        "A2": "You pay. The man gives you a receipt and a phone number. \"We call you today,\" he says. Outside, you look at the receipt. There is no address on it, and no company name. Your money is gone.",
+        "B1": "You pay him the two hundred. He gives you a receipt and a phone number and tells you they will call you today. Outside on the pavement you look at the receipt properly for the first time. There is no address on it and no company name, only a number. Your money has gone.",
+        "B2": "You pay him the two hundred, and he is charming about it, which he can afford to be. He gives you a receipt and a mobile number and assures you they will call today. Out on the pavement you look at the receipt properly for the first time: no address, no company name, no registration number, just a mobile telephone and a signature you cannot read. Your money has gone."
+      },
+      "glossary": {
+        "A2": [
+          "receipt"
+        ],
+        "B1": [
+          "receipt"
+        ],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Call the number.",
+            "B1": "Call the number straight away.",
+            "B2": "Call the number straight away, before you lose your nerve."
+          },
+          "goto": 39
+        },
+        {
+          "text": {
+            "A2": "Go to Rosewater Street. It is nearly nine.",
+            "B1": "Go to Rosewater Street — it is nearly nine.",
+            "B2": "Go to Rosewater Street; it is nearly nine and that is still a real appointment."
+          },
+          "goto": 34
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "text": {
+        "A2": "\"No thank you,\" you say. The man stops smiling immediately. \"Then we cannot help you,\" he says, and looks at the door. Outside, you feel better. You still have your money, and it is twenty past eight.",
+        "B1": "\"No thank you,\" you say. The smile disappears from his face so fast that you know at once you were right. \"Then we cannot help you,\" he says, and looks pointedly at the door. Outside on the pavement you feel considerably better. You still have your money, and it is only twenty past eight.",
+        "B2": "\"No, thank you.\" The smile leaves his face with a speed that tells you everything you needed to know about the two hundred. \"Then I am afraid we cannot help you,\" he says, and looks pointedly at the door. Out on the pavement you feel a good deal better than you did going in. You still have your money, and it is only twenty past eight."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go to Rosewater Street.",
+            "B1": "Head for Rosewater Street.",
+            "B2": "Head for Rosewater Street with your money intact."
+          },
+          "goto": 34
+        },
+        {
+          "text": {
+            "A2": "Ask somebody where the river offices are.",
+            "B1": "Ask someone where the new river offices are.",
+            "B2": "Ask a passer-by where the new river offices are."
+          },
+          "goto": 23
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "text": {
+        "A2": "It is a quarter past nine. Your interview time has passed. You are in a city you do not know. You have a letter in your hand and almost nothing in your pocket.",
+        "B1": "It is a quarter past nine. Your interview time has come and gone. You are standing in a city you do not know, holding a letter that is now useless, with almost nothing left in your pocket.",
+        "B2": "It is a quarter past nine, which means your interview has come and gone without you. You are standing somewhere in a city you cannot yet navigate, with almost nothing left in your pocket. The letter in your hand has stopped being an invitation and become a receipt for a wasted journey."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go to the office anyway and explain.",
+            "B1": "Go to the office anyway and explain yourself.",
+            "B2": "Go to the office anyway and explain yourself honestly."
+          },
+          "goto": 37
+        },
+        {
+          "text": {
+            "A2": "Go back to the station.",
+            "B1": "Go back to the station and give up.",
+            "B2": "Go back to the station and call it a day."
+          },
+          "goto": 40
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "text": {
+        "A2": "She reads the letter and closes her eyes for a second. \"Rosewater Street,\" she says quietly. \"We moved two years ago. Somebody is still sending the old letters.\" Then she looks at you properly. \"But you are here. Sit down. Tell me about yourself.\"",
+        "B1": "She reads the letter and closes her eyes for a second, the way people do when they recognise their own mistake. \"Rosewater Street,\" she says quietly. \"We moved two years ago. Someone in this office is still sending out the old letters.\" Then she looks at you properly for the first time. \"But you found us anyway. Sit down. Tell me about yourself.\"",
+        "B2": "She reads the letter and closes her eyes briefly, in the way people do when they have just recognised a mistake as their own. \"Rosewater Street.\" It is not quite a question. \"We moved two years ago. Somebody in this office is still sending out the old letters, and I have a fairly good idea who.\" Then she looks at you properly for the first time, and something in her manner changes. \"But you found us anyway, at some cost, by the look of you. Sit down. Tell me about yourself.\""
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Tell her everything about last night.",
+            "B1": "Tell her the whole story of last night.",
+            "B2": "Tell her the whole story of the last twelve hours."
+          },
+          "goto": 36
+        },
+        {
+          "text": {
+            "A2": "Say nothing about it and talk about the job.",
+            "B1": "Say nothing about the night and talk about the job.",
+            "B2": "Say nothing about the night and talk only about the job."
+          },
+          "goto": 37
+        }
+      ],
+      "note": "The final comprehension check: the reader has to notice that HER mistake is their advantage."
+    },
+    {
+      "id": 36,
+      "text": {
+        "A2": "So you tell her. The station, the bus, the empty building, the dust on the window, the man in his dressing gown. She listens to all of it. At the end she says: \"Most people go home. When can you start?\"\n\nYou start on Monday. The first thing they ask you to do is fix the letters.",
+        "B1": "So you tell her all of it. The station at eleven, the number nine bus, the dust on the window, the man at number 16 in his dressing gown. She listens to every word without interrupting once. When you finish she sits back and says: \"Most people would have gone home last night. When can you start?\"\n\nYou start on Monday. The first job they give you is fixing the letters.",
+        "B2": "So you tell her all of it. The station at eleven at night, the number nine bus, the dust on the inside of the window. The man at number 16 who answered the door in a dressing gown and told you the truth anyway. She listens to every word of it without once interrupting, which is not a thing you are used to. When you finish she sits back and says, \"Most people would have gone home last night. When can you start?\"\n\nYou start on Monday. The first job they give you is fixing the letters."
+      },
+      "glossary": {
+        "A2": [
+          "dust"
+        ],
+        "B1": [],
+        "B2": []
+      },
+      "ending": "good",
+      "choices": [],
+      "note": "Best ordinary ending. Earned by honesty at §35 rather than by any flag."
+    },
+    {
+      "id": 37,
+      "text": {
+        "A2": "There is no job today. But she takes your name and your number. She writes them on real paper, not on a screen. \"We will have something in the spring,\" she says. \"Call me. And use this address, not the old one.\"\n\nIt is not what you came for. But you are in the city now, and somebody knows your name.",
+        "B1": "There is no job for you today. But she takes your name and number, and writes them on a real piece of paper rather than typing them into a screen. You decide to take that as a good sign. \"We will have something in the spring,\" she says. \"Call me then. And use this address, not the one on your letter.\"\n\nIt is not what you came for. But you are in the city now, and somebody in it knows your name.",
+        "B2": "There is no job for you today, and she does not pretend otherwise. But she takes your name and your number and writes them on an actual piece of paper rather than typing them into a screen. You decide, on no evidence at all, to take that as a good sign. \"We will have something in the spring. Call me then — and use this address, not the one printed on your letter.\"\n\nIt is not what you came for. But you are in the city now, and somebody in it knows your name."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "ending": "neutral",
+      "choices": [],
+      "note": "The most common ending. Deliberately not a failure — a first day in a city rarely is."
+    },
+    {
+      "id": 38,
+      "text": {
+        "A2": "\"Ms Rowe?\" you say.\n\nShe stops with her key in the door and turns round. Nobody has told you her name. Nobody at Mill Quay knows you are coming. She looks at you for a long moment, and then she starts to smile.\n\n\"You went to Rosewater Street,\" she says. \"Didn't you.\"\n\nYou start on Monday. She tells everybody this story for years.",
+        "B1": "\"Ms Rowe?\"\n\nShe stops with her key halfway to the door and turns round. Nobody at Mill Quay knows you are coming; nobody here has told you her name. She looks at you for a long moment, working it out, and then she begins to smile.\n\n\"You went to Rosewater Street,\" she says. \"Didn't you.\"\n\nYou start on Monday. She tells this story to new people for years afterwards.",
+        "B2": "\"Ms Rowe?\"\n\nShe stops with her key halfway to the lock and turns round. Nobody at Mill Quay knows you are coming, and nobody at Mill Quay has told you her name, which means there is exactly one place you can have got it from. You can see her arriving at that conclusion in real time, and you can see the precise moment she decides she likes it.\n\n\"You went to Rosewater Street,\" she says. \"Didn't you.\"\n\nYou start on Monday. She tells this story to new arrivals for years afterwards, and it improves every time."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "ending": "good",
+      "choices": [],
+      "note": "Secret ending. Requires knowing her name (§12) AND seeing the label (§31) — two clues from different routes."
+    },
+    {
+      "id": 39,
+      "text": {
+        "A2": "The number rings and rings. Then it stops working. You go back to the agency at lunchtime. The yellow sign is still there. The door is locked. Inside, there is nobody at all.\n\nYou have no money and no job. You have a receipt with a phone number on it.",
+        "B1": "The number rings and rings, and then it stops connecting at all. You go back to the agency at lunchtime. The yellow sign is still up and the door is locked. Through the glass you can see that the bright, warm office has no furniture in it at all.\n\nYou have no money, no job, and a receipt with a dead phone number on it.",
+        "B2": "The number rings and rings, and then, at some point that afternoon, it stops connecting altogether. You go back at lunchtime. The yellow sign is still up — WORK FOR EVERYONE, TODAY — the door is locked, and through the glass you can see that the bright, warm, new-carpet-smelling office contains no furniture of any kind.\n\nYou have no money, no job, and a receipt with a dead telephone number on it. It is not yet noon on your first full day."
+      },
+      "glossary": {
+        "A2": [
+          "receipt"
+        ],
+        "B1": [],
+        "B2": []
+      },
+      "ending": "bad",
+      "choices": [],
+      "note": "Punishes ignoring the 'everybody pays it' warning at §24."
+    },
+    {
+      "id": 40,
+      "text": {
+        "A2": "You sit in the station and watch the trains. There is one at two o'clock that goes back. You have just enough money for the ticket.\n\nSomewhere in this city, a woman waits until half past nine. Your name is in her diary. Then she goes back to work.",
+        "B1": "You sit in the station and watch the departure board. There is a train at two o'clock going back the way you came, and you have just about enough money for a ticket.\n\nSomewhere in this city, a woman with your name in her diary waits until half past nine. Then she decides you are not coming, and goes back to work.",
+        "B2": "You sit in the station and watch the departure board turn over. There is a train at two o'clock going back the way you came, and you have, just about, enough money for a ticket to be on it.\n\nSomewhere in this city, a woman with your name written in her diary waits until half past nine, decides that you are not coming after all, and goes back to work. She does not think about it again. You will think about it for a long time."
+      },
+      "glossary": {
+        "A2": [],
+        "B1": [],
+        "B2": []
+      },
+      "ending": "bad",
+      "choices": [],
+      "note": "Giving up. Deliberately quiet rather than dramatic — the cost is what you don't see."
+    }
+  ]
+}

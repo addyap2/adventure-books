@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adventure Book — read in English</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="description" content="Choose-your-own-adventure stories for English learners, at three levels, with a glossary in eight languages.">
+<style>
+  :root {
+    --bg:#faf8f5; --fg:#1d1b19; --muted:#6b6560; --line:#e4dfd8;
+    --accent:#2f5d50; --accent-soft:#eaf1ee; --card:#fff; --gloss:#fffaf0;
+    --shadow:0 10px 34px rgba(30,25,20,.13);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#15171a; --fg:#e9e6e2; --muted:#9b958e; --line:#2c3134;
+            --accent:#82c6b1; --accent-soft:#1e2725; --card:#1c1f22; --gloss:#241f18;
+            --shadow:0 10px 34px rgba(0,0,0,.5); }
+  }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:16px/1.6 ui-serif, Georgia, "Times New Roman", serif; }
+  header { position:sticky; top:0; z-index:10; background:color-mix(in srgb, var(--bg) 92%, transparent);
+           backdrop-filter:blur(10px); border-bottom:1px solid var(--line);
+           padding:10px 16px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  header .name { font-family:ui-sans-serif,system-ui,sans-serif; font-weight:650; font-size:14px;
+                 letter-spacing:.01em; margin-right:auto; }
+  select, button { font:inherit; font-family:ui-sans-serif,system-ui,sans-serif; font-size:13px;
+    padding:6px 9px; border:1px solid var(--line); border-radius:8px;
+    background:var(--card); color:var(--fg); cursor:pointer; }
+  select:focus-visible, button:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
+  main { max-width:40rem; margin:0 auto; padding:28px 20px 96px; }
+  .num { font-family:ui-sans-serif,system-ui,sans-serif; font-size:12px; letter-spacing:.12em;
+         text-transform:uppercase; color:var(--muted); margin-bottom:14px; }
+  .para { font-size:20px; line-height:1.78; }
+  .para w { cursor:pointer; border-bottom:2px dotted var(--accent); padding-bottom:1px; }
+  .para w:active { background:var(--accent-soft); }
+  .choices { margin-top:30px; display:flex; flex-direction:column; gap:10px; }
+  .choices button { text-align:left; padding:14px 16px; border-radius:11px; font-size:17px;
+                    font-family:inherit; line-height:1.45; }
+  .choices button:hover { border-color:var(--accent); background:var(--accent-soft); }
+  .end { margin-top:26px; padding:16px 18px; border-radius:12px; background:var(--accent-soft);
+         border:1px solid var(--line); font-family:ui-sans-serif,system-ui,sans-serif; font-size:14px; }
+  .end b { font-size:16px; }
+  .gloss { position:fixed; left:50%; transform:translateX(-50%) translateY(8px); bottom:max(16px, env(safe-area-inset-bottom));
+    width:min(38rem,92vw); background:var(--gloss); border:1px solid var(--line);
+    border-radius:14px; padding:14px 18px; box-shadow:var(--shadow);
+    font-family:ui-sans-serif,system-ui,sans-serif; opacity:0; pointer-events:none;
+    transition:opacity .16s, transform .16s; }
+  .gloss.on { opacity:1; transform:translateX(-50%) translateY(0); pointer-events:auto; }
+  .gloss .hw { font-size:18px; font-weight:650; }
+  .gloss .pos { color:var(--muted); font-size:13px; font-style:italic; margin-left:6px; }
+  .gloss .en { margin-top:4px; }
+  .gloss .tr { margin-top:8px; font-size:18px; padding-top:8px; border-top:1px solid var(--line); }
+  .gloss[dir=rtl] .tr { text-align:right; }
+  .bar { margin-top:34px; padding-top:14px; border-top:1px solid var(--line);
+         color:var(--muted); font-size:13px; font-family:ui-sans-serif,system-ui,sans-serif; }
+  .pill { display:inline-block; padding:2px 8px; border:1px solid var(--line); border-radius:99px; margin-right:6px; }
+  .intro h1 { font-size:30px; line-height:1.2; margin:.2em 0 .3em; }
+  .intro p { color:var(--muted); }
+  .intro .go { margin-top:22px; font-size:17px; padding:14px 18px; }
+</style>
+</head>
+<body>
+<header>
+  <span class="name" id="bookname">Adventure Book</span>
+  <select id="episode" aria-label="Episode"></select>
+  <select id="level" aria-label="Reading level"></select>
+  <select id="lang" aria-label="Glossary language">
+    <option value="">English only</option>
+    <option value="fr">Français</option><option value="es">Español</option>
+    <option value="pt">Português</option><option value="it">Italiano</option>
+    <option value="de">Deutsch</option><option value="ru">Русский</option>
+    <option value="ar">العربية</option><option value="zh">中文</option>
+  </select>
+  <button id="speak" aria-label="Read this paragraph aloud" title="Read aloud">🔊</button>
+  <button id="restart">Restart</button>
+</header>
+
+<main>
+  <div id="intro" class="intro">
+    <h1 id="title">Loading…</h1>
+    <p id="blurb"></p>
+    <button class="go" id="begin">Start reading</button>
+  </div>
+  <div id="view" hidden>
+    <div class="num" id="num"></div>
+    <div class="para" id="para"></div>
+    <div class="choices" id="choices"></div>
+    <div class="end" id="end" hidden></div>
+    <div class="bar" id="bar"></div>
+  </div>
+</main>
+<div class="gloss" id="gloss" role="status" aria-live="polite"></div>
+
+<script>
+/* Adventure Book reader.
+   Static: fetches manifest.json, then one episode JSON and the shared lexicon.
+   The graph is shared across levels, so switching level re-renders the same
+   paragraph from a different text field — the reader keeps their place. */
+const $ = id => document.getElementById(id);
+let MANIFEST = null, BOOK = null, LEX = {}, level = null, node = null;
+let flags = new Set(), seen = new Set();
+
+const key = () => `ab:${BOOK.series}:${BOOK.episode}`;
+const prefKey = "ab:prefs";
+
+function loadPrefs() { try { return JSON.parse(localStorage.getItem(prefKey) || "{}"); } catch { return {}; } }
+function savePrefs(p) { try { localStorage.setItem(prefKey, JSON.stringify(p)); } catch {} }
+function loadSeen() { try { seen = new Set(JSON.parse(localStorage.getItem(key()) || "[]")); } catch { seen = new Set(); } }
+function saveSeen() { try { localStorage.setItem(key(), JSON.stringify([...seen])); } catch {} }
+
+const byId = id => BOOK.nodes.find(n => n.id === id);
+const at = v => (v && typeof v === "object" && !Array.isArray(v)) ? v[level] : v;
+
+async function boot() {
+  MANIFEST = await (await fetch("manifest.json")).json();
+  LEX = {};
+  const lex = await (await fetch(MANIFEST.lexicon)).json();
+  const src = lex.entries || lex;
+  for (const k in src) LEX[k.toLowerCase()] = src[k];
+  $("episode").innerHTML = MANIFEST.episodes
+    .map(e => `<option value="${e.file}">Episode ${e.episode}: ${e.title}</option>`).join("");
+  const p = loadPrefs();
+  if (p.lang) $("lang").value = p.lang;
+  await openEpisode(p.file && MANIFEST.episodes.some(e => e.file === p.file)
+    ? p.file : MANIFEST.episodes[0].file, p.level);
+}
+
+async function openEpisode(file, preferLevel) {
+  BOOK = await (await fetch(file)).json();
+  $("episode").value = file;
+  $("level").innerHTML = BOOK.levels.map(l => `<option>${l}</option>`).join("");
+  level = BOOK.levels.includes(preferLevel) ? preferLevel : BOOK.levels[0];
+  $("level").value = level;
+  $("bookname").textContent = BOOK.title;
+  loadSeen();
+  flags = new Set(); node = BOOK.start;
+  const endings = BOOK.nodes.filter(n => n.ending).length;
+  $("title").textContent = BOOK.title;
+  $("blurb").textContent =
+    `${BOOK.nodes.length} paragraphs · ${endings} endings · read at ${BOOK.levels.join(", ")}. ` +
+    `Tap any underlined word for its meaning. Your choices decide how it ends.`;
+  $("intro").hidden = false; $("view").hidden = true;
+  savePrefs({ ...loadPrefs(), file, level });
+}
+
+function markup(text, list) {
+  const set = new Set(list.map(w => w.toLowerCase()));
+  return text.replace(/[A-Za-z']+/g, m => {
+    const l = m.toLowerCase();
+    const base = set.has(l) ? l
+      : [l.replace(/s$/, ""), l.replace(/es$/, ""), l.replace(/ed$/, "")].find(x => set.has(x));
+    return base ? `<w data-w="${base}">${m}</w>` : m;
+  });
+}
+
+function render() {
+  const n = byId(node);
+  $("intro").hidden = true; $("view").hidden = false;
+  const gl = (at(n.glossary) || []).map(g => typeof g === "string" ? g : g.word);
+  $("num").textContent = `Paragraph ${n.id} · ${level}`;
+  $("para").innerHTML = markup((at(n.text) || "").replace(/\n\n/g, "<br><br>"), gl);
+  $("para").querySelectorAll("w").forEach(el => el.onclick = () => showGloss(el.dataset.w));
+
+  const box = $("choices"); box.innerHTML = "";
+  (n.choices || [])
+    .filter(c => { let r = c.requires || []; if (typeof r === "string") r = [r];
+                   return r.every(f => flags.has(f)); })
+    .forEach(c => {
+      const b = document.createElement("button");
+      b.textContent = at(c.text);
+      b.onclick = () => {
+        let s = c.sets || []; if (typeof s === "string") s = [s];
+        s.forEach(f => flags.add(f));
+        node = c.goto; hideGloss(); window.scrollTo({ top: 0 }); render();
+      };
+      box.appendChild(b);
+    });
+
+  const endings = BOOK.nodes.filter(x => x.ending);
+  if (n.ending) {
+    seen.add(n.id); saveSeen();
+    $("end").hidden = false;
+    $("end").innerHTML = `<b>The End.</b> You reached one of ${endings.length} endings.<br>` +
+      (seen.size < endings.length
+        ? `You have found ${seen.size}. Read it again and choose differently — the story changes more than you think.`
+        : `You have found all ${endings.length}. Try the next level up.`);
+  } else $("end").hidden = true;
+
+  $("bar").innerHTML = `<span class="pill">${BOOK.nodes.length} paragraphs</span>` +
+    `<span class="pill">${seen.size}/${endings.length} endings found</span>` +
+    (flags.size ? `<span class="pill">carrying: ${[...flags].join(", ")}</span>` : "");
+}
+
+function showGloss(word) {
+  const e = LEX[word]; const g = $("gloss"); const lang = $("lang").value;
+  g.innerHTML = e
+    ? `<div><span class="hw">${word}</span><span class="pos">${e.pos || ""}</span></div>` +
+      `<div class="en">${e.en || ""}</div>` +
+      (lang && e[lang] ? `<div class="tr">${e[lang]}</div>` : "")
+    : `<div class="hw">${word}</div>`;
+  g.dir = lang === "ar" ? "rtl" : "ltr";
+  g.classList.add("on");
+  clearTimeout(g._t); g._t = setTimeout(hideGloss, 7000);
+}
+function hideGloss() { $("gloss").classList.remove("on"); }
+
+$("begin").onclick = () => { node = BOOK.start; flags = new Set(); render(); };
+$("restart").onclick = () => { node = BOOK.start; flags = new Set(); hideGloss(); render(); };
+$("level").onchange = e => { level = e.target.value;
+  savePrefs({ ...loadPrefs(), level }); if (!$("view").hidden) render(); };
+$("lang").onchange = e => savePrefs({ ...loadPrefs(), lang: e.target.value });
+$("episode").onchange = e => openEpisode(e.target.value, level);
+$("speak").onclick = () => {
+  if (!window.speechSynthesis || $("view").hidden) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance((at(byId(node).text) || "").replace(/\n/g, " "));
+  u.lang = "en-GB"; u.rate = level === "A2" ? 0.85 : 0.95;
+  speechSynthesis.speak(u);
+};
+document.addEventListener("click", e => {
+  if (!e.target.closest("w") && !e.target.closest(".gloss")) hideGloss();
+});
+boot().catch(err => { $("title").textContent = "Could not load the story";
+  $("blurb").textContent = String(err); });
+</script>
+</body>
+</html>

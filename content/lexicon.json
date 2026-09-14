@@ -1,0 +1,137 @@
+{
+  "_comment": "Shared lexicon for the 'new-city' series. Translations need a native speaker's check before launch. Nouns carry their article where the language needs one.",
+  "entries": {
+    "kiosk": {
+      "pos": "noun",
+      "en": "a very small shop on a street that sells newspapers, drinks and small things",
+      "fr": "le kiosque",
+      "es": "el quiosco",
+      "pt": "o quiosque",
+      "it": "il chiosco",
+      "de": "der Kiosk",
+      "ru": "киоск",
+      "ar": "كشك",
+      "zh": "报刊亭"
+    },
+    "dust": {
+      "pos": "noun",
+      "en": "dry dirt like powder that covers things nobody cleans",
+      "fr": "la poussière",
+      "es": "el polvo",
+      "pt": "a poeira",
+      "it": "la polvere",
+      "de": "der Staub",
+      "ru": "пыль",
+      "ar": "غبار",
+      "zh": "灰尘"
+    },
+    "agency": {
+      "pos": "noun",
+      "en": "a company that finds work for people, usually for money",
+      "fr": "l'agence",
+      "es": "la agencia",
+      "pt": "a agência",
+      "it": "l'agenzia",
+      "de": "die Agentur",
+      "ru": "агентство",
+      "ar": "وكالة",
+      "zh": "中介机构"
+    },
+    "calendar": {
+      "pos": "noun",
+      "en": "a page or book that shows the days and months of a year",
+      "fr": "le calendrier",
+      "es": "el calendario",
+      "pt": "o calendário",
+      "it": "il calendario",
+      "de": "der Kalender",
+      "ru": "календарь",
+      "ar": "تقويم",
+      "zh": "日历"
+    },
+    "bench": {
+      "pos": "noun",
+      "en": "a long hard seat for two or more people, often outside",
+      "fr": "le banc",
+      "es": "el banco",
+      "pt": "o banco",
+      "it": "la panchina",
+      "de": "die Bank",
+      "ru": "скамейка",
+      "ar": "مقعد",
+      "zh": "长椅"
+    },
+    "cleaner": {
+      "pos": "noun",
+      "en": "a person whose job is to clean a building",
+      "fr": "l'agent d'entretien",
+      "es": "la limpiadora",
+      "pt": "a faxineira",
+      "it": "l'addetta alle pulizie",
+      "de": "die Reinigungskraft",
+      "ru": "уборщица",
+      "ar": "عاملة نظافة",
+      "zh": "清洁工"
+    },
+    "quay": {
+      "pos": "noun",
+      "en": "a hard flat place next to water where boats stop; said like KEY",
+      "fr": "le quai",
+      "es": "el muelle",
+      "pt": "o cais",
+      "it": "la banchina",
+      "de": "der Kai",
+      "ru": "набережная",
+      "ar": "رصيف الميناء",
+      "zh": "码头"
+    },
+    "receipt": {
+      "pos": "noun",
+      "en": "a small paper that shows you paid for something; said like ri-SEET",
+      "fr": "le reçu",
+      "es": "el recibo",
+      "pt": "o recibo",
+      "it": "la ricevuta",
+      "de": "die Quittung",
+      "ru": "квитанция",
+      "ar": "إيصال",
+      "zh": "收据"
+    },
+    "reception": {
+      "pos": "noun",
+      "en": "the desk near the door of a building where visitors go first",
+      "fr": "la réception",
+      "es": "la recepción",
+      "pt": "a receção",
+      "it": "la reception",
+      "de": "der Empfang",
+      "ru": "рецепция",
+      "ar": "الاستقبال",
+      "zh": "前台"
+    },
+    "label": {
+      "pos": "noun",
+      "en": "a small piece of paper or plastic on a thing, with writing on it",
+      "fr": "l'étiquette",
+      "es": "la etiqueta",
+      "pt": "a etiqueta",
+      "it": "l'etichetta",
+      "de": "das Etikett",
+      "ru": "бирка",
+      "ar": "بطاقة",
+      "zh": "标签"
+    },
+    "interview": {
+      "pos": "noun",
+      "en": "a meeting where a company asks you questions about a job",
+      "fr": "l'entretien",
+      "es": "la entrevista",
+      "pt": "a entrevista",
+      "it": "il colloquio",
+      "de": "das Vorstellungsgespräch",
+      "ru": "собеседование",
+      "ar": "مقابلة عمل",
+      "zh": "面试"
+    }
+  }
+}

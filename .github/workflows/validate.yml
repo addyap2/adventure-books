@@ -1,0 +1,33 @@
+name: Validate stories
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate every episode
+        run: |
+          fail=0
+          for f in content/episode-*.json; do
+            echo "::group::$f"
+            python3 scripts/build_book.py "$f" --lexicon content/lexicon.json || fail=1
+            echo "::endgroup::"
+          done
+          exit $fail
+
+      - name: Check flags and lexicon across the series
+        run: python3 scripts/build_book.py --series content/ --lexicon content/lexicon.json
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Build the site
+        run: npm run build
