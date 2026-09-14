@@ -23,6 +23,19 @@ depends on what you notice and who you trust.
 **Theme:** being a stranger; the difference between being *processed* and being *seen*;
 persistence rewarded. Nobody is a villain except the people selling false hope.
 
+**The through-line (added):** *why is the letter two years out of date — who in that office is
+still posting the old address?* This quiet mystery, already latent in the spine (§35: "Someone
+in this office is still sending out the old letters"), becomes the night's forward pull. It
+gives the reader a *reason to talk to people* all night, and it pays off thematically: the same
+carelessness that misdirected you is the first thing you are hired to fix (§36). Atmosphere sets
+the mood; this thread supplies propulsion across 150 passages.
+
+**Recurring faces (added):** warmth must live in people, because the city is deliberately
+faceless. Four anchors recur so the night has relationships, not just locations: **the kiosk
+woman** (first help), **the number-16 family** (the father in the gown; his daughter by
+daylight), **the night-shift man** at the station, and **Ms Rowe** herself. Two of them reappear
+across acts so a face you were kind (or curt) to earlier answers for it later.
+
 ---
 
 ## 2. What "150 passages" buys, and the rule that governs it
@@ -49,9 +62,9 @@ Three acts, one night and one morning, plus an ending fan. Current passage ids i
 | **I — Arrival** (dusk→midnight) | The station **(1)**, information desk **(2)**, the taxi rank / bus **(3,4,6)**, the walk & the kiosk woman **(5,9)**, sleeping the first choices | The other arrivals on the platform; what's in your bag (a small inventory beat); the night-shift faces; the first sense the letter is wrong | ~30 (of which 9 exist) |
 | **II — The Night** (midnight→dawn) | Rosewater St **(7,11,18)**, number 16 **(12,26)**, the river at night **(19,28)**, the station bench / hotel **(13,16)**, the **agency scam thread (10,24,32,33,39)**, the Blue Kettle café **(9,15,29)** | A second helper and a second false lead so the map has real dead ends; the scam given room to tempt (a queue of hopefuls, a plausible pitch); a quiet night-watchman or fellow traveller who gives the river clue | ~65 (of which ~19 exist) |
 | **III — The Morning** (dawn→09:00+) | Mill Quay **(23,25,31)**, reception **(30)**, meeting Rowe on the step **(27)**, the interview itself **(35,36,37)** | The interview as a *real scene* with 2–3 sub-decisions (what you say about last night, whether you mention the agency, an honesty vs polish fork); the walk along the waking quay | ~40 (of which ~9 exist) |
-| **Endings** | see §5 | expand from 5 → ~10 | ~12 |
+| **Endings** | see §5 | expand from 5 → 12 | ~12 |
 
-Target: **~147–150 passages, ~10 endings.**
+Target: **~150 passages, 12 endings.**
 
 ---
 
@@ -81,22 +94,35 @@ reached in a state that offers nothing to do. The validator enforces this on eve
 
 ---
 
-## 5. Endings (~10)
+## 5. Endings (12)
 
 Replay is where the language lands, so endings are the reward and get the best writing and art.
+Twelve is the sweet spot: enough that each meaningful state-combination lands its own ending,
+few enough that each earns bespoke prose × 3 levels + bespoke art. Hard cap ~15.
 
-- **Good** — *Hired, told the truth* (**36**, exists); *The step-greeting* secret end (**38**,
-  exists, gated `knows_name`); **new:** *Hired on merit* (a clean interview, no story told);
-  **new:** *The best night* — arrived rested, dodged the scam, greeted by name (multi-flag gate).
-- **Neutral** — *Spring work* (**37**, exists); **new:** *Remembered* — no job, but your name is
-  on real paper and you're in the city.
-- **Bad** — *The dead phone number* (**39**, exists, `paid_scam`); *The two-o'clock train home*
-  (**40**, exists); **new:** *Too late* — you arrive at 09:20 to a closed diary; **new:**
-  *Processed, not seen* — you took every shortcut, got the job, and it feels like nothing.
+**Win (4)**
+- *Hired, told the truth* (**36**, exists) — the warm one; sets `told_truth`, carries into the arc.
+- *The step-greeting* secret end (**38**, exists) — gated `knows_name`.
+- *Hired on merit* (**new**) — a clean interview, no story told; competent, a little cooler.
+- *The best night* (**new**, secret) — arrived `rested` **and** `dodged_scam` **and** `knows_name`.
 
-At least one clearly good and one clearly bad (validator warns otherwise). The two new "secret"
-ends reward readers who both *noticed* (clues) and *chose well* (dodged the scam), which is the
-whole pedagogy: understanding the paragraph changes the outcome.
+**Neutral / bittersweet (4)**
+- *Spring work* (**37**, exists) — no job now, but real paper, a real "call me then".
+- *Remembered* (**new**) — no job, but your name is known and you are in the city.
+- *Processed, not seen* (**new**) — every shortcut taken, you *get* the job, and it feels like
+  nothing. A technical win that reads as a loss — the sharpest ending in the book.
+- *The kindness returned* (**new**) — no job, but a face you helped in the night helps you back;
+  you have somewhere to stay. Warmth without winning.
+
+**Lose (4)**
+- *The dead phone number* (**39**, exists) — gated `paid_scam`; broke, conned.
+- *The two-o'clock train home* (**40**, exists) — you give up and leave.
+- *Too late* (**new**) — you reach Mill Quay at 09:20 to a closed diary and a polite no.
+- *The bench at dawn* (**new**) — a `rough_night` that never recovers; you never reach the interview.
+
+At least one clearly good and one clearly bad (validator warns otherwise). The two secret ends
+reward readers who both *noticed* (clues) and *chose well* (dodged the scam) — the whole
+pedagogy: understanding the paragraph changes the outcome.
 
 ---
 
