@@ -96,6 +96,10 @@
         {
           "text": "⟨STUB⟩ Ask the man if others have come looking for this firm.",
           "goto": 43
+        },
+        {
+          "text": "⟨STUB⟩ Ask him to draw you a proper map.",
+          "goto": 109
         }
       ]
     },
@@ -190,6 +194,10 @@
         {
           "text": "⟨STUB⟩ Admit you are lost, and look for help.",
           "goto": 49
+        },
+        {
+          "text": "⟨STUB⟩ Cross the empty market square.",
+          "goto": 115
         }
       ]
     },
@@ -226,6 +234,10 @@
         {
           "text": "⟨STUB⟩ Ask him why the offices moved.",
           "goto": 65
+        },
+        {
+          "text": "⟨STUB⟩ Just take the taxi and end the walking.",
+          "goto": 108
         }
       ]
     },
@@ -325,6 +337,10 @@
             "B2": "Walk down to the cafe now, late as it is."
           },
           "goto": 15
+        },
+        {
+          "text": "⟨STUB⟩ There's a back way into number 14, through the yard.",
+          "goto": 95
         }
       ]
     },
@@ -357,6 +373,14 @@
           "sets": [
             "rough_night"
           ]
+        },
+        {
+          "text": "⟨STUB⟩ Ask the hotel man about the agency across the road.",
+          "goto": 104
+        },
+        {
+          "text": "⟨STUB⟩ You cannot afford the room.",
+          "goto": 129
         }
       ]
     },
@@ -429,6 +453,10 @@
         {
           "text": "⟨STUB⟩ Notice the lit upstairs window.",
           "goto": 52
+        },
+        {
+          "text": "⟨STUB⟩ The girl at the window is leaning out to speak.",
+          "goto": 97
         }
       ],
       "note": "Both choices set knows_name. The information is the reward for knocking, not for a particular route after it."
@@ -493,6 +521,10 @@
           "sets": [
             "rough_night"
           ]
+        },
+        {
+          "text": "⟨STUB⟩ Wait at the stop for the first bus of the day.",
+          "goto": 105
         }
       ]
     },
@@ -601,6 +633,10 @@
             "B2": "Wait outside number 14 until nine and see who turns up."
           },
           "goto": 27
+        },
+        {
+          "text": "⟨STUB⟩ Walk to the quay in the morning light.",
+          "goto": 110
         }
       ],
       "note": "Central bottleneck. Every route arrives here; has_card opens the fast lane."
@@ -658,6 +694,10 @@
         {
           "text": "⟨STUB⟩ Take the shortest way you can guess toward the water.",
           "goto": 53
+        },
+        {
+          "text": "⟨STUB⟩ By the water, a boathouse has its lights on.",
+          "goto": 99
         }
       ]
     },
@@ -718,6 +758,14 @@
             "B2": "Ask whoever is behind the counter here about them."
           },
           "goto": 29
+        },
+        {
+          "text": "⟨STUB⟩ Wait for the café to open at first light.",
+          "goto": 102
+        },
+        {
+          "text": "⟨STUB⟩ Decide, finally, to trust the letter.",
+          "goto": 114
         }
       ]
     },
@@ -748,6 +796,10 @@
         {
           "text": "⟨STUB⟩ Stay on the bench and let the morning pass.",
           "goto": 147
+        },
+        {
+          "text": "⟨STUB⟩ Dawn: decide you are not ready to give up.",
+          "goto": 128
         }
       ]
     },
@@ -853,6 +905,10 @@
         {
           "text": "⟨STUB⟩ Buy a coffee from the cart to steady yourself.",
           "goto": 67
+        },
+        {
+          "text": "⟨STUB⟩ Buy a coffee from the woman at the cart.",
+          "goto": 113
         }
       ]
     },
@@ -879,6 +935,10 @@
             "B2": "Go back and wait outside number 14 anyway."
           },
           "goto": 27
+        },
+        {
+          "text": "⟨STUB⟩ Let her show you the way to the quay.",
+          "goto": 111
         }
       ]
     },
@@ -940,6 +1000,10 @@
         {
           "text": "⟨STUB⟩ Cross the bridge towards the one lit window.",
           "goto": 54
+        },
+        {
+          "text": "⟨STUB⟩ The new development's glass lobby is lit and empty.",
+          "goto": 101
         }
       ]
     },
@@ -973,6 +1037,14 @@
           "sets": [
             "knows_river"
           ]
+        },
+        {
+          "text": "⟨STUB⟩ One of the early regulars is looking your way.",
+          "goto": 103
+        },
+        {
+          "text": "⟨STUB⟩ Leave your name and number with the counter man.",
+          "goto": 127
         }
       ]
     },
@@ -1127,6 +1199,10 @@
         {
           "text": "⟨STUB⟩ Reach Mill Quay at last — twenty past nine.",
           "goto": 146
+        },
+        {
+          "text": "⟨STUB⟩ Go to the office anyway and explain.",
+          "goto": 112
         }
       ]
     },
@@ -1324,6 +1400,10 @@
         {
           "text": "⟨STUB⟩ Wait quietly on the side step.",
           "goto": 47
+        },
+        {
+          "text": "⟨STUB⟩ Ask to leave a note for Ada.",
+          "goto": 117
         }
       ]
     },
@@ -1341,6 +1421,10 @@
         {
           "text": "⟨STUB⟩ Go to the café on the corner.",
           "goto": 15
+        },
+        {
+          "text": "⟨STUB⟩ Share the late worker's cab.",
+          "goto": 122
         }
       ]
     },
@@ -1435,6 +1519,10 @@
         {
           "text": "⟨STUB⟩ Press on towards number 14 on foot.",
           "goto": 7
+        },
+        {
+          "text": "⟨STUB⟩ A taxi is idling at the kerb.",
+          "goto": 116
         }
       ]
     },
@@ -1469,6 +1557,10 @@
         {
           "text": "⟨STUB⟩ Knock, and see who is cleaning in there.",
           "goto": 18
+        },
+        {
+          "text": "⟨STUB⟩ Photograph the half-scraped name.",
+          "goto": 118
         }
       ]
     },
@@ -1531,6 +1623,10 @@
           "sets": [
             "knows_river"
           ]
+        },
+        {
+          "text": "⟨STUB⟩ Wait in the watchman's warm hut.",
+          "goto": 123
         }
       ]
     },
@@ -1545,6 +1641,10 @@
         {
           "text": "⟨STUB⟩ Just read the card, and head for the quay.",
           "goto": 23
+        },
+        {
+          "text": "⟨STUB⟩ Wait outside for the café to open.",
+          "goto": 119
         }
       ]
     },
@@ -1579,6 +1679,10 @@
         {
           "text": "⟨STUB⟩ Thank her, and go.",
           "goto": 20
+        },
+        {
+          "text": "⟨STUB⟩ Let the cleaner tell you about the old firm.",
+          "goto": 126
         }
       ]
     },
@@ -1593,6 +1697,10 @@
         {
           "text": "⟨STUB⟩ Take her warning, and go straight to Rosewater.",
           "goto": 20
+        },
+        {
+          "text": "⟨STUB⟩ Go to the river with Mara.",
+          "goto": 125
         }
       ]
     },
@@ -1607,6 +1715,10 @@
         {
           "text": "⟨STUB⟩ Think twice, and turn towards Rosewater.",
           "goto": 17
+        },
+        {
+          "text": "⟨STUB⟩ A woman in the queue reads the form and stops.",
+          "goto": 107
         }
       ]
     },
@@ -1641,6 +1753,10 @@
         {
           "text": "⟨STUB⟩ Cut your losses, and head for Rosewater.",
           "goto": 34
+        },
+        {
+          "text": "⟨STUB⟩ Go to the job address the agency gave you.",
+          "goto": 106
         }
       ]
     },
@@ -1693,6 +1809,10 @@
         {
           "text": "⟨STUB⟩ Go up to reception and wait.",
           "goto": 84
+        },
+        {
+          "text": "⟨STUB⟩ Overhear the coffee-cart queue.",
+          "goto": 124
         }
       ]
     },
@@ -1939,6 +2059,482 @@
         {
           "text": "⟨STUB⟩ She lets it go, for now.",
           "goto": 37
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "text": "⟨STUB⟩ The kiosk woman calls after you: \"There's a back way into number 14 — through the yard. The front door hasn't opened in years.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Go round the back, into the yard.",
+          "goto": 96
+        },
+        {
+          "text": "⟨STUB⟩ Try the front of the building.",
+          "goto": 7
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "text": "⟨STUB⟩ In the yard a low window is lit. Inside, on a desk, there is a tray of envelopes, stamped and ready — all addressed, you see with a chill, to Rosewater Street.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Look in the front window too.",
+          "goto": 11
+        },
+        {
+          "text": "⟨STUB⟩ Come back at nine, when someone is here.",
+          "goto": 17
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "text": "⟨STUB⟩ Before you go, the upstairs window opens and the girl leans out. \"They're by the river now,\" she says, matter-of-fact. \"Ada Rowe. My dad used to work for her.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Ask her more.",
+          "goto": 98
+        },
+        {
+          "text": "⟨STUB⟩ Thank her, and wait for morning.",
+          "goto": 17
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "text": "⟨STUB⟩ \"Three Mill Quay,\" she says, as if everyone knows. \"Take the number four in the morning.\" Then her father calls her in, and the window shuts.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Set off for the river.",
+          "goto": 19,
+          "sets": [
+            "knows_name",
+            "knows_river"
+          ]
+        },
+        {
+          "text": "⟨STUB⟩ Find the café she mentioned.",
+          "goto": 15,
+          "sets": [
+            "knows_name",
+            "knows_river"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "text": "⟨STUB⟩ By the water you lose the thread of the streets entirely. But a boathouse has its lights on, early, and there is the knock of oars being carried down to the river.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Ask the rowers the way.",
+          "goto": 100
+        },
+        {
+          "text": "⟨STUB⟩ Push on along the dark bank.",
+          "goto": 28
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "text": "⟨STUB⟩ \"Mill Quay? Straight along, past the second bridge.\" The rower barely breaks step. \"Ten minutes. You're nearly there.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Follow the bank to the quay.",
+          "goto": 23,
+          "sets": [
+            "knows_river"
+          ]
+        },
+        {
+          "text": "⟨STUB⟩ Find the coffee cart and wait for nine.",
+          "goto": 25,
+          "sets": [
+            "knows_river"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "text": "⟨STUB⟩ The new development has a glass lobby, lit and empty, a guard's cap on an untended desk. Everything here is two years newer than the letter in your bag.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Try the gate and the night watchman.",
+          "goto": 55
+        },
+        {
+          "text": "⟨STUB⟩ Wait for morning by the quay.",
+          "goto": 23
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "text": "⟨STUB⟩ You wait for the café to open. The sky goes from black to the colour of dishwater, and a light comes on inside at last.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Ask the counter man when they open properly.",
+          "goto": 29
+        },
+        {
+          "text": "⟨STUB⟩ Wait at the window.",
+          "goto": 15
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "text": "⟨STUB⟩ One of the early regulars looks up. \"Kessler and Rowe? I did their books, years back. Good people. Bad with letters.\" He laughs at his own joke.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Head for the quay while there's time.",
+          "goto": 23
+        },
+        {
+          "text": "⟨STUB⟩ Worry that it is already too late.",
+          "goto": 34
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "text": "⟨STUB⟩ The hotel man leans on the desk. \"Word of advice — that agency across the way, the yellow sign? Don't. They took a lad's last money on Tuesday.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Take the room and sleep.",
+          "goto": 16
+        },
+        {
+          "text": "⟨STUB⟩ Too dear — try the station instead.",
+          "goto": 13
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "text": "⟨STUB⟩ The first bus of the day sighs up to the stop, warm and almost empty. It will go towards Rosewater, or you could change for the river.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Take it to Rosewater Street.",
+          "goto": 20
+        },
+        {
+          "text": "⟨STUB⟩ Change for the river.",
+          "goto": 23
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "text": "⟨STUB⟩ The address the agency gave you is an empty lot behind a fence. There was never any job. There was only the two hundred, and it is gone.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Call the number again, uselessly.",
+          "goto": 39
+        },
+        {
+          "text": "⟨STUB⟩ Give up on them and go to Rosewater.",
+          "goto": 34
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "text": "⟨STUB⟩ A woman near you in the queue reads the form, folds it, and hands it back. \"It's a swindle,\" she says, loud enough for the others. \"Come on.\" A few of you leave together.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Leave the queue with her, for Rosewater.",
+          "goto": 17
+        },
+        {
+          "text": "⟨STUB⟩ Stay in the queue anyway.",
+          "goto": 24
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "text": "⟨STUB⟩ The taxi carries you through streets with nobody on them, past shuttered shops and one all-night café throwing yellow light on the wet road.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Rosewater Street, please.",
+          "goto": 7
+        },
+        {
+          "text": "⟨STUB⟩ Somewhere cheap to sleep, by the water.",
+          "goto": 10
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "text": "⟨STUB⟩ The man at the desk draws you a better map on the back of a receipt, and marks the river with a small square. \"That's where the smart ones went,\" he says.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Take the bus.",
+          "goto": 4
+        },
+        {
+          "text": "⟨STUB⟩ Walk, with the new map.",
+          "goto": 5
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "text": "⟨STUB⟩ You walk to the quay in the growing light, past people going to work who know exactly where they are going. For the first time, so do you.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Arrive at the quay.",
+          "goto": 23
+        },
+        {
+          "text": "⟨STUB⟩ Arrive early, by the water.",
+          "goto": 25
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "text": "⟨STUB⟩ The young woman from number 16 is going the same way. \"Number four,\" she says, nodding at the bus. \"I'll show you where to get off.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Take the bus to the quay with her.",
+          "goto": 23
+        },
+        {
+          "text": "⟨STUB⟩ Walk to Rosewater with her first.",
+          "goto": 27
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "text": "⟨STUB⟩ You go to the office to explain yourself, late and out of breath, rehearsing the words on the stairs.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Reach reception and try.",
+          "goto": 30
+        },
+        {
+          "text": "⟨STUB⟩ You are simply too late.",
+          "goto": 146
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "text": "⟨STUB⟩ The woman at the coffee cart takes one look at you and puts an extra shot in, no charge. \"Long night,\" she says. It is not a question.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Take it, and go in to reception.",
+          "goto": 30
+        },
+        {
+          "text": "⟨STUB⟩ Take it, and watch the door a while.",
+          "goto": 31
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "text": "⟨STUB⟩ You sit with the cold coffee and decide, finally, to trust the letter that brought you here — or at least the person who wrote it.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Go back to Rosewater Street.",
+          "goto": 17
+        },
+        {
+          "text": "⟨STUB⟩ Ask the café one more time.",
+          "goto": 29
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "text": "⟨STUB⟩ You cross an empty market square, the stalls folded away, a single fox trotting along the gutter as though it owns the hour.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Follow the lit windows.",
+          "goto": 49
+        },
+        {
+          "text": "⟨STUB⟩ Cut towards the corner shop.",
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "text": "⟨STUB⟩ A taxi idles at the kerb, its light on, the driver reading a paper. It would cost you, but it would end the walking.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Take it.",
+          "goto": 6
+        },
+        {
+          "text": "⟨STUB⟩ Keep to the launderette light instead.",
+          "goto": 50
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "text": "⟨STUB⟩ The cleaner sighs and props the door. \"Leave a note if you must,\" she says. \"I'll put it on Ada's desk. No promises.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Leave a note and come back at nine.",
+          "goto": 17
+        },
+        {
+          "text": "⟨STUB⟩ Ask her one more question first.",
+          "goto": 18
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "text": "⟨STUB⟩ You take a photograph of the half-scraped name, twice, so you have it whatever happens. Proof, of a kind, that you were here and looked.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Show it at the café.",
+          "goto": 15
+        },
+        {
+          "text": "⟨STUB⟩ Keep it, and come back at nine.",
+          "goto": 17
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "text": "⟨STUB⟩ You wait outside the café for it to open, stamping your feet against the cold, watching the card in the window as if it might change its mind.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Tap on the glass at the first sign of life.",
+          "goto": 57
+        },
+        {
+          "text": "⟨STUB⟩ Give up waiting and go to the quay.",
+          "goto": 23
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "text": "⟨STUB⟩ The late worker is going your way and splits a cab. \"You'll never find it on foot in the dark,\" she says. \"And you look done in.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Share the cab to the river.",
+          "goto": 23
+        },
+        {
+          "text": "⟨STUB⟩ Thank her, but keep to your own way.",
+          "goto": 17
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "text": "⟨STUB⟩ The watchman waves you into the warm of his hut and pours something from a flask. \"Nine o'clock,\" he says again, kindly. \"Not a minute before.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Wait in the warm until the light.",
+          "goto": 25
+        },
+        {
+          "text": "⟨STUB⟩ Step out and watch the door.",
+          "goto": 31
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "text": "⟨STUB⟩ In the coffee-cart queue you hear the name before you see anyone: \"...Ada Rowe wants the Thursday figures...\" Two people from the second floor, talking shop.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Follow them in to reception.",
+          "goto": 30
+        },
+        {
+          "text": "⟨STUB⟩ Go up and wait your turn.",
+          "goto": 84
+        }
+      ]
+    },
+    {
+      "id": 125,
+      "text": "⟨STUB⟩ Mara is at breakfast with the same idea as you. \"The river,\" she says. \"We could go together. Safer, and I hate arriving alone.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Go to Rosewater first, then part.",
+          "goto": 20
+        },
+        {
+          "text": "⟨STUB⟩ Go straight to the river together.",
+          "goto": 23
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "text": "⟨STUB⟩ The cleaner has worked the station twenty years. \"Kessler and Rowe,\" she says. \"They did right by my sister once. Go and find them. Don't sleep your chance away.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Take her push, and go.",
+          "goto": 20
+        },
+        {
+          "text": "⟨STUB⟩ Sit a moment longer, and think.",
+          "goto": 21
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "text": "⟨STUB⟩ You leave your name and number with the counter man, just in case. \"If they come in,\" you say. He nods as if he has heard it before, which he has.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Go to the quay now.",
+          "goto": 23
+        },
+        {
+          "text": "⟨STUB⟩ Go back to Rosewater first.",
+          "goto": 34
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "text": "⟨STUB⟩ Dawn on the bench. Your back is ruined and your money is nearly gone, but you are not, it turns out, ready to give up. Not quite yet.",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Get the first bus to Rosewater.",
+          "goto": 20
+        },
+        {
+          "text": "⟨STUB⟩ Find the café and ask again.",
+          "goto": 29
+        }
+      ]
+    },
+    {
+      "id": 129,
+      "text": "⟨STUB⟩ You cannot afford the room. The man behind the desk sees it, and something in him gives. \"Sit in the lobby till it's light,\" he says. \"I never saw you.\"",
+      "choices": [
+        {
+          "text": "⟨STUB⟩ Wait in the warm lobby till dawn.",
+          "goto": 20
+        },
+        {
+          "text": "⟨STUB⟩ Thank him, but go to the station.",
+          "goto": 13
         }
       ]
     }
