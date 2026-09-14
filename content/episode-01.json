@@ -60,11 +60,19 @@
           "goto": 3
         },
         {
-          "text": "⟨STUB⟩ Wait a moment and watch who else gets off the train.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Wait a moment and watch who else gets off the train.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 41
         },
         {
-          "text": "⟨STUB⟩ Take stock of what you are actually carrying.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take stock of what you are actually carrying.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 69
         }
       ]
@@ -94,11 +102,19 @@
           "goto": 5
         },
         {
-          "text": "⟨STUB⟩ Ask the man if others have come looking for this firm.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Ask the man if others have come looking for this firm.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 43
         },
         {
-          "text": "⟨STUB⟩ Ask him to draw you a proper map.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Ask him to draw you a proper map.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 109
         }
       ]
@@ -128,11 +144,19 @@
           "goto": 6
         },
         {
-          "text": "⟨STUB⟩ Check what you are carrying before you decide.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Check what you are carrying before you decide.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 42
         },
         {
-          "text": "⟨STUB⟩ Check your phone before you decide.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Check your phone before you decide.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 72
         }
       ]
@@ -162,7 +186,11 @@
           "goto": 8
         },
         {
-          "text": "⟨STUB⟩ Watch the city from the bus window.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Watch the city from the bus window.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 79
         }
       ]
@@ -192,11 +220,19 @@
           "goto": 7
         },
         {
-          "text": "⟨STUB⟩ Admit you are lost, and look for help.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Admit you are lost, and look for help.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 49
         },
         {
-          "text": "⟨STUB⟩ Cross the empty market square.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Cross the empty market square.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 115
         }
       ]
@@ -232,11 +268,19 @@
           ]
         },
         {
-          "text": "⟨STUB⟩ Ask him why the offices moved.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Ask him why the offices moved.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 65
         },
         {
-          "text": "⟨STUB⟩ Just take the taxi and end the walking.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Just take the taxi and end the walking.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 108
         }
       ]
@@ -277,7 +321,11 @@
           ]
         },
         {
-          "text": "⟨STUB⟩ Read the notices on the builders' hoarding.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Read the notices on the builders' hoarding.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 45
         }
       ]
@@ -339,7 +387,11 @@
           "goto": 15
         },
         {
-          "text": "⟨STUB⟩ There's a back way into number 14, through the yard.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "There's a back way into number 14, through the yard.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 95
         }
       ]
@@ -375,11 +427,19 @@
           ]
         },
         {
-          "text": "⟨STUB⟩ Ask the hotel man about the agency across the road.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Ask the hotel man about the agency across the road.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 104
         },
         {
-          "text": "⟨STUB⟩ You cannot afford the room.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "You cannot afford the room.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 129
         }
       ]
@@ -409,11 +469,19 @@
           "goto": 18
         },
         {
-          "text": "⟨STUB⟩ Try the side door you can just make out.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Try the side door you can just make out.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 46
         },
         {
-          "text": "⟨STUB⟩ Read the half-scraped name on the inner door.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Read the half-scraped name on the inner door.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 51
         }
       ]
@@ -451,11 +519,19 @@
           ]
         },
         {
-          "text": "⟨STUB⟩ Notice the lit upstairs window.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Notice the lit upstairs window.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 52
         },
         {
-          "text": "⟨STUB⟩ The girl at the window is leaning out to speak.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "The girl at the window is leaning out to speak.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 97
         }
       ],
@@ -486,11 +562,19 @@
           "goto": 21
         },
         {
-          "text": "⟨STUB⟩ Notice someone worse off than you nearby.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Notice someone worse off than you nearby.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 48
         },
         {
-          "text": "⟨STUB⟩ Let the cleaner pour you a coffee.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Let the cleaner pour you a coffee.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 58
         }
       ]
@@ -523,7 +607,11 @@
           ]
         },
         {
-          "text": "⟨STUB⟩ Wait at the stop for the first bus of the day.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Wait at the stop for the first bus of the day.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 105
         }
       ]
@@ -559,7 +647,11 @@
           ]
         },
         {
-          "text": "⟨STUB⟩ There is a light in the back of the café — look closer.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "There is a light in the back of the café — look closer.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 56
         }
       ],
@@ -590,11 +682,19 @@
           "goto": 20
         },
         {
-          "text": "⟨STUB⟩ Go down to breakfast.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go down to breakfast.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 59
         },
         {
-          "text": "⟨STUB⟩ Look at the queue outside the agency first.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Look at the queue outside the agency first.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 60
         }
       ]
@@ -635,7 +735,11 @@
           "goto": 27
         },
         {
-          "text": "⟨STUB⟩ Walk to the quay in the morning light.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Walk to the quay in the morning light.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 110
         }
       ],
@@ -692,11 +796,19 @@
           "goto": 28
         },
         {
-          "text": "⟨STUB⟩ Take the shortest way you can guess toward the water.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take the shortest way you can guess toward the water.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 53
         },
         {
-          "text": "⟨STUB⟩ By the water, a boathouse has its lights on.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "By the water, a boathouse has its lights on.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 99
         }
       ]
@@ -726,11 +838,19 @@
           "goto": 24
         },
         {
-          "text": "⟨STUB⟩ Leave your name at the empty office and go.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Leave your name at the empty office and go.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 143
         },
         {
-          "text": "⟨STUB⟩ Look at the queue outside the agency first.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Look at the queue outside the agency first.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 60
         }
       ]
@@ -760,11 +880,19 @@
           "goto": 29
         },
         {
-          "text": "⟨STUB⟩ Wait for the café to open at first light.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Wait for the café to open at first light.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 102
         },
         {
-          "text": "⟨STUB⟩ Decide, finally, to trust the letter.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Decide, finally, to trust the letter.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 114
         }
       ]
@@ -794,11 +922,19 @@
           "goto": 29
         },
         {
-          "text": "⟨STUB⟩ Stay on the bench and let the morning pass.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Stay on the bench and let the morning pass.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 147
         },
         {
-          "text": "⟨STUB⟩ Dawn: decide you are not ready to give up.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Dawn: decide you are not ready to give up.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 128
         }
       ]
@@ -828,7 +964,11 @@
           "goto": 31
         },
         {
-          "text": "⟨STUB⟩ Walk straight in — rested, clear-headed, nothing owed.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Walk straight in — rested, clear-headed, nothing owed.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 142,
           "requires": [
             "rested",
@@ -836,7 +976,11 @@
           ]
         },
         {
-          "text": "⟨STUB⟩ Walk the waking quay first.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Walk the waking quay first.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 89
         }
       ]
@@ -872,7 +1016,11 @@
           ]
         },
         {
-          "text": "⟨STUB⟩ Ask exactly what the two hundred is for.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Ask exactly what the two hundred is for.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 61
         }
       ],
@@ -903,11 +1051,19 @@
           "goto": 31
         },
         {
-          "text": "⟨STUB⟩ Buy a coffee from the cart to steady yourself.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Buy a coffee from the cart to steady yourself.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 67
         },
         {
-          "text": "⟨STUB⟩ Buy a coffee from the woman at the cart.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Buy a coffee from the woman at the cart.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 113
         }
       ]
@@ -937,7 +1093,11 @@
           "goto": 27
         },
         {
-          "text": "⟨STUB⟩ Let her show you the way to the quay.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Let her show you the way to the quay.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 111
         }
       ]
@@ -967,7 +1127,11 @@
           "goto": 34
         },
         {
-          "text": "⟨STUB⟩ Wait for her on the step as the office opens.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Wait for her on the step as the office opens.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 88
         }
       ],
@@ -998,11 +1162,19 @@
           "goto": 34
         },
         {
-          "text": "⟨STUB⟩ Cross the bridge towards the one lit window.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Cross the bridge towards the one lit window.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 54
         },
         {
-          "text": "⟨STUB⟩ The new development's glass lobby is lit and empty.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "The new development's glass lobby is lit and empty.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 101
         }
       ]
@@ -1039,11 +1211,19 @@
           ]
         },
         {
-          "text": "⟨STUB⟩ One of the early regulars is looking your way.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "One of the early regulars is looking your way.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 103
         },
         {
-          "text": "⟨STUB⟩ Leave your name and number with the counter man.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Leave your name and number with the counter man.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 127
         }
       ]
@@ -1073,11 +1253,19 @@
           "goto": 37
         },
         {
-          "text": "⟨STUB⟩ Give only your name and the reference number.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Give only your name and the reference number.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 144
         },
         {
-          "text": "⟨STUB⟩ Notice the tray of returned letters on the desk.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Notice the tray of returned letters on the desk.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 63
         }
       ]
@@ -1110,7 +1298,11 @@
           "goto": 30
         },
         {
-          "text": "⟨STUB⟩ Watch the other doors along the quay.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Watch the other doors along the quay.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 68
         }
       ],
@@ -1141,7 +1333,11 @@
           "goto": 34
         },
         {
-          "text": "⟨STUB⟩ Outside, someone with a receipt like yours stops you.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Outside, someone with a receipt like yours stops you.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 62
         }
       ]
@@ -1197,11 +1393,19 @@
           "goto": 40
         },
         {
-          "text": "⟨STUB⟩ Reach Mill Quay at last — twenty past nine.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Reach Mill Quay at last — twenty past nine.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 146
         },
         {
-          "text": "⟨STUB⟩ Go to the office anyway and explain.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go to the office anyway and explain.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 112
         }
       ]
@@ -1234,11 +1438,19 @@
           "goto": 37
         },
         {
-          "text": "⟨STUB⟩ Wait — she has a question for you first.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Wait — she has a question for you first.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 120
         },
         {
-          "text": "⟨STUB⟩ She shows you into her office.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "She shows you into her office.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 85
         }
       ],
@@ -1301,50 +1513,94 @@
     },
     {
       "id": 41,
-      "text": "⟨STUB⟩ The platform empties. You watch who else got off the late train — among them a young traveller reading an address on a scrap of paper, the way you are.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The last doors close and the platform empties around you. A few travellers hurry towards the exit with their collars up. One of them, a young traveller with a heavy rucksack, stops under a light and reads a scrap of paper, then reads it again — the way you keep reading your own letter. They look as lost as you feel.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Fall into step with the young traveller.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Fall into step with the young traveller.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 42
         },
         {
-          "text": "⟨STUB⟩ Keep to yourself and go to the information desk.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Keep to yourself and go to the information desk.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 2
         },
         {
-          "text": "⟨STUB⟩ A guard is turning the lights off — you cannot linger.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "A guard is turning the lights off — you cannot linger.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 77
         }
       ]
     },
     {
       "id": 42,
-      "text": "⟨STUB⟩ The young traveller is Mara, also here for work, also new. For a few minutes in a cold station you are not quite alone.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "Her name is Mara, and she came in on the same train. She is here for work too, and knows the city no better than you do. For a few minutes, in the cold light of the station, neither of you is quite alone. Her address is somewhere across the river; yours is a street she has never heard of.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Ask the newsstand man about your address.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Ask the newsstand man about your address.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 43
         },
         {
-          "text": "⟨STUB⟩ Head out into the night, each your own way.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Head out into the night, each your own way.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 3
         },
         {
-          "text": "⟨STUB⟩ Work out whether you can share the cost.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Work out whether you can share the cost.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 75
         }
       ]
     },
     {
       "id": 43,
-      "text": "⟨STUB⟩ The night-shift man at the newsstand reads your letter. \"Rosewater Street? Third one this month I've sent that way. Somebody up there still posts the old address.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The man at the newsstand is old and slow, and reads your letter twice. \"Rosewater Street,\" he says. \"You are the third one this month I have sent that way. Somebody up there still puts the old address on the letters.\" He hands the paper back as if that settles it.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Ask what he means — 'third one this month'.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Ask what he means — 'third one this month'.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 44
         },
         {
-          "text": "⟨STUB⟩ Just take the bus he points you to.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Just take the bus he points you to.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 4,
           "sets": [
             "knows_river"
@@ -1354,17 +1610,29 @@
     },
     {
       "id": 44,
-      "text": "⟨STUB⟩ He shrugs. \"They moved to the river years back. But the letters still go out with the old street on them. Not my business.\" It is, you think, somebody's business.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "\"They moved to the river years ago,\" he says. \"New offices, all glass. But the letters still go out with Rosewater Street on them. Not my business.\" He shrugs. It is somebody's business, you think — and tomorrow, perhaps, it might even be yours.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Take the bus to Rosewater Street anyway.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take the bus to Rosewater Street anyway.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 4,
           "sets": [
             "knows_river"
           ]
         },
         {
-          "text": "⟨STUB⟩ Walk, to save the fare.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Walk, to save the fare.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 5,
           "sets": [
             "knows_river"
@@ -1374,171 +1642,307 @@
     },
     {
       "id": 45,
-      "text": "⟨STUB⟩ On the builders' hoarding a torn notice still carries the firm's name. Under it, in marker, someone has written a single word and an arrow: MOVED →, pointing east, toward the water.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "Half of Rosewater Street is hidden behind builders' hoarding. On it, a torn notice still carries the firm's name in faded print. Underneath, someone has written one word in thick marker, with an arrow pointing east, towards the water: MOVED.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Follow the arrow toward the river.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Follow the arrow toward the river.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 19,
           "sets": [
             "knows_river"
           ]
         },
         {
-          "text": "⟨STUB⟩ Try number 16 first.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Try number 16 first.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 12
         }
       ]
     },
     {
       "id": 46,
-      "text": "⟨STUB⟩ There is a narrow side door you had not seen, and a thread of light under it.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "You almost miss it: a narrow side door, half behind the hoarding, with a thin line of light along the bottom. Someone is inside after all.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ A cleaner opens it and waves you off.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "A cleaner opens it and waves you off.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 18
         },
         {
-          "text": "⟨STUB⟩ Wait quietly on the side step.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Wait quietly on the side step.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 47
         },
         {
-          "text": "⟨STUB⟩ Ask to leave a note for Ada.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Ask to leave a note for Ada.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 117
         }
       ]
     },
     {
       "id": 47,
-      "text": "⟨STUB⟩ A woman comes out pulling on her coat — a late worker, not a stranger to the place. \"Nobody here now,\" she says, not unkindly. \"They're by the river. Or ask at the café.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "After a while the door opens and a woman comes out, pulling on her coat. She is tired, but not unfriendly. \"Nobody works here now,\" she says. \"They are down by the river. If you cannot wait until morning, ask at the café on the corner — they know everyone.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Head for the river at first light.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Head for the river at first light.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 17,
           "sets": [
             "knows_river"
           ]
         },
         {
-          "text": "⟨STUB⟩ Go to the café on the corner.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go to the café on the corner.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 15
         },
         {
-          "text": "⟨STUB⟩ Share the late worker's cab.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Share the late worker's cab.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 122
         }
       ]
     },
     {
       "id": 48,
-      "text": "⟨STUB⟩ By the bench you find someone worse off than you — cold, no ticket, no plan. You have almost nothing yourself. Almost.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "On the next bench a man sits with no bag and no coat, only a paper cup. He is not asking for anything. He has missed the last train and has nowhere to be until morning — the same as you, except that he has done this on many more nights than you have.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Share what little you have.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Share what little you have.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 145
         },
         {
-          "text": "⟨STUB⟩ Keep it, and keep moving.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Keep it, and keep moving.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 21
         }
       ]
     },
     {
       "id": 120,
-      "text": "⟨STUB⟩ Ms Rowe sits back. \"Tell me why I should take on someone I have never met, who found us by accident.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "Ms Rowe sits back in her chair and looks at you for a moment. \"Tell me,\" she says, \"why I should take on someone I have never met, who found us more or less by accident.\" It is a fair question, and she waits for your answer without hurrying you.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Answer plainly, about the work you can do.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Answer plainly, about the work you can do.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 141
         },
         {
-          "text": "⟨STUB⟩ Tell her about the agency you almost paid.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Tell her about the agency you almost paid.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 121
         }
       ]
     },
     {
       "id": 121,
-      "text": "⟨STUB⟩ You tell her how close you came to handing two hundred to a man in a good suit for a receipt with no address on it. She listens without a flicker.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "You tell her about the bright office and the man in the good suit, and the two hundred he wanted before he would find you any work at all. She listens without a flicker. \"There is one of those on every corner now,\" she says quietly. \"You were right to walk away.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Tell her the whole night, too.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Tell her the whole night, too.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 36,
           "sets": [
             "told_truth"
           ]
         },
         {
-          "text": "⟨STUB⟩ Leave it there, and keep it professional.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Leave it there, and keep it professional.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 37
         }
       ]
     },
     {
       "id": 141,
-      "text": "⟨STUB⟩ You answer plainly, and it is enough. \"We can use someone like that,\" she says. \"Start Monday.\" Not a story — just work, honestly won.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "You answer plainly. You tell her what you can do, and what you cannot, and you do not pretend to be anyone but yourself. It is enough. \"We can use someone like that,\" she says. \"Start on Monday.\" No story, no luck — just work, honestly won.",
+        "B2": "⟨B2 pending⟩"
+      },
       "ending": "good"
     },
     {
       "id": 142,
-      "text": "⟨STUB⟩ You walk in rested, having owed nothing to anyone who tried to sell you hope, and it shows. \"You had a good night, for a stranger,\" she says. \"Start Monday.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "You walk in rested and clear-headed, owing nothing to anyone who tried to sell you hope in the night. Somehow it shows. Ms Rowe studies you for a moment and almost smiles. \"You had a good night, for a stranger in a strange city,\" she says. \"Start on Monday.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "ending": "good"
     },
     {
       "id": 143,
-      "text": "⟨STUB⟩ There is no job today. But your name is written down, by a real hand, and kept. You are in the city now, and someone in it knows you came.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "There is no job today. But she takes your name and writes it down herself, by hand, on a real sheet of paper rather than into a screen. \"We will have something in the spring,\" she says. \"Come back then.\" It is not what you came for. But you are in the city now, and someone in it knows your name.",
+        "B2": "⟨B2 pending⟩"
+      },
       "ending": "neutral"
     },
     {
       "id": 144,
-      "text": "⟨STUB⟩ Name, number, reference. It all goes smoothly and you are hired by lunchtime. Nobody asked how you got here. You got what you came for, and it feels like nothing.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "Name, number, reference. Everything goes smoothly, and by lunchtime you have the job. Nobody asks how you got here, or what the night cost you, and you do not say. You got exactly what you came for. Standing on the new carpet, you wait to feel something, and nothing comes.",
+        "B2": "⟨B2 pending⟩"
+      },
       "ending": "neutral"
     },
     {
       "id": 145,
-      "text": "⟨STUB⟩ You share what you have. The job does not come — but the person you helped has a floor, a kettle, a spare key. You are not hired. You are also not alone.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "You share what little you have. The job does not come — the diary is full, the timing wrong. But the man from the bench, it turns out, has a room, a kettle and a spare key, and a brother who is always looking for hands. You are not hired. You are also, for the first time since the train, not alone.",
+        "B2": "⟨B2 pending⟩"
+      },
       "ending": "neutral"
     },
     {
       "id": 146,
-      "text": "⟨STUB⟩ Twenty past nine. The diary is closed, the chairs are full, and the woman at reception is kind and final. \"Try us in the spring,\" she says, meaning no.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "You reach Mill Quay at twenty past nine. The diary is closed, the chairs in reception are full of other people, and the woman behind the desk is kind and completely final. \"Try us in the spring,\" she says, and you both know she means no. Outside, the river goes on exactly as before.",
+        "B2": "⟨B2 pending⟩"
+      },
       "ending": "bad"
     },
     {
       "id": 147,
-      "text": "⟨STUB⟩ The morning comes up grey over the bench and you let it. By the time you can feel your feet again, nine o'clock has been and gone, and so has the reason you came.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The morning comes up grey over the station bench, and you let it. You are too cold and too tired to move, and you tell yourself it is only for a minute. By the time you can feel your feet again, nine o'clock has come and gone — and so has the only reason you came to this city.",
+        "B2": "⟨B2 pending⟩"
+      },
       "ending": "bad"
     },
     {
       "id": 49,
-      "text": "⟨STUB⟩ You take a wrong turn, and then another. The same shuttered shop goes past twice. The map in your hand has stopped meaning anything.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "You take a wrong turn, and then another. The same shuttered shop goes past twice. The map in your hand has stopped meaning anything.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Head for an all-night light you can see two streets over.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Head for an all-night light you can see two streets over.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 50
         },
         {
-          "text": "⟨STUB⟩ Press on towards number 14 on foot.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Press on towards number 14 on foot.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 7
         },
         {
-          "text": "⟨STUB⟩ A taxi is idling at the kerb.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "A taxi is idling at the kerb.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 116
         }
       ]
     },
     {
       "id": 50,
-      "text": "⟨STUB⟩ The light is a launderette, open all night, empty except for one attendant folding towels. He is glad of the company and knows the streets by heart.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The light is a launderette, open all night, empty except for one attendant folding towels. He is glad of the company and knows the streets by heart.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Take his tip and go to the café on the corner.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take his tip and go to the café on the corner.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 15,
           "sets": [
             "knows_river"
           ]
         },
         {
-          "text": "⟨STUB⟩ Thank him and carry on to the street.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Thank him and carry on to the street.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 7,
           "sets": [
             "knows_river"
@@ -1548,119 +1952,215 @@
     },
     {
       "id": 51,
-      "text": "⟨STUB⟩ On the glass of an inner door at the back, a painted name is half scraped away: you can still read ROWE under the marks. Someone left in a hurry, or someone wanted it gone.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "On the glass of an inner door at the back, a painted name is half scraped away: you can still read ROWE under the marks. Someone left in a hurry, or someone wanted it gone.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Note it, and come back at nine.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Note it, and come back at nine.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 17
         },
         {
-          "text": "⟨STUB⟩ Knock, and see who is cleaning in there.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Knock, and see who is cleaning in there.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 18
         },
         {
-          "text": "⟨STUB⟩ Photograph the half-scraped name.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Photograph the half-scraped name.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 118
         }
       ]
     },
     {
       "id": 52,
-      "text": "⟨STUB⟩ An upstairs window at number 16 is lit. A girl of about ten watches you from behind the glass, quite calm, the way children watch when they are used to strangers at odd hours.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "An upstairs window at number 16 is lit. A girl of about ten watches you from behind the glass, quite calm, the way children watch when they are used to strangers at odd hours.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Give a small wave, and wait for morning.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Give a small wave, and wait for morning.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 17
         },
         {
-          "text": "⟨STUB⟩ Set off for the river tonight instead.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Set off for the river tonight instead.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 19
         }
       ]
     },
     {
       "id": 53,
-      "text": "⟨STUB⟩ A night bus swings around the far corner, its windows warm and yellow, heading the way you think the river lies. It will not wait.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "A night bus swings around the far corner, its windows warm and yellow, heading the way you think the river lies. It will not wait.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Run, and catch it to the quay.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Run, and catch it to the quay.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 23
         },
         {
-          "text": "⟨STUB⟩ Let it go, and keep walking.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Let it go, and keep walking.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 28
         }
       ]
     },
     {
       "id": 54,
-      "text": "⟨STUB⟩ A bridge crosses the black water. On the far side the new offices stand dark and clean, all glass — except one window, high up, where a single light is still on.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "A bridge crosses the black water. On the far side the new offices stand dark and clean, all glass — except one window, high up, where a single light is still on.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Try the gate of the new development.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Try the gate of the new development.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 55
         },
         {
-          "text": "⟨STUB⟩ Wait for morning down by the quay.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Wait for morning down by the quay.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 23
         }
       ]
     },
     {
       "id": 55,
-      "text": "⟨STUB⟩ A night watchman leans out of a lit hut at the gate. \"Kessler and Rowe? Second floor. But there's nobody in till nine, love. Go and get warm.\" He says it kindly.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "A night watchman leans out of a lit hut at the gate. \"Kessler and Rowe? Second floor. But there's nobody in till nine, love. Go and get warm.\" He says it kindly.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Take his word, and wait for the light.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take his word, and wait for the light.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 25,
           "sets": [
             "knows_river"
           ]
         },
         {
-          "text": "⟨STUB⟩ Wait by the water and watch the door.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Wait by the water and watch the door.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 31,
           "sets": [
             "knows_river"
           ]
         },
         {
-          "text": "⟨STUB⟩ Wait in the watchman's warm hut.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Wait in the watchman's warm hut.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 123
         }
       ]
     },
     {
       "id": 56,
-      "text": "⟨STUB⟩ The Blue Kettle is shut, but there is a light in the back and the shape of someone stacking chairs. The business card is still taped inside the window.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The Blue Kettle is shut, but there is a light in the back and the shape of someone stacking chairs. The business card is still taped inside the window.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Tap on the glass.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Tap on the glass.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 57
         },
         {
-          "text": "⟨STUB⟩ Just read the card, and head for the quay.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Just read the card, and head for the quay.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 23
         },
         {
-          "text": "⟨STUB⟩ Wait outside for the café to open.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Wait outside for the café to open.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 119
         }
       ]
     },
     {
       "id": 57,
-      "text": "⟨STUB⟩ The woman inside lets you say your piece through a gap in the door. \"Kessler and Rowe? Ada Rowe, you mean. She's down at the river now. Comes in here for her coffee.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The woman inside lets you say your piece through a gap in the door. \"Kessler and Rowe? Ada Rowe, you mean. She's down at the river now. Comes in here for her coffee.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Go to the quay, knowing the name now.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go to the quay, knowing the name now.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 23,
           "sets": [
             "knows_name"
           ]
         },
         {
-          "text": "⟨STUB⟩ Find a bed, and come back at nine.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Find a bed, and come back at nine.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 17,
           "sets": [
             "knows_name"
@@ -1670,71 +2170,131 @@
     },
     {
       "id": 58,
-      "text": "⟨STUB⟩ The cleaner who woke you is not unkind about it. She pours you half a cup from a flask before you can say no, and asks, without much curiosity, where you have come from.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The cleaner who woke you is not unkind about it. She pours you half a cup from a flask before you can say no, and asks, without much curiosity, where you have come from.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Sit a while, and tell her.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Sit a while, and tell her.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 21
         },
         {
-          "text": "⟨STUB⟩ Thank her, and go.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Thank her, and go.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 20
         },
         {
-          "text": "⟨STUB⟩ Let the cleaner tell you about the old firm.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Let the cleaner tell you about the old firm.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 126
         }
       ]
     },
     {
       "id": 59,
-      "text": "⟨STUB⟩ At breakfast, Mara is there too — she took a room here as well. \"There is an agency across the road,\" she says, low. \"They wanted money off me last night. Don't.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "At breakfast, Mara is there too — she took a room here as well. \"There is an agency across the road,\" she says, low. \"They wanted money off me last night. Don't.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Go and see the agency for yourself anyway.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go and see the agency for yourself anyway.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 24
         },
         {
-          "text": "⟨STUB⟩ Take her warning, and go straight to Rosewater.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take her warning, and go straight to Rosewater.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 20
         },
         {
-          "text": "⟨STUB⟩ Go to the river with Mara.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go to the river with Mara.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 125
         }
       ]
     },
     {
       "id": 60,
-      "text": "⟨STUB⟩ A queue has formed outside WORK FOR EVERYONE before it is even open. Tired faces, early light. A woman near the front counts out the last of her notes, twice.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "A queue has formed outside WORK FOR EVERYONE before it is even open. Tired faces, early light. A woman near the front counts out the last of her notes, twice.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Join the queue.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Join the queue.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 24
         },
         {
-          "text": "⟨STUB⟩ Think twice, and turn towards Rosewater.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Think twice, and turn towards Rosewater.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 17
         },
         {
-          "text": "⟨STUB⟩ A woman in the queue reads the form and stops.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "A woman in the queue reads the form and stops.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 107
         }
       ]
     },
     {
       "id": 61,
-      "text": "⟨STUB⟩ The man in the good suit slides a form across. \"Two hundred for registration, then we place you today.\" The small print underneath is grey and very small.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The man in the good suit slides a form across. \"Two hundred for registration, then we place you today.\" The small print underneath is grey and very small.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Read the small print, and refuse.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Read the small print, and refuse.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 33,
           "sets": [
             "dodged_scam"
           ]
         },
         {
-          "text": "⟨STUB⟩ Sign it — you are almost out of choices.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Sign it — you are almost out of choices.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 32,
           "sets": [
             "paid_scam"
@@ -1744,49 +2304,89 @@
     },
     {
       "id": 62,
-      "text": "⟨STUB⟩ Outside, a man leans on the wall with a receipt like the one you would have had. \"Paid them last week,\" he says. \"They never called. You didn't, did you?\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "Outside, a man leans on the wall with a receipt like the one you would have had. \"Paid them last week,\" he says. \"They never called. You didn't, did you?\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Panic, and call the number now.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Panic, and call the number now.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 39
         },
         {
-          "text": "⟨STUB⟩ Cut your losses, and head for Rosewater.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Cut your losses, and head for Rosewater.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 34
         },
         {
-          "text": "⟨STUB⟩ Go to the job address the agency gave you.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go to the job address the agency gave you.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 106
         }
       ]
     },
     {
       "id": 63,
-      "text": "⟨STUB⟩ On the reception desk there is a tray of returned post — old letters, each with the Rosewater Street address crossed out by hand. Your own letter, you realise, is one of these.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "On the reception desk there is a tray of returned post — old letters, each with the Rosewater Street address crossed out by hand. Your own letter, you realise, is one of these.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Mention the letters to the receptionist.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Mention the letters to the receptionist.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 35
         },
         {
-          "text": "⟨STUB⟩ Say nothing about it.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Say nothing about it.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 37
         }
       ]
     },
     {
       "id": 65,
-      "text": "⟨STUB⟩ The driver settles into the story as he drives. \"They all moved to the river — glass offices, very smart. And watch the work agencies near the station. They are not what they look like.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The driver settles into the story as he drives. \"They all moved to the river — glass offices, very smart. And watch the work agencies near the station. They are not what they look like.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Ask him to take you to Rosewater Street.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Ask him to take you to Rosewater Street.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 7,
           "sets": [
             "knows_river"
           ]
         },
         {
-          "text": "⟨STUB⟩ Ask for a cheap hotel near the water.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Ask for a cheap hotel near the water.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 10,
           "sets": [
             "knows_river"
@@ -1796,85 +2396,157 @@
     },
     {
       "id": 67,
-      "text": "⟨STUB⟩ First light comes up grey over Mill Quay. A coffee cart is opening; delivery vans hum along the water. You are early, and for once you know exactly where you are.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "First light comes up grey over Mill Quay. A coffee cart is opening; delivery vans hum along the water. You are early, and for once you know exactly where you are.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Buy a coffee, and go in to reception.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Buy a coffee, and go in to reception.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 30
         },
         {
-          "text": "⟨STUB⟩ Wait by the water, and watch the door.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Wait by the water, and watch the door.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 31
         },
         {
-          "text": "⟨STUB⟩ Go up to reception and wait.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go up to reception and wait.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 84
         },
         {
-          "text": "⟨STUB⟩ Overhear the coffee-cart queue.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Overhear the coffee-cart queue.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 124
         }
       ]
     },
     {
       "id": 68,
-      "text": "⟨STUB⟩ Watching the other doors along the quay, you see the man in the good suit from the agency let himself into a building two doors down — no sign, no name on it at all.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "Watching the other doors along the quay, you see the man in the good suit from the agency let himself into a building two doors down — no sign, no name on it at all.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Go in to reception now, certain of things.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go in to reception now, certain of things.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 30
         },
         {
-          "text": "⟨STUB⟩ Keep to the water until nine.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Keep to the water until nine.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 25
         },
         {
-          "text": "⟨STUB⟩ The agency man notices you watching.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "The agency man notices you watching.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 90
         }
       ]
     },
     {
       "id": 69,
-      "text": "⟨STUB⟩ In your bag there is the letter, a little money that will not last long, and a photograph you do not take out. You read the letter again, though you know every word.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "In your bag there is the letter, a little money that will not last long, and a photograph you do not take out. You read the letter again, though you know every word.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Go and ask at the information desk.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go and ask at the information desk.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 2
         },
         {
-          "text": "⟨STUB⟩ Go out into the night.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go out into the night.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 3
         }
       ]
     },
     {
       "id": 72,
-      "text": "⟨STUB⟩ Your phone has one bar of battery left. You could use it now to look up the firm, or save it for something worse.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "Your phone has one bar of battery left. You could use it now to look up the firm, or save it for something worse.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Use the last of it to search the firm.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Use the last of it to search the firm.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 73
         },
         {
-          "text": "⟨STUB⟩ Save it, and ask people instead.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Save it, and ask people instead.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 4
         }
       ]
     },
     {
       "id": 73,
-      "text": "⟨STUB⟩ An old page loads, slowly: the firm's address is not Rosewater Street at all, but somewhere on the river. Then the screen goes black and stays black.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "An old page loads, slowly: the firm's address is not Rosewater Street at all, but somewhere on the river. Then the screen goes black and stays black.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Take the bus — you know it is the river now.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take the bus — you know it is the river now.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 4,
           "sets": [
             "knows_river"
           ]
         },
         {
-          "text": "⟨STUB⟩ Walk, now that you know where.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Walk, now that you know where.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 5,
           "sets": [
             "knows_river"
@@ -1884,232 +2556,432 @@
     },
     {
       "id": 75,
-      "text": "⟨STUB⟩ Mara has more sense than money, and you have more money than sense. Between you there might be enough to do this properly.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "Mara has more sense than money, and you have more money than sense. Between you there might be enough to do this properly.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Share a taxi, and drop Mara off first.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Share a taxi, and drop Mara off first.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 6
         },
         {
-          "text": "⟨STUB⟩ Take the bus together.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take the bus together.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 4
         }
       ]
     },
     {
       "id": 77,
-      "text": "⟨STUB⟩ A guard walks the concourse, turning off lights. \"Station's closing, love. You can't sit here.\" He is not unkind, only tired, and he means it.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "A guard walks the concourse, turning off lights. \"Station's closing, love. You can't sit here.\" He is not unkind, only tired, and he means it.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Move on, out into the night.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Move on, out into the night.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 3
         },
         {
-          "text": "⟨STUB⟩ Ask him the way before you go.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Ask him the way before you go.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 2
         }
       ]
     },
     {
       "id": 79,
-      "text": "⟨STUB⟩ From the bus window the city slides past, dark and wet and unfamiliar. You could get off early and find your own feet, or stay on to the proper stop.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "From the bus window the city slides past, dark and wet and unfamiliar. You could get off early and find your own feet, or stay on to the proper stop.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Get off early and walk the last part.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Get off early and walk the last part.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 5
         },
         {
-          "text": "⟨STUB⟩ Stay on to the Rosewater stop.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Stay on to the Rosewater stop.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 7
         }
       ]
     },
     {
       "id": 84,
-      "text": "⟨STUB⟩ Reception is warm and smells of coffee. The woman behind the desk is kind, and looks at you a moment longer than she needs to — last night is written all over you.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "Reception is warm and smells of coffee. The woman behind the desk is kind, and looks at you a moment longer than she needs to — last night is written all over you.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ She squeezes you in to see Ms Rowe.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "She squeezes you in to see Ms Rowe.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 35
         },
         {
-          "text": "⟨STUB⟩ No room today — but she takes your details.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "No room today — but she takes your details.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 37
         },
         {
-          "text": "⟨STUB⟩ A waiting candidate warns you about the agency too.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "A waiting candidate warns you about the agency too.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 91
         }
       ]
     },
     {
       "id": 85,
-      "text": "⟨STUB⟩ Ms Rowe's office looks out over the water. On the desk is a folder, and on top of the folder is a letter you recognise: your own, sent to the wrong street, come back again.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "Ms Rowe's office looks out over the water. On the desk is a folder, and on top of the folder is a letter you recognise: your own, sent to the wrong street, come back again.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ She slides it across: 'this came back to us twice'.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "She slides it across: 'this came back to us twice'.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 86
         },
         {
-          "text": "⟨STUB⟩ She sets it aside and asks about you.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "She sets it aside and asks about you.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 120
         },
         {
-          "text": "⟨STUB⟩ You recognise the bridge you crossed in the dark.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "You recognise the bridge you crossed in the dark.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 92
         }
       ]
     },
     {
       "id": 86,
-      "text": "⟨STUB⟩ \"Someone here has been posting the old address for two years,\" she says, turning the returned letter over. \"You are not the first it sent the wrong way. You are the first to arrive anyway.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "\"Someone here has been posting the old address for two years,\" she says, turning the returned letter over. \"You are not the first it sent the wrong way. You are the first to arrive anyway.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Offer to be the one who fixes the letters.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Offer to be the one who fixes the letters.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 141
         },
         {
-          "text": "⟨STUB⟩ Just say you found them, anyway.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Just say you found them, anyway.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 37
         },
         {
-          "text": "⟨STUB⟩ She calls in the colleague who kept sending them.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "She calls in the colleague who kept sending them.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 94
         }
       ]
     },
     {
       "id": 88,
-      "text": "⟨STUB⟩ She reaches the step with a coffee in one hand and keys in the other, and sees you waiting. \"You look like someone who has been up all night,\" she says. \"Come in.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "She reaches the step with a coffee in one hand and keys in the other, and sees you waiting. \"You look like someone who has been up all night,\" she says. \"Come in.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Help her with the door, and walk in together.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Help her with the door, and walk in together.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 35
         },
         {
-          "text": "⟨STUB⟩ Hang back, suddenly unsure.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Hang back, suddenly unsure.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 34
         }
       ]
     },
     {
       "id": 89,
-      "text": "⟨STUB⟩ The quay is waking: gulls on the grey water, a coffee cart, delivery vans humming along the stone. You have time, for once, and clean hands, for once.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The quay is waking: gulls on the grey water, a coffee cart, delivery vans humming along the stone. You have time, for once, and clean hands, for once.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Walk the quay a while to steady your nerves.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Walk the quay a while to steady your nerves.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 67
         },
         {
-          "text": "⟨STUB⟩ Go straight in to reception.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go straight in to reception.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 30
         }
       ]
     },
     {
       "id": 90,
-      "text": "⟨STUB⟩ The man in the good suit from the agency sees you seeing him. For a second neither of you moves. Then he lets himself into the unmarked building and is gone.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The man in the good suit from the agency sees you seeing him. For a second neither of you moves. Then he lets himself into the unmarked building and is gone.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Go in to reception before he can.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go in to reception before he can.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 30
         },
         {
-          "text": "⟨STUB⟩ Look away, and keep to the water.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Look away, and keep to the water.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 25
         }
       ]
     },
     {
       "id": 91,
-      "text": "⟨STUB⟩ \"They wanted money off me too,\" the other candidate says quietly. \"For 'registration'. I nearly paid it.\" You are not the only one, then, who nearly did.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "\"They wanted money off me too,\" the other candidate says quietly. \"For 'registration'. I nearly paid it.\" You are not the only one, then, who nearly did.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Take the warning to heart.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take the warning to heart.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 35
         },
         {
-          "text": "⟨STUB⟩ Keep to yourself, and wait.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Keep to yourself, and wait.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 37
         }
       ]
     },
     {
       "id": 92,
-      "text": "⟨STUB⟩ Through the window you can see the bridge you crossed in the dark, and the black water under it, ordinary and grey now. It does not look far at all by daylight.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "Through the window you can see the bridge you crossed in the dark, and the black water under it, ordinary and grey now. It does not look far at all by daylight.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Look closer at the folder and the letter.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Look closer at the folder and the letter.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 86
         },
         {
-          "text": "⟨STUB⟩ Keep your eyes on Ms Rowe.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Keep your eyes on Ms Rowe.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 120
         }
       ]
     },
     {
       "id": 94,
-      "text": "⟨STUB⟩ She calls in a younger colleague, who goes red to the ears. \"The old letterhead,\" she says, not unkindly. \"We will sort it. And you\" — to you — \"can help us sort it.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "She calls in a younger colleague, who goes red to the ears. \"The old letterhead,\" she says, not unkindly. \"We will sort it. And you\" — to you — \"can help us sort it.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Your first job will be the letters.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Your first job will be the letters.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 141
         },
         {
-          "text": "⟨STUB⟩ She lets it go, for now.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "She lets it go, for now.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 37
         }
       ]
     },
     {
       "id": 95,
-      "text": "⟨STUB⟩ The kiosk woman calls after you: \"There's a back way into number 14 — through the yard. The front door hasn't opened in years.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The kiosk woman calls after you: \"There's a back way into number 14 — through the yard. The front door hasn't opened in years.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Go round the back, into the yard.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go round the back, into the yard.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 96
         },
         {
-          "text": "⟨STUB⟩ Try the front of the building.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Try the front of the building.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 7
         }
       ]
     },
     {
       "id": 96,
-      "text": "⟨STUB⟩ In the yard a low window is lit. Inside, on a desk, there is a tray of envelopes, stamped and ready — all addressed, you see with a chill, to Rosewater Street.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "In the yard a low window is lit. Inside, on a desk, there is a tray of envelopes, stamped and ready — all addressed, you see with a chill, to Rosewater Street.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Look in the front window too.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Look in the front window too.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 11
         },
         {
-          "text": "⟨STUB⟩ Come back at nine, when someone is here.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Come back at nine, when someone is here.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 17
         }
       ]
     },
     {
       "id": 97,
-      "text": "⟨STUB⟩ Before you go, the upstairs window opens and the girl leans out. \"They're by the river now,\" she says, matter-of-fact. \"Ada Rowe. My dad used to work for her.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "Before you go, the upstairs window opens and the girl leans out. \"They're by the river now,\" she says, matter-of-fact. \"Ada Rowe. My dad used to work for her.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Ask her more.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Ask her more.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 98
         },
         {
-          "text": "⟨STUB⟩ Thank her, and wait for morning.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Thank her, and wait for morning.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 17
         }
       ]
     },
     {
       "id": 98,
-      "text": "⟨STUB⟩ \"Three Mill Quay,\" she says, as if everyone knows. \"Take the number four in the morning.\" Then her father calls her in, and the window shuts.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "\"Three Mill Quay,\" she says, as if everyone knows. \"Take the number four in the morning.\" Then her father calls her in, and the window shuts.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Set off for the river.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Set off for the river.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 19,
           "sets": [
             "knows_name",
@@ -2117,7 +2989,11 @@
           ]
         },
         {
-          "text": "⟨STUB⟩ Find the café she mentioned.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Find the café she mentioned.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 15,
           "sets": [
             "knows_name",
@@ -2128,31 +3004,55 @@
     },
     {
       "id": 99,
-      "text": "⟨STUB⟩ By the water you lose the thread of the streets entirely. But a boathouse has its lights on, early, and there is the knock of oars being carried down to the river.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "By the water you lose the thread of the streets entirely. But a boathouse has its lights on, early, and there is the knock of oars being carried down to the river.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Ask the rowers the way.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Ask the rowers the way.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 100
         },
         {
-          "text": "⟨STUB⟩ Push on along the dark bank.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Push on along the dark bank.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 28
         }
       ]
     },
     {
       "id": 100,
-      "text": "⟨STUB⟩ \"Mill Quay? Straight along, past the second bridge.\" The rower barely breaks step. \"Ten minutes. You're nearly there.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "\"Mill Quay? Straight along, past the second bridge.\" The rower barely breaks step. \"Ten minutes. You're nearly there.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Follow the bank to the quay.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Follow the bank to the quay.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 23,
           "sets": [
             "knows_river"
           ]
         },
         {
-          "text": "⟨STUB⟩ Find the coffee cart and wait for nine.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Find the coffee cart and wait for nine.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 25,
           "sets": [
             "knows_river"
@@ -2162,378 +3062,702 @@
     },
     {
       "id": 101,
-      "text": "⟨STUB⟩ The new development has a glass lobby, lit and empty, a guard's cap on an untended desk. Everything here is two years newer than the letter in your bag.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The new development has a glass lobby, lit and empty, a guard's cap on an untended desk. Everything here is two years newer than the letter in your bag.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Try the gate and the night watchman.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Try the gate and the night watchman.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 55
         },
         {
-          "text": "⟨STUB⟩ Wait for morning by the quay.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Wait for morning by the quay.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 23
         }
       ]
     },
     {
       "id": 102,
-      "text": "⟨STUB⟩ You wait for the café to open. The sky goes from black to the colour of dishwater, and a light comes on inside at last.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "You wait for the café to open. The sky goes from black to the colour of dishwater, and a light comes on inside at last.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Ask the counter man when they open properly.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Ask the counter man when they open properly.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 29
         },
         {
-          "text": "⟨STUB⟩ Wait at the window.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Wait at the window.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 15
         }
       ]
     },
     {
       "id": 103,
-      "text": "⟨STUB⟩ One of the early regulars looks up. \"Kessler and Rowe? I did their books, years back. Good people. Bad with letters.\" He laughs at his own joke.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "One of the early regulars looks up. \"Kessler and Rowe? I did their books, years back. Good people. Bad with letters.\" He laughs at his own joke.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Head for the quay while there's time.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Head for the quay while there's time.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 23
         },
         {
-          "text": "⟨STUB⟩ Worry that it is already too late.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Worry that it is already too late.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 34
         }
       ]
     },
     {
       "id": 104,
-      "text": "⟨STUB⟩ The hotel man leans on the desk. \"Word of advice — that agency across the way, the yellow sign? Don't. They took a lad's last money on Tuesday.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The hotel man leans on the desk. \"Word of advice — that agency across the way, the yellow sign? Don't. They took a lad's last money on Tuesday.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Take the room and sleep.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take the room and sleep.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 16
         },
         {
-          "text": "⟨STUB⟩ Too dear — try the station instead.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Too dear — try the station instead.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 13
         }
       ]
     },
     {
       "id": 105,
-      "text": "⟨STUB⟩ The first bus of the day sighs up to the stop, warm and almost empty. It will go towards Rosewater, or you could change for the river.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The first bus of the day sighs up to the stop, warm and almost empty. It will go towards Rosewater, or you could change for the river.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Take it to Rosewater Street.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take it to Rosewater Street.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 20
         },
         {
-          "text": "⟨STUB⟩ Change for the river.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Change for the river.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 23
         }
       ]
     },
     {
       "id": 106,
-      "text": "⟨STUB⟩ The address the agency gave you is an empty lot behind a fence. There was never any job. There was only the two hundred, and it is gone.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The address the agency gave you is an empty lot behind a fence. There was never any job. There was only the two hundred, and it is gone.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Call the number again, uselessly.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Call the number again, uselessly.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 39
         },
         {
-          "text": "⟨STUB⟩ Give up on them and go to Rosewater.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Give up on them and go to Rosewater.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 34
         }
       ]
     },
     {
       "id": 107,
-      "text": "⟨STUB⟩ A woman near you in the queue reads the form, folds it, and hands it back. \"It's a swindle,\" she says, loud enough for the others. \"Come on.\" A few of you leave together.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "A woman near you in the queue reads the form, folds it, and hands it back. \"It's a swindle,\" she says, loud enough for the others. \"Come on.\" A few of you leave together.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Leave the queue with her, for Rosewater.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Leave the queue with her, for Rosewater.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 17
         },
         {
-          "text": "⟨STUB⟩ Stay in the queue anyway.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Stay in the queue anyway.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 24
         }
       ]
     },
     {
       "id": 108,
-      "text": "⟨STUB⟩ The taxi carries you through streets with nobody on them, past shuttered shops and one all-night café throwing yellow light on the wet road.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The taxi carries you through streets with nobody on them, past shuttered shops and one all-night café throwing yellow light on the wet road.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Rosewater Street, please.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Rosewater Street, please.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 7
         },
         {
-          "text": "⟨STUB⟩ Somewhere cheap to sleep, by the water.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Somewhere cheap to sleep, by the water.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 10
         }
       ]
     },
     {
       "id": 109,
-      "text": "⟨STUB⟩ The man at the desk draws you a better map on the back of a receipt, and marks the river with a small square. \"That's where the smart ones went,\" he says.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The man at the desk draws you a better map on the back of a receipt, and marks the river with a small square. \"That's where the smart ones went,\" he says.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Take the bus.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take the bus.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 4
         },
         {
-          "text": "⟨STUB⟩ Walk, with the new map.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Walk, with the new map.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 5
         }
       ]
     },
     {
       "id": 110,
-      "text": "⟨STUB⟩ You walk to the quay in the growing light, past people going to work who know exactly where they are going. For the first time, so do you.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "You walk to the quay in the growing light, past people going to work who know exactly where they are going. For the first time, so do you.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Arrive at the quay.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Arrive at the quay.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 23
         },
         {
-          "text": "⟨STUB⟩ Arrive early, by the water.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Arrive early, by the water.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 25
         }
       ]
     },
     {
       "id": 111,
-      "text": "⟨STUB⟩ The young woman from number 16 is going the same way. \"Number four,\" she says, nodding at the bus. \"I'll show you where to get off.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The young woman from number 16 is going the same way. \"Number four,\" she says, nodding at the bus. \"I'll show you where to get off.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Take the bus to the quay with her.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take the bus to the quay with her.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 23
         },
         {
-          "text": "⟨STUB⟩ Walk to Rosewater with her first.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Walk to Rosewater with her first.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 27
         }
       ]
     },
     {
       "id": 112,
-      "text": "⟨STUB⟩ You go to the office to explain yourself, late and out of breath, rehearsing the words on the stairs.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "You go to the office to explain yourself, late and out of breath, rehearsing the words on the stairs.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Reach reception and try.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Reach reception and try.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 30
         },
         {
-          "text": "⟨STUB⟩ You are simply too late.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "You are simply too late.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 146
         }
       ]
     },
     {
       "id": 113,
-      "text": "⟨STUB⟩ The woman at the coffee cart takes one look at you and puts an extra shot in, no charge. \"Long night,\" she says. It is not a question.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The woman at the coffee cart takes one look at you and puts an extra shot in, no charge. \"Long night,\" she says. It is not a question.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Take it, and go in to reception.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take it, and go in to reception.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 30
         },
         {
-          "text": "⟨STUB⟩ Take it, and watch the door a while.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take it, and watch the door a while.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 31
         }
       ]
     },
     {
       "id": 114,
-      "text": "⟨STUB⟩ You sit with the cold coffee and decide, finally, to trust the letter that brought you here — or at least the person who wrote it.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "You sit with the cold coffee and decide, finally, to trust the letter that brought you here — or at least the person who wrote it.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Go back to Rosewater Street.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go back to Rosewater Street.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 17
         },
         {
-          "text": "⟨STUB⟩ Ask the café one more time.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Ask the café one more time.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 29
         }
       ]
     },
     {
       "id": 115,
-      "text": "⟨STUB⟩ You cross an empty market square, the stalls folded away, a single fox trotting along the gutter as though it owns the hour.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "You cross an empty market square, the stalls folded away, a single fox trotting along the gutter as though it owns the hour.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Follow the lit windows.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Follow the lit windows.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 49
         },
         {
-          "text": "⟨STUB⟩ Cut towards the corner shop.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Cut towards the corner shop.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 9
         }
       ]
     },
     {
       "id": 116,
-      "text": "⟨STUB⟩ A taxi idles at the kerb, its light on, the driver reading a paper. It would cost you, but it would end the walking.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "A taxi idles at the kerb, its light on, the driver reading a paper. It would cost you, but it would end the walking.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Take it.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take it.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 6
         },
         {
-          "text": "⟨STUB⟩ Keep to the launderette light instead.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Keep to the launderette light instead.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 50
         }
       ]
     },
     {
       "id": 117,
-      "text": "⟨STUB⟩ The cleaner sighs and props the door. \"Leave a note if you must,\" she says. \"I'll put it on Ada's desk. No promises.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The cleaner sighs and props the door. \"Leave a note if you must,\" she says. \"I'll put it on Ada's desk. No promises.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Leave a note and come back at nine.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Leave a note and come back at nine.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 17
         },
         {
-          "text": "⟨STUB⟩ Ask her one more question first.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Ask her one more question first.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 18
         }
       ]
     },
     {
       "id": 118,
-      "text": "⟨STUB⟩ You take a photograph of the half-scraped name, twice, so you have it whatever happens. Proof, of a kind, that you were here and looked.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "You take a photograph of the half-scraped name, twice, so you have it whatever happens. Proof, of a kind, that you were here and looked.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Show it at the café.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Show it at the café.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 15
         },
         {
-          "text": "⟨STUB⟩ Keep it, and come back at nine.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Keep it, and come back at nine.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 17
         }
       ]
     },
     {
       "id": 119,
-      "text": "⟨STUB⟩ You wait outside the café for it to open, stamping your feet against the cold, watching the card in the window as if it might change its mind.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "You wait outside the café for it to open, stamping your feet against the cold, watching the card in the window as if it might change its mind.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Tap on the glass at the first sign of life.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Tap on the glass at the first sign of life.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 57
         },
         {
-          "text": "⟨STUB⟩ Give up waiting and go to the quay.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Give up waiting and go to the quay.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 23
         }
       ]
     },
     {
       "id": 122,
-      "text": "⟨STUB⟩ The late worker is going your way and splits a cab. \"You'll never find it on foot in the dark,\" she says. \"And you look done in.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The late worker is going your way and splits a cab. \"You'll never find it on foot in the dark,\" she says. \"And you look done in.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Share the cab to the river.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Share the cab to the river.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 23
         },
         {
-          "text": "⟨STUB⟩ Thank her, but keep to your own way.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Thank her, but keep to your own way.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 17
         }
       ]
     },
     {
       "id": 123,
-      "text": "⟨STUB⟩ The watchman waves you into the warm of his hut and pours something from a flask. \"Nine o'clock,\" he says again, kindly. \"Not a minute before.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The watchman waves you into the warm of his hut and pours something from a flask. \"Nine o'clock,\" he says again, kindly. \"Not a minute before.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Wait in the warm until the light.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Wait in the warm until the light.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 25
         },
         {
-          "text": "⟨STUB⟩ Step out and watch the door.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Step out and watch the door.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 31
         }
       ]
     },
     {
       "id": 124,
-      "text": "⟨STUB⟩ In the coffee-cart queue you hear the name before you see anyone: \"...Ada Rowe wants the Thursday figures...\" Two people from the second floor, talking shop.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "In the coffee-cart queue you hear the name before you see anyone: \"...Ada Rowe wants the Thursday figures...\" Two people from the second floor, talking shop.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Follow them in to reception.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Follow them in to reception.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 30
         },
         {
-          "text": "⟨STUB⟩ Go up and wait your turn.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go up and wait your turn.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 84
         }
       ]
     },
     {
       "id": 125,
-      "text": "⟨STUB⟩ Mara is at breakfast with the same idea as you. \"The river,\" she says. \"We could go together. Safer, and I hate arriving alone.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "Mara is at breakfast with the same idea as you. \"The river,\" she says. \"We could go together. Safer, and I hate arriving alone.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Go to Rosewater first, then part.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go to Rosewater first, then part.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 20
         },
         {
-          "text": "⟨STUB⟩ Go straight to the river together.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go straight to the river together.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 23
         }
       ]
     },
     {
       "id": 126,
-      "text": "⟨STUB⟩ The cleaner has worked the station twenty years. \"Kessler and Rowe,\" she says. \"They did right by my sister once. Go and find them. Don't sleep your chance away.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "The cleaner has worked the station twenty years. \"Kessler and Rowe,\" she says. \"They did right by my sister once. Go and find them. Don't sleep your chance away.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Take her push, and go.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Take her push, and go.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 20
         },
         {
-          "text": "⟨STUB⟩ Sit a moment longer, and think.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Sit a moment longer, and think.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 21
         }
       ]
     },
     {
       "id": 127,
-      "text": "⟨STUB⟩ You leave your name and number with the counter man, just in case. \"If they come in,\" you say. He nods as if he has heard it before, which he has.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "You leave your name and number with the counter man, just in case. \"If they come in,\" you say. He nods as if he has heard it before, which he has.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Go to the quay now.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go to the quay now.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 23
         },
         {
-          "text": "⟨STUB⟩ Go back to Rosewater first.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Go back to Rosewater first.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 34
         }
       ]
     },
     {
       "id": 128,
-      "text": "⟨STUB⟩ Dawn on the bench. Your back is ruined and your money is nearly gone, but you are not, it turns out, ready to give up. Not quite yet.",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "Dawn on the bench. Your back is ruined and your money is nearly gone, but you are not, it turns out, ready to give up. Not quite yet.",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Get the first bus to Rosewater.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Get the first bus to Rosewater.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 20
         },
         {
-          "text": "⟨STUB⟩ Find the café and ask again.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Find the café and ask again.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 29
         }
       ]
     },
     {
       "id": 129,
-      "text": "⟨STUB⟩ You cannot afford the room. The man behind the desk sees it, and something in him gives. \"Sit in the lobby till it's light,\" he says. \"I never saw you.\"",
+      "text": {
+        "A2": "⟨A2 pending⟩",
+        "B1": "You cannot afford the room. The man behind the desk sees it, and something in him gives. \"Sit in the lobby till it's light,\" he says. \"I never saw you.\"",
+        "B2": "⟨B2 pending⟩"
+      },
       "choices": [
         {
-          "text": "⟨STUB⟩ Wait in the warm lobby till dawn.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Wait in the warm lobby till dawn.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 20
         },
         {
-          "text": "⟨STUB⟩ Thank him, but go to the station.",
+          "text": {
+            "A2": "⟨A2 pending⟩",
+            "B1": "Thank him, but go to the station.",
+            "B2": "⟨B2 pending⟩"
+          },
           "goto": 13
         }
       ]
