@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build-site.mjs",
+    "build:standalone": "node scripts/build-site.mjs && node scripts/build-standalone.mjs",
     "validate": "python3 scripts/build_book.py --series content/ --lexicon content/lexicon.json",
     "dev": "npm run build && npx --yes serve dist"
   },

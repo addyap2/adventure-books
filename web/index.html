@@ -5,225 +5,374 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Adventure Book — read in English</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#2f5d50">
 <meta name="description" content="Choose-your-own-adventure stories for English learners, at three levels, with a glossary in eight languages.">
 <style>
   :root {
-    --bg:#faf8f5; --fg:#1d1b19; --muted:#6b6560; --line:#e4dfd8;
-    --accent:#2f5d50; --accent-soft:#eaf1ee; --card:#fff; --gloss:#fffaf0;
-    --shadow:0 10px 34px rgba(30,25,20,.13);
+    --bg:#f6f3ee; --fg:#1d1b19; --muted:#6b6560; --line:#e4dfd8;
+    --accent:#2f5d50; --accent-2:#c9683c; --accent-soft:#eaf1ee; --card:#fff;
+    --gloss:#fffaf0; --shadow:0 12px 40px rgba(30,25,20,.14);
+    --r:18px;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --bg:#15171a; --fg:#e9e6e2; --muted:#9b958e; --line:#2c3134;
-            --accent:#82c6b1; --accent-soft:#1e2725; --card:#1c1f22; --gloss:#241f18;
-            --shadow:0 10px 34px rgba(0,0,0,.5); }
+    :root { --bg:#121417; --fg:#eceae6; --muted:#9b958e; --line:#2a2f33;
+            --accent:#86c9b4; --accent-2:#e08a5c; --accent-soft:#1c2523;
+            --card:#1a1e21; --gloss:#241f18; --shadow:0 12px 40px rgba(0,0,0,.55); }
   }
   * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html, body { height:100%; }
   body { margin:0; background:var(--bg); color:var(--fg);
-         font:16px/1.6 ui-serif, Georgia, "Times New Roman", serif; }
-  header { position:sticky; top:0; z-index:10; background:color-mix(in srgb, var(--bg) 92%, transparent);
-           backdrop-filter:blur(10px); border-bottom:1px solid var(--line);
-           padding:10px 16px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
-  header .name { font-family:ui-sans-serif,system-ui,sans-serif; font-weight:650; font-size:14px;
-                 letter-spacing:.01em; margin-right:auto; }
-  select, button { font:inherit; font-family:ui-sans-serif,system-ui,sans-serif; font-size:13px;
-    padding:6px 9px; border:1px solid var(--line); border-radius:8px;
-    background:var(--card); color:var(--fg); cursor:pointer; }
-  select:focus-visible, button:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
-  main { max-width:40rem; margin:0 auto; padding:28px 20px 96px; }
-  .num { font-family:ui-sans-serif,system-ui,sans-serif; font-size:12px; letter-spacing:.12em;
-         text-transform:uppercase; color:var(--muted); margin-bottom:14px; }
-  .para { font-size:20px; line-height:1.78; }
+         font:16px/1.6 ui-serif, Georgia, "Times New Roman", serif;
+         overscroll-behavior-y:none; }
+
+  /* ---- app bar ---- */
+  .bar { position:sticky; top:0; z-index:20;
+    display:flex; align-items:center; gap:10px; padding:12px 16px;
+    background:color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line); }
+  .bar .brand { font-family:ui-sans-serif,system-ui,sans-serif; font-weight:700;
+    font-size:15px; letter-spacing:-.01em; margin-right:auto;
+    display:flex; align-items:center; gap:8px; }
+  .bar .brand .dot { width:9px; height:9px; border-radius:50%;
+    background:var(--accent-2); box-shadow:0 0 0 4px color-mix(in srgb, var(--accent-2) 22%, transparent); }
+  .iconbtn { width:40px; height:40px; border:1px solid var(--line); border-radius:12px;
+    background:var(--card); color:var(--fg); font-size:16px; cursor:pointer;
+    display:grid; place-items:center; font-family:ui-sans-serif,system-ui,sans-serif; }
+  .iconbtn:active { transform:scale(.94); }
+  .progress { position:absolute; left:0; bottom:-1px; height:2px; background:var(--accent);
+    width:0; transition:width .4s ease; }
+
+  main { max-width:34rem; margin:0 auto; padding:16px 16px 40px; }
+
+  /* ---- moment card ---- */
+  .card { background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+    box-shadow:var(--shadow); overflow:hidden;
+    transition:opacity .22s ease, transform .22s ease; }
+  .card.leaving { opacity:0; transform:translateY(10px); }
+  .art { position:relative; width:100%; aspect-ratio:3/2; background:var(--accent-soft);
+    display:block; overflow:hidden; }
+  .art img { width:100%; height:100%; object-fit:cover; display:block; }
+  /* deliberate placeholder while real art is pending — each moment gets its own
+     hue and light direction (from --h/--x/--y set per node) so 40 screens in a row
+     never feel like the same blank card. */
+  .art.ph { display:grid; place-items:center; }
+  .art.ph::before { content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(130% 100% at calc(var(--x,20)*1%) calc(var(--y,12)*1%),
+        color-mix(in srgb, var(--accent) 30%, transparent), transparent 62%),
+      radial-gradient(120% 95% at calc(100% - var(--x,20)*1%) calc(100% - var(--y,12)*1%),
+        color-mix(in srgb, var(--accent-2) 26%, transparent), transparent 55%),
+      var(--accent-soft);
+    filter:hue-rotate(calc(var(--h,0)*1deg)) saturate(1.05); }
+  /* faint contour lines give the empty card a hint of texture, not a flat wash */
+  .art.ph::after { content:""; position:absolute; inset:0; opacity:.5; mix-blend-mode:soft-light;
+    background:repeating-linear-gradient(calc(var(--h,0)*1deg + 35deg),
+      transparent 0 22px, rgba(0,0,0,.05) 22px 23px); }
+  .art.ph .glyph { position:relative; z-index:1; font-size:30px; opacity:.42;
+    color:var(--fg); font-family:ui-sans-serif,system-ui,sans-serif;
+    transform:rotate(calc(var(--h,0)*1deg)); }
+  .art .tag { position:absolute; left:12px; bottom:10px; z-index:2;
+    font-family:ui-sans-serif,system-ui,sans-serif; font-size:11px; letter-spacing:.14em;
+    text-transform:uppercase; color:#fff; padding:4px 9px; border-radius:99px;
+    background:rgba(0,0,0,.42); backdrop-filter:blur(4px); }
+  .body { padding:20px 20px 22px; }
+  .para { font-size:19px; line-height:1.72; }
   .para w { cursor:pointer; border-bottom:2px dotted var(--accent); padding-bottom:1px; }
   .para w:active { background:var(--accent-soft); }
-  .choices { margin-top:30px; display:flex; flex-direction:column; gap:10px; }
-  .choices button { text-align:left; padding:14px 16px; border-radius:11px; font-size:17px;
-                    font-family:inherit; line-height:1.45; }
+
+  .choices { margin-top:22px; display:flex; flex-direction:column; gap:10px; }
+  .choices button { position:relative; text-align:left; padding:15px 44px 15px 17px;
+    border:1px solid var(--line); border-radius:14px; background:var(--card); color:var(--fg);
+    font:inherit; font-size:16.5px; line-height:1.4; cursor:pointer;
+    transition:border-color .15s, background .15s, transform .1s; }
+  .choices button::after { content:"→"; position:absolute; right:16px; top:50%;
+    transform:translateY(-50%); color:var(--accent); font-family:ui-sans-serif,system-ui,sans-serif; }
   .choices button:hover { border-color:var(--accent); background:var(--accent-soft); }
-  .end { margin-top:26px; padding:16px 18px; border-radius:12px; background:var(--accent-soft);
-         border:1px solid var(--line); font-family:ui-sans-serif,system-ui,sans-serif; font-size:14px; }
-  .end b { font-size:16px; }
-  .gloss { position:fixed; left:50%; transform:translateX(-50%) translateY(8px); bottom:max(16px, env(safe-area-inset-bottom));
-    width:min(38rem,92vw); background:var(--gloss); border:1px solid var(--line);
-    border-radius:14px; padding:14px 18px; box-shadow:var(--shadow);
-    font-family:ui-sans-serif,system-ui,sans-serif; opacity:0; pointer-events:none;
-    transition:opacity .16s, transform .16s; }
+  .choices button:active { transform:scale(.99); }
+
+  .end { padding:22px 20px; text-align:center; }
+  .end .badge { font-size:34px; }
+  .end h2 { font-family:ui-sans-serif,system-ui,sans-serif; margin:.3em 0 .1em; font-size:20px; }
+  .end p { color:var(--muted); font-size:14.5px; font-family:ui-sans-serif,system-ui,sans-serif; margin:.4em 0 0; }
+  .stamps { display:flex; gap:8px; justify-content:center; margin:18px 0 4px; flex-wrap:wrap; }
+  .stamps i { width:34px; height:34px; border-radius:10px; border:1px solid var(--line);
+    display:grid; place-items:center; font-style:normal; font-size:15px; color:var(--muted);
+    background:var(--bg); }
+  .stamps i.got { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .again { margin-top:20px; }
+  .again button { width:100%; padding:15px; border-radius:14px; border:none; cursor:pointer;
+    background:var(--accent); color:#fff; font:inherit; font-family:ui-sans-serif,system-ui,sans-serif;
+    font-size:16px; font-weight:600; }
+
+  /* ---- intro / cover ---- */
+  .cover { border-radius:var(--r); overflow:hidden; box-shadow:var(--shadow);
+    border:1px solid var(--line); }
+  .cover .art { aspect-ratio:4/5; }
+  .cover .body { padding:22px 20px 24px; }
+  .cover h1 { font-size:27px; line-height:1.15; margin:0 0 6px; }
+  .kicker { font-family:ui-sans-serif,system-ui,sans-serif; font-size:12px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--accent-2); font-weight:700; margin-bottom:10px; }
+  .cover p { color:var(--muted); font-size:15px; margin:0 0 20px; }
+  .chips { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 20px; }
+  .chips span { font-family:ui-sans-serif,system-ui,sans-serif; font-size:12.5px;
+    padding:5px 11px; border-radius:99px; background:var(--accent-soft);
+    border:1px solid var(--line); color:var(--fg); }
+  .start { width:100%; padding:16px; border:none; border-radius:14px; cursor:pointer;
+    background:var(--accent); color:#fff; font:inherit; font-family:ui-sans-serif,system-ui,sans-serif;
+    font-size:17px; font-weight:650; }
+
+  /* ---- gloss sheet ---- */
+  .gloss { position:fixed; left:50%; bottom:16px; transform:translateX(-50%) translateY(14px);
+    width:min(32rem,92vw); background:var(--gloss); border:1px solid var(--line);
+    border-radius:16px; padding:16px 18px; box-shadow:var(--shadow);
+    font-family:ui-sans-serif,system-ui,sans-serif; opacity:0; pointer-events:none; z-index:40;
+    transition:opacity .18s, transform .18s; }
   .gloss.on { opacity:1; transform:translateX(-50%) translateY(0); pointer-events:auto; }
-  .gloss .hw { font-size:18px; font-weight:650; }
+  .gloss .hw { font-size:18px; font-weight:700; }
   .gloss .pos { color:var(--muted); font-size:13px; font-style:italic; margin-left:6px; }
-  .gloss .en { margin-top:4px; }
-  .gloss .tr { margin-top:8px; font-size:18px; padding-top:8px; border-top:1px solid var(--line); }
+  .gloss .en { margin-top:4px; font-size:15px; }
+  .gloss .tr { margin-top:9px; font-size:17px; padding-top:9px; border-top:1px solid var(--line); }
   .gloss[dir=rtl] .tr { text-align:right; }
-  .bar { margin-top:34px; padding-top:14px; border-top:1px solid var(--line);
-         color:var(--muted); font-size:13px; font-family:ui-sans-serif,system-ui,sans-serif; }
-  .pill { display:inline-block; padding:2px 8px; border:1px solid var(--line); border-radius:99px; margin-right:6px; }
-  .intro h1 { font-size:30px; line-height:1.2; margin:.2em 0 .3em; }
-  .intro p { color:var(--muted); }
-  .intro .go { margin-top:22px; font-size:17px; padding:14px 18px; }
+
+  /* ---- settings sheet ---- */
+  .scrim { position:fixed; inset:0; background:rgba(0,0,0,.42); opacity:0; pointer-events:none;
+    transition:opacity .2s; z-index:50; }
+  .scrim.on { opacity:1; pointer-events:auto; }
+  .sheet { position:fixed; left:0; right:0; bottom:0; z-index:51;
+    background:var(--card); border-radius:22px 22px 0 0; padding:8px 20px calc(24px + env(safe-area-inset-bottom));
+    transform:translateY(100%); transition:transform .26s cubic-bezier(.3,.8,.3,1);
+    max-width:34rem; margin:0 auto; box-shadow:var(--shadow); }
+  .sheet.on { transform:translateY(0); }
+  .grab { width:38px; height:4px; border-radius:2px; background:var(--line); margin:8px auto 16px; }
+  .row { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:12px 0;
+    font-family:ui-sans-serif,system-ui,sans-serif; font-size:15px; border-top:1px solid var(--line); }
+  .row:first-of-type { border-top:none; }
+  .seg { display:flex; gap:6px; }
+  .seg button { padding:8px 13px; border:1px solid var(--line); background:var(--bg); color:var(--fg);
+    border-radius:10px; font:inherit; font-size:14px; cursor:pointer; }
+  .seg button.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .sel { font:inherit; font-size:14px; padding:9px 11px; border-radius:10px;
+    border:1px solid var(--line); background:var(--bg); color:var(--fg); }
 </style>
 </head>
 <body>
-<header>
-  <span class="name" id="bookname">Adventure Book</span>
-  <select id="episode" aria-label="Episode"></select>
-  <select id="level" aria-label="Reading level"></select>
-  <select id="lang" aria-label="Glossary language">
-    <option value="">English only</option>
-    <option value="fr">Français</option><option value="es">Español</option>
-    <option value="pt">Português</option><option value="it">Italiano</option>
-    <option value="de">Deutsch</option><option value="ru">Русский</option>
-    <option value="ar">العربية</option><option value="zh">中文</option>
-  </select>
-  <button id="speak" aria-label="Read this paragraph aloud" title="Read aloud">🔊</button>
-  <button id="restart">Restart</button>
-</header>
+<div class="bar">
+  <span class="brand"><span class="dot"></span><span id="brand">Adventure Book</span></span>
+  <button class="iconbtn" id="speak" aria-label="Read aloud">🔊</button>
+  <button class="iconbtn" id="cog" aria-label="Settings">Aa</button>
+  <div class="progress" id="progress"></div>
+</div>
 
-<main>
-  <div id="intro" class="intro">
-    <h1 id="title">Loading…</h1>
-    <p id="blurb"></p>
-    <button class="go" id="begin">Start reading</button>
-  </div>
-  <div id="view" hidden>
-    <div class="num" id="num"></div>
-    <div class="para" id="para"></div>
-    <div class="choices" id="choices"></div>
-    <div class="end" id="end" hidden></div>
-    <div class="bar" id="bar"></div>
-  </div>
-</main>
+<main id="main"></main>
+
 <div class="gloss" id="gloss" role="status" aria-live="polite"></div>
 
+<div class="scrim" id="scrim"></div>
+<div class="sheet" id="sheet" role="dialog" aria-label="Reading settings">
+  <div class="grab"></div>
+  <div class="row"><span>Reading level</span><span class="seg" id="segLevel"></span></div>
+  <div class="row"><span>Word help</span>
+    <select class="sel" id="lang">
+      <option value="">English only</option>
+      <option value="fr">Français</option><option value="es">Español</option>
+      <option value="pt">Português</option><option value="it">Italiano</option>
+      <option value="de">Deutsch</option><option value="ru">Русский</option>
+      <option value="ar">العربية</option><option value="zh">中文</option>
+    </select>
+  </div>
+  <div class="row"><span>Episode</span><select class="sel" id="episode"></select></div>
+</div>
+
 <script>
-/* Adventure Book reader.
-   Static: fetches manifest.json, then one episode JSON and the shared lexicon.
-   The graph is shared across levels, so switching level re-renders the same
-   paragraph from a different text field — the reader keeps their place. */
+/* Adventure Book — mobile reader.
+   Each section is a "moment card": an illustration + the paragraph + the choices.
+   Art is loaded by convention — images/<series>/ep-NN/<id>.webp — so the art team
+   drops files named by paragraph number and nothing in the JSON has to change.
+   Until a file exists, a deliberate placeholder card shows in its place. */
 const $ = id => document.getElementById(id);
-let MANIFEST = null, BOOK = null, LEX = {}, level = null, node = null;
-let flags = new Set(), seen = new Set();
+// The standalone build inlines every JSON file as window.__ADVENTURE__ so the whole
+// site is one file that runs from disk with no server. Served normally, this is absent
+// and the app fetches the files as usual.
+const EMBED = window.__ADVENTURE__ || null;
+const getJSON = async path => (EMBED && EMBED[path]!==undefined) ? EMBED[path] : (await fetch(path)).json();
+let MANIFEST=null, BOOK=null, LEX={}, level=null, node=null;
+let flags=new Set(), seen=new Set(), maxDepth=0, depth={}, haveImg=new Set();
 
-const key = () => `ab:${BOOK.series}:${BOOK.episode}`;
-const prefKey = "ab:prefs";
+const prefKey="ab:prefs";
+const seenKey=()=>`ab:seen:${BOOK.series}:${BOOK.episode}`;
+const loadPrefs=()=>{try{return JSON.parse(localStorage.getItem(prefKey)||"{}")}catch{return{}}};
+const savePrefs=p=>{try{localStorage.setItem(prefKey,JSON.stringify(p))}catch{}};
+const loadSeen=()=>{try{seen=new Set(JSON.parse(localStorage.getItem(seenKey())||"[]"))}catch{seen=new Set()}};
+const saveSeen=()=>{try{localStorage.setItem(seenKey(),JSON.stringify([...seen]))}catch{}};
 
-function loadPrefs() { try { return JSON.parse(localStorage.getItem(prefKey) || "{}"); } catch { return {}; } }
-function savePrefs(p) { try { localStorage.setItem(prefKey, JSON.stringify(p)); } catch {} }
-function loadSeen() { try { seen = new Set(JSON.parse(localStorage.getItem(key()) || "[]")); } catch { seen = new Set(); } }
-function saveSeen() { try { localStorage.setItem(key(), JSON.stringify([...seen])); } catch {} }
+const byId=id=>BOOK.nodes.find(n=>n.id===id);
+const at=v=>(v&&typeof v==="object"&&!Array.isArray(v))?v[level]:v;
+const pad=n=>String(n).padStart(2,"0");
+const imgBase=()=>`images/${BOOK.series}/ep-${pad(BOOK.episode)}`;
 
-const byId = id => BOOK.nodes.find(n => n.id === id);
-const at = v => (v && typeof v === "object" && !Array.isArray(v)) ? v[level] : v;
-
-async function boot() {
-  MANIFEST = await (await fetch("manifest.json")).json();
-  LEX = {};
-  const lex = await (await fetch(MANIFEST.lexicon)).json();
-  const src = lex.entries || lex;
-  for (const k in src) LEX[k.toLowerCase()] = src[k];
-  $("episode").innerHTML = MANIFEST.episodes
-    .map(e => `<option value="${e.file}">Episode ${e.episode}: ${e.title}</option>`).join("");
-  const p = loadPrefs();
-  if (p.lang) $("lang").value = p.lang;
-  await openEpisode(p.file && MANIFEST.episodes.some(e => e.file === p.file)
-    ? p.file : MANIFEST.episodes[0].file, p.level);
+async function boot(){
+  MANIFEST=await getJSON("manifest.json");
+  const lex=await getJSON(MANIFEST.lexicon);
+  const src=lex.entries||lex; LEX={};
+  for(const k in src) LEX[k.toLowerCase()]=src[k];
+  $("episode").innerHTML=MANIFEST.episodes
+    .map(e=>`<option value="${e.file}">Ep ${e.episode} — ${e.title}</option>`).join("");
+  const p=loadPrefs();
+  if(p.lang) $("lang").value=p.lang;
+  await openEpisode(p.file&&MANIFEST.episodes.some(e=>e.file===p.file)?p.file:MANIFEST.episodes[0].file,p.level,true);
 }
 
-async function openEpisode(file, preferLevel) {
-  BOOK = await (await fetch(file)).json();
-  $("episode").value = file;
-  $("level").innerHTML = BOOK.levels.map(l => `<option>${l}</option>`).join("");
-  level = BOOK.levels.includes(preferLevel) ? preferLevel : BOOK.levels[0];
-  $("level").value = level;
-  $("bookname").textContent = BOOK.title;
-  loadSeen();
-  flags = new Set(); node = BOOK.start;
-  const endings = BOOK.nodes.filter(n => n.ending).length;
-  $("title").textContent = BOOK.title;
-  $("blurb").textContent =
-    `${BOOK.nodes.length} paragraphs · ${endings} endings · read at ${BOOK.levels.join(", ")}. ` +
-    `Tap any underlined word for its meaning. Your choices decide how it ends.`;
-  $("intro").hidden = false; $("view").hidden = true;
-  savePrefs({ ...loadPrefs(), file, level });
+async function openEpisode(file,preferLevel,intro){
+  BOOK=await getJSON(file);
+  $("episode").value=file;
+  const meta=MANIFEST.episodes.find(e=>e.file===file)||{};
+  haveImg=new Set(meta.images||[]);
+  level=BOOK.levels.includes(preferLevel)?preferLevel:BOOK.levels[0];
+  $("brand").textContent=BOOK.title;
+  buildLevelSeg();
+  // compute depth of each node from start for the progress bar
+  depth={}; const q=[[BOOK.start,0]]; depth[BOOK.start]=0; maxDepth=0;
+  while(q.length){const [id,d]=q.shift(); maxDepth=Math.max(maxDepth,d);
+    for(const c of byId(id)?.choices||[]){ if(depth[c.goto]==null){depth[c.goto]=d+1; q.push([c.goto,d+1]);}}}
+  loadSeen(); flags=new Set(); node=BOOK.start;
+  savePrefs({...loadPrefs(),file,level});
+  intro?renderIntro():render();
 }
 
-function markup(text, list) {
-  const set = new Set(list.map(w => w.toLowerCase()));
-  return text.replace(/[A-Za-z']+/g, m => {
-    const l = m.toLowerCase();
-    const base = set.has(l) ? l
-      : [l.replace(/s$/, ""), l.replace(/es$/, ""), l.replace(/ed$/, "")].find(x => set.has(x));
-    return base ? `<w data-w="${base}">${m}</w>` : m;
+function buildLevelSeg(){
+  $("segLevel").innerHTML=BOOK.levels.map(l=>
+    `<button data-l="${l}" class="${l===level?'on':''}">${l}</button>`).join("");
+  $("segLevel").querySelectorAll("button").forEach(b=>b.onclick=()=>{
+    level=b.dataset.l; savePrefs({...loadPrefs(),level});
+    buildLevelSeg(); node!=null&&!introMode?render():renderIntro();
   });
 }
 
-function render() {
-  const n = byId(node);
-  $("intro").hidden = true; $("view").hidden = false;
-  const gl = (at(n.glossary) || []).map(g => typeof g === "string" ? g : g.word);
-  $("num").textContent = `Paragraph ${n.id} · ${level}`;
-  $("para").innerHTML = markup((at(n.text) || "").replace(/\n\n/g, "<br><br>"), gl);
-  $("para").querySelectorAll("w").forEach(el => el.onclick = () => showGloss(el.dataset.w));
+let introMode=false;
+// deterministic 0..n from a string, so a paragraph's placeholder looks the same every visit
+const hash=s=>{let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return h;};
+function artHTML(id,tag,cover){
+  const key=cover?"cover":String(id);
+  const glyph=cover?"❦":["◆","✦","❖","◈","⬖","❂"][hash(key)%6];
+  const tagHTML=tag?`<span class="tag">${tag}</span>`:"";
+  const h=hash(key), vars=`--h:${h%54-27};--x:${12+h%30};--y:${8+(h>>3)%26}`;
+  const img=haveImg.has(key)
+    ? `<img alt="" loading="lazy" src="${imgBase()}/${key}.webp"
+         onload="this.parentNode.classList.remove('ph')">` : "";
+  return `<div class="art ph" style="${vars}">
+      <span class="glyph">${glyph}</span>${tagHTML}${img}
+    </div>`;
+}
 
-  const box = $("choices"); box.innerHTML = "";
-  (n.choices || [])
-    .filter(c => { let r = c.requires || []; if (typeof r === "string") r = [r];
-                   return r.every(f => flags.has(f)); })
-    .forEach(c => {
-      const b = document.createElement("button");
-      b.textContent = at(c.text);
-      b.onclick = () => {
-        let s = c.sets || []; if (typeof s === "string") s = [s];
-        s.forEach(f => flags.add(f));
-        node = c.goto; hideGloss(); window.scrollTo({ top: 0 }); render();
-      };
-      box.appendChild(b);
-    });
+function renderIntro(){
+  introMode=true;
+  const endings=BOOK.nodes.filter(n=>n.ending).length;
+  const focus=(at(BOOK.language_focus)||[])[0]||"";
+  $("main").innerHTML=`<div class="cover card">
+    ${artHTML("cover","",true)}
+    <div class="body">
+      <div class="kicker">Interactive story · ${level}</div>
+      <h1>${BOOK.title}</h1>
+      <p>You decide what happens next. Read it more than once — every choice changes the ending.</p>
+      <div class="chips">
+        <span>${BOOK.nodes.length} moments</span>
+        <span>${endings} endings</span>
+        <span>${BOOK.levels.join(" · ")}</span>
+        <span>Tap words to translate</span>
+      </div>
+      <button class="start" id="begin">Start reading</button>
+    </div></div>`;
+  $("begin").onclick=()=>{introMode=false;node=BOOK.start;flags=new Set();render();window.scrollTo({top:0})};
+  setProgress(0);
+}
 
-  const endings = BOOK.nodes.filter(x => x.ending);
-  if (n.ending) {
+function markup(text,list){
+  const set=new Set(list.map(w=>w.toLowerCase()));
+  return text.replace(/[A-Za-z']+/g,m=>{
+    const l=m.toLowerCase();
+    const base=set.has(l)?l:[l.replace(/s$/,""),l.replace(/es$/,""),l.replace(/ed$/,"")].find(x=>set.has(x));
+    return base?`<w data-w="${base}">${m}</w>`:m;
+  });
+}
+
+function render(){
+  const n=byId(node);
+  const gwords=(at(n.glossary)||[]).map(g=>typeof g==="string"?g:g.word);
+  const endings=BOOK.nodes.filter(x=>x.ending);
+
+  let inner;
+  if(n.ending){
     seen.add(n.id); saveSeen();
-    $("end").hidden = false;
-    $("end").innerHTML = `<b>The End.</b> You reached one of ${endings.length} endings.<br>` +
-      (seen.size < endings.length
-        ? `You have found ${seen.size}. Read it again and choose differently — the story changes more than you think.`
-        : `You have found all ${endings.length}. Try the next level up.`);
-  } else $("end").hidden = true;
+    const label={good:"A good ending",bad:"It ends badly",neutral:"An ending"}[n.ending]||"The End";
+    const badge={good:"🌟",bad:"🌑",neutral:"🌫️"}[n.ending]||"■";
+    const stamps=endings.map(e=>`<i class="${seen.has(e.id)?'got':''}">${seen.has(e.id)?'★':'?'}</i>`).join("");
+    inner=`${artHTML(n.id,"The End")}
+      <div class="end">
+        <div class="badge">${badge}</div>
+        <h2>${label}</h2>
+        <div class="para" style="font-size:17px;margin-top:8px">${markup(at(n.text)||"",gwords)}</div>
+        <div class="stamps">${stamps}</div>
+        <p>${seen.size} of ${endings.length} endings found${seen.size<endings.length?" — there are others.":" — you found them all."}</p>
+        <div class="again"><button id="again">Read it again</button></div>
+      </div>`;
+  }else{
+    const tag=n.id===BOOK.start?"Begin":null;
+    const btns=(n.choices||[])
+      .filter(c=>{let r=c.requires||[];if(typeof r==="string")r=[r];return r.every(f=>flags.has(f))})
+      .map((c,i)=>`<button data-i="${i}">${at(c.text)}</button>`).join("");
+    inner=`${artHTML(n.id,tag)}
+      <div class="body">
+        <div class="para">${markup(at(n.text)||"",gwords)}</div>
+        <div class="choices">${btns}</div>
+      </div>`;
+  }
 
-  $("bar").innerHTML = `<span class="pill">${BOOK.nodes.length} paragraphs</span>` +
-    `<span class="pill">${seen.size}/${endings.length} endings found</span>` +
-    (flags.size ? `<span class="pill">carrying: ${[...flags].join(", ")}</span>` : "");
+  const card=document.createElement("div");
+  card.className="card"; card.innerHTML=inner;
+  const main=$("main"); const old=main.firstElementChild;
+  if(old){ old.classList.add("leaving");
+    setTimeout(()=>{ main.innerHTML=""; main.appendChild(card); wire(n,endings); },200); }
+  else { main.innerHTML=""; main.appendChild(card); wire(n,endings); }
+  setProgress(n.ending?1:(depth[node]||0)/Math.max(maxDepth,1));
 }
 
-function showGloss(word) {
-  const e = LEX[word]; const g = $("gloss"); const lang = $("lang").value;
-  g.innerHTML = e
-    ? `<div><span class="hw">${word}</span><span class="pos">${e.pos || ""}</span></div>` +
-      `<div class="en">${e.en || ""}</div>` +
-      (lang && e[lang] ? `<div class="tr">${e[lang]}</div>` : "")
-    : `<div class="hw">${word}</div>`;
-  g.dir = lang === "ar" ? "rtl" : "ltr";
-  g.classList.add("on");
-  clearTimeout(g._t); g._t = setTimeout(hideGloss, 7000);
+function wire(n){
+  $("main").querySelectorAll("w").forEach(el=>el.onclick=()=>showGloss(el.dataset.w));
+  const visible=(n.choices||[]).filter(c=>{let r=c.requires||[];if(typeof r==="string")r=[r];return r.every(f=>flags.has(f))});
+  $("main").querySelectorAll(".choices button").forEach(b=>b.onclick=()=>{
+    const c=visible[+b.dataset.i]; let s=c.sets||[]; if(typeof s==="string")s=[s];
+    s.forEach(f=>flags.add(f)); node=c.goto; hideGloss(); window.scrollTo({top:0,behavior:"smooth"}); render();
+  });
+  const again=$("again"); if(again) again.onclick=()=>{node=BOOK.start;flags=new Set();hideGloss();window.scrollTo({top:0});render();};
 }
-function hideGloss() { $("gloss").classList.remove("on"); }
 
-$("begin").onclick = () => { node = BOOK.start; flags = new Set(); render(); };
-$("restart").onclick = () => { node = BOOK.start; flags = new Set(); hideGloss(); render(); };
-$("level").onchange = e => { level = e.target.value;
-  savePrefs({ ...loadPrefs(), level }); if (!$("view").hidden) render(); };
-$("lang").onchange = e => savePrefs({ ...loadPrefs(), lang: e.target.value });
-$("episode").onchange = e => openEpisode(e.target.value, level);
-$("speak").onclick = () => {
-  if (!window.speechSynthesis || $("view").hidden) return;
+function setProgress(frac){ $("progress").style.width=Math.round(Math.min(1,frac)*100)+"%"; }
+
+function showGloss(word){
+  const e=LEX[word], g=$("gloss"), lang=$("lang").value;
+  g.innerHTML=e?`<div><span class="hw">${word}</span><span class="pos">${e.pos||""}</span></div>
+    <div class="en">${e.en||""}</div>${lang&&e[lang]?`<div class="tr">${e[lang]}</div>`:""}`
+    :`<div class="hw">${word}</div>`;
+  g.dir=lang==="ar"?"rtl":"ltr"; g.classList.add("on");
+  clearTimeout(g._t); g._t=setTimeout(hideGloss,7000);
+}
+const hideGloss=()=>$("gloss").classList.remove("on");
+
+/* settings sheet */
+const openSheet=()=>{$("sheet").classList.add("on");$("scrim").classList.add("on")};
+const closeSheet=()=>{$("sheet").classList.remove("on");$("scrim").classList.remove("on")};
+$("cog").onclick=openSheet; $("scrim").onclick=closeSheet;
+$("lang").onchange=e=>savePrefs({...loadPrefs(),lang:e.target.value});
+$("episode").onchange=e=>{closeSheet();openEpisode(e.target.value,level,true);window.scrollTo({top:0})};
+$("speak").onclick=()=>{
+  if(!window.speechSynthesis||introMode) return;
   speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance((at(byId(node).text) || "").replace(/\n/g, " "));
-  u.lang = "en-GB"; u.rate = level === "A2" ? 0.85 : 0.95;
-  speechSynthesis.speak(u);
+  const u=new SpeechSynthesisUtterance((at(byId(node).text)||"").replace(/\n/g," "));
+  u.lang="en-GB"; u.rate=level==="A2"?0.85:0.95; speechSynthesis.speak(u);
 };
-document.addEventListener("click", e => {
-  if (!e.target.closest("w") && !e.target.closest(".gloss")) hideGloss();
-});
-boot().catch(err => { $("title").textContent = "Could not load the story";
-  $("blurb").textContent = String(err); });
+document.addEventListener("click",e=>{ if(!e.target.closest("w")&&!e.target.closest(".gloss")) hideGloss(); });
+
+boot().catch(err=>{ $("main").innerHTML=`<div class="card"><div class="body"><h1>Could not load the story</h1><p>${err}</p></div></div>`; });
 </script>
 </body>
 </html>

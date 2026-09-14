@@ -4,6 +4,16 @@ import { readdir, readFile, writeFile, mkdir, cp, rm } from "node:fs/promises";
 import { join } from "node:path";
 
 const ROOT = new URL("..", import.meta.url).pathname;
+
+// scan for per-section art the team has added: images/<series>/ep-NN/<id>.webp
+import { existsSync } from "node:fs";
+async function scanImages(series, episode) {
+  const dir = join(ROOT, "images", series, `ep-${String(episode).padStart(2,"0")}`);
+  if (!existsSync(dir)) return [];
+  const files = await readdir(dir);
+  return files.filter(f => /\.(webp|avif|png|jpe?g)$/i.test(f)).map(f => f.replace(/\.[^.]+$/, ""));
+}
+
 const CONTENT = join(ROOT, "content");
 const DIST = join(ROOT, "dist");
 
@@ -11,6 +21,8 @@ await rm(DIST, { recursive: true, force: true });
 await mkdir(DIST, { recursive: true });
 await cp(join(ROOT, "web", "index.html"), join(DIST, "index.html"));
 await cp(join(ROOT, "web", "favicon.svg"), join(DIST, "favicon.svg"));
+// copy the art folder if the team has added any images
+try { await cp(join(ROOT, "images"), join(DIST, "images"), { recursive: true }); console.log("Copied images/"); } catch { /* no images yet — placeholders show */ }
 
 const files = (await readdir(CONTENT)).filter(f => f.endsWith(".json"));
 const episodes = [];
@@ -27,6 +39,7 @@ for (const f of files) {
     levels: json.levels ?? [],
     paragraphs: json.nodes.length,
     endings: json.nodes.filter(n => n.ending).length,
+    images: await scanImages(json.series, json.episode),
   });
 }
 episodes.sort((a, b) => a.episode - b.episode);
