@@ -190,7 +190,7 @@
    drops files named by paragraph number and nothing in the JSON has to change.
    Until a file exists, a deliberate placeholder card shows in its place. */
 const $ = id => document.getElementById(id);
-let MANIFEST=null, BOOK=null, LEX={}, level=null, node=null;
+let MANIFEST=null, BOOK=null, LEX={}, BASELEX={}, level=null, node=null;
 let flags=new Set(), seen=new Set(), maxDepth=0, depth={}, haveImg=new Set();
 
 const prefKey="ab:prefs";
@@ -207,9 +207,12 @@ const imgBase=()=>`images/${BOOK.series}/ep-${pad(BOOK.episode)}`;
 
 async function boot(){
   MANIFEST=await (await fetch("manifest.json")).json();
-  const lex=await (await fetch(MANIFEST.lexicon)).json();
-  const src=lex.entries||lex; LEX={};
-  for(const k in src) LEX[k.toLowerCase()]=src[k];
+  // shared series lexicon (a base every book inherits); a book may add/override its own
+  BASELEX={};
+  if(MANIFEST.lexicon){
+    try{ const lex=await (await fetch(MANIFEST.lexicon)).json(); const src=lex.entries||lex;
+      for(const k in src) BASELEX[k.toLowerCase()]=src[k]; }catch{}
+  }
   $("episode").innerHTML=MANIFEST.episodes
     .map(e=>`<option value="${e.file}">Ep ${e.episode} — ${e.title}</option>`).join("");
   const p=loadPrefs();
@@ -222,6 +225,10 @@ async function openEpisode(file,preferLevel,intro){
   $("episode").value=file;
   const meta=MANIFEST.episodes.find(e=>e.file===file)||{};
   haveImg=new Set(meta.images||[]);
+  // this book's lexicon = shared base + the book's own chosen words (book wins)
+  LEX={...BASELEX};
+  const own=BOOK.lexicon&&(BOOK.lexicon.entries||BOOK.lexicon);
+  if(own) for(const k in own) LEX[k.toLowerCase()]=own[k];
   level=BOOK.levels.includes(preferLevel)?preferLevel:BOOK.levels[0];
   $("brand").textContent=BOOK.title;
   buildLevelSeg();
@@ -281,18 +288,34 @@ function renderIntro(){
   setProgress(0);
 }
 
-function markup(text,list){
-  const set=new Set(list.map(w=>w.toLowerCase()));
-  return text.replace(/[A-Za-z']+/g,m=>{
-    const l=m.toLowerCase();
-    const base=set.has(l)?l:[l.replace(/s$/,""),l.replace(/es$/,""),l.replace(/ed$/,"")].find(x=>set.has(x));
-    return base?`<w data-w="${base}">${m}</w>`:m;
+// Auto-gloss: any word whose base form is in this book's lexicon becomes tappable,
+// everywhere it appears. The lexicon IS the "chosen words" list — no per-paragraph
+// marking. Suffix rules mirror the validator so an entry keyed by its base form also
+// catches plurals, past tenses and -ly adverbs (proper→properly, heavy→heavily).
+const SUFFIX=[["s",""],["es",""],["ies","y"],["ed",""],["ed","e"],["ied","y"],
+  ["ing",""],["ing","e"],["er",""],["er","e"],["est",""],["ly",""],["ily","y"],
+  ["ally","al"],["ably","able"],["ibly","ible"],["'s",""]];
+function lexBase(word){
+  const l=word.toLowerCase();
+  if(LEX[l]) return l;
+  for(const [s,r] of SUFFIX){
+    if(l.endsWith(s)&&l.length-s.length>=2){
+      const c=l.slice(0,l.length-s.length)+r;
+      if(LEX[c]) return c;
+      if(c.length>3&&c[c.length-1]===c[c.length-2]&&LEX[c.slice(0,-1)]) return c.slice(0,-1); // stopped→stop
+    }
+  }
+  return null;
+}
+function markup(text){
+  return text.replace(/[A-Za-z]+(?:'[A-Za-z]+)?/g,m=>{
+    const b=lexBase(m);
+    return b?`<w data-w="${b}">${m}</w>`:m;
   });
 }
 
 function render(){
   const n=byId(node);
-  const gwords=(at(n.glossary)||[]).map(g=>typeof g==="string"?g:g.word);
   const endings=BOOK.nodes.filter(x=>x.ending);
 
   let inner;
@@ -305,7 +328,7 @@ function render(){
       <div class="end">
         <div class="badge">${badge}</div>
         <h2>${label}</h2>
-        <div class="para" style="font-size:17px;margin-top:8px">${markup(at(n.text)||"",gwords)}</div>
+        <div class="para" style="font-size:17px;margin-top:8px">${markup(at(n.text)||"")}</div>
         <div class="stamps">${stamps}</div>
         <p>${seen.size} of ${endings.length} endings found${seen.size<endings.length?" — there are others.":" — you found them all."}</p>
         <div class="again"><button id="again">Read it again</button></div>
@@ -317,7 +340,7 @@ function render(){
       .map((c,i)=>`<button data-i="${i}">${at(c.text)}</button>`).join("");
     inner=`${artHTML(n.id,tag)}
       <div class="body">
-        <div class="para">${markup(at(n.text)||"",gwords)}</div>
+        <div class="para">${markup(at(n.text)||"")}</div>
         <div class="choices">${btns}</div>
       </div>`;
   }

@@ -36,11 +36,6 @@
         "B1": "The train gets in at eleven o'clock at night. You have never been to this city before, and you do not know a single person in it. In your bag there is one letter: Kessler and Rowe, 14 Rosewater Street, Tuesday at nine. That letter is the reason you are here. The station is big and cold and nearly empty.",
         "B2": "The train gets in at eleven at night, which is not the hour you would have chosen to arrive anywhere. You have never been to this city before and you do not know a single person in it. In your bag there is one letter — Kessler and Rowe, 14 Rosewater Street, Tuesday at nine — and that letter is the entire reason you are standing here. The station is vast, cold, and almost completely empty."
       },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -66,11 +61,6 @@
         "A2": "A man sits behind the glass at the information desk. He looks at your letter. \"Rosewater Street,\" he says. \"They are rebuilding it. Bus number nine goes there. But it is late. Are you sure?\" He gives you a small map.",
         "B1": "A tired man sits behind the glass at the information desk. He reads your letter twice. \"Rosewater Street,\" he says. \"They have been rebuilding it for two years. Bus number nine will get you there, but it is nearly midnight. Are you sure you want to go tonight?\" He pushes a small map under the glass.",
         "B2": "A tired man sits behind the glass at the information desk and reads your letter twice, which is once more than seems necessary. \"Rosewater Street,\" he says. \"They have been rebuilding it for two years now. Number nine bus will get you there. Though it is nearly midnight, and I am not sure what you expect to find.\" He pushes a small paper map under the glass without quite looking at you."
-      },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
       },
       "choices": [
         {
@@ -98,11 +88,6 @@
         "B1": "Outside the air is cold and wet and smells of the river. Three taxi drivers stand beside their cars, watching you the way people watch someone who has just arrived. There is a bus stop as well. The bus costs almost nothing; the taxi will cost most of what you have.",
         "B2": "Outside, the air is cold and wet and smells faintly of a river you have not seen yet. Three taxi drivers lean against their cars, watching you with the particular attention people reserve for someone who has obviously just arrived. There is a bus stop too. The bus costs almost nothing. The taxi will cost most of what is in your pocket."
       },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -128,11 +113,6 @@
         "A2": "The bus is warm and nearly empty. You read the letter again. Kessler and Rowe. Tuesday, nine o'clock. Today is Monday. You have the whole night. Outside, the streets get darker and quieter.",
         "B1": "The bus is warm and almost empty. You read the letter again, although you know it by heart: Kessler and Rowe, Tuesday at nine. Today is Monday, so you have the whole night in front of you. Outside the window the streets are getting darker and emptier.",
         "B2": "The bus is warm and almost empty, and you read the letter again although you have known it by heart for a fortnight. Kessler and Rowe. Tuesday at nine. Today is Monday, which means you have an entire night to fill in a city where you know nobody. Outside the window the streets grow darker and emptier the further you go."
-      },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
       },
       "choices": [
         {
@@ -160,15 +140,6 @@
         "B1": "You walk. The map is small, the streets are long, and after twenty minutes you have to admit that you are lost. A woman is closing up a kiosk on the corner, pulling down a metal shutter. She is the only person on the street.",
         "B2": "You walk. The map is small, the streets are long, and after twenty minutes you are forced to admit that you have no idea where you are. On the corner a woman is closing up a kiosk, hauling down a metal shutter that has clearly needed oiling for years. She is the only other person on the street."
       },
-      "glossary": {
-        "A2": [
-          "kiosk"
-        ],
-        "B1": [
-          "kiosk"
-        ],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -195,11 +166,6 @@
         "B1": "The taxi driver reads the address and laughs, not unkindly. \"Rosewater Street? There is nothing there any more. All the offices moved out.\" You ask him when. \"Two years ago. Maybe three.\" He starts the car anyway, still shaking his head.",
         "B2": "The driver reads the address and laughs, not unkindly, which is somehow worse. \"Rosewater Street? There is nothing down there now. The offices all moved out years ago, the lot of them.\" You ask when, exactly. \"Two years. Three, maybe.\" He starts the car anyway, still shaking his head at the windscreen, and pulls out into a road with no other traffic on it."
       },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -225,15 +191,6 @@
         "A2": "Rosewater Street is dark. Number 14 is a grey building with white dust on the windows. Above the door there is an old sign: KESSLER AND ROWE. Under it, the door has no handle. It is nearly midnight.",
         "B1": "Rosewater Street is dark and half of it is behind builders' fencing. Number 14 is a grey building with white dust on the inside of the windows. Above the door an old sign still reads KESSLER AND ROWE, and below it the door has no handle at all. It is nearly midnight.",
         "B2": "Rosewater Street is dark, and half of it stands behind builders' fencing that looks as though it has been there for years. Number 14 is a grey building with white dust on the inside of the windows. Above the door an old sign still reads KESSLER AND ROWE, in letters someone once paid good money for. Below it, the door has no handle at all. It is nearly midnight."
-      },
-      "glossary": {
-        "A2": [
-          "dust"
-        ],
-        "B1": [
-          "dust"
-        ],
-        "B2": []
       },
       "choices": [
         {
@@ -269,11 +226,6 @@
         "B1": "You open your eyes because the engine has stopped. The driver is standing in the aisle, looking at you. \"Last stop,\" he says. You are on the wrong side of the city, it is one in the morning, and there will be no more buses tonight.",
         "B2": "You open your eyes because the engine has stopped. The driver is standing in the aisle, looking down at you with the patience of a man who has done this many times. \"Last stop.\" You are on the wrong side of the city, it is one in the morning, and there will not be another bus until five."
       },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -299,11 +251,6 @@
         "A2": "The woman reads the letter. \"Kessler and Rowe? They are not there now.\" She points down the street. \"There is a cafe on the corner. The Blue Kettle. Ask there in the morning. They know everything.\"",
         "B1": "The woman reads the letter carefully, holding it up to the streetlight. \"Kessler and Rowe? They have not been there for a long time.\" She points down the street with her chin. \"There is a cafe on that corner, the Blue Kettle. Ask in there in the morning — they know everything on this street.\"",
         "B2": "The woman takes the letter and holds it up to the streetlight, reading it with more care than you expected. \"Kessler and Rowe? They have not been at that address for a long time.\" She nods down the street. \"There is a cafe on the corner — the Blue Kettle. Ask in there in the morning. Nothing happens on this street that they do not hear about first.\""
-      },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
       },
       "choices": [
         {
@@ -331,15 +278,6 @@
         "B1": "The hotel is small and clean and costs more than you would like. The man behind the desk is kind about it. \"Looking for work?\" he asks, as if it were obvious. \"There is an agency just across the road. They find jobs for people who have only just arrived.\"",
         "B2": "The hotel is small and clean and costs rather more than you would like it to. The man behind the desk is kind about the whole thing. \"Looking for work?\" he asks, as though it were written on your face. \"There is an agency directly across the road. They find jobs for people who have only just got here.\""
       },
-      "glossary": {
-        "A2": [
-          "agency"
-        ],
-        "B1": [
-          "agency"
-        ],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -366,13 +304,6 @@
         "B1": "You rub a circle in the dust with your sleeve and look in. There are empty desks and one chair on its side. A calendar on the wall stopped two years ago. At the very back of the office, behind a glass door, a small light is on.",
         "B2": "You rub a circle in the dust with your sleeve. Empty desks. One chair lying on its side, as though somebody left in a hurry and nobody has been in since. A calendar on the wall, stopped two years ago in March. And at the very back of the office, behind an inner glass door, a small light is on."
       },
-      "glossary": {
-        "A2": [
-          "calendar"
-        ],
-        "B1": [],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -398,11 +329,6 @@
         "A2": "A man opens the door of number 16. He is angry because it is late. \"They went to the new place by the river,\" he says. \"Ms Rowe still comes here on Fridays. Only Fridays.\" Then he closes the door.",
         "B1": "A man opens the door of number 16 in a dressing gown, and he is not pleased about the hour. \"They moved to the new place by the river,\" he says. \"Ms Rowe still comes back here on Fridays, for the post. Only Fridays.\" Then he shuts the door before you can thank him.",
         "B2": "The door of number 16 opens on a man in a dressing gown who is not remotely pleased about the hour, and says so with his face rather than his words. \"They moved. New place by the river.\" A pause. \"Ms Rowe still comes back here Fridays, for the post. Only Fridays.\" And he shuts the door before you can thank him, which is probably fair."
-      },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
       },
       "choices": [
         {
@@ -437,16 +363,6 @@
         "B1": "You sleep on a bench in the station, which is neither comfortable nor dignified but is warm and free. At six in the morning a cleaner wakes you with the edge of her machine. Your back hurts, your neck hurts, and you have very little money left.",
         "B2": "You sleep on a bench in the station, which is neither comfortable nor dignified, but is warm and costs nothing. At six a cleaner wakes you by running her machine into the leg of the bench, twice, in a way that does not feel accidental. Your back hurts. So does your neck. And there is very little money left in your pocket."
       },
-      "glossary": {
-        "A2": [
-          "bench",
-          "cleaner"
-        ],
-        "B1": [
-          "bench"
-        ],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -473,11 +389,6 @@
         "B1": "You walk for the best part of two hours through streets that are completely empty. When you finally stop, you are somewhere near the station again. It is three in the morning, and you have learnt nothing except that the city is bigger than it looks.",
         "B2": "You walk for the best part of two hours through streets so empty they feel switched off. When you finally stop you are somewhere near the station again, and it is three in the morning. The only thing you have learnt is that this city is a great deal larger than it looked on a paper map."
       },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -503,15 +414,6 @@
         "A2": "The cafe is closed. But there is a card in the window, next to the opening times. It says: KESSLER AND ROWE — NOW AT 3 MILL QUAY. You take a photo of it.",
         "B1": "The cafe is closed, of course, but there is a business card taped inside the window next to the opening times. It reads: KESSLER AND ROWE — NOW AT 3 MILL QUAY. You take a photograph of it with your phone, twice, because your hands are cold.",
         "B2": "The cafe is shut, naturally, but somebody has taped a business card inside the window beside the opening times, and it has clearly been there a while. KESSLER AND ROWE — NOW AT 3 MILL QUAY. You photograph it twice, partly because your hands are cold and partly because you do not entirely trust your luck."
-      },
-      "glossary": {
-        "A2": [
-          "quay"
-        ],
-        "B1": [
-          "quay"
-        ],
-        "B2": []
       },
       "choices": [
         {
@@ -546,11 +448,6 @@
         "B1": "The room is small, but the bed is good. You sleep better than you expected. In the morning you look out of the window and there is the agency across the road, exactly as the man said. A big yellow sign reads: WORK FOR EVERYONE — TODAY.",
         "B2": "The room is small but the bed is a good one, and you sleep better than you had any right to. In the morning you look out of the window. There is the agency across the road, exactly where the man said it would be, under a yellow sign large enough to read from a moving vehicle: WORK FOR EVERYONE — TODAY."
       },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -576,15 +473,6 @@
         "A2": "It is Tuesday, eight o'clock. You are on Rosewater Street again. The building is still empty and still grey. Your interview is in one hour, and you do not know where it is.",
         "B1": "It is Tuesday, eight in the morning, and you are standing on Rosewater Street again. The building is exactly as empty as it was last night. Your interview is in one hour and you still do not know where in this city it is happening.",
         "B2": "Tuesday, eight in the morning, and you are back on Rosewater Street, which in daylight looks less sinister and considerably sadder. The building is exactly as empty as it was at midnight. Your interview is in one hour, and you still have no reliable idea where in this city it is actually taking place."
-      },
-      "glossary": {
-        "A2": [
-          "interview"
-        ],
-        "B1": [
-          "interview"
-        ],
-        "B2": []
       },
       "choices": [
         {
@@ -624,11 +512,6 @@
         "B1": "A woman with a cleaning machine opens the inner door and looks out at you. \"There is nobody here,\" she says. \"They moved out.\" You ask her where to. She looks at you for a long moment, deciding something. \"Ask at the cafe on the corner,\" she says, and shuts the door.",
         "B2": "The inner door opens on a woman with a cleaning machine, who looks at you through the gap with no surprise at all. \"There is nobody here. They moved out.\" You ask where to. She looks at you for a long moment, visibly deciding how much of her evening you are worth. \"Ask at the cafe on the corner,\" she says, and shuts the door."
       },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -654,11 +537,6 @@
         "A2": "You walk towards the river. It takes a long time. When you get there it is nearly two o'clock and everything is closed. You can see new office buildings on the other side of the water.",
         "B1": "You walk towards the river, which takes far longer than it should because you keep having to guess. When you arrive it is nearly two in the morning and everything is shut. Across the water you can see new office buildings, all glass, all dark.",
         "B2": "You walk towards the river, which takes considerably longer than it should because every third street forces you to guess. When you finally get there it is nearly two in the morning and everything is shut. Across the water stand new office buildings, all glass and all dark, of the kind that get built in places that used to be something else."
-      },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
       },
       "choices": [
         {
@@ -686,13 +564,6 @@
         "B1": "It is morning and you are tired, cold and nearly out of money. You have one hour left before the interview. You are standing outside an empty building, holding a letter that says it should be happening here.",
         "B2": "It is morning. You are tired, cold and very nearly out of money, and you have one hour before an interview that is supposed to be happening inside a building nobody has worked in for two years. You are holding the letter that says so, which is beginning to feel like a joke at your expense."
       },
-      "glossary": {
-        "A2": [],
-        "B1": [
-          "interview"
-        ],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -718,11 +589,6 @@
         "A2": "The coffee is hot and costs too much. You sit by the window and think. You have a letter with the wrong address, very little money, and one hour. But somebody wrote that letter, and somebody wanted to meet you.",
         "B1": "The coffee is hot and costs more than it should. You sit by the window and think it through properly. You have a letter with an address that is two years out of date, almost no money, and one hour. But somebody wrote that letter, and somebody, somewhere, is expecting you.",
         "B2": "The coffee is hot and costs a good deal more than it ought to. You sit by the window and think the thing through properly for the first time. You have a letter with an address two years out of date, almost no money, and one hour. But somebody sat down and wrote that letter, and somebody, somewhere in this city, is expecting you at nine."
-      },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
       },
       "choices": [
         {
@@ -750,13 +616,6 @@
         "B1": "By eight o'clock you can no longer feel your feet. You have walked all night for no good reason. You find a bench near a bus stop, sit down heavily, and for one long moment you seriously think about going home.",
         "B2": "By eight o'clock you have stopped being able to feel your feet. You have walked all night, achieved nothing, and learnt the layout of a city you may not stay in. You find a bench near a bus stop, sit down rather harder than you meant to, and for one long and honest moment you consider going home."
       },
-      "glossary": {
-        "A2": [
-          "bench"
-        ],
-        "B1": [],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -783,13 +642,6 @@
         "B1": "Mill Quay runs along the water. Number 3 is new — glass, clean stone, a large green plant standing behind the door. Beside the entrance there is a list of the companies inside, and the fourth name down is KESSLER AND ROWE, second floor.",
         "B2": "Mill Quay runs along the water, and number 3 is the newest thing on it: glass, clean pale stone, an enormous green plant standing behind the door like a receptionist. Beside the entrance there is a brushed steel list of the companies inside, and fourth from the top, in letters far smaller than the ones on Rosewater Street, is KESSLER AND ROWE. Second floor."
       },
-      "glossary": {
-        "A2": [
-          "quay"
-        ],
-        "B1": [],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -815,15 +667,6 @@
         "A2": "The agency is bright and warm. A man in a good suit smiles at you. \"We have work today,\" he says. \"Kitchen, cleaning, building. But first, registration. Two hundred. Everybody pays it.\"",
         "B1": "The agency is bright and warm and smells of new carpet. A man in a very good suit smiles at you before you have said anything. \"We have work today,\" he says. \"Kitchens, cleaning, building sites. But first there is registration. Two hundred. Everybody pays it, it is completely normal.\"",
         "B2": "The agency is bright and warm and smells strongly of new carpet. A man in a very good suit is smiling at you before you have said a word, which is the first thing that bothers you. \"We have work today. Kitchens, cleaning, building sites.\" A small pause. \"There is a registration fee, of course. Two hundred. Everybody pays it — it is completely standard.\""
-      },
-      "glossary": {
-        "A2": [
-          "agency"
-        ],
-        "B1": [
-          "agency"
-        ],
-        "B2": []
       },
       "choices": [
         {
@@ -852,11 +695,6 @@
         "B1": "You reach Mill Quay at half past eight. The river is grey and quiet and there are gulls on the water. You are early, you are reasonably clean, and for the first time since you got off that train you know exactly where you are going.",
         "B2": "You reach Mill Quay at half past eight. The river is grey and quiet, with gulls sitting on it like they are waiting for something too. You are early, you are reasonably clean, and for the first time since you stepped off that train you know precisely where you are going and why. It is a better feeling than it has any right to be."
       },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -883,11 +721,6 @@
         "B1": "This time a young woman opens the door of number 16. \"My father says he told you last night,\" she says. \"The river. Three Mill Quay. Take the number four bus from the corner, it is quicker than walking.\" She looks at your face for a second longer than necessary. \"Good luck.\"",
         "B2": "This time it is a young woman who opens the door of number 16. \"My father says he already told you.\" She does not sound annoyed, only tired on his behalf. \"The river. Three Mill Quay. Take the number four from the corner, it is quicker than walking and you look like you have walked enough.\" She holds the door a moment longer. \"Good luck.\""
       },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -913,11 +746,6 @@
         "A2": "You wait outside number 14. At five past nine a woman arrives with a key in her hand. She stops when she sees you. \"Are you waiting for Kessler and Rowe?\" she asks. \"So am I. I am Kessler and Rowe.\"",
         "B1": "You wait outside number 14. At five past nine a woman arrives with a key already in her hand, and stops when she sees you standing there. \"Are you waiting for Kessler and Rowe?\" she asks. Then, before you can answer: \"So am I, in a manner of speaking. I am Kessler and Rowe.\"",
         "B2": "You wait outside number 14, because it is what the letter said and you have run out of better ideas. At five past nine a woman arrives with a key already in her hand and stops short when she sees you. \"Are you waiting for Kessler and Rowe?\" And then, before you can arrange an answer: \"So am I, in a manner of speaking. I am Kessler and Rowe.\""
-      },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
       },
       "choices": [
         {
@@ -946,11 +774,6 @@
         "B1": "In the dark all the buildings along the quay look identical. You do find a number 3, but it turns out to be the entrance to a car park. You sit down by the water to wait for daylight. It is cold, and it takes a very long time to arrive.",
         "B2": "In the dark, every building along the quay looks like every other building along the quay. You do eventually find a number 3, and it turns out to be the entrance to an underground car park. You sit down by the water to wait for daylight, which is cold, and which takes a very great deal longer to arrive than you would have believed possible."
       },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -976,11 +799,6 @@
         "A2": "\"Kessler and Rowe?\" says the man behind the counter. \"They moved to the river. Everybody asks me this.\" He writes an address on a napkin: 3 MILL QUAY. \"You are the third person this year.\"",
         "B1": "\"Kessler and Rowe?\" says the man behind the counter, without looking up. \"They moved down to the river years ago. Everybody asks me this.\" He writes an address on a paper napkin and pushes it across: 3 MILL QUAY. \"You are the third person to ask me that this year.\"",
         "B2": "\"Kessler and Rowe?\" The man behind the counter does not look up. \"Moved down to the river years back. Everybody asks me this.\" He writes an address on a paper napkin and pushes it across the counter without ceremony: 3 MILL QUAY. \"You are the third person this year. They really ought to update their letters.\""
-      },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
       },
       "choices": [
         {
@@ -1011,17 +829,6 @@
         "B1": "Reception is warm and quiet and smells of coffee. The woman behind the desk types your name, waits, and types it again. \"I am sorry,\" she says, and she does look sorry. \"There is no interview in the diary for today. Are you certain about the date?\"",
         "B2": "Reception is warm and quiet and smells faintly of good coffee. The woman behind the desk types your name, waits, frowns, and types it again. \"I am sorry.\" She does look genuinely sorry, which somehow makes it worse. \"There is nothing in the diary for today at all. Are you quite certain about the date?\""
       },
-      "glossary": {
-        "A2": [
-          "reception",
-          "interview"
-        ],
-        "B1": [
-          "reception",
-          "interview"
-        ],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -1047,13 +854,6 @@
         "A2": "You wait by the water. At ten to nine, a woman walks to the door. She has a coffee in one hand and keys in the other. She is about sixty. On her bag there is a small yellow label: R. ROWE.",
         "B1": "You wait by the water and watch the door. At ten to nine a woman walks up to it with a coffee in one hand and keys in the other. She is about sixty, and there is a small yellow luggage label on her bag with a name on it: R. ROWE.",
         "B2": "You wait by the water and watch the door, which turns out to be the most useful thing you have done since the train. At ten to nine a woman approaches it with a coffee in one hand and a set of keys in the other. She is about sixty. On the strap of her bag there is a small yellow luggage label, the kind that survives one airport and then stays forever, and it reads: R. ROWE."
-      },
-      "glossary": {
-        "A2": [
-          "label"
-        ],
-        "B1": [],
-        "B2": []
       },
       "choices": [
         {
@@ -1085,15 +885,6 @@
         "B1": "You pay him the two hundred. He gives you a receipt and a phone number and tells you they will call you today. Outside on the pavement you look at the receipt properly for the first time. There is no address on it and no company name, only a number. Your money has gone.",
         "B2": "You pay him the two hundred, and he is charming about it, which he can afford to be. He gives you a receipt and a mobile number and assures you they will call today. Out on the pavement you look at the receipt properly for the first time: no address, no company name, no registration number, just a mobile telephone and a signature you cannot read. Your money has gone."
       },
-      "glossary": {
-        "A2": [
-          "receipt"
-        ],
-        "B1": [
-          "receipt"
-        ],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -1119,11 +910,6 @@
         "A2": "\"No thank you,\" you say. The man stops smiling immediately. \"Then we cannot help you,\" he says, and looks at the door. Outside, you feel better. You still have your money, and it is twenty past eight.",
         "B1": "\"No thank you,\" you say. The smile disappears from his face so fast that you know at once you were right. \"Then we cannot help you,\" he says, and looks pointedly at the door. Outside on the pavement you feel considerably better. You still have your money, and it is only twenty past eight.",
         "B2": "\"No, thank you.\" The smile leaves his face with a speed that tells you everything you needed to know about the two hundred. \"Then I am afraid we cannot help you,\" he says, and looks pointedly at the door. Out on the pavement you feel a good deal better than you did going in. You still have your money, and it is only twenty past eight."
-      },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
       },
       "choices": [
         {
@@ -1151,11 +937,6 @@
         "B1": "It is a quarter past nine. Your interview time has come and gone. You are standing in a city you do not know, holding a letter that is now useless, with almost nothing left in your pocket.",
         "B2": "It is a quarter past nine, which means your interview has come and gone without you. You are standing somewhere in a city you cannot yet navigate, with almost nothing left in your pocket. The letter in your hand has stopped being an invitation and become a receipt for a wasted journey."
       },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
-      },
       "choices": [
         {
           "text": {
@@ -1181,11 +962,6 @@
         "A2": "She reads the letter and closes her eyes for a second. \"Rosewater Street,\" she says quietly. \"We moved two years ago. Somebody is still sending the old letters.\" Then she looks at you properly. \"But you are here. Sit down. Tell me about yourself.\"",
         "B1": "She reads the letter and closes her eyes for a second, the way people do when they recognise their own mistake. \"Rosewater Street,\" she says quietly. \"We moved two years ago. Someone in this office is still sending out the old letters.\" Then she looks at you properly for the first time. \"But you found us anyway. Sit down. Tell me about yourself.\"",
         "B2": "She reads the letter and closes her eyes briefly, in the way people do when they have just recognised a mistake as their own. \"Rosewater Street.\" It is not quite a question. \"We moved two years ago. Somebody in this office is still sending out the old letters, and I have a fairly good idea who.\" Then she looks at you properly for the first time, and something in her manner changes. \"But you found us anyway, at some cost, by the look of you. Sit down. Tell me about yourself.\""
-      },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
       },
       "choices": [
         {
@@ -1214,13 +990,6 @@
         "B1": "So you tell her all of it. The station at eleven, the number nine bus, the dust on the window, the man at number 16 in his dressing gown. She listens to every word without interrupting once. When you finish she sits back and says: \"Most people would have gone home last night. When can you start?\"\n\nYou start on Monday. The first job they give you is fixing the letters.",
         "B2": "So you tell her all of it. The station at eleven at night, the number nine bus, the dust on the inside of the window. The man at number 16 who answered the door in a dressing gown and told you the truth anyway. She listens to every word of it without once interrupting, which is not a thing you are used to. When you finish she sits back and says, \"Most people would have gone home last night. When can you start?\"\n\nYou start on Monday. The first job they give you is fixing the letters."
       },
-      "glossary": {
-        "A2": [
-          "dust"
-        ],
-        "B1": [],
-        "B2": []
-      },
       "ending": "good",
       "choices": [],
       "note": "Best ordinary ending. Earned by honesty at §35 rather than by any flag."
@@ -1231,11 +1000,6 @@
         "A2": "There is no job today. But she takes your name and your number. She writes them on real paper, not on a screen. \"We will have something in the spring,\" she says. \"Call me. And use this address, not the old one.\"\n\nIt is not what you came for. But you are in the city now, and somebody knows your name.",
         "B1": "There is no job for you today. But she takes your name and number, and writes them on a real piece of paper rather than typing them into a screen. You decide to take that as a good sign. \"We will have something in the spring,\" she says. \"Call me then. And use this address, not the one on your letter.\"\n\nIt is not what you came for. But you are in the city now, and somebody in it knows your name.",
         "B2": "There is no job for you today, and she does not pretend otherwise. But she takes your name and your number and writes them on an actual piece of paper rather than typing them into a screen. You decide, on no evidence at all, to take that as a good sign. \"We will have something in the spring. Call me then — and use this address, not the one printed on your letter.\"\n\nIt is not what you came for. But you are in the city now, and somebody in it knows your name."
-      },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
       },
       "ending": "neutral",
       "choices": [],
@@ -1248,11 +1012,6 @@
         "B1": "\"Ms Rowe?\"\n\nShe stops with her key halfway to the door and turns round. Nobody at Mill Quay knows you are coming; nobody here has told you her name. She looks at you for a long moment, working it out, and then she begins to smile.\n\n\"You went to Rosewater Street,\" she says. \"Didn't you.\"\n\nYou start on Monday. She tells this story to new people for years afterwards.",
         "B2": "\"Ms Rowe?\"\n\nShe stops with her key halfway to the lock and turns round. Nobody at Mill Quay knows you are coming, and nobody at Mill Quay has told you her name, which means there is exactly one place you can have got it from. You can see her arriving at that conclusion in real time, and you can see the precise moment she decides she likes it.\n\n\"You went to Rosewater Street,\" she says. \"Didn't you.\"\n\nYou start on Monday. She tells this story to new arrivals for years afterwards, and it improves every time."
       },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
-      },
       "ending": "good",
       "choices": [],
       "note": "Secret ending. Requires knowing her name (§12) AND seeing the label (§31) — two clues from different routes."
@@ -1263,13 +1022,6 @@
         "A2": "The number rings and rings. Then it stops working. You go back to the agency at lunchtime. The yellow sign is still there. The door is locked. Inside, there is nobody at all.\n\nYou have no money and no job. You have a receipt with a phone number on it.",
         "B1": "The number rings and rings, and then it stops connecting at all. You go back to the agency at lunchtime. The yellow sign is still up and the door is locked. Through the glass you can see that the bright, warm office has no furniture in it at all.\n\nYou have no money, no job, and a receipt with a dead phone number on it.",
         "B2": "The number rings and rings, and then, at some point that afternoon, it stops connecting altogether. You go back at lunchtime. The yellow sign is still up — WORK FOR EVERYONE, TODAY — the door is locked, and through the glass you can see that the bright, warm, new-carpet-smelling office contains no furniture of any kind.\n\nYou have no money, no job, and a receipt with a dead telephone number on it. It is not yet noon on your first full day."
-      },
-      "glossary": {
-        "A2": [
-          "receipt"
-        ],
-        "B1": [],
-        "B2": []
       },
       "ending": "bad",
       "choices": [],
@@ -1282,14 +1034,1718 @@
         "B1": "You sit in the station and watch the departure board. There is a train at two o'clock going back the way you came, and you have just about enough money for a ticket.\n\nSomewhere in this city, a woman with your name in her diary waits until half past nine. Then she decides you are not coming, and goes back to work.",
         "B2": "You sit in the station and watch the departure board turn over. There is a train at two o'clock going back the way you came, and you have, just about, enough money for a ticket to be on it.\n\nSomewhere in this city, a woman with your name written in her diary waits until half past nine, decides that you are not coming after all, and goes back to work. She does not think about it again. You will think about it for a long time."
       },
-      "glossary": {
-        "A2": [],
-        "B1": [],
-        "B2": []
-      },
       "ending": "bad",
       "choices": [],
       "note": "Giving up. Deliberately quiet rather than dramatic — the cost is what you don't see."
     }
-  ]
+  ],
+  "lexicon": {
+    "_comment": "This book's chosen lexicon. Any word here is tappable wherever it appears in the story (base form; the reader resolves inflections). Translations still need a native speaker's check before launch.",
+    "entries": {
+      "kiosk": {
+        "pos": "noun",
+        "en": "a very small shop on a street that sells newspapers, drinks and small things",
+        "fr": "le kiosque",
+        "es": "el quiosco",
+        "pt": "o quiosque",
+        "it": "il chiosco",
+        "de": "der Kiosk",
+        "ru": "киоск",
+        "ar": "كشك",
+        "zh": "报刊亭"
+      },
+      "dust": {
+        "pos": "noun",
+        "en": "dry dirt like powder that covers things nobody cleans",
+        "fr": "la poussière",
+        "es": "el polvo",
+        "pt": "a poeira",
+        "it": "la polvere",
+        "de": "der Staub",
+        "ru": "пыль",
+        "ar": "غبار",
+        "zh": "灰尘"
+      },
+      "dusty": {
+        "pos": "adjective",
+        "en": "covered with dust",
+        "fr": "poussiéreux",
+        "es": "polvoriento",
+        "pt": "empoeirado",
+        "it": "polveroso",
+        "de": "staubig",
+        "ru": "пыльный",
+        "ar": "مغبر",
+        "zh": "满是灰尘的"
+      },
+      "agency": {
+        "pos": "noun",
+        "en": "a company that finds work for people, usually for money",
+        "fr": "l'agence",
+        "es": "la agencia",
+        "pt": "a agência",
+        "it": "l'agenzia",
+        "de": "die Agentur",
+        "ru": "агентство",
+        "ar": "وكالة",
+        "zh": "中介机构"
+      },
+      "calendar": {
+        "pos": "noun",
+        "en": "a page or book that shows the days and months of a year",
+        "fr": "le calendrier",
+        "es": "el calendario",
+        "pt": "o calendário",
+        "it": "il calendario",
+        "de": "der Kalender",
+        "ru": "календарь",
+        "ar": "تقويم",
+        "zh": "日历"
+      },
+      "bench": {
+        "pos": "noun",
+        "en": "a long hard seat for two or more people, often outside",
+        "fr": "le banc",
+        "es": "el banco",
+        "pt": "o banco",
+        "it": "la panchina",
+        "de": "die Bank",
+        "ru": "скамейка",
+        "ar": "مقعد",
+        "zh": "长椅"
+      },
+      "cleaner": {
+        "pos": "noun",
+        "en": "a person whose job is to clean a building",
+        "fr": "l'agent d'entretien",
+        "es": "la limpiadora",
+        "pt": "a faxineira",
+        "it": "l'addetta alle pulizie",
+        "de": "die Reinigungskraft",
+        "ru": "уборщица",
+        "ar": "عاملة نظافة",
+        "zh": "清洁工"
+      },
+      "quay": {
+        "pos": "noun",
+        "en": "a hard flat place next to water where boats stop; said like KEY",
+        "fr": "le quai",
+        "es": "el muelle",
+        "pt": "o cais",
+        "it": "la banchina",
+        "de": "der Kai",
+        "ru": "набережная",
+        "ar": "رصيف الميناء",
+        "zh": "码头"
+      },
+      "receipt": {
+        "pos": "noun",
+        "en": "a small paper that shows you paid for something; said like ri-SEET",
+        "fr": "le reçu",
+        "es": "el recibo",
+        "pt": "o recibo",
+        "it": "la ricevuta",
+        "de": "die Quittung",
+        "ru": "квитанция",
+        "ar": "إيصال",
+        "zh": "收据"
+      },
+      "reception": {
+        "pos": "noun",
+        "en": "the desk near the door of a building where visitors go first",
+        "fr": "la réception",
+        "es": "la recepción",
+        "pt": "a receção",
+        "it": "la reception",
+        "de": "der Empfang",
+        "ru": "рецепция",
+        "ar": "الاستقبال",
+        "zh": "前台"
+      },
+      "receptionist": {
+        "pos": "noun",
+        "en": "the person who works at the reception desk",
+        "fr": "le/la réceptionniste",
+        "es": "el/la recepcionista",
+        "pt": "o/a rececionista",
+        "it": "il/la receptionist",
+        "de": "der Empfangsmitarbeiter",
+        "ru": "администратор",
+        "ar": "موظف الاستقبال",
+        "zh": "前台接待员"
+      },
+      "label": {
+        "pos": "noun",
+        "en": "a small piece of paper or plastic on a thing, with writing on it",
+        "fr": "l'étiquette",
+        "es": "la etiqueta",
+        "pt": "a etiqueta",
+        "it": "l'etichetta",
+        "de": "das Etikett",
+        "ru": "бирка",
+        "ar": "بطاقة",
+        "zh": "标签"
+      },
+      "interview": {
+        "pos": "noun",
+        "en": "a meeting where a company asks you questions about a job",
+        "fr": "l'entretien",
+        "es": "la entrevista",
+        "pt": "a entrevista",
+        "it": "il colloquio",
+        "de": "das Vorstellungsgespräch",
+        "ru": "собеседование",
+        "ar": "مقابلة عمل",
+        "zh": "面试"
+      },
+      "cafe": {
+        "pos": "noun",
+        "en": "a small place where you buy and drink coffee and eat light food",
+        "fr": "le café",
+        "es": "la cafetería",
+        "pt": "o café",
+        "it": "il caffè",
+        "de": "das Café",
+        "ru": "кафе",
+        "ar": "مقهى",
+        "zh": "咖啡馆"
+      },
+      "information": {
+        "pos": "noun",
+        "en": "facts you are told or that help you know something",
+        "fr": "l'information",
+        "es": "la información",
+        "pt": "a informação",
+        "it": "l'informazione",
+        "de": "die Information",
+        "ru": "информация",
+        "ar": "معلومات",
+        "zh": "信息"
+      },
+      "midnight": {
+        "pos": "noun",
+        "en": "twelve o'clock at night",
+        "fr": "minuit",
+        "es": "la medianoche",
+        "pt": "a meia-noite",
+        "it": "la mezzanotte",
+        "de": "die Mitternacht",
+        "ru": "полночь",
+        "ar": "منتصف الليل",
+        "zh": "午夜"
+      },
+      "daylight": {
+        "pos": "noun",
+        "en": "the natural light of day",
+        "fr": "la lumière du jour",
+        "es": "la luz del día",
+        "pt": "a luz do dia",
+        "it": "la luce del giorno",
+        "de": "das Tageslicht",
+        "ru": "дневной свет",
+        "ar": "ضوء النهار",
+        "zh": "日光"
+      },
+      "diary": {
+        "pos": "noun",
+        "en": "a book where you write what happens each day, or your plans",
+        "fr": "le journal / l'agenda",
+        "es": "el diario / la agenda",
+        "pt": "o diário / a agenda",
+        "it": "il diario / l'agenda",
+        "de": "das Tagebuch / der Kalender",
+        "ru": "дневник / ежедневник",
+        "ar": "مذكرات / أجندة",
+        "zh": "日记 / 记事本"
+      },
+      "gown": {
+        "pos": "noun",
+        "en": "a long loose piece of clothing (here: a dressing gown worn at home)",
+        "fr": "la robe de chambre",
+        "es": "la bata",
+        "pt": "o roupão",
+        "it": "la vestaglia",
+        "de": "der Morgenmantel",
+        "ru": "халат",
+        "ar": "رداء",
+        "zh": "长袍"
+      },
+      "entrance": {
+        "pos": "noun",
+        "en": "the door or opening where you go into a place",
+        "fr": "l'entrée",
+        "es": "la entrada",
+        "pt": "a entrada",
+        "it": "l'ingresso",
+        "de": "der Eingang",
+        "ru": "вход",
+        "ar": "مدخل",
+        "zh": "入口"
+      },
+      "pavement": {
+        "pos": "noun",
+        "en": "the hard path at the side of a road for people to walk on",
+        "fr": "le trottoir",
+        "es": "la acera",
+        "pt": "o passeio",
+        "it": "il marciapiede",
+        "de": "der Bürgersteig",
+        "ru": "тротуар",
+        "ar": "رصيف",
+        "zh": "人行道"
+      },
+      "registration": {
+        "pos": "noun",
+        "en": "the act of putting your name on an official list",
+        "fr": "l'inscription",
+        "es": "el registro",
+        "pt": "o registo",
+        "it": "la registrazione",
+        "de": "die Anmeldung",
+        "ru": "регистрация",
+        "ar": "تسجيل",
+        "zh": "登记"
+      },
+      "screen": {
+        "pos": "noun",
+        "en": "the flat part of a phone or computer that shows pictures and words",
+        "fr": "l'écran",
+        "es": "la pantalla",
+        "pt": "o ecrã",
+        "it": "lo schermo",
+        "de": "der Bildschirm",
+        "ru": "экран",
+        "ar": "شاشة",
+        "zh": "屏幕"
+      },
+      "carpet": {
+        "pos": "noun",
+        "en": "a thick soft cover for a floor",
+        "fr": "la moquette / le tapis",
+        "es": "la alfombra",
+        "pt": "o tapete",
+        "it": "la moquette",
+        "de": "der Teppich",
+        "ru": "ковёр",
+        "ar": "سجادة",
+        "zh": "地毯"
+      },
+      "napkin": {
+        "pos": "noun",
+        "en": "a small piece of cloth or paper for your mouth and hands at a meal",
+        "fr": "la serviette",
+        "es": "la servilleta",
+        "pt": "o guardanapo",
+        "it": "il tovagliolo",
+        "de": "die Serviette",
+        "ru": "салфетка",
+        "ar": "منديل",
+        "zh": "餐巾"
+      },
+      "aisle": {
+        "pos": "noun",
+        "en": "the long open path you walk along between rows; said like I'LL",
+        "fr": "l'allée",
+        "es": "el pasillo",
+        "pt": "o corredor",
+        "it": "il corridoio",
+        "de": "der Gang",
+        "ru": "проход",
+        "ar": "ممر",
+        "zh": "过道"
+      },
+      "departure": {
+        "pos": "noun",
+        "en": "the act of leaving, especially a train or plane",
+        "fr": "le départ",
+        "es": "la salida",
+        "pt": "a partida",
+        "it": "la partenza",
+        "de": "die Abfahrt",
+        "ru": "отправление",
+        "ar": "مغادرة",
+        "zh": "出发"
+      },
+      "arrival": {
+        "pos": "noun",
+        "en": "the act of coming to a place",
+        "fr": "l'arrivée",
+        "es": "la llegada",
+        "pt": "a chegada",
+        "it": "l'arrivo",
+        "de": "die Ankunft",
+        "ru": "прибытие",
+        "ar": "وصول",
+        "zh": "到达"
+      },
+      "luggage": {
+        "pos": "noun",
+        "en": "the bags and cases you take when you travel",
+        "fr": "les bagages",
+        "es": "el equipaje",
+        "pt": "a bagagem",
+        "it": "i bagagli",
+        "de": "das Gepäck",
+        "ru": "багаж",
+        "ar": "أمتعة",
+        "zh": "行李"
+      },
+      "photograph": {
+        "pos": "noun",
+        "en": "a picture made with a camera",
+        "fr": "la photo",
+        "es": "la fotografía",
+        "pt": "a fotografia",
+        "it": "la fotografia",
+        "de": "das Foto",
+        "ru": "фотография",
+        "ar": "صورة",
+        "zh": "照片"
+      },
+      "sleeve": {
+        "pos": "noun",
+        "en": "the part of clothing that covers your arm",
+        "fr": "la manche",
+        "es": "la manga",
+        "pt": "a manga",
+        "it": "la manica",
+        "de": "der Ärmel",
+        "ru": "рукав",
+        "ar": "كم",
+        "zh": "袖子"
+      },
+      "streetlight": {
+        "pos": "noun",
+        "en": "a tall lamp that lights a street at night",
+        "fr": "le lampadaire",
+        "es": "la farola",
+        "pt": "o candeeiro de rua",
+        "it": "il lampione",
+        "de": "die Straßenlaterne",
+        "ru": "уличный фонарь",
+        "ar": "مصباح الشارع",
+        "zh": "路灯"
+      },
+      "ceremony": {
+        "pos": "noun",
+        "en": "a formal set of actions done on an important occasion",
+        "fr": "la cérémonie",
+        "es": "la ceremonia",
+        "pt": "a cerimónia",
+        "it": "la cerimonia",
+        "de": "die Zeremonie",
+        "ru": "церемония",
+        "ar": "مراسم",
+        "zh": "仪式"
+      },
+      "chin": {
+        "pos": "noun",
+        "en": "the front part of your face below your mouth",
+        "fr": "le menton",
+        "es": "la barbilla",
+        "pt": "o queixo",
+        "it": "il mento",
+        "de": "das Kinn",
+        "ru": "подбородок",
+        "ar": "ذقن",
+        "zh": "下巴"
+      },
+      "conclusion": {
+        "pos": "noun",
+        "en": "the end of something, or the decision you reach",
+        "fr": "la conclusion",
+        "es": "la conclusión",
+        "pt": "a conclusão",
+        "it": "la conclusione",
+        "de": "der Schluss",
+        "ru": "вывод",
+        "ar": "استنتاج",
+        "zh": "结论"
+      },
+      "defeat": {
+        "pos": "noun",
+        "en": "the state of having lost; a failure",
+        "fr": "la défaite",
+        "es": "la derrota",
+        "pt": "a derrota",
+        "it": "la sconfitta",
+        "de": "die Niederlage",
+        "ru": "поражение",
+        "ar": "هزيمة",
+        "zh": "失败"
+      },
+      "evidence": {
+        "pos": "noun",
+        "en": "facts or things that show something is true",
+        "fr": "la preuve",
+        "es": "la prueba",
+        "pt": "a prova",
+        "it": "la prova",
+        "de": "der Beweis",
+        "ru": "доказательство",
+        "ar": "دليل",
+        "zh": "证据"
+      },
+      "expense": {
+        "pos": "noun",
+        "en": "the money that something costs you",
+        "fr": "la dépense",
+        "es": "el gasto",
+        "pt": "a despesa",
+        "it": "la spesa",
+        "de": "die Ausgabe",
+        "ru": "расход",
+        "ar": "نفقة",
+        "zh": "费用"
+      },
+      "fortnight": {
+        "pos": "noun",
+        "en": "two weeks",
+        "fr": "quinze jours",
+        "es": "dos semanas",
+        "pt": "quinze dias",
+        "it": "due settimane",
+        "de": "zwei Wochen",
+        "ru": "две недели",
+        "ar": "أسبوعان",
+        "zh": "两周"
+      },
+      "invitation": {
+        "pos": "noun",
+        "en": "a spoken or written offer to come somewhere",
+        "fr": "l'invitation",
+        "es": "la invitación",
+        "pt": "o convite",
+        "it": "l'invito",
+        "de": "die Einladung",
+        "ru": "приглашение",
+        "ar": "دعوة",
+        "zh": "邀请"
+      },
+      "layout": {
+        "pos": "noun",
+        "en": "the way the parts of something are arranged",
+        "fr": "la disposition",
+        "es": "la disposición",
+        "pt": "a disposição",
+        "it": "la disposizione",
+        "de": "die Anordnung",
+        "ru": "планировка",
+        "ar": "تخطيط",
+        "zh": "布局"
+      },
+      "nerve": {
+        "pos": "noun",
+        "en": "the courage to do something difficult",
+        "fr": "le cran",
+        "es": "el valor",
+        "pt": "a coragem",
+        "it": "il coraggio",
+        "de": "der Mut",
+        "ru": "смелость",
+        "ar": "جرأة",
+        "zh": "勇气"
+      },
+      "patience": {
+        "pos": "noun",
+        "en": "the calm you keep while waiting or through trouble",
+        "fr": "la patience",
+        "es": "la paciencia",
+        "pt": "a paciência",
+        "it": "la pazienza",
+        "de": "die Geduld",
+        "ru": "терпение",
+        "ar": "صبر",
+        "zh": "耐心"
+      },
+      "signature": {
+        "pos": "noun",
+        "en": "your name written in your own way to sign something",
+        "fr": "la signature",
+        "es": "la firma",
+        "pt": "a assinatura",
+        "it": "la firma",
+        "de": "die Unterschrift",
+        "ru": "подпись",
+        "ar": "توقيع",
+        "zh": "签名"
+      },
+      "steam": {
+        "pos": "noun",
+        "en": "the hot white gas that comes off boiling water",
+        "fr": "la vapeur",
+        "es": "el vapor",
+        "pt": "o vapor",
+        "it": "il vapore",
+        "de": "der Dampf",
+        "ru": "пар",
+        "ar": "بخار",
+        "zh": "蒸汽"
+      },
+      "steel": {
+        "pos": "noun",
+        "en": "a strong hard metal made mostly of iron",
+        "fr": "l'acier",
+        "es": "el acero",
+        "pt": "o aço",
+        "it": "l'acciaio",
+        "de": "der Stahl",
+        "ru": "сталь",
+        "ar": "فولاذ",
+        "zh": "钢"
+      },
+      "strap": {
+        "pos": "noun",
+        "en": "a narrow band of leather or cloth for carrying or fastening",
+        "fr": "la sangle",
+        "es": "la correa",
+        "pt": "a alça",
+        "it": "la cinghia",
+        "de": "der Riemen",
+        "ru": "ремень",
+        "ar": "حزام",
+        "zh": "带子"
+      },
+      "truth": {
+        "pos": "noun",
+        "en": "what is really true",
+        "fr": "la vérité",
+        "es": "la verdad",
+        "pt": "a verdade",
+        "it": "la verità",
+        "de": "die Wahrheit",
+        "ru": "правда",
+        "ar": "الحقيقة",
+        "zh": "真相"
+      },
+      "vehicle": {
+        "pos": "noun",
+        "en": "a machine such as a car or van that carries people or goods",
+        "fr": "le véhicule",
+        "es": "el vehículo",
+        "pt": "o veículo",
+        "it": "il veicolo",
+        "de": "das Fahrzeug",
+        "ru": "транспортное средство",
+        "ar": "مركبة",
+        "zh": "车辆"
+      },
+      "windscreen": {
+        "pos": "noun",
+        "en": "the big glass window at the front of a car",
+        "fr": "le pare-brise",
+        "es": "el parabrisas",
+        "pt": "o para-brisas",
+        "it": "il parabrezza",
+        "de": "die Windschutzscheibe",
+        "ru": "лобовое стекло",
+        "ar": "الزجاج الأمامي",
+        "zh": "挡风玻璃"
+      },
+      "furniture": {
+        "pos": "noun",
+        "en": "the tables, chairs and beds in a room",
+        "fr": "les meubles",
+        "es": "los muebles",
+        "pt": "os móveis",
+        "it": "i mobili",
+        "de": "die Möbel",
+        "ru": "мебель",
+        "ar": "أثاث",
+        "zh": "家具"
+      },
+      "appointment": {
+        "pos": "noun",
+        "en": "a fixed time to meet or be seen by someone",
+        "fr": "le rendez-vous",
+        "es": "la cita",
+        "pt": "a marcação",
+        "it": "l'appuntamento",
+        "de": "der Termin",
+        "ru": "встреча",
+        "ar": "موعد",
+        "zh": "预约"
+      },
+      "comment": {
+        "pos": "noun",
+        "en": "a short spoken or written remark about something",
+        "fr": "le commentaire",
+        "es": "el comentario",
+        "pt": "o comentário",
+        "it": "il commento",
+        "de": "der Kommentar",
+        "ru": "замечание",
+        "ar": "تعليق",
+        "zh": "评论"
+      },
+      "builder": {
+        "pos": "noun",
+        "en": "a worker who builds or repairs buildings",
+        "fr": "l'ouvrier du bâtiment",
+        "es": "el constructor",
+        "pt": "o construtor",
+        "it": "il muratore",
+        "de": "der Bauarbeiter",
+        "ru": "строитель",
+        "ar": "عامل بناء",
+        "zh": "建筑工人"
+      },
+      "lunchtime": {
+        "pos": "noun",
+        "en": "the time in the middle of the day when people eat lunch",
+        "fr": "l'heure du déjeuner",
+        "es": "la hora del almuerzo",
+        "pt": "a hora do almoço",
+        "it": "l'ora di pranzo",
+        "de": "die Mittagszeit",
+        "ru": "обеденное время",
+        "ar": "وقت الغداء",
+        "zh": "午餐时间"
+      },
+      "fence": {
+        "pos": "noun",
+        "en": "a wall of wood or wire around a piece of land",
+        "fr": "la clôture",
+        "es": "la valla",
+        "pt": "a cerca",
+        "it": "la recinzione",
+        "de": "der Zaun",
+        "ru": "забор",
+        "ar": "سياج",
+        "zh": "栅栏"
+      },
+      "gull": {
+        "pos": "noun",
+        "en": "a grey and white sea bird",
+        "fr": "la mouette",
+        "es": "la gaviota",
+        "pt": "a gaivota",
+        "it": "il gabbiano",
+        "de": "die Möwe",
+        "ru": "чайка",
+        "ar": "نورس",
+        "zh": "海鸥"
+      },
+      "handle": {
+        "pos": "noun",
+        "en": "the part of a door or bag you hold to open or carry it",
+        "fr": "la poignée",
+        "es": "el pomo",
+        "pt": "a maçaneta",
+        "it": "la maniglia",
+        "de": "die Klinke",
+        "ru": "ручка",
+        "ar": "مقبض",
+        "zh": "把手"
+      },
+      "feet": {
+        "pos": "noun",
+        "en": "more than one foot (the parts you stand on)",
+        "fr": "les pieds",
+        "es": "los pies",
+        "pt": "os pés",
+        "it": "i piedi",
+        "de": "die Füße",
+        "ru": "ступни",
+        "ar": "أقدام",
+        "zh": "脚"
+      },
+      "admit": {
+        "pos": "verb",
+        "en": "to agree that something is true, often unwillingly",
+        "fr": "admettre",
+        "es": "admitir",
+        "pt": "admitir",
+        "it": "ammettere",
+        "de": "zugeben",
+        "ru": "признавать",
+        "ar": "يعترف",
+        "zh": "承认"
+      },
+      "afford": {
+        "pos": "verb",
+        "en": "to have enough money for something",
+        "fr": "se permettre",
+        "es": "permitirse",
+        "pt": "poder pagar",
+        "it": "permettersi",
+        "de": "sich leisten",
+        "ru": "позволить себе",
+        "ar": "يقدر على تحمل",
+        "zh": "负担得起"
+      },
+      "apologise": {
+        "pos": "verb",
+        "en": "to say sorry",
+        "fr": "s'excuser",
+        "es": "disculparse",
+        "pt": "pedir desculpa",
+        "it": "scusarsi",
+        "de": "sich entschuldigen",
+        "ru": "извиняться",
+        "ar": "يعتذر",
+        "zh": "道歉"
+      },
+      "arrange": {
+        "pos": "verb",
+        "en": "to plan or organise something",
+        "fr": "organiser",
+        "es": "organizar",
+        "pt": "organizar",
+        "it": "organizzare",
+        "de": "arrangieren",
+        "ru": "устраивать",
+        "ar": "يرتب",
+        "zh": "安排"
+      },
+      "assure": {
+        "pos": "verb",
+        "en": "to tell someone firmly so they stop worrying",
+        "fr": "assurer",
+        "es": "asegurar",
+        "pt": "assegurar",
+        "it": "assicurare",
+        "de": "versichern",
+        "ru": "заверять",
+        "ar": "يؤكد",
+        "zh": "向…保证"
+      },
+      "bother": {
+        "pos": "verb",
+        "en": "to make the effort; or to annoy someone",
+        "fr": "se donner la peine / déranger",
+        "es": "molestarse / molestar",
+        "pt": "incomodar-se / incomodar",
+        "it": "preoccuparsi / disturbare",
+        "de": "sich bemühen / stören",
+        "ru": "беспокоиться / беспокоить",
+        "ar": "يكلف نفسه / يزعج",
+        "zh": "费心 / 打扰"
+      },
+      "brush": {
+        "pos": "verb",
+        "en": "to touch or clean lightly with a quick movement",
+        "fr": "frôler / brosser",
+        "es": "rozar / cepillar",
+        "pt": "roçar / escovar",
+        "it": "sfiorare / spazzolare",
+        "de": "streifen / bürsten",
+        "ru": "задевать / чистить",
+        "ar": "يمسح / يفرشي",
+        "zh": "轻拂 / 刷"
+      },
+      "connect": {
+        "pos": "verb",
+        "en": "to join one thing to another",
+        "fr": "relier",
+        "es": "conectar",
+        "pt": "ligar",
+        "it": "collegare",
+        "de": "verbinden",
+        "ru": "соединять",
+        "ar": "يربط",
+        "zh": "连接"
+      },
+      "consider": {
+        "pos": "verb",
+        "en": "to think about something carefully",
+        "fr": "considérer",
+        "es": "considerar",
+        "pt": "considerar",
+        "it": "considerare",
+        "de": "erwägen",
+        "ru": "обдумывать",
+        "ar": "يفكر في",
+        "zh": "考虑"
+      },
+      "contain": {
+        "pos": "verb",
+        "en": "to have something inside",
+        "fr": "contenir",
+        "es": "contener",
+        "pt": "conter",
+        "it": "contenere",
+        "de": "enthalten",
+        "ru": "содержать",
+        "ar": "يحتوي على",
+        "zh": "包含"
+      },
+      "disappear": {
+        "pos": "verb",
+        "en": "to go out of sight; to stop being there",
+        "fr": "disparaître",
+        "es": "desaparecer",
+        "pt": "desaparecer",
+        "it": "scomparire",
+        "de": "verschwinden",
+        "ru": "исчезать",
+        "ar": "يختفي",
+        "zh": "消失"
+      },
+      "frown": {
+        "pos": "verb",
+        "en": "to move your eyebrows down because you are annoyed or thinking",
+        "fr": "froncer les sourcils",
+        "es": "fruncir el ceño",
+        "pt": "franzir a testa",
+        "it": "aggrottare le sopracciglia",
+        "de": "die Stirn runzeln",
+        "ru": "хмуриться",
+        "ar": "يعبس",
+        "zh": "皱眉"
+      },
+      "haul": {
+        "pos": "verb",
+        "en": "to pull or carry something heavy with effort",
+        "fr": "traîner",
+        "es": "arrastrar",
+        "pt": "arrastar",
+        "it": "trascinare",
+        "de": "schleppen",
+        "ru": "тащить",
+        "ar": "يجر",
+        "zh": "拖"
+      },
+      "improve": {
+        "pos": "verb",
+        "en": "to become or make better",
+        "fr": "améliorer",
+        "es": "mejorar",
+        "pt": "melhorar",
+        "it": "migliorare",
+        "de": "verbessern",
+        "ru": "улучшать",
+        "ar": "يحسن",
+        "zh": "改善"
+      },
+      "interrupt": {
+        "pos": "verb",
+        "en": "to stop someone by speaking or acting in the middle",
+        "fr": "interrompre",
+        "es": "interrumpir",
+        "pt": "interromper",
+        "it": "interrompere",
+        "de": "unterbrechen",
+        "ru": "прерывать",
+        "ar": "يقاطع",
+        "zh": "打断"
+      },
+      "lean": {
+        "pos": "verb",
+        "en": "to rest against something, or to bend your body",
+        "fr": "s'appuyer / se pencher",
+        "es": "apoyarse / inclinarse",
+        "pt": "apoiar-se / inclinar-se",
+        "it": "appoggiarsi / piegarsi",
+        "de": "sich lehnen",
+        "ru": "прислоняться / наклоняться",
+        "ar": "يتكئ / ينحني",
+        "zh": "倚靠 / 倾身"
+      },
+      "navigate": {
+        "pos": "verb",
+        "en": "to find your way from one place to another",
+        "fr": "se repérer",
+        "es": "orientarse",
+        "pt": "orientar-se",
+        "it": "orientarsi",
+        "de": "sich zurechtfinden",
+        "ru": "ориентироваться",
+        "ar": "يتنقل",
+        "zh": "导航"
+      },
+      "nod": {
+        "pos": "verb",
+        "en": "to move your head down and up to mean yes",
+        "fr": "hocher la tête",
+        "es": "asentir con la cabeza",
+        "pt": "acenar com a cabeça",
+        "it": "annuire",
+        "de": "nicken",
+        "ru": "кивать",
+        "ar": "يومئ برأسه",
+        "zh": "点头"
+      },
+      "pause": {
+        "pos": "verb",
+        "en": "to stop for a short time before going on",
+        "fr": "faire une pause",
+        "es": "hacer una pausa",
+        "pt": "fazer uma pausa",
+        "it": "fare una pausa",
+        "de": "innehalten",
+        "ru": "делать паузу",
+        "ar": "يتوقف مؤقتا",
+        "zh": "停顿"
+      },
+      "pretend": {
+        "pos": "verb",
+        "en": "to act as if something is true when it is not",
+        "fr": "faire semblant",
+        "es": "fingir",
+        "pt": "fingir",
+        "it": "fingere",
+        "de": "vorgeben",
+        "ru": "делать вид",
+        "ar": "يتظاهر",
+        "zh": "假装"
+      },
+      "recognise": {
+        "pos": "verb",
+        "en": "to know someone or something because you have seen it before",
+        "fr": "reconnaître",
+        "es": "reconocer",
+        "pt": "reconhecer",
+        "it": "riconoscere",
+        "de": "erkennen",
+        "ru": "узнавать",
+        "ar": "يتعرف على",
+        "zh": "认出"
+      },
+      "reserve": {
+        "pos": "verb",
+        "en": "to keep something for later or for a certain person",
+        "fr": "réserver",
+        "es": "reservar",
+        "pt": "reservar",
+        "it": "riservare",
+        "de": "reservieren",
+        "ru": "резервировать",
+        "ar": "يحجز",
+        "zh": "预留"
+      },
+      "survive": {
+        "pos": "verb",
+        "en": "to stay alive or keep existing through a hard time",
+        "fr": "survivre",
+        "es": "sobrevivir",
+        "pt": "sobreviver",
+        "it": "sopravvivere",
+        "de": "überleben",
+        "ru": "выживать",
+        "ar": "ينجو",
+        "zh": "幸存"
+      },
+      "suppose": {
+        "pos": "verb",
+        "en": "to think something is probably true",
+        "fr": "supposer",
+        "es": "suponer",
+        "pt": "supor",
+        "it": "supporre",
+        "de": "annehmen",
+        "ru": "полагать",
+        "ar": "يفترض",
+        "zh": "假定"
+      },
+      "switch": {
+        "pos": "verb",
+        "en": "to change from one thing to another; to turn on or off",
+        "fr": "changer / éteindre",
+        "es": "cambiar / apagar",
+        "pt": "mudar / desligar",
+        "it": "cambiare / spegnere",
+        "de": "wechseln / schalten",
+        "ru": "переключать",
+        "ar": "يبدل",
+        "zh": "切换 / 开关"
+      },
+      "tape": {
+        "pos": "verb",
+        "en": "to stick something using sticky tape",
+        "fr": "scotcher",
+        "es": "pegar con cinta",
+        "pt": "colar com fita",
+        "it": "attaccare col nastro",
+        "de": "kleben",
+        "ru": "приклеивать скотчем",
+        "ar": "يلصق بشريط",
+        "zh": "用胶带贴"
+      },
+      "update": {
+        "pos": "verb",
+        "en": "to add the newest information to something",
+        "fr": "mettre à jour",
+        "es": "actualizar",
+        "pt": "atualizar",
+        "it": "aggiornare",
+        "de": "aktualisieren",
+        "ru": "обновлять",
+        "ar": "يحدث",
+        "zh": "更新"
+      },
+      "waste": {
+        "pos": "verb",
+        "en": "to use time or money badly, for nothing",
+        "fr": "gaspiller",
+        "es": "malgastar",
+        "pt": "desperdiçar",
+        "it": "sprecare",
+        "de": "verschwenden",
+        "ru": "тратить впустую",
+        "ar": "يهدر",
+        "zh": "浪费"
+      },
+      "achieve": {
+        "pos": "verb",
+        "en": "to succeed in doing or getting something after effort",
+        "fr": "réaliser",
+        "es": "lograr",
+        "pt": "alcançar",
+        "it": "realizzare",
+        "de": "erreichen",
+        "ru": "достигать",
+        "ar": "يحقق",
+        "zh": "实现"
+      },
+      "approach": {
+        "pos": "verb",
+        "en": "to come nearer to someone or something",
+        "fr": "s'approcher",
+        "es": "acercarse",
+        "pt": "aproximar-se",
+        "it": "avvicinarsi",
+        "de": "sich nähern",
+        "ru": "приближаться",
+        "ar": "يقترب",
+        "zh": "靠近"
+      },
+      "annoy": {
+        "pos": "verb",
+        "en": "to make someone a little angry",
+        "fr": "agacer",
+        "es": "molestar",
+        "pt": "irritar",
+        "it": "infastidire",
+        "de": "ärgern",
+        "ru": "раздражать",
+        "ar": "يزعج",
+        "zh": "惹恼"
+      },
+      "dignified": {
+        "pos": "adjective",
+        "en": "calm and serious in a way that earns respect",
+        "fr": "digne",
+        "es": "digno",
+        "pt": "digno",
+        "it": "dignitoso",
+        "de": "würdevoll",
+        "ru": "полный достоинства",
+        "ar": "وقور",
+        "zh": "有尊严的"
+      },
+      "entire": {
+        "pos": "adjective",
+        "en": "whole; with no part missing",
+        "fr": "entier",
+        "es": "entero",
+        "pt": "inteiro",
+        "it": "intero",
+        "de": "gesamt",
+        "ru": "весь",
+        "ar": "كامل",
+        "zh": "整个的"
+      },
+      "necessary": {
+        "pos": "adjective",
+        "en": "needed; that you must have or do",
+        "fr": "nécessaire",
+        "es": "necesario",
+        "pt": "necessário",
+        "it": "necessario",
+        "de": "notwendig",
+        "ru": "необходимый",
+        "ar": "ضروري",
+        "zh": "必要的"
+      },
+      "accidental": {
+        "pos": "adjective",
+        "en": "happening by chance, not on purpose",
+        "fr": "accidentel",
+        "es": "accidental",
+        "pt": "acidental",
+        "it": "accidentale",
+        "de": "zufällig",
+        "ru": "случайный",
+        "ar": "عرضي",
+        "zh": "偶然的"
+      },
+      "charming": {
+        "pos": "adjective",
+        "en": "pleasant in a way that makes people like you",
+        "fr": "charmant",
+        "es": "encantador",
+        "pt": "encantador",
+        "it": "affascinante",
+        "de": "charmant",
+        "ru": "обаятельный",
+        "ar": "ساحر",
+        "zh": "迷人的"
+      },
+      "civilised": {
+        "pos": "adjective",
+        "en": "polite and reasonable in behaviour",
+        "fr": "civilisé",
+        "es": "civilizado",
+        "pt": "civilizado",
+        "it": "civile",
+        "de": "zivilisiert",
+        "ru": "цивилизованный",
+        "ar": "متحضر",
+        "zh": "文明的"
+      },
+      "enormous": {
+        "pos": "adjective",
+        "en": "very big",
+        "fr": "énorme",
+        "es": "enorme",
+        "pt": "enorme",
+        "it": "enorme",
+        "de": "riesig",
+        "ru": "огромный",
+        "ar": "ضخم",
+        "zh": "巨大的"
+      },
+      "exhausted": {
+        "pos": "adjective",
+        "en": "very tired",
+        "fr": "épuisé",
+        "es": "agotado",
+        "pt": "exausto",
+        "it": "esausto",
+        "de": "erschöpft",
+        "ru": "измотанный",
+        "ar": "منهك",
+        "zh": "筋疲力尽的"
+      },
+      "identical": {
+        "pos": "adjective",
+        "en": "exactly the same",
+        "fr": "identique",
+        "es": "idéntico",
+        "pt": "idêntico",
+        "it": "identico",
+        "de": "identisch",
+        "ru": "одинаковый",
+        "ar": "متطابق",
+        "zh": "完全相同的"
+      },
+      "inner": {
+        "pos": "adjective",
+        "en": "on the inside; further in",
+        "fr": "intérieur",
+        "es": "interior",
+        "pt": "interior",
+        "it": "interno",
+        "de": "innere",
+        "ru": "внутренний",
+        "ar": "داخلي",
+        "zh": "里面的"
+      },
+      "intact": {
+        "pos": "adjective",
+        "en": "not damaged; complete",
+        "fr": "intact",
+        "es": "intacto",
+        "pt": "intacto",
+        "it": "intatto",
+        "de": "intakt",
+        "ru": "целый",
+        "ar": "سليم",
+        "zh": "完好无损的"
+      },
+      "obvious": {
+        "pos": "adjective",
+        "en": "easy to see or understand",
+        "fr": "évident",
+        "es": "obvio",
+        "pt": "óbvio",
+        "it": "ovvio",
+        "de": "offensichtlich",
+        "ru": "очевидный",
+        "ar": "واضح",
+        "zh": "显而易见的"
+      },
+      "original": {
+        "pos": "adjective",
+        "en": "first; the earliest, before any change",
+        "fr": "d'origine",
+        "es": "original",
+        "pt": "original",
+        "it": "originale",
+        "de": "ursprünglich",
+        "ru": "первоначальный",
+        "ar": "أصلي",
+        "zh": "原来的"
+      },
+      "pale": {
+        "pos": "adjective",
+        "en": "light in colour; (of a face) with little colour",
+        "fr": "pâle",
+        "es": "pálido",
+        "pt": "pálido",
+        "it": "pallido",
+        "de": "blass",
+        "ru": "бледный",
+        "ar": "شاحب",
+        "zh": "苍白的"
+      },
+      "particular": {
+        "pos": "adjective",
+        "en": "one special one, not any other",
+        "fr": "particulier",
+        "es": "particular",
+        "pt": "específico",
+        "it": "particolare",
+        "de": "bestimmt",
+        "ru": "особый",
+        "ar": "معين",
+        "zh": "特定的"
+      },
+      "precise": {
+        "pos": "adjective",
+        "en": "exact and clear",
+        "fr": "précis",
+        "es": "preciso",
+        "pt": "preciso",
+        "it": "preciso",
+        "de": "genau",
+        "ru": "точный",
+        "ar": "دقيق",
+        "zh": "精确的"
+      },
+      "reliable": {
+        "pos": "adjective",
+        "en": "that you can trust to work or be right",
+        "fr": "fiable",
+        "es": "fiable",
+        "pt": "fiável",
+        "it": "affidabile",
+        "de": "zuverlässig",
+        "ru": "надёжный",
+        "ar": "موثوق",
+        "zh": "可靠的"
+      },
+      "sensible": {
+        "pos": "adjective",
+        "en": "showing good judgement; wise",
+        "fr": "sensé",
+        "es": "sensato",
+        "pt": "sensato",
+        "it": "sensato",
+        "de": "vernünftig",
+        "ru": "разумный",
+        "ar": "عاقل",
+        "zh": "明智的"
+      },
+      "sinister": {
+        "pos": "adjective",
+        "en": "seeming evil or that something bad will happen",
+        "fr": "sinistre",
+        "es": "siniestro",
+        "pt": "sinistro",
+        "it": "sinistro",
+        "de": "unheimlich",
+        "ru": "зловещий",
+        "ar": "مشؤوم",
+        "zh": "阴森的"
+      },
+      "useless": {
+        "pos": "adjective",
+        "en": "of no use; not working",
+        "fr": "inutile",
+        "es": "inútil",
+        "pt": "inútil",
+        "it": "inutile",
+        "de": "nutzlos",
+        "ru": "бесполезный",
+        "ar": "عديم الفائدة",
+        "zh": "没用的"
+      },
+      "vast": {
+        "pos": "adjective",
+        "en": "extremely large in size or amount",
+        "fr": "vaste",
+        "es": "vasto",
+        "pt": "vasto",
+        "it": "vasto",
+        "de": "riesig",
+        "ru": "обширный",
+        "ar": "شاسع",
+        "zh": "广大的"
+      },
+      "visible": {
+        "pos": "adjective",
+        "en": "that can be seen",
+        "fr": "visible",
+        "es": "visible",
+        "pt": "visível",
+        "it": "visibile",
+        "de": "sichtbar",
+        "ru": "видимый",
+        "ar": "مرئي",
+        "zh": "可见的"
+      },
+      "reasonable": {
+        "pos": "adjective",
+        "en": "fair and sensible; not too much",
+        "fr": "raisonnable",
+        "es": "razonable",
+        "pt": "razoável",
+        "it": "ragionevole",
+        "de": "vernünftig",
+        "ru": "разумный",
+        "ar": "معقول",
+        "zh": "合理的"
+      },
+      "considerable": {
+        "pos": "adjective",
+        "en": "large enough to notice; quite a lot",
+        "fr": "considérable",
+        "es": "considerable",
+        "pt": "considerável",
+        "it": "considerevole",
+        "de": "beträchtlich",
+        "ru": "значительный",
+        "ar": "كبير",
+        "zh": "相当大的"
+      },
+      "heavy": {
+        "pos": "adjective",
+        "en": "weighing a lot; hard to lift",
+        "fr": "lourd",
+        "es": "pesado",
+        "pt": "pesado",
+        "it": "pesante",
+        "de": "schwer",
+        "ru": "тяжёлый",
+        "ar": "ثقيل",
+        "zh": "重的"
+      },
+      "genuine": {
+        "pos": "adjective",
+        "en": "real; not false",
+        "fr": "authentique",
+        "es": "genuino",
+        "pt": "genuíno",
+        "it": "genuino",
+        "de": "echt",
+        "ru": "подлинный",
+        "ar": "حقيقي",
+        "zh": "真正的"
+      },
+      "immediate": {
+        "pos": "adjective",
+        "en": "happening at once, with no delay",
+        "fr": "immédiat",
+        "es": "inmediato",
+        "pt": "imediato",
+        "it": "immediato",
+        "de": "sofortig",
+        "ru": "немедленный",
+        "ar": "فوري",
+        "zh": "立即的"
+      },
+      "eventual": {
+        "pos": "adjective",
+        "en": "happening in the end, after some time",
+        "fr": "final",
+        "es": "final",
+        "pt": "final",
+        "it": "finale",
+        "de": "schließlich",
+        "ru": "конечный",
+        "ar": "نهائي",
+        "zh": "最终的"
+      },
+      "natural": {
+        "pos": "adjective",
+        "en": "normal; as expected; not made by people",
+        "fr": "naturel",
+        "es": "natural",
+        "pt": "natural",
+        "it": "naturale",
+        "de": "natürlich",
+        "ru": "естественный",
+        "ar": "طبيعي",
+        "zh": "自然的"
+      },
+      "fair": {
+        "pos": "adjective",
+        "en": "treating people equally and in the right way",
+        "fr": "juste",
+        "es": "justo",
+        "pt": "justo",
+        "it": "giusto",
+        "de": "fair",
+        "ru": "справедливый",
+        "ar": "عادل",
+        "zh": "公平的"
+      },
+      "actual": {
+        "pos": "adjective",
+        "en": "real; that truly exists",
+        "fr": "réel",
+        "es": "real",
+        "pt": "real",
+        "it": "reale",
+        "de": "tatsächlich",
+        "ru": "фактический",
+        "ar": "فعلي",
+        "zh": "实际的"
+      },
+      "brief": {
+        "pos": "adjective",
+        "en": "short in time",
+        "fr": "bref",
+        "es": "breve",
+        "pt": "breve",
+        "it": "breve",
+        "de": "kurz",
+        "ru": "краткий",
+        "ar": "موجز",
+        "zh": "简短的"
+      },
+      "pointed": {
+        "pos": "adjective",
+        "en": "said in a sharp way to make a clear point",
+        "fr": "incisif",
+        "es": "mordaz",
+        "pt": "incisivo",
+        "it": "pungente",
+        "de": "spitz",
+        "ru": "колкий",
+        "ar": "لاذع",
+        "zh": "尖锐的"
+      },
+      "unkind": {
+        "pos": "adjective",
+        "en": "not kind; a little cruel",
+        "fr": "méchant",
+        "es": "poco amable",
+        "pt": "rude",
+        "it": "scortese",
+        "de": "unfreundlich",
+        "ru": "недобрый",
+        "ar": "قاسٍ",
+        "zh": "不友善的"
+      },
+      "faint": {
+        "pos": "adjective",
+        "en": "weak; not clear or strong",
+        "fr": "faible",
+        "es": "tenue",
+        "pt": "tênue",
+        "it": "debole",
+        "de": "schwach",
+        "ru": "слабый",
+        "ar": "خافت",
+        "zh": "微弱的"
+      },
+      "proper": {
+        "pos": "adjective",
+        "en": "real and correct; of the right kind",
+        "fr": "vrai / correct",
+        "es": "adecuado",
+        "pt": "adequado",
+        "it": "adeguato",
+        "de": "richtig",
+        "ru": "настоящий",
+        "ar": "لائق",
+        "zh": "真正的"
+      },
+      "standard": {
+        "pos": "adjective",
+        "en": "normal and usual; the ordinary kind",
+        "fr": "standard",
+        "es": "estándar",
+        "pt": "padrão",
+        "it": "standard",
+        "de": "üblich",
+        "ru": "стандартный",
+        "ar": "قياسي",
+        "zh": "标准的"
+      },
+      "anyway": {
+        "pos": "adverb",
+        "en": "in spite of that; used to return to a point",
+        "fr": "de toute façon",
+        "es": "de todos modos",
+        "pt": "de qualquer forma",
+        "it": "comunque",
+        "de": "trotzdem",
+        "ru": "всё равно",
+        "ar": "على أي حال",
+        "zh": "反正"
+      },
+      "rather": {
+        "pos": "adverb",
+        "en": "quite; to a fairly large degree",
+        "fr": "plutôt",
+        "es": "bastante",
+        "pt": "bastante",
+        "it": "piuttosto",
+        "de": "ziemlich",
+        "ru": "довольно",
+        "ar": "إلى حد ما",
+        "zh": "相当"
+      },
+      "somehow": {
+        "pos": "adverb",
+        "en": "in a way you do not know or cannot explain",
+        "fr": "d'une manière ou d'une autre",
+        "es": "de algún modo",
+        "pt": "de algum modo",
+        "it": "in qualche modo",
+        "de": "irgendwie",
+        "ru": "как-то",
+        "ar": "بطريقة ما",
+        "zh": "不知怎么地"
+      },
+      "afterwards": {
+        "pos": "adverb",
+        "en": "later; after that",
+        "fr": "après",
+        "es": "después",
+        "pt": "depois",
+        "it": "dopo",
+        "de": "danach",
+        "ru": "потом",
+        "ar": "بعد ذلك",
+        "zh": "之后"
+      },
+      "altogether": {
+        "pos": "adverb",
+        "en": "completely; in total",
+        "fr": "tout à fait / en tout",
+        "es": "por completo / en total",
+        "pt": "completamente / no total",
+        "it": "del tutto / in tutto",
+        "de": "völlig / insgesamt",
+        "ru": "совсем / всего",
+        "ar": "تماما / إجمالا",
+        "zh": "完全 / 总共"
+      },
+      "forever": {
+        "pos": "adverb",
+        "en": "for all time; without ending",
+        "fr": "pour toujours",
+        "es": "para siempre",
+        "pt": "para sempre",
+        "it": "per sempre",
+        "de": "für immer",
+        "ru": "навсегда",
+        "ar": "إلى الأبد",
+        "zh": "永远"
+      },
+      "halfway": {
+        "pos": "adverb",
+        "en": "at or to the middle point",
+        "fr": "à mi-chemin",
+        "es": "a medio camino",
+        "pt": "a meio caminho",
+        "it": "a metà strada",
+        "de": "auf halbem Weg",
+        "ru": "на полпути",
+        "ar": "في منتصف الطريق",
+        "zh": "半路"
+      },
+      "otherwise": {
+        "pos": "adverb",
+        "en": "if not; in a different way",
+        "fr": "sinon",
+        "es": "de lo contrario",
+        "pt": "caso contrário",
+        "it": "altrimenti",
+        "de": "sonst",
+        "ru": "иначе",
+        "ar": "وإلا",
+        "zh": "否则"
+      },
+      "regardless": {
+        "pos": "adverb",
+        "en": "in spite of everything; without caring about it",
+        "fr": "malgré tout",
+        "es": "a pesar de todo",
+        "pt": "apesar de tudo",
+        "it": "nonostante tutto",
+        "de": "ungeachtet dessen",
+        "ru": "несмотря ни на что",
+        "ar": "بغض النظر",
+        "zh": "不管怎样"
+      },
+      "whoever": {
+        "pos": "pronoun",
+        "en": "any person who; the person who",
+        "fr": "quiconque",
+        "es": "quienquiera",
+        "pt": "quem quer que",
+        "it": "chiunque",
+        "de": "wer auch immer",
+        "ru": "кто бы ни",
+        "ar": "أيا كان",
+        "zh": "无论谁"
+      },
+      "within": {
+        "pos": "preposition",
+        "en": "inside; before the end of a period",
+        "fr": "à l'intérieur de / en moins de",
+        "es": "dentro de",
+        "pt": "dentro de",
+        "it": "entro",
+        "de": "innerhalb",
+        "ru": "в пределах",
+        "ar": "خلال",
+        "zh": "在…之内"
+      },
+      "further": {
+        "pos": "adverb",
+        "en": "at or to a greater distance; more",
+        "fr": "plus loin",
+        "es": "más lejos",
+        "pt": "mais longe",
+        "it": "più lontano",
+        "de": "weiter",
+        "ru": "дальше",
+        "ar": "أبعد",
+        "zh": "更远"
+      },
+      "neither": {
+        "pos": "determiner",
+        "en": "not one and not the other of two",
+        "fr": "ni l'un ni l'autre",
+        "es": "ninguno de los dos",
+        "pt": "nenhum dos dois",
+        "it": "né l'uno né l'altro",
+        "de": "keiner von beiden",
+        "ru": "ни тот ни другой",
+        "ar": "لا هذا ولا ذاك",
+        "zh": "两者都不"
+      },
+      "ought": {
+        "pos": "verb",
+        "en": "should; used to say the right thing to do (ought to)",
+        "fr": "devoir (on devrait)",
+        "es": "deber (debería)",
+        "pt": "dever (deveria)",
+        "it": "dovere (dovrebbe)",
+        "de": "sollen",
+        "ru": "следует",
+        "ar": "ينبغي",
+        "zh": "应该"
+      },
+      "behalf": {
+        "pos": "noun",
+        "en": "in the place of, or for, someone else (on behalf of)",
+        "fr": "au nom de",
+        "es": "en nombre de",
+        "pt": "em nome de",
+        "it": "a nome di",
+        "de": "im Namen von",
+        "ru": "от имени",
+        "ar": "نيابة عن",
+        "zh": "代表"
+      }
+    }
+  }
 }

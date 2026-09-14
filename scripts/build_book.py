@@ -75,6 +75,30 @@ def in_core(word: str, core: set) -> bool:
     return False
 
 
+_SUFFIX = (("s", ""), ("es", ""), ("ies", "y"), ("ed", ""), ("ed", "e"), ("ied", "y"),
+           ("ing", ""), ("ing", "e"), ("er", ""), ("er", "e"), ("est", ""), ("ly", ""),
+           ("ily", "y"), ("ally", "al"), ("ably", "able"), ("ibly", "ible"), ("'s", ""))
+
+
+def resolve(word: str, keys: set):
+    """Return the lexicon key a word maps to (base form or inflection), or None.
+
+    Mirrors the reader's auto-gloss matcher so the validator's view of what is glossed
+    equals what a reader can actually tap.
+    """
+    w = word.lower()
+    if w in keys:
+        return w
+    for suf, repl in _SUFFIX:
+        if w.endswith(suf) and len(w) - len(suf) >= 2:
+            c = w[: -len(suf)] + repl
+            if c in keys:
+                return c
+            if len(c) > 3 and c[-1] == c[-2] and c[:-1] in keys:  # stopped -> stop
+                return c[:-1]
+    return None
+
+
 def sentences(text: str):
     return [p for p in re.split(r"(?<=[.!?])\s+", (text or "").strip()) if p.strip()]
 
@@ -92,48 +116,49 @@ class Report:
     def warn(self, m): self.warnings.append(m)
 
 
-def glossary_entries(node, level):
-    """Glossary items for a node at a level.
+def book_lexicon(book, shared=None):
+    """This book's effective lexicon: a shared base plus the book's own chosen words.
 
-    An item is either a bare headword (looked up in the shared lexicon) or an object
-    with a story-specific override. Bare headwords are the norm: a word translated
-    once in the lexicon stays consistent across every episode a learner reads.
+    The book is the unit a learner sits down with, so each carries its own chosen
+    lexicon; a small shared base (words common to the whole series) is layered under it.
     """
-    gl = per_level(node.get("glossary"), level) or []
-    out = []
-    for g in gl:
-        if isinstance(g, str):
-            out.append({"word": g})
-        elif isinstance(g, dict) and g.get("word"):
-            out.append(g)
+    def entries_of(obj):
+        if not isinstance(obj, dict):
+            return {}
+        src = obj.get("entries") if "entries" in obj else obj
+        return {k.lower(): v for k, v in src.items()
+                if not k.startswith("_") and isinstance(v, dict)}
+
+    lex = {}
+    lex.update(entries_of(shared))
+    lex.update(entries_of(book.get("lexicon")))
+    return lex
+
+
+def appearing_words(node, level, keys):
+    """Lexicon keys whose words actually appear in this node's text, in reading order."""
+    out, seen = [], set()
+    for w in words(per_level(node.get("text"), level) or ""):
+        base = resolve(w, keys)
+        if base and base not in seen:
+            seen.add(base)
+            out.append(base)
     return out
 
 
-def validate_lexicon(by_id, levels, lexicon, rep):
-    """Every glossed word must exist in the lexicon with all eight translations.
+def validate_lexicon(lexicon, rep):
+    """Every lexicon entry must be complete in English and all eight languages.
 
-    A missing translation is a learner who taps a word and gets nothing, so this is
-    an error rather than a warning once a lexicon is in play.
+    Glossing is automatic now — any lexicon word is tappable wherever it appears — so the
+    only invariant to guard is that no entry leaves a language blank. A learner who taps
+    a word and gets nothing is worse than one who cannot tap it. Returns the key set.
     """
-    used, missing_entry, incomplete = set(), set(), {}
-    for n in by_id.values():
-        for lv in levels:
-            for g in glossary_entries(n, lv):
-                used.add(g["word"].lower())
-    for w in sorted(used):
-        entry = lexicon.get(w)
-        if entry is None:
-            missing_entry.add(w)
-            continue
+    for w in sorted(lexicon):
+        entry = lexicon[w] or {}
         gaps = [c for c in ("en", *LANGS) if not str(entry.get(c, "")).strip()]
         if gaps:
-            incomplete[w] = gaps
-    if missing_entry:
-        rep.error("Glossed but not in the lexicon: " + ", ".join(sorted(missing_entry))
-                  + ". Add them, or the reader taps the word and gets nothing.")
-    for w, gaps in sorted(incomplete.items()):
-        rep.error(f"Lexicon entry {w!r} is missing: {', '.join(gaps)}.")
-    return used
+            rep.error(f"Lexicon entry {w!r} is missing: {', '.join(gaps)}.")
+    return set(lexicon)
 
 
 def per_level(value, level, fallback_ok=True):
@@ -264,7 +289,8 @@ def validate_structure(book: dict, rep: Report):
     return by_id
 
 
-def validate_level(book: dict, by_id: dict, level: str, rep: Report, core: set):
+def validate_level(book: dict, by_id: dict, level: str, rep: Report, core: set,
+                   glossed: set = frozenset()):
     lim = LEVELS.get(level)
     if lim is None:
         rep.warn(f"Unknown level {level!r}; skipping its language checks.")
@@ -307,21 +333,20 @@ def validate_level(book: dict, by_id: dict, level: str, rep: Report, core: set):
             rep.warn(f"[{level}] §{nid}: only {len(ws)} words — thin for {level}.")
 
         if core and level in VOCAB_CHECK_LEVELS:
-            glossed = {g["word"].lower() for g in glossary_entries(n, level)}
             for s in ss:
                 toks = words(s)
                 for k, w in enumerate(toks):
                     if k > 0 and w[:1].isupper():
                         continue  # mid-sentence capital: almost certainly a name
                     lw = w.lower()
-                    if len(lw) <= 3 or in_core(lw, glossed) or in_core(lw, core):
+                    if len(lw) <= 3 or resolve(lw, glossed) or in_core(lw, core):
                         continue
                     flagged.setdefault(lw, []).append(nid)
 
     if flagged:
         top = sorted(flagged.items(), key=lambda kv: (-len(kv[1]), kv[0]))[:20]
-        rep.warn(f"[{level}] outside the core list (advisory — worth the reader's "
-                 f"effort, or gloss them): "
+        rep.warn(f"[{level}] hard words not in the lexicon (advisory — add them so a "
+                 f"reader can tap them, or leave them as worth the effort): "
                  + ", ".join(f"{w} (§{v[0]})" for w, v in top))
     return stats
 
@@ -362,17 +387,14 @@ def render(book: dict, level: str, lexicon=None, gloss_lang=None) -> str:
            "and go to the paragraph number next to your choice.", "", "---", ""]
     for n in nodes:
         out += [f"### {n['id']}", "", (per_level(n.get('text'), level) or "").strip(), ""]
-        gl = glossary_entries(n, level)
+        gl = appearing_words(n, level, set(lexicon or {}))
         if gl:
-            for g in gl:
-                w = g["word"]
-                entry = (lexicon or {}).get(w.lower(), {})
-                en = g.get("gloss") or entry.get("en") or "(no gloss yet)"
+            for w in gl:
+                entry = (lexicon or {}).get(w, {})
+                en = entry.get("en") or "(no gloss yet)"
                 line = f"*{w}* — {en}"
-                if gloss_lang:
-                    t = entry.get(gloss_lang)
-                    if t:
-                        line += f"  ·  **{gloss_lang}:** {t}"
+                if gloss_lang and entry.get(gloss_lang):
+                    line += f"  ·  **{gloss_lang}:** {entry[gloss_lang]}"
                 out.append(line + "  ")
             out.append("")
         if n.get("ending"):
@@ -453,34 +475,24 @@ def check_series(folder: str, lexicon_path=None) -> int:
     never_read = dead - used
     print()
 
-    if lexicon_path:
-        raw = json.load(open(lexicon_path, encoding="utf-8"))
-        lex = {k.lower(): v for k, v in (raw.get("entries") or raw).items()}
-        needed = set()
-        for _, _, b in eps:
-            for n in b.get("nodes", []):
-                for lv in (b.get("levels") or []):
-                    for g in glossary_entries(n, lv):
-                        needed.add(g["word"].lower())
-        absent = sorted(needed - set(lex))
-        gaps = {w: [c for c in ("en", *LANGS) if not str(lex[w].get(c, "")).strip()]
-                for w in sorted(needed & set(lex))}
-        gaps = {w: g for w, g in gaps.items() if g}
-        print(f"Lexicon: {len(lex)} entries, {len(needed)} used by these episodes.")
-        if absent:
-            problems.append("Glossed but absent from the lexicon: " + ", ".join(absent))
-        if gaps:
-            per_lang = {}
-            for w, g in gaps.items():
-                for c in g:
-                    per_lang.setdefault(c, []).append(w)
-            print("  incomplete translations:")
-            for c, ws in sorted(per_lang.items()):
-                print(f"    {c}: {len(ws)} missing — {', '.join(ws[:8])}"
-                      + (" …" if len(ws) > 8 else ""))
-        else:
-            print("  all used entries are complete in all languages.")
-        print()
+    shared = json.load(open(lexicon_path, encoding="utf-8")) if lexicon_path else None
+    per_lang = {}
+    total = 0
+    for _, name, b in eps:
+        lex = book_lexicon(b, shared)
+        total += len(lex)
+        for w in sorted(lex):
+            for c in [c for c in ("en", *LANGS) if not str((lex[w] or {}).get(c, "")).strip()]:
+                per_lang.setdefault(c, []).append(f"{w} ({name})")
+    print(f"Lexicon: {total} entr{'y' if total == 1 else 'ies'} across "
+          f"{len(eps)} book(s) (each book's own + shared base).")
+    if per_lang:
+        for c, ws in sorted(per_lang.items()):
+            problems.append(f"{len(ws)} entr{'y' if len(ws) == 1 else 'ies'} missing "
+                            f"{c}: {', '.join(ws[:8])}" + (" …" if len(ws) > 8 else ""))
+    else:
+        print("  all entries complete in all languages.")
+    print()
 
     for p in problems:
         print(f"ERROR   {p}")
@@ -526,20 +538,18 @@ def main():
     by_id = validate_structure(book, rep)
     levels = book.get("levels") or ([book["level"]] if book.get("level") else ["A2"])
     core = load_core_words()
-    stats = {lv: validate_level(book, by_id, lv, rep, core) for lv in levels} if by_id else {}
 
-    lexicon = {}
-    if args.lexicon:
-        raw = json.load(open(args.lexicon, encoding="utf-8"))
-        lexicon = {k.lower(): v for k, v in (raw.get("entries") or raw).items()}
-        used = validate_lexicon(by_id, levels, lexicon, rep)
-        unused = sorted(set(lexicon) - used)
-        if unused:
-            print(f"note    {len(unused)} lexicon entries not used by this episode "
-                  f"(fine — the lexicon is shared across the series).")
-    elif any(glossary_entries(n, lv) for n in by_id.values() for lv in levels):
-        rep.warn("This episode glosses words but no --lexicon was given, so the "
-                 "translations could not be checked.")
+    # effective lexicon = optional shared base (--lexicon) + this book's own chosen words
+    shared = json.load(open(args.lexicon, encoding="utf-8")) if args.lexicon else None
+    lexicon = book_lexicon(book, shared)
+    glossed = validate_lexicon(lexicon, rep) if lexicon else set()
+    if lexicon:
+        covered = sum(1 for w in glossed)
+        print(f"note    {covered} lexicon words tappable in this book "
+              f"({len(book.get('lexicon', {}).get('entries', {}))} its own).")
+
+    stats = ({lv: validate_level(book, by_id, lv, rep, core, glossed) for lv in levels}
+             if by_id else {})
 
     for e in rep.errors:
         print(f"ERROR   {e}")
