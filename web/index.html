@@ -64,7 +64,7 @@
       radial-gradient(120% 95% at calc(100% - var(--x,20)*1%) calc(100% - var(--y,12)*1%),
         color-mix(in srgb, var(--accent-2) 26%, transparent), transparent 55%),
       var(--accent-soft);
-    filter:hue-rotate(calc(var(--h,0)*1deg)) saturate(1.05); }
+    filter:hue-rotate(calc(var(--h,0)*1deg)) saturate(1.25); }
   /* faint contour lines give the empty card a hint of texture, not a flat wash */
   .art.ph::after { content:""; position:absolute; inset:0; opacity:.5; mix-blend-mode:soft-light;
     background:repeating-linear-gradient(calc(var(--h,0)*1deg + 35deg),
@@ -76,7 +76,14 @@
     font-family:ui-sans-serif,system-ui,sans-serif; font-size:11px; letter-spacing:.14em;
     text-transform:uppercase; color:#fff; padding:4px 9px; border-radius:99px;
     background:rgba(0,0,0,.42); backdrop-filter:blur(4px); }
-  .body { padding:20px 20px 22px; }
+  .body { padding:16px 22px 24px; border-top:3px solid hsl(var(--hue,190) 62% 52% / .6); }
+  /* the section number — the heart of a gamebook: a big serif numeral heading each passage,
+     under a short rule in the passage's own colour */
+  .pnum { font-family:ui-serif, Georgia, "Times New Roman", serif; font-weight:700;
+    font-size:34px; line-height:1; color:hsl(var(--hue,190) 45% 40%); margin:2px 0 3px; }
+  @media (prefers-color-scheme: dark) { .pnum { color:hsl(var(--hue,190) 58% 68%); } }
+  .srule { height:3px; width:42px; border-radius:2px; margin-bottom:16px;
+    background:hsl(var(--hue,190) 62% 52% / .7); }
   .para { font-size:19px; line-height:1.72; }
   /* only the curated story words are marked (dotted); everyday words are still tappable
      as a quiet fallback but carry no underline, so per-word help never crowds the reading */
@@ -95,16 +102,23 @@
   .meaning .mtext[dir=rtl] { text-align:right; }
 
   .choices { margin-top:22px; display:flex; flex-direction:column; gap:10px; }
-  .choices button { position:relative; text-align:left; padding:15px 44px 15px 17px;
+  .choices button { position:relative; text-align:left; padding:14px 58px 14px 17px;
     border:1px solid var(--line); border-radius:14px; background:var(--card); color:var(--fg);
     font:inherit; font-size:16.5px; line-height:1.4; cursor:pointer;
     transition:border-color .15s, background .15s, transform .1s; }
-  .choices button::after { content:"→"; position:absolute; right:16px; top:50%;
-    transform:translateY(-50%); color:var(--accent); font-family:ui-sans-serif,system-ui,sans-serif; }
+  /* the destination section number — "turn to N", the gamebook mechanic */
+  .choices button .goto { position:absolute; right:14px; top:50%; transform:translateY(-50%);
+    font-family:ui-sans-serif,system-ui,sans-serif; font-weight:700; font-size:13.5px;
+    color:var(--accent); }
+  .choices button .goto::before { content:"→ "; opacity:.6; font-weight:400; }
   .choices button:hover { border-color:var(--accent); background:var(--accent-soft); }
   .choices button:active { transform:scale(.99); }
 
-  .end { padding:22px 20px; text-align:center; }
+  .is-end .end { background:hsl(var(--hue,190) 60% 50% / .06);
+    border-top:3px solid hsl(var(--hue,190) 62% 52% / .6); }
+  .end { padding:20px 22px 24px; text-align:center; }
+  .end .pnum { }
+  .end .srule { margin:0 auto 14px; }
   .end .badge { font-size:34px; }
   .end h2 { font-family:ui-sans-serif,system-ui,sans-serif; margin:.3em 0 .1em; font-size:20px; }
   .end p { color:var(--muted); font-size:14.5px; font-family:ui-sans-serif,system-ui,sans-serif; margin:.4em 0 0; }
@@ -580,6 +594,7 @@ function render(){
     const stamps=endings.map(e=>`<i class="${seen.has(e.id)?'got':''}">${seen.has(e.id)?'★':'?'}</i>`).join("");
     inner=`${artHTML(n.id,"The End")}
       <div class="end">
+        <div class="pnum">${n.id}</div><div class="srule"></div>
         <div class="badge">${badge}</div>
         <h2>${label}</h2>
         <div class="para" style="font-size:17px;margin-top:8px">${markup(at(n.text)||"")}</div>
@@ -592,9 +607,10 @@ function render(){
     const tag=n.id===BOOK.start?"Begin":null;
     const btns=(n.choices||[])
       .filter(c=>{let r=c.requires||[];if(typeof r==="string")r=[r];return r.every(f=>flags.has(f))})
-      .map((c,i)=>`<button data-i="${i}"><span class="k">${i+1}</span>${at(c.text)}</button>`).join("");
+      .map((c,i)=>`<button data-i="${i}"><span class="k">${i+1}</span>${at(c.text)}<b class="goto">${c.goto}</b></button>`).join("");
     inner=`${artHTML(n.id,tag)}
       <div class="body">
+        <div class="pnum">${n.id}</div><div class="srule"></div>
         <div class="para">${markup(at(n.text)||"")}</div>
         <div class="choices">${btns}</div>
         ${meaningHTML()}
@@ -602,7 +618,12 @@ function render(){
   }
 
   const card=document.createElement("div");
-  card.className="card"; card.innerHTML=inner;
+  card.className="card";
+  if(n.ending) card.classList.add("is-end");
+  // each section carries its own colour; endings are tinted by outcome (green/amber/blue)
+  card.style.setProperty("--hue", n.ending ? ({good:150,neutral:40,bad:212}[n.ending]||190)
+                                            : (hash("h"+n.id)%360));
+  card.innerHTML=inner;
   const main=$("main"); const old=main.firstElementChild;
   if(old){ old.classList.add("leaving");
     setTimeout(()=>{ main.innerHTML=""; main.appendChild(card); wire(n,endings); },200); }
