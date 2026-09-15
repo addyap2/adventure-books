@@ -151,6 +151,14 @@ pedagogy: understanding the paragraph changes the outcome.
     For true tail-completeness later, bundle an **open dictionary dataset** (Wiktionary/Kaikki-derived)
     as a build step rather than typing more batches.
   Curated is authoritative; coverage is quick best-effort and still flows through the review sheets.
+  - **Word depth is deliberately quiet:** only curated words are underlined (dotted); everyday
+    coverage words are tappable but unmarked, so per-word help never crowds the reading.
+- **On-demand passage gist** (`content/gist/<lang>.json`) — because per-word glosses lose context
+  (idioms, sense), each *pivotal or dense* passage carries a 1–2 sentence **meaning in the reader's
+  language**, revealed only by a "See the meaning" button ("where needed", never by default, so
+  English stays the thing being read). Authored for the dense beats + all 12 endings; provided in
+  fr/es/it/de/pt (ru/ar/zh await native translators — the button simply doesn't appear where a gist
+  is missing).
 - **Native-language review is the launch gate.** Machine-drafted glosses in 8 languages ship to
   a speaker's check first — a wrong gloss the learner cannot detect is worse than none. This is
   the one hard gate between "done" and "launched", and it is what makes the flagship trustworthy.

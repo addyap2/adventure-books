@@ -78,11 +78,21 @@
     background:rgba(0,0,0,.42); backdrop-filter:blur(4px); }
   .body { padding:20px 20px 22px; }
   .para { font-size:19px; line-height:1.72; }
-  /* every glossed word is tappable; featured (curated) words dotted in the accent,
-     everyday (coverage) words a fainter, quieter underline so the page isn't cluttered */
-  .para w { cursor:pointer; border-bottom:1px dotted var(--muted); padding-bottom:1px; }
-  .para w.hl { border-bottom:2px dotted var(--accent); }
+  /* only the curated story words are marked (dotted); everyday words are still tappable
+     as a quiet fallback but carry no underline, so per-word help never crowds the reading */
+  .para w { cursor:pointer; }
+  .para w.hl { border-bottom:2px dotted var(--accent); padding-bottom:1px; }
   .para w:active { background:var(--accent-soft); }
+
+  /* on-demand "meaning in your language" — a fallback for a stuck reader, never shown by
+     default so English stays the thing being read */
+  .meaning { margin-top:16px; font-family:ui-sans-serif,system-ui,sans-serif; }
+  .meaning button { border:1px solid var(--line); background:var(--card); color:var(--muted);
+    border-radius:99px; padding:7px 14px; font:inherit; font-size:13px; cursor:pointer; }
+  .meaning button:hover { border-color:var(--accent); color:var(--accent); }
+  .meaning .mtext { margin-top:10px; padding:12px 14px; border-radius:12px;
+    background:var(--gloss); border:1px solid var(--line); font-size:14.5px; line-height:1.5; }
+  .meaning .mtext[dir=rtl] { text-align:right; }
 
   .choices { margin-top:22px; display:flex; flex-direction:column; gap:10px; }
   .choices button { position:relative; text-align:left; padding:15px 44px 15px 17px;
@@ -284,7 +294,7 @@
    drops files named by paragraph number and nothing in the JSON has to change.
    Until a file exists, a deliberate placeholder card shows in its place. */
 const $ = id => document.getElementById(id);
-let MANIFEST=null, BOOK=null, LEX={}, BASELEX={}, DICT={}, dictLang=null, level=null, node=null;
+let MANIFEST=null, BOOK=null, LEX={}, BASELEX={}, DICT={}, dictLang=null, GIST={}, gistLang=null, level=null, node=null;
 let flags=new Set(), seen=new Set(), maxDepth=0, depth={}, haveImg=new Set();
 let view="home", curKey=null, curFile=null;   // "home" (the library) or "book" (reading)
 
@@ -318,10 +328,17 @@ async function loadDict(lang){
   if(!lang) return;
   try{ DICT=await (await fetch(`dict/${lang}.json`)).json(); }catch{ DICT={}; }
 }
-// change the word-help language everywhere: persist, load its dictionary, refresh the page
+// per-passage gist ({nodeId: "meaning in this language"}) — the on-demand fallback
+async function loadGist(lang){
+  if(lang===gistLang) return;
+  gistLang=lang; GIST={};
+  if(!lang) return;
+  try{ GIST=await (await fetch(`gist/${lang}.json`)).json(); }catch{ GIST={}; }
+}
+// change the word-help language everywhere: persist, load its data, refresh the page
 async function applyLang(lang){
   savePrefs({...loadPrefs(),lang}); $("lang").value=lang;
-  await loadDict(lang);
+  await loadDict(lang); await loadGist(lang);
   if(view==="book" && !introMode && node!=null) render();
 }
 
@@ -336,11 +353,11 @@ async function boot(){
   }
   const p=loadPrefs();
   if(p.lang) $("lang").value=p.lang;
-  await loadDict($("lang").value);
+  await loadDict($("lang").value); await loadGist($("lang").value);
   const inc=parseHandoff();
   if(inc && MANIFEST.episodes.some(e=>e.file===inc.f)){
     savePrefs({...loadPrefs(), lang:inc.lg??p.lang, level:inc.lv??p.level});
-    if(inc.lg!=null){ $("lang").value=inc.lg; await loadDict(inc.lg); }
+    if(inc.lg!=null){ $("lang").value=inc.lg; await loadDict(inc.lg); await loadGist(inc.lg); }
     history.replaceState(null,"",location.pathname+location.search);  // drop the #c= from the URL
     await openEpisode(inc.f, inc.lv, false, {n:inc.n, f:inc.x||[]});
     return;
@@ -540,6 +557,15 @@ function markup(text){
   });
 }
 
+// on-demand passage meaning in the reader's language — only offered where a gist exists
+function meaningHTML(){
+  const g=GIST[String(node)];
+  if(!g) return "";
+  const dir=$("lang").value==="ar"?" dir=\"rtl\"":"";
+  return `<div class="meaning"><button id="meaningBtn">🌐 See the meaning</button>
+    <div class="mtext" id="mtext" hidden${dir}>${g}</div></div>`;
+}
+
 function render(){
   const n=byId(node);
   // remember state for "Continue" — but a finished path resets to "Start" next time
@@ -557,6 +583,7 @@ function render(){
         <div class="badge">${badge}</div>
         <h2>${label}</h2>
         <div class="para" style="font-size:17px;margin-top:8px">${markup(at(n.text)||"")}</div>
+        ${meaningHTML()}
         <div class="stamps">${stamps}</div>
         <p>${seen.size} of ${endings.length} endings found${seen.size<endings.length?" — there are others.":" — you found them all."}</p>
         <div class="again"><button id="again">Read it again</button></div>
@@ -570,6 +597,7 @@ function render(){
       <div class="body">
         <div class="para">${markup(at(n.text)||"")}</div>
         <div class="choices">${btns}</div>
+        ${meaningHTML()}
       </div>`;
   }
 
@@ -594,6 +622,7 @@ function wire(n){
     s.forEach(f=>flags.add(f)); node=c.goto; hideGloss(); window.scrollTo({top:0,behavior:"smooth"}); render();
   });
   const again=$("again"); if(again) again.onclick=()=>{node=BOOK.start;flags=new Set();hideGloss();window.scrollTo({top:0});render();};
+  const mb=$("meaningBtn"); if(mb) mb.onclick=()=>{ $("mtext").hidden=false; mb.hidden=true; };
 }
 
 function setProgress(frac){ $("progress").style.width=Math.round(Math.min(1,frac)*100)+"%"; }

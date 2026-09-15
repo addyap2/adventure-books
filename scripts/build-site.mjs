@@ -25,6 +25,8 @@ await cp(join(ROOT, "web", "favicon.svg"), join(DIST, "favicon.svg"));
 try { await cp(join(ROOT, "images"), join(DIST, "images"), { recursive: true }); console.log("Copied images/"); } catch { /* no images yet — placeholders show */ }
 // copy the coverage dictionaries (dict/<lang>.json), lazy-loaded per language by the reader
 try { await cp(join(CONTENT, "dict"), join(DIST, "dict"), { recursive: true }); console.log("Copied dict/"); } catch { /* no coverage dict yet */ }
+// copy the per-passage gists (gist/<lang>.json), the on-demand "meaning" fallback
+try { await cp(join(CONTENT, "gist"), join(DIST, "gist"), { recursive: true }); console.log("Copied gist/"); } catch { /* no gists yet */ }
 
 const files = (await readdir(CONTENT)).filter(f => f.endsWith(".json"));
 const episodes = [];
