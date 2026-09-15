@@ -156,9 +156,9 @@ pedagogy: understanding the paragraph changes the outcome.
 - **On-demand passage gist** (`content/gist/<lang>.json`) — because per-word glosses lose context
   (idioms, sense), each *pivotal or dense* passage carries a 1–2 sentence **meaning in the reader's
   language**, revealed only by a "See the meaning" button ("where needed", never by default, so
-  English stays the thing being read). Authored for the dense beats + all 12 endings; provided in
-  fr/es/it/de/pt (ru/ar/zh await native translators — the button simply doesn't appear where a gist
-  is missing).
+  English stays the thing being read). **French now covers all 123 passages**; es/it/de/pt cover the
+  pivotal beats + 12 endings (26); ru/ar/zh await native translators. The button simply doesn't
+  appear where a gist is missing, so partial-language coverage degrades gracefully.
 - **Native-language review is the launch gate.** Machine-drafted glosses in 8 languages ship to
   a speaker's check first — a wrong gloss the learner cannot detect is worse than none. This is
   the one hard gate between "done" and "launched", and it is what makes the flagship trustworthy.
