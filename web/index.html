@@ -189,6 +189,29 @@
   .seg button.on { background:var(--accent); color:#fff; border-color:var(--accent); }
   .sel { font:inherit; font-size:14px; padding:9px 11px; border-radius:10px;
     border:1px solid var(--line); background:var(--bg); color:var(--fg); }
+
+  /* ---- device-aware layout ----
+     Phone-first by default. The reading measure stays narrow on every screen (long
+     lines hurt readability); it is the LIBRARY that widens on bigger screens, and the
+     mouse/keyboard refinements switch on only where there is a fine pointer. */
+  .k { display:none; }
+  @media (min-width:640px){
+    main.home { max-width:46rem; }
+    .home-hero h1 { font-size:34px; }
+  }
+  @media (min-width:900px){
+    main.home { max-width:74rem; padding:28px 28px 64px; }
+    main.reading { max-width:38rem; }
+    .grid { grid-template-columns:repeat(auto-fill,minmax(184px,1fr)); gap:20px; }
+    .home-hero { padding:30px 6px; }
+    .home-hero h1 { font-size:40px; }
+  }
+  /* mouse + keyboard (desktop): number-key hints on choices, hover cues */
+  .fine .choices button { padding-left:42px; }
+  .fine .k { display:grid; place-items:center; position:absolute; left:11px; top:50%;
+    transform:translateY(-50%); width:20px; height:20px; border:1px solid var(--line);
+    border-radius:6px; font:600 11px/1 ui-sans-serif,system-ui,sans-serif; color:var(--muted); }
+  .fine .choices button:hover .k { border-color:var(--accent); color:var(--accent); }
 </style>
 </head>
 <body>
@@ -237,16 +260,25 @@ const loadPrefs=()=>{try{return JSON.parse(localStorage.getItem(prefKey)||"{}")}
 const savePrefs=p=>{try{localStorage.setItem(prefKey,JSON.stringify(p))}catch{}};
 const loadSeen=()=>{try{seen=new Set(JSON.parse(localStorage.getItem(seenKey())||"[]"))}catch{seen=new Set()}};
 const saveSeen=()=>{try{localStorage.setItem(seenKey(),JSON.stringify([...seen]))}catch{}};
-// remember where the reader got to in each book, so the library can offer "Continue"
+// remember where the reader got to in each book — the passage AND the flags collected —
+// so "Continue" restores the exact state. All in the browser (localStorage); no back end.
 const getProgress=()=>{try{return loadPrefs().progress||{}}catch{return{}}};
-const saveProgress=(k,nd)=>{const p=loadPrefs();p.progress=p.progress||{};p.progress[k]=nd;savePrefs(p);};
+const saveProgress=(k,nd,fl)=>{const p=loadPrefs();p.progress=p.progress||{};
+  p.progress[k]={n:nd,f:[...fl]};savePrefs(p);};
+const clearProgress=k=>{const p=loadPrefs();if(p.progress){delete p.progress[k];savePrefs(p);}};
 
 const byId=id=>BOOK.nodes.find(n=>n.id===id);
 const at=v=>(v&&typeof v==="object"&&!Array.isArray(v))?v[level]:v;
 const pad=n=>String(n).padStart(2,"0");
 const imgBase=()=>`images/${BOOK.series}/ep-${pad(BOOK.episode)}`;
 
+// a "fine" pointer (mouse) with hover = desktop-style input; drives number-key hints & hover cues
+const finePointer=()=>matchMedia("(hover:hover) and (pointer:fine)").matches;
+try{ matchMedia("(hover:hover) and (pointer:fine)").addEventListener("change",e=>
+  document.documentElement.classList.toggle("fine", e.matches)); }catch{}
+
 async function boot(){
+  document.documentElement.classList.toggle("fine", finePointer());
   MANIFEST=await (await fetch("manifest.json")).json();
   // shared series lexicon (a base every book inherits); a book may add/override its own
   BASELEX={};
@@ -262,6 +294,7 @@ async function boot(){
 /* ---- the library home ---- */
 function renderHome(){
   view="home"; introMode=false; node=null; curKey=null; hideGloss();
+  $("main").className="home";
   $("back").hidden=true; $("speak").hidden=true; $("cog").hidden=true;
   $("brand").textContent="Adventure Book"; setProgress(0);
   const p=loadPrefs(), lvl=p.level||"B1", vw=p.homeView||"all";
@@ -330,8 +363,8 @@ function renderLibrary(vw){
   });
 }
 
-async function openEpisode(file,preferLevel,intro,resumeNode){
-  view="book";
+async function openEpisode(file,preferLevel,intro,resume){
+  view="book"; $("main").className="reading";
   BOOK=await (await fetch(file)).json();
   const meta=MANIFEST.episodes.find(e=>e.file===file)||{};
   haveImg=new Set(meta.images||[]);
@@ -349,7 +382,7 @@ async function openEpisode(file,preferLevel,intro,resumeNode){
     for(const c of byId(id)?.choices||[]){ if(depth[c.goto]==null){depth[c.goto]=d+1; q.push([c.goto,d+1]);}}}
   loadSeen(); flags=new Set();
   savePrefs({...loadPrefs(),file,level});
-  if(resumeNode!=null){ introMode=false; node=resumeNode; render(); }
+  if(resume){ introMode=false; node=resume.n; flags=new Set(resume.f||[]); render(); }
   else if(intro){ node=BOOK.start; renderIntro(); }
   else { node=BOOK.start; render(); }
   window.scrollTo({top:0});
@@ -430,7 +463,8 @@ function markup(text){
 
 function render(){
   const n=byId(node);
-  if(curKey) saveProgress(curKey, node);   // remember where we are for "Continue"
+  // remember state for "Continue" — but a finished path resets to "Start" next time
+  if(curKey){ n.ending ? clearProgress(curKey) : saveProgress(curKey, node, flags); }
   const endings=BOOK.nodes.filter(x=>x.ending);
 
   let inner;
@@ -452,7 +486,7 @@ function render(){
     const tag=n.id===BOOK.start?"Begin":null;
     const btns=(n.choices||[])
       .filter(c=>{let r=c.requires||[];if(typeof r==="string")r=[r];return r.every(f=>flags.has(f))})
-      .map((c,i)=>`<button data-i="${i}">${at(c.text)}</button>`).join("");
+      .map((c,i)=>`<button data-i="${i}"><span class="k">${i+1}</span>${at(c.text)}</button>`).join("");
     inner=`${artHTML(n.id,tag)}
       <div class="body">
         <div class="para">${markup(at(n.text)||"")}</div>
@@ -470,7 +504,11 @@ function render(){
 }
 
 function wire(n){
-  $("main").querySelectorAll("w").forEach(el=>el.onclick=()=>showGloss(el.dataset.w));
+  const fine=finePointer();
+  $("main").querySelectorAll("w").forEach(el=>{
+    el.onclick=()=>showGloss(el.dataset.w);
+    if(fine) el.onmouseenter=()=>showGloss(el.dataset.w);   // desktop: hover to preview
+  });
   const visible=(n.choices||[]).filter(c=>{let r=c.requires||[];if(typeof r==="string")r=[r];return r.every(f=>flags.has(f))});
   $("main").querySelectorAll(".choices button").forEach(b=>b.onclick=()=>{
     const c=visible[+b.dataset.i]; let s=c.sets||[]; if(typeof s==="string")s=[s];
@@ -506,6 +544,18 @@ $("speak").onclick=()=>{
   u.lang="en-GB"; u.rate=level==="A2"?0.85:0.95; speechSynthesis.speak(u);
 };
 document.addEventListener("click",e=>{ if(!e.target.closest("w")&&!e.target.closest(".gloss")) hideGloss(); });
+
+// desktop keyboard: number keys pick a choice; Enter starts / reads again
+document.addEventListener("keydown",e=>{
+  if(view!=="book"||e.metaKey||e.ctrlKey||e.altKey) return;
+  if(e.target instanceof Element && e.target.matches("input,select,textarea")) return;
+  if(introMode){ if(e.key==="Enter"){ e.preventDefault(); $("begin")&&$("begin").click(); } return; }
+  if(byId(node)?.ending){ if(e.key==="Enter"){ e.preventDefault(); $("again")&&$("again").click(); } return; }
+  if(/^[1-9]$/.test(e.key)){
+    const b=$("main").querySelectorAll(".choices button")[+e.key-1];
+    if(b){ e.preventDefault(); b.click(); }
+  }
+});
 
 boot().catch(err=>{ $("main").innerHTML=`<div class="card"><div class="body"><h1>Could not load the story</h1><p>${err}</p></div></div>`; });
 </script>
