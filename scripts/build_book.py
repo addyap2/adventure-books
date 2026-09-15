@@ -146,6 +146,38 @@ def appearing_words(node, level, keys):
     return out
 
 
+def validate_flags(book, by_id, rep):
+    """Every flag should earn its place: set somewhere AND read (gate a choice) somewhere.
+
+    A flag set but never read is dead weight — unless it is a declared `arc_flags` carrier,
+    read by a later episode via its state_in. A flag required but never set (and not carried
+    in via state_in) gates a choice no reader can ever unlock.
+    """
+    sets, reqd = set(), set()
+    for n in by_id.values():
+        for c in n.get("choices") or []:
+            s = c.get("sets") or []
+            for f in ([s] if isinstance(s, str) else s):
+                sets.add(f)
+            r = c.get("requires") or []
+            for f in ([r] if isinstance(r, str) else r):
+                reqd.add(f)
+    arc = set(book.get("arc_flags") or [])
+    state_in = set(book.get("state_in") or [])
+
+    inert = sorted(f for f in sets if f not in reqd and f not in arc)
+    if inert:
+        rep.warn("flags set but never read (wire a payoff, or list them in `arc_flags` if a "
+                 "later episode reads them): " + ", ".join(inert))
+    unopenable = sorted(f for f in reqd if f not in sets and f not in state_in)
+    if unopenable:
+        rep.error("choices require flags that nothing sets and no earlier episode carries in: "
+                  + ", ".join(unopenable) + ". The gated choice can never be seen.")
+    for f in sorted(arc):
+        if f not in sets and f not in state_in:
+            rep.warn(f"arc_flag {f!r} is declared but never set in this episode.")
+
+
 def validate_lexicon(lexicon, rep):
     """Every lexicon entry must be complete in English and all eight languages.
 
@@ -542,6 +574,8 @@ def main():
     # effective lexicon = optional shared base (--lexicon) + this book's own chosen words
     shared = json.load(open(args.lexicon, encoding="utf-8")) if args.lexicon else None
     lexicon = book_lexicon(book, shared)
+    if by_id:
+        validate_flags(book, by_id, rep)
     glossed = validate_lexicon(lexicon, rep) if lexicon else set()
     if lexicon:
         covered = sum(1 for w in glossed)

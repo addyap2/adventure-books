@@ -360,6 +360,17 @@
           "sets": [
             "rough_night"
           ]
+        },
+        {
+          "text": {
+            "A2": "You know it is by the river. Head straight there and wait for light.",
+            "B1": "You know they are by the river — head straight there and wait for morning.",
+            "B2": "You know now that they are by the river; head straight there and wait out the dark."
+          },
+          "goto": 23,
+          "requires": [
+            "knows_river"
+          ]
         }
       ]
     },
@@ -614,6 +625,17 @@
             "B2": "Wait at the stop for the first bus of the day."
           },
           "goto": 105
+        },
+        {
+          "text": {
+            "A2": "Head for the river you were told about.",
+            "B1": "Make straight for the river you were told about.",
+            "B2": "Cut your losses and make straight for the river you were told about."
+          },
+          "goto": 23,
+          "requires": [
+            "knows_river"
+          ]
         }
       ]
     },
@@ -928,7 +950,10 @@
             "B1": "Stay on the bench and let the morning pass.",
             "B2": "Stay on the bench and let the morning pass."
           },
-          "goto": 147
+          "goto": 147,
+          "requires": [
+            "rough_night"
+          ]
         },
         {
           "text": {
@@ -1790,6 +1815,17 @@
             "B2": "Tell her about the agency you almost paid."
           },
           "goto": 121
+        },
+        {
+          "text": {
+            "A2": "You are too tired to say much.",
+            "B1": "You are too tired, after the night, to make your case.",
+            "B2": "After the night you have had, you can barely keep your eyes open, let alone make a case."
+          },
+          "goto": 37,
+          "requires": [
+            "rough_night"
+          ]
         }
       ]
     },
@@ -6552,5 +6588,11 @@
         "zh": "鲜明的"
       }
     }
-  }
+  },
+  "arc_flags": [
+    "dodged_scam",
+    "told_truth",
+    "knows_name",
+    "paid_scam"
+  ]
 }

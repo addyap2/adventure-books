@@ -88,7 +88,8 @@ Wave 1 locks the look; later waves fill in; endings are bespoke.
 ## 5. Definition of done (per book)
 
 - [ ] Validator: **0 errors**; bands clean at all three levels; no `⟨pending⟩` text
-- [ ] 12 endings, balanced 4/4/4; ≤8 flags, each earned and paid off; all nodes reachable
+- [ ] 12 endings, balanced 4/4/4; ≤8 flags, **each flag both set and read** (or listed in
+      `arc_flags` if a later book reads it — validator enforces); all nodes reachable; 2–4 choices/node
 - [ ] Lexicon ~250, complete in 9 languages, base-keyed; auto-gloss coverage checked
 - [ ] **Native review applied** for all 8 languages (launch gate) — and A2 choices clarity-checked
 - [ ] Art: at least Wave 1 delivered and the look locked; endings illustrated

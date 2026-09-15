@@ -92,6 +92,15 @@ became on your first night follows you into the city.
 **Discipline:** every flag-gated choice is accompanied by an ungated one; no paragraph can be
 reached in a state that offers nothing to do. The validator enforces this on every push.
 
+**Every flag must earn its keep (template rule, validator-enforced):** a flag has to be *set*
+somewhere **and** *read* (gate a choice) somewhere — a flag set but never read is dead weight.
+The one exception is an **arc-carrier**: a flag whose payoff is in a *later* book (read via that
+book's `state_in`), listed in the episode's `arc_flags` field, which the validator skips. It
+also errors if a choice `requires` a flag that nothing sets and no earlier episode carries in
+(a gate no reader can open). In "The Address": `knows_river` gates a shortcut to the river
+(§8, §14) and `rough_night` gates the tired-out interview option (§120) and the give-up ending
+(§22→§147); `arc_flags` = `dodged_scam, told_truth, knows_name, paid_scam`.
+
 ---
 
 ## 5. Endings (12)
