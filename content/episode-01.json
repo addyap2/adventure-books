@@ -1465,17 +1465,17 @@
         },
         {
           "text": {
-            "A2": "Wait — she has a question for you first.",
-            "B1": "Wait — she has a question for you first.",
-            "B2": "Wait — she has a question for you first."
+            "A2": "Let her ask you questions first.",
+            "B1": "Let her ask her questions first.",
+            "B2": "Let her put her questions to you first."
           },
           "goto": 120
         },
         {
           "text": {
-            "A2": "She shows you into her office.",
-            "B1": "She shows you into her office.",
-            "B2": "She shows you into her office."
+            "A2": "Follow her into her office.",
+            "B1": "Follow her into her office.",
+            "B2": "Follow her through into her office."
           },
           "goto": 85
         }
@@ -1818,9 +1818,9 @@
         },
         {
           "text": {
-            "A2": "You are too tired to say much.",
-            "B1": "You are too tired, after the night, to make your case.",
-            "B2": "After the night you have had, you can barely keep your eyes open, let alone make a case."
+            "A2": "Say you are too tired to talk much.",
+            "B1": "Admit you are too tired to say much.",
+            "B2": "Admit that, after the night, you can barely speak."
           },
           "goto": 37,
           "requires": [
@@ -2299,9 +2299,9 @@
         },
         {
           "text": {
-            "A2": "A woman in the queue reads the form and stops.",
-            "B1": "A woman in the queue reads the form and stops.",
-            "B2": "A woman in the queue reads the form and stops."
+            "A2": "Watch the woman in front of you.",
+            "B1": "Watch what the woman ahead of you does.",
+            "B2": "Watch what the woman near the front decides."
           },
           "goto": 107
         }
@@ -2499,9 +2499,9 @@
         },
         {
           "text": {
-            "A2": "The agency man notices you watching.",
-            "B1": "The agency man notices you watching.",
-            "B2": "The agency man notices you watching."
+            "A2": "Let him see that you saw him.",
+            "B1": "Let him see that you have seen him.",
+            "B2": "Hold his eye, and let him know you saw."
           },
           "goto": 90
         }
@@ -2679,25 +2679,25 @@
       "choices": [
         {
           "text": {
-            "A2": "She squeezes you in to see Ms Rowe.",
-            "B1": "She squeezes you in to see Ms Rowe.",
-            "B2": "She squeezes you in to see Ms Rowe."
+            "A2": "Ask to see Ms Rowe.",
+            "B1": "Ask to see Ms Rowe.",
+            "B2": "Ask whether you can see Ms Rowe."
           },
           "goto": 35
         },
         {
           "text": {
-            "A2": "No room today — but she takes your details.",
-            "B1": "No room today — but she takes your details.",
-            "B2": "No room today — but she takes your details."
+            "A2": "Leave your name and go.",
+            "B1": "Leave your details and go.",
+            "B2": "Leave your details and step back out."
           },
           "goto": 37
         },
         {
           "text": {
-            "A2": "A waiting candidate warns you about the agency too.",
-            "B1": "A waiting candidate warns you about the agency too.",
-            "B2": "A waiting candidate warns you about the agency too."
+            "A2": "Talk to the person waiting with you.",
+            "B1": "Talk to the candidate waiting beside you.",
+            "B2": "Strike up a word with the candidate beside you."
           },
           "goto": 91
         }
@@ -2713,25 +2713,25 @@
       "choices": [
         {
           "text": {
-            "A2": "She slides it across: 'this came back to us twice'.",
-            "B1": "She slides it across: 'this came back to us twice'.",
-            "B2": "She slides it across: 'this came back to us twice'."
+            "A2": "Ask about the letter on the desk.",
+            "B1": "Ask about the letter on the desk.",
+            "B2": "Ask her about the letter squared on the desk."
           },
           "goto": 86
         },
         {
           "text": {
-            "A2": "She sets it aside and asks about you.",
-            "B1": "She sets it aside and asks about you.",
-            "B2": "She sets it aside and asks about you."
+            "A2": "Talk about yourself instead.",
+            "B1": "Talk about yourself instead.",
+            "B2": "Turn the talk to yourself instead."
           },
           "goto": 120
         },
         {
           "text": {
-            "A2": "You recognise the bridge you crossed in the dark.",
-            "B1": "You recognise the bridge you crossed in the dark.",
-            "B2": "You recognise the bridge you crossed in the dark."
+            "A2": "Look out at the river.",
+            "B1": "Look out at the river.",
+            "B2": "Look out at the river a moment."
           },
           "goto": 92
         }
@@ -2763,9 +2763,9 @@
         },
         {
           "text": {
-            "A2": "She calls in the colleague who kept sending them.",
-            "B1": "She calls in the colleague who kept sending them.",
-            "B2": "She calls in the colleague who kept sending them."
+            "A2": "Ask who sends the old address.",
+            "B1": "Ask who keeps sending the old address.",
+            "B2": "Ask who has been sending the old address."
           },
           "goto": 94
         }
@@ -2911,17 +2911,17 @@
       "choices": [
         {
           "text": {
-            "A2": "Your first job will be the letters.",
-            "B1": "Your first job will be the letters.",
-            "B2": "Your first job will be the letters."
+            "A2": "Offer to fix the letters yourself.",
+            "B1": "Offer to fix the letters yourself.",
+            "B2": "Offer to be the one who fixes the letters."
           },
           "goto": 141
         },
         {
           "text": {
-            "A2": "She lets it go, for now.",
-            "B1": "She lets it go, for now.",
-            "B2": "She lets it go, for now."
+            "A2": "Say nothing, and talk about the job.",
+            "B1": "Let it drop, and talk about the job.",
+            "B2": "Let the matter drop, and turn to the job."
           },
           "goto": 37
         }
