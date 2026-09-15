@@ -39,6 +39,7 @@
     background:var(--card); color:var(--fg); font-size:16px; cursor:pointer;
     display:grid; place-items:center; font-family:ui-sans-serif,system-ui,sans-serif; }
   .iconbtn:active { transform:scale(.94); }
+  .iconbtn[hidden] { display:none; }
   .progress { position:absolute; left:0; bottom:-1px; height:2px; background:var(--accent);
     width:0; transition:width .4s ease; }
 
@@ -121,6 +122,41 @@
     background:var(--accent); color:#fff; font:inherit; font-family:ui-sans-serif,system-ui,sans-serif;
     font-size:17px; font-weight:650; }
 
+  /* ---- library home ---- */
+  .home-hero { text-align:center; padding:12px 6px 20px; }
+  .home-hero h1 { font-size:30px; line-height:1.08; margin:6px 0 8px; }
+  .home-hero .lede { color:var(--muted); font-size:15.5px; font-family:ui-sans-serif,system-ui,sans-serif;
+    margin:0 auto; max-width:24rem; }
+  .panel { background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+    box-shadow:var(--shadow); padding:4px 16px; margin-bottom:18px; }
+  .filters { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:0 2px 14px;
+    font-family:ui-sans-serif,system-ui,sans-serif; }
+  .filters .lbl { font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+  .chipbtn { padding:6px 12px; border:1px solid var(--line); background:var(--card); color:var(--fg);
+    border-radius:99px; font:inherit; font-size:13.5px; cursor:pointer; }
+  .chipbtn.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .shelf-title { font-family:ui-sans-serif,system-ui,sans-serif; font-size:12.5px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--muted); margin:22px 2px 10px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:14px; }
+  .book { text-align:left; padding:0; border:1px solid var(--line); border-radius:var(--r);
+    background:var(--card); color:var(--fg); overflow:hidden; cursor:pointer; box-shadow:var(--shadow);
+    font:inherit; display:flex; flex-direction:column; transition:transform .12s, border-color .15s; }
+  .book:hover { border-color:var(--accent); }
+  .book:active { transform:scale(.99); }
+  .book .art { aspect-ratio:3/4; }
+  .book-body { padding:12px 13px 14px; display:flex; flex-direction:column; gap:6px; flex:1; }
+  .book-series { font-family:ui-sans-serif,system-ui,sans-serif; font-size:10.5px; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--accent-2); font-weight:700; }
+  .book-body h3 { font-size:18px; line-height:1.15; margin:0; }
+  .book-blurb { color:var(--muted); font-size:12.5px; font-family:ui-sans-serif,system-ui,sans-serif;
+    line-height:1.4; }
+  .book-badges { display:flex; gap:5px; flex-wrap:wrap; margin-top:2px; }
+  .book-badges span { font-family:ui-sans-serif,system-ui,sans-serif; font-size:11px; padding:2px 7px;
+    border-radius:99px; background:var(--accent-soft); border:1px solid var(--line); }
+  .book-cta { margin-top:auto; font-family:ui-sans-serif,system-ui,sans-serif; font-size:13.5px;
+    font-weight:650; color:var(--accent); padding-top:4px; }
+  .empty { color:var(--muted); font-family:ui-sans-serif,system-ui,sans-serif; text-align:center; padding:30px; }
+
   /* ---- gloss sheet ---- */
   .gloss { position:fixed; left:50%; bottom:16px; transform:translateX(-50%) translateY(14px);
     width:min(32rem,92vw); background:var(--gloss); border:1px solid var(--line);
@@ -157,6 +193,7 @@
 </head>
 <body>
 <div class="bar">
+  <button class="iconbtn" id="back" hidden aria-label="Back to the library">←</button>
   <span class="brand"><span class="dot"></span><span id="brand">Adventure Book</span></span>
   <button class="iconbtn" id="speak" aria-label="Read aloud">🔊</button>
   <button class="iconbtn" id="cog" aria-label="Settings">Aa</button>
@@ -180,7 +217,7 @@
       <option value="ar">العربية</option><option value="zh">中文</option>
     </select>
   </div>
-  <div class="row"><span>Episode</span><select class="sel" id="episode"></select></div>
+  <div class="row"><button class="chipbtn" id="toLibrary">← All books</button></div>
 </div>
 
 <script>
@@ -192,6 +229,7 @@
 const $ = id => document.getElementById(id);
 let MANIFEST=null, BOOK=null, LEX={}, BASELEX={}, level=null, node=null;
 let flags=new Set(), seen=new Set(), maxDepth=0, depth={}, haveImg=new Set();
+let view="home", curKey=null;   // "home" (the library) or "book" (reading)
 
 const prefKey="ab:prefs";
 const seenKey=()=>`ab:seen:${BOOK.series}:${BOOK.episode}`;
@@ -199,6 +237,9 @@ const loadPrefs=()=>{try{return JSON.parse(localStorage.getItem(prefKey)||"{}")}
 const savePrefs=p=>{try{localStorage.setItem(prefKey,JSON.stringify(p))}catch{}};
 const loadSeen=()=>{try{seen=new Set(JSON.parse(localStorage.getItem(seenKey())||"[]"))}catch{seen=new Set()}};
 const saveSeen=()=>{try{localStorage.setItem(seenKey(),JSON.stringify([...seen]))}catch{}};
+// remember where the reader got to in each book, so the library can offer "Continue"
+const getProgress=()=>{try{return loadPrefs().progress||{}}catch{return{}}};
+const saveProgress=(k,nd)=>{const p=loadPrefs();p.progress=p.progress||{};p.progress[k]=nd;savePrefs(p);};
 
 const byId=id=>BOOK.nodes.find(n=>n.id===id);
 const at=v=>(v&&typeof v==="object"&&!Array.isArray(v))?v[level]:v;
@@ -213,16 +254,85 @@ async function boot(){
     try{ const lex=await (await fetch(MANIFEST.lexicon)).json(); const src=lex.entries||lex;
       for(const k in src) BASELEX[k.toLowerCase()]=src[k]; }catch{}
   }
-  $("episode").innerHTML=MANIFEST.episodes
-    .map(e=>`<option value="${e.file}">Ep ${e.episode} — ${e.title}</option>`).join("");
   const p=loadPrefs();
   if(p.lang) $("lang").value=p.lang;
-  await openEpisode(p.file&&MANIFEST.episodes.some(e=>e.file===p.file)?p.file:MANIFEST.episodes[0].file,p.level,true);
+  renderHome();
 }
 
-async function openEpisode(file,preferLevel,intro){
+/* ---- the library home ---- */
+function renderHome(){
+  view="home"; introMode=false; node=null; curKey=null; hideGloss();
+  $("back").hidden=true; $("speak").hidden=true; $("cog").hidden=true;
+  $("brand").textContent="Adventure Book"; setProgress(0);
+  const p=loadPrefs(), lvl=p.level||"B1", vw=p.homeView||"all";
+  const langs=[["","English only"],["fr","Français"],["es","Español"],["pt","Português"],
+    ["it","Italiano"],["de","Deutsch"],["ru","Русский"],["ar","العربية"],["zh","中文"]];
+  const langOpts=langs.map(([v,t])=>`<option value="${v}" ${p.lang===v?"selected":""}>${t}</option>`).join("");
+  const levelSeg=["A2","B1","B2"].map(l=>`<button class="chipbtn ${l===lvl?'on':''}" data-hl="${l}">${l}</button>`).join("");
+  const views=[["all","All"],["series","By series"],["level","By level"]];
+  const viewSeg=views.map(([v,t])=>`<button class="chipbtn ${v===vw?'on':''}" data-hv="${v}">${t}</button>`).join("");
+  $("main").innerHTML=`
+    <div class="home-hero">
+      <div class="kicker">Interactive English stories</div>
+      <h1>Adventure Book</h1>
+      <p class="lede">Read a story. Tap any word to see it in your language.</p>
+    </div>
+    <div class="panel">
+      <div class="row"><span>I read English at</span><span class="seg" id="homeLevel">${levelSeg}</span></div>
+      <div class="row"><span>Word help</span><select class="sel" id="homeLang">${langOpts}</select></div>
+    </div>
+    <div class="filters"><span class="lbl">Browse</span>${viewSeg}</div>
+    <div id="library"></div>`;
+  $("homeLevel").querySelectorAll("button").forEach(b=>b.onclick=()=>{savePrefs({...loadPrefs(),level:b.dataset.hl});renderHome();});
+  $("homeLang").onchange=e=>{savePrefs({...loadPrefs(),lang:e.target.value});$("lang").value=e.target.value;};
+  $("main").querySelectorAll("[data-hv]").forEach(b=>b.onclick=()=>{savePrefs({...loadPrefs(),homeView:b.dataset.hv});renderHome();});
+  renderLibrary(vw);
+  window.scrollTo({top:0});
+}
+
+function bookCard(e){
+  const key=`${e.series}:${e.episode}`, started=getProgress()[key]!=null;
+  const h=hash(e.title||e.file), vars=`--h:${h%54-27};--x:${12+h%30};--y:${8+(h>>3)%26}`;
+  const img=(e.images||[]).includes("cover")
+    ? `<img alt="" loading="lazy" src="images/${e.series}/ep-${pad(e.episode)}/cover.webp"
+         onload="this.parentNode.classList.remove('ph')">` : "";
+  return `<button class="book" data-file="${e.file}">
+    <div class="art ph" style="${vars}"><span class="glyph">❦</span>${img}</div>
+    <div class="book-body">
+      <div class="book-series">${(e.series||"").replace(/-/g," ")}</div>
+      <h3>${e.title}</h3>
+      ${e.blurb?`<div class="book-blurb">${e.blurb}</div>`:""}
+      <div class="book-badges"><span>${(e.levels||[]).join(" · ")}</span><span>${e.endings} endings</span></div>
+      <span class="book-cta">${started?"Continue →":"Start →"}</span>
+    </div></button>`;
+}
+
+function renderLibrary(vw){
+  const eps=[...MANIFEST.episodes].sort((a,b)=>(a.series||"").localeCompare(b.series||"")||a.episode-b.episode);
+  let html="";
+  if(vw==="series"){
+    const g={}; eps.forEach(e=>{(g[e.series]=g[e.series]||[]).push(e);});
+    for(const s of Object.keys(g).sort())
+      html+=`<div class="shelf-title">${s.replace(/-/g," ")}</div><div class="grid">${g[s].map(bookCard).join("")}</div>`;
+  } else if(vw==="level"){
+    for(const lv of ["A2","B1","B2"]){
+      const list=eps.filter(e=>(e.levels||[]).includes(lv));
+      if(list.length) html+=`<div class="shelf-title">${lv}</div><div class="grid">${list.map(bookCard).join("")}</div>`;
+    }
+  } else {
+    html=`<div class="grid">${eps.map(bookCard).join("")}</div>`;
+  }
+  $("library").innerHTML=html||`<div class="empty">No books yet.</div>`;
+  $("library").querySelectorAll(".book").forEach(b=>b.onclick=()=>{
+    const e=MANIFEST.episodes.find(x=>x.file===b.dataset.file);
+    const resume=getProgress()[`${e.series}:${e.episode}`];
+    openEpisode(e.file, loadPrefs().level, resume==null, resume);
+  });
+}
+
+async function openEpisode(file,preferLevel,intro,resumeNode){
+  view="book";
   BOOK=await (await fetch(file)).json();
-  $("episode").value=file;
   const meta=MANIFEST.episodes.find(e=>e.file===file)||{};
   haveImg=new Set(meta.images||[]);
   // this book's lexicon = shared base + the book's own chosen words (book wins)
@@ -230,15 +340,19 @@ async function openEpisode(file,preferLevel,intro){
   const own=BOOK.lexicon&&(BOOK.lexicon.entries||BOOK.lexicon);
   if(own) for(const k in own) LEX[k.toLowerCase()]=own[k];
   level=BOOK.levels.includes(preferLevel)?preferLevel:BOOK.levels[0];
-  $("brand").textContent=BOOK.title;
+  curKey=`${BOOK.series}:${BOOK.episode}`;
+  $("brand").textContent=BOOK.title; $("back").hidden=false; $("speak").hidden=false; $("cog").hidden=false;
   buildLevelSeg();
   // compute depth of each node from start for the progress bar
   depth={}; const q=[[BOOK.start,0]]; depth[BOOK.start]=0; maxDepth=0;
   while(q.length){const [id,d]=q.shift(); maxDepth=Math.max(maxDepth,d);
     for(const c of byId(id)?.choices||[]){ if(depth[c.goto]==null){depth[c.goto]=d+1; q.push([c.goto,d+1]);}}}
-  loadSeen(); flags=new Set(); node=BOOK.start;
+  loadSeen(); flags=new Set();
   savePrefs({...loadPrefs(),file,level});
-  intro?renderIntro():render();
+  if(resumeNode!=null){ introMode=false; node=resumeNode; render(); }
+  else if(intro){ node=BOOK.start; renderIntro(); }
+  else { node=BOOK.start; render(); }
+  window.scrollTo({top:0});
 }
 
 function buildLevelSeg(){
@@ -316,6 +430,7 @@ function markup(text){
 
 function render(){
   const n=byId(node);
+  if(curKey) saveProgress(curKey, node);   // remember where we are for "Continue"
   const endings=BOOK.nodes.filter(x=>x.ending);
 
   let inner;
@@ -381,9 +496,11 @@ const openSheet=()=>{$("sheet").classList.add("on");$("scrim").classList.add("on
 const closeSheet=()=>{$("sheet").classList.remove("on");$("scrim").classList.remove("on")};
 $("cog").onclick=openSheet; $("scrim").onclick=closeSheet;
 $("lang").onchange=e=>savePrefs({...loadPrefs(),lang:e.target.value});
-$("episode").onchange=e=>{closeSheet();openEpisode(e.target.value,level,true);window.scrollTo({top:0})};
+$("back").onclick=renderHome;
+$("toLibrary").onclick=()=>{closeSheet();renderHome();};
+$("brand").onclick=()=>{ if(view==="book") renderHome(); };
 $("speak").onclick=()=>{
-  if(!window.speechSynthesis||introMode) return;
+  if(!window.speechSynthesis||view!=="book"||introMode) return;
   speechSynthesis.cancel();
   const u=new SpeechSynthesisUtterance((at(byId(node).text)||"").replace(/\n/g," "));
   u.lang="en-GB"; u.rate=level==="A2"?0.85:0.95; speechSynthesis.speak(u);

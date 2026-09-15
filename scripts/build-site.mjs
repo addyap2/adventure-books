@@ -35,7 +35,9 @@ for (const f of files) {
   episodes.push({
     file: f,
     episode: json.episode ?? 0,
+    series: json.series ?? "",
     title: json.title ?? f,
+    blurb: json.blurb ?? "",
     levels: json.levels ?? [],
     paragraphs: json.nodes.length,
     endings: json.nodes.filter(n => n.ending).length,
