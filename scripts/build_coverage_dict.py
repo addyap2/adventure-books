@@ -458,7 +458,7 @@ M.update({
  "stairs":["l'escalier","las escaleras","as escadas","le scale","die Treppe","лестница","درج","楼梯"],
  "climb":["grimper","subir","subir","salire","klettern","взбираться","يتسلق","爬"],
  "extra":["supplémentaire","extra","extra","extra","zusätzlich","дополнительный","إضافي","额外的"],
- "shot":["le coup/le shot","el chorro","a dose","lo shot","der Schuss","порция","جرعة","一份"],
+ "shot":["la dose","la dosis","a dose","la dose","der Schuss","порция","جرعة","一份"],
  "everywhere":["partout","en todas partes","em todo lado","dovunque","überall","везде","في كل مكان","到处"],
  "market":["le marché","el mercado","o mercado","il mercato","der Markt","рынок","سوق","市场"],
  "lamp":["la lampe","la lámpara","o candeeiro","la lampada","die Lampe","лампа","مصباح","灯"],
