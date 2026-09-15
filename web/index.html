@@ -212,6 +212,27 @@
     transform:translateY(-50%); width:20px; height:20px; border:1px solid var(--line);
     border-radius:6px; font:600 11px/1 ui-sans-serif,system-ui,sans-serif; color:var(--muted); }
   .fine .choices button:hover .k { border-color:var(--accent); color:var(--accent); }
+
+  /* ---- "continue on another device" handoff (link + QR, no back end) ---- */
+  .modal-scrim { position:fixed; inset:0; background:rgba(0,0,0,.5); opacity:0; pointer-events:none;
+    transition:opacity .2s; z-index:60; }
+  .modal-scrim.on { opacity:1; pointer-events:auto; }
+  .modal { position:fixed; left:50%; top:50%; transform:translate(-50%,-48%) scale(.98); opacity:0;
+    pointer-events:none; width:min(22rem,92vw); background:var(--card); border:1px solid var(--line);
+    border-radius:20px; box-shadow:var(--shadow); padding:22px 22px 20px; z-index:61; text-align:center;
+    font-family:ui-sans-serif,system-ui,sans-serif; transition:opacity .2s, transform .2s; }
+  .modal.on { opacity:1; pointer-events:auto; transform:translate(-50%,-50%) scale(1); }
+  .modal h3 { margin:0 0 6px; font-size:18px; }
+  .modal p { margin:0 0 16px; color:var(--muted); font-size:13.5px; }
+  .qr { display:grid; place-items:center; min-height:172px; margin-bottom:14px; }
+  .qr img { width:180px; height:180px; image-rendering:pixelated; border-radius:8px;
+    background:#fff; padding:8px; box-sizing:content-box; }
+  .qr-fallback { color:var(--muted); font-size:13px; padding:24px; }
+  .ho-link { display:flex; gap:8px; margin-bottom:14px; }
+  .ho-link input { flex:1; min-width:0; font:inherit; font-size:12.5px; padding:9px 10px;
+    border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--fg); }
+  .ho-link button { border:1px solid var(--accent); background:var(--accent); color:#fff;
+    border-radius:10px; padding:9px 14px; font:inherit; font-size:13px; cursor:pointer; white-space:nowrap; }
 </style>
 </head>
 <body>
@@ -240,7 +261,17 @@
       <option value="ar">العربية</option><option value="zh">中文</option>
     </select>
   </div>
+  <div class="row"><span>Continue elsewhere</span><button class="chipbtn" id="handoffBtn">📱 Link / QR</button></div>
   <div class="row"><button class="chipbtn" id="toLibrary">← All books</button></div>
+</div>
+
+<div class="modal-scrim" id="hoScrim"></div>
+<div class="modal" id="handoff" role="dialog" aria-label="Continue on another device">
+  <h3>Continue on another device</h3>
+  <p>Scan with your phone's camera, or copy the link. It opens the story right where you are.</p>
+  <div class="qr" id="hoQR"></div>
+  <div class="ho-link"><input id="hoLink" readonly aria-label="Resume link"><button id="hoCopy">Copy</button></div>
+  <button class="chipbtn" id="hoClose">Close</button>
 </div>
 
 <script>
@@ -252,7 +283,7 @@
 const $ = id => document.getElementById(id);
 let MANIFEST=null, BOOK=null, LEX={}, BASELEX={}, level=null, node=null;
 let flags=new Set(), seen=new Set(), maxDepth=0, depth={}, haveImg=new Set();
-let view="home", curKey=null;   // "home" (the library) or "book" (reading)
+let view="home", curKey=null, curFile=null;   // "home" (the library) or "book" (reading)
 
 const prefKey="ab:prefs";
 const seenKey=()=>`ab:seen:${BOOK.series}:${BOOK.episode}`;
@@ -288,7 +319,32 @@ async function boot(){
   }
   const p=loadPrefs();
   if(p.lang) $("lang").value=p.lang;
+  const inc=parseHandoff();
+  if(inc && MANIFEST.episodes.some(e=>e.file===inc.f)){
+    savePrefs({...loadPrefs(), lang:inc.lg??p.lang, level:inc.lv??p.level});
+    if(inc.lg!=null) $("lang").value=inc.lg;
+    history.replaceState(null,"",location.pathname+location.search);  // drop the #c= from the URL
+    await openEpisode(inc.f, inc.lv, false, {n:inc.n, f:inc.x||[]});
+    return;
+  }
   renderHome();
+}
+
+/* encode the current position into a shareable link, and read one back — the whole
+   state is a few dozen bytes, so it travels in the URL; nothing is stored on any server. */
+function parseHandoff(){
+  const m=/[#&]c=([^&]+)/.exec(location.hash||"");
+  if(!m) return null;
+  try{
+    const b=decodeURIComponent(m[1]).replace(/-/g,"+").replace(/_/g,"/");
+    return JSON.parse(decodeURIComponent(escape(atob(b))));
+  }catch{ return null; }
+}
+function handoffURL(){
+  const state={f:curFile, n:node, x:[...flags], lv:level, lg:$("lang").value||""};
+  const b64=btoa(unescape(encodeURIComponent(JSON.stringify(state))))
+    .replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
+  return location.origin+location.pathname+"#c="+b64;
 }
 
 /* ---- the library home ---- */
@@ -373,7 +429,7 @@ async function openEpisode(file,preferLevel,intro,resume){
   const own=BOOK.lexicon&&(BOOK.lexicon.entries||BOOK.lexicon);
   if(own) for(const k in own) LEX[k.toLowerCase()]=own[k];
   level=BOOK.levels.includes(preferLevel)?preferLevel:BOOK.levels[0];
-  curKey=`${BOOK.series}:${BOOK.episode}`;
+  curKey=`${BOOK.series}:${BOOK.episode}`; curFile=file;
   $("brand").textContent=BOOK.title; $("back").hidden=false; $("speak").hidden=false; $("cog").hidden=false;
   buildLevelSeg();
   // compute depth of each node from start for the progress bar
@@ -537,6 +593,39 @@ $("lang").onchange=e=>savePrefs({...loadPrefs(),lang:e.target.value});
 $("back").onclick=renderHome;
 $("toLibrary").onclick=()=>{closeSheet();renderHome();};
 $("brand").onclick=()=>{ if(view==="book") renderHome(); };
+
+/* continue-on-another-device: build a link + QR for the current position */
+function ensureQR(cb){
+  if(window.qrcode) return cb();
+  const s=document.createElement("script");
+  s.src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js";
+  s.onload=()=>cb(); s.onerror=()=>cb(new Error("qr"));
+  document.head.appendChild(s);
+}
+function openHandoff(){
+  if(view!=="book") return;
+  closeSheet();
+  const url=handoffURL();
+  $("hoLink").value=url; $("hoCopy").textContent="Copy";
+  $("hoQR").innerHTML="<div class='qr-fallback'>…</div>";
+  ensureQR(err=>{
+    if(!err && window.qrcode){
+      const qr=qrcode(0,"M"); qr.addData(url); qr.make();
+      $("hoQR").innerHTML=qr.createImgTag(5,0);
+    } else {
+      $("hoQR").innerHTML="<div class='qr-fallback'>Copy the link below to open the story on your other device.</div>";
+    }
+  });
+  $("hoScrim").classList.add("on"); $("handoff").classList.add("on");
+}
+const closeHandoff=()=>{ $("hoScrim").classList.remove("on"); $("handoff").classList.remove("on"); };
+$("handoffBtn").onclick=openHandoff;
+$("hoScrim").onclick=closeHandoff; $("hoClose").onclick=closeHandoff;
+$("hoCopy").onclick=async()=>{
+  try{ await navigator.clipboard.writeText($("hoLink").value); $("hoCopy").textContent="Copied ✓"; }
+  catch{ $("hoLink").select(); try{ document.execCommand("copy"); $("hoCopy").textContent="Copied ✓"; }catch{} }
+};
+
 $("speak").onclick=()=>{
   if(!window.speechSynthesis||view!=="book"||introMode) return;
   speechSynthesis.cancel();
