@@ -23,6 +23,8 @@ await cp(join(ROOT, "web", "index.html"), join(DIST, "index.html"));
 await cp(join(ROOT, "web", "favicon.svg"), join(DIST, "favicon.svg"));
 // copy the art folder if the team has added any images
 try { await cp(join(ROOT, "images"), join(DIST, "images"), { recursive: true }); console.log("Copied images/"); } catch { /* no images yet — placeholders show */ }
+// copy the coverage dictionaries (dict/<lang>.json), lazy-loaded per language by the reader
+try { await cp(join(CONTENT, "dict"), join(DIST, "dict"), { recursive: true }); console.log("Copied dict/"); } catch { /* no coverage dict yet */ }
 
 const files = (await readdir(CONTENT)).filter(f => f.endsWith(".json"));
 const episodes = [];

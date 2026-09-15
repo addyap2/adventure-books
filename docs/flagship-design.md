@@ -139,8 +139,13 @@ pedagogy: understanding the paragraph changes the outcome.
 
 - **Three levels** as now (A2/B1/B2), same prose-per-level model; validator holds each passage
   inside its CEFR band (sentence length, paragraph length).
-- **Book lexicon** grows with the new vocabulary to a generous **~250 words** (auto-gloss makes
-  every one tappable wherever it appears). Keyed by base form.
+- **Two glossing tiers** so a learner can tap *any* word, not only rare ones:
+  - **Featured (curated) lexicon** — the ~250 chosen story words, keyed by base form, with an
+    English definition + native-reviewed translations. Dotted in the accent; rich gloss card.
+  - **Coverage dictionary** — the book's high-frequency *everyday* words (`content/dict/<lang>.json`,
+    lazy-loaded per language, no back end), so common vocabulary is tappable too. Faint underline;
+    quick translation, tagged "dictionary". This lifts tappable words/passage from ~1–3 to ~11–16.
+  Curated is authoritative; coverage is quick best-effort and still flows through the review sheets.
 - **Native-language review is the launch gate.** Machine-drafted glosses in 8 languages ship to
   a speaker's check first — a wrong gloss the learner cannot detect is worse than none. This is
   the one hard gate between "done" and "launched", and it is what makes the flagship trustworthy.

@@ -78,7 +78,10 @@
     background:rgba(0,0,0,.42); backdrop-filter:blur(4px); }
   .body { padding:20px 20px 22px; }
   .para { font-size:19px; line-height:1.72; }
-  .para w { cursor:pointer; border-bottom:2px dotted var(--accent); padding-bottom:1px; }
+  /* every glossed word is tappable; featured (curated) words dotted in the accent,
+     everyday (coverage) words a fainter, quieter underline so the page isn't cluttered */
+  .para w { cursor:pointer; border-bottom:1px dotted var(--muted); padding-bottom:1px; }
+  .para w.hl { border-bottom:2px dotted var(--accent); }
   .para w:active { background:var(--accent-soft); }
 
   .choices { margin-top:22px; display:flex; flex-direction:column; gap:10px; }
@@ -281,7 +284,7 @@
    drops files named by paragraph number and nothing in the JSON has to change.
    Until a file exists, a deliberate placeholder card shows in its place. */
 const $ = id => document.getElementById(id);
-let MANIFEST=null, BOOK=null, LEX={}, BASELEX={}, level=null, node=null;
+let MANIFEST=null, BOOK=null, LEX={}, BASELEX={}, DICT={}, dictLang=null, level=null, node=null;
 let flags=new Set(), seen=new Set(), maxDepth=0, depth={}, haveImg=new Set();
 let view="home", curKey=null, curFile=null;   // "home" (the library) or "book" (reading)
 
@@ -308,6 +311,20 @@ const finePointer=()=>matchMedia("(hover:hover) and (pointer:fine)").matches;
 try{ matchMedia("(hover:hover) and (pointer:fine)").addEventListener("change",e=>
   document.documentElement.classList.toggle("fine", e.matches)); }catch{}
 
+// coverage dictionary for the selected language — the everyday-word tier, lazy-loaded
+async function loadDict(lang){
+  if(lang===dictLang) return;
+  dictLang=lang; DICT={};
+  if(!lang) return;
+  try{ DICT=await (await fetch(`dict/${lang}.json`)).json(); }catch{ DICT={}; }
+}
+// change the word-help language everywhere: persist, load its dictionary, refresh the page
+async function applyLang(lang){
+  savePrefs({...loadPrefs(),lang}); $("lang").value=lang;
+  await loadDict(lang);
+  if(view==="book" && !introMode && node!=null) render();
+}
+
 async function boot(){
   document.documentElement.classList.toggle("fine", finePointer());
   MANIFEST=await (await fetch("manifest.json")).json();
@@ -319,10 +336,11 @@ async function boot(){
   }
   const p=loadPrefs();
   if(p.lang) $("lang").value=p.lang;
+  await loadDict($("lang").value);
   const inc=parseHandoff();
   if(inc && MANIFEST.episodes.some(e=>e.file===inc.f)){
     savePrefs({...loadPrefs(), lang:inc.lg??p.lang, level:inc.lv??p.level});
-    if(inc.lg!=null) $("lang").value=inc.lg;
+    if(inc.lg!=null){ $("lang").value=inc.lg; await loadDict(inc.lg); }
     history.replaceState(null,"",location.pathname+location.search);  // drop the #c= from the URL
     await openEpisode(inc.f, inc.lv, false, {n:inc.n, f:inc.x||[]});
     return;
@@ -373,7 +391,7 @@ function renderHome(){
     <div class="filters"><span class="lbl">Browse</span>${viewSeg}</div>
     <div id="library"></div>`;
   $("homeLevel").querySelectorAll("button").forEach(b=>b.onclick=()=>{savePrefs({...loadPrefs(),level:b.dataset.hl});renderHome();});
-  $("homeLang").onchange=e=>{savePrefs({...loadPrefs(),lang:e.target.value});$("lang").value=e.target.value;};
+  $("homeLang").onchange=e=>applyLang(e.target.value);
   $("main").querySelectorAll("[data-hv]").forEach(b=>b.onclick=()=>{savePrefs({...loadPrefs(),homeView:b.dataset.hv});renderHome();});
   renderLibrary(vw);
   window.scrollTo({top:0});
@@ -498,22 +516,27 @@ function renderIntro(){
 const SUFFIX=[["s",""],["es",""],["ies","y"],["ed",""],["ed","e"],["ied","y"],
   ["ing",""],["ing","e"],["er",""],["er","e"],["est",""],["ly",""],["ily","y"],
   ["ally","al"],["ably","able"],["ibly","ible"],["'s",""]];
-function lexBase(word){
+function resolveIn(word,map){
   const l=word.toLowerCase();
-  if(LEX[l]) return l;
+  if(map[l]) return l;
   for(const [s,r] of SUFFIX){
     if(l.endsWith(s)&&l.length-s.length>=2){
       const c=l.slice(0,l.length-s.length)+r;
-      if(LEX[c]) return c;
-      if(c.length>3&&c[c.length-1]===c[c.length-2]&&LEX[c.slice(0,-1)]) return c.slice(0,-1); // stopped→stop
+      if(map[c]) return c;
+      if(c.length>3&&c[c.length-1]===c[c.length-2]&&map[c.slice(0,-1)]) return c.slice(0,-1); // stopped→stop
     }
   }
   return null;
 }
+// Two tiers: FEATURED = the curated lexicon (rich card, accent dotted); COVERAGE = the
+// everyday-word dictionary for the selected language (quick translation, faint dotted).
+// A word is wrapped only if it has some gloss, so plain function words stay untouched.
 function markup(text){
   return text.replace(/[A-Za-z]+(?:'[A-Za-z]+)?/g,m=>{
-    const b=lexBase(m);
-    return b?`<w data-w="${b}">${m}</w>`:m;
+    const feat=resolveIn(m,LEX);
+    if(feat) return `<w class="hl" data-w="${m}">${m}</w>`;
+    if(resolveIn(m,DICT)) return `<w data-w="${m}">${m}</w>`;
+    return m;
   });
 }
 
@@ -563,7 +586,7 @@ function wire(n){
   const fine=finePointer();
   $("main").querySelectorAll("w").forEach(el=>{
     el.onclick=()=>showGloss(el.dataset.w);
-    if(fine) el.onmouseenter=()=>showGloss(el.dataset.w);   // desktop: hover to preview
+    if(fine && el.classList.contains("hl")) el.onmouseenter=()=>showGloss(el.dataset.w); // desktop: hover previews featured words
   });
   const visible=(n.choices||[]).filter(c=>{let r=c.requires||[];if(typeof r==="string")r=[r];return r.every(f=>flags.has(f))});
   $("main").querySelectorAll(".choices button").forEach(b=>b.onclick=()=>{
@@ -576,10 +599,13 @@ function wire(n){
 function setProgress(frac){ $("progress").style.width=Math.round(Math.min(1,frac)*100)+"%"; }
 
 function showGloss(word){
-  const e=LEX[word], g=$("gloss"), lang=$("lang").value;
-  g.innerHTML=e?`<div><span class="hw">${word}</span><span class="pos">${e.pos||""}</span></div>
-    <div class="en">${e.en||""}</div>${lang&&e[lang]?`<div class="tr">${e[lang]}</div>`:""}`
-    :`<div class="hw">${word}</div>`;
+  const g=$("gloss"), lang=$("lang").value;
+  const lb=resolveIn(word,LEX);
+  let hw=word, pos="", en="", tr="", tag="";
+  if(lb){ const e=LEX[lb]; hw=lb; pos=e.pos||""; en=e.en||""; tr=(lang&&e[lang])||""; }
+  else { const db=resolveIn(word,DICT); if(db){ hw=db; tr=DICT[db]||""; tag="dictionary"; } }
+  g.innerHTML=`<div><span class="hw">${hw}</span>${pos?`<span class="pos">${pos}</span>`:""}${tag?`<span class="pos">· ${tag}</span>`:""}</div>
+    ${en?`<div class="en">${en}</div>`:""}${tr?`<div class="tr">${tr}</div>`:""}`;
   g.dir=lang==="ar"?"rtl":"ltr"; g.classList.add("on");
   clearTimeout(g._t); g._t=setTimeout(hideGloss,7000);
 }
@@ -589,7 +615,7 @@ const hideGloss=()=>$("gloss").classList.remove("on");
 const openSheet=()=>{$("sheet").classList.add("on");$("scrim").classList.add("on")};
 const closeSheet=()=>{$("sheet").classList.remove("on");$("scrim").classList.remove("on")};
 $("cog").onclick=openSheet; $("scrim").onclick=closeSheet;
-$("lang").onchange=e=>savePrefs({...loadPrefs(),lang:e.target.value});
+$("lang").onchange=e=>applyLang(e.target.value);
 $("back").onclick=renderHome;
 $("toLibrary").onclick=()=>{closeSheet();renderHome();};
 $("brand").onclick=()=>{ if(view==="book") renderHome(); };
