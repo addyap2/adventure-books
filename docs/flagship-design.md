@@ -144,7 +144,12 @@ pedagogy: understanding the paragraph changes the outcome.
     English definition + native-reviewed translations. Dotted in the accent; rich gloss card.
   - **Coverage dictionary** — the book's high-frequency *everyday* words (`content/dict/<lang>.json`,
     lazy-loaded per language, no back end), so common vocabulary is tappable too. Faint underline;
-    quick translation, tagged "dictionary". This lifts tappable words/passage from ~1–3 to ~11–16.
+    quick translation, tagged "dictionary". Built by frequency to **~500 words** (the hold point):
+    that lifts tappable words/passage from ~1–3 to **~16–26** and covers ~54% of all content tokens —
+    i.e. nearly every *frequent* word. Beyond ~500 is a long tail of rare words + proper nouns with
+    fast-diminishing per-passage value and rising translation risk, so we stop hand-adding there.
+    For true tail-completeness later, bundle an **open dictionary dataset** (Wiktionary/Kaikki-derived)
+    as a build step rather than typing more batches.
   Curated is authoritative; coverage is quick best-effort and still flows through the review sheets.
 - **Native-language review is the launch gate.** Machine-drafted glosses in 8 languages ship to
   a speaker's check first — a wrong gloss the learner cannot detect is worse than none. This is
