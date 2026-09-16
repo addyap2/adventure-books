@@ -6,8 +6,8 @@ stuck (the pivotal/dense beats and every ending — "where needed"), not on ever
 Emits content/gist/<lang>.json → { "<nodeId>": "gist" }, lazy-loaded per language.
 
 Authored here in the five languages Claude can vouch for (fr, es, it, de, pt). Russian,
-Arabic and Mandarin are left for native translators — the reader simply shows no meaning
-control for a language that has no gist for that node.
+Arabic and Mandarin are built by the companion build_gists_ruarzh.py — machine-authored
+from the same source meaning and PENDING NATIVE REVIEW before they are launch-final.
 """
 import json, os
 

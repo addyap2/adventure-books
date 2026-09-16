@@ -10,9 +10,9 @@ Tracks what has been checked and what still needs a native speaker, per language
 | Italian (it)  | ✅ done | ⬜ pending | Sound; `shot` → *la dose*. |
 | German (de)   | ✅ done | ⬜ pending | Sound. |
 | Portuguese (pt) | ✅ done | ⬜ pending | **Variety not standardised** — see below. |
-| Russian (ru)  | ⬜ — | ⬜ **required** | Not machine-checkable by Claude; needs a native speaker. |
-| Arabic (ar)   | ⬜ — | ⬜ **required** | Needs a native speaker (RTL; sense + form). |
-| Mandarin (zh) | ⬜ — | ⬜ **required** | Needs a native speaker. |
+| Russian (ru)  | ⬜ — | ⬜ **required** | Passage gists now shipped (machine-authored, all 123) — **review these first**; no coverage dictionary yet. |
+| Arabic (ar)   | ⬜ — | ⬜ **required** | Passage gists shipped (machine-authored, all 123; RTL — check sense + form); no coverage dictionary yet. |
+| Mandarin (zh) | ⬜ — | ⬜ **required** | Passage gists shipped (machine-authored, all 123); no coverage dictionary yet. |
 
 ## What the self-QA was
 
@@ -22,6 +22,14 @@ word **`shot`** was reworded (to the "a dose of coffee" sense) in fr/es/it. This
 replace native review — it's an interim quality lift so human reviewers of those five start
 from a cleaner draft. **Russian, Arabic and Mandarin have had no such pass and are the priority
 for native speakers.**
+
+## Passage gists (the "See the meaning" fallback)
+
+All 8 languages now have a whole-book passage gist (`content/gist/<lang>.json`, 123 each).
+fr/es/it/de/pt were authored in the vouched-five languages; **ru/ar/zh are machine-authored
+from the same source meaning and are the top priority for a native pass** — they ship as
+best-effort (the reader treats gists as the best-effort tier) but are not launch-final until
+reviewed. Built by `scripts/build_gists.py` (five) and `scripts/build_gists_ruarzh.py` (three).
 
 ## Portuguese — pick one variety
 
