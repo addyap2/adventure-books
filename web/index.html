@@ -21,9 +21,13 @@
   }
   * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
   html, body { height:100%; }
-  body { margin:0; background:var(--bg); color:var(--fg);
+  /* clip any stray horizontal overflow and stop the sideways rubber-band / swipe;
+     overflow-x:clip (not hidden) doesn't create a scroll container, so the sticky
+     bar keeps working. */
+  html { overflow-x:clip; }
+  body { margin:0; background:var(--bg); color:var(--fg); overflow-x:clip; max-width:100%;
          font:16px/1.6 ui-serif, Georgia, "Times New Roman", serif;
-         overscroll-behavior-y:none; }
+         overscroll-behavior:none; }
 
   /* ---- app bar ---- */
   .bar { position:sticky; top:0; z-index:20;
