@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1250" width="1000" height="1250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A lone traveller at night before a city by a river, one warm window lit.">
+  <defs>
+    <linearGradient id="c1sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#080c1a"/>
+      <stop offset="0.45" stop-color="#101a35"/>
+      <stop offset="0.8" stop-color="#1b2547"/>
+      <stop offset="1" stop-color="#2a2b46"/>
+    </linearGradient>
+    <linearGradient id="c1ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0f22"/>
+      <stop offset="1" stop-color="#05070f"/>
+    </linearGradient>
+    <linearGradient id="c1river" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#141d3a"/>
+      <stop offset="1" stop-color="#0a1022"/>
+    </linearGradient>
+    <radialGradient id="c1glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffce7e" stop-opacity="0.55"/>
+      <stop offset="0.4" stop-color="#f2a94e" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#f2a94e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="c1vig" cx="0.5" cy="0.42" r="0.78">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.45"/>
+    </radialGradient>
+    <filter id="c1soft"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="c1grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="1250" fill="url(#c1sky)"/>
+
+  <!-- stars -->
+  <g fill="#cdd6ee">
+    <circle cx="120" cy="150" r="1.6" opacity="0.7"/><circle cx="260" cy="90" r="1.2" opacity="0.5"/>
+    <circle cx="410" cy="180" r="1.5" opacity="0.6"/><circle cx="640" cy="120" r="1.3" opacity="0.55"/>
+    <circle cx="780" cy="200" r="1.7" opacity="0.7"/><circle cx="880" cy="110" r="1.2" opacity="0.5"/>
+    <circle cx="540" cy="240" r="1.1" opacity="0.4"/><circle cx="200" cy="300" r="1.2" opacity="0.4"/>
+    <circle cx="930" cy="280" r="1.4" opacity="0.5"/><circle cx="70" cy="240" r="1.2" opacity="0.45"/>
+  </g>
+  <!-- cold moon -->
+  <circle cx="815" cy="215" r="46" fill="#e8ecf7" opacity="0.16"/>
+  <circle cx="815" cy="215" r="30" fill="#eef1f9" opacity="0.28"/>
+
+  <!-- glow behind the one lit window -->
+  <ellipse cx="712" cy="520" rx="150" ry="180" fill="url(#c1glow)"/>
+
+  <!-- old low town, left -->
+  <g fill="#0a1020">
+    <rect x="0" y="600" width="70" height="120"/>
+    <rect x="60" y="560" width="90" height="160"/>
+    <path d="M60 560 L105 520 L150 560 Z"/>
+    <rect x="150" y="615" width="70" height="105"/>
+    <rect x="215" y="570" width="80" height="150"/>
+    <path d="M215 570 L255 535 L295 570 Z"/>
+    <rect x="300" y="625" width="66" height="95"/>
+    <rect x="360" y="580" width="60" height="140"/>
+  </g>
+  <!-- new riverside towers, right -->
+  <g fill="#0c1428">
+    <rect x="470" y="430" width="86" height="290"/>
+    <rect x="566" y="480" width="70" height="240"/>
+    <rect x="664" y="390" width="96" height="330"/>
+    <rect x="770" y="460" width="78" height="260"/>
+    <rect x="852" y="520" width="90" height="200"/>
+    <rect x="946" y="560" width="54" height="160"/>
+  </g>
+  <!-- cool dark window grids (all but one) -->
+  <g fill="#20304f" opacity="0.5">
+    <rect x="486" y="452" width="10" height="14"/><rect x="506" y="452" width="10" height="14"/><rect x="526" y="452" width="10" height="14"/>
+    <rect x="486" y="480" width="10" height="14"/><rect x="526" y="480" width="10" height="14"/>
+    <rect x="486" y="520" width="10" height="14"/><rect x="506" y="520" width="10" height="14"/>
+    <rect x="682" y="416" width="11" height="15"/><rect x="704" y="416" width="11" height="15"/><rect x="726" y="416" width="11" height="15"/>
+    <rect x="682" y="450" width="11" height="15"/><rect x="726" y="450" width="11" height="15"/>
+    <rect x="682" y="560" width="11" height="15"/><rect x="704" y="560" width="11" height="15"/><rect x="726" y="560" width="11" height="15"/>
+    <rect x="786" y="484" width="10" height="14"/><rect x="806" y="484" width="10" height="14"/>
+    <rect x="786" y="520" width="10" height="14"/><rect x="826" y="520" width="10" height="14"/>
+  </g>
+  <!-- THE one warm lit window -->
+  <rect x="704" y="506" width="16" height="26" fill="#ffd483"/>
+  <rect x="704" y="506" width="16" height="26" fill="#ffe6b0" opacity="0.5" filter="url(#c1soft)"/>
+
+  <!-- river -->
+  <rect x="0" y="720" width="1000" height="150" fill="url(#c1river)"/>
+  <rect x="700" y="722" width="20" height="140" fill="#f2b45c" opacity="0.28" filter="url(#c1soft)"/>
+  <rect x="500" y="722" width="10" height="90" fill="#25355a" opacity="0.4" filter="url(#c1soft)"/>
+  <rect x="855" y="722" width="12" height="70" fill="#25355a" opacity="0.35" filter="url(#c1soft)"/>
+  <g stroke="#33436b" stroke-width="1.4" opacity="0.5">
+    <line x1="120" y1="760" x2="240" y2="760"/><line x1="360" y1="795" x2="470" y2="795"/>
+    <line x1="620" y1="775" x2="760" y2="775"/><line x1="180" y1="830" x2="300" y2="830"/>
+    <line x1="700" y1="825" x2="790" y2="825"/>
+  </g>
+
+  <!-- embankment / foreground -->
+  <rect x="0" y="865" width="1000" height="385" fill="url(#c1ground)"/>
+  <rect x="0" y="865" width="1000" height="3" fill="#243258" opacity="0.6"/>
+
+  <!-- lone traveller, from behind, facing the far lit window -->
+  <g>
+    <ellipse cx="432" cy="964" rx="70" ry="12" fill="#000" opacity="0.35"/>
+    <path d="M432 860
+             C452 862 460 878 462 900
+             L470 958 L394 958 L402 900
+             C404 878 412 862 432 860 Z" fill="#05070f"/>
+    <circle cx="432" cy="842" r="15" fill="#05070f"/>
+    <path d="M414 838 q18 -16 36 0 z" fill="#05070f"/>
+    <rect x="462" y="906" width="30" height="24" rx="3" fill="#070a15"/>
+    <rect x="472" y="900" width="10" height="8" rx="2" fill="#070a15"/>
+    <path d="M462 900 L470 958" stroke="#e7ad5d" stroke-width="2" opacity="0.55" fill="none"/>
+    <path d="M447 832 q12 6 15 24" stroke="#e7ad5d" stroke-width="1.6" opacity="0.4" fill="none"/>
+  </g>
+
+  <rect width="1000" height="1250" fill="url(#c1vig)"/>
+  <rect width="1000" height="1250" filter="url(#c1grain)" opacity="0.06"/>
+</svg>

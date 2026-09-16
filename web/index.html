@@ -316,6 +316,8 @@
    Each section is a "moment card": an illustration + the paragraph + the choices.
    Art is loaded by convention — images/<series>/ep-NN/<id>.webp — so the art team
    drops files named by paragraph number and nothing in the JSON has to change.
+   The book cover is the exception: images/<series>/ep-NN/cover.svg (vector, so it
+   scales for the cover panel and the library card alike).
    Until a file exists, a deliberate placeholder card shows in its place. */
 const $ = id => document.getElementById(id);
 let MANIFEST=null, BOOK=null, LEX={}, BASELEX={}, DICT={}, dictLang=null, GIST={}, gistLang=null, level=null, node=null;
@@ -442,7 +444,7 @@ function bookCard(e){
   const key=`${e.series}:${e.episode}`, started=getProgress()[key]!=null;
   const h=hash(e.title||e.file), vars=`--h:${h%54-27};--x:${12+h%30};--y:${8+(h>>3)%26}`;
   const img=(e.images||[]).includes("cover")
-    ? `<img alt="" loading="lazy" src="images/${e.series}/ep-${pad(e.episode)}/cover.webp"
+    ? `<img alt="" loading="lazy" src="images/${e.series}/ep-${pad(e.episode)}/cover.svg"
          onload="this.parentNode.classList.remove('ph')">` : "";
   return `<button class="book" data-file="${e.file}">
     <div class="art ph" style="${vars}"><span class="glyph">❦</span>${img}</div>
@@ -521,7 +523,7 @@ function artHTML(id,tag,cover){
   const tagHTML=tag?`<span class="tag">${tag}</span>`:"";
   const h=hash(key), vars=`--h:${h%54-27};--x:${12+h%30};--y:${8+(h>>3)%26}`;
   const img=haveImg.has(key)
-    ? `<img alt="" loading="lazy" src="${imgBase()}/${key}.webp"
+    ? `<img alt="" loading="lazy" src="${imgBase()}/${key}.${cover?"svg":"webp"}"
          onload="this.parentNode.classList.remove('ph')">` : "";
   return `<div class="art ph" style="${vars}">
       <span class="glyph">${glyph}</span>${tagHTML}${img}
