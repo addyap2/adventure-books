@@ -76,7 +76,9 @@
     font-family:ui-sans-serif,system-ui,sans-serif; font-size:11px; letter-spacing:.14em;
     text-transform:uppercase; color:#fff; padding:4px 9px; border-radius:99px;
     background:rgba(0,0,0,.42); backdrop-filter:blur(4px); }
-  .body { padding:16px 22px 24px; border-top:3px solid hsl(var(--hue,190) 62% 52% / .6); }
+  .body { padding:16px 22px 24px; border-top:3px solid hsl(var(--hue,190) 62% 52% / .6);
+    background-color:var(--card);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E"); }
   /* the section number — the heart of a gamebook: a big serif numeral heading each passage,
      under a short rule in the passage's own colour */
   .pnum { font-family:ui-serif, Georgia, "Times New Roman", serif; font-weight:700;
@@ -101,7 +103,10 @@
     background:var(--gloss); border:1px solid var(--line); font-size:14.5px; line-height:1.5; }
   .meaning .mtext[dir=rtl] { text-align:right; }
 
-  .choices { margin-top:22px; display:flex; flex-direction:column; gap:10px; }
+  /* the classic gamebook prompt before the options */
+  .choices-lead { font-family:ui-sans-serif,system-ui,sans-serif; font-size:12px;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin:24px 0 12px; }
+  .choices { display:flex; flex-direction:column; gap:10px; }
   .choices button { position:relative; text-align:left; padding:14px 58px 14px 17px;
     border:1px solid var(--line); border-radius:14px; background:var(--card); color:var(--fg);
     font:inherit; font-size:16.5px; line-height:1.4; cursor:pointer;
@@ -137,7 +142,8 @@
     border:1px solid var(--line); }
   .cover .art { aspect-ratio:4/5; }
   .cover .body { padding:22px 20px 24px; }
-  .cover h1 { font-size:27px; line-height:1.15; margin:0 0 6px; }
+  .cover h1 { font-size:29px; line-height:1.12; margin:0 0 6px; }
+  .cover .tagline { font-style:italic; color:var(--accent-2); font-size:16px; margin:0 0 14px; }
   .kicker { font-family:ui-sans-serif,system-ui,sans-serif; font-size:12px; letter-spacing:.16em;
     text-transform:uppercase; color:var(--accent-2); font-weight:700; margin-bottom:10px; }
   .cover p { color:var(--muted); font-size:15px; margin:0 0 20px; }
@@ -525,16 +531,17 @@ function renderIntro(){
   $("main").innerHTML=`<div class="cover card">
     ${artHTML("cover","",true)}
     <div class="body">
-      <div class="kicker">Interactive story · ${level}</div>
+      <div class="kicker">Adventure Book · Episode ${BOOK.episode}</div>
       <h1>${BOOK.title}</h1>
-      <p>You decide what happens next. Read it more than once — every choice changes the ending.</p>
+      <p class="tagline">An adventure where you are the hero.</p>
+      <p>You choose what happens next. Every choice turns you to a new section — read it more than once to find all ${endings} endings.</p>
       <div class="chips">
-        <span>${BOOK.nodes.length} moments</span>
+        <span>${BOOK.nodes.length} sections</span>
         <span>${endings} endings</span>
         <span>${BOOK.levels.join(" · ")}</span>
         <span>Tap words to translate</span>
       </div>
-      <button class="start" id="begin">Start reading</button>
+      <button class="start" id="begin">Begin your adventure</button>
     </div></div>`;
   $("begin").onclick=()=>{introMode=false;node=BOOK.start;flags=new Set();render();window.scrollTo({top:0})};
   setProgress(0);
@@ -612,6 +619,7 @@ function render(){
       <div class="body">
         <div class="pnum">${n.id}</div><div class="srule"></div>
         <div class="para">${markup(at(n.text)||"")}</div>
+        <div class="choices-lead">What do you do?</div>
         <div class="choices">${btns}</div>
         ${meaningHTML()}
       </div>`;
