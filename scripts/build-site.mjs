@@ -11,7 +11,7 @@ async function scanImages(series, episode) {
   const dir = join(ROOT, "images", series, `ep-${String(episode).padStart(2,"0")}`);
   if (!existsSync(dir)) return [];
   const files = await readdir(dir);
-  return files.filter(f => /\.(webp|avif|png|jpe?g|svg)$/i.test(f)).map(f => f.replace(/\.[^.]+$/, ""));
+  return files.filter(f => /\.(webp|avif|png|jpe?g)$/i.test(f)).map(f => f.replace(/\.[^.]+$/, ""));
 }
 
 const CONTENT = join(ROOT, "content");
