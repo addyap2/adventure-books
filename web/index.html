@@ -390,6 +390,12 @@ async function boot(){
     await openEpisode(inc.f, inc.lv, false, {n:inc.n, f:inc.x||[]});
     return;
   }
+  // deep link from the landing site: ?book=episode-01.json opens that episode at its cover
+  const wantBook=new URLSearchParams(location.search).get("book");
+  if(wantBook && MANIFEST.episodes.some(e=>e.file===wantBook)){
+    await openEpisode(wantBook, loadPrefs().level, true);   // intro=true → the gamebook cover
+    return;
+  }
   renderHome();
 }
 
