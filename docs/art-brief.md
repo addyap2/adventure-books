@@ -10,7 +10,7 @@ what to produce and how to name it so it drops into the app with no code change.
 A learner sees 8–15 of these per sitting, one after another. They must feel like one
 hand drew all of them. Consistency of palette, light, and framing matters far more than
 the polish of any single image. Agree the look on the first five, lock it, then hold it
-for all 400.
+for all 33.
 
 ## Format and delivery
 
@@ -88,7 +88,7 @@ places. Empty streets, stations, a river at dawn. The reader is always "you", so
 
 ## Which sections to illustrate first
 
-You don't need all 40 at once. These are the beats that carry the most weight — do these
+You don't need all 33 at once. These are the beats that carry the most weight — do these
 first and the story already feels illustrated:
 
 | id | The moment | Why it matters |
