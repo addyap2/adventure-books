@@ -19,8 +19,10 @@ const DIST = join(ROOT, "dist");
 
 await rm(DIST, { recursive: true, force: true });
 await mkdir(DIST, { recursive: true });
-await cp(join(ROOT, "web", "index.html"), join(DIST, "index.html"));
-await cp(join(ROOT, "web", "arrival.html"), join(DIST, "arrival.html"));  // the landing / concept page
+// the landing ("The Arrival") is the root; the reader app lives at /read.html
+await cp(join(ROOT, "web", "arrival.html"), join(DIST, "index.html"));
+await cp(join(ROOT, "web", "index.html"), join(DIST, "read.html"));
+await cp(join(ROOT, "web", "arrival.html"), join(DIST, "arrival.html"));  // keep the old /arrival.html link working
 await cp(join(ROOT, "web", "favicon.svg"), join(DIST, "favicon.svg"));
 // copy the art folder if the team has added any images
 try { await cp(join(ROOT, "images"), join(DIST, "images"), { recursive: true }); console.log("Copied images/"); } catch { /* no images yet — placeholders show */ }
