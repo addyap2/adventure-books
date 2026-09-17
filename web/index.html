@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Adventure Book — read in English</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#2f5d50">
+<meta name="theme-color" content="#0E1320">
 <meta name="description" content="Choose-your-own-adventure stories for English learners, at three levels, with a glossary in eight languages.">
 <link rel="canonical" href="https://adventure-books-five.vercel.app/read.html">
 <meta property="og:type" content="website">
@@ -20,18 +20,28 @@
 <meta name="twitter:title" content="Adventure Book — read in English">
 <meta name="twitter:description" content="A story where you are the hero — for people learning English.">
 <meta name="twitter:image" content="https://adventure-books-five.vercel.app/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
+  /* Nocturne — the reader shares the landing's world: ink night, one warm
+     sodium-amber light, dawn teal as the second note. Committed dark (the story
+     is set at night), so the palette is the same whatever the OS theme. */
   :root {
-    --bg:#f6f3ee; --fg:#1d1b19; --muted:#6b6560; --line:#e4dfd8;
-    --accent:#2f5d50; --accent-2:#c9683c; --accent-soft:#eaf1ee; --card:#fff;
-    --gloss:#fffaf0; --shadow:0 12px 40px rgba(30,25,20,.14);
+    --bg:#0E1320; --fg:#F4EFE6; --muted:#8A93A6; --line:#26304a;
+    --accent:#E8A24C; --accent-2:#86C9B4; --accent-soft:#18223a; --card:#121a2c;
+    --gloss:#1a2338; --shadow:0 18px 50px rgba(0,0,0,.55);
     --r:18px;
+    --serif:"Fraunces",Georgia,"Times New Roman",serif;
+    --grot:"Hanken Grotesk",ui-sans-serif,system-ui,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",monospace;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --bg:#121417; --fg:#eceae6; --muted:#9b958e; --line:#2a2f33;
-            --accent:#86c9b4; --accent-2:#e08a5c; --accent-soft:#1c2523;
-            --card:#1a1e21; --gloss:#241f18; --shadow:0 12px 40px rgba(0,0,0,.55); }
+    :root { --bg:#0E1320; --fg:#F4EFE6; --muted:#8A93A6; --line:#26304a;
+            --accent:#E8A24C; --accent-2:#86C9B4; --accent-soft:#18223a;
+            --card:#121a2c; --gloss:#1a2338; --shadow:0 18px 50px rgba(0,0,0,.55); }
   }
+  :root { color-scheme:dark; }
   * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
   html, body { height:100%; }
   /* clip any stray horizontal overflow and stop the sideways rubber-band / swipe;
@@ -291,6 +301,65 @@
     border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--fg); }
   .ho-link button { border:1px solid var(--accent); background:var(--accent); color:#fff;
     border-radius:10px; padding:9px 14px; font:inherit; font-size:13px; cursor:pointer; white-space:nowrap; }
+  /* ============================================================
+     NOCTURNE SKIN — carry the landing's world into the reader.
+     Reading stays calm serif on ink; the brand shows in the
+     numerals (Fraunces), the wayfinding (mono) and the amber light.
+     ============================================================ */
+  body { -webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(120% 80% at 50% -10%, #16203a 0%, transparent 55%); background-attachment:fixed; }
+
+  /* wordmark & the lit-window dot */
+  .bar { background:color-mix(in srgb, var(--bg) 82%, transparent); }
+  .bar .brand { font-family:var(--serif); font-weight:500; font-size:17px; letter-spacing:0; }
+  .bar .brand .dot { width:11px; height:14px; border-radius:2px;
+    background:var(--accent); box-shadow:0 0 12px 1px rgba(232,162,76,.7); }
+
+  /* wayfinding = mono; UI = grot; display = Fraunces */
+  .kicker, .choices-lead, .chips span, .choices button .goto,
+  .stamps i, .art .tag, .home-hero .kicker { font-family:var(--mono) !important; font-weight:400; }
+  .kicker, .home-hero .kicker { color:var(--accent); font-weight:400; letter-spacing:.28em; }
+  .meaning button, .again button, .end h2, .end p, .book-cta,
+  .chipbtn, .row>span, select#lang { font-family:var(--grot) !important; }
+
+  .pnum { font-family:var(--serif); font-weight:500;
+    color:hsl(var(--hue,190) 55% 68%); }
+  .cover h1, .home-hero h1, .book h3, .end h2, .statement { font-family:var(--serif); }
+
+  /* the section rule and glossed words glow amber (the light on the page) */
+  .para w.hl { border-bottom-color:var(--accent); }
+  .choices button .goto { color:var(--accent); font-weight:500; }
+  .choices button:hover { border-color:var(--accent); background:var(--accent-soft); }
+  .choices button .goto::before { content:"§ "; opacity:.55; }
+  .progress { box-shadow:0 0 10px rgba(232,162,76,.8); }
+
+  /* reading surface: a lifted ink card, calm and high-contrast */
+  .para { color:#EAE6DC; }
+  .meaning button:hover { color:var(--accent); border-color:var(--accent); }
+
+  /* ---- the cinematic cover (typographic nocturne, no figurative art) ---- */
+  .cover { border:1px solid var(--line);
+    background:
+      radial-gradient(90% 55% at 74% 14%, rgba(232,162,76,.16), transparent 42%),
+      radial-gradient(60% 40% at 20% 6%, rgba(134,201,180,.08), transparent 55%),
+      linear-gradient(#0b1224 0%, #101a30 60%, #16203c 100%); }
+  .cover .art { display:none; }               /* drop the placeholder box */
+  .cover .body { border-top:none; background:transparent; padding:52px 26px 30px; }
+  .cover .kicker { color:var(--accent); }
+  .cover h1 { font-size:clamp(34px,10vw,46px); font-weight:300; font-style:italic;
+    line-height:1.02; letter-spacing:-.015em; color:#F6F1E7; margin:0 0 10px; }
+  .cover .tagline { color:var(--accent-2); font-size:17px; }
+  .cover p { color:#c3cad9; }
+  .cover .chips span { background:rgba(255,255,255,.05); border:1px solid var(--line); color:#cfd4e2; }
+  .start { background:var(--accent); color:#12101a; font-family:var(--grot); font-weight:600;
+    box-shadow:0 12px 40px -8px rgba(232,162,76,.55); }
+
+  /* home hero + panel on the nocturne */
+  .home-hero h1 { font-weight:300; font-style:italic; letter-spacing:-.01em; }
+  .panel { background:var(--card); }
+  .chipbtn.on, .seg button.on { background:var(--accent) !important; color:#12101a !important; border-color:var(--accent) !important; }
+  .again button, .stamps i.got { color:#12101a; }
+  .book { background:var(--card); }
 </style>
 </head>
 <body>
