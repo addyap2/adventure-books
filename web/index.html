@@ -7,6 +7,19 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#2f5d50">
 <meta name="description" content="Choose-your-own-adventure stories for English learners, at three levels, with a glossary in eight languages.">
+<link rel="canonical" href="https://adventure-books-five.vercel.app/read.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Adventure Book">
+<meta property="og:url" content="https://adventure-books-five.vercel.app/read.html">
+<meta property="og:title" content="Adventure Book — read in English">
+<meta property="og:description" content="Choose-your-own-adventure stories for English learners, at three levels, with a glossary in eight languages.">
+<meta property="og:image" content="https://adventure-books-five.vercel.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Adventure Book — read in English">
+<meta name="twitter:description" content="A story where you are the hero — for people learning English.">
+<meta name="twitter:image" content="https://adventure-books-five.vercel.app/og.png">
 <style>
   :root {
     --bg:#f6f3ee; --fg:#1d1b19; --muted:#6b6560; --line:#e4dfd8;
@@ -166,6 +179,10 @@
   /* ---- library home ---- */
   .home-hero { text-align:center; padding:12px 6px 20px; }
   .home-hero h1 { font-size:30px; line-height:1.08; margin:6px 0 8px; }
+  .home-hero .tolanding { display:inline-block; margin-top:14px; font-family:ui-sans-serif,system-ui,sans-serif;
+    font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); text-decoration:none;
+    border-bottom:1px solid transparent; padding-bottom:2px; transition:color .2s,border-color .2s; }
+  .home-hero .tolanding:hover { color:var(--accent); border-color:var(--accent); }
   .home-hero .lede { color:var(--muted); font-size:15.5px; font-family:ui-sans-serif,system-ui,sans-serif;
     margin:0 auto; max-width:24rem; }
   .panel { background:var(--card); border:1px solid var(--line); border-radius:var(--r);
@@ -443,6 +460,7 @@ function renderHome(){
       <div class="kicker">Interactive English stories</div>
       <h1>Adventure Book</h1>
       <p class="lede">Read a story. Tap any word to see it in your language.</p>
+      <a class="tolanding" href="/">&larr; The Arrival</a>
     </div>
     <div class="panel">
       <div class="row"><span>I read English at</span><span class="seg" id="homeLevel">${levelSeg}</span></div>

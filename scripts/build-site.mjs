@@ -24,6 +24,7 @@ await cp(join(ROOT, "web", "arrival.html"), join(DIST, "index.html"));
 await cp(join(ROOT, "web", "index.html"), join(DIST, "read.html"));
 await cp(join(ROOT, "web", "arrival.html"), join(DIST, "arrival.html"));  // keep the old /arrival.html link working
 await cp(join(ROOT, "web", "favicon.svg"), join(DIST, "favicon.svg"));
+await cp(join(ROOT, "web", "og.png"), join(DIST, "og.png"));              // social preview card
 // copy the art folder if the team has added any images
 try { await cp(join(ROOT, "images"), join(DIST, "images"), { recursive: true }); console.log("Copied images/"); } catch { /* no images yet — placeholders show */ }
 // copy the coverage dictionaries (dict/<lang>.json), lazy-loaded per language by the reader
