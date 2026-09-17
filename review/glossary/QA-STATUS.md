@@ -3,6 +3,11 @@
 Tracks what has been checked and what still needs a native speaker, per language.
 (Full instructions for reviewers are in `README.md`.)
 
+**Content coverage: complete for all 8 languages** — every language has the full curated
+lexicon (232 words), the coverage dictionary (516 words) and whole-book passage gists (123).
+Nothing is missing. What remains is **quality**: native review, and for ru/ar/zh a first
+read of any kind (they are machine-authored throughout).
+
 | Language | Self-QA (Claude) | Native review | Notes |
 |---|---|---|---|
 | French (fr)   | ✅ done | ⬜ pending | Read as sound; `shot` corrected to *la dose*. |
@@ -10,9 +15,9 @@ Tracks what has been checked and what still needs a native speaker, per language
 | Italian (it)  | ✅ done | ⬜ pending | Sound; `shot` → *la dose*. |
 | German (de)   | ✅ done | ⬜ pending | Sound. |
 | Portuguese (pt) | ✅ done | ⬜ pending | **Variety not standardised** — see below. |
-| Russian (ru)  | ⬜ — | ⬜ **required** | Passage gists now shipped (machine-authored, all 123) — **review these first**; no coverage dictionary yet. |
-| Arabic (ar)   | ⬜ — | ⬜ **required** | Passage gists shipped (machine-authored, all 123; RTL — check sense + form); no coverage dictionary yet. |
-| Mandarin (zh) | ⬜ — | ⬜ **required** | Passage gists shipped (machine-authored, all 123); no coverage dictionary yet. |
+| Russian (ru)  | ⬜ — | ⬜ **required** | All three layers present (lexicon 232, dict 516, gists 123) — **all machine-authored, none read by Claude**; needs a full native pass. |
+| Arabic (ar)   | ⬜ — | ⬜ **required** | All three layers present (lexicon 232, dict 516, gists 123), machine-authored; native pass required (RTL — check sense + form). |
+| Mandarin (zh) | ⬜ — | ⬜ **required** | All three layers present (lexicon 232, dict 516, gists 123), machine-authored; needs a full native pass. |
 
 ## What the self-QA was
 
