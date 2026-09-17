@@ -25,8 +25,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
   :root{
-    --ink:#0E1320; --card:#121a2c; --fg:#F4EFE6; --muted:#8A93A6; --line:#26304a;
-    --amber:#E8A24C; --amber-hot:#F4BE72; --dawn:#86C9B4;
+    /* neutral shell — books supply the colour; the library stays restrained */
+    --ink:#0F1218; --card:#171B22; --fg:#ECEAE4; --muted:#8C93A1; --line:#262B34;
+    --amber:#CBBBA0; --amber-hot:#E6DCC7; --dawn:#A7AC9E;
     --serif:"Fraunces",Georgia,serif; --grot:"Hanken Grotesk",ui-sans-serif,system-ui,sans-serif;
     --mono:"JetBrains Mono",ui-monospace,monospace;
   }
@@ -34,7 +35,7 @@
   html{overflow-x:clip;scroll-behavior:smooth}
   body{margin:0;background:var(--ink);color:var(--fg);font-family:var(--grot);
     overflow-x:clip;-webkit-font-smoothing:antialiased;
-    background-image:radial-gradient(120% 70% at 50% -8%, #18223c 0%, transparent 55%);
+    background-image:radial-gradient(120% 70% at 50% -8%, #1b2029 0%, transparent 55%);
     background-attachment:fixed}
   ::selection{background:var(--amber);color:var(--ink)}
   a{color:inherit;text-decoration:none}
@@ -57,14 +58,15 @@
   .eyebrow::before{content:"";width:34px;height:1px;background:var(--amber);opacity:.7}
   h1{font-family:var(--serif);font-weight:300;font-style:italic;font-size:clamp(3rem,10vw,6.4rem);
     line-height:.98;letter-spacing:-.02em;margin:0;color:#fff}
-  .tagline{font-family:var(--serif);font-size:clamp(1.2rem,2.6vw,1.7rem);font-style:italic;color:var(--dawn);margin:14px 0 0}
+  .byline{font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin:14px 0 0}
+  .tagline{font-family:var(--serif);font-size:clamp(1.2rem,2.6vw,1.7rem);font-style:italic;color:var(--dawn);margin:10px 0 0}
   .intro{max-width:52ch;color:#c3cad9;font-size:clamp(1rem,1.5vw,1.15rem);margin:22px 0 0;line-height:1.6}
 
   /* library */
   .lib{padding:clamp(30px,6vh,64px) 0 clamp(80px,14vh,140px)}
   .lib-head{display:flex;align-items:baseline;gap:16px;margin:0 0 30px;border-top:1px solid var(--line);padding-top:26px}
   .lib-head .k{font-family:var(--mono);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
-  .lib-head .count{font-family:var(--mono);font-size:12px;color:var(--amber);margin-left:auto}
+  .lib-head .count{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
   .shelf{display:grid;gap:22px;grid-template-columns:1fr}
   @media(min-width:720px){.shelf{grid-template-columns:repeat(2,1fr)}}
   @media(min-width:1000px){.shelf{grid-template-columns:repeat(3,1fr)}}
@@ -80,7 +82,7 @@
       linear-gradient(#0b1224 0%, #101a30 60%, #16203c 100%)}
   .book .cov::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:.6;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E")}
-  .book .win{position:absolute;right:22%;top:34%;width:13px;height:18px;border-radius:2px;background:var(--amber-hot);
+  .book .win{position:absolute;right:22%;top:34%;width:13px;height:18px;border-radius:2px;background:color-mix(in srgb, var(--accent) 55%, #fff);
     box-shadow:0 0 22px 5px color-mix(in srgb, var(--accent) 70%, transparent)}
   .book .cov .num{position:absolute;left:18px;bottom:12px;font-family:var(--serif);font-style:italic;
     font-size:40px;color:color-mix(in srgb, var(--accent) 70%, #fff);opacity:.9;line-height:1}
@@ -116,6 +118,7 @@
     <div class="wrap">
       <p class="eyebrow">An English Reading Adventure</p>
       <h1>Waymark</h1>
+      <p class="byline">by Antony Addy</p>
       <p class="tagline">Find your way, one story at a time.</p>
       <p class="intro">Branching stories for people learning English. You choose what happens next; the English meets you at your level; and the meaning waits in your language whenever you need it. Every book is its own world &mdash; step into one.</p>
     </div>
@@ -130,12 +133,9 @@
       <div class="shelf" id="shelf">
 
         <a class="book" data-static href="/b/the-address" style="--accent:#E8A24C">
-          <div class="cov">
-            <span class="win" aria-hidden="true"></span>
-            <span class="num" aria-hidden="true">I</span>
-          </div>
+          <div class="cov"><span class="win" aria-hidden="true"></span></div>
           <div class="meta">
-            <span class="ep">Episode One &middot; New City</span>
+            <span class="ep">A Waymark Story</span>
             <h3>The Address</h3>
             <p>You arrive at night in a city you don&rsquo;t know, with a letter and an address that may be wrong. Find your way before nine o&rsquo;clock.</p>
             <span class="tags">A2 &middot; B1 &middot; B2 &middot; 8 languages</span>
@@ -144,21 +144,11 @@
         </a>
 
         <div class="book soon" style="--accent:#6f86c9" aria-hidden="true">
-          <div class="cov"><span class="win"></span><span class="num">II</span></div>
+          <div class="cov"><span class="win"></span></div>
           <div class="meta">
-            <span class="ep">New City &middot; Episode Two</span>
+            <span class="ep">A Waymark Story</span>
             <h3>Coming soon</h3>
-            <p>The next chapter of the arc &mdash; a new corner of the city, a new night, a new set of choices.</p>
-            <span class="tags">In the works</span>
-          </div>
-        </div>
-
-        <div class="book soon" style="--accent:#4f9e86" aria-hidden="true">
-          <div class="cov"><span class="win"></span><span class="num">&middot;</span></div>
-          <div class="meta">
-            <span class="ep">A new series</span>
-            <h3>Coming soon</h3>
-            <p>A different world, its own look and feel &mdash; each Waymark book is designed as its own place.</p>
+            <p>Another standalone story, its own world and its own look &mdash; each Waymark book is designed as its own place.</p>
             <span class="tags">In the works</span>
           </div>
         </div>
@@ -190,10 +180,9 @@
       a.style.setProperty('--accent',accent);
       var tags=((e.levels||[]).join(' · '))+(e.levels&&e.levels.length?' · ':'')+'8 languages';
       a.innerHTML=
-        '<div class="cov"><span class="win" aria-hidden="true"></span>'+
-          '<span class="num" aria-hidden="true">'+roman(e.episode||0)+'</span></div>'+
+        '<div class="cov"><span class="win" aria-hidden="true"></span></div>'+
         '<div class="meta">'+
-          '<span class="ep">Episode '+(EPN[e.episode]||e.episode||'')+' &middot; '+esc(sname(e.series))+'</span>'+
+          '<span class="ep">A Waymark Story</span>'+
           '<h3>'+esc(e.title)+'</h3>'+
           '<p>'+esc(e.blurb)+'</p>'+
           '<span class="tags">'+esc(tags)+'</span>'+
@@ -210,7 +199,7 @@
 })();
 </script>
 
-<footer><div class="wrap"><b>Waymark</b> &nbsp;&middot;&nbsp; Interactive stories for English learners &nbsp;&middot;&nbsp; A2 B1 B2 &nbsp;&middot;&nbsp; 8 languages</div></footer>
+<footer><div class="wrap"><b>Waymark</b> by Antony Addy &nbsp;&middot;&nbsp; An English Reading Adventure &nbsp;&middot;&nbsp; A2 B1 B2 &nbsp;&middot;&nbsp; 8 languages</div></footer>
 
 </body>
 </html>

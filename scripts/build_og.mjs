@@ -1,0 +1,79 @@
+// Generate a per-book social (OG) card, skinned from each book's identity.
+// Run locally (needs Chrome) and commit the PNGs — Vercel's build has no browser,
+// it just copies web/og-<slug>.png. Usage: node scripts/build_og.mjs
+import { readdir, readFile, writeFile, mkdtemp } from "node:fs/promises";
+import { execFileSync } from "node:child_process";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+
+const ROOT = new URL("..", import.meta.url).pathname;
+const CONTENT = join(ROOT, "content");
+const WEB = join(ROOT, "web");
+const CHROME = process.env.CHROME ||
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
+const EPN = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
+
+const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const titleCase = (s) => String(s || "").replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+
+function ogHTML(book) {
+  const p = (book.identity && book.identity.palette) || {};
+  const ground = p.ground || "#0E1320", surface = p.surface || "#121a2c",
+        ink = p.ink || "#F4EFE6", accent = p.accent || "#E8A24C",
+        accentHot = p.accentHot || "#F4BE72", secondary = p.secondary || "#86C9B4",
+        muted = p.muted || "#8A93A6";
+  const line = (book.identity && book.identity.hero && book.identity.hero.line && book.identity.hero.line.en) || book.blurb || "";
+  const levels = (book.levels || []).join(" · ");
+  const title = book.title || "";
+  const titleSize = title.length > 12 ? 92 : 104;
+  return `<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:${ground}}svg{display:block}</style></head><body>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="${ground}"/><stop offset="0.72" stop-color="${surface}"/><stop offset="1" stop-color="${surface}"/>
+    </linearGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="${ground}" stop-opacity="0.95"/><stop offset="0.52" stop-color="${ground}" stop-opacity="0.55"/><stop offset="1" stop-color="${ground}" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="${accentHot}" stop-opacity="0.85"/><stop offset="0.42" stop-color="${accent}" stop-opacity="0.3"/><stop offset="1" stop-color="${accent}" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig" cx="50%" cy="42%" r="80%"><stop offset="0.5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.4"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky)"/>
+  <g fill="${ink}" opacity="0.6"><circle cx="620" cy="70" r="1.4"/><circle cx="820" cy="120" r="1.1"/><circle cx="1010" cy="70" r="1.2"/><circle cx="1120" cy="150" r="1.3"/></g>
+  <g><circle cx="1030" cy="120" r="58" fill="${ink}" opacity=".12"/><circle cx="1030" cy="120" r="38" fill="${ink}" opacity=".8"/><circle cx="1050" cy="106" r="38" fill="${ground}"/></g>
+  <g fill="${ground}"><rect x="720" y="250" width="90" height="230"/><rect x="820" y="300" width="70" height="180"/><rect x="905" y="210" width="110" height="270"/><rect x="1025" y="290" width="86" height="190"/><rect x="1120" y="330" width="80" height="150"/></g>
+  <ellipse cx="666" cy="352" rx="150" ry="170" fill="url(#glow)"/>
+  <rect x="656" y="338" width="20" height="30" rx="1" fill="${accentHot}"/>
+  <rect x="0" y="480" width="1200" height="90" fill="${surface}"/>
+  <rect x="658" y="484" width="18" height="82" fill="${accent}" opacity=".26"/>
+  <rect x="0" y="566" width="1200" height="64" fill="${ground}"/>
+  <g><ellipse cx="300" cy="560" rx="52" ry="8" fill="#000" opacity=".35"/><path d="M300 500 C314 502 320 514 322 530 L328 560 L272 560 L278 530 C280 514 286 502 300 500 Z" fill="#04060d"/><circle cx="300" cy="489" r="11" fill="#04060d"/><path d="M287 486 q13 -11 26 0 z" fill="#04060d"/></g>
+  <rect width="1200" height="630" fill="url(#vig)"/>
+  <rect width="720" height="630" fill="url(#scrim)"/>
+  <text x="72" y="250" font-family="ui-monospace, Menlo, monospace" font-size="17" letter-spacing="5" fill="${accent}">A WAYMARK STORY</text>
+  <text x="68" y="360" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="${titleSize}" fill="${ink}">${esc(title)}</text>
+  <text x="72" y="416" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="26" fill="#cdd4e2">${esc(line)}</text>
+  <line x1="74" y1="452" x2="330" y2="452" stroke="${accent}" stroke-width="1.5" opacity=".65"/>
+  <text x="72" y="486" font-family="ui-monospace, Menlo, monospace" font-size="13.5" letter-spacing="3" fill="${muted}">FOR ENGLISH LEARNERS &#183; ${esc(levels)} &#183; 8 LANGUAGES</text>
+</svg></body></html>`;
+}
+
+const files = (await readdir(CONTENT)).filter((f) => f.endsWith(".json"));
+const tmp = await mkdtemp(join(tmpdir(), "wm-og-"));
+let n = 0;
+for (const f of files) {
+  const book = JSON.parse(await readFile(join(CONTENT, f), "utf8"));
+  if (!book.nodes) continue;                       // skip the lexicon
+  const slug = book.slug || f.replace(/\.json$/, "");
+  const htmlPath = join(tmp, slug + ".html");
+  const out = join(WEB, `og-${slug}.png`);
+  await writeFile(htmlPath, ogHTML(book));
+  execFileSync(CHROME, ["--headless", "--disable-gpu", "--hide-scrollbars",
+    "--force-device-scale-factor=1", "--window-size=1200,630",
+    `--screenshot=${out}`, `file://${htmlPath}`], { stdio: "ignore" });
+  console.log(`og-${slug}.png  ← ${book.title}`);
+  n++;
+}
+console.log(`Generated ${n} per-book OG card(s).`);

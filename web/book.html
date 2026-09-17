@@ -12,14 +12,14 @@
 <meta property="og:url" content="https://adventure-books-five.vercel.app/b/the-address">
 <meta property="og:title" content="The Address — a Waymark story">
 <meta property="og:description" content="You arrive at night in a city you don't know. A story where you are the hero — for people learning English, at three levels, with meaning in eight languages.">
-<meta property="og:image" content="https://adventure-books-five.vercel.app/og.png">
+<meta property="og:image" content="https://adventure-books-five.vercel.app/og-the-address.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="A lone traveller at night before a city by a river, one warm window lit.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Address — a Waymark story">
 <meta name="twitter:description" content="You arrive at night in a city you don't know. A story where you are the hero — for English learners.">
-<meta name="twitter:image" content="https://adventure-books-five.vercel.app/og.png">
+<meta name="twitter:image" content="https://adventure-books-five.vercel.app/og-the-address.png">
 <title>The Address — a Waymark story</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -321,7 +321,7 @@
     <div class="layer" id="haze" data-depth="0.6" aria-hidden="true"></div>
 
     <div class="hero-copy" id="heroCopy">
-      <p class="eyebrow">A Waymark Story · Episode One</p>
+      <p class="eyebrow">A Waymark Story</p>
       <h1 class="lede">
         <span class="sr-only">You arrive at night, in a city you don't know.</span>
         <span class="morph" aria-hidden="true" id="morph">You arrive at night, in a city you don&rsquo;t know.</span>
@@ -406,7 +406,7 @@
         <a class="cta" href="/read.html?book=episode-01.json" target="_blank" rel="noopener noreferrer">Begin your arrival <span aria-hidden="true">&rarr;</span></a>
         <a class="textlink" href="/read.html" target="_blank" rel="noopener noreferrer">Choose language &amp; level</a>
       </div>
-      <p class="footline reveal d2"><b>Adventure Book</b> &nbsp;·&nbsp; New City &nbsp;·&nbsp; Episode One &mdash; <b>The Address</b></p>
+      <p class="footline reveal d2"><b>Waymark</b> by Antony Addy &nbsp;·&nbsp; An English Reading Adventure</p>
     </div>
   </section>
 </main>
@@ -443,7 +443,8 @@
       {c:'EN',t:'You arrive at night, in a city you don’t know.'}
     ];
     try{
-      var q=new URLSearchParams(location.search), slug=q.get('slug'), file=q.get('book');
+      var wm=window.__WM_BOOK||{};
+      var q=new URLSearchParams(location.search), slug=wm.slug||q.get('slug'), file=wm.file||q.get('book');
       var man=await fetch('/manifest.json').then(function(r){return r.json();});
       var ep = file ? man.episodes.find(function(e){return e.file===file;})
                     : (man.episodes.find(function(e){return e.slug===slug;}) || man.episodes[0]);
@@ -455,7 +456,7 @@
       document.title = book.title + ' — Waymark';
       var can=document.querySelector('link[rel=canonical]');
       if(can) can.href='https://adventure-books-five.vercel.app/b/'+(book.slug||ep.slug);
-      var eb=document.querySelector('.eyebrow'); if(eb) eb.textContent='A Waymark Story · Episode '+(EPN[book.episode]||book.episode);
+      var eb=document.querySelector('.eyebrow'); if(eb) eb.textContent='A Waymark Story';
       var sub=document.querySelector('.sub'); if(sub && hero.sub) sub.textContent=hero.sub;
       var readHref='/read.html?book='+encodeURIComponent(ep.file);
       document.querySelectorAll('.cta,.ghost').forEach(function(a){a.setAttribute('href',readHref);});

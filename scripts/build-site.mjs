@@ -21,11 +21,12 @@ await rm(DIST, { recursive: true, force: true });
 await mkdir(DIST, { recursive: true });
 // Waymark: the library is the root; each book has its own page; the reader app is /read.html
 await cp(join(ROOT, "web", "library.html"), join(DIST, "index.html"));    // / — the Waymark library (cards from manifest)
-await cp(join(ROOT, "web", "book.html"), join(DIST, "book.html"));        // /b/<slug> — generic book landing, skinned from identity
 await cp(join(ROOT, "web", "index.html"), join(DIST, "read.html"));       // the reader app
 await cp(join(ROOT, "web", "favicon.svg"), join(DIST, "favicon.svg"));
-await cp(join(ROOT, "web", "og.png"), join(DIST, "og.png"));              // The Address social card
-await cp(join(ROOT, "web", "og-waymark.png"), join(DIST, "og-waymark.png")); // Waymark library social card
+// social cards (per-book og-<slug>.png + the library card), generated locally by build_og.mjs
+for (const f of await readdir(join(ROOT, "web"))) {
+  if (/^og.*\.png$/.test(f)) await cp(join(ROOT, "web", f), join(DIST, f));
+}
 // copy the art folder if the team has added any images
 try { await cp(join(ROOT, "images"), join(DIST, "images"), { recursive: true }); console.log("Copied images/"); } catch { /* no images yet — placeholders show */ }
 // copy the coverage dictionaries (dict/<lang>.json), lazy-loaded per language by the reader
@@ -63,6 +64,32 @@ const manifest = {
   episodes,
 };
 await writeFile(join(DIST, "manifest.json"), JSON.stringify(manifest, null, 2));
+
+// Prerender one static page per book at dist/b/<slug>.html from the book.html template,
+// stamping per-book meta (title, description, canonical, OG/Twitter, og-<slug>.png) so
+// each book has its own correct social card and SEO — then the client JS hydrates it.
+const BASE = "https://adventure-books-five.vercel.app";
+const tmpl = await readFile(join(ROOT, "web", "book.html"), "utf8");
+const attr = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+await mkdir(join(DIST, "b"), { recursive: true });
+for (const e of episodes) {
+  const desc = e.blurb || "A Waymark story — an English reading adventure.";
+  const url = `${BASE}/b/${e.slug}`;
+  const og = `${BASE}/og-${e.slug}.png`;
+  const html = tmpl
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${attr(e.title)} — a Waymark story</title>`)
+    .replace(/(<meta name="description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
+    .replace(/(<link rel="canonical" href=")[^"]*(">)/, `$1${url}$2`)
+    .replace(/(<meta property="og:url" content=")[^"]*(">)/, `$1${url}$2`)
+    .replace(/(<meta property="og:title" content=")[^"]*(">)/, `$1${attr(e.title)} — a Waymark story$2`)
+    .replace(/(<meta property="og:description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
+    .replace(/(<meta property="og:image" content=")[^"]*(">)/, `$1${og}$2`)
+    .replace(/(<meta name="twitter:title" content=")[^"]*(">)/, `$1${attr(e.title)} — a Waymark story$2`)
+    .replace(/(<meta name="twitter:description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
+    .replace(/(<meta name="twitter:image" content=")[^"]*(">)/, `$1${og}$2`)
+    .replace(/<body>/, `<body>\n<script>window.__WM_BOOK=${JSON.stringify({ slug: e.slug, file: e.file })}</script>`);
+  await writeFile(join(DIST, "b", `${e.slug}.html`), html);
+}
 
 console.log(`Built ${episodes.length} episode(s) into dist/`);
 for (const e of episodes) {

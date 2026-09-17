@@ -6,7 +6,7 @@
   "cleanUrls": false,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/b/:slug", "destination": "/book.html?slug=:slug" }
+    { "source": "/b/:slug", "destination": "/b/:slug.html" }
   ],
   "redirects": [
     { "source": "/the-address", "destination": "/b/the-address", "permanent": true },
