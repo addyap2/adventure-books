@@ -390,9 +390,18 @@ async function boot(){
     await openEpisode(inc.f, inc.lv, false, {n:inc.n, f:inc.x||[]});
     return;
   }
-  // deep link from the landing site: ?book=episode-01.json opens that episode at its cover
-  const wantBook=new URLSearchParams(location.search).get("book");
+  // deep link from the landing site: ?book=episode-01.json opens that episode at its cover.
+  // optional &level=A2|B1|B2 and &lang=<code> preselect difficulty and word-help language.
+  const q=new URLSearchParams(location.search);
+  const wantBook=q.get("book");
   if(wantBook && MANIFEST.episodes.some(e=>e.file===wantBook)){
+    const wantLang=q.get("lang"), LANGS=["fr","es","it","de","pt","ru","ar","zh"];
+    if(wantLang && LANGS.includes(wantLang)){
+      $("lang").value=wantLang; savePrefs({...loadPrefs(), lang:wantLang});
+      await loadDict(wantLang); await loadGist(wantLang);
+    }
+    const wantLevel=q.get("level");
+    if(wantLevel && ["A2","B1","B2"].includes(wantLevel)) savePrefs({...loadPrefs(), level:wantLevel});
     await openEpisode(wantBook, loadPrefs().level, true);   // intro=true → the gamebook cover
     return;
   }
