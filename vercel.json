@@ -6,11 +6,13 @@
   "cleanUrls": false,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/the-address", "destination": "/the-address.html" }
+    { "source": "/b/:slug", "destination": "/book.html?slug=:slug" }
   ],
   "redirects": [
-    { "source": "/arrival", "destination": "/the-address", "permanent": true },
-    { "source": "/arrival.html", "destination": "/the-address", "permanent": true }
+    { "source": "/the-address", "destination": "/b/the-address", "permanent": true },
+    { "source": "/the-address.html", "destination": "/b/the-address", "permanent": true },
+    { "source": "/arrival", "destination": "/b/the-address", "permanent": true },
+    { "source": "/arrival.html", "destination": "/b/the-address", "permanent": true }
   ],
   "headers": [
     {

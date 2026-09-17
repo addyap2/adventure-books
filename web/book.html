@@ -6,10 +6,10 @@
 <meta name="theme-color" content="#0E1320">
 <meta name="description" content="The Address — an Adventure Book. A story where you are the hero, for people learning English, at three levels, with meaning in eight languages.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="canonical" href="https://adventure-books-five.vercel.app/the-address">
+<link rel="canonical" href="https://adventure-books-five.vercel.app/b/the-address">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Waymark">
-<meta property="og:url" content="https://adventure-books-five.vercel.app/the-address">
+<meta property="og:url" content="https://adventure-books-five.vercel.app/b/the-address">
 <meta property="og:title" content="The Address — a Waymark story">
 <meta property="og:description" content="You arrive at night in a city you don't know. A story where you are the hero — for people learning English, at three levels, with meaning in eight languages.">
 <meta property="og:image" content="https://adventure-books-five.vercel.app/og.png">
@@ -422,9 +422,51 @@
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
 <script>
-(function(){
+(async function(){
   var root=document.documentElement; root.classList.add('js');
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* ---------- load this book from data and skin the page to its identity ---------- */
+  async function loadBook(){
+    var EPN=['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten'];
+    var CODES={fr:'FR',es:'ES',it:'IT',de:'DE',pt:'PT',ru:'RU',zh:'ZH',ar:'AR'};
+    var ORDER=['fr','es','it','de','pt','ru','zh','ar'];
+    var FALLBACK=[
+      {c:'FR',t:'Vous arrivez de nuit, dans une ville que vous ne connaissez pas.'},
+      {c:'ES',t:'Llegas de noche a una ciudad que no conoces.'},
+      {c:'IT',t:'Arrivi di notte in una città che non conosci.'},
+      {c:'DE',t:'Du kommst nachts in einer Stadt an, die du nicht kennst.'},
+      {c:'PT',t:'Chegas de noite a uma cidade que não conheces.'},
+      {c:'RU',t:'Ты приезжаешь ночью в город, которого не знаешь.'},
+      {c:'ZH',t:'你在夜里来到一座陌生的城市。'},
+      {c:'AR',t:'تصل ليلاً إلى مدينة لا تعرفها.',rtl:true},
+      {c:'EN',t:'You arrive at night, in a city you don’t know.'}
+    ];
+    try{
+      var q=new URLSearchParams(location.search), slug=q.get('slug'), file=q.get('book');
+      var man=await fetch('/manifest.json').then(function(r){return r.json();});
+      var ep = file ? man.episodes.find(function(e){return e.file===file;})
+                    : (man.episodes.find(function(e){return e.slug===slug;}) || man.episodes[0]);
+      if(!ep) ep=man.episodes[0];
+      var book=await fetch('/'+ep.file).then(function(r){return r.json();});
+      var id=book.identity||{}, pal=id.palette||{}, hero=id.hero||{};
+      var map={ground:'--ink',surface:'--card',ink:'--fg',muted:'--muted',line:'--line',accent:'--amber',accentHot:'--amber-hot',secondary:'--dawn'};
+      for(var k in map){ if(pal[k]) root.style.setProperty(map[k],pal[k]); }
+      document.title = book.title + ' — Waymark';
+      var can=document.querySelector('link[rel=canonical]');
+      if(can) can.href='https://adventure-books-five.vercel.app/b/'+(book.slug||ep.slug);
+      var eb=document.querySelector('.eyebrow'); if(eb) eb.textContent='A Waymark Story · Episode '+(EPN[book.episode]||book.episode);
+      var sub=document.querySelector('.sub'); if(sub && hero.sub) sub.textContent=hero.sub;
+      var readHref='/read.html?book='+encodeURIComponent(ep.file);
+      document.querySelectorAll('.cta,.ghost').forEach(function(a){a.setAttribute('href',readHref);});
+      var L=hero.line||{}, out=[];
+      ORDER.forEach(function(c){ if(L[c]) out.push({c:CODES[c],t:L[c],rtl:c==='ar'}); });
+      out.push({c:'EN',t:L.en||FALLBACK[FALLBACK.length-1].t});
+      var m=document.getElementById('morph'); if(m) m.textContent=L.en||FALLBACK[FALLBACK.length-1].t;
+      var sr=document.querySelector('.lede .sr-only'); if(sr) sr.textContent=L.en||FALLBACK[FALLBACK.length-1].t;
+      return out.length>1?out:FALLBACK;
+    }catch(e){ return FALLBACK; }
+  }
   // low-end gate: keep the 3D scene, but drop the costly bloom pass on weak devices.
   // uses real signals (RAM, cores, coarse-pointer small screens), so strong phones keep it.
   function lowPower(){
@@ -437,18 +479,8 @@
     return false;
   }
 
-  /* ---------- language morph ---------- */
-  var lines=[
-    {c:'FR',t:'Vous arrivez de nuit, dans une ville que vous ne connaissez pas.'},
-    {c:'ES',t:'Llegas de noche a una ciudad que no conoces.'},
-    {c:'IT',t:'Arrivi di notte in una città che non conosci.'},
-    {c:'DE',t:'Du kommst nachts in einer Stadt an, die du nicht kennst.'},
-    {c:'PT',t:'Chegas de noite a uma cidade que não conheces.'},
-    {c:'RU',t:'Ты приезжаешь ночью в город, которого не знаешь.'},
-    {c:'ZH',t:'你在夜里来到一座陌生的城市。'},
-    {c:'AR',t:'تصل ليلاً إلى مدينة لا تعرفها.',rtl:true},
-    {c:'EN',t:'You arrive at night, in a city you don’t know.'}
-  ];
+  /* ---------- language morph (lines come from the book's identity.hero) ---------- */
+  var lines = await loadBook();
   var morph=document.getElementById('morph'), lc=document.getElementById('langcode');
   if(morph && !reduce){
     var i=0;

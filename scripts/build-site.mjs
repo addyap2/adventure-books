@@ -20,8 +20,8 @@ const DIST = join(ROOT, "dist");
 await rm(DIST, { recursive: true, force: true });
 await mkdir(DIST, { recursive: true });
 // Waymark: the library is the root; each book has its own page; the reader app is /read.html
-await cp(join(ROOT, "web", "library.html"), join(DIST, "index.html"));    // / — the Waymark library
-await cp(join(ROOT, "web", "arrival.html"), join(DIST, "the-address.html")); // /the-address — book one's page
+await cp(join(ROOT, "web", "library.html"), join(DIST, "index.html"));    // / — the Waymark library (cards from manifest)
+await cp(join(ROOT, "web", "book.html"), join(DIST, "book.html"));        // /b/<slug> — generic book landing, skinned from identity
 await cp(join(ROOT, "web", "index.html"), join(DIST, "read.html"));       // the reader app
 await cp(join(ROOT, "web", "favicon.svg"), join(DIST, "favicon.svg"));
 await cp(join(ROOT, "web", "og.png"), join(DIST, "og.png"));              // The Address social card
@@ -43,11 +43,13 @@ for (const f of files) {
   if (!json.nodes) continue;                       // the lexicon, not an episode
   episodes.push({
     file: f,
+    slug: json.slug ?? f.replace(/\.json$/, ""),
     episode: json.episode ?? 0,
     series: json.series ?? "",
     title: json.title ?? f,
     blurb: json.blurb ?? "",
     levels: json.levels ?? [],
+    identity: json.identity ?? null,          // palette + cover, so the library card can skin itself
     paragraphs: json.nodes.length,
     endings: json.nodes.filter(n => n.ending).length,
     images: await scanImages(json.series, json.episode),

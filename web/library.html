@@ -127,9 +127,9 @@
         <span class="k">The Library</span>
         <span class="count">1 available &middot; more on the way</span>
       </div>
-      <div class="shelf">
+      <div class="shelf" id="shelf">
 
-        <a class="book" href="/the-address" style="--accent:#E8A24C">
+        <a class="book" data-static href="/b/the-address" style="--accent:#E8A24C">
           <div class="cov">
             <span class="win" aria-hidden="true"></span>
             <span class="num" aria-hidden="true">I</span>
@@ -167,6 +167,48 @@
     </div>
   </section>
 </main>
+
+<script>
+/* render the shelf from the manifest so every book (with its own identity) auto-appears.
+   The static card above is the no-JS / crawler fallback; JS replaces it with live data. */
+(async function(){
+  var shelf=document.getElementById('shelf'); if(!shelf) return;
+  var EPN=['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve'];
+  function roman(n){var m=[[10,'X'],[9,'IX'],[5,'V'],[4,'IV'],[1,'I']],r='';for(var i=0;i<m.length;i++){while(n>=m[i][0]){r+=m[i][1];n-=m[i][0];}}return r||'·';}
+  function sname(s){return s?s.replace(/-/g,' ').replace(/\b\w/g,function(c){return c.toUpperCase();}):'';}
+  function esc(t){var d=document.createElement('div');d.textContent=t==null?'':t;return d.innerHTML;}
+  try{
+    var man=await fetch('/manifest.json').then(function(r){return r.json();});
+    var eps=(man.episodes||[]).slice().sort(function(a,b){return (a.episode||0)-(b.episode||0);});
+    if(!eps.length) return;
+    var frag=document.createDocumentFragment();
+    eps.forEach(function(e){
+      var pal=(e.identity&&e.identity.palette)||{};
+      var accent=pal.accent||'#E8A24C';
+      var a=document.createElement('a');
+      a.className='book'; a.href='/b/'+(e.slug||e.file.replace(/\.json$/,''));
+      a.style.setProperty('--accent',accent);
+      var tags=((e.levels||[]).join(' · '))+(e.levels&&e.levels.length?' · ':'')+'8 languages';
+      a.innerHTML=
+        '<div class="cov"><span class="win" aria-hidden="true"></span>'+
+          '<span class="num" aria-hidden="true">'+roman(e.episode||0)+'</span></div>'+
+        '<div class="meta">'+
+          '<span class="ep">Episode '+(EPN[e.episode]||e.episode||'')+' &middot; '+esc(sname(e.series))+'</span>'+
+          '<h3>'+esc(e.title)+'</h3>'+
+          '<p>'+esc(e.blurb)+'</p>'+
+          '<span class="tags">'+esc(tags)+'</span>'+
+          '<span class="enter">Enter the story</span>'+
+        '</div>';
+      frag.appendChild(a);
+    });
+    // swap the static fallback card(s) for the live ones, keep the "coming soon" tiles
+    Array.prototype.forEach.call(shelf.querySelectorAll('[data-static]'),function(n){n.remove();});
+    shelf.insertBefore(frag, shelf.firstChild);
+    var count=document.querySelector('.count');
+    if(count) count.innerHTML=eps.length+' available &middot; more on the way';
+  }catch(e){ /* keep the static fallback */ }
+})();
+</script>
 
 <footer><div class="wrap"><b>Waymark</b> &nbsp;&middot;&nbsp; Interactive stories for English learners &nbsp;&middot;&nbsp; A2 B1 B2 &nbsp;&middot;&nbsp; 8 languages</div></footer>
 

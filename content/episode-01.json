@@ -3,6 +3,7 @@
   "series": "new-city",
   "episode": 1,
   "title": "The Address",
+  "slug": "the-address",
   "blurb": "You arrive alone in a strange city at night, with one letter and one night to find the address on it.",
   "identity": {
     "name": "New City Nocturne",
@@ -25,6 +26,20 @@
       "display": "Fraunces",
       "ui": "Hanken Grotesk",
       "mono": "JetBrains Mono"
+    },
+    "hero": {
+      "line": {
+        "en": "You arrive at night, in a city you don’t know.",
+        "fr": "Vous arrivez de nuit, dans une ville que vous ne connaissez pas.",
+        "es": "Llegas de noche a una ciudad que no conoces.",
+        "it": "Arrivi di notte in una città che non conosci.",
+        "de": "Du kommst nachts in einer Stadt an, die du nicht kennst.",
+        "pt": "Chegas de noite a uma cidade que não conheces.",
+        "ru": "Ты приезжаешь ночью в город, которого не знаешь.",
+        "zh": "你在夜里来到一座陌生的城市。",
+        "ar": "تصل ليلاً إلى مدينة لا تعرفها."
+      },
+      "sub": "A story where you are the hero — and every choice turns you to a new page. Written for people learning English, at your level, with meaning in your language whenever you need it."
     }
   },
   "levels": [
