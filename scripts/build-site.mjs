@@ -19,12 +19,13 @@ const DIST = join(ROOT, "dist");
 
 await rm(DIST, { recursive: true, force: true });
 await mkdir(DIST, { recursive: true });
-// the landing ("The Arrival") is the root; the reader app lives at /read.html
-await cp(join(ROOT, "web", "arrival.html"), join(DIST, "index.html"));
-await cp(join(ROOT, "web", "index.html"), join(DIST, "read.html"));
-await cp(join(ROOT, "web", "arrival.html"), join(DIST, "arrival.html"));  // keep the old /arrival.html link working
+// Waymark: the library is the root; each book has its own page; the reader app is /read.html
+await cp(join(ROOT, "web", "library.html"), join(DIST, "index.html"));    // / — the Waymark library
+await cp(join(ROOT, "web", "arrival.html"), join(DIST, "the-address.html")); // /the-address — book one's page
+await cp(join(ROOT, "web", "index.html"), join(DIST, "read.html"));       // the reader app
 await cp(join(ROOT, "web", "favicon.svg"), join(DIST, "favicon.svg"));
-await cp(join(ROOT, "web", "og.png"), join(DIST, "og.png"));              // social preview card
+await cp(join(ROOT, "web", "og.png"), join(DIST, "og.png"));              // The Address social card
+await cp(join(ROOT, "web", "og-waymark.png"), join(DIST, "og-waymark.png")); // Waymark library social card
 // copy the art folder if the team has added any images
 try { await cp(join(ROOT, "images"), join(DIST, "images"), { recursive: true }); console.log("Copied images/"); } catch { /* no images yet — placeholders show */ }
 // copy the coverage dictionaries (dict/<lang>.json), lazy-loaded per language by the reader

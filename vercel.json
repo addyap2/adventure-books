@@ -5,6 +5,10 @@
   "framework": null,
   "cleanUrls": false,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/arrival", "destination": "/the-address", "permanent": true },
+    { "source": "/arrival.html", "destination": "/the-address", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)\\.json",

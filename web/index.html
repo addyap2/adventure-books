@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Adventure Book — read in English</title>
+<title>The Address — Waymark</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0E1320">
 <meta name="description" content="Choose-your-own-adventure stories for English learners, at three levels, with a glossary in eight languages.">
 <link rel="canonical" href="https://adventure-books-five.vercel.app/read.html">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Adventure Book">
+<meta property="og:site_name" content="Waymark">
 <meta property="og:url" content="https://adventure-books-five.vercel.app/read.html">
-<meta property="og:title" content="Adventure Book — read in English">
+<meta property="og:title" content="The Address — Waymark">
 <meta property="og:description" content="Choose-your-own-adventure stories for English learners, at three levels, with a glossary in eight languages.">
 <meta property="og:image" content="https://adventure-books-five.vercel.app/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Adventure Book — read in English">
+<meta name="twitter:title" content="The Address — Waymark">
 <meta name="twitter:description" content="A story where you are the hero — for people learning English.">
 <meta name="twitter:image" content="https://adventure-books-five.vercel.app/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -389,7 +389,7 @@
 <body>
 <div class="bar">
   <button class="iconbtn" id="back" hidden aria-label="Back to the library">←</button>
-  <span class="brand"><span class="dot"></span><span id="brand">Adventure Book</span></span>
+  <span class="brand"><span class="dot"></span><span id="brand">Waymark</span></span>
   <button class="iconbtn" id="theme" aria-label="Switch to light theme">☀</button>
   <button class="iconbtn" id="speak" aria-label="Read aloud">🔊</button>
   <button class="iconbtn" id="cog" aria-label="Settings">Aa</button>
@@ -555,7 +555,7 @@ function renderHome(){
   view="home"; introMode=false; node=null; curKey=null; hideGloss();
   $("main").className="home";
   $("back").hidden=true; $("speak").hidden=true; $("cog").hidden=true;
-  $("brand").textContent="Adventure Book"; setProgress(0);
+  $("brand").textContent="Waymark"; setProgress(0);
   const p=loadPrefs(), lvl=p.level||"B1", vw=p.homeView||"all";
   const langs=[["","English only"],["fr","Français"],["es","Español"],["pt","Português"],
     ["it","Italiano"],["de","Deutsch"],["ru","Русский"],["ar","العربية"],["zh","中文"]];
@@ -565,10 +565,10 @@ function renderHome(){
   const viewSeg=views.map(([v,t])=>`<button class="chipbtn ${v===vw?'on':''}" data-hv="${v}">${t}</button>`).join("");
   $("main").innerHTML=`
     <div class="home-hero">
-      <div class="kicker">Interactive English stories</div>
-      <h1>Adventure Book</h1>
+      <div class="kicker">An English Reading Adventure</div>
+      <h1>Waymark</h1>
       <p class="lede">Read a story. Tap any word to see it in your language.</p>
-      <a class="tolanding" href="/">&larr; The Arrival</a>
+      <a class="tolanding" href="/">&larr; Waymark home</a>
     </div>
     <div class="panel">
       <div class="row"><span>I read English at</span><span class="seg" id="homeLevel">${levelSeg}</span></div>
@@ -680,7 +680,7 @@ function renderIntro(){
   $("main").innerHTML=`<div class="cover card">
     ${artHTML("cover","",true)}
     <div class="body">
-      <div class="kicker">Adventure Book · Episode ${BOOK.episode}</div>
+      <div class="kicker">A Waymark Story · Episode ${BOOK.episode}</div>
       <h1>${BOOK.title}</h1>
       <p class="tagline">An adventure where you are the hero.</p>
       <p>You choose what happens next. Every choice turns you to a new section — read it more than once to find all ${endings} endings.</p>

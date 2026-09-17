@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0E1320">
+<meta name="description" content="Waymark — interactive stories where you are the hero, for people learning English. Read at your level, with meaning in eight languages.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://adventure-books-five.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Waymark">
+<meta property="og:url" content="https://adventure-books-five.vercel.app/">
+<meta property="og:title" content="Waymark — interactive stories for English learners">
+<meta property="og:description" content="Find your way, one story at a time. Branching stories where you are the hero — read at your level, with meaning in eight languages.">
+<meta property="og:image" content="https://adventure-books-five.vercel.app/og-waymark.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Waymark — interactive stories for English learners">
+<meta name="twitter:description" content="Find your way, one story at a time. Stories where you are the hero, for English learners.">
+<meta name="twitter:image" content="https://adventure-books-five.vercel.app/og-waymark.png">
+<title>Waymark</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ink:#0E1320; --card:#121a2c; --fg:#F4EFE6; --muted:#8A93A6; --line:#26304a;
+    --amber:#E8A24C; --amber-hot:#F4BE72; --dawn:#86C9B4;
+    --serif:"Fraunces",Georgia,serif; --grot:"Hanken Grotesk",ui-sans-serif,system-ui,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{overflow-x:clip;scroll-behavior:smooth}
+  body{margin:0;background:var(--ink);color:var(--fg);font-family:var(--grot);
+    overflow-x:clip;-webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(120% 70% at 50% -8%, #18223c 0%, transparent 55%);
+    background-attachment:fixed}
+  ::selection{background:var(--amber);color:var(--ink)}
+  a{color:inherit;text-decoration:none}
+
+  .bar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:14px;
+    padding:16px clamp(18px,4vw,44px);
+    background:linear-gradient(to bottom,rgba(8,11,20,.72),rgba(8,11,20,0));backdrop-filter:blur(3px)}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-weight:500;font-size:19px;letter-spacing:.01em;margin-right:auto}
+  .mark{width:15px;height:20px;border-radius:2px;background:var(--amber);
+    box-shadow:0 0 16px 2px rgba(232,162,76,.75),0 0 4px rgba(244,190,114,.9);flex:none}
+  .navnote{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);display:none}
+  @media(min-width:640px){.navnote{display:inline}}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:0 clamp(18px,5vw,64px)}
+
+  /* hero */
+  .hero{padding:clamp(56px,13vh,140px) 0 clamp(30px,6vh,60px);position:relative}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--amber);
+    display:flex;align-items:center;gap:12px;margin:0 0 22px}
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--amber);opacity:.7}
+  h1{font-family:var(--serif);font-weight:300;font-style:italic;font-size:clamp(3rem,10vw,6.4rem);
+    line-height:.98;letter-spacing:-.02em;margin:0;color:#fff}
+  .tagline{font-family:var(--serif);font-size:clamp(1.2rem,2.6vw,1.7rem);font-style:italic;color:var(--dawn);margin:14px 0 0}
+  .intro{max-width:52ch;color:#c3cad9;font-size:clamp(1rem,1.5vw,1.15rem);margin:22px 0 0;line-height:1.6}
+
+  /* library */
+  .lib{padding:clamp(30px,6vh,64px) 0 clamp(80px,14vh,140px)}
+  .lib-head{display:flex;align-items:baseline;gap:16px;margin:0 0 30px;border-top:1px solid var(--line);padding-top:26px}
+  .lib-head .k{font-family:var(--mono);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+  .lib-head .count{font-family:var(--mono);font-size:12px;color:var(--amber);margin-left:auto}
+  .shelf{display:grid;gap:22px;grid-template-columns:1fr}
+  @media(min-width:720px){.shelf{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1000px){.shelf{grid-template-columns:repeat(3,1fr)}}
+
+  .book{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    background:var(--card);display:flex;flex-direction:column;transition:transform .3s,border-color .3s,box-shadow .3s}
+  .book:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 24px 60px -18px rgba(0,0,0,.7)}
+  .book:focus-visible{outline:2px solid var(--amber-hot);outline-offset:3px}
+  /* the cover = a mini nocturne carrying the book's own accent */
+  .book .cov{position:relative;aspect-ratio:16/10;overflow:hidden;
+    background:
+      radial-gradient(75% 60% at 72% 30%, color-mix(in srgb, var(--accent) 30%, transparent), transparent 46%),
+      linear-gradient(#0b1224 0%, #101a30 60%, #16203c 100%)}
+  .book .cov::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:.6;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E")}
+  .book .win{position:absolute;right:22%;top:34%;width:13px;height:18px;border-radius:2px;background:var(--amber-hot);
+    box-shadow:0 0 22px 5px color-mix(in srgb, var(--accent) 70%, transparent)}
+  .book .cov .num{position:absolute;left:18px;bottom:12px;font-family:var(--serif);font-style:italic;
+    font-size:40px;color:color-mix(in srgb, var(--accent) 70%, #fff);opacity:.9;line-height:1}
+  .book .meta{padding:20px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .book .ep{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .book h3{font-family:var(--serif);font-weight:400;font-size:1.55rem;margin:0;letter-spacing:-.01em}
+  .book p{margin:0;color:#aeb6c6;font-size:.96rem;line-height:1.5;flex:1}
+  .book .tags{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+  .book .enter{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);margin-top:6px}
+  .book .enter::after{content:" \2192";opacity:.7}
+
+  .book.soon{opacity:.55;pointer-events:none}
+  .book.soon .cov{background:linear-gradient(#0d1220,#0a0e19)}
+  .book.soon .win{background:var(--muted);box-shadow:none}
+
+  footer{border-top:1px solid var(--line);padding:34px 0 60px;color:var(--muted);font-family:var(--mono);
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+  footer b{color:var(--fg);font-weight:500}
+
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.book{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a class="brand" href="/"><span class="mark" aria-hidden="true"></span>Waymark</a>
+  <span class="navnote">An English Reading Adventure</span>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">An English Reading Adventure</p>
+      <h1>Waymark</h1>
+      <p class="tagline">Find your way, one story at a time.</p>
+      <p class="intro">Branching stories for people learning English. You choose what happens next; the English meets you at your level; and the meaning waits in your language whenever you need it. Every book is its own world &mdash; step into one.</p>
+    </div>
+  </section>
+
+  <section class="lib">
+    <div class="wrap">
+      <div class="lib-head">
+        <span class="k">The Library</span>
+        <span class="count">1 available &middot; more on the way</span>
+      </div>
+      <div class="shelf">
+
+        <a class="book" href="/the-address" style="--accent:#E8A24C">
+          <div class="cov">
+            <span class="win" aria-hidden="true"></span>
+            <span class="num" aria-hidden="true">I</span>
+          </div>
+          <div class="meta">
+            <span class="ep">Episode One &middot; New City</span>
+            <h3>The Address</h3>
+            <p>You arrive at night in a city you don&rsquo;t know, with a letter and an address that may be wrong. Find your way before nine o&rsquo;clock.</p>
+            <span class="tags">A2 &middot; B1 &middot; B2 &middot; 8 languages</span>
+            <span class="enter">Enter the story</span>
+          </div>
+        </a>
+
+        <div class="book soon" style="--accent:#6f86c9" aria-hidden="true">
+          <div class="cov"><span class="win"></span><span class="num">II</span></div>
+          <div class="meta">
+            <span class="ep">New City &middot; Episode Two</span>
+            <h3>Coming soon</h3>
+            <p>The next chapter of the arc &mdash; a new corner of the city, a new night, a new set of choices.</p>
+            <span class="tags">In the works</span>
+          </div>
+        </div>
+
+        <div class="book soon" style="--accent:#4f9e86" aria-hidden="true">
+          <div class="cov"><span class="win"></span><span class="num">&middot;</span></div>
+          <div class="meta">
+            <span class="ep">A new series</span>
+            <h3>Coming soon</h3>
+            <p>A different world, its own look and feel &mdash; each Waymark book is designed as its own place.</p>
+            <span class="tags">In the works</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><b>Waymark</b> &nbsp;&middot;&nbsp; Interactive stories for English learners &nbsp;&middot;&nbsp; A2 B1 B2 &nbsp;&middot;&nbsp; 8 languages</div></footer>
+
+</body>
+</html>
