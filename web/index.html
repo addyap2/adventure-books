@@ -23,6 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<script>/* set theme before paint to avoid a flash */try{var _p=JSON.parse(localStorage.getItem("ab:prefs")||"{}");document.documentElement.setAttribute("data-theme",_p.theme==="light"?"light":"dark");}catch(e){document.documentElement.setAttribute("data-theme","dark");}</script>
 <style>
   /* Nocturne — the reader shares the landing's world: ink night, one warm
      sodium-amber light, dawn teal as the second note. Committed dark (the story
@@ -360,12 +361,36 @@
   .chipbtn.on, .seg button.on { background:var(--accent) !important; color:#12101a !important; border-color:var(--accent) !important; }
   .again button, .stamps i.got { color:#12101a; }
   .book { background:var(--card); }
+
+  /* ---- light "paper" reading mode (opt-in; nocturne stays the default) ---- */
+  :root[data-theme="light"]{
+    --bg:#F4EFE6; --fg:#211d18; --muted:#6b6560; --line:#e5ddce;
+    --accent:#A85B22; --accent-2:#2F5D50; --accent-soft:#f3ecdf; --card:#FFFDF8;
+    --gloss:#fff8ec; --shadow:0 12px 40px rgba(30,25,20,.14);
+    color-scheme:light;
+  }
+  [data-theme="light"] body{ background-image:radial-gradient(120% 80% at 50% -12%, #fbf6ec 0%, transparent 55%); }
+  [data-theme="light"] .para{ color:#26221c; }
+  [data-theme="light"] .pnum{ color:hsl(var(--hue,190) 42% 36%); }
+  [data-theme="light"] .cover{
+    background:
+      radial-gradient(90% 55% at 74% 14%, rgba(232,162,76,.22), transparent 46%),
+      radial-gradient(60% 40% at 20% 6%, rgba(47,93,80,.08), transparent 55%),
+      linear-gradient(#fffdf8 0%, #f6efe2 100%); }
+  [data-theme="light"] .cover h1{ color:#211d18; }
+  [data-theme="light"] .cover p{ color:#5f594f; }
+  [data-theme="light"] .cover .chips span{ background:#f2ead9; border-color:var(--line); color:#4b453d; }
+  [data-theme="light"] .chipbtn.on, [data-theme="light"] .seg button.on,
+  [data-theme="light"] .again button, [data-theme="light"] .stamps i.got,
+  [data-theme="light"] .start{ color:#fff !important; }
+  [data-theme="light"] .bar .brand .dot{ box-shadow:0 0 10px 1px rgba(168,91,34,.35); }
 </style>
 </head>
 <body>
 <div class="bar">
   <button class="iconbtn" id="back" hidden aria-label="Back to the library">←</button>
   <span class="brand"><span class="dot"></span><span id="brand">Adventure Book</span></span>
+  <button class="iconbtn" id="theme" aria-label="Switch to light theme">☀</button>
   <button class="iconbtn" id="speak" aria-label="Read aloud">🔊</button>
   <button class="iconbtn" id="cog" aria-label="Settings">Aa</button>
   <div class="progress" id="progress"></div>
@@ -456,7 +481,21 @@ async function applyLang(lang){
   if(view==="book" && !introMode && node!=null) render();
 }
 
+/* theme — nocturne (dark) is the default; a paper "light" mode is opt-in and remembered */
+function applyTheme(t){
+  const light = t==="light";
+  document.documentElement.setAttribute("data-theme", light?"light":"dark");
+  const b=$("theme");
+  if(b){ b.textContent = light ? "☾" : "☀";
+    b.setAttribute("aria-label", light ? "Switch to dark theme" : "Switch to light theme"); }
+}
+$("theme").onclick=()=>{
+  const next = (loadPrefs().theme==="light") ? "dark" : "light";
+  savePrefs({...loadPrefs(), theme:next}); applyTheme(next);
+};
+
 async function boot(){
+  applyTheme(loadPrefs().theme==="light" ? "light" : "dark");
   document.documentElement.classList.toggle("fine", finePointer());
   MANIFEST=await (await fetch("manifest.json")).json();
   // shared series lexicon (a base every book inherits); a book may add/override its own
