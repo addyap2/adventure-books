@@ -1,8 +1,13 @@
 # The Address — image-generation prompt sheet
 
 For the visual partner. These turn the **actual passages** into ready-to-generate prompts,
-organised **by location** (≈30 images) so the set stays consistent — not one-per-passage
-(see `art-shotlist.md` for why). Companion specs live in `art-brief.md`.
+organised **by scene** (33 images) so the set stays consistent — not one-per-passage
+(see `art-shotlist.md` for why). Companion specs live in `art-brief.md`; the recurring
+cast, props and consistency technique are in `art-reference-sheet.md`.
+
+> **Which passages each image serves** is defined authoritatively in `art-shotlist.md`
+> (with the exact `cp` commands). The `(also: …)` hints below are indicative — if they
+> ever disagree with the shot-list, the shot-list wins.
 
 ## How to use this
 
@@ -102,6 +107,10 @@ Negative: no text, no lettering or numbers, no faces, no watermark, no logos, no
 ### `16.webp` — the hotel room *(also: 10, 59, 104, 125, 129)*
 **Prompt:** A small, clean, cheap hotel room at night; a good bed; through the window, across the road, a glowing yellow agency sign; warm lamp inside, cold blue outside.
 **Alt:** A small clean room; a window onto a yellow agency sign across the road.
+
+### `69.webp` — the letter, reread *(also: 21, 34, 72, 73, 114)*
+**Prompt:** Close, top-down on two cupped hands over an open shoulder bag on the knees; inside, a folded typed letter, a few thin banknotes, and a phone showing one bar of battery; a photograph face-down, unturned; cold night light with one warm edge; the whole decision held in the palms. Hands only — no face.
+**Alt:** Hands and an open bag: a folded letter, a little money, a dying phone — the choice in the palm.
 
 ---
 
