@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0E1320">
+<meta name="description" content="The Address — an Adventure Book. A story where you are the hero, for people learning English, at three levels, with meaning in eight languages.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>The Arrival — Adventure Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ink:#0E1320; --ink-2:#0a0e19; --teal-deep:#173A34; --teal:#2F5D50;
+    --amber:#E8A24C; --amber-hot:#F4BE72; --dawn:#86C9B4; --bone:#F4EFE6;
+    --ash:#8A93A6; --ash-dim:#5b6274;
+    --measure:64ch;
+    --serif:"Fraunces",Georgia,"Times New Roman",serif;
+    --grot:"Hanken Grotesk",ui-sans-serif,system-ui,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",monospace;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{overflow-x:clip;scroll-behavior:smooth}
+  body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--grot);
+    font-size:16px;line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  a{color:inherit}
+  ::selection{background:var(--amber);color:var(--ink)}
+
+  /* ---------- top bar ---------- */
+  .bar{position:fixed;inset:0 0 auto 0;z-index:40;display:flex;align-items:center;gap:14px;
+    padding:16px clamp(18px,4vw,44px);
+    background:linear-gradient(to bottom,rgba(8,11,20,.72),rgba(8,11,20,0));
+    backdrop-filter:blur(2px)}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);
+    font-weight:500;font-size:18px;letter-spacing:.01em;margin-right:auto}
+  .mark{width:15px;height:20px;border-radius:2px;background:var(--amber);
+    box-shadow:0 0 16px 2px rgba(232,162,76,.75),0 0 4px rgba(244,190,114,.9);
+    position:relative;flex:none}
+  .mark::after{content:"";position:absolute;inset:0;border-radius:2px;
+    background:linear-gradient(160deg,rgba(255,240,214,.9),transparent 60%)}
+  .bar .globe{font-family:var(--mono);font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--ash);display:none}
+  @media(min-width:640px){.bar .globe{display:inline}}
+  .ghost{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--bone);border:1px solid rgba(138,147,166,.35);border-radius:100px;
+    padding:9px 16px;text-decoration:none;transition:border-color .3s,color .3s,background .3s}
+  .ghost:hover{border-color:var(--amber);color:var(--amber-hot)}
+
+  /* ---------- hero stage ---------- */
+  .stage{position:relative;height:100svh;min-height:600px;overflow:hidden;isolation:isolate}
+  .layer{position:absolute;inset:-6% -6% -6% -6%;width:112%;height:112%;
+    will-change:transform;transform:translateZ(0)}
+  .layer svg,.layer canvas{width:100%;height:100%;display:block}
+  #sky{background:
+    radial-gradient(120% 90% at 72% 18%,#243155 0%,transparent 55%),
+    linear-gradient(#070a14 0%,#0d1428 42%,#152142 76%,#26314e 100%)}
+  #haze{background:radial-gradient(80% 60% at 50% 78%,rgba(232,162,76,.05),transparent 60%);
+    mix-blend-mode:screen;pointer-events:none}
+  #fog{pointer-events:none}
+  /* the WebGL scene mounts over the SVG poster; the CSS gradient is the sky behind it */
+  .stage{background:linear-gradient(#070a14 0%,#0d1428 42%,#152142 76%,#26314e 100%)}
+  #gl{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:6;pointer-events:none}
+
+  /* the single lit window + its breathing glow (the brand's north star) */
+  .win{fill:var(--amber-hot)}
+  .glow{transform-origin:center;transform-box:fill-box}
+  @keyframes breathe{0%,100%{opacity:.55}50%{opacity:.9}}
+  @keyframes winflick{0%,100%{opacity:1}50%{opacity:.9}}
+
+  /* ---------- hero copy ---------- */
+  .hero-copy{position:absolute;z-index:20;left:0;right:0;bottom:0;
+    padding:0 clamp(18px,5vw,64px) clamp(30px,7vh,72px);
+    display:flex;flex-direction:column;align-items:flex-start;gap:22px;
+    pointer-events:none}
+  .hero-copy>*{pointer-events:auto}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--amber);display:flex;align-items:center;gap:12px}
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--amber);opacity:.7}
+  .lede{font-family:var(--serif);font-weight:300;font-optical-sizing:auto;
+    font-size:clamp(2.1rem,6.4vw,5.1rem);line-height:1.02;letter-spacing:-.015em;
+    margin:0;max-width:16ch;text-wrap:balance;
+    text-shadow:0 2px 40px rgba(6,9,20,.6)}
+  .lede .morph{display:inline;font-style:italic;color:#fff}
+  .lede .morph[dir=rtl]{font-style:normal}
+  .langcode{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--ash);
+    min-height:1em}
+  .sub{font-size:clamp(1rem,1.5vw,1.18rem);color:#cdd4e2;max-width:46ch;margin:0;
+    font-weight:400;text-wrap:pretty}
+  .actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:4px}
+  .cta{--c:var(--amber);text-decoration:none;font-family:var(--grot);font-weight:600;
+    font-size:15px;letter-spacing:.01em;color:var(--ink);background:var(--amber);
+    padding:15px 26px;border-radius:100px;display:inline-flex;align-items:center;gap:12px;
+    box-shadow:0 10px 40px -8px rgba(232,162,76,.6);transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden}
+  .cta span{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 16px 50px -8px rgba(232,162,76,.75)}
+  .cta:hover span{transform:translateX(5px)}
+  .cta:focus-visible,.ghost:focus-visible,.textlink:focus-visible{outline:2px solid var(--amber-hot);outline-offset:3px}
+  .textlink{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ash);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px;transition:color .3s,border-color .3s}
+  .textlink:hover{color:var(--dawn);border-color:var(--dawn)}
+  .scrollcue{position:absolute;left:50%;bottom:20px;z-index:20;transform:translateX(-50%);
+    font-family:var(--mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--ash);
+    display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.8}
+  .scrollcue i{width:1px;height:30px;background:linear-gradient(var(--ash),transparent);animation:cue 2.4s ease-in-out infinite}
+  @keyframes cue{0%{transform:scaleY(0);transform-origin:top;opacity:0}40%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);transform-origin:bottom;opacity:0}}
+
+  /* ---------- editorial beats ---------- */
+  .wrap{max-width:1160px;margin:0 auto;padding:0 clamp(18px,5vw,64px)}
+  .beat{position:relative;z-index:2;background:var(--ink)}
+  .beat-1{padding:clamp(80px,16vh,180px) 0 clamp(60px,10vh,120px)}
+  .snum{font-family:var(--serif);font-weight:300;font-size:clamp(3.4rem,11vw,9rem);
+    line-height:.8;color:var(--teal);opacity:.9;letter-spacing:-.02em}
+  .snum b{color:var(--amber);font-weight:400}
+  .klabel{font-family:var(--mono);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--ash);margin:26px 0 20px}
+  .statement{font-family:var(--serif);font-weight:300;font-size:clamp(1.7rem,4vw,3.15rem);
+    line-height:1.14;letter-spacing:-.01em;max-width:20ch;margin:0 0 6px;text-wrap:balance}
+  .statement em{font-style:italic;color:var(--amber-hot)}
+  .body{color:#c3cad9;max-width:52ch;font-size:clamp(1rem,1.4vw,1.15rem);margin:26px 0 0}
+
+  .pillars{display:grid;gap:1px;background:rgba(138,147,166,.16);border:1px solid rgba(138,147,166,.16);
+    border-radius:16px;overflow:hidden;margin-top:clamp(48px,8vh,88px)}
+  @media(min-width:760px){.pillars{grid-template-columns:repeat(3,1fr)}}
+  .pillar{background:linear-gradient(180deg,#101627,#0d1220);padding:clamp(26px,3vw,38px)}
+  .pillar .n{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:18px}
+  .pillar .n i{width:9px;height:12px;border-radius:1.5px;background:var(--amber);box-shadow:0 0 10px rgba(232,162,76,.7);flex:none}
+  .pillar h3{font-family:var(--serif);font-weight:400;font-size:1.45rem;margin:0 0 10px;letter-spacing:-.01em}
+  .pillar p{margin:0;color:#aeb6c6;font-size:.98rem;line-height:1.55}
+
+  /* closing / CTA */
+  .close{position:relative;overflow:hidden;padding:clamp(90px,18vh,200px) 0 clamp(70px,12vh,150px);
+    text-align:center;background:
+      radial-gradient(70% 120% at 50% 0%,rgba(232,162,76,.10),transparent 55%),
+      linear-gradient(180deg,#0d1220,#0a0e19)}
+  .close .snum{color:var(--teal)}
+  .close h2{font-family:var(--serif);font-weight:300;font-size:clamp(2rem,5.5vw,4rem);
+    line-height:1.05;letter-spacing:-.015em;margin:18px auto 0;max-width:14ch;text-wrap:balance}
+  .close h2 em{font-style:italic;color:var(--amber-hot)}
+  .close .actions{justify-content:center;margin-top:38px}
+  .footline{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--ash-dim);margin-top:clamp(60px,12vh,120px)}
+  .footline b{color:var(--ash);font-weight:500}
+
+  /* sound toggle */
+  .sound{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--ash);background:transparent;
+    border:1px solid rgba(138,147,166,.35);border-radius:100px;padding:9px 14px;cursor:pointer;
+    transition:border-color .3s,color .3s}
+  .sound:hover{border-color:var(--dawn);color:var(--dawn)}
+  .sound .dot{width:8px;height:11px;border-radius:1.5px;background:var(--ash-dim);transition:.3s;flex:none}
+  .sound[aria-pressed=true]{color:var(--amber);border-color:rgba(232,162,76,.5)}
+  .sound[aria-pressed=true] .dot{background:var(--amber);box-shadow:0 0 10px rgba(232,162,76,.85)}
+  .sound:focus-visible{outline:2px solid var(--amber-hot);outline-offset:3px}
+  @media(max-width:560px){.sound .lbl{display:none}.sound{padding:9px 11px}}
+
+  /* interactive pillar actions */
+  .pact{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .chip{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:#cfd4e2;text-decoration:none;border:1px solid rgba(138,147,166,.28);border-radius:100px;
+    padding:7px 12px;transition:.25s}
+  .chip:hover{border-color:var(--amber);color:var(--amber-hot);background:rgba(232,162,76,.06)}
+  .chip:focus-visible,.pgo:focus-visible,.ep:focus-visible{outline:2px solid var(--amber-hot);outline-offset:3px}
+  .pgo{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--amber);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:3px;transition:.25s}
+  .pgo:hover{border-color:var(--amber)}
+
+  /* series beat — the arc as lit windows */
+  .series{padding:clamp(20px,4vh,40px) 0 clamp(80px,14vh,150px)}
+  .skyline{display:flex;align-items:stretch;gap:10px;margin-top:38px;flex-wrap:wrap}
+  .ep{position:relative;flex:1 1 150px;min-width:140px;text-decoration:none;color:inherit;
+    border:1px solid rgba(138,147,166,.16);border-radius:12px;
+    background:linear-gradient(180deg,#101627,#0b1020);padding:22px 18px;transition:.3s}
+  .ep .win2{width:12px;height:16px;border-radius:2px;background:var(--ash-dim);margin-bottom:16px}
+  .ep .tag{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash);display:block;margin-bottom:6px}
+  .ep h4{font-family:var(--serif);font-weight:400;font-size:1.2rem;margin:0;letter-spacing:-.01em}
+  .ep.dim{opacity:.5}.ep.dim h4{color:var(--ash)}
+  .ep.live{border-color:rgba(232,162,76,.35)}
+  .ep.live .win2{background:var(--amber);box-shadow:0 0 14px 2px rgba(232,162,76,.7)}
+  .ep.live:hover{transform:translateY(-3px);border-color:var(--amber)}
+
+  /* reveal (progressive; visible without JS) */
+  .js .reveal{opacity:0;transform:translateY(26px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+  .js .reveal.in{opacity:1;transform:none}
+  .js .reveal.d1{transition-delay:.08s}.js .reveal.d2{transition-delay:.16s}.js .reveal.d3{transition-delay:.24s}
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .glow,.win,.scrollcue i{animation:none!important}
+    .js .reveal{opacity:1!important;transform:none!important;transition:none!important}
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="brand"><span class="mark" aria-hidden="true"></span>Adventure Book</div>
+  <span class="globe">8 languages · A2 · B1 · B2</span>
+  <button class="sound" id="sound" type="button" aria-pressed="false" aria-label="Toggle ambient night sound"><span class="dot" aria-hidden="true"></span><span class="lbl">Sound</span></button>
+  <a class="ghost" href="/?book=episode-01.json" target="_blank" rel="noopener noreferrer">Begin</a>
+</header>
+
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="stage" id="stage" aria-label="The arrival">
+    <canvas id="gl" aria-hidden="true"></canvas>
+    <div class="layer" id="sky" data-depth="0.02" aria-hidden="true"></div>
+
+    <div class="layer" id="stars" data-depth="0.06" aria-hidden="true">
+      <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+        <g fill="#cdd6ee">
+          <circle cx="210" cy="150" r="1.5" opacity=".7"/><circle cx="430" cy="90" r="1.1" opacity=".5"/>
+          <circle cx="620" cy="190" r="1.4" opacity=".6"/><circle cx="980" cy="120" r="1.2" opacity=".55"/>
+          <circle cx="1180" cy="210" r="1.7" opacity=".7"/><circle cx="1340" cy="110" r="1.1" opacity=".5"/>
+          <circle cx="820" cy="250" r="1" opacity=".4"/><circle cx="320" cy="300" r="1.1" opacity=".4"/>
+          <circle cx="1440" cy="290" r="1.3" opacity=".5"/><circle cx="120" cy="240" r="1.1" opacity=".45"/>
+          <circle cx="700" cy="70" r="1" opacity=".4"/><circle cx="1080" cy="330" r="1" opacity=".35"/>
+        </g>
+        <circle cx="1180" cy="235" r="66" fill="#e8ecf7" opacity=".12"/>
+        <circle cx="1180" cy="235" r="44" fill="#eef1f9" opacity=".22"/>
+        <circle cx="1198" cy="222" r="44" fill="#0d1428" opacity=".18"/>
+      </svg>
+    </div>
+
+    <div class="layer" id="towers" data-depth="0.12" aria-hidden="true">
+      <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+        <g fill="#0c1327">
+          <rect x="760" y="360" width="120" height="640"/><rect x="900" y="430" width="96" height="570"/>
+          <rect x="1016" y="300" width="150" height="700"/><rect x="1186" y="410" width="118" height="590"/>
+          <rect x="1324" y="470" width="150" height="530"/><rect x="1488" y="520" width="112" height="480"/>
+        </g>
+        <g fill="#1a2745" opacity=".55">
+          <rect x="782" y="392" width="13" height="18"/><rect x="808" y="392" width="13" height="18"/><rect x="834" y="392" width="13" height="18"/>
+          <rect x="782" y="430" width="13" height="18"/><rect x="834" y="430" width="13" height="18"/>
+          <rect x="1040" y="330" width="14" height="20"/><rect x="1070" y="330" width="14" height="20"/><rect x="1100" y="330" width="14" height="20"/>
+          <rect x="1040" y="372" width="14" height="20"/><rect x="1100" y="372" width="14" height="20"/>
+          <rect x="1040" y="470" width="14" height="20"/><rect x="1070" y="470" width="14" height="20"/><rect x="1100" y="470" width="14" height="20"/>
+          <rect x="1210" y="440" width="13" height="18"/><rect x="1240" y="440" width="13" height="18"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- old town + THE lit window -->
+    <div class="layer" id="town" data-depth="0.28" aria-hidden="true">
+      <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <radialGradient id="winGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#ffce7e" stop-opacity=".85"/>
+            <stop offset="45%" stop-color="#f2a94e" stop-opacity=".28"/>
+            <stop offset="100%" stop-color="#f2a94e" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <g fill="#080d1a">
+          <rect x="0" y="560" width="120" height="440"/>
+          <rect x="96" y="500" width="150" height="500"/>
+          <path d="M96 500 L171 452 L246 500 Z"/>
+          <rect x="250" y="590" width="120" height="410"/>
+          <rect x="360" y="520" width="140" height="480"/>
+          <path d="M360 520 L430 486 L500 520 Z"/>
+          <rect x="500" y="600" width="120" height="400"/>
+          <rect x="600" y="470" width="150" height="530"/>
+        </g>
+        <!-- the one warm window, high on the near tower -->
+        <ellipse class="glow" cx="662" cy="556" rx="150" ry="180" fill="url(#winGlow)"/>
+        <rect class="win" x="650" y="540" width="24" height="36" rx="1"/>
+      </svg>
+    </div>
+
+    <canvas class="layer" id="fog" data-depth="0.4" aria-hidden="true"></canvas>
+
+    <div class="layer" id="river" data-depth="0.52" aria-hidden="true">
+      <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+        <rect x="0" y="720" width="1600" height="170" fill="#0b1224"/>
+        <rect x="0" y="720" width="1600" height="170" fill="url(#riv)" opacity=".5"/>
+        <defs><linearGradient id="riv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17223f"/><stop offset="1" stop-color="#0a1020"/></linearGradient></defs>
+        <rect x="652" y="726" width="22" height="150" fill="#f2b45c" opacity=".26"/>
+        <rect x="1075" y="726" width="12" height="96" fill="#26365a" opacity=".4"/>
+        <rect x="470" y="726" width="9" height="80" fill="#26365a" opacity=".35"/>
+        <g stroke="#33436b" stroke-width="1.4" opacity=".45">
+          <line x1="180" y1="760" x2="360" y2="760"/><line x1="520" y1="800" x2="700" y2="800"/>
+          <line x1="900" y1="778" x2="1120" y2="778"/><line x1="1180" y1="828" x2="1360" y2="828"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="layer" id="embank" data-depth="0.72" aria-hidden="true">
+      <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+        <rect x="0" y="878" width="1600" height="122" fill="#05070f"/>
+        <rect x="0" y="878" width="1600" height="3" fill="#243258" opacity=".55"/>
+      </svg>
+    </div>
+
+    <div class="layer" id="figure" data-depth="0.95" aria-hidden="true">
+      <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+        <ellipse cx="520" cy="946" rx="86" ry="13" fill="#000" opacity=".38"/>
+        <path d="M520 852 C544 855 553 874 556 900 L566 946 L474 946 L484 900 C487 874 496 855 520 852 Z" fill="#04060d"/>
+        <circle cx="520" cy="832" r="18" fill="#04060d"/>
+        <path d="M498 828 q22 -19 44 0 z" fill="#04060d"/>
+        <rect x="556" y="902" width="36" height="30" rx="3" fill="#05080f"/>
+        <rect x="568" y="895" width="12" height="9" rx="2" fill="#05080f"/>
+        <path d="M556 900 L566 946" stroke="#e7ad5d" stroke-width="2.4" opacity=".5" fill="none"/>
+        <path d="M537 820 q14 7 18 30" stroke="#e7ad5d" stroke-width="1.8" opacity=".38" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="layer" id="haze" data-depth="0.6" aria-hidden="true"></div>
+
+    <div class="hero-copy" id="heroCopy">
+      <p class="eyebrow">An Adventure Book · Episode One</p>
+      <h1 class="lede">
+        <span class="sr-only">You arrive at night, in a city you don't know.</span>
+        <span class="morph" aria-hidden="true" id="morph">You arrive at night, in a city you don&rsquo;t know.</span>
+      </h1>
+      <span class="langcode" id="langcode" aria-hidden="true"></span>
+      <p class="sub">A story where <em>you</em> are the hero &mdash; and every choice turns you to a new page. Written for people learning English, at your level, with meaning in your language whenever you need it.</p>
+      <div class="actions">
+        <a class="cta" href="/?book=episode-01.json" target="_blank" rel="noopener noreferrer">Begin your arrival <span aria-hidden="true">&rarr;</span></a>
+        <a class="textlink" href="#how">How it works</a>
+      </div>
+    </div>
+    <div class="scrollcue" aria-hidden="true">Walk on<i></i></div>
+  </section>
+
+  <!-- ================= BEAT ================= -->
+  <section class="beat beat-1" id="how">
+    <div class="wrap">
+      <div class="snum reveal">&sect;&nbsp;<b>02</b></div>
+      <p class="klabel reveal d1">You are the hero</p>
+      <h2 class="statement reveal d1">Not a course. A city you <em>find your way</em> through.</h2>
+      <p class="body reveal d2">You have a letter, an address that may be wrong, and until nine o&rsquo;clock tomorrow. What you do next is yours to choose &mdash; and the English bends to your level while you read.</p>
+
+      <div class="pillars">
+        <div class="pillar reveal d1">
+          <div class="n"><i></i>Choose your path</div>
+          <h3>Every choice turns a page</h3>
+          <p>Branching sections, twelve endings to find. Read it again and the night goes differently.</p>
+          <div class="pact"><a class="pgo" href="/?book=episode-01.json" target="_blank" rel="noopener noreferrer">Begin the story &rarr;</a></div>
+        </div>
+        <div class="pillar reveal d2">
+          <div class="n"><i></i>Read at your level</div>
+          <h3>A2, B1 or B2 &mdash; you decide</h3>
+          <p>The same story, three depths of English. Move up when you&rsquo;re ready; nothing is dumbed down.</p>
+          <div class="pact">
+            <a class="chip" href="/?book=episode-01.json&amp;level=A2" target="_blank" rel="noopener noreferrer">A2</a>
+            <a class="chip" href="/?book=episode-01.json&amp;level=B1" target="_blank" rel="noopener noreferrer">B1</a>
+            <a class="chip" href="/?book=episode-01.json&amp;level=B2" target="_blank" rel="noopener noreferrer">B2</a>
+          </div>
+        </div>
+        <div class="pillar reveal d3">
+          <div class="n"><i></i>Meaning when you need it</div>
+          <h3>Eight languages, one tap away</h3>
+          <p>Tap any word, or reveal a whole passage in your language &mdash; then step back into the English.</p>
+          <div class="pact">
+            <a class="chip" href="/?book=episode-01.json&amp;lang=fr" target="_blank" rel="noopener noreferrer">FR</a>
+            <a class="chip" href="/?book=episode-01.json&amp;lang=es" target="_blank" rel="noopener noreferrer">ES</a>
+            <a class="chip" href="/?book=episode-01.json&amp;lang=it" target="_blank" rel="noopener noreferrer">IT</a>
+            <a class="chip" href="/?book=episode-01.json&amp;lang=de" target="_blank" rel="noopener noreferrer">DE</a>
+            <a class="chip" href="/?book=episode-01.json&amp;lang=pt" target="_blank" rel="noopener noreferrer">PT</a>
+            <a class="chip" href="/?book=episode-01.json&amp;lang=ru" target="_blank" rel="noopener noreferrer">RU</a>
+            <a class="chip" href="/?book=episode-01.json&amp;lang=ar" target="_blank" rel="noopener noreferrer">AR</a>
+            <a class="chip" href="/?book=episode-01.json&amp;lang=zh" target="_blank" rel="noopener noreferrer">中文</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERIES ================= -->
+  <section class="beat series" id="series">
+    <div class="wrap">
+      <div class="snum reveal">&sect;&nbsp;<b>03</b></div>
+      <p class="klabel reveal d1">The arc</p>
+      <h2 class="statement reveal d1">One window is lit. <em>More will follow.</em></h2>
+      <p class="body reveal d2">&ldquo;The Address&rdquo; is Episode One of the <b>New City</b> arc &mdash; a series for readers who&rsquo;d rather find their way into English than drill it. Each new episode lights another window.</p>
+      <div class="skyline">
+        <a class="ep live reveal d1" href="/?book=episode-01.json" target="_blank" rel="noopener noreferrer">
+          <span class="win2" aria-hidden="true"></span><span class="tag">Episode One · Live</span><h4>The Address</h4></a>
+        <div class="ep dim reveal d2"><span class="win2" aria-hidden="true"></span><span class="tag">Episode Two</span><h4>Coming</h4></div>
+        <div class="ep dim reveal d2"><span class="win2" aria-hidden="true"></span><span class="tag">Episode Three</span><h4>Coming</h4></div>
+        <div class="ep dim reveal d3"><span class="win2" aria-hidden="true"></span><span class="tag">Episode Four</span><h4>Coming</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CLOSE ================= -->
+  <section class="close" id="begin">
+    <div class="wrap">
+      <div class="snum reveal">&sect;&nbsp;<b>&infin;</b></div>
+      <h2 class="reveal d1">The train has gone. The city is <em>yours</em> to read.</h2>
+      <div class="actions reveal d2">
+        <a class="cta" href="/?book=episode-01.json" target="_blank" rel="noopener noreferrer">Begin your arrival <span aria-hidden="true">&rarr;</span></a>
+        <a class="textlink" href="/" target="_blank" rel="noopener noreferrer">Choose language &amp; level</a>
+      </div>
+      <p class="footline reveal d2"><b>Adventure Book</b> &nbsp;·&nbsp; New City &nbsp;·&nbsp; Episode One &mdash; <b>The Address</b></p>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- postprocessing (examples/js globals) for UnrealBloom. EffectComposer.js defines
+     THREE.Pass, so it must load BEFORE the passes that extend it. -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/MaskPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+<script>
+(function(){
+  var root=document.documentElement; root.classList.add('js');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  // low-end gate: keep the 3D scene, but drop the costly bloom pass on weak devices.
+  // uses real signals (RAM, cores, coarse-pointer small screens), so strong phones keep it.
+  function lowPower(){
+    var coarse=window.matchMedia&&window.matchMedia('(pointer:coarse)').matches;
+    var smallest=Math.min(window.innerWidth,window.innerHeight);
+    var mem=navigator.deviceMemory||8, cores=navigator.hardwareConcurrency||8;
+    if(mem<=4) return true;                 // ≤4GB RAM
+    if(coarse && cores<=4) return true;      // low-core touch device
+    if(coarse && smallest<480) return true;  // small phones
+    return false;
+  }
+
+  /* ---------- language morph ---------- */
+  var lines=[
+    {c:'FR',t:'Vous arrivez de nuit, dans une ville que vous ne connaissez pas.'},
+    {c:'ES',t:'Llegas de noche a una ciudad que no conoces.'},
+    {c:'IT',t:'Arrivi di notte in una città che non conosci.'},
+    {c:'DE',t:'Du kommst nachts in einer Stadt an, die du nicht kennst.'},
+    {c:'PT',t:'Chegas de noite a uma cidade que não conheces.'},
+    {c:'RU',t:'Ты приезжаешь ночью в город, которого не знаешь.'},
+    {c:'ZH',t:'你在夜里来到一座陌生的城市。'},
+    {c:'AR',t:'تصل ليلاً إلى مدينة لا تعرفها.',rtl:true},
+    {c:'EN',t:'You arrive at night, in a city you don’t know.'}
+  ];
+  var morph=document.getElementById('morph'), lc=document.getElementById('langcode');
+  if(morph && !reduce){
+    var i=0;
+    morph.style.transition='opacity .32s ease';
+    function step(){
+      morph.style.opacity='0';
+      setTimeout(function(){
+        var L=lines[i];
+        morph.textContent=L.t;
+        morph.setAttribute('dir',L.rtl?'rtl':'ltr');
+        lc.textContent=L.c==='EN'?'':('— '+L.c);
+        morph.style.opacity='1';
+        i++;
+        if(i<lines.length) setTimeout(step, L2delay(L));
+      },320);
+    }
+    function L2delay(L){ return L.c==='EN'?0:820; }
+    /* let the English resting state show first paint, then run the cycle once */
+    setTimeout(function(){ i=0; step(); }, 900);
+  }
+
+  /* ---------- fog canvas ---------- */
+  var cv=document.getElementById('fog'), ctx=cv&&cv.getContext('2d'), puffs=[], W=0,H=0, dpr=Math.min(window.devicePixelRatio||1,2);
+  function sizeFog(){
+    if(!cv) return;
+    var r=cv.getBoundingClientRect(); W=r.width; H=r.height;
+    cv.width=W*dpr; cv.height=H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  function seedFog(){
+    puffs=[]; var n=7;
+    for(var k=0;k<n;k++){
+      puffs.push({x:Math.random()*W, y:H*0.5+Math.random()*H*0.45,
+        r:120+Math.random()*220, s:0.06+Math.random()*0.12,
+        a:0.05+Math.random()*0.07, warm:Math.random()<0.34});
+    }
+  }
+  function drawFog(){
+    if(!ctx) return;
+    ctx.clearRect(0,0,W,H);
+    for(var k=0;k<puffs.length;k++){
+      var p=puffs[k], g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);
+      var col=p.warm?'232,162,76':'150,170,210';
+      g.addColorStop(0,'rgba('+col+','+p.a+')');
+      g.addColorStop(1,'rgba('+col+',0)');
+      ctx.fillStyle=g; ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,6.29); ctx.fill();
+      if(!reduce){ p.x+=p.s; if(p.x-p.r>W) p.x=-p.r; }
+    }
+  }
+
+  /* ---------- parallax + scroll dolly ---------- */
+  var layers=[].slice.call(document.querySelectorAll('.stage .layer'));
+  var stage=document.getElementById('stage'), heroCopy=document.getElementById('heroCopy');
+  var tX=0,tY=0,cX=0,cY=0, sp=0;
+  function onMove(e){
+    var t=e.touches?e.touches[0]:e, w=window.innerWidth,h=window.innerHeight;
+    tX=(t.clientX/w-0.5); tY=(t.clientY/h-0.5);
+  }
+  if(!reduce){
+    window.addEventListener('mousemove',onMove,{passive:true});
+    window.addEventListener('touchmove',onMove,{passive:true});
+  }
+  function onScroll(){
+    var vh=window.innerHeight, y=window.scrollY||window.pageYOffset;
+    sp=Math.max(0,Math.min(1,y/vh));
+    if(heroCopy){
+      var o=Math.max(0,1-sp*1.5);
+      heroCopy.style.opacity=o;
+      heroCopy.style.transform='translateY('+(sp*-40)+'px)';
+    }
+  }
+  function frame(){
+    cX+=(tX-cX)*0.06; cY+=(tY-cY)*0.06;
+    for(var k=0;k<layers.length;k++){
+      var el=layers[k], d=parseFloat(el.getAttribute('data-depth'))||0;
+      var px=-cX*d*46, py=-cY*d*30;
+      var sc=1.06 + sp*d*0.55;              // dolly: near layers grow faster
+      var dy=sp*d*90;                        // and drift down/past the camera
+      el.style.transform='translate3d('+px+'px,'+(py+dy)+'px,0) scale('+sc+')';
+    }
+    if(cv) drawFog();
+    requestAnimationFrame(frame);
+  }
+  /* ---------- WebGL scene (progressive enhancement over the SVG poster) ---------- */
+  var glRAF=0;
+  function paint(draw){var c=document.createElement('canvas');c.width=1600;c.height=1000;draw(c.getContext('2d'),1600,1000);return c;}
+  function ARC(x,cx,cy,r){x.beginPath();x.arc(cx,cy,r,0,6.2832);x.fill();}
+  function initGL(){
+    var THREE=window.THREE, stageEl=document.getElementById('stage'), canvas=document.getElementById('gl');
+    var W=stageEl.clientWidth, H=stageEl.clientHeight, aspect=W/H;
+    var LOW=lowPower();
+    var renderer=new THREE.WebGLRenderer({canvas:canvas,alpha:true,antialias:!LOW});
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio||1, LOW?1.5:2));
+    renderer.setSize(W,H,false); renderer.setClearAlpha(0);
+    var scene=new THREE.Scene();
+    scene.fog=new THREE.Fog(0x152142, 600, 1850);
+    var camera=new THREE.PerspectiveCamera(45, aspect, 1, 5000);
+    camera.position.set(0,0,240);
+
+    function tex(cv){var t=new THREE.CanvasTexture(cv); t.generateMipmaps=false;
+      t.minFilter=THREE.LinearFilter; t.wrapS=t.wrapT=THREE.ClampToEdgeWrapping; return t;}
+    var VOV=1.18;
+    function addPlane(cv, z, fog, blend){
+      var d=240-z, fh=0.8284*d*VOV, fw=Math.max(0.8284*d*aspect*VOV, fh*1.6);
+      var m=new THREE.MeshBasicMaterial({map:tex(cv),transparent:true,depthTest:false,depthWrite:false});
+      m.fog=!!fog; if(blend) m.blending=THREE.AdditiveBlending;
+      var mesh=new THREE.Mesh(new THREE.PlaneGeometry(fw,fh),m);
+      mesh.position.z=z; mesh.renderOrder=z; scene.add(mesh); return mesh;
+    }
+
+    /* ---- layer art (same diorama, drawn to canvas) ---- */
+    // sky plane keeps the composited canvas opaque so bloom composites correctly
+    addPlane(paint(function(x){
+      var g=x.createLinearGradient(0,0,0,1000);
+      g.addColorStop(0,'#070a14');g.addColorStop(.42,'#0d1428');g.addColorStop(.76,'#152142');g.addColorStop(1,'#26314e');
+      x.fillStyle=g;x.fillRect(0,0,1600,1000);
+    }), -1820, false);
+
+    addPlane(paint(function(x,W,H){
+      var s=[[210,150,1.5,.7],[430,90,1.1,.5],[620,190,1.4,.6],[980,120,1.3,.55],[1180,210,1.7,.7],[1340,110,1.1,.5],[820,250,1,.4],[320,300,1.1,.4],[1440,290,1.3,.5],[120,240,1.1,.45],[700,70,1,.4],[1080,330,1,.35]];
+      x.fillStyle='#cdd6ee'; s.forEach(function(p){x.globalAlpha=p[3];ARC(x,p[0],p[1],p[2]);}); x.globalAlpha=1;
+      x.fillStyle='rgba(232,236,247,.12)';ARC(x,1180,235,66);
+      x.fillStyle='rgba(238,241,249,.82)';ARC(x,1180,235,42);
+      x.globalCompositeOperation='destination-out';ARC(x,1202,220,42);
+      x.globalCompositeOperation='source-over';
+    }), -1500, false);
+
+    addPlane(paint(function(x){
+      x.filter='blur(2.4px)';   // depth-of-field: the far city softens; the figure stays sharp
+      x.fillStyle='#0c1327';
+      [[760,360,120,640],[900,430,96,570],[1016,300,150,700],[1186,410,118,590],[1324,470,150,530],[1488,520,112,480]].forEach(function(r){x.fillRect(r[0],r[1],r[2],r[3]);});
+      x.fillStyle='#1a2745';x.globalAlpha=.5;
+      [[782,392],[808,392],[834,392],[1040,330],[1070,330],[1100,330],[1040,470],[1100,470],[1210,440],[1240,440]].forEach(function(p){x.fillRect(p[0],p[1],13,18);});
+      x.globalAlpha=1;
+    }), -1050, true);
+
+    addPlane(paint(function(x){
+      x.fillStyle='#080d1a';
+      x.fillRect(0,560,120,440);x.fillRect(96,500,150,500);
+      x.beginPath();x.moveTo(96,500);x.lineTo(171,452);x.lineTo(246,500);x.closePath();x.fill();
+      x.fillRect(250,590,120,410);x.fillRect(360,520,140,480);
+      x.beginPath();x.moveTo(360,520);x.lineTo(430,486);x.lineTo(500,520);x.closePath();x.fill();
+      x.fillRect(500,600,120,400);x.fillRect(600,470,150,530);
+      x.fillStyle='#F4BE72';x.fillRect(650,540,24,36); // the one lit window (glow added as sprite)
+    }), -640, true);
+
+    addPlane(paint(function(x){
+      x.fillStyle='#0b1224';x.fillRect(0,720,1600,170);
+      x.fillStyle='rgba(242,180,92,.26)';x.fillRect(652,726,22,150);
+      x.fillStyle='rgba(38,54,90,.4)';x.fillRect(1075,726,12,96);x.fillRect(470,726,9,80);
+      x.strokeStyle='rgba(51,67,107,.45)';x.lineWidth=1.4;
+      [[180,760,360,760],[520,800,700,800],[900,778,1120,778],[1180,828,1360,828]].forEach(function(l){x.beginPath();x.moveTo(l[0],l[1]);x.lineTo(l[2],l[3]);x.stroke();});
+    }), -380, true);
+
+    addPlane(paint(function(x){
+      x.fillStyle='#05070f';x.fillRect(0,878,1600,122);
+      x.fillStyle='rgba(36,50,88,.55)';x.fillRect(0,878,1600,3);
+    }), -210, true);
+
+    addPlane(paint(function(x){
+      x.save();
+      x.fillStyle='rgba(0,0,0,.38)';x.beginPath();x.ellipse(520,946,86,13,0,0,6.2832);x.fill();
+      x.fillStyle='#04060d';
+      x.beginPath();x.moveTo(520,852);x.bezierCurveTo(544,855,553,874,556,900);x.lineTo(566,946);x.lineTo(474,946);x.lineTo(484,900);x.bezierCurveTo(487,874,496,855,520,852);x.closePath();x.fill();
+      ARC(x,520,832,18);
+      x.beginPath();x.moveTo(498,828);x.quadraticCurveTo(520,812,542,828);x.closePath();x.fill();
+      x.fillStyle='#05080f';x.fillRect(556,902,36,30);x.fillRect(568,895,12,9);
+      x.strokeStyle='rgba(231,173,93,.5)';x.lineWidth=2.4;x.beginPath();x.moveTo(556,900);x.lineTo(566,946);x.stroke();
+      x.restore();
+    }), -95, false);
+
+    /* ---- the lit window: additive glow that breathes ---- */
+    var glowCv=paint(function(x){
+      var g=x.createRadialGradient(800,500,0,800,500,500);
+      g.addColorStop(0,'rgba(255,206,126,.9)');g.addColorStop(.4,'rgba(242,169,78,.35)');g.addColorStop(1,'rgba(242,169,78,0)');
+      x.fillStyle=g;x.fillRect(0,0,1600,1000);
+    });
+    var townD=240-(-640), townFh=0.8284*townD*VOV, townFw=Math.max(0.8284*townD*aspect*VOV,townFh*1.6);
+    // window centre in the town canvas ~ (662/1600, 556/1000) → plane-local offset
+    var gx=(662/1600-0.5)*townFw, gy=(0.5-556/1000)*townFh;
+    var glowMat=new THREE.MeshBasicMaterial({map:tex(glowCv),transparent:true,blending:THREE.AdditiveBlending,depthTest:false,depthWrite:false,opacity:.6}); glowMat.fog=false;
+    var glowBase=townFh*0.7;
+    var glow=new THREE.Mesh(new THREE.PlaneGeometry(glowBase,glowBase),glowMat);
+    glow.position.set(gx,gy,-620); glow.renderOrder=-619; scene.add(glow);
+
+    /* ---- drifting fog wisps (volumetric feel) ---- */
+    function wispTex(warm){return paint(function(x){
+      x.clearRect(0,0,1600,1000);
+      for(var i=0;i<5;i++){var cx=200+Math.random()*1200,cy=380+Math.random()*400,r=180+Math.random()*260;
+        var g=x.createRadialGradient(cx,cy,0,cx,cy,r);var c=warm?'232,162,76':'150,170,210';
+        g.addColorStop(0,'rgba('+c+',.10)');g.addColorStop(1,'rgba('+c+',0)');x.fillStyle=g;x.fillRect(0,0,1600,1000);}
+    });}
+    var wisps=[];
+    [[-470,false,0.35],[-170,true,0.5]].forEach(function(cfg){
+      var d=240-cfg[0], fh=0.8284*d*VOV*1.1, fw=fh*2.2;
+      var m=new THREE.MeshBasicMaterial({map:tex(wispTex(cfg[1])),transparent:true,blending:THREE.AdditiveBlending,depthTest:false,depthWrite:false,opacity:.8});m.fog=false;
+      var mesh=new THREE.Mesh(new THREE.PlaneGeometry(fw,fh),m);mesh.position.set(0,-fh*0.05,cfg[0]);mesh.renderOrder=cfg[0]+0.5;
+      mesh.userData={s:cfg[2],max:fw*0.5}; scene.add(mesh); wisps.push(mesh);
+    });
+
+    /* ---- loop ---- */
+    /* ---- UnrealBloom: a true cinematic glow on the window & moon ---- */
+    var composer=null, bloom=null;
+    if(!LOW && THREE.EffectComposer && THREE.RenderPass && THREE.UnrealBloomPass){
+      try{
+        composer=new THREE.EffectComposer(renderer);
+        composer.addPass(new THREE.RenderPass(scene,camera));
+        bloom=new THREE.UnrealBloomPass(new THREE.Vector2(W,H), 0.85, 0.55, 0.72); // strength, radius, threshold
+        composer.addPass(bloom);
+        composer.setSize(W,H);
+      }catch(e){ composer=null; }
+    }
+
+    var gcx=0,gcy=0;
+    function resize(){ W=stageEl.clientWidth;H=stageEl.clientHeight;camera.aspect=W/H;camera.updateProjectionMatrix();
+      renderer.setSize(W,H,false); if(composer){composer.setSize(W,H); if(bloom) bloom.setSize(W,H);} }
+    window.addEventListener('resize',resize,{passive:true});
+    function glAnimate(){
+      glRAF=requestAnimationFrame(glAnimate);
+      gcx+=(tX-gcx)*0.05; gcy+=(tY-gcy)*0.05;
+      camera.position.x=gcx*36; camera.position.y=-gcy*22; camera.position.z=240-sp*210;
+      camera.lookAt(0,0,-800);
+      var t=performance.now()*0.001;
+      glow.scale.setScalar(1+0.06*Math.sin(t*0.9)); glow.material.opacity=0.5+0.12*Math.sin(t*0.9);
+      for(var i=0;i<wisps.length;i++){var w=wisps[i];w.position.x+=w.userData.s;if(w.position.x>w.userData.max)w.position.x=-w.userData.max;}
+      if(composer) composer.render(); else renderer.render(scene,camera);
+    }
+    document.addEventListener('visibilitychange',function(){
+      if(document.hidden){cancelAnimationFrame(glRAF);glRAF=0;} else if(!glRAF){glAnimate();}
+    });
+    glAnimate();
+    return true;
+  }
+
+  function boot(){
+    onScroll();
+    var glOK=false;
+    if(!reduce && window.THREE){ try{ glOK=initGL(); }catch(e){ glOK=false; } }
+    if(glOK){
+      layers.forEach(function(el){ el.style.display='none'; });   // WebGL replaces the SVG poster
+    } else {
+      if(cv){sizeFog();seedFog();}
+      requestAnimationFrame(frame);                                // CSS/SVG fallback
+    }
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',function(){ if(cv){sizeFog();seedFog();} });
+  boot();
+
+  /* ---------- ambient night sound (off by default, user-initiated) ---------- */
+  var sndBtn=document.getElementById('sound'), actx=null, master=null, playing=false;
+  function buildAudio(){
+    var AC=window.AudioContext||window.webkitAudioContext; if(!AC) return false;
+    actx=new AC();
+    master=actx.createGain(); master.gain.value=0; master.connect(actx.destination);
+    // wind / river: looped brown noise through a slowly-moving low-pass
+    var sr=actx.sampleRate, len=Math.floor(sr*4), buf=actx.createBuffer(1,len,sr), d=buf.getChannelData(0), last=0;
+    for(var i=0;i<len;i++){ var w=Math.random()*2-1; last=(last+0.02*w)/1.02; d[i]=last*3.2; }
+    var src=actx.createBufferSource(); src.buffer=buf; src.loop=true;
+    var lp=actx.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value=460; lp.Q.value=0.6;
+    var ng=actx.createGain(); ng.gain.value=0.5;
+    src.connect(lp); lp.connect(ng); ng.connect(master); src.start();
+    var lfo=actx.createOscillator(); lfo.frequency.value=0.05; var lg=actx.createGain(); lg.gain.value=140;
+    lfo.connect(lg); lg.connect(lp.frequency); lfo.start();
+    // a cold low room-tone under it
+    function drone(f,g){ var o=actx.createOscillator(); o.type='sine'; o.frequency.value=f;
+      var og=actx.createGain(); og.gain.value=g; o.connect(og); og.connect(master); o.start(); }
+    drone(58,0.05); drone(87,0.022);
+    return true;
+  }
+  function setPlaying(on){
+    if(on){
+      if(!actx && !buildAudio()) return;
+      if(actx.state==='suspended') actx.resume();
+      var t=actx.currentTime; master.gain.cancelScheduledValues(t);
+      master.gain.setValueAtTime(master.gain.value,t); master.gain.linearRampToValueAtTime(0.9,t+2.2);
+      playing=true;
+    } else if(actx){
+      var t2=actx.currentTime; master.gain.cancelScheduledValues(t2);
+      master.gain.setValueAtTime(master.gain.value,t2); master.gain.linearRampToValueAtTime(0,t2+1.2);
+      playing=false;
+    }
+    if(sndBtn) sndBtn.setAttribute('aria-pressed', on?'true':'false');
+  }
+  if(sndBtn) sndBtn.addEventListener('click', function(){ setPlaying(!playing); });
+
+  /* ---------- reveal on scroll ---------- */
+  var rev=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+    },{threshold:0.18});
+    rev.forEach(function(el){ io.observe(el); });
+  } else {
+    rev.forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>
