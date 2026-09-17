@@ -314,7 +314,7 @@
   .bar { background:color-mix(in srgb, var(--bg) 82%, transparent); }
   .bar .brand { font-family:var(--serif); font-weight:500; font-size:17px; letter-spacing:0; }
   .bar .brand .dot { width:11px; height:14px; border-radius:2px;
-    background:var(--accent); box-shadow:0 0 12px 1px rgba(232,162,76,.7); }
+    background:var(--accent); box-shadow:0 0 12px 1px color-mix(in srgb, var(--accent) 62%, transparent); }
 
   /* wayfinding = mono; UI = grot; display = Fraunces */
   .kicker, .choices-lead, .chips span, .choices button .goto,
@@ -332,7 +332,7 @@
   .choices button .goto { color:var(--accent); font-weight:500; }
   .choices button:hover { border-color:var(--accent); background:var(--accent-soft); }
   .choices button .goto::before { content:"§ "; opacity:.55; }
-  .progress { box-shadow:0 0 10px rgba(232,162,76,.8); }
+  .progress { box-shadow:0 0 10px color-mix(in srgb, var(--accent) 72%, transparent); }
 
   /* reading surface: a lifted ink card, calm and high-contrast */
   .para { color:#EAE6DC; }
@@ -341,9 +341,9 @@
   /* ---- the cinematic cover (typographic nocturne, no figurative art) ---- */
   .cover { border:1px solid var(--line);
     background:
-      radial-gradient(90% 55% at 74% 14%, rgba(232,162,76,.16), transparent 42%),
-      radial-gradient(60% 40% at 20% 6%, rgba(134,201,180,.08), transparent 55%),
-      linear-gradient(#0b1224 0%, #101a30 60%, #16203c 100%); }
+      radial-gradient(90% 55% at 74% 14%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 44%),
+      radial-gradient(60% 40% at 20% 6%, color-mix(in srgb, var(--accent-2) 12%, transparent), transparent 55%),
+      linear-gradient(var(--bg) 0%, color-mix(in srgb, var(--card) 75%, var(--bg)) 100%); }
   .cover .art { display:none; }               /* drop the placeholder box */
   .cover .body { border-top:none; background:transparent; padding:52px 26px 30px; }
   .cover .kicker { color:var(--accent); }
@@ -353,7 +353,7 @@
   .cover p { color:#c3cad9; }
   .cover .chips span { background:rgba(255,255,255,.05); border:1px solid var(--line); color:#cfd4e2; }
   .start { background:var(--accent); color:#12101a; font-family:var(--grot); font-weight:600;
-    box-shadow:0 12px 40px -8px rgba(232,162,76,.55); }
+    box-shadow:0 12px 40px -8px color-mix(in srgb, var(--accent) 55%, transparent); }
 
   /* home hero + panel on the nocturne */
   .home-hero h1 { font-weight:300; font-style:italic; letter-spacing:-.01em; }
@@ -555,6 +555,7 @@ function renderHome(){
   view="home"; introMode=false; node=null; curKey=null; hideGloss();
   $("main").className="home";
   $("back").hidden=true; $("speak").hidden=true; $("cog").hidden=true;
+  applyIdentity(null);   // the in-app library uses the neutral Waymark nocturne
   $("brand").textContent="Waymark"; setProgress(0);
   const p=loadPrefs(), lvl=p.level||"B1", vw=p.homeView||"all";
   const langs=[["","English only"],["fr","Français"],["es","Español"],["pt","Português"],
@@ -623,9 +624,27 @@ function renderLibrary(vw){
   });
 }
 
+/* per-book identity — each book's JSON carries an `identity.palette`; the reader applies
+   it as CSS variables so one reader renders every book in its own world. Scoped with
+   :not([data-theme="light"]) so the universal light "paper" reading mode still wins. */
+function applyIdentity(book){
+  let el=$("book-identity");
+  if(!el){ el=document.createElement("style"); el.id="book-identity"; document.head.appendChild(el); }
+  const p = book && book.identity && book.identity.palette;
+  if(!p){ el.textContent=""; return; }
+  const map={ground:"--bg",surface:"--card",ink:"--fg",muted:"--muted",line:"--line",
+    accent:"--accent",secondary:"--accent-2",accentHot:"--accent-hot"};
+  let css="";
+  for(const k in map){ if(p[k]) css+=map[k]+":"+p[k]+";"; }
+  const soft = p.accentSoft || `color-mix(in srgb, ${p.accent||"#E8A24C"} 14%, ${p.ground||"#0E1320"})`;
+  css += "--accent-soft:"+soft+";";
+  el.textContent = ':root:not([data-theme="light"]){'+css+'}';
+}
+
 async function openEpisode(file,preferLevel,intro,resume){
   view="book"; $("main").className="reading";
   BOOK=await (await fetch(file)).json();
+  applyIdentity(BOOK);
   const meta=MANIFEST.episodes.find(e=>e.file===file)||{};
   haveImg=new Set(meta.images||[]);
   // this book's lexicon = shared base + the book's own chosen words (book wins)

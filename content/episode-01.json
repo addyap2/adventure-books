@@ -4,6 +4,29 @@
   "episode": 1,
   "title": "The Address",
   "blurb": "You arrive alone in a strange city at night, with one letter and one night to find the address on it.",
+  "identity": {
+    "name": "New City Nocturne",
+    "mood": "A cold city at night; one warm window is the only light.",
+    "palette": {
+      "ground": "#0E1320",
+      "surface": "#121a2c",
+      "ink": "#F4EFE6",
+      "muted": "#8A93A6",
+      "line": "#26304a",
+      "accent": "#E8A24C",
+      "accentHot": "#F4BE72",
+      "secondary": "#86C9B4"
+    },
+    "cover": {
+      "kind": "nocturne",
+      "glow": true
+    },
+    "type": {
+      "display": "Fraunces",
+      "ui": "Hanken Grotesk",
+      "mono": "JetBrains Mono"
+    }
+  },
   "levels": [
     "A2",
     "B1",

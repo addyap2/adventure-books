@@ -193,6 +193,35 @@ def validate_lexicon(lexicon, rep):
     return set(lexicon)
 
 
+_HEX = __import__("re").compile(r"^#[0-9a-fA-F]{6}$")
+
+def validate_identity(book, rep):
+    """Every book must declare a visual identity so the reader can skin itself to it.
+
+    identity.palette must define the full token set as #rrggbb; cover.kind names the
+    landing/cover treatment. This is the contract that lets a new book be data, not code.
+    """
+    ident = book.get("identity")
+    if not isinstance(ident, dict):
+        rep.error("`identity` block is missing — every book must declare its own identity "
+                  "(palette + cover). See docs/flagship-design.md.")
+        return
+    pal = ident.get("palette")
+    if not isinstance(pal, dict):
+        rep.error("`identity.palette` is missing.")
+        return
+    required = ["ground", "surface", "ink", "muted", "line", "accent", "secondary"]
+    for k in required:
+        v = pal.get(k)
+        if not v:
+            rep.error(f"identity.palette.{k} is missing.")
+        elif not _HEX.match(str(v)):
+            rep.error(f"identity.palette.{k} = {v!r} is not a #rrggbb colour.")
+    cover = ident.get("cover")
+    if not isinstance(cover, dict) or not cover.get("kind"):
+        rep.warn("identity.cover.kind is not set — the cover treatment defaults to plain.")
+
+
 def per_level(value, level, fallback_ok=True):
     """Read a field that may be a dict keyed by level, or a plain value."""
     if isinstance(value, dict):
@@ -568,6 +597,7 @@ def main():
 
     rep = Report()
     by_id = validate_structure(book, rep)
+    validate_identity(book, rep)
     levels = book.get("levels") or ([book["level"]] if book.get("level") else ["A2"])
     core = load_core_words()
 

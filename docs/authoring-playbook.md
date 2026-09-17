@@ -88,6 +88,7 @@ Wave 1 locks the look; later waves fill in; endings are bespoke.
 ## 5. Definition of done (per book)
 
 - [ ] Validator: **0 errors**; bands clean at all three levels; no `⟨pending⟩` text
+- [ ] **`identity` block** declared (palette + `cover.kind`) — validator enforces; the reader skins itself to it (see §7)
 - [ ] 12 endings, balanced 4/4/4; ≤8 flags, **each flag both set and read** (or listed in
       `arc_flags` if a later book reads it — validator enforces); all nodes reachable; 2–4 choices/node
 - [ ] Lexicon ~250, complete in 9 languages, base-keyed; auto-gloss coverage checked
@@ -105,3 +106,44 @@ live site, so it must only ever hold review-passed, learner-ready content. The b
 Vercel **preview**. A book merges to `main` only after its definition-of-done is fully checked —
 in particular the native-review gate. (The flagship *The Address* lives on branch `flagship`;
 production `main` remains the finished 40-passage original until the flagship clears its gates.)
+
+---
+
+## 7. Visual identity (per book)
+
+Every book is its own world. Declare it once in the book JSON as `identity`; the reader reads
+it at runtime and skins itself — **one reader renders every book, no per-book code.**
+
+```json
+"identity": {
+  "name": "New City Nocturne",
+  "mood": "A cold city at night; one warm window is the only light.",
+  "palette": {
+    "ground": "#0E1320", "surface": "#121a2c", "ink": "#F4EFE6",
+    "muted": "#8A93A6", "line": "#26304a",
+    "accent": "#E8A24C", "accentHot": "#F4BE72", "secondary": "#86C9B4"
+  },
+  "cover": { "kind": "nocturne", "glow": true },
+  "type": { "display": "Fraunces", "ui": "Hanken Grotesk", "mono": "JetBrains Mono" }
+}
+```
+
+- **palette** — all `#rrggbb`; all required except `accentHot`. `ground` (page), `surface`
+  (reading card), `ink` (body text), `muted`, `line`, `accent` (the book's one warm "light" —
+  it drives the lit-window, the choice `§ N`, glossed-word underlines, the progress bar and
+  every glow), `secondary` (taglines / the dawn note). The reader maps these to its CSS tokens
+  and applies them **scoped so the universal light "paper" reading mode still overrides** — so
+  each book owns its night-world, and any reader who prefers paper still gets paper.
+- **cover.kind** names the cover/landing treatment (`nocturne` for *The Address*); `glow` shows
+  the single warm window.
+- **type** is declarative for now (the three families are loaded globally); switching families
+  needs the matching Google-Fonts `<link>` added too.
+
+**Where identity is consumed**
+- **Reader** (`read.html`) — fully dynamic via `applyIdentity(book)`; nothing hand-coded.
+- **Book landing** (`/<slug>`) and the **library card** — currently hand-set to *match* the
+  identity; when book two is templated these will be generated from it. Until then the JSON is
+  the source of truth: keep those two surfaces in sync with it.
+
+The validator enforces the block: palette keys present and hex-valid, `cover.kind` warned if
+absent. A book with no identity fails the build.
