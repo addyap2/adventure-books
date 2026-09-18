@@ -393,7 +393,6 @@
   <button class="iconbtn" id="back" hidden aria-label="Back to the library">←</button>
   <span class="brand"><span class="dot"></span><span id="brand">Waymark</span></span>
   <button class="iconbtn" id="theme" aria-label="Switch to light theme">☀</button>
-  <button class="iconbtn" id="speak" aria-label="Read aloud">🔊</button>
   <button class="iconbtn" id="cog" aria-label="Settings">Aa</button>
   <div class="progress" id="progress"></div>
 </div>
@@ -556,7 +555,7 @@ function handoffURL(){
 function renderHome(){
   view="home"; introMode=false; node=null; curKey=null; hideGloss();
   $("main").className="home";
-  $("back").hidden=true; $("speak").hidden=true; $("cog").hidden=true;
+  $("back").hidden=true; $("cog").hidden=true;
   applyIdentity(null);   // the in-app library uses the neutral Waymark nocturne
   $("brand").textContent="Waymark"; setProgress(0);
   const p=loadPrefs(), lvl=p.level||"B1", vw=p.homeView||"all";
@@ -656,7 +655,7 @@ async function openEpisode(file,preferLevel,intro,resume){
   if(own) for(const k in own) LEX[k.toLowerCase()]=own[k];
   level=BOOK.levels.includes(preferLevel)?preferLevel:BOOK.levels[0];
   curKey=`${BOOK.series}:${BOOK.episode}`; curFile=file;
-  $("brand").textContent=BOOK.title; $("back").hidden=false; $("speak").hidden=false; $("cog").hidden=false;
+  $("brand").textContent=BOOK.title; $("back").hidden=false; $("cog").hidden=false;
   buildLevelSeg();
   // compute depth of each node from start for the progress bar
   depth={}; const q=[[BOOK.start,0]]; depth[BOOK.start]=0; maxDepth=0;
@@ -881,12 +880,6 @@ $("hoCopy").onclick=async()=>{
   catch{ $("hoLink").select(); try{ document.execCommand("copy"); $("hoCopy").textContent="Copied ✓"; }catch{} }
 };
 
-$("speak").onclick=()=>{
-  if(!window.speechSynthesis||view!=="book"||introMode) return;
-  speechSynthesis.cancel();
-  const u=new SpeechSynthesisUtterance((at(byId(node).text)||"").replace(/\n/g," "));
-  u.lang="en-GB"; u.rate=level==="A2"?0.85:0.95; speechSynthesis.speak(u);
-};
 document.addEventListener("click",e=>{ if(!e.target.closest("w")&&!e.target.closest(".gloss")) hideGloss(); });
 
 // desktop keyboard: number keys pick a choice; Enter starts / reads again
