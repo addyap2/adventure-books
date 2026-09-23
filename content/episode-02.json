@@ -1,0 +1,3401 @@
+{
+  "schema": "adventure-book/episode@1",
+  "series": "new-city",
+  "episode": 2,
+  "title": "The Room",
+  "slug": "the-room",
+  "blurb": "You have the job. Now you have one grey Saturday, and a week's pay you can't afford to lose, to find somewhere to live in a city that still doesn't know you.",
+  "identity": {
+    "name": "Rope-Works Winter",
+    "mood": "A cold bright city by day; one lit doorway with a warm room behind it.",
+    "palette": {
+      "ground": "#0C1118",
+      "surface": "#141b26",
+      "ink": "#F3EFE7",
+      "muted": "#8992A1",
+      "line": "#242f40",
+      "accent": "#E8955A",
+      "accentHot": "#F4B978",
+      "secondary": "#7FC3A6"
+    },
+    "cover": {
+      "kind": "daybreak",
+      "glow": true
+    },
+    "type": {
+      "display": "Fraunces",
+      "ui": "Hanken Grotesk",
+      "mono": "JetBrains Mono"
+    },
+    "hero": {
+      "line": {
+        "en": "You have the job. Now you need a room.",
+        "fr": "Vous avez le travail. Il vous faut maintenant une chambre.",
+        "es": "Ya tienes el trabajo. Ahora necesitas una habitación.",
+        "it": "Hai il lavoro. Adesso ti serve una stanza.",
+        "de": "Du hast die Stelle. Jetzt brauchst du ein Zimmer.",
+        "pt": "Já tens o emprego. Agora precisas de um quarto.",
+        "ru": "Работа есть. Теперь нужна комната.",
+        "zh": "工作有了。现在你需要一个房间。",
+        "ar": "حصلت على العمل. الآن تحتاج إلى غرفة."
+      },
+      "sub": "A story where you are the hero — and every choice turns you to a new page. Written for people learning English, at your level, with meaning in your language whenever you need it."
+    }
+  },
+  "levels": [
+    "A2",
+    "B1",
+    "B2"
+  ],
+  "start": 1,
+  "language_focus": {
+    "A2": [
+      "present simple, have/have got",
+      "money, prices, rooms and furniture"
+    ],
+    "B1": [
+      "future forms and the first conditional",
+      "renting, agreements, comparisons"
+    ],
+    "B2": [
+      "inference, conditionals and hedging",
+      "trust, obligation and the housing market"
+    ]
+  },
+  "state_in": [
+    "dodged_scam",
+    "told_truth",
+    "knows_name"
+  ],
+  "state_out": [
+    "kept_money",
+    "dodged_letting_scam",
+    "paid_letting_scam",
+    "has_reference",
+    "found_keepsake",
+    "helped_neighbour",
+    "rushed",
+    "warm_welcome"
+  ],
+  "arc_flags": [
+    "dodged_letting_scam",
+    "warm_welcome",
+    "found_keepsake"
+  ],
+  "nodes": [
+    {
+      "id": 1,
+      "text": {
+        "A2": "[stub] Dawn in the cheap hotel; a note under the door: the room is booked from tonight. In your pocket, one week's pay — a deposit and nothing spare.",
+        "B1": "[stub] Dawn in the cheap hotel; a note under the door: the room is booked from tonight. In your pocket, one week's pay — a deposit and nothing spare.",
+        "B2": "[stub] Dawn in the cheap hotel; a note under the door: the room is booked from tonight. In your pocket, one week's pay — a deposit and nothing spare."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Ask the hotel man where a stranger looks for a room.",
+            "B1": "Ask the hotel man where a stranger looks for a room.",
+            "B2": "Ask the hotel man where a stranger looks for a room."
+          },
+          "goto": 2
+        },
+        {
+          "text": {
+            "A2": "Go to the corner kiosk for the local paper.",
+            "B1": "Go to the corner kiosk for the local paper.",
+            "B2": "Go to the corner kiosk for the local paper."
+          },
+          "goto": 3
+        },
+        {
+          "text": {
+            "A2": "Check the room listings on your phone.",
+            "B1": "Check the room listings on your phone.",
+            "B2": "Check the room listings on your phone."
+          },
+          "goto": 4
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": {
+        "A2": "[stub] The hotel man, who let you sit by the radiator once, warns you off the flashy agents and says: the paper, or the canal side, is where the cheap real rooms are.",
+        "B1": "[stub] The hotel man, who let you sit by the radiator once, warns you off the flashy agents and says: the paper, or the canal side, is where the cheap real rooms are.",
+        "B2": "[stub] The hotel man, who let you sit by the radiator once, warns you off the flashy agents and says: the paper, or the canal side, is where the cheap real rooms are."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Count exactly what you have before you spend a coin.",
+            "B1": "Count exactly what you have before you spend a coin.",
+            "B2": "Count exactly what you have before you spend a coin."
+          },
+          "goto": 10
+        },
+        {
+          "text": {
+            "A2": "Head to the kiosk for the paper he means.",
+            "B1": "Head to the kiosk for the paper he means.",
+            "B2": "Head to the kiosk for the paper he means."
+          },
+          "goto": 3
+        },
+        {
+          "text": {
+            "A2": "Look at your phone anyway.",
+            "B1": "Look at your phone anyway.",
+            "B2": "Look at your phone anyway."
+          },
+          "goto": 4
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": {
+        "A2": "[stub] The kiosk woman from your first night is at her corner. She hands you the paper and circles two ads; over a third — 'KEYS TODAY' — she draws a line.",
+        "B1": "[stub] The kiosk woman from your first night is at her corner. She hands you the paper and circles two ads; over a third — 'KEYS TODAY' — she draws a line.",
+        "B2": "[stub] The kiosk woman from your first night is at her corner. She hands you the paper and circles two ads; over a third — 'KEYS TODAY' — she draws a line."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Read the two rooms she circled.",
+            "B1": "Read the two rooms she circled.",
+            "B2": "Read the two rooms she circled."
+          },
+          "goto": 7
+        },
+        {
+          "text": {
+            "A2": "Dania from the firm is here too, also looking.",
+            "B1": "Dania from the firm is here too, also looking.",
+            "B2": "Dania from the firm is here too, also looking."
+          },
+          "goto": 5
+        },
+        {
+          "text": {
+            "A2": "Walk to the canal side to look before the crowds.",
+            "B1": "Walk to the canal side to look before the crowds.",
+            "B2": "Walk to the canal side to look before the crowds."
+          },
+          "goto": 6
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": {
+        "A2": "[stub] Your phone: a bright, cheap room, photos too good for the price. 'Mr Vann — deposit today to hold it, keys today.'",
+        "B1": "[stub] Your phone: a bright, cheap room, photos too good for the price. 'Mr Vann — deposit today to hold it, keys today.'",
+        "B2": "[stub] Your phone: a bright, cheap room, photos too good for the price. 'Mr Vann — deposit today to hold it, keys today.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go to Vann's office and see the room.",
+            "B1": "Go to Vann's office and see the room.",
+            "B2": "Go to Vann's office and see the room."
+          },
+          "goto": 8
+        },
+        {
+          "text": {
+            "A2": "Look Vann up before you go anywhere.",
+            "B1": "Look Vann up before you go anywhere.",
+            "B2": "Look Vann up before you go anywhere."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "You have met this trick before. Ignore it.",
+            "B1": "You have met this trick before. Ignore it.",
+            "B2": "You have met this trick before. Ignore it."
+          },
+          "goto": 11,
+          "requires": [
+            "dodged_scam"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": {
+        "A2": "[stub] Dania, a new hire at Kessler and Rowe, is as new to the city as you and just as roomless.",
+        "B1": "[stub] Dania, a new hire at Kessler and Rowe, is as new to the city as you and just as roomless.",
+        "B2": "[stub] Dania, a new hire at Kessler and Rowe, is as new to the city as you and just as roomless."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Agree to look together — two sets of eyes.",
+            "B1": "Agree to look together — two sets of eyes.",
+            "B2": "Agree to look together — two sets of eyes."
+          },
+          "goto": 27
+        },
+        {
+          "text": {
+            "A2": "Wish her luck and look on your own.",
+            "B1": "Wish her luck and look on your own.",
+            "B2": "Wish her luck and look on your own."
+          },
+          "goto": 7
+        },
+        {
+          "text": {
+            "A2": "Check your phone listings first.",
+            "B1": "Check your phone listings first.",
+            "B2": "Check your phone listings first."
+          },
+          "goto": 4
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": {
+        "A2": "[stub] The canal in grey morning light: an old rope-works, washing on a line, a smell of tar and cold water.",
+        "B1": "[stub] The canal in grey morning light: an old rope-works, washing on a line, a smell of tar and cold water.",
+        "B2": "[stub] The canal in grey morning light: an old rope-works, washing on a line, a smell of tar and cold water."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Decide how to spend the day and the fare money.",
+            "B1": "Decide how to spend the day and the fare money.",
+            "B2": "Decide how to spend the day and the fare money."
+          },
+          "goto": 12
+        },
+        {
+          "text": {
+            "A2": "A delivery man here seems to know every door.",
+            "B1": "A delivery man here seems to know every door.",
+            "B2": "A delivery man here seems to know every door."
+          },
+          "goto": 13
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": {
+        "A2": "[stub] The two ads: a room by the canal (a Mrs Halloran, viewing at noon) and a cheap bedsit you could see right now.",
+        "B1": "[stub] The two ads: a room by the canal (a Mrs Halloran, viewing at noon) and a cheap bedsit you could see right now.",
+        "B2": "[stub] The two ads: a room by the canal (a Mrs Halloran, viewing at noon) and a cheap bedsit you could see right now."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The bedsit — see it now while it's going.",
+            "B1": "The bedsit — see it now while it's going.",
+            "B2": "The bedsit — see it now while it's going."
+          },
+          "goto": 14
+        },
+        {
+          "text": {
+            "A2": "Hold out for the canal room at noon.",
+            "B1": "Hold out for the canal room at noon.",
+            "B2": "Hold out for the canal room at noon."
+          },
+          "goto": 15
+        },
+        {
+          "text": {
+            "A2": "A third ad: a room to share, very cheap.",
+            "B1": "A third ad: a room to share, very cheap.",
+            "B2": "A third ad: a room to share, very cheap."
+          },
+          "goto": 36
+        },
+        {
+          "text": {
+            "A2": "Work out your money and route first.",
+            "B1": "Work out your money and route first.",
+            "B2": "Work out your money and route first."
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": {
+        "A2": "[stub] You stand at the door of Vann's office. A queue inside; a board of glossy rooms.",
+        "B1": "[stub] You stand at the door of Vann's office. A queue inside; a board of glossy rooms.",
+        "B2": "[stub] You stand at the door of Vann's office. A queue inside; a board of glossy rooms."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Step inside and hear the pitch.",
+            "B1": "Step inside and hear the pitch.",
+            "B2": "Step inside and hear the pitch."
+          },
+          "goto": 40
+        },
+        {
+          "text": {
+            "A2": "Hesitate on the step.",
+            "B1": "Hesitate on the step.",
+            "B2": "Hesitate on the step."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": {
+        "A2": "[stub] You look Vann up. A man leaving the office mutters that he never got his keys; the reviews are a wall of one stars.",
+        "B1": "[stub] You look Vann up. A man leaving the office mutters that he never got his keys; the reviews are a wall of one stars.",
+        "B2": "[stub] You look Vann up. A man leaving the office mutters that he never got his keys; the reviews are a wall of one stars."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Ask around a little more.",
+            "B1": "Ask around a little more.",
+            "B2": "Ask around a little more."
+          },
+          "goto": 16
+        },
+        {
+          "text": {
+            "A2": "Decide it's a trap and walk away.",
+            "B1": "Decide it's a trap and walk away.",
+            "B2": "Decide it's a trap and walk away."
+          },
+          "goto": 17
+        },
+        {
+          "text": {
+            "A2": "The room looked so good — risk it anyway.",
+            "B1": "The room looked so good — risk it anyway.",
+            "B2": "The room looked so good — risk it anyway."
+          },
+          "goto": 8
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": {
+        "A2": "[stub] On the bed you lay the money out. One week. A deposit is most of it. A wrong move today and you have neither room nor fare.",
+        "B1": "[stub] On the bed you lay the money out. One week. A deposit is most of it. A wrong move today and you have neither room nor fare.",
+        "B2": "[stub] On the bed you lay the money out. One week. A deposit is most of it. A wrong move today and you have neither room nor fare."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go out and look, carefully.",
+            "B1": "Go out and look, carefully.",
+            "B2": "Go out and look, carefully."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "Get the paper first.",
+            "B1": "Get the paper first.",
+            "B2": "Get the paper first."
+          },
+          "goto": 3
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": {
+        "A2": "[stub] You know this game now. You put the phone away and trust the paper and your feet.",
+        "B1": "[stub] You know this game now. You put the phone away and trust the paper and your feet.",
+        "B2": "[stub] You know this game now. You put the phone away and trust the paper and your feet."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Read the paper's real ads.",
+            "B1": "Read the paper's real ads.",
+            "B2": "Read the paper's real ads."
+          },
+          "goto": 7
+        },
+        {
+          "text": {
+            "A2": "Walk to the canal side.",
+            "B1": "Walk to the canal side.",
+            "B2": "Walk to the canal side."
+          },
+          "goto": 6
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": {
+        "A2": "[stub] How you cross the city is how your money lasts.",
+        "B1": "[stub] How you cross the city is how your money lasts.",
+        "B2": "[stub] How you cross the city is how your money lasts."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Walk everywhere and keep the fare.",
+            "B1": "Walk everywhere and keep the fare.",
+            "B2": "Walk everywhere and keep the fare."
+          },
+          "goto": 18,
+          "sets": [
+            "kept_money"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Take the bus so you can see more rooms.",
+            "B1": "Take the bus so you can see more rooms.",
+            "B2": "Take the bus so you can see more rooms."
+          },
+          "goto": 19
+        },
+        {
+          "text": {
+            "A2": "Go back for the paper first.",
+            "B1": "Go back for the paper first.",
+            "B2": "Go back for the paper first."
+          },
+          "goto": 3
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": {
+        "A2": "[stub] The delivery man leans on his trolley. 'Halloran's? Over the rope-works. Good stair. Ask for the room at the top.'",
+        "B1": "[stub] The delivery man leans on his trolley. 'Halloran's? Over the rope-works. Good stair. Ask for the room at the top.'",
+        "B2": "[stub] The delivery man leans on his trolley. 'Halloran's? Over the rope-works. Good stair. Ask for the room at the top.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Thank him and note the stair.",
+            "B1": "Thank him and note the stair.",
+            "B2": "Thank him and note the stair."
+          },
+          "goto": 20
+        },
+        {
+          "text": {
+            "A2": "Catch the bus into the centre first.",
+            "B1": "Catch the bus into the centre first.",
+            "B2": "Catch the bus into the centre first."
+          },
+          "goto": 19
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": {
+        "A2": "[stub] The bedsit's address is close; you could be there in ten minutes.",
+        "B1": "[stub] The bedsit's address is close; you could be there in ten minutes.",
+        "B2": "[stub] The bedsit's address is close; you could be there in ten minutes."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go straight up to see it.",
+            "B1": "Go straight up to see it.",
+            "B2": "Go straight up to see it."
+          },
+          "goto": 30
+        },
+        {
+          "text": {
+            "A2": "Read the canal ad once more first.",
+            "B1": "Read the canal ad once more first.",
+            "B2": "Read the canal ad once more first."
+          },
+          "goto": 7
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": {
+        "A2": "[stub] The canal viewing is at noon. Hours to fill, and a whole city between.",
+        "B1": "[stub] The canal viewing is at noon. Hours to fill, and a whole city between.",
+        "B2": "[stub] The canal viewing is at noon. Hours to fill, and a whole city between."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Set off for the canal early.",
+            "B1": "Set off for the canal early.",
+            "B2": "Set off for the canal early."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "Kill the time in the market square.",
+            "B1": "Kill the time in the market square.",
+            "B2": "Kill the time in the market square."
+          },
+          "goto": 25
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "text": {
+        "A2": "[stub] You ask the kiosk woman about Vann. Her face closes. 'That one. Keep your money in your pocket.'",
+        "B1": "[stub] You ask the kiosk woman about Vann. Her face closes. 'That one. Keep your money in your pocket.'",
+        "B2": "[stub] You ask the kiosk woman about Vann. Her face closes. 'That one. Keep your money in your pocket.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take her word and leave it.",
+            "B1": "Take her word and leave it.",
+            "B2": "Take her word and leave it."
+          },
+          "goto": 17
+        },
+        {
+          "text": {
+            "A2": "Head into the square to think.",
+            "B1": "Head into the square to think.",
+            "B2": "Head into the square to think."
+          },
+          "goto": 25
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "text": {
+        "A2": "[stub] You cross Vann off. It stings a little; the photos were lovely. But lovely and cheap and today is the whole trick.",
+        "B1": "[stub] You cross Vann off. It stings a little; the photos were lovely. But lovely and cheap and today is the whole trick.",
+        "B2": "[stub] You cross Vann off. It stings a little; the photos were lovely. But lovely and cheap and today is the whole trick."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the paper's real rooms.",
+            "B1": "Back to the paper's real rooms.",
+            "B2": "Back to the paper's real rooms."
+          },
+          "goto": 7
+        },
+        {
+          "text": {
+            "A2": "Into the square.",
+            "B1": "Into the square.",
+            "B2": "Into the square."
+          },
+          "goto": 25
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "text": {
+        "A2": "[stub] Walking, you reach the market square by midday, feet already sore but the fare still in your pocket.",
+        "B1": "[stub] Walking, you reach the market square by midday, feet already sore but the fare still in your pocket.",
+        "B2": "[stub] Walking, you reach the market square by midday, feet already sore but the fare still in your pocket."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Into the square to choose a direction.",
+            "B1": "Into the square to choose a direction.",
+            "B2": "Into the square to choose a direction."
+          },
+          "goto": 25
+        },
+        {
+          "text": {
+            "A2": "Straight on to the canal.",
+            "B1": "Straight on to the canal.",
+            "B2": "Straight on to the canal."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "The square clock says the morning's gone.",
+            "B1": "The square clock says the morning's gone.",
+            "B2": "The square clock says the morning's gone."
+          },
+          "goto": 26
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "text": {
+        "A2": "[stub] The bus sets you down at the square. Faster, but the coins are fewer now.",
+        "B1": "[stub] The bus sets you down at the square. Faster, but the coins are fewer now.",
+        "B2": "[stub] The bus sets you down at the square. Faster, but the coins are fewer now."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Into the square.",
+            "B1": "Into the square.",
+            "B2": "Into the square."
+          },
+          "goto": 25
+        },
+        {
+          "text": {
+            "A2": "On to the canal.",
+            "B1": "On to the canal.",
+            "B2": "On to the canal."
+          },
+          "goto": 50
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "text": {
+        "A2": "[stub] The delivery man points you to Halloran's stair, then rattles off toward the centre.",
+        "B1": "[stub] The delivery man points you to Halloran's stair, then rattles off toward the centre.",
+        "B2": "[stub] The delivery man points you to Halloran's stair, then rattles off toward the centre."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go up to the canal building.",
+            "B1": "Go up to the canal building.",
+            "B2": "Go up to the canal building."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "Fill the time in the square first.",
+            "B1": "Fill the time in the square first.",
+            "B2": "Fill the time in the square first."
+          },
+          "goto": 25
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "text": {
+        "A2": "[stub] The bedsit building: a damp stair, a smell of old cooking, a landlord jingling keys.",
+        "B1": "[stub] The bedsit building: a damp stair, a smell of old cooking, a landlord jingling keys.",
+        "B2": "[stub] The bedsit building: a damp stair, a smell of old cooking, a landlord jingling keys."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go up to the room.",
+            "B1": "Go up to the room.",
+            "B2": "Go up to the room."
+          },
+          "goto": 30
+        },
+        {
+          "text": {
+            "A2": "Back to the square; something's off.",
+            "B1": "Back to the square; something's off.",
+            "B2": "Back to the square; something's off."
+          },
+          "goto": 25
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "text": {
+        "A2": "[stub] The market square: Vann's office on one side, the canal lane on the other, and Dania waving from a stall.",
+        "B1": "[stub] The market square: Vann's office on one side, the canal lane on the other, and Dania waving from a stall.",
+        "B2": "[stub] The market square: Vann's office on one side, the canal lane on the other, and Dania waving from a stall."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Vann's office.",
+            "B1": "Vann's office.",
+            "B2": "Vann's office."
+          },
+          "goto": 40
+        },
+        {
+          "text": {
+            "A2": "The canal room.",
+            "B1": "The canal room.",
+            "B2": "The canal room."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "Go with Dania.",
+            "B1": "Go with Dania.",
+            "B2": "Go with Dania."
+          },
+          "goto": 27
+        },
+        {
+          "text": {
+            "A2": "The bedsit first.",
+            "B1": "The bedsit first.",
+            "B2": "The bedsit first."
+          },
+          "goto": 21
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "text": {
+        "A2": "[stub] The square clock strikes noon. Half your daylight is spent and you have seen nothing yet.",
+        "B1": "[stub] The square clock strikes noon. Half your daylight is spent and you have seen nothing yet.",
+        "B2": "[stub] The square clock strikes noon. Half your daylight is spent and you have seen nothing yet."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Choose a direction and move.",
+            "B1": "Choose a direction and move.",
+            "B2": "Choose a direction and move."
+          },
+          "goto": 25
+        },
+        {
+          "text": {
+            "A2": "Vann's office, quickly.",
+            "B1": "Vann's office, quickly.",
+            "B2": "Vann's office, quickly."
+          },
+          "goto": 40
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "text": {
+        "A2": "[stub] Dania is wary of Vann too. You compare your two ads on a bench.",
+        "B1": "[stub] Dania is wary of Vann too. You compare your two ads on a bench.",
+        "B2": "[stub] Dania is wary of Vann too. You compare your two ads on a bench."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "View the canal room together.",
+            "B1": "View the canal room together.",
+            "B2": "View the canal room together."
+          },
+          "goto": 28
+        },
+        {
+          "text": {
+            "A2": "Split up to cover more ground.",
+            "B1": "Split up to cover more ground.",
+            "B2": "Split up to cover more ground."
+          },
+          "goto": 29
+        },
+        {
+          "text": {
+            "A2": "Both try the agent, to be sure.",
+            "B1": "Both try the agent, to be sure.",
+            "B2": "Both try the agent, to be sure."
+          },
+          "goto": 40
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "text": {
+        "A2": "[stub] With Dania beside you, the day feels less thin.",
+        "B1": "[stub] With Dania beside you, the day feels less thin.",
+        "B2": "[stub] With Dania beside you, the day feels less thin."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go to the canal room together.",
+            "B1": "Go to the canal room together.",
+            "B2": "Go to the canal room together."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "Try the bedsit together first.",
+            "B1": "Try the bedsit together first.",
+            "B2": "Try the bedsit together first."
+          },
+          "goto": 30
+        },
+        {
+          "text": {
+            "A2": "She wants to see one more first.",
+            "B1": "She wants to see one more first.",
+            "B2": "She wants to see one more first."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "text": {
+        "A2": "[stub] Alone again, you keep your own counsel.",
+        "B1": "[stub] Alone again, you keep your own counsel.",
+        "B2": "[stub] Alone again, you keep your own counsel."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The canal room.",
+            "B1": "The canal room.",
+            "B2": "The canal room."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "Vann's office.",
+            "B1": "Vann's office.",
+            "B2": "Vann's office."
+          },
+          "goto": 40
+        },
+        {
+          "text": {
+            "A2": "The bedsit.",
+            "B1": "The bedsit.",
+            "B2": "The bedsit."
+          },
+          "goto": 30
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "text": {
+        "A2": "[stub] The room is small and grey and cheap. The landlord wants cash now, asks nothing, offers nothing.",
+        "B1": "[stub] The room is small and grey and cheap. The landlord wants cash now, asks nothing, offers nothing.",
+        "B2": "[stub] The room is small and grey and cheap. The landlord wants cash now, asks nothing, offers nothing."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take it on the spot — a room is a room.",
+            "B1": "Take it on the spot — a room is a room.",
+            "B2": "Take it on the spot — a room is a room."
+          },
+          "goto": 31,
+          "sets": [
+            "rushed"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Say you'll think about it.",
+            "B1": "Say you'll think about it.",
+            "B2": "Say you'll think about it."
+          },
+          "goto": 32
+        },
+        {
+          "text": {
+            "A2": "Ask to look at it properly first.",
+            "B1": "Ask to look at it properly first.",
+            "B2": "Ask to look at it properly first."
+          },
+          "goto": 34
+        },
+        {
+          "text": {
+            "A2": "Ask why it's empty; his face hardens.",
+            "B1": "Ask why it's empty; his face hardens.",
+            "B2": "Ask why it's empty; his face hardens."
+          },
+          "goto": 35
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "text": {
+        "A2": "[stub] You give him a cash 'hold' and it is, in a way, yours. You didn't really look. You were just tired of looking.",
+        "B1": "[stub] You give him a cash 'hold' and it is, in a way, yours. You didn't really look. You were just tired of looking.",
+        "B2": "[stub] You give him a cash 'hold' and it is, in a way, yours. You didn't really look. You were just tired of looking."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "It's done. Move on.",
+            "B1": "It's done. Move on.",
+            "B2": "It's done. Move on."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "A second thought, too late.",
+            "B1": "A second thought, too late.",
+            "B2": "A second thought, too late."
+          },
+          "goto": 32
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "text": {
+        "A2": "[stub] You tell him you'll think. He shrugs; there's always someone.",
+        "B1": "[stub] You tell him you'll think. He shrugs; there's always someone.",
+        "B2": "[stub] You tell him you'll think. He shrugs; there's always someone."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Out to look properly.",
+            "B1": "Out to look properly.",
+            "B2": "Out to look properly."
+          },
+          "goto": 34
+        },
+        {
+          "text": {
+            "A2": "On to the canal room.",
+            "B1": "On to the canal room.",
+            "B2": "On to the canal room."
+          },
+          "goto": 50
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "text": {
+        "A2": "[stub] You have a room, of sorts. Grey walls, a shared bathroom, a key that's yours.",
+        "B1": "[stub] You have a room, of sorts. Grey walls, a shared bathroom, a key that's yours.",
+        "B2": "[stub] You have a room, of sorts. Grey walls, a shared bathroom, a key that's yours."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Carry on with the day anyway.",
+            "B1": "Carry on with the day anyway.",
+            "B2": "Carry on with the day anyway."
+          },
+          "goto": 96
+        },
+        {
+          "text": {
+            "A2": "Wonder if you rushed it.",
+            "B1": "Wonder if you rushed it.",
+            "B2": "Wonder if you rushed it."
+          },
+          "goto": 34
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "text": {
+        "A2": "[stub] You back out to keep looking. The bedsit will keep; grim rooms always do.",
+        "B1": "[stub] You back out to keep looking. The bedsit will keep; grim rooms always do.",
+        "B2": "[stub] You back out to keep looking. The bedsit will keep; grim rooms always do."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On to the canal room.",
+            "B1": "On to the canal room.",
+            "B2": "On to the canal room."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "Weigh it against the evening.",
+            "B1": "Weigh it against the evening.",
+            "B2": "Weigh it against the evening."
+          },
+          "goto": 96
+        },
+        {
+          "text": {
+            "A2": "The shared bathroom decides it — no.",
+            "B1": "The shared bathroom decides it — no.",
+            "B2": "The shared bathroom decides it — no."
+          },
+          "goto": 39
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "text": {
+        "A2": "[stub] You ask why it's stood empty. The landlord bristles: 'You want it or not?' No lease, no questions, no answers.",
+        "B1": "[stub] You ask why it's stood empty. The landlord bristles: 'You want it or not?' No lease, no questions, no answers.",
+        "B2": "[stub] You ask why it's stood empty. The landlord bristles: 'You want it or not?' No lease, no questions, no answers."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Say you'll think about it.",
+            "B1": "Say you'll think about it.",
+            "B2": "Say you'll think about it."
+          },
+          "goto": 32
+        },
+        {
+          "text": {
+            "A2": "Back out.",
+            "B1": "Back out.",
+            "B2": "Back out."
+          },
+          "goto": 34
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "text": {
+        "A2": "[stub] The 'room to share' ad is far out, but the price is barely half the rest.",
+        "B1": "[stub] The 'room to share' ad is far out, but the price is barely half the rest.",
+        "B2": "[stub] The 'room to share' ad is far out, but the price is barely half the rest."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Make the trip to see it.",
+            "B1": "Make the trip to see it.",
+            "B2": "Make the trip to see it."
+          },
+          "goto": 37
+        },
+        {
+          "text": {
+            "A2": "Too far — back to the real ads.",
+            "B1": "Too far — back to the real ads.",
+            "B2": "Too far — back to the real ads."
+          },
+          "goto": 7
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "text": {
+        "A2": "[stub] You get there. The share was taken this morning; the door is already someone else's.",
+        "B1": "[stub] You get there. The share was taken this morning; the door is already someone else's.",
+        "B2": "[stub] You get there. The share was taken this morning; the door is already someone else's."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Nothing here. Move on.",
+            "B1": "Nothing here. Move on.",
+            "B2": "Nothing here. Move on."
+          },
+          "goto": 38
+        },
+        {
+          "text": {
+            "A2": "Ask if they know of anything else going.",
+            "B1": "Ask if they know of anything else going.",
+            "B2": "Ask if they know of anything else going."
+          },
+          "goto": 25
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "text": {
+        "A2": "[stub] You are further out than you meant to be, and the daylight is shorter for it.",
+        "B1": "[stub] You are further out than you meant to be, and the daylight is shorter for it.",
+        "B2": "[stub] You are further out than you meant to be, and the daylight is shorter for it."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back toward the square.",
+            "B1": "Back toward the square.",
+            "B2": "Back toward the square."
+          },
+          "goto": 25
+        },
+        {
+          "text": {
+            "A2": "It's getting late — think about the evening.",
+            "B1": "It's getting late — think about the evening.",
+            "B2": "It's getting late — think about the evening."
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "text": {
+        "A2": "[stub] One cold shared bathroom off the stair, a queue of doors. A room, but never a home.",
+        "B1": "[stub] One cold shared bathroom off the stair, a queue of doors. A room, but never a home.",
+        "B2": "[stub] One cold shared bathroom off the stair, a queue of doors. A room, but never a home."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On to the canal room.",
+            "B1": "On to the canal room.",
+            "B2": "On to the canal room."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "Think about the evening.",
+            "B1": "Think about the evening.",
+            "B2": "Think about the evening."
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "text": {
+        "A2": "[stub] Vann's office. A queue of tired hopefuls. Vann himself is all warmth and hurry.",
+        "B1": "[stub] Vann's office. A queue of tired hopefuls. Vann himself is all warmth and hurry.",
+        "B2": "[stub] Vann's office. A queue of tired hopefuls. Vann himself is all warmth and hurry."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Listen to the pitch.",
+            "B1": "Listen to the pitch.",
+            "B2": "Listen to the pitch."
+          },
+          "goto": 41
+        },
+        {
+          "text": {
+            "A2": "Talk to the people in the queue.",
+            "B1": "Talk to the people in the queue.",
+            "B2": "Talk to the people in the queue."
+          },
+          "goto": 42
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "text": {
+        "A2": "[stub] The pitch is perfect: the very room from the photos, cheap, yours — if you leave a deposit today to hold it.",
+        "B1": "[stub] The pitch is perfect: the very room from the photos, cheap, yours — if you leave a deposit today to hold it.",
+        "B2": "[stub] The pitch is perfect: the very room from the photos, cheap, yours — if you leave a deposit today to hold it."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Ask to see the room before you pay.",
+            "B1": "Ask to see the room before you pay.",
+            "B2": "Ask to see the room before you pay."
+          },
+          "goto": 43
+        },
+        {
+          "text": {
+            "A2": "Pay the deposit now, before it's gone.",
+            "B1": "Pay the deposit now, before it's gone.",
+            "B2": "Pay the deposit now, before it's gone."
+          },
+          "goto": 44
+        },
+        {
+          "text": {
+            "A2": "Say you'll think about it, and leave.",
+            "B1": "Say you'll think about it, and leave.",
+            "B2": "Say you'll think about it, and leave."
+          },
+          "goto": 45
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "text": {
+        "A2": "[stub] In the queue, a woman whispers she's been 'holding' a room for a week. A man says Vann found his cousin a flat, no trouble.",
+        "B1": "[stub] In the queue, a woman whispers she's been 'holding' a room for a week. A man says Vann found his cousin a flat, no trouble.",
+        "B2": "[stub] In the queue, a woman whispers she's been 'holding' a room for a week. A man says Vann found his cousin a flat, no trouble."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Ask to see the room first.",
+            "B1": "Ask to see the room first.",
+            "B2": "Ask to see the room first."
+          },
+          "goto": 43
+        },
+        {
+          "text": {
+            "A2": "Leave; you've heard enough.",
+            "B1": "Leave; you've heard enough.",
+            "B2": "Leave; you've heard enough."
+          },
+          "goto": 45
+        },
+        {
+          "text": {
+            "A2": "Hear the woman's story out.",
+            "B1": "Hear the woman's story out.",
+            "B2": "Hear the woman's story out."
+          },
+          "goto": 65
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "text": {
+        "A2": "[stub] You ask to see it first. Vann's smile holds but his eyes flick to the clock. 'It'll be gone by five. The deposit only holds it.'",
+        "B1": "[stub] You ask to see it first. Vann's smile holds but his eyes flick to the clock. 'It'll be gone by five. The deposit only holds it.'",
+        "B2": "[stub] You ask to see it first. Vann's smile holds but his eyes flick to the clock. 'It'll be gone by five. The deposit only holds it.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Better safe — pay to hold it.",
+            "B1": "Better safe — pay to hold it.",
+            "B2": "Better safe — pay to hold it."
+          },
+          "goto": 44
+        },
+        {
+          "text": {
+            "A2": "Refuse the 'hold' and insist on seeing it.",
+            "B1": "Refuse the 'hold' and insist on seeing it.",
+            "B2": "Refuse the 'hold' and insist on seeing it."
+          },
+          "goto": 46,
+          "sets": [
+            "dodged_letting_scam"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Walk. He never once said the address.",
+            "B1": "Walk. He never once said the address.",
+            "B2": "Walk. He never once said the address."
+          },
+          "goto": 47,
+          "sets": [
+            "dodged_letting_scam"
+          ],
+          "requires": [
+            "dodged_scam"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "text": {
+        "A2": "[stub] You hand over the deposit. A receipt, a firm handshake, 'keys tomorrow, come at nine.'",
+        "B1": "[stub] You hand over the deposit. A receipt, a firm handshake, 'keys tomorrow, come at nine.'",
+        "B2": "[stub] You hand over the deposit. A receipt, a firm handshake, 'keys tomorrow, come at nine.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Pocket the receipt and go.",
+            "B1": "Pocket the receipt and go.",
+            "B2": "Pocket the receipt and go."
+          },
+          "goto": 48,
+          "sets": [
+            "paid_letting_scam"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Head out, already uneasy.",
+            "B1": "Head out, already uneasy.",
+            "B2": "Head out, already uneasy."
+          },
+          "goto": 96,
+          "sets": [
+            "paid_letting_scam"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "text": {
+        "A2": "[stub] You leave without paying. Behind you the queue shuffles up one place.",
+        "B1": "[stub] You leave without paying. Behind you the queue shuffles up one place.",
+        "B2": "[stub] You leave without paying. Behind you the queue shuffles up one place."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On to a real room.",
+            "B1": "On to a real room.",
+            "B2": "On to a real room."
+          },
+          "goto": 49
+        },
+        {
+          "text": {
+            "A2": "Back to the square.",
+            "B1": "Back to the square.",
+            "B2": "Back to the square."
+          },
+          "goto": 25
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "text": {
+        "A2": "[stub] You refuse the hold and ask, plainly, for the address so you can see it. Vann's warmth cools. He hasn't got one to give.",
+        "B1": "[stub] You refuse the hold and ask, plainly, for the address so you can see it. Vann's warmth cools. He hasn't got one to give.",
+        "B2": "[stub] You refuse the hold and ask, plainly, for the address so you can see it. Vann's warmth cools. He hasn't got one to give."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Out the door, money intact.",
+            "B1": "Out the door, money intact.",
+            "B2": "Out the door, money intact."
+          },
+          "goto": 49
+        },
+        {
+          "text": {
+            "A2": "Straight to the canal instead.",
+            "B1": "Straight to the canal instead.",
+            "B2": "Straight to the canal instead."
+          },
+          "goto": 50
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "text": {
+        "A2": "[stub] You just walk. On the step you realise: in ten minutes of talk, he never once named a street.",
+        "B1": "[stub] You just walk. On the step you realise: in ten minutes of talk, he never once named a street.",
+        "B2": "[stub] You just walk. On the step you realise: in ten minutes of talk, he never once named a street."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Note it and move on.",
+            "B1": "Note it and move on.",
+            "B2": "Note it and move on."
+          },
+          "goto": 49
+        },
+        {
+          "text": {
+            "A2": "On to the canal.",
+            "B1": "On to the canal.",
+            "B2": "On to the canal."
+          },
+          "goto": 50
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "text": {
+        "A2": "[stub] Out on the street with a receipt and no keys, the morning gone, a small cold doubt starting.",
+        "B1": "[stub] Out on the street with a receipt and no keys, the morning gone, a small cold doubt starting.",
+        "B2": "[stub] Out on the street with a receipt and no keys, the morning gone, a small cold doubt starting."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On to see a real room too.",
+            "B1": "On to see a real room too.",
+            "B2": "On to see a real room too."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "Read the receipt again.",
+            "B1": "Read the receipt again.",
+            "B2": "Read the receipt again."
+          },
+          "goto": 117
+        },
+        {
+          "text": {
+            "A2": "Think about the evening.",
+            "B1": "Think about the evening.",
+            "B2": "Think about the evening."
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "text": {
+        "A2": "[stub] Out of Vann's, purse still full, but the clock is unkind. Canal or bedsit left.",
+        "B1": "[stub] Out of Vann's, purse still full, but the clock is unkind. Canal or bedsit left.",
+        "B2": "[stub] Out of Vann's, purse still full, but the clock is unkind. Canal or bedsit left."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The canal room.",
+            "B1": "The canal room.",
+            "B2": "The canal room."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "The bedsit.",
+            "B1": "The bedsit.",
+            "B2": "The bedsit."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "Leaving, the queue is longer than before.",
+            "B1": "Leaving, the queue is longer than before.",
+            "B2": "Leaving, the queue is longer than before."
+          },
+          "goto": 68
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "text": {
+        "A2": "[stub] Halloran's building over the rope-works. A steep clean stair; at the top, an open door and a woman waiting.",
+        "B1": "[stub] Halloran's building over the rope-works. A steep clean stair; at the top, an open door and a woman waiting.",
+        "B2": "[stub] Halloran's building over the rope-works. A steep clean stair; at the top, an open door and a woman waiting."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go up for the viewing.",
+            "B1": "Go up for the viewing.",
+            "B2": "Go up for the viewing."
+          },
+          "goto": 51
+        },
+        {
+          "text": {
+            "A2": "You're early — wait in the square.",
+            "B1": "You're early — wait in the square.",
+            "B2": "You're early — wait in the square."
+          },
+          "goto": 25
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "text": {
+        "A2": "[stub] Mrs Halloran is brisk and grey-eyed. The room has good light — and someone's things, half-packed: a coat, a tin of buttons, a box by the wall.",
+        "B1": "[stub] Mrs Halloran is brisk and grey-eyed. The room has good light — and someone's things, half-packed: a coat, a tin of buttons, a box by the wall.",
+        "B2": "[stub] Mrs Halloran is brisk and grey-eyed. The room has good light — and someone's things, half-packed: a coat, a tin of buttons, a box by the wall."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Ask about the last tenant.",
+            "B1": "Ask about the last tenant.",
+            "B2": "Ask about the last tenant."
+          },
+          "goto": 52
+        },
+        {
+          "text": {
+            "A2": "Look at the room itself first.",
+            "B1": "Look at the room itself first.",
+            "B2": "Look at the room itself first."
+          },
+          "goto": 53
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "text": {
+        "A2": "[stub] 'He's gone. That's all,' she says, and busies herself with the window catch.",
+        "B1": "[stub] 'He's gone. That's all,' she says, and busies herself with the window catch.",
+        "B2": "[stub] 'He's gone. That's all,' she says, and busies herself with the window catch."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Let it go; ask about terms.",
+            "B1": "Let it go; ask about terms.",
+            "B2": "Let it go; ask about terms."
+          },
+          "goto": 54
+        },
+        {
+          "text": {
+            "A2": "Look more closely at what he left.",
+            "B1": "Look more closely at what he left.",
+            "B2": "Look more closely at what he left."
+          },
+          "goto": 55
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "text": {
+        "A2": "[stub] Good light off the water; a coat still on the hook; the tin of buttons on the sill. Someone lived here, and lately.",
+        "B1": "[stub] Good light off the water; a coat still on the hook; the tin of buttons on the sill. Someone lived here, and lately.",
+        "B2": "[stub] Good light off the water; a coat still on the hook; the tin of buttons on the sill. Someone lived here, and lately."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Notice the things he left.",
+            "B1": "Notice the things he left.",
+            "B2": "Notice the things he left."
+          },
+          "goto": 55
+        },
+        {
+          "text": {
+            "A2": "Ask Halloran what happened here.",
+            "B1": "Ask Halloran what happened here.",
+            "B2": "Ask Halloran what happened here."
+          },
+          "goto": 80
+        },
+        {
+          "text": {
+            "A2": "Picture yourself living here.",
+            "B1": "Picture yourself living here.",
+            "B2": "Picture yourself living here."
+          },
+          "goto": 84
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "text": {
+        "A2": "[stub] Terms: the rent is fair, the deposit steep, and references — 'people who'll say you're sound' — required.",
+        "B1": "[stub] Terms: the rent is fair, the deposit steep, and references — 'people who'll say you're sound' — required.",
+        "B2": "[stub] Terms: the rent is fair, the deposit steep, and references — 'people who'll say you're sound' — required."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Face the references problem.",
+            "B1": "Face the references problem.",
+            "B2": "Face the references problem."
+          },
+          "goto": 56
+        },
+        {
+          "text": {
+            "A2": "Look around once more as she talks.",
+            "B1": "Look around once more as she talks.",
+            "B2": "Look around once more as she talks."
+          },
+          "goto": 53
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "text": {
+        "A2": "[stub] Among his things, a notebook lies open on the sill — pages of names and addresses in a careful hand.",
+        "B1": "[stub] Among his things, a notebook lies open on the sill — pages of names and addresses in a careful hand.",
+        "B2": "[stub] Among his things, a notebook lies open on the sill — pages of names and addresses in a careful hand."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Pick it up to return to him.",
+            "B1": "Pick it up to return to him.",
+            "B2": "Pick it up to return to him."
+          },
+          "goto": 57,
+          "sets": [
+            "found_keepsake"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Leave it; not your business.",
+            "B1": "Leave it; not your business.",
+            "B2": "Leave it; not your business."
+          },
+          "goto": 58
+        },
+        {
+          "text": {
+            "A2": "Ask Halloran about it.",
+            "B1": "Ask Halloran about it.",
+            "B2": "Ask Halloran about it."
+          },
+          "goto": 80
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "text": {
+        "A2": "[stub] References. You know no one in this city who could vouch that you're sound. You've been here three days.",
+        "B1": "[stub] References. You know no one in this city who could vouch that you're sound. You've been here three days.",
+        "B2": "[stub] References. You know no one in this city who could vouch that you're sound. You've been here three days."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "She names her condition — unless.",
+            "B1": "She names her condition — unless.",
+            "B2": "She names her condition — unless."
+          },
+          "goto": 59
+        },
+        {
+          "text": {
+            "A2": "She softens a little as you take it in.",
+            "B1": "She softens a little as you take it in.",
+            "B2": "She softens a little as you take it in."
+          },
+          "goto": 60
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "text": {
+        "A2": "[stub] You slip the notebook into your bag to give back. It feels less like taking and more like keeping safe.",
+        "B1": "[stub] You slip the notebook into your bag to give back. It feels less like taking and more like keeping safe.",
+        "B2": "[stub] You slip the notebook into your bag to give back. It feels less like taking and more like keeping safe."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Turn back to Halloran.",
+            "B1": "Turn back to Halloran.",
+            "B2": "Turn back to Halloran."
+          },
+          "goto": 60
+        },
+        {
+          "text": {
+            "A2": "Ask her about it, holding it.",
+            "B1": "Ask her about it, holding it.",
+            "B2": "Ask her about it, holding it."
+          },
+          "goto": 80
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "text": {
+        "A2": "[stub] You put the notebook down where it lay. Whatever it is, it isn't yours.",
+        "B1": "[stub] You put the notebook down where it lay. Whatever it is, it isn't yours.",
+        "B2": "[stub] You put the notebook down where it lay. Whatever it is, it isn't yours."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Turn back to Halloran.",
+            "B1": "Turn back to Halloran.",
+            "B2": "Turn back to Halloran."
+          },
+          "goto": 60
+        },
+        {
+          "text": {
+            "A2": "Ask about him instead.",
+            "B1": "Ask about him instead.",
+            "B2": "Ask about him instead."
+          },
+          "goto": 52
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "text": {
+        "A2": "[stub] 'No references, no room,' she says. 'Unless you give me a reason to trust my own eyes.'",
+        "B1": "[stub] 'No references, no room,' she says. 'Unless you give me a reason to trust my own eyes.'",
+        "B2": "[stub] 'No references, no room,' she says. 'Unless you give me a reason to trust my own eyes.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Mention Kessler and Rowe.",
+            "B1": "Mention Kessler and Rowe.",
+            "B2": "Mention Kessler and Rowe."
+          },
+          "goto": 61
+        },
+        {
+          "text": {
+            "A2": "Just be honest about who you are.",
+            "B1": "Just be honest about who you are.",
+            "B2": "Just be honest about who you are."
+          },
+          "goto": 62
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "text": {
+        "A2": "[stub] She watches how you move through the room — carefully, as if it were already someone's home. Something in her eases.",
+        "B1": "[stub] She watches how you move through the room — carefully, as if it were already someone's home. Something in her eases.",
+        "B2": "[stub] She watches how you move through the room — carefully, as if it were already someone's home. Something in her eases."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Mention your job at the firm.",
+            "B1": "Mention your job at the firm.",
+            "B2": "Mention your job at the firm."
+          },
+          "goto": 61
+        },
+        {
+          "text": {
+            "A2": "Be honest: new here, no one, need a chance.",
+            "B1": "Be honest: new here, no one, need a chance.",
+            "B2": "Be honest: new here, no one, need a chance."
+          },
+          "goto": 62
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "text": {
+        "A2": "[stub] You mention Kessler and Rowe. Her eyebrows lift. 'Rowe. I know that name. If she'd say a word for you...'",
+        "B1": "[stub] You mention Kessler and Rowe. Her eyebrows lift. 'Rowe. I know that name. If she'd say a word for you...'",
+        "B2": "[stub] You mention Kessler and Rowe. Her eyebrows lift. 'Rowe. I know that name. If she'd say a word for you...'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "A reference from the firm — how?",
+            "B1": "A reference from the firm — how?",
+            "B2": "A reference from the firm — how?"
+          },
+          "goto": 70
+        },
+        {
+          "text": {
+            "A2": "Say you'll be honest instead.",
+            "B1": "Say you'll be honest instead.",
+            "B2": "Say you'll be honest instead."
+          },
+          "goto": 62
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "text": {
+        "A2": "[stub] You tell her the plain truth: three days in the city, no one to vouch for you, a week's pay, and today to find a home.",
+        "B1": "[stub] You tell her the plain truth: three days in the city, no one to vouch for you, a week's pay, and today to find a home.",
+        "B2": "[stub] You tell her the plain truth: three days in the city, no one to vouch for you, a week's pay, and today to find a home."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "She says: come back at dusk.",
+            "B1": "She says: come back at dusk.",
+            "B2": "She says: come back at dusk."
+          },
+          "goto": 63
+        },
+        {
+          "text": {
+            "A2": "She studies you a moment longer.",
+            "B1": "She studies you a moment longer.",
+            "B2": "She studies you a moment longer."
+          },
+          "goto": 60
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "text": {
+        "A2": "[stub] 'Come back when the light goes,' she says. 'I'll have thought.' On the stair, a neighbour is wrestling shopping and a child.",
+        "B1": "[stub] 'Come back when the light goes,' she says. 'I'll have thought.' On the stair, a neighbour is wrestling shopping and a child.",
+        "B2": "[stub] 'Come back when the light goes,' she says. 'I'll have thought.' On the stair, a neighbour is wrestling shopping and a child."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Fill the hours till dusk.",
+            "B1": "Fill the hours till dusk.",
+            "B2": "Fill the hours till dusk."
+          },
+          "goto": 64
+        },
+        {
+          "text": {
+            "A2": "Help the neighbour on the stair.",
+            "B1": "Help the neighbour on the stair.",
+            "B2": "Help the neighbour on the stair."
+          },
+          "goto": 76
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "text": {
+        "A2": "[stub] Hours to kill before dusk, and a whole city that still doesn't know you.",
+        "B1": "[stub] Hours to kill before dusk, and a whole city that still doesn't know you.",
+        "B2": "[stub] Hours to kill before dusk, and a whole city that still doesn't know you."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the square.",
+            "B1": "Back to the square.",
+            "B2": "Back to the square."
+          },
+          "goto": 25
+        },
+        {
+          "text": {
+            "A2": "Think ahead to the evening.",
+            "B1": "Think ahead to the evening.",
+            "B2": "Think ahead to the evening."
+          },
+          "goto": 96
+        },
+        {
+          "text": {
+            "A2": "Count what the day has cost.",
+            "B1": "Count what the day has cost.",
+            "B2": "Count what the day has cost."
+          },
+          "goto": 99
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "text": {
+        "A2": "[stub] The woman's story: a deposit paid, a date given, then another, then Vann 'so sorry, it fell through' — and no money back.",
+        "B1": "[stub] The woman's story: a deposit paid, a date given, then another, then Vann 'so sorry, it fell through' — and no money back.",
+        "B2": "[stub] The woman's story: a deposit paid, a date given, then another, then Vann 'so sorry, it fell through' — and no money back."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Thank her and refuse to pay.",
+            "B1": "Thank her and refuse to pay.",
+            "B2": "Thank her and refuse to pay."
+          },
+          "goto": 45
+        },
+        {
+          "text": {
+            "A2": "Vann leans in with one last push.",
+            "B1": "Vann leans in with one last push.",
+            "B2": "Vann leans in with one last push."
+          },
+          "goto": 66
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "text": {
+        "A2": "[stub] 'Last one at this price,' Vann says, hand out. 'People like you don't get second chances in this city.'",
+        "B1": "[stub] 'Last one at this price,' Vann says, hand out. 'People like you don't get second chances in this city.'",
+        "B2": "[stub] 'Last one at this price,' Vann says, hand out. 'People like you don't get second chances in this city.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Pay, against your better sense.",
+            "B1": "Pay, against your better sense.",
+            "B2": "Pay, against your better sense."
+          },
+          "goto": 44
+        },
+        {
+          "text": {
+            "A2": "That line is the tell. Leave.",
+            "B1": "That line is the tell. Leave.",
+            "B2": "That line is the tell. Leave."
+          },
+          "goto": 45
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "text": {
+        "A2": "[stub] Behind you the queue has doubled; the same warmth, the same clock, the same hand out.",
+        "B1": "[stub] Behind you the queue has doubled; the same warmth, the same clock, the same hand out.",
+        "B2": "[stub] Behind you the queue has doubled; the same warmth, the same clock, the same hand out."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On to a real room.",
+            "B1": "On to a real room.",
+            "B2": "On to a real room."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "Think about the evening.",
+            "B1": "Think about the evening.",
+            "B2": "Think about the evening."
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "text": {
+        "A2": "[stub] There is a better flat across town — but it needs a guarantor, someone to stand behind your rent. You have none. Unless the firm will.",
+        "B1": "[stub] There is a better flat across town — but it needs a guarantor, someone to stand behind your rent. You have none. Unless the firm will.",
+        "B2": "[stub] There is a better flat across town — but it needs a guarantor, someone to stand behind your rent. You have none. Unless the firm will."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Think how to get the firm's word.",
+            "B1": "Think how to get the firm's word.",
+            "B2": "Think how to get the firm's word."
+          },
+          "goto": 71
+        },
+        {
+          "text": {
+            "A2": "Give up on the good flat.",
+            "B1": "Give up on the good flat.",
+            "B2": "Give up on the good flat."
+          },
+          "goto": 74
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "text": {
+        "A2": "[stub] You could ask. It's your first week; it's a lot to ask. But you did tell Ms Rowe everything, once.",
+        "B1": "[stub] You could ask. It's your first week; it's a lot to ask. But you did tell Ms Rowe everything, once.",
+        "B2": "[stub] You could ask. It's your first week; it's a lot to ask. But you did tell Ms Rowe everything, once."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Call Ms Rowe, who trusts you.",
+            "B1": "Call Ms Rowe, who trusts you.",
+            "B2": "Call Ms Rowe, who trusts you."
+          },
+          "goto": 72,
+          "sets": [
+            "has_reference"
+          ],
+          "requires": [
+            "told_truth"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Ask a colleague at the firm instead.",
+            "B1": "Ask a colleague at the firm instead.",
+            "B2": "Ask a colleague at the firm instead."
+          },
+          "goto": 73,
+          "sets": [
+            "has_reference"
+          ]
+        },
+        {
+          "text": {
+            "A2": "It's too much to ask. Let it go.",
+            "B1": "It's too much to ask. Let it go.",
+            "B2": "It's too much to ask. Let it go."
+          },
+          "goto": 74
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "text": {
+        "A2": "[stub] Ms Rowe listens, then: 'Of course. Put them onto me.' Because you were straight with her once, she is straight with you now.",
+        "B1": "[stub] Ms Rowe listens, then: 'Of course. Put them onto me.' Because you were straight with her once, she is straight with you now.",
+        "B2": "[stub] Ms Rowe listens, then: 'Of course. Put them onto me.' Because you were straight with her once, she is straight with you now."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "A reference — you have one.",
+            "B1": "A reference — you have one.",
+            "B2": "A reference — you have one."
+          },
+          "goto": 75
+        },
+        {
+          "text": {
+            "A2": "Thank her and get on with the day.",
+            "B1": "Thank her and get on with the day.",
+            "B2": "Thank her and get on with the day."
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "text": {
+        "A2": "[stub] A colleague hesitates — you're new — then agrees to say you're sound. Not warm, but enough.",
+        "B1": "[stub] A colleague hesitates — you're new — then agrees to say you're sound. Not warm, but enough.",
+        "B2": "[stub] A colleague hesitates — you're new — then agrees to say you're sound. Not warm, but enough."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "A reference, of a kind.",
+            "B1": "A reference, of a kind.",
+            "B2": "A reference, of a kind."
+          },
+          "goto": 75
+        },
+        {
+          "text": {
+            "A2": "On with the day.",
+            "B1": "On with the day.",
+            "B2": "On with the day."
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "text": {
+        "A2": "[stub] You let the good flat go. You can't ask the firm for your name in your first week.",
+        "B1": "[stub] You let the good flat go. You can't ask the firm for your name in your first week.",
+        "B2": "[stub] You let the good flat go. You can't ask the firm for your name in your first week."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the day's real chances.",
+            "B1": "Back to the day's real chances.",
+            "B2": "Back to the day's real chances."
+          },
+          "goto": 96
+        },
+        {
+          "text": {
+            "A2": "Into the square to think.",
+            "B1": "Into the square to think.",
+            "B2": "Into the square to think."
+          },
+          "goto": 25
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "text": {
+        "A2": "[stub] You have a reference now — a name that will answer for you. It changes what doors will open.",
+        "B1": "[stub] You have a reference now — a name that will answer for you. It changes what doors will open.",
+        "B2": "[stub] You have a reference now — a name that will answer for you. It changes what doors will open."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Carry it to the evening.",
+            "B1": "Carry it to the evening.",
+            "B2": "Carry it to the evening."
+          },
+          "goto": 96
+        },
+        {
+          "text": {
+            "A2": "Into the square first.",
+            "B1": "Into the square first.",
+            "B2": "Into the square first."
+          },
+          "goto": 25
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "text": {
+        "A2": "[stub] The neighbour: bags splitting, a small child on the step, three floors to climb.",
+        "B1": "[stub] The neighbour: bags splitting, a small child on the step, three floors to climb.",
+        "B2": "[stub] The neighbour: bags splitting, a small child on the step, three floors to climb."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take the bags and help up.",
+            "B1": "Take the bags and help up.",
+            "B2": "Take the bags and help up."
+          },
+          "goto": 77,
+          "sets": [
+            "helped_neighbour"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You're in a hurry — pass by.",
+            "B1": "You're in a hurry — pass by.",
+            "B2": "You're in a hurry — pass by."
+          },
+          "goto": 78
+        },
+        {
+          "text": {
+            "A2": "Mind the child while she manages the bags.",
+            "B1": "Mind the child while she manages the bags.",
+            "B2": "Mind the child while she manages the bags."
+          },
+          "goto": 92
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "text": {
+        "A2": "[stub] You carry the shopping up. She's breathless with thanks and insists you'll be repaid one day.",
+        "B1": "[stub] You carry the shopping up. She's breathless with thanks and insists you'll be repaid one day.",
+        "B2": "[stub] You carry the shopping up. She's breathless with thanks and insists you'll be repaid one day."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Wave it off; back to the day.",
+            "B1": "Wave it off; back to the day.",
+            "B2": "Wave it off; back to the day."
+          },
+          "goto": 79
+        },
+        {
+          "text": {
+            "A2": "She points you back toward Halloran.",
+            "B1": "She points you back toward Halloran.",
+            "B2": "She points you back toward Halloran."
+          },
+          "goto": 63
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "text": {
+        "A2": "[stub] You pass by with a nod. Not unkind, just busy. The stair swallows the sound of her struggling on.",
+        "B1": "[stub] You pass by with a nod. Not unkind, just busy. The stair swallows the sound of her struggling on.",
+        "B2": "[stub] You pass by with a nod. Not unkind, just busy. The stair swallows the sound of her struggling on."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the day.",
+            "B1": "Back to the day.",
+            "B2": "Back to the day."
+          },
+          "goto": 79
+        },
+        {
+          "text": {
+            "A2": "Into the square.",
+            "B1": "Into the square.",
+            "B2": "Into the square."
+          },
+          "goto": 25
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "text": {
+        "A2": "[stub] Back to the day, the small warmth or small guilt of it going with you.",
+        "B1": "[stub] Back to the day, the small warmth or small guilt of it going with you.",
+        "B2": "[stub] Back to the day, the small warmth or small guilt of it going with you."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Think toward the evening.",
+            "B1": "Think toward the evening.",
+            "B2": "Think toward the evening."
+          },
+          "goto": 96
+        },
+        {
+          "text": {
+            "A2": "Back to Halloran's block at dusk.",
+            "B1": "Back to Halloran's block at dusk.",
+            "B2": "Back to Halloran's block at dusk."
+          },
+          "goto": 64
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "text": {
+        "A2": "[stub] You ask Halloran outright what happened here. She stiffens, straightens the coat on its hook, and changes the subject.",
+        "B1": "[stub] You ask Halloran outright what happened here. She stiffens, straightens the coat on its hook, and changes the subject.",
+        "B2": "[stub] You ask Halloran outright what happened here. She stiffens, straightens the coat on its hook, and changes the subject."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Press gently.",
+            "B1": "Press gently.",
+            "B2": "Press gently."
+          },
+          "goto": 81
+        },
+        {
+          "text": {
+            "A2": "Let it drop.",
+            "B1": "Let it drop.",
+            "B2": "Let it drop."
+          },
+          "goto": 60
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "text": {
+        "A2": "[stub] On the stair a neighbour murmurs: 'The lad up top? Went to sea. Sudden. She won't speak of it.'",
+        "B1": "[stub] On the stair a neighbour murmurs: 'The lad up top? Went to sea. Sudden. She won't speak of it.'",
+        "B2": "[stub] On the stair a neighbour murmurs: 'The lad up top? Went to sea. Sudden. She won't speak of it.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Ask the neighbour more.",
+            "B1": "Ask the neighbour more.",
+            "B2": "Ask the neighbour more."
+          },
+          "goto": 82
+        },
+        {
+          "text": {
+            "A2": "Leave it and help the neighbour instead.",
+            "B1": "Leave it and help the neighbour instead.",
+            "B2": "Leave it and help the neighbour instead."
+          },
+          "goto": 76
+        },
+        {
+          "text": {
+            "A2": "Back to Halloran and the room.",
+            "B1": "Back to Halloran and the room.",
+            "B2": "Back to Halloran and the room."
+          },
+          "goto": 60
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "text": {
+        "A2": "[stub] 'Owed nothing, harmed no one,' the neighbour says. 'Just gone one morning. It's her boy, see. She won't say.'",
+        "B1": "[stub] 'Owed nothing, harmed no one,' the neighbour says. 'Just gone one morning. It's her boy, see. She won't say.'",
+        "B2": "[stub] 'Owed nothing, harmed no one,' the neighbour says. 'Just gone one morning. It's her boy, see. She won't say.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Her boy. You understand the packed box now.",
+            "B1": "Her boy. You understand the packed box now.",
+            "B2": "Her boy. You understand the packed box now."
+          },
+          "goto": 83
+        },
+        {
+          "text": {
+            "A2": "Enough — help with the shopping.",
+            "B1": "Enough — help with the shopping.",
+            "B2": "Enough — help with the shopping."
+          },
+          "goto": 76
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "text": {
+        "A2": "[stub] Her son. The half-packed room, the coat she won't move, the notebook of addresses he meant to write to.",
+        "B1": "[stub] Her son. The half-packed room, the coat she won't move, the notebook of addresses he meant to write to.",
+        "B2": "[stub] Her son. The half-packed room, the coat she won't move, the notebook of addresses he meant to write to."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take the notebook to return it.",
+            "B1": "Take the notebook to return it.",
+            "B2": "Take the notebook to return it."
+          },
+          "goto": 57,
+          "sets": [
+            "found_keepsake"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Say nothing; go back down.",
+            "B1": "Say nothing; go back down.",
+            "B2": "Say nothing; go back down."
+          },
+          "goto": 60
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "text": {
+        "A2": "[stub] At the window you can see yourself here: the water, the light, a kettle, a life. It's the first room that felt like one.",
+        "B1": "[stub] At the window you can see yourself here: the water, the light, a kettle, a life. It's the first room that felt like one.",
+        "B2": "[stub] At the window you can see yourself here: the water, the light, a kettle, a life. It's the first room that felt like one."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Look at what he left behind.",
+            "B1": "Look at what he left behind.",
+            "B2": "Look at what he left behind."
+          },
+          "goto": 85
+        },
+        {
+          "text": {
+            "A2": "Turn back before you hope too hard.",
+            "B1": "Turn back before you hope too hard.",
+            "B2": "Turn back before you hope too hard."
+          },
+          "goto": 55
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "text": {
+        "A2": "[stub] In the coat pocket, a photograph: the same window, a young man, and Halloran, younger, laughing.",
+        "B1": "[stub] In the coat pocket, a photograph: the same window, a young man, and Halloran, younger, laughing.",
+        "B2": "[stub] In the coat pocket, a photograph: the same window, a young man, and Halloran, younger, laughing."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "You understand who lived here.",
+            "B1": "You understand who lived here.",
+            "B2": "You understand who lived here."
+          },
+          "goto": 86
+        },
+        {
+          "text": {
+            "A2": "Put it back exactly as it was.",
+            "B1": "Put it back exactly as it was.",
+            "B2": "Put it back exactly as it was."
+          },
+          "goto": 55
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "text": {
+        "A2": "[stub] Someone lived here and left fast, and the woman letting the room is not a stranger to him at all.",
+        "B1": "[stub] Someone lived here and left fast, and the woman letting the room is not a stranger to him at all.",
+        "B2": "[stub] Someone lived here and left fast, and the woman letting the room is not a stranger to him at all."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take the notebook to give back.",
+            "B1": "Take the notebook to give back.",
+            "B2": "Take the notebook to give back."
+          },
+          "goto": 57,
+          "sets": [
+            "found_keepsake"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Say nothing yet.",
+            "B1": "Say nothing yet.",
+            "B2": "Say nothing yet."
+          },
+          "goto": 60
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "text": {
+        "A2": "[stub] Dania wants to see a place round the corner first. You go with her.",
+        "B1": "[stub] Dania wants to see a place round the corner first. You go with her.",
+        "B2": "[stub] Dania wants to see a place round the corner first. You go with her."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On to the canal room after.",
+            "B1": "On to the canal room after.",
+            "B2": "On to the canal room after."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "She's found something; you're still looking.",
+            "B1": "She's found something; you're still looking.",
+            "B2": "She's found something; you're still looking."
+          },
+          "goto": 91
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "text": {
+        "A2": "[stub] Dania takes a small room she likes and hugs you goodbye. You're glad for her, and more alone.",
+        "B1": "[stub] Dania takes a small room she likes and hugs you goodbye. You're glad for her, and more alone.",
+        "B2": "[stub] Dania takes a small room she likes and hugs you goodbye. You're glad for her, and more alone."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the square.",
+            "B1": "Back to the square.",
+            "B2": "Back to the square."
+          },
+          "goto": 25
+        },
+        {
+          "text": {
+            "A2": "On to the evening.",
+            "B1": "On to the evening.",
+            "B2": "On to the evening."
+          },
+          "goto": 96
+        },
+        {
+          "text": {
+            "A2": "She texts you a listing to try.",
+            "B1": "She texts you a listing to try.",
+            "B2": "She texts you a listing to try."
+          },
+          "goto": 118
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "text": {
+        "A2": "[stub] The child holds your hand solemnly while the mother hauls the bags. A tiny trust, freely given.",
+        "B1": "[stub] The child holds your hand solemnly while the mother hauls the bags. A tiny trust, freely given.",
+        "B2": "[stub] The child holds your hand solemnly while the mother hauls the bags. A tiny trust, freely given."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "See them both safely up.",
+            "B1": "See them both safely up.",
+            "B2": "See them both safely up."
+          },
+          "goto": 77,
+          "sets": [
+            "helped_neighbour"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Hand the child back and hurry on.",
+            "B1": "Hand the child back and hurry on.",
+            "B2": "Hand the child back and hurry on."
+          },
+          "goto": 78
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "text": {
+        "A2": "[stub] Dusk. The hotel wants its room tonight. You have one evening and whatever the day has left you.",
+        "B1": "[stub] Dusk. The hotel wants its room tonight. You have one evening and whatever the day has left you.",
+        "B2": "[stub] Dusk. The hotel wants its room tonight. You have one evening and whatever the day has left you."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to Mrs Halloran's.",
+            "B1": "Back to Mrs Halloran's.",
+            "B2": "Back to Mrs Halloran's."
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "Claim the good flat.",
+            "B1": "Claim the good flat.",
+            "B2": "Claim the good flat."
+          },
+          "goto": 101,
+          "requires": [
+            "has_reference"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Weigh the other options.",
+            "B1": "Weigh the other options.",
+            "B2": "Weigh the other options."
+          },
+          "goto": 97
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "text": {
+        "A2": "[stub] The light is nearly gone. What's actually within your reach tonight?",
+        "B1": "[stub] The light is nearly gone. What's actually within your reach tonight?",
+        "B2": "[stub] The light is nearly gone. What's actually within your reach tonight?"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go for the agent's keys.",
+            "B1": "Go for the agent's keys.",
+            "B2": "Go for the agent's keys."
+          },
+          "goto": 102,
+          "requires": [
+            "paid_letting_scam"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Sign for the bedsit.",
+            "B1": "Sign for the bedsit.",
+            "B2": "Sign for the bedsit."
+          },
+          "goto": 103,
+          "requires": [
+            "rushed"
+          ]
+        },
+        {
+          "text": {
+            "A2": "One last phone check.",
+            "B1": "One last phone check.",
+            "B2": "One last phone check."
+          },
+          "goto": 114
+        },
+        {
+          "text": {
+            "A2": "None of these — think again.",
+            "B1": "None of these — think again.",
+            "B2": "None of these — think again."
+          },
+          "goto": 98
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "text": {
+        "A2": "[stub] Nothing has quite worked. The hotel closes to you at ten.",
+        "B1": "[stub] Nothing has quite worked. The hotel closes to you at ten.",
+        "B2": "[stub] Nothing has quite worked. The hotel closes to you at ten."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Ask the neighbour you helped.",
+            "B1": "Ask the neighbour you helped.",
+            "B2": "Ask the neighbour you helped."
+          },
+          "goto": 113,
+          "requires": [
+            "helped_neighbour"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Try the landlady who remembered your name.",
+            "B1": "Try the landlady who remembered your name.",
+            "B2": "Try the landlady who remembered your name."
+          },
+          "goto": 126,
+          "requires": [
+            "knows_name"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Accept the rooms are gone for today.",
+            "B1": "Accept the rooms are gone for today.",
+            "B2": "Accept the rooms are gone for today."
+          },
+          "goto": 130
+        },
+        {
+          "text": {
+            "A2": "Wonder if this city will ever have you.",
+            "B1": "Wonder if this city will ever have you.",
+            "B2": "Wonder if this city will ever have you."
+          },
+          "goto": 131
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "text": {
+        "A2": "[stub] You add the day up on a bench: the fare, the wasted trip, the rooms seen, the one that felt like a home.",
+        "B1": "[stub] You add the day up on a bench: the fare, the wasted trip, the rooms seen, the one that felt like a home.",
+        "B2": "[stub] You add the day up on a bench: the fare, the wasted trip, the rooms seen, the one that felt like a home."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Decide where to go as the light goes.",
+            "B1": "Decide where to go as the light goes.",
+            "B2": "Decide where to go as the light goes."
+          },
+          "goto": 96
+        },
+        {
+          "text": {
+            "A2": "None of it's enough — think harder.",
+            "B1": "None of it's enough — think harder.",
+            "B2": "None of it's enough — think harder."
+          },
+          "goto": 98
+        },
+        {
+          "text": {
+            "A2": "The stalls are closing around you.",
+            "B1": "The stalls are closing around you.",
+            "B2": "The stalls are closing around you."
+          },
+          "goto": 115
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "text": {
+        "A2": "[stub] Halloran's stair again, the light in her window just come on. You climb.",
+        "B1": "[stub] Halloran's stair again, the light in her window just come on. You climb.",
+        "B2": "[stub] Halloran's stair again, the light in her window just come on. You climb."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "She opens the door.",
+            "B1": "She opens the door.",
+            "B2": "She opens the door."
+          },
+          "goto": 104
+        },
+        {
+          "text": {
+            "A2": "Give back his notebook first.",
+            "B1": "Give back his notebook first.",
+            "B2": "Give back his notebook first."
+          },
+          "goto": 111,
+          "requires": [
+            "found_keepsake"
+          ]
+        },
+        {
+          "text": {
+            "A2": "The walk up feels longer at dusk.",
+            "B1": "The walk up feels longer at dusk.",
+            "B2": "The walk up feels longer at dusk."
+          },
+          "goto": 110
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "text": {
+        "A2": "[stub] The good flat, clean and bright, and a letting man who only wants your reference to be real.",
+        "B1": "[stub] The good flat, clean and bright, and a letting man who only wants your reference to be real.",
+        "B2": "[stub] The good flat, clean and bright, and a letting man who only wants your reference to be real."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take it; you're vouched for.",
+            "B1": "Take it; you're vouched for.",
+            "B2": "Take it; you're vouched for."
+          },
+          "goto": 123
+        },
+        {
+          "text": {
+            "A2": "Hesitate — it's more than you can hold.",
+            "B1": "Hesitate — it's more than you can hold.",
+            "B2": "Hesitate — it's more than you can hold."
+          },
+          "goto": 127
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "text": {
+        "A2": "[stub] Vann's 'address' at last — a slip of paper, a street you don't know, a key that's cold in your hand.",
+        "B1": "[stub] Vann's 'address' at last — a slip of paper, a street you don't know, a key that's cold in your hand.",
+        "B2": "[stub] Vann's 'address' at last — a slip of paper, a street you don't know, a key that's cold in your hand."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go and let yourself in.",
+            "B1": "Go and let yourself in.",
+            "B2": "Go and let yourself in."
+          },
+          "goto": 112
+        },
+        {
+          "text": {
+            "A2": "Hesitate on the dark street.",
+            "B1": "Hesitate on the dark street.",
+            "B2": "Hesitate on the dark street."
+          },
+          "goto": 130
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "text": {
+        "A2": "[stub] The bedsit landlord counts your cash again and pushes a scrap of paper across for your name.",
+        "B1": "[stub] The bedsit landlord counts your cash again and pushes a scrap of paper across for your name.",
+        "B2": "[stub] The bedsit landlord counts your cash again and pushes a scrap of paper across for your name."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Sign; it's yours tonight.",
+            "B1": "Sign; it's yours tonight.",
+            "B2": "Sign; it's yours tonight."
+          },
+          "goto": 124
+        },
+        {
+          "text": {
+            "A2": "Back out at the last second.",
+            "B1": "Back out at the last second.",
+            "B2": "Back out at the last second."
+          },
+          "goto": 127
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "text": {
+        "A2": "[stub] Mrs Halloran in the doorway, the warm room behind her, the deposit money warm in your hand.",
+        "B1": "[stub] Mrs Halloran in the doorway, the warm room behind her, the deposit money warm in your hand.",
+        "B2": "[stub] Mrs Halloran in the doorway, the warm room behind her, the deposit money warm in your hand."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Talk terms.",
+            "B1": "Talk terms.",
+            "B2": "Talk terms."
+          },
+          "goto": 105
+        },
+        {
+          "text": {
+            "A2": "Step back onto the stair a moment.",
+            "B1": "Step back onto the stair a moment.",
+            "B2": "Step back onto the stair a moment."
+          },
+          "goto": 100
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "text": {
+        "A2": "[stub] She waits. This is the moment the whole day was walking toward.",
+        "B1": "[stub] She waits. This is the moment the whole day was walking toward.",
+        "B2": "[stub] She waits. This is the moment the whole day was walking toward."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Tell her the truth of your circumstances.",
+            "B1": "Tell her the truth of your circumstances.",
+            "B2": "Tell her the truth of your circumstances."
+          },
+          "goto": 106
+        },
+        {
+          "text": {
+            "A2": "Keep it businesslike; just the rent.",
+            "B1": "Keep it businesslike; just the rent.",
+            "B2": "Keep it businesslike; just the rent."
+          },
+          "goto": 107
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "text": {
+        "A2": "[stub] You tell her plainly: new, alone, a week's pay, no one to vouch — but honest, and you'll mind the place. Her grey eyes hold yours.",
+        "B1": "[stub] You tell her plainly: new, alone, a week's pay, no one to vouch — but honest, and you'll mind the place. Her grey eyes hold yours.",
+        "B2": "[stub] You tell her plainly: new, alone, a week's pay, no one to vouch — but honest, and you'll mind the place. Her grey eyes hold yours."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "She decides.",
+            "B1": "She decides.",
+            "B2": "She decides."
+          },
+          "goto": 108,
+          "sets": [
+            "warm_welcome"
+          ]
+        },
+        {
+          "text": {
+            "A2": "On second thought, retreat to business.",
+            "B1": "On second thought, retreat to business.",
+            "B2": "On second thought, retreat to business."
+          },
+          "goto": 107
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "text": {
+        "A2": "[stub] You keep it to rent and dates and deposits. Correct. Cool. She nods along, and something doesn't quite open.",
+        "B1": "[stub] You keep it to rent and dates and deposits. Correct. Cool. She nods along, and something doesn't quite open.",
+        "B2": "[stub] You keep it to rent and dates and deposits. Correct. Cool. She nods along, and something doesn't quite open."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "She weighs it.",
+            "B1": "She weighs it.",
+            "B2": "She weighs it."
+          },
+          "goto": 109
+        },
+        {
+          "text": {
+            "A2": "Change tack; be honest after all.",
+            "B1": "Change tack; be honest after all.",
+            "B2": "Change tack; be honest after all."
+          },
+          "goto": 106
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "text": {
+        "A2": "[stub] She looks at you a long moment, then at the packed box she cannot bring herself to move.",
+        "B1": "[stub] She looks at you a long moment, then at the packed box she cannot bring herself to move.",
+        "B2": "[stub] She looks at you a long moment, then at the packed box she cannot bring herself to move."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "She gives you the room.",
+            "B1": "She gives you the room.",
+            "B2": "She gives you the room."
+          },
+          "goto": 120,
+          "requires": [
+            "warm_welcome"
+          ]
+        },
+        {
+          "text": {
+            "A2": "It doesn't quite land; back to the hotel.",
+            "B1": "It doesn't quite land; back to the hotel.",
+            "B2": "It doesn't quite land; back to the hotel."
+          },
+          "goto": 127
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "text": {
+        "A2": "[stub] She weighs you like a form to be processed: money present, references absent.",
+        "B1": "[stub] She weighs you like a form to be processed: money present, references absent.",
+        "B2": "[stub] She weighs you like a form to be processed: money present, references absent."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "You cover it cleanly, by your own careful means.",
+            "B1": "You cover it cleanly, by your own careful means.",
+            "B2": "You cover it cleanly, by your own careful means."
+          },
+          "goto": 122,
+          "requires": [
+            "kept_money",
+            "dodged_letting_scam"
+          ]
+        },
+        {
+          "text": {
+            "A2": "No money kept, no one to vouch — a polite no.",
+            "B1": "No money kept, no one to vouch — a polite no.",
+            "B2": "No money kept, no one to vouch — a polite no."
+          },
+          "goto": 129
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "text": {
+        "A2": "[stub] The canal is black glass; the rope-works quiet; her window the one warm square in the dark.",
+        "B1": "[stub] The canal is black glass; the rope-works quiet; her window the one warm square in the dark.",
+        "B2": "[stub] The canal is black glass; the rope-works quiet; her window the one warm square in the dark."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go up and knock.",
+            "B1": "Go up and knock.",
+            "B2": "Go up and knock."
+          },
+          "goto": 104
+        },
+        {
+          "text": {
+            "A2": "Her stair light comes on above.",
+            "B1": "Her stair light comes on above.",
+            "B2": "Her stair light comes on above."
+          },
+          "goto": 116
+        },
+        {
+          "text": {
+            "A2": "Lose your nerve; think again.",
+            "B1": "Lose your nerve; think again.",
+            "B2": "Lose your nerve; think again."
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "text": {
+        "A2": "[stub] On the step you hold out the notebook. 'This was up there. I think it's his.' The colour leaves her face.",
+        "B1": "[stub] On the step you hold out the notebook. 'This was up there. I think it's his.' The colour leaves her face.",
+        "B2": "[stub] On the step you hold out the notebook. 'This was up there. I think it's his.' The colour leaves her face."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "She takes it, and everything changes.",
+            "B1": "She takes it, and everything changes.",
+            "B2": "She takes it, and everything changes."
+          },
+          "goto": 121,
+          "requires": [
+            "found_keepsake"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Then talk about the room.",
+            "B1": "Then talk about the room.",
+            "B2": "Then talk about the room."
+          },
+          "goto": 104
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "text": {
+        "A2": "[stub] The street is a car park behind a hoarding. The key fits no door because there is no door. There never was a room.",
+        "B1": "[stub] The street is a car park behind a hoarding. The key fits no door because there is no door. There never was a room.",
+        "B2": "[stub] The street is a car park behind a hoarding. The key fits no door because there is no door. There never was a room."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The deposit is gone.",
+            "B1": "The deposit is gone.",
+            "B2": "The deposit is gone."
+          },
+          "goto": 128
+        },
+        {
+          "text": {
+            "A2": "Back to argue — but the office is dark.",
+            "B1": "Back to argue — but the office is dark.",
+            "B2": "Back to argue — but the office is dark."
+          },
+          "goto": 130
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "text": {
+        "A2": "[stub] The neighbour you helped opens her door, the child behind her knees. 'You carried my bags. There's a box room. It's yours till you're sorted.'",
+        "B1": "[stub] The neighbour you helped opens her door, the child behind her knees. 'You carried my bags. There's a box room. It's yours till you're sorted.'",
+        "B2": "[stub] The neighbour you helped opens her door, the child behind her knees. 'You carried my bags. There's a box room. It's yours till you're sorted.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take the box room, gratefully.",
+            "B1": "Take the box room, gratefully.",
+            "B2": "Take the box room, gratefully."
+          },
+          "goto": 125,
+          "requires": [
+            "helped_neighbour"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Thank her, but keep looking.",
+            "B1": "Thank her, but keep looking.",
+            "B2": "Thank her, but keep looking."
+          },
+          "goto": 127
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "text": {
+        "A2": "[stub] A last scroll: the good listings are all marked LET now. Only Vann's kind are still bright and still lying.",
+        "B1": "[stub] A last scroll: the good listings are all marked LET now. Only Vann's kind are still bright and still lying.",
+        "B2": "[stub] A last scroll: the good listings are all marked LET now. Only Vann's kind are still bright and still lying."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to thinking it through.",
+            "B1": "Back to thinking it through.",
+            "B2": "Back to thinking it through."
+          },
+          "goto": 98
+        },
+        {
+          "text": {
+            "A2": "It really is too late.",
+            "B1": "It really is too late.",
+            "B2": "It really is too late."
+          },
+          "goto": 130
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "text": {
+        "A2": "[stub] The market folds up around you — shutters, crates, the smell of the day ending.",
+        "B1": "[stub] The market folds up around you — shutters, crates, the smell of the day ending.",
+        "B2": "[stub] The market folds up around you — shutters, crates, the smell of the day ending."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go where the evening leads.",
+            "B1": "Go where the evening leads.",
+            "B2": "Go where the evening leads."
+          },
+          "goto": 96
+        },
+        {
+          "text": {
+            "A2": "Sit, and let the city win a moment.",
+            "B1": "Sit, and let the city win a moment.",
+            "B2": "Sit, and let the city win a moment."
+          },
+          "goto": 131
+        },
+        {
+          "text": {
+            "A2": "One last idea.",
+            "B1": "One last idea.",
+            "B2": "One last idea."
+          },
+          "goto": 119
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "text": {
+        "A2": "[stub] A light climbs the stair to meet you. She heard you coming.",
+        "B1": "[stub] A light climbs the stair to meet you. She heard you coming.",
+        "B2": "[stub] A light climbs the stair to meet you. She heard you coming."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Meet her at the door.",
+            "B1": "Meet her at the door.",
+            "B2": "Meet her at the door."
+          },
+          "goto": 104
+        },
+        {
+          "text": {
+            "A2": "Back down a step, and up again.",
+            "B1": "Back down a step, and up again.",
+            "B2": "Back down a step, and up again."
+          },
+          "goto": 100
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "text": {
+        "A2": "[stub] You read Vann's receipt again: a company you can't find online, a number that rings and rings. The cold doubt hardens into something like knowledge.",
+        "B1": "[stub] You read Vann's receipt again: a company you can't find online, a number that rings and rings. The cold doubt hardens into something like knowledge.",
+        "B2": "[stub] You read Vann's receipt again: a company you can't find online, a number that rings and rings. The cold doubt hardens into something like knowledge."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Try to salvage the day.",
+            "B1": "Try to salvage the day.",
+            "B2": "Try to salvage the day."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "Face the evening with it.",
+            "B1": "Face the evening with it.",
+            "B2": "Face the evening with it."
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "text": {
+        "A2": "[stub] Dania's text: a room near hers, going tonight. Kind of her. Probably gone already.",
+        "B1": "[stub] Dania's text: a room near hers, going tonight. Kind of her. Probably gone already.",
+        "B2": "[stub] Dania's text: a room near hers, going tonight. Kind of her. Probably gone already."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Think toward the evening.",
+            "B1": "Think toward the evening.",
+            "B2": "Think toward the evening."
+          },
+          "goto": 96
+        },
+        {
+          "text": {
+            "A2": "Back to the square to chase it.",
+            "B1": "Back to the square to chase it.",
+            "B2": "Back to the square to chase it."
+          },
+          "goto": 25
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "text": {
+        "A2": "[stub] The last of the light on the wet square. Somewhere a door is warm; the question is whether one is warm for you.",
+        "B1": "[stub] The last of the light on the wet square. Somewhere a door is warm; the question is whether one is warm for you.",
+        "B2": "[stub] The last of the light on the wet square. Somewhere a door is warm; the question is whether one is warm for you."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Try the last real chance.",
+            "B1": "Try the last real chance.",
+            "B2": "Try the last real chance."
+          },
+          "goto": 98
+        },
+        {
+          "text": {
+            "A2": "Give the day up.",
+            "B1": "Give the day up.",
+            "B2": "Give the day up."
+          },
+          "goto": 131
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "text": {
+        "A2": "[stub] GOOD — A home, honestly. She gives you the room on trust, because you were straight about having no one. The first job at the firm was fixing the letters; the first thing you fix here is the window catch. It is a home.",
+        "B1": "[stub] GOOD — A home, honestly. She gives you the room on trust, because you were straight about having no one. The first job at the firm was fixing the letters; the first thing you fix here is the window catch. It is a home.",
+        "B2": "[stub] GOOD — A home, honestly. She gives you the room on trust, because you were straight about having no one. The first job at the firm was fixing the letters; the first thing you fix here is the window catch. It is a home."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 121,
+      "text": {
+        "A2": "[stub] GOOD — The room returned (secret). She takes the notebook, sits down hard on the packed box, and tells you about her son gone to sea. You gave her back a piece of him. The room is yours; so, now, is a place at her table.",
+        "B1": "[stub] GOOD — The room returned (secret). She takes the notebook, sits down hard on the packed box, and tells you about her son gone to sea. You gave her back a piece of him. The room is yours; so, now, is a place at her table.",
+        "B2": "[stub] GOOD — The room returned (secret). She takes the notebook, sits down hard on the packed box, and tells you about her son gone to sea. You gave her back a piece of him. The room is yours; so, now, is a place at her table."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 122,
+      "text": {
+        "A2": "[stub] GOOD — On your own terms. No favours, no con, no one vouching — just a modest real room secured by your own careful means. Bare walls, a borrowed chair, a key you earned. Yours, and only yours.",
+        "B1": "[stub] GOOD — On your own terms. No favours, no con, no one vouching — just a modest real room secured by your own careful means. Bare walls, a borrowed chair, a key you earned. Yours, and only yours.",
+        "B2": "[stub] GOOD — On your own terms. No favours, no con, no one vouching — just a modest real room secured by your own careful means. Bare walls, a borrowed chair, a key you earned. Yours, and only yours."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 123,
+      "text": {
+        "A2": "[stub] GOOD — Vouched for. Ms Rowe's word unlocks the good flat. You are new here, but you are known — and being known, you are beginning to learn, is how a stranger becomes a resident.",
+        "B1": "[stub] GOOD — Vouched for. Ms Rowe's word unlocks the good flat. You are new here, but you are known — and being known, you are beginning to learn, is how a stranger becomes a resident.",
+        "B2": "[stub] GOOD — Vouched for. Ms Rowe's word unlocks the good flat. You are new here, but you are known — and being known, you are beginning to learn, is how a stranger becomes a resident."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 124,
+      "text": {
+        "A2": "[stub] NEUTRAL — A room, not a home. You took the first thing, sight barely seen. It is yours, it is fine, it is grey and empty and quiet. A technical win. You lie on the bed and feel, exactly, nothing.",
+        "B1": "[stub] NEUTRAL — A room, not a home. You took the first thing, sight barely seen. It is yours, it is fine, it is grey and empty and quiet. A technical win. You lie on the bed and feel, exactly, nothing.",
+        "B2": "[stub] NEUTRAL — A room, not a home. You took the first thing, sight barely seen. It is yours, it is fine, it is grey and empty and quiet. A technical win. You lie on the bed and feel, exactly, nothing."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 125,
+      "text": {
+        "A2": "[stub] NEUTRAL — The kindness returned. No room of your own tonight, but the neighbour's box room and the child's shy hello. Warmth without the win — and warmth, tonight, is not nothing.",
+        "B1": "[stub] NEUTRAL — The kindness returned. No room of your own tonight, but the neighbour's box room and the child's shy hello. Warmth without the win — and warmth, tonight, is not nothing.",
+        "B2": "[stub] NEUTRAL — The kindness returned. No room of your own tonight, but the neighbour's box room and the child's shy hello. Warmth without the win — and warmth, tonight, is not nothing."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 126,
+      "text": {
+        "A2": "[stub] NEUTRAL — Remembered. No room today, but a landlady who kept your name says, come back Monday. You are becoming someone the city recognises. That is a kind of address.",
+        "B1": "[stub] NEUTRAL — Remembered. No room today, but a landlady who kept your name says, come back Monday. You are becoming someone the city recognises. That is a kind of address.",
+        "B2": "[stub] NEUTRAL — Remembered. No room today, but a landlady who kept your name says, come back Monday. You are becoming someone the city recognises. That is a kind of address."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 127,
+      "text": {
+        "A2": "[stub] NEUTRAL — Back to the hotel, one more week. Nothing signed, but you have the city's map now and its prices in your head. You buy one more week and set the alarm. Not a loss — just not yet.",
+        "B1": "[stub] NEUTRAL — Back to the hotel, one more week. Nothing signed, but you have the city's map now and its prices in your head. You buy one more week and set the alarm. Not a loss — just not yet.",
+        "B2": "[stub] NEUTRAL — Back to the hotel, one more week. Nothing signed, but you have the city's map now and its prices in your head. You buy one more week and set the alarm. Not a loss — just not yet."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 128,
+      "text": {
+        "A2": "[stub] BAD — The deposit gone. The room was never his to let. Your deposit — most of a week's pay — is gone, and the hotel wants its key by ten. You knew the tune and danced anyway.",
+        "B1": "[stub] BAD — The deposit gone. The room was never his to let. Your deposit — most of a week's pay — is gone, and the hotel wants its key by ten. You knew the tune and danced anyway.",
+        "B2": "[stub] BAD — The deposit gone. The room was never his to let. Your deposit — most of a week's pay — is gone, and the hotel wants its key by ten. You knew the tune and danced anyway."
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 129,
+      "text": {
+        "A2": "[stub] BAD — No one to vouch. No money kept, no reference, nothing to set against a stranger's face. Every good door was a polite no, and the day has simply run out.",
+        "B1": "[stub] BAD — No one to vouch. No money kept, no reference, nothing to set against a stranger's face. Every good door was a polite no, and the day has simply run out.",
+        "B2": "[stub] BAD — No one to vouch. No money kept, no reference, nothing to set against a stranger's face. Every good door was a polite no, and the day has simply run out."
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 130,
+      "text": {
+        "A2": "[stub] BAD — Too late to look. You spent the daylight on the wrong lead, and by dark the real rooms are all taken. The city didn't cheat you; you just ran out of light.",
+        "B1": "[stub] BAD — Too late to look. You spent the daylight on the wrong lead, and by dark the real rooms are all taken. The city didn't cheat you; you just ran out of light.",
+        "B2": "[stub] BAD — Too late to look. You spent the daylight on the wrong lead, and by dark the real rooms are all taken. The city didn't cheat you; you just ran out of light."
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 131,
+      "text": {
+        "A2": "[stub] BAD — You think about leaving. No room, no welcome, and the old thought again: a two-o'clock train, a way back to where they know you. You don't buy the ticket. But tonight, you think about it.",
+        "B1": "[stub] BAD — You think about leaving. No room, no welcome, and the old thought again: a two-o'clock train, a way back to where they know you. You don't buy the ticket. But tonight, you think about it.",
+        "B2": "[stub] BAD — You think about leaving. No room, no welcome, and the old thought again: a two-o'clock train, a way back to where they know you. You don't buy the ticket. But tonight, you think about it."
+      },
+      "ending": "bad"
+    }
+  ],
+  "lexicon": {
+    "_comment": "Book 2's chosen lexicon. Grown in phase 4. Any word here is tappable wherever it appears (base form; the reader resolves inflections). Translations need a native speaker's check before launch.",
+    "entries": {}
+  }
+}
