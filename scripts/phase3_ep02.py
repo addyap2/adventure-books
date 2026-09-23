@@ -478,6 +478,376 @@ P(39,
      "Start thinking about the evening.")])
 
 
+# ======================= ACT II — THE VIEWINGS =============================
+
+# --- the agent (the scam) ---
+P(40,
+  t("Vann's office is warm and bright. A queue of tired people waits inside. Vann himself is all smiles and hurry. He shakes your hand. He calls you \"friend.\" On the wall, a board of glossy rooms shines down at everyone. It all moves very fast.",
+    "Vann's office is warm and bright, with a queue of tired people waiting inside. Vann himself is all smiles and hurry. He shakes your hand and calls you a friend. Above the queue, a board of glossy rooms shines down on everyone. The whole place moves fast, on purpose.",
+    "Vann's office is warm and bright, and full of a queue of tired, hopeful people. Vann himself is all smiles and hurry; he shakes your hand and calls you \"friend\" before he's learned your name. Above the queue, a board of glossy rooms shines down on everyone. The whole place moves at speed, and the speed, you suspect, is entirely the point."),
+  [t("Listen to the pitch.", "Listen to his pitch.", "Listen to the pitch he's selling."),
+   t("Talk to the people waiting.", "Talk to the people in the queue.", "Talk to the people waiting in the queue.")])
+
+P(41,
+  t("The pitch is perfect. It is the very room from the photos. It is cheap. It is yours — if you leave a deposit today, to hold it. \"Rooms like this go in an hour,\" Vann says. \"But you seem sound. Just hold it, and it's yours.\"",
+    "The pitch is perfect: the very room from the photos, cheap, and yours — so long as you leave a deposit today to hold it. \"Rooms like this go in an hour,\" Vann says warmly. \"But you seem sound. Just leave a little to hold it, and it's yours.\"",
+    "The pitch is perfect, which is the first thing wrong with it: the very room from the photographs, cheap, and yours — provided you leave a deposit today, to hold it. \"Rooms like this go in an hour,\" Vann says, all warmth. \"But you seem sound to me. Just leave a little to hold it, and it's as good as yours.\""),
+  [t("Ask to see the room first.", "Ask to see the room before you pay.", "Ask to see the actual room before you pay a penny."),
+   t("Pay the deposit now.", "Pay the deposit now, before it's gone.", "Pay the deposit now, before it can be gone."),
+   t("Say you'll think, and leave.", "Say you'll think about it, and leave.", "Say you'll think it over, and leave.")])
+
+P(42,
+  t("You talk to the people in the queue. A woman leans close. She says she has been \"holding\" a room for a week now, and still has no key. A man says the opposite. \"Vann found my cousin a flat,\" he says. \"No trouble at all.\" Two stories. Only one can be the true one.",
+    "You talk to the people waiting. A woman leans close and says she's been 'holding' a room for a week and still has no key. A man just behind her says the opposite: Vann found his cousin a flat, no trouble at all. Two stories, pulling opposite ways.",
+    "You talk to the people in the queue. A woman leans close and murmurs that she's been 'holding' a room for a week now and still hasn't seen a key. A man just behind her says the exact opposite: Vann found his cousin a flat, no trouble at all. Two stories, pulling in opposite directions, and only one of them can be the one that's true."),
+  [t("Ask to see the room first.", "Ask to see the room first.", "Ask to see the room for yourself first."),
+   t("Leave; you've heard enough.", "Leave; you've heard enough.", "Leave — you've heard quite enough."),
+   t("Hear the woman's story out.", "Hear the woman's story out.", "Hear the woman's whole story out.")])
+
+P(43,
+  t("You ask to see the room first, before any money. Vann's smile stays, but his eyes go to the clock. \"It'll be gone by five,\" he says. \"The deposit only holds it. You can see it after.\" He wants the money first, and the room second. That is the wrong way round.",
+    "You ask to see the room first, before a penny changes hands. Vann's smile holds, but his eyes flick to the clock. \"It'll be gone by five,\" he says. \"The deposit only holds it — you can see it after.\" Money first, room second: that's the wrong way round, and you know it.",
+    "You ask to see the room first, before a penny changes hands. Vann's smile holds, but his eyes flick to the clock behind you. \"It'll be gone by five,\" he says smoothly. \"The deposit only holds it. You can see it after.\" Money first, room second — and that, you know perfectly well, is exactly the wrong way round."),
+  [t("Pay to hold it, to be safe.", "Better safe — pay to hold it.", "Better safe than sorry — pay to hold it."),
+   t("Refuse. Ask to see it now.", "Refuse the 'hold' and insist on seeing it.", "Refuse the 'hold' and insist, plainly, on seeing it."),
+   t("Walk. He never said the address.", "Walk — he never once gave an address.", "Walk out — in all that talk, he never once named a street.")])
+
+P(44,
+  t("You hand over the deposit. It is most of your week's pay. Vann gives you a receipt and a firm handshake. \"Keys tomorrow,\" he says. \"Come at nine.\" His hand is warm. His smile is wide. The money is gone from your pocket, and the room is still only a photo on a wall.",
+    "You hand over the deposit — most of your week's pay. Vann gives you a receipt and a firm handshake. \"Keys tomorrow,\" he says. \"Come at nine.\" His hand is warm, his smile wide. The money is out of your pocket now, and the room is still just a photo on a wall.",
+    "You hand over the deposit — most of a week's pay, gone in a single motion. Vann gives you a receipt and a firm, warm handshake. \"Keys tomorrow,\" he says. \"Come at nine sharp.\" His hand is warm and his smile is wide, and the money is out of your pocket, and the room is still nothing but a photograph on a wall."),
+  [t("Pocket the receipt and go.", "Pocket the receipt and go.", "Pocket the receipt and leave."),
+   t("Head out, already uneasy.", "Head out, already uneasy about it.", "Head out, already uneasy about the whole thing.")])
+
+P(45,
+  t("You leave without paying a penny. Behind you, the queue moves up one place. Someone else steps into your spot. Someone else will hear the same warm words, and see the same bright photos. You keep your money, and you keep walking. The cold air outside feels clean.",
+    "You leave without paying a penny. Behind you the queue shuffles up one place. Someone else takes your spot, ready to hear the same warm words and see the same bright photos. You keep your money and keep walking, and the cold air outside feels almost clean.",
+    "You leave without paying a penny. Behind you the queue shuffles up one place, and someone else steps into the spot you've left, ready to hear the same warm words and admire the same bright photographs. You keep your money and you keep walking, and the cold air outside, after all that warmth, feels almost clean."),
+  [t("On to a real room.", "On to a real room.", "On, then, to a real room."),
+   t("Back to the square.", "Back to the square.", "Back to the square to regroup.")])
+
+P(46,
+  t("You refuse the hold. You ask him, plainly, for the address, so you can go and see the room. Vann's warmth cools at once. He talks around it. He does not have an address to give. A room with no address is not a room. You leave, and your money leaves with you.",
+    "You refuse the hold and ask him, plainly, for the address so you can go and see the room. Vann's warmth cools in an instant. He talks around it, and around it, but he has no address to give. A room with no address is no room at all. You leave, money intact.",
+    "You refuse the hold and ask him, plainly, for the address, so that you can walk over and see the room with your own eyes. Vann's warmth cools in an instant. He talks around it, and around it again, but the plain fact is he has no address to give you. A room with no address is not a room. You leave, and your money leaves the building with you."),
+  [t("Out the door, money safe.", "Out the door, money intact.", "Out the door, your money still your own."),
+   t("Straight to the canal instead.", "Straight to the canal instead.", "Straight down to the canal instead.")])
+
+P(47,
+  t("You just walk out. On the step, it comes to you clearly. For ten whole minutes, Vann talked and talked. He named a price. He named a day. He never once named a street. You know this trick from your first night. You paid for that lesson once. Not again.",
+    "You just walk out. On the step it comes to you clearly. For ten whole minutes Vann talked and talked, naming a price, naming a day — and never once naming a street. You know this trick from your first night in the city. You paid for that lesson once already, and once was enough.",
+    "You just walk out. On the step it comes to you with perfect clarity: for ten solid minutes Vann talked, and named a price, and named a day, and never once, not for a second, named a street. You know this exact trick from your first night in this city. You paid for the lesson once, in fear if not in cash, and once was more than enough."),
+  [t("Note it and move on.", "Note it and move on.", "Make a note of it and move on."),
+   t("On to the canal.", "On to the canal.", "On, then, to the canal.")])
+
+P(48,
+  t("You are out on the street with a receipt in your hand and no keys in your pocket. The morning is gone. The money is gone. A small cold doubt starts up in you, and grows. \"Keys tomorrow,\" he said. But tomorrow the hotel will not be yours, and neither, you fear, will the room.",
+    "You're out on the street with a receipt in your hand and no keys in your pocket. The morning's gone, the money's gone, and a small cold doubt is starting to grow. \"Keys tomorrow,\" he said — but tomorrow the hotel won't be yours, and, you're beginning to fear, neither will the room.",
+    "You're out on the street with a receipt in your hand and no keys in your pocket, and the morning gone with the money. A small, cold doubt has started up somewhere behind your ribs and is quietly growing. \"Keys tomorrow,\" he said — but tomorrow the hotel won't be yours, and, you are beginning to fear, neither will the room he sold you."),
+  [t("Go and see a real room too.", "On to see a real room too.", "Go and see a real room as well, just in case."),
+   t("Read the receipt again.", "Read the receipt again.", "Read the receipt over again."),
+   t("Think about the evening.", "Think about the evening ahead.", "Start thinking about the evening ahead.")])
+
+P(49,
+  t("You are out of Vann's office with your purse still full. That is something. But the clock is unkind, and half the day is gone. You did not lose money, but you lost time. Two real rooms are left to try: the canal room, and the cheap bedsit. Choose, and go.",
+    "You're out of Vann's with your purse still full — no small thing. But the clock is unkind and half the day is spent. You didn't lose money; you lost time. Two real rooms are left to try, the canal room and the bedsit. Choose one and go.",
+    "You're out of Vann's office with your purse still full, which is no small victory. But the clock is unkind, and a good half of the day is already spent. You didn't lose money in there; you lost something harder to get back, which is time. Two real rooms are left to try — the canal room and the cheap bedsit. Choose one, and go."),
+  [t("The canal room.", "The canal room.", "Head for the canal room."),
+   t("The bedsit.", "The bedsit.", "The bedsit, then."),
+   t("The queue is longer now.", "Leaving, the queue is longer than before.", "On the way out, the queue is longer than when you came.")])
+
+P(65,
+  t("You hear the woman's story out. She paid a deposit. Vann gave her a date. Then another date. Then \"so sorry, it fell through.\" And no money back. She has come again today, to ask for it. She will not get it. You can see that, even if she cannot yet.",
+    "You hear the woman's story out. She paid a deposit; Vann gave her a date, then another, then \"so sorry, it fell through\" — and never gave the money back. She's come again today to ask for it. She won't get it. You can see that plainly, even if she can't quite let herself yet.",
+    "You hear the woman's story out. She paid a deposit; Vann gave her a date, and then another date, and then a soft \"so sorry, it fell through\" — and never once gave the money back. She has come in again today to ask for it. She won't get it, and you can see that quite plainly, even if she can't yet let herself believe it."),
+  [t("Thank her. Don't pay.", "Thank her and refuse to pay.", "Thank her, and refuse to pay a penny."),
+   t("Vann pushes one last time.", "Vann leans in with one last push.", "Vann leans in for one last push.")])
+
+P(66,
+  t("\"Last one at this price,\" Vann says. His hand is already out for the money. \"People like you don't get second chances in this city.\" He means it to frighten you. And it is the tell. A real room does not need a threat to sell it. You see the trick whole now.",
+    "\"Last one at this price,\" Vann says, hand already out. \"People like you don't get second chances in this city.\" He means it to frighten you into paying — and that line is the tell. A real room doesn't need a threat to sell it. You can see the whole trick now.",
+    "\"Last one at this price,\" Vann says, his hand already out for the money. \"People like you don't get second chances in this city.\" He means it to frighten you into reaching for your purse — and that single line is the tell. A real room does not need a threat to sell it. You see the whole shape of the trick now, laid out plain."),
+  [t("Pay, against your sense.", "Pay, against your better sense.", "Pay, against every bit of your better sense."),
+   t("That line is the tell. Leave.", "That line is the tell. Leave.", "That line is the tell — leave.")])
+
+P(68,
+  t("You look back on your way out. The queue has doubled since you came in. The same warm smile, the same clock on the wall, the same open hand. New faces now, all hopeful, all tired. You are glad your money is still yours. You will not be one of them.",
+    "You glance back on your way out. The queue has doubled since you arrived: the same warm smile, the same clock, the same open hand. But all new faces now, hopeful and tired. You're glad your money is still your own. You won't be one of them.",
+    "You glance back on your way out. The queue has doubled since you first came in: the same warm smile, the same clock on the wall, the same open, patient hand. But all new faces now — every one of them hopeful, and tired, and a little afraid. You're glad your money is still your own. Whatever else happens today, you won't be one of them."),
+  [t("On to a real room.", "On to a real room.", "On, then, to a real room."),
+   t("Think about the evening.", "Think about the evening.", "Start thinking about the evening.")])
+
+# --- the canal room and the mystery ---
+P(50,
+  t("Halloran's building stands over the old rope-works. The stair is steep, but it is swept and clean. At the top, a door is open. A woman waits in it, grey-eyed and straight-backed. She does not smile at you. But she does not look away, either. She looks at you properly.",
+    "Halloran's building stands over the old rope-works. The stair is steep but swept clean, and at the top a door stands open with a woman waiting in it — grey-eyed, straight-backed. She doesn't smile at you. But she doesn't look away, either; she looks at you properly, which is rarer.",
+    "Halloran's building stands over the old rope-works, and the stair up to it is steep but swept scrupulously clean. At the top a door stands open, and a woman waits in it — grey-eyed, straight-backed, entirely still. She doesn't smile at you. But nor does she look away, which is rarer and worth more: she looks at you properly, the way this city so seldom bothers to."),
+  [t("Go up for the viewing.", "Go up for the viewing.", "Climb the stair for the viewing."),
+   t("You're early. Wait in the square.", "You're early — wait in the square.", "You're early — go and wait in the square.")])
+
+P(51,
+  t("Mrs Halloran is brisk and grey-eyed. She shows you in. The room has good light off the water. But someone's things are still here, half-packed. A coat hangs on a hook. A tin of buttons sits on the sill. A box waits by the wall. Someone lived here, and lately, and left in a hurry.",
+    "Mrs Halloran is brisk and grey-eyed, and shows you in without ceremony. The room has good light off the water. But someone's things are still here, half-packed: a coat on a hook, a tin of buttons on the sill, a box by the wall. Someone lived here lately, and left in a hurry.",
+    "Mrs Halloran is brisk and grey-eyed, and shows you in without ceremony or small talk. The room has good, clean light off the water. But someone's things are still here, only half-packed: a coat left hanging on a hook, a tin of buttons on the sill, a box waiting by the wall. Someone lived here, and lately, and by the look of it left in a considerable hurry."),
+  [t("Ask about the last tenant.", "Ask about the last tenant.", "Ask her about the last tenant."),
+   t("Look at the room itself first.", "Look at the room itself first.", "Look at the room itself first.")])
+
+P(52,
+  t("\"He's gone. That's all,\" she says. And she turns away to fix the window catch. Her voice is flat and closed. She does not want the question. Whatever happened here, she has folded it up and put it away. She will not take it out for a stranger.",
+    "\"He's gone. That's all,\" she says, and turns away to fuss with the window catch. Her voice is flat and closed. She doesn't want the question. Whatever happened here, she's folded it up and put it away, and won't be taking it out again for a stranger.",
+    "\"He's gone. That's all,\" she says, and turns away at once to busy herself with the window catch. Her voice is flat and firmly closed. She doesn't want the question, and won't have it. Whatever happened in this room, she has folded it up small and put it away somewhere, and she has no intention of taking it out again for the benefit of a stranger."),
+  [t("Let it go. Ask about terms.", "Let it go; ask about the terms.", "Let it go, and ask about the terms."),
+   t("Look at what he left.", "Look more closely at what he left.", "Look more closely at what he left behind.")])
+
+P(53,
+  t("The room has good light off the water. A coat is still on the hook by the door. The tin of buttons sits in the sun on the sill. Someone lived here, and not long ago. You could live here too. You can feel it. It is the first room today that has felt like a home.",
+    "The room has good light off the water. A coat still hangs on the hook by the door; the tin of buttons catches the sun on the sill. Someone lived here, and not long ago. You could live here too — you can feel it. It's the first room today that has felt like a home at all.",
+    "The room has good, generous light off the water. A coat still hangs on the hook by the door, and the tin of buttons catches the thin sun on the sill. Someone lived here, and not long ago, and left it warm somehow. You could live here too; you can feel it in your chest. It is the first room all day that has felt, even faintly, like a home."),
+  [t("Notice the things he left.", "Notice the things he left.", "Notice the things he's left behind."),
+   t("Ask what happened here.", "Ask Halloran what happened here.", "Ask Halloran what happened here."),
+   t("Picture yourself living here.", "Picture yourself living here.", "Let yourself picture living here.")])
+
+P(54,
+  t("She names the terms. The rent is fair. The deposit is steep, but not unfair. Then she says the word you were waiting for and dreading: references. \"People who'll say you're sound,\" she says. You have been in this city three days. You know no one who could say it.",
+    "She names the terms. The rent is fair; the deposit is steep but not unreasonable. Then comes the word you were both waiting for and dreading: references. \"People who'll say you're sound,\" she explains. You've been in this city three days. You know no one who could say any such thing.",
+    "She names the terms plainly. The rent is fair; the deposit is steep but not unreasonable. Then comes the word you were both waiting for and quietly dreading: references. \"People who'll vouch that you're sound,\" she explains, as if it were the simplest thing in the world. You have been in this city precisely three days. You know no one alive here who could say it."),
+  [t("Face the references problem.", "Face the references problem.", "Face the references problem head-on."),
+   t("Look around once more.", "Look around once more as she talks.", "Look around once more while she talks.")])
+
+P(55,
+  t("Among his things, a notebook lies open on the sill. You look at it. Page after page of names and addresses, in a careful, patient hand. Someone wrote these to remember people by. Someone meant to write to all of them. And then, it seems, he did not get the chance.",
+    "Among his things, a notebook lies open on the sill. You glance at it: page after page of names and addresses, in a careful, patient hand. Someone wrote these to remember people by — someone who meant to write to all of them, and then, it seems, never got the chance.",
+    "Among his things, a notebook lies open on the sill. You glance down at it: page after page of names and addresses, all in a careful, patient hand. Someone wrote these to remember people by — someone who plainly meant to write to every one of them, and then, by the look of the half-packed room, never quite got the chance."),
+  [t("Pick it up to return to him.", "Pick it up to give back to him.", "Pick it up, meaning to give it back to him."),
+   t("Leave it; not your business.", "Leave it; it's not your business.", "Leave it be; it's not your business."),
+   t("Ask Halloran about it.", "Ask Halloran about it.", "Ask Halloran about it directly.")])
+
+P(56,
+  t("References. You turn the word over. You know no one in this whole city who could vouch for you. You have been here three days. Three days of stations and streets and closed doors. The one person who might speak for you is Ms Rowe. And she is your boss of three days, no more.",
+    "References. You turn the word over in your mind. You know no one in this whole city who could vouch for you. You've been here three days — days of stations and streets and closed doors. The one person who might speak for you is Ms Rowe, and she's been your employer for all of three days.",
+    "References. You turn the word over and over in your mind. You know no one in this entire city who could honestly vouch for you: you've been here three days, days made of cold stations and strange streets and doors closing softly in your face. The one person who might conceivably speak for you is Ms Rowe — and she has been your employer for exactly three days, no more."),
+  [t("She names her condition.", "She names her one condition — unless.", "She names her one condition — unless."),
+   t("She softens a little.", "She softens a little as you take it in.", "She softens a little as she watches you take it in.")])
+
+P(57,
+  t("You slip the notebook into your bag, to give back to him. It does not feel like taking. It feels like keeping it safe. Wherever he has gone, these names mattered to him once. If you ever find him, you will hand them back. Until then, you will look after them.",
+    "You slip the notebook into your bag to give back to him. It doesn't feel like taking; it feels like keeping it safe. Wherever he's gone, these names mattered to him once. If you ever find him, you'll hand them straight back. Until then, you'll look after them for him.",
+    "You slip the notebook into your bag, meaning to give it back to him. It doesn't feel like taking, exactly; it feels more like keeping something safe. Wherever he's gone, these names mattered to him once, enough to write down and carry. If you ever find him, you'll hand them straight back. Until then, you'll look after them for him."),
+  [t("Turn back to Halloran.", "Turn back to Halloran.", "Turn back to Mrs Halloran."),
+   t("Ask her about it, holding it.", "Ask her about it, holding it.", "Ask her about it, the notebook still in your hand.")])
+
+P(58,
+  t("You put the notebook down again, exactly where it lay. Whatever it is, whoever he was, it is not yours to take. You have enough to carry today without another stranger's names in your bag. You step back from the sill and turn to the room, and the woman, and the day.",
+    "You set the notebook down again, exactly where it lay. Whatever it is, whoever he was, it's not yours to take. You have quite enough to carry today without a stranger's names in your bag. You step back from the sill and turn to the room, and the woman, and the day ahead.",
+    "You set the notebook down again, exactly where it was lying. Whatever it is, and whoever he was, it isn't yours to take. You have more than enough to carry today without adding a stranger's carefully written names to your bag. You step back from the sill and turn instead to the room, and the woman, and the long day still ahead of you."),
+  [t("Turn back to Halloran.", "Turn back to Halloran.", "Turn back to Mrs Halloran."),
+   t("Ask about him instead.", "Ask about him instead.", "Ask her about him instead.")])
+
+P(59,
+  t("\"No references, no room,\" she says. Her voice is not unkind. It is just plain. \"Unless,\" she adds, \"you give me a reason to trust my own eyes.\" She looks at you, waiting. This is a door held open just a crack. What you say next decides if it opens or shuts.",
+    "\"No references, no room,\" she says — not unkindly, just plainly. \"Unless,\" she adds, \"you give me a reason to trust my own eyes.\" She looks at you and waits. It's a door held open just a crack; what you say next decides whether it opens or closes.",
+    "\"No references, no room,\" she says, not unkindly but quite plainly. \"Unless,\" she adds, after a moment, \"you give me some reason to trust my own eyes.\" She looks at you steadily and waits. It's a door held open just a crack — and what you choose to say next is what decides whether it swings open or shuts in your face."),
+  [t("Mention Kessler and Rowe.", "Mention Kessler and Rowe.", "Mention the firm, Kessler and Rowe."),
+   t("Just be honest about yourself.", "Just be honest about who you are.", "Just be honest about who you really are.")])
+
+P(60,
+  t("She watches how you move through the room. You move carefully, as if it were already someone's home — because it is, or was. You do not touch what is not yours. Something in her grey face eases, just a little. She has seen a great many people. She knows how to read one.",
+    "She watches how you move through the room — carefully, as if it were already someone's home, which it is, or was. You don't touch what isn't yours. Something in her grey face eases, just a little. She's seen a great many people through that door, and she knows how to read one.",
+    "She watches, closely, how you move through the room — carefully, quietly, as if it were already someone's home, which of course it is, or lately was. You don't touch what isn't yours to touch. Something in her grey, guarded face eases, just a little. She has seen a great many people come through that door over the years, and she knows exactly how to read one."),
+  [t("Mention your job at the firm.", "Mention your job at the firm.", "Mention your job at the firm."),
+   t("Be honest: new, no one, a chance.", "Be honest: new here, no one, need a chance.", "Be honest — new here, no one to vouch for you, in need of a chance.")])
+
+P(61,
+  t("You mention Kessler and Rowe. Her eyebrows lift. \"Rowe,\" she says slowly. \"I know that name.\" She looks at you with new eyes. If Rowe would speak for you, that would change things. A name can open a door your face cannot.",
+    "You mention Kessler and Rowe. Her eyebrows lift. \"Rowe,\" she says slowly. \"I know that name.\" She looks at you again with new eyes. \"If she'd say a word for you, that would be a different matter.\" A name has opened a door your face alone couldn't.",
+    "You mention Kessler and Rowe, and her eyebrows lift a fraction. \"Rowe,\" she says, slowly, tasting it. \"I know that name.\" She looks at you again, with different eyes this time. \"If she'd say a word for you, well — that would be another thing entirely.\" A name has opened a door your face alone could never have shifted."),
+  [t("A reference from the firm — how?", "A reference from the firm — but how?", "A reference from the firm — but how would you get one?"),
+   t("Say you'll be honest instead.", "Say you'll just be honest instead.", "Say you'd rather just be honest with her instead.")])
+
+P(62,
+  t("You tell her the plain truth. Three days in this city. No one to vouch for you. A week's pay in your pocket. You have this one day to find a home before the hotel shuts you out. You do not dress it up. You just say it, and let it stand there between you.",
+    "You tell her the plain truth. Three days in this city, no one to vouch for you. A week's pay in your pocket, and one day to find a home before the hotel shuts you out. You don't dress it up or ask for pity. You just say it, and let it stand there between you.",
+    "You tell her the plain truth of it. Three days in this city. No one alive here to vouch for you. A week's pay in your pocket and this one short day to find a home before the hotel shuts you out for good. You don't dress it up, and you don't ask for pity. You simply say it, and let it stand there in the good light between you."),
+  [t("She says: come back at dusk.", "She says: come back at dusk.", "She tells you to come back at dusk."),
+   t("She studies you a moment more.", "She studies you a moment longer.", "She studies you a long moment more.")])
+
+P(63,
+  t("\"Come back when the light goes,\" she says. \"I'll have thought by then.\" It is not a yes. But it is not a no. On the stair as you go down, a neighbour is struggling. She has heavy bags and a small, tired child. She is losing the fight with the stairs.",
+    "\"Come back when the light goes,\" she says. \"I'll have thought by then.\" It isn't a yes; but it isn't a no, either. On the stair as you head down, a neighbour is wrestling heavy shopping bags and a small, tired child. She is plainly losing the fight with the steps.",
+    "\"Come back when the light goes,\" she says. \"I'll have thought it over by then.\" It isn't a yes; but, importantly, it isn't a no either. On the stair as you head back down, a neighbour is wrestling with heavy shopping bags and a small, tired child at once, and quite plainly losing her fight with the steps."),
+  [t("Fill the hours till dusk.", "Fill the hours until dusk.", "Go and fill the hours until dusk."),
+   t("Help the neighbour on the stair.", "Help the neighbour on the stair.", "Stop and help the neighbour on the stair.")])
+
+P(64,
+  t("Hours to kill before dusk. A whole cold city that still does not know your name. You could go back to the square and its noise. You could sit somewhere and think ahead to the evening. Or you could add up, honestly, what this long day has already cost you.",
+    "Hours to kill before dusk, in a whole cold city that still doesn't know your name. You could go back to the square and its noise. You could sit somewhere and think ahead to the evening. Or you could add up, honestly, what this long day has already cost you.",
+    "Hours yet to kill before dusk, in a whole cold city that still doesn't know your name or care to. You could go back to the square and its noise. You could find somewhere quiet to sit and think ahead to the evening. Or you could sit down and add up, honestly, exactly what this long grey day has already cost you."),
+  [t("Back to the square.", "Back to the square.", "Head back to the square."),
+   t("Think ahead to the evening.", "Think ahead to the evening.", "Sit and think ahead to the evening."),
+   t("Count what the day has cost.", "Count what the day has cost you.", "Add up what the day has already cost you.")])
+
+P(80,
+  t("You ask Halloran, outright, what happened here. She stiffens. She straightens the coat on its hook, though it does not need it. Then she changes the subject to the rent, the stair, the water bill. The room holds its breath. There is a story here, and she is sitting on it.",
+    "You ask Halloran outright what happened here. She stiffens. She straightens the coat on its hook, though it needs no straightening, and changes the subject to the rent, the stair, the water. The room seems to hold its breath. There's a story here, and she is sitting hard on it.",
+    "You ask Halloran, outright, what happened in this room. She stiffens visibly. She reaches out and straightens the coat on its hook, though it doesn't need straightening at all, and then changes the subject briskly to the rent, the stair, the water bill. The room itself seems to hold its breath. There is a story here, plainly, and she is sitting on it with her whole weight."),
+  [t("Press gently.", "Press her gently.", "Press her, gently."),
+   t("Let it drop.", "Let it drop.", "Let the matter drop.")])
+
+P(81,
+  t("You press gently. Halloran turns away, so you turn too. On the stair, a neighbour is passing. \"The lad up top?\" he says, low. \"Went to sea. All of a sudden. She won't speak of it.\" Then he is gone down the stair.",
+    "You press gently. Halloran turns away, so you turn too — and on the stair a neighbour is passing. \"The lad up top?\" the neighbour murmurs. \"Went to sea. All of a sudden. She won't speak of it, so don't you go asking her.\" And then the neighbour is gone down the stair.",
+    "You press, gently. Halloran turns away from you, so you turn too, and on the stair a neighbour happens to be passing. \"The lad up top?\" the neighbour murmurs, low and quick. \"Went to sea. All of a sudden, it was. She won't speak of it, so don't you go asking her.\" And then the neighbour, too, is gone off down the stair, and you're left holding it."),
+  [t("Ask the neighbour more.", "Ask the neighbour more.", "Ask the neighbour for more."),
+   t("Leave it; help the neighbour.", "Leave it — help the neighbour instead.", "Leave it be, and help the neighbour instead."),
+   t("Back to Halloran and the room.", "Back to Halloran and the room.", "Turn back to Halloran and the room.")])
+
+P(82,
+  t("\"Owed nothing. Harmed no one,\" the neighbour says. \"Just gone, one morning, with a bag. It's her boy, see. Her only one. She won't say his name now.\" The neighbour shakes their head, kindly. \"So mind how you go, up there. That room's got more in it than furniture.\"",
+    "\"Owed nothing, harmed no one,\" the neighbour says. \"Just gone one morning with a bag. It's her boy, see — her only one. She won't say his name now.\" They shake their head, kindly. \"So mind how you go up there. That room's got more in it than furniture.\"",
+    "\"Owed nothing, harmed no one,\" the neighbour says, quietly. \"Just gone, one morning, with a single bag. It's her boy, see — her only one, and grown. She won't so much as say his name now.\" They shake their head, not unkindly. \"So mind how you go, up there. That little room's got a good deal more in it than furniture.\""),
+  [t("Her boy. You understand now.", "Her boy. You understand the packed box now.", "Her boy — you understand the half-packed box now."),
+   t("Enough. Help with the shopping.", "Enough — help with the shopping.", "Enough of it — go and help with the shopping.")])
+
+P(83,
+  t("Her son. It all makes sense now. The half-packed room she cannot finish packing. The coat she will not take down. The notebook of addresses he meant to write to, and never did. She is not hiding a crime. She is holding a door open for someone who may never come back.",
+    "Her son. It all makes sense now. The half-packed room she can't bring herself to finish. The coat she won't take down. The notebook of addresses he meant to write to, and never did. She isn't hiding a crime. She's holding a door open for someone who may never come back.",
+    "Her son. It all falls into place now. The half-packed room she can't bring herself to finish. The coat she won't take down from its hook. The notebook of addresses he plainly meant to write to, and never did. She isn't hiding anything shameful. She's simply holding a door open, month after month, for someone who may never walk back through it."),
+  [t("Take the notebook to return it.", "Take the notebook, to return it.", "Take the notebook, meaning to return it to her."),
+   t("Say nothing; go back down.", "Say nothing, and go back down.", "Say nothing, and go quietly back down.")])
+
+P(84,
+  t("At the window, you can see it. Yourself, here, in this room. The grey water below, the good light, a kettle on the ring, a life slowly built. It is the first room today that felt like more than four walls. You catch yourself hoping, and it frightens you a little.",
+    "At the window you can see it: yourself, here, in this room. The grey water below, the good light, a kettle on the ring, a life slowly built up. It's the first room today that has felt like more than four walls. You catch yourself hoping, and the hoping frightens you a little.",
+    "At the window you can suddenly see it all: yourself, here, in this very room. The grey water sliding below, the good clean light, a kettle on the ring, a whole life quietly built up over time. It's the first room all day that has felt like more than four walls and a price. You catch yourself hoping, properly hoping, and the hope frightens you a little."),
+  [t("Look at what he left behind.", "Look at what he left behind.", "Look again at what he left behind."),
+   t("Turn back before you hope too much.", "Turn back before you hope too hard.", "Turn away before you let yourself hope too hard.")])
+
+P(85,
+  t("In the coat pocket, your fingers find a photograph. It is this same window. A young man stands at it, laughing. Beside him is Halloran — younger, softer, laughing too. You should not have looked. But now you have, and you cannot un-see whose room this is.",
+    "In the coat pocket your fingers find a photograph. It's this same window — a young man standing at it, laughing, and beside him Halloran, younger and softer, laughing too. You shouldn't have looked. But now you have, and you can't un-see whose room this really is.",
+    "In the coat pocket your fingers close on a photograph. It's this same window — a young man standing at it, laughing at whoever held the camera, and beside him Halloran herself, years younger and softer, laughing too. You know you shouldn't have looked. But now you have, and there's no un-seeing it, and no pretending you don't know whose room this is."),
+  [t("You understand who lived here.", "You understand who lived here.", "You understand, now, who lived here."),
+   t("Put it back exactly as it was.", "Put it back exactly as it was.", "Put it back exactly where it was.")])
+
+P(86,
+  t("Someone lived here, and left fast. The woman letting the room is no stranger to him. She is his mother. She lets his room to keep the rent coming in. She keeps his coat on the hook. That way the room is never quite empty of him. You hold all of this now, quietly.",
+    "Someone lived here and left fast, and the woman letting the room is no stranger to him at all — she is his mother. She lets his room to keep the rent coming in. She keeps his coat on the hook, so the place is never quite empty of him. You hold all of that now, quietly.",
+    "Someone lived here, and left in a hurry, and the grey-eyed woman letting the room is no stranger to him at all: she is his mother. She lets his room out to keep the rent coming in, and keeps his coat on its hook so that the place is never, quite, empty of him. You hold all of that now, quietly, and it changes how you'll speak to her."),
+  [t("Take the notebook to give back.", "Take the notebook, to give it back.", "Take the notebook, meaning to give it back to her."),
+   t("Say nothing yet.", "Say nothing of it yet.", "Say nothing of it yet.")])
+
+# --- the guarantor flat & the reference ---
+P(70,
+  t("There is a better flat, across town. Clean, bright, a proper little home. But it needs a guarantor — someone to stand behind your rent if you cannot pay it. You have no such person in this city. Unless the firm would do it. Unless Ms Rowe would put her name to yours.",
+    "There's a better flat across town — clean, bright, a proper little home. But it needs a guarantor: someone to stand behind your rent if you ever fall short. You have no such person in this city. Unless the firm would do it — unless Ms Rowe would put her name to yours.",
+    "There's a better flat across town — clean, bright, a proper little home of the kind you'd almost stopped hoping for. But it needs a guarantor: someone willing to stand behind your rent if you ever fall short. You have no such person in this whole city. Unless the firm itself would do it — unless Ms Rowe, of all people, would put her name to yours."),
+  [t("Think how to get the firm's word.", "Think how to get the firm's word.", "Work out how you might get the firm's word."),
+   t("Give up on the good flat.", "Give up on the good flat.", "Give up on the good flat entirely.")])
+
+P(71,
+  t("You could ask. But it is your first week at the firm. It is a great deal to ask of people who barely know you. And yet — you did tell Ms Rowe everything, on your first night. The whole strange story. She listened to all of it, and hired you anyway.",
+    "You could ask. But it's your first week at the firm, and it's a great deal to ask of people who barely know you. And yet — you did tell Ms Rowe everything on your first night, the whole strange story of it. She listened to every word, and hired you anyway.",
+    "You could ask. But it's your first week at the firm, and it's a great deal to ask of people who barely know your face yet. And yet — you did tell Ms Rowe everything, on your first night here: the whole strange, exhausting story of it. She listened to every word without once interrupting, and hired you anyway. That has to count for something now."),
+  [t("Call Ms Rowe, who trusts you.", "Call Ms Rowe, who trusts you.", "Call Ms Rowe, who has reason to trust you."),
+   t("Ask a colleague instead.", "Ask a colleague at the firm instead.", "Ask a colleague at the firm instead."),
+   t("Too much to ask. Let it go.", "It's too much to ask. Let it go.", "It's too much to ask in your first week. Let it go.")])
+
+P(72,
+  t("You call Ms Rowe. You explain. There is a short silence. Then: \"Of course. Put them onto me.\" That is all. No fuss, no lecture. You were straight with her once, when it would have been easier to lie. So she is straight with you now, when it matters.",
+    "You call Ms Rowe and explain. There's a short silence, then: \"Of course. Put them onto me.\" That's all — no fuss, no lecture. You were straight with her once, on a night when lying would have been easier. She is straight with you now, when it matters most.",
+    "You call Ms Rowe and explain the whole thing. There's a short silence on the line, and then, simply: \"Of course. Put them onto me.\" That's all. No fuss, no lecture, no making you ask twice. Because you were straight with her once, on a cold night when a lie would have been so much easier, she is straight with you now, without hesitation, when it matters most."),
+  [t("A reference — you have one.", "A reference — you have one now.", "A reference — you have one now, and a real one."),
+   t("Thank her; get on with the day.", "Thank her and get on with the day.", "Thank her, and get on with the day.")])
+
+P(73,
+  t("You ask a colleague at the firm. They hesitate — you are new, after all — but in the end they agree to say you are sound. It is not warm. It is a favour, done a little stiffly, for a near-stranger. But it is enough. A name is a name, and you have one now.",
+    "You ask a colleague at the firm. They hesitate — you're new, after all — but in the end agree to say you're sound. It isn't warm; it's a favour done a little stiffly, for a near-stranger. But it's enough. A name is a name, and you have one now.",
+    "You ask a colleague at the firm. They hesitate — you're new, after all, and this is a real thing to ask — but in the end they agree to say you're sound. It isn't warm, exactly; it's a favour done a little stiffly, for someone who's still very nearly a stranger. But it's enough for the letting man. A name is a name, and you have one now."),
+  [t("A reference, of a kind.", "A reference, of a kind.", "A reference, of a kind, at least."),
+   t("On with the day.", "On with the day.", "On, then, with the day.")])
+
+P(74,
+  t("You let the good flat go. You cannot ask the firm to put its name to yours. Not in your first week. Not when they barely know you. It is the right choice, maybe. But it is a door closing. You feel the cold of it as you turn back to the day's smaller chances.",
+    "You let the good flat go. You can't ask the firm to put its name to yours — not in your first week, not when they barely know your face. It may be the right choice. But it's a door closing, and you feel the cold of it as you turn back to the day's smaller chances.",
+    "You let the good flat go. You simply can't bring yourself to ask the firm to put its name to yours — not in your first week, not when they barely know your face yet. It may well be the right choice, the modest one. But it's a door closing all the same, and you feel the cold draught of it as you turn back to the day's smaller, humbler chances."),
+  [t("Back to the day's real chances.", "Back to the day's real chances.", "Back to the day's smaller, real chances."),
+   t("Into the square to think.", "Into the square to think.", "Into the square to think it through.")])
+
+P(75,
+  t("You have a reference now. A name that will answer for you when your own face cannot. It is a strange, warm feeling. Someone will vouch for you, in a city where you know almost no one. It changes what doors will open tonight. You carry it carefully, like the money in your pocket.",
+    "You have a reference now — a name that will answer for you when your own face can't. It's a strange, warm feeling, being vouched for in a city where you know almost no one. It changes which doors will open tonight, and you carry it as carefully as the money in your pocket.",
+    "You have a reference now: a name that will answer for you when your own unknown face cannot. It's a strange and genuinely warm feeling, being vouched for in a city where you know almost no one at all. It changes which doors will open to you tonight — and you carry it as carefully as you carry the money folded in your pocket."),
+  [t("Carry it to the evening.", "Carry it into the evening.", "Carry it carefully into the evening."),
+   t("Into the square first.", "Into the square first.", "Into the square first, then.")])
+
+# --- the neighbour ---
+P(76,
+  t("The neighbour is losing her fight with the stairs. Her bags are splitting. A small child clings to her leg on the step. Three floors still to climb, and no free hand to do it with. She looks at you as you pass. She does not ask. But her eyes do.",
+    "The neighbour is losing her fight with the stairs. Her bags are splitting and a small child clings to her leg. There are three floors still to climb, with no free hand to do it. She looks at you as you pass. She doesn't ask for help — but her eyes do.",
+    "The neighbour is quietly losing her fight with the stairs. Her shopping bags are splitting at the corners, and a small child clings hard to her leg on the step. There are three whole floors still to climb, with no free hand left to do it. She looks at you as you pass her on the landing. She doesn't ask for anything — but her tired eyes do."),
+  [t("Take the bags and help up.", "Take the bags and help her up.", "Take the bags and help her up the stairs."),
+   t("You're in a hurry. Pass by.", "You're in a hurry — pass by.", "You're in a hurry — pass her by."),
+   t("Mind the child, she takes the bags.", "Mind the child while she manages the bags.", "Offer to mind the child while she manages the bags.")])
+
+P(77,
+  t("You take the heavy bags and carry them up, all three floors. The child watches you gravely from below. At her door, the woman is breathless with thanks. \"You're a good one,\" she says. \"I'll not forget it. You need anything on this stair, you knock. You hear?\"",
+    "You take the heavy bags and carry them up all three floors, the child watching you gravely from below. At her door the woman is breathless with thanks. \"You're a good one,\" she says. \"I'll not forget it. Anything you need on this stair, you knock — you hear me?\"",
+    "You take the heavy, splitting bags and carry them up, all three floors, the small child watching you gravely from below. At her door the woman is breathless with gratitude. \"You're a good one,\" she says, gripping your arm. \"I'll not forget it, mind. Anything you need on this stair, ever, you knock on my door — you hear me?\""),
+  [t("Wave it off; back to the day.", "Wave it off and get back to the day.", "Wave it off, and get back to the day."),
+   t("She points you back to Halloran.", "She points you back toward Halloran.", "She points you back toward Halloran's door.")])
+
+P(78,
+  t("You pass by with a small nod. Not unkind, just busy. You have your own day to save, and no room in it for anyone else's bags. The stair swallows the sound of her struggling up behind you. By the top, you have half-forgotten her. Almost.",
+    "You pass by with a small nod — not unkind, just busy. You've your own day to save and no room in it for anyone else's shopping. The stair swallows the sound of her struggling up behind you, and by the top you've half-forgotten her. Almost.",
+    "You pass her by with a small nod — not unkind, exactly, just busy. You've your own long day to save, and no room in it for a stranger's shopping. The stair swallows the sound of her struggling up behind you, and by the time you reach the top you've very nearly forgotten her. Almost, but not quite."),
+  [t("Back to the day.", "Back to the day.", "On, back to the day."),
+   t("Into the square.", "Into the square.", "Into the square, then.")])
+
+P(79,
+  t("You go back to the day. The good turn leaves a small warmth. Passing by leaves a small guilt. Either way, it goes with you. It is a little thing. But little things add up, in a city, into who you are in it. The light is starting, slowly, to change.",
+    "You go back to the day, the small warmth of the good turn — or the small guilt of passing by — going with you either way. It's a little thing. But little things add up, in a city, into who you turn out to be in it. The light is beginning, slowly, to change.",
+    "You go back to the day, and the small warmth of the good turn — or, if you passed on, the small cold guilt of it — goes with you either way. It's a little thing, easily forgotten. But little things add up, in a strange city, into who you turn out to be in it. The light is beginning, slowly and surely, to change toward evening."),
+  [t("Think toward the evening.", "Think toward the evening.", "Turn your thoughts toward the evening."),
+   t("Back to Halloran's at dusk.", "Back to Halloran's block at dusk.", "Back toward Halloran's block for dusk.")])
+
+P(92,
+  t("You offer to mind the child while she wrestles the bags. The child takes your hand and holds it, solemn and trusting, the way small children do. It is a tiny trust, freely given, and it warms you more than you expect. Together, the three of you make slow progress up.",
+    "You offer to mind the child while she wrestles the bags. The child takes your hand and holds it, solemn and trusting, the way small children do without thinking. It's a tiny trust, freely given, and it warms you more than you'd expect. Together, the three of you make slow progress up.",
+    "You offer to mind the child while she wrestles the splitting bags. The child takes your hand at once and holds it, solemn and entirely trusting, the way small children give their trust without thinking to weigh it. It's a tiny thing, freely given, and it warms you rather more than you'd expect it to. Together, the three of you make slow, careful progress up the stairs."),
+  [t("See them both safely up.", "See them both safely up.", "See them both safely up to the top."),
+   t("Hand the child back; hurry on.", "Hand the child back and hurry on.", "Hand the child back, and hurry on.")])
+
+# --- Dania ---
+P(90,
+  t("Dania wants to see a place round the corner first. You go with her. It is small, and dark, and not right for her. But she has to see it to know that. This is how looking works. You walk it with her. Two lost people are still two, and that helps.",
+    "Dania wants to see a place round the corner first, so you go with her. It's small and dark and not right for her — but she has to see it to know that; this is how looking works. You walk it with her anyway. Two lost people are still two, and that helps a little.",
+    "Dania wants to see a place round the corner first, so you go along with her. It's small, and dark, and plainly not right for her — but she has to see it with her own eyes to know that, because this is simply how the looking works. You walk it with her anyway, uncomplaining. Two lost people are still, at least, two, and on a day like this that helps more than a little."),
+  [t("On to the canal room after.", "On to the canal room after.", "On to the canal room after this."),
+   t("She's found something; you haven't.", "She's found something; you're still looking.", "She's found something of her own; you're still looking.")])
+
+P(91,
+  t("Dania takes a small room she likes, and hugs you goodbye. You are glad for her, honestly glad. But when she is gone, the day feels wider and colder. You are more alone in it than before. One of you has a home tonight. The other is still walking.",
+    "Dania takes a small room she likes and hugs you goodbye. You're glad for her — honestly glad. But once she's gone the day feels wider and colder, and you're more alone in it than before. One of you has a home tonight. The other is still walking the streets.",
+    "Dania takes a small room she likes the look of, and hugs you goodbye on the pavement. You're glad for her — honestly, uncomplicatedly glad. But once she's gone the day feels suddenly wider and colder, and you're more alone in it than you were before you met her this morning. One of you has a home tonight. The other is still out walking the streets."),
+  [t("Back to the square.", "Back to the square.", "Head back to the square."),
+   t("On to the evening.", "On to the evening.", "On, then, to the evening."),
+   t("She texts you a listing.", "She texts you a listing to try.", "She texts you a listing to try before it goes.")])
+
+P(118,
+  t("Dania's text comes through: a room near hers, going tonight. It is kind of her to think of you. But \"going tonight\" is a hard promise to catch. Her part of the city is a long, cold way from here. It is probably gone already. Probably. But maybe not.",
+    "Dania's text comes through: a room near hers, going tonight. Kind of her to think of you. But 'going tonight' is a hard promise to catch, and her part of the city is a long cold way off. It's probably gone already. Probably. But maybe not.",
+    "Dania's text comes through: a room near hers, going tonight. It's kind of her to have thought of you at all. But 'going tonight' is a very hard promise to catch, and her part of the city is a long, cold way from where you're standing. It's probably gone already. Probably. But then again — maybe, just maybe, not."),
+  [t("Think toward the evening.", "Think toward the evening.", "Turn your mind toward the evening."),
+   t("Chase it. Back to the square.", "Back to the square to chase it.", "Head back to the square to chase it down.")])
+
+P(117,
+  t("You read Vann's receipt again, slowly. The company name means nothing; you cannot find it anywhere. The phone number rings and rings and no one answers. The cold doubt in you hardens into something worse, something like knowing. You gave that man most of a week's pay for a piece of paper.",
+    "You read Vann's receipt again, slowly. The company name means nothing — you can't find it listed anywhere — and the phone number just rings and rings. The cold doubt hardens into something worse, something like knowledge. You gave that man most of a week's pay for a slip of paper.",
+    "You read Vann's receipt over again, slowly this time. The company name means nothing — you can't find it listed anywhere at all — and the phone number simply rings and rings into silence. The cold doubt in your chest hardens into something worse, something uncomfortably like knowledge. You gave that man most of a week's pay in exchange for a printed slip of paper."),
+  [t("Try to salvage the day.", "Try to salvage the day.", "Try to salvage what's left of the day."),
+   t("Face the evening with it.", "Face the evening with it.", "Face the evening with it as it is.")])
+
+
 # ============================ apply ========================================
 def main():
     book = json.load(open(BOOK, encoding="utf-8"))
