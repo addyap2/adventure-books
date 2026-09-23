@@ -106,7 +106,7 @@ function ogHTML(book) {
   ${scene}
   <rect width="1200" height="630" fill="url(#vig)"/>
   <rect width="720" height="630" fill="url(#scrim)"/>
-  <text x="72" y="250" font-family="ui-monospace, Menlo, monospace" font-size="17" letter-spacing="5" fill="${accent}">A WAYMARK STORY</text>
+  <text x="72" y="250" font-family="ui-monospace, Menlo, monospace" font-size="17" letter-spacing="5" fill="${accent}">AN ENGLISH ADVENTURE</text>
   <text x="68" y="360" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="${titleSize}" fill="${ink}">${esc(title)}</text>
   <text x="72" y="416" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="26" fill="#cdd4e2">${esc(line)}</text>
   <line x1="74" y1="452" x2="330" y2="452" stroke="${accent}" stroke-width="1.5" opacity=".65"/>

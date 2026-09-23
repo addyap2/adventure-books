@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Address — Waymark</title>
+<title>The Address — English Adventures</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0E1320">
 <meta name="description" content="Choose-your-own-adventure stories for English learners, at three levels, with a glossary in eight languages.">
 <link rel="canonical" href="https://adventure-books-five.vercel.app/read.html">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Waymark">
+<meta property="og:site_name" content="English Adventures">
 <meta property="og:url" content="https://adventure-books-five.vercel.app/read.html">
-<meta property="og:title" content="The Address — Waymark">
+<meta property="og:title" content="The Address — English Adventures">
 <meta property="og:description" content="Choose-your-own-adventure stories for English learners, at three levels, with a glossary in eight languages.">
 <meta property="og:image" content="https://adventure-books-five.vercel.app/og-the-address.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Address — Waymark">
+<meta name="twitter:title" content="The Address — English Adventures">
 <meta name="twitter:description" content="A story where you are the hero — for people learning English.">
 <meta name="twitter:image" content="https://adventure-books-five.vercel.app/og-the-address.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -397,7 +397,7 @@
 <body>
 <div class="bar">
   <button class="iconbtn" id="back" hidden aria-label="Back to the library">←</button>
-  <span class="brand"><span class="dot"></span><span id="brand">Waymark</span></span>
+  <span class="brand"><span class="dot"></span><span id="brand">English Adventures</span></span>
   <button class="iconbtn" id="theme" aria-label="Switch to light theme">☀</button>
   <button class="iconbtn" id="cog" aria-label="Settings">Aa</button>
   <div class="progress" id="progress"></div>
@@ -649,8 +649,8 @@ function renderHome(){
   view="home"; introMode=false; node=null; curKey=null; hideGloss();
   $("main").className="home";
   $("back").hidden=true; $("cog").hidden=true;
-  applyIdentity(null);   // the in-app library uses the neutral Waymark nocturne
-  $("brand").textContent="Waymark"; setProgress(0);
+  applyIdentity(null);   // the in-app library uses the neutral English Adventures nocturne
+  $("brand").textContent="English Adventures"; setProgress(0);
   const p=loadPrefs(), lvl=p.level||"B1", vw=p.homeView||"all";
   const langs=[["","English only"],["fr","Français"],["es","Español"],["pt","Português"],
     ["it","Italiano"],["de","Deutsch"],["ru","Русский"],["ar","العربية"],["zh","中文"]];
@@ -661,10 +661,10 @@ function renderHome(){
   $("main").innerHTML=`
     <div class="home-hero">
       <div class="kicker">An English Reading Adventure</div>
-      <h1>Waymark</h1>
+      <h1>English Adventures</h1>
       <p class="byline">by Antony Addy</p>
       <p class="lede">Read a story. Tap any word to see it in your language.</p>
-      <a class="tolanding" href="/">&larr; Waymark home</a>
+      <a class="tolanding" href="/">&larr; English Adventures home</a>
     </div>
     <div class="panel">
       <div class="row"><span>I read English at</span><span class="seg" id="homeLevel">${levelSeg}</span></div>
@@ -798,7 +798,7 @@ function renderIntro(){
   $("main").innerHTML=`<div class="cover card">
     ${artHTML("cover","",true)}
     <div class="body">
-      <div class="kicker">A Waymark Story</div>
+      <div class="kicker">An English Adventure</div>
       <h1>${BOOK.title}</h1>
       <p class="tagline">An adventure where you are the hero.</p>
       <p>You choose what happens next. Every choice turns you to a new section — read it more than once to find all ${endings} endings.</p>

@@ -19,8 +19,8 @@ const DIST = join(ROOT, "dist");
 
 await rm(DIST, { recursive: true, force: true });
 await mkdir(DIST, { recursive: true });
-// Waymark: the library is the root; each book has its own page; the reader app is /read.html
-await cp(join(ROOT, "web", "library.html"), join(DIST, "index.html"));    // / — the Waymark library (cards from manifest)
+// English Adventures: the library is the root; each book has its own page; the reader app is /read.html
+await cp(join(ROOT, "web", "library.html"), join(DIST, "index.html"));    // / — the English Adventures library (cards from manifest)
 await cp(join(ROOT, "web", "index.html"), join(DIST, "read.html"));       // the reader app
 await cp(join(ROOT, "web", "favicon.svg"), join(DIST, "favicon.svg"));
 // social cards (per-book og-<slug>.png + the library card), generated locally by build_og.mjs
@@ -73,18 +73,18 @@ const tmpl = await readFile(join(ROOT, "web", "book.html"), "utf8");
 const attr = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 await mkdir(join(DIST, "b"), { recursive: true });
 for (const e of episodes) {
-  const desc = e.blurb || "A Waymark story — an English reading adventure.";
+  const desc = e.blurb || "An English adventure — a branching story for learners.";
   const url = `${BASE}/b/${e.slug}`;
   const og = `${BASE}/og-${e.slug}.png`;
   const html = tmpl
-    .replace(/<title>[\s\S]*?<\/title>/, `<title>${attr(e.title)} — a Waymark story</title>`)
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${attr(e.title)} — an English adventure</title>`)
     .replace(/(<meta name="description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
     .replace(/(<link rel="canonical" href=")[^"]*(">)/, `$1${url}$2`)
     .replace(/(<meta property="og:url" content=")[^"]*(">)/, `$1${url}$2`)
-    .replace(/(<meta property="og:title" content=")[^"]*(">)/, `$1${attr(e.title)} — a Waymark story$2`)
+    .replace(/(<meta property="og:title" content=")[^"]*(">)/, `$1${attr(e.title)} — an English adventure$2`)
     .replace(/(<meta property="og:description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
     .replace(/(<meta property="og:image" content=")[^"]*(">)/, `$1${og}$2`)
-    .replace(/(<meta name="twitter:title" content=")[^"]*(">)/, `$1${attr(e.title)} — a Waymark story$2`)
+    .replace(/(<meta name="twitter:title" content=")[^"]*(">)/, `$1${attr(e.title)} — an English adventure$2`)
     .replace(/(<meta name="twitter:description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
     .replace(/(<meta name="twitter:image" content=")[^"]*(">)/, `$1${og}$2`)
     .replace(/<body>/, `<body>\n<script>window.__WM_BOOK=${JSON.stringify({ slug: e.slug, file: e.file })}</script>`);
