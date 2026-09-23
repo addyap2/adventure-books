@@ -16,12 +16,51 @@ const EPN = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
 const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const titleCase = (s) => String(s || "").replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 
+// The scene is chosen by identity.cover.kind so each book gets its own picture,
+// not just its own colours: "nocturne" = a moonlit skyline with one lit window
+// (The Address); "daybreak" = a cold grey street with one warm-lit open doorway
+// (The Room). Add a new branch here when a future book needs a new world.
+function nocturneScene(c) {
+  return `
+  <g fill="${c.ink}" opacity="0.6"><circle cx="620" cy="70" r="1.4"/><circle cx="820" cy="120" r="1.1"/><circle cx="1010" cy="70" r="1.2"/><circle cx="1120" cy="150" r="1.3"/></g>
+  <g><circle cx="1030" cy="120" r="58" fill="${c.ink}" opacity=".12"/><circle cx="1030" cy="120" r="38" fill="${c.ink}" opacity=".8"/><circle cx="1050" cy="106" r="38" fill="${c.ground}"/></g>
+  <g fill="${c.ground}"><rect x="720" y="250" width="90" height="230"/><rect x="820" y="300" width="70" height="180"/><rect x="905" y="210" width="110" height="270"/><rect x="1025" y="290" width="86" height="190"/><rect x="1120" y="330" width="80" height="150"/></g>
+  <ellipse cx="666" cy="352" rx="150" ry="170" fill="url(#glow)"/>
+  <rect x="656" y="338" width="20" height="30" rx="1" fill="${c.accentHot}"/>
+  <rect x="0" y="480" width="1200" height="90" fill="${c.surface}"/>
+  <rect x="658" y="484" width="18" height="82" fill="${c.accent}" opacity=".26"/>
+  <rect x="0" y="566" width="1200" height="64" fill="${c.ground}"/>
+  <g><ellipse cx="300" cy="560" rx="52" ry="8" fill="#000" opacity=".35"/><path d="M300 500 C314 502 320 514 322 530 L328 560 L272 560 L278 530 C280 514 286 502 300 500 Z" fill="#04060d"/><circle cx="300" cy="489" r="11" fill="#04060d"/><path d="M287 486 q13 -11 26 0 z" fill="#04060d"/></g>`;
+}
+function daybreakScene(c) {
+  // a cold overcast day: slate rooftops, a terrace wall, one warm open doorway
+  // spilling light onto wet pavement, a lone figure from behind approaching it.
+  return `
+  <g fill="${c.surface}" opacity="0.85"><rect x="620" y="250" width="120" height="250"/><rect x="748" y="212" width="96" height="288"/><rect x="852" y="272" width="112" height="228"/><rect x="972" y="232" width="92" height="268"/><rect x="1072" y="284" width="112" height="216"/></g>
+  <rect x="560" y="330" width="640" height="240" fill="${c.ground}"/>
+  <g fill="${c.surface}" opacity="0.9"><rect x="596" y="360" width="34" height="46"/><rect x="820" y="360" width="34" height="46"/><rect x="900" y="360" width="34" height="46"/><rect x="1060" y="360" width="34" height="46"/><rect x="1140" y="360" width="34" height="46"/></g>
+  <ellipse cx="722" cy="470" rx="128" ry="150" fill="url(#glow)"/>
+  <rect x="700" y="398" width="46" height="112" rx="2" fill="${c.accentHot}"/>
+  <rect x="700" y="398" width="46" height="112" rx="2" fill="none" stroke="${c.accent}" stroke-width="3"/>
+  <rect x="0" y="510" width="1200" height="120" fill="${c.surface}"/>
+  <path d="M700 510 L746 510 L812 570 L636 570 Z" fill="${c.accent}" opacity=".22"/>
+  <rect x="0" y="588" width="1200" height="42" fill="${c.ground}"/>
+  <g transform="translate(348,-2)"><ellipse cx="300" cy="562" rx="46" ry="7" fill="#000" opacity=".3"/><path d="M300 508 C312 510 317 520 319 534 L324 562 L276 562 L281 534 C283 520 288 510 300 508 Z" fill="#0a1114"/><circle cx="300" cy="499" r="10" fill="#0a1114"/><path d="M289 496 q11 -9 22 0 z" fill="#0a1114"/></g>`;
+}
+
 function ogHTML(book) {
   const p = (book.identity && book.identity.palette) || {};
   const ground = p.ground || "#0E1320", surface = p.surface || "#121a2c",
         ink = p.ink || "#F4EFE6", accent = p.accent || "#E8A24C",
         accentHot = p.accentHot || "#F4BE72", secondary = p.secondary || "#86C9B4",
         muted = p.muted || "#8A93A6";
+  const c = { ground, surface, ink, accent, accentHot, secondary, muted };
+  const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
+  const dawn = kind === "daybreak";
+  const scene = dawn ? daybreakScene(c) : nocturneScene(c);
+  const skyStops = dawn
+    ? `<stop offset="0" stop-color="#AAB7BF"/><stop offset="0.5" stop-color="#6F838D"/><stop offset="1" stop-color="${surface}"/>`
+    : `<stop offset="0" stop-color="${ground}"/><stop offset="0.72" stop-color="${surface}"/><stop offset="1" stop-color="${surface}"/>`;
   const line = (book.identity && book.identity.hero && book.identity.hero.line && book.identity.hero.line.en) || book.blurb || "";
   const levels = (book.levels || []).join(" · ");
   const title = book.title || "";
@@ -30,7 +69,7 @@ function ogHTML(book) {
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="${ground}"/><stop offset="0.72" stop-color="${surface}"/><stop offset="1" stop-color="${surface}"/>
+      ${skyStops}
     </linearGradient>
     <linearGradient id="scrim" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="${ground}" stop-opacity="0.95"/><stop offset="0.52" stop-color="${ground}" stop-opacity="0.55"/><stop offset="1" stop-color="${ground}" stop-opacity="0"/>
@@ -41,15 +80,7 @@ function ogHTML(book) {
     <radialGradient id="vig" cx="50%" cy="42%" r="80%"><stop offset="0.5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.4"/></radialGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#sky)"/>
-  <g fill="${ink}" opacity="0.6"><circle cx="620" cy="70" r="1.4"/><circle cx="820" cy="120" r="1.1"/><circle cx="1010" cy="70" r="1.2"/><circle cx="1120" cy="150" r="1.3"/></g>
-  <g><circle cx="1030" cy="120" r="58" fill="${ink}" opacity=".12"/><circle cx="1030" cy="120" r="38" fill="${ink}" opacity=".8"/><circle cx="1050" cy="106" r="38" fill="${ground}"/></g>
-  <g fill="${ground}"><rect x="720" y="250" width="90" height="230"/><rect x="820" y="300" width="70" height="180"/><rect x="905" y="210" width="110" height="270"/><rect x="1025" y="290" width="86" height="190"/><rect x="1120" y="330" width="80" height="150"/></g>
-  <ellipse cx="666" cy="352" rx="150" ry="170" fill="url(#glow)"/>
-  <rect x="656" y="338" width="20" height="30" rx="1" fill="${accentHot}"/>
-  <rect x="0" y="480" width="1200" height="90" fill="${surface}"/>
-  <rect x="658" y="484" width="18" height="82" fill="${accent}" opacity=".26"/>
-  <rect x="0" y="566" width="1200" height="64" fill="${ground}"/>
-  <g><ellipse cx="300" cy="560" rx="52" ry="8" fill="#000" opacity=".35"/><path d="M300 500 C314 502 320 514 322 530 L328 560 L272 560 L278 530 C280 514 286 502 300 500 Z" fill="#04060d"/><circle cx="300" cy="489" r="11" fill="#04060d"/><path d="M287 486 q13 -11 26 0 z" fill="#04060d"/></g>
+  ${scene}
   <rect width="1200" height="630" fill="url(#vig)"/>
   <rect width="720" height="630" fill="url(#scrim)"/>
   <text x="72" y="250" font-family="ui-monospace, Menlo, monospace" font-size="17" letter-spacing="5" fill="${accent}">A WAYMARK STORY</text>

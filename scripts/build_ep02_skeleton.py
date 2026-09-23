@@ -563,9 +563,9 @@ book = {
         "name": "Rope-Works Winter",
         "mood": "A cold bright city by day; one lit doorway with a warm room behind it.",
         "palette": {
-            "ground": "#0C1118", "surface": "#141b26", "ink": "#F3EFE7",
-            "muted": "#8992A1", "line": "#242f40",
-            "accent": "#E8955A", "accentHot": "#F4B978", "secondary": "#7FC3A6"
+            "ground": "#101A1E", "surface": "#16242C", "ink": "#F3EFE7",
+            "muted": "#8795A1", "line": "#27383F",
+            "accent": "#E2714A", "accentHot": "#F2946B", "secondary": "#6FA9C4"
         },
         "cover": {"kind": "daybreak", "glow": True},
         "type": {"display": "Fraunces", "ui": "Hanken Grotesk", "mono": "JetBrains Mono"},
