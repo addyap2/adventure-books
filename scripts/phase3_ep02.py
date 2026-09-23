@@ -848,6 +848,246 @@ P(117,
    t("Face the evening with it.", "Face the evening with it.", "Face the evening with it as it is.")])
 
 
+# ======================= ACT III — THE DECISION ============================
+
+P(99,
+  t("You sit on a cold bench and add the day up. The bus fares you spent. The wasted trip out of town. The rooms you saw. And the one room by the water that felt, for a moment, like a home. The light is going now. You have to choose where to spend the last of it.",
+    "You sit on a cold bench and add the day up. The fares spent, the wasted trip out of town, the grim rooms seen. And the one room by the water that felt, for a moment, like a home. The light is going now. You have to choose where to spend the last of it.",
+    "You sit on a cold bench and add the day up honestly. The fares spent, the wasted trip out of town, the grim rooms seen. And the one room by the water that felt, just for a moment, like a home. The light is going now, and going fast. You have to choose where to spend the very last of it."),
+  [t("Decide where to go as the light goes.", "Decide where to go as the light goes.", "Decide where to go while the light lasts."),
+   t("None of it's enough. Think harder.", "None of it's enough — think harder.", "None of it's quite enough — think harder."),
+   t("The stalls are closing around you.", "The stalls are closing around you.", "The stalls are folding up around you.")])
+
+P(96,
+  t("Dusk. The hotel wants its room back tonight. You have one evening left, and whatever the day has given you. Money, maybe. A name to vouch for you, maybe. Or only tired feet and a cold nose. Where do you go first, while there is still light to go by?",
+    "Dusk. The hotel wants its room back tonight, and there's no more time. You have one evening left, and whatever the long day has given you — money kept, a name to vouch for you, or only tired feet. Where do you go first, while there's still light to go by?",
+    "Dusk. The hotel wants its room back tonight, and there is no more time to play with. You have one evening left, and whatever the long day has handed you: money kept, perhaps, or a name to vouch for you, or only tired feet and a cold nose. Where do you go first, while there is still a little light to go by?"),
+  [t("Back to Mrs Halloran's.", "Back to Mrs Halloran's.", "Back to Mrs Halloran's."),
+   t("Claim the good flat.", "Claim the good flat.", "Go and claim the good flat."),
+   t("Weigh the other options.", "Weigh the other options.", "Weigh up the other options.")])
+
+P(97,
+  t("The light is nearly gone. You think about what is really in your reach tonight. Not dreams. Not the good flat you cannot afford. What can your hands actually close on, before the dark? You look at what you have, and what you did today, and you weigh it.",
+    "The light is nearly gone. You think hard about what's actually within your reach tonight. Not dreams, not the good flat you can't afford, but what your hands can really close on before dark. You look at what you have, and what you did today, and you weigh it.",
+    "The light is nearly gone. You think hard about what's actually within your reach tonight. Not dreams, and not the good flat you can't afford — only what your hands can really close on before the dark comes down. You look at what you have, and at what you did today, and you weigh the two together."),
+  [t("Go for the agent's keys.", "Go for the agent's keys.", "Go for the agent's keys."),
+   t("Sign for the bedsit.", "Sign for the bedsit.", "Go and sign for the bedsit."),
+   t("One last phone check.", "One last phone check.", "One last check of the phone."),
+   t("None of these. Think again.", "None of these — think again.", "None of these — think again.")])
+
+P(98,
+  t("Nothing has quite worked today. The hotel closes its door to you at ten o'clock. You are nearly out of choices, and nearly out of light. But not quite. There may be one more door to knock on. Or there may only be the long, cold thought of leaving this city.",
+    "Nothing has quite worked today, and the hotel shuts its door to you at ten. You're nearly out of choices and nearly out of light — but not quite. There may still be one more door worth knocking on. Or there may only be the long, cold thought of leaving.",
+    "Nothing has quite worked today, and the hotel shuts its door to you at ten o'clock sharp. You're nearly out of choices, and nearly out of light — but not, yet, entirely. There may still be one last door worth the knocking. Or there may only be the long, cold thought of leaving this city the way you came."),
+  [t("Ask the neighbour you helped.", "Ask the neighbour you helped.", "Ask the neighbour you helped this morning."),
+   t("Try the landlady who knew your name.", "Try the landlady who remembered your name.", "Try the landlady who remembered your name."),
+   t("Accept the rooms are gone.", "Accept the rooms are gone for today.", "Accept the rooms are gone for the day."),
+   t("Wonder if the city will have you.", "Wonder if this city will ever have you.", "Wonder whether this city will ever have you.")])
+
+P(114,
+  t("You look at your phone one last time. The good rooms are all marked LET now. They are gone. Only the bright, cheap, lying ones are still there — Vann's kind, smiling out of the screen. The real ones went while you were walking. There is nothing here for you now.",
+    "You scroll your phone one last time. The good rooms are all marked LET now — gone while you were out walking. Only the bright, cheap, lying ones are still up, Vann's kind, smiling out of the screen. There's nothing real left here tonight.",
+    "You scroll your phone one last time. The good rooms are all marked LET now — every one of them gone while you were out walking the streets. Only the bright, cheap, lying ones are still up, Vann's kind, smiling out of the screen at whoever's desperate enough. There's nothing real left here tonight."),
+  [t("Back to thinking it through.", "Back to thinking it through.", "Back to thinking it through."),
+   t("It really is too late.", "It really is too late.", "It really is too late now.")])
+
+P(115,
+  t("The market folds up around you. Traders pull down shutters. They stack crates and sweep the ground. The day is packing itself away, and it did not find you a home. You could follow the evening wherever it leads. Or you could sit here, and let the city win, just for a moment.",
+    "The market folds up around you — shutters coming down, crates stacked, the ground swept, the smell of a day ending. It packed itself away without finding you a home. You could follow the evening wherever it leads. Or you could sit here and let the city win, just for a moment.",
+    "The market folds up around you — shutters coming down, crates stacked, the ground swept, the whole smell of a day ending. It has packed itself neatly away without troubling to find you a home. You could follow the evening wherever it happens to lead. Or you could sit down right here, and let the city win, just for a moment."),
+  [t("Go where the evening leads.", "Go where the evening leads.", "Go where the evening leads."),
+   t("Sit, and let the city win.", "Sit, and let the city win a moment.", "Sit down, and let the city win a moment."),
+   t("One last idea.", "One last idea.", "One last idea, then.")])
+
+P(119,
+  t("The last of the light lies on the wet square. Somewhere close, a door is warm, and a room is lit, and someone is home. The question is only whether one of them is warm for you. You have one idea left, or none. You stand, and you decide which.",
+    "The last of the light lies on the wet square. Somewhere close a door is warm, a room is lit, someone is home. The only question left is whether one of them is warm for you. You have one idea left — or none at all. You stand, and decide which.",
+    "The last of the light lies on the wet square. Somewhere close a door is warm, a room is lit, someone is safely home. The only real question left is whether one of them, tonight, is warm for you. You have one idea left, or perhaps none at all. You stand up, and decide which it is."),
+  [t("Try the last real chance.", "Try the last real chance.", "Try the last real chance."),
+   t("Give the day up.", "Give the day up.", "Give the day up for lost.")])
+
+P(100,
+  t("You climb Halloran's stair again. The light in her window has just come on. It is warm and yellow against the grey evening. Your feet are heavy, and your heart is louder than it should be. This is the room you want. You knew it at noon. You know it now.",
+    "You climb Halloran's stair again. The light in her window has just come on, warm and yellow against the grey evening. Your feet are heavy, and your heart is louder than it should be. This is the room you want — you knew it at noon, and you know it now.",
+    "You climb Halloran's stair again in the failing light. The lamp in her window has just come on, warm and yellow against the grey of the evening. Your feet are heavy, and your heart is beating louder than it has any need to. This is the room you want. You knew it at noon, and you know it still."),
+  [t("She opens the door.", "She opens the door.", "She opens the door."),
+   t("Give back his notebook first.", "Give back his notebook first.", "Give back his notebook first."),
+   t("The walk up feels longer at dusk.", "The walk up feels longer at dusk.", "The climb feels longer at dusk.")])
+
+P(110,
+  t("The canal is black glass now. The old rope-works stands quiet and dark. Her window is the one warm square in all of it. You stand at the foot of the stair a moment. Then you make yourself climb. You did not cross a whole city today to lose your nerve on a step.",
+    "The canal is black glass now, the rope-works quiet and dark, and her lit window the one warm square in all of it. You stand at the foot of the stair a moment. Then you make yourself climb. You didn't cross a whole cold city today to lose your nerve on the last step.",
+    "The canal is black glass now, the rope-works quiet and dark, and her lit window the one warm square in all of it. You stand at the foot of the stair a moment longer than you mean to. Then you make yourself climb. You did not cross a whole cold city today only to lose your nerve on the very last step."),
+  [t("Go up and knock.", "Go up and knock.", "Go up and knock."),
+   t("Her stair light comes on above.", "Her stair light comes on above.", "A stair light comes on above you."),
+   t("Lose your nerve; think again.", "Lose your nerve; think again.", "Lose your nerve, and think again.")])
+
+P(116,
+  t("A light comes down the stair to meet you. She heard your feet on the steps. Mrs Halloran does not call out. She just waits, with the lamp, in the doorway above. There is nothing to do now but go up. Go up, meet her, and say what you came to say.",
+    "A light comes down the stair to meet you — she heard your feet on the steps. Mrs Halloran doesn't call out; she just waits with the lamp in the doorway above. There's nothing to do now but go up, meet her, and say what you came to say.",
+    "A light comes down the stair to meet you; she heard your feet on the steps below. Mrs Halloran doesn't call out or hurry you. She just waits there, with the lamp, in the lit doorway above. There is nothing to do now but climb up, and meet her, and say the thing you came to say."),
+  [t("Meet her at the door.", "Meet her at the door.", "Meet her at the door."),
+   t("Back down a step, and up again.", "Back down a step, and up again.", "Back down a step, then up again.")])
+
+P(104,
+  t("Mrs Halloran stands in the doorway. Behind her, the room is warm and lit. The deposit money is warm too, folded tight in your hand. She looks at you and waits. She is not a woman who fills a silence for you. Whatever happens next, you will have to begin it.",
+    "Mrs Halloran stands in the doorway, the warm room lit behind her, the deposit money folded tight and warm in your hand. She looks at you and waits. She isn't a woman who'll fill a silence for you. Whatever happens next, you'll have to be the one to begin it.",
+    "Mrs Halloran stands in the doorway, the warm room lit behind her, the deposit money folded tight and warm in your hand. She looks at you and waits. She isn't the kind of woman who will fill a silence on your behalf. Whatever happens next, you are the one who is going to have to begin it."),
+  [t("Talk terms.", "Talk terms.", "Talk terms."),
+   t("Step back onto the stair a moment.", "Step back onto the stair a moment.", "Step back onto the stair for a moment.")])
+
+P(105,
+  t("She waits. This is the moment the whole long day has been walking toward. You can tell her the plain truth about yourself — new, alone, with no one behind you. Or you can keep it safe and small. Just the rent, just the dates, nothing that costs you anything to say.",
+    "She waits. This is the moment the whole long day has been walking toward. You can tell her the plain truth about yourself — new, alone, with no one at your back. Or you can keep it safe and businesslike: just the rent, just the dates, nothing that costs you anything to say.",
+    "She waits. This is the moment the whole long day has been walking toward. You can tell her the plain truth of yourself — new, alone, with no one at all standing behind you. Or you can keep it safe and businesslike: just the rent, just the dates, nothing that costs you a thing to say aloud."),
+  [t("Tell her the truth about yourself.", "Tell her the truth of your circumstances.", "Tell her the plain truth of your circumstances."),
+   t("Keep it businesslike; just the rent.", "Keep it businesslike; just the rent.", "Keep it businesslike — just the rent.")])
+
+P(106,
+  t("You tell her the truth, all of it. New to the city. Alone. A week's pay and no one to vouch for you. But honest, and careful, and someone who will look after her room like it matters. Her grey eyes hold yours the whole time. She does not look away.",
+    "You tell her the truth of it, plainly. New to the city, alone, a week's pay and no one to vouch for you. But honest, and careful, and someone who'll look after her room as if it mattered. Her grey eyes hold yours the whole time. She doesn't look away once.",
+    "You tell her the truth of it, plainly and without decoration. New to the city, alone, a week's pay and no one alive here to vouch for you. But honest, and careful, and someone who will look after her room as though it mattered. Her grey eyes hold yours the whole time. She does not look away once."),
+  [t("She decides.", "She decides.", "She decides."),
+   t("Retreat to business after all.", "On second thought, retreat to business.", "On second thought, retreat to business.")])
+
+P(107,
+  t("You keep it to rent and dates and deposits. It is correct. It is cool. You give her nothing of yourself, because giving things away has hurt before. She nods along and writes nothing down. Something in the room stays shut, and you feel it stay shut, and you say nothing.",
+    "You keep it to rent and dates and deposits — correct, cool, careful. You give her nothing of yourself, because giving yourself away has cost you before. She nods along and writes nothing down. Something in the room stays shut, and you feel it stay shut, and you let it.",
+    "You keep it strictly to rent and dates and deposits — correct, cool, careful. You give her nothing of yourself, because giving yourself away has cost you before, more than once. She nods along and writes nothing down. Something in the room stays shut the whole time, and you feel it stay shut, and you let it."),
+  [t("She weighs it.", "She weighs it.", "She weighs it up."),
+   t("Change tack; be honest after all.", "Change tack; be honest after all.", "Change tack — be honest after all.")])
+
+P(108,
+  t("She looks at you for a long moment. Then she looks at the box by the wall, the one she cannot make herself finish packing. Something passes over her face, and softens it. She has been holding this room for someone. Maybe, tonight, she is ready to let someone new into it.",
+    "She looks at you for a long moment. Then she looks at the box by the wall — the one she can't quite bring herself to finish packing. Something passes over her face and softens it. She's been holding this room for someone. Maybe tonight she's ready to let someone new into it.",
+    "She looks at you for a long moment. Then she looks past you, at the box by the wall — the one she has never quite been able to make herself finish packing. Something passes over her face and softens it by a degree. She has been holding this room for someone who isn't coming. Maybe tonight, at last, she is ready to let someone new into it."),
+  [t("She gives you the room.", "She gives you the room.", "She gives you the room."),
+   t("It doesn't quite land; back to the hotel.", "It doesn't quite land; back to the hotel.", "It doesn't quite land — back to the hotel.")])
+
+P(109,
+  t("She weighs you the way you weigh a form. Money: yes, or no. References: yes, or no. Her face does not change. She has let rooms for thirty years, and she has learned to trust the paper, not the person. For a stranger with a cool voice and no name behind them, the paper is thin.",
+    "She weighs you the way you'd weigh a form. Money present, or not. A reference, or not. Her face doesn't change at all. She's let rooms for thirty years and learned to trust the paper, not the person. And for a stranger with a cool voice and no name behind them, the paper is thin.",
+    "She weighs you the way one weighs a form. Money present, or not. A reference, or not. Her face does not change by a flicker. She has let rooms for thirty years, and long since learned to trust the paper rather than the person. And for a stranger with a cool voice and no name at all behind them, the paper is very thin."),
+  [t("You cover it by your own means.", "You cover it cleanly, by your own careful means.", "You cover it cleanly, by your own careful means."),
+   t("A polite no — nothing to show her.", "No money kept, no one to vouch — a polite no.", "No money kept, no one to vouch — a polite no.")])
+
+P(111,
+  t("On the step you hold out the notebook. \"This was up in the room,\" you say. \"I think it's his.\" The colour leaves her face. She takes it in both hands, very carefully, as if it might break. She does not speak. She does not need to. You have given her back a piece of him.",
+    "On the step you hold out the notebook. \"This was up in the room,\" you say. \"I think it's his.\" The colour leaves her face. She takes it in both hands, very carefully, the way you'd hold something that might break. She doesn't speak. She doesn't need to.",
+    "On the step you hold out the notebook. \"This was up in the room,\" you say quietly. \"I think it must be his.\" The colour drains out of her face. She takes it in both hands, very carefully, the way you'd hold something that might break in your grip. She doesn't speak. She doesn't need to; her face is doing all of it."),
+  [t("She takes it, and everything changes.", "She takes it, and everything changes.", "She takes it, and everything changes."),
+   t("Then talk about the room.", "Then talk about the room.", "Then turn to talk about the room.")])
+
+P(101,
+  t("The good flat is clean and bright and real. A little home, up two flights, with a window that gets the morning. The letting man barely looks at you. He only wants your reference to be real, and it is. There is nothing here to fear, and nothing hidden. Just a door, and a key.",
+    "The good flat is clean and bright and real — a proper little home, two flights up, with a window that catches the morning. The letting man barely looks at you; he only needs your reference to be real, and it is. There's nothing hidden here, nothing to fear. Just a door and a key.",
+    "The good flat is clean and bright and unmistakably real — a proper little home, two flights up, with a window that catches the morning light. The letting man barely looks at you; he only needs your reference to be genuine, and it is. There is nothing hidden here, and nothing to fear. Just a door, and a key, and your own name on the paper."),
+  [t("Take it; you're vouched for.", "Take it; you're vouched for.", "Take it — you're vouched for."),
+   t("Hesitate; it's a lot to hold.", "Hesitate — it's more than you can hold.", "Hesitate — it feels like more than you can hold.")])
+
+P(102,
+  t("You have Vann's address at last. It is a slip of cheap paper and a cold key. The street name means nothing to you. The key is heavy and strange in your hand. Somewhere out there, he promised, is your room. You have paid for it already. Now you go to find it.",
+    "You have Vann's address at last — a slip of cheap paper and a cold, heavy key. The street name means nothing to you. Somewhere out there, he promised, is the room you already paid for. You button your coat against the dark and go to find it.",
+    "You have Vann's address at last: a slip of cheap paper and a cold, heavy key that means nothing yet. The street name is one you've never heard. Somewhere out there, he promised, warmly, is the room you have already paid most of a week's wage for. You button your coat against the dark, and go to find it."),
+  [t("Go and let yourself in.", "Go and let yourself in.", "Go and let yourself in."),
+   t("Hesitate on the dark street.", "Hesitate on the dark street.", "Hesitate a moment on the dark street.")])
+
+P(112,
+  t("You find the street. It is a car park behind a builder's hoarding. There is no building. There is no door. There is no room, and there never was one. The key in your hand fits nothing at all. You stand in the cold and understand, slowly, exactly what you have done.",
+    "You find the street. It's a car park behind a builder's hoarding — no building, no door, no room, and there never was one. The key in your hand fits nothing at all. You stand there in the cold and understand, slowly, exactly what you've done.",
+    "You find the street at last. It's a car park behind a builder's hoarding — no building, no door, no room, and, you understand now, there never was one. The key in your hand fits nothing on this earth. You stand there in the cold and grasp, slowly and completely, exactly what you have done."),
+  [t("The deposit is gone.", "The deposit is gone.", "The deposit is gone."),
+   t("Back to argue — the office is dark.", "Back to argue — but the office is dark.", "Back to argue — but the office is dark now.")])
+
+P(103,
+  t("The bedsit landlord counts your cash again, slowly, and pushes a scrap of paper across for your name. No lease. No handshake. No welcome. Just a room with a wall for a view, and a shared bathroom down a cold stair. It is a room. Tonight, a room is what you need.",
+    "The bedsit landlord counts your cash again, slowly, then pushes a scrap of paper across for your name. No lease, no handshake, no welcome — just a room with a wall for a view and a shared bathroom down a cold stair. It's a room. Tonight, a room is what you need.",
+    "The bedsit landlord counts your cash again, slowly, and then pushes a scrap of paper across the table for your name. No lease, no handshake, no welcome of any kind — just a room with a blank wall for a view and a shared bathroom down a cold stair. It is a room, all the same. And tonight, a room is what you need."),
+  [t("Sign; it's yours tonight.", "Sign; it's yours tonight.", "Sign — it's yours tonight."),
+   t("Back out at the last second.", "Back out at the last second.", "Back out at the very last second.")])
+
+P(113,
+  t("The neighbour you helped opens her door. The small child hides behind her knees and watches you. \"You carried my bags,\" she says, as if that settled everything. \"There's a box room at the back. It's small, but it's warm. It's yours, love, till you're on your feet.\"",
+    "The neighbour you helped opens her door, the small child half-hidden behind her knees. \"You carried my bags,\" she says, as if that settled the whole matter. \"There's a box room at the back. It's small, but it's warm, and it's yours, love, till you're properly on your feet.\"",
+    "The neighbour you helped opens her door, the small child half-hidden behind her knees and watching you gravely. \"You carried my bags,\" she says, as if that alone settled the entire matter. \"There's a box room at the back. It's small, but it's warm, and it's yours, love, for as long as you need it, till you're properly on your feet.\""),
+  [t("Take the box room, gratefully.", "Take the box room, gratefully.", "Take the box room, gratefully."),
+   t("Thank her, but keep looking.", "Thank her, but keep looking.", "Thank her, but keep on looking.")])
+
+# ============================ ENDINGS ======================================
+
+P(120,
+  t("She stands back and opens the door wide. \"Then you'd better come in out of the cold,\" she says. That is all. That is everything. The room is yours — the good light, the water below, the window you will learn by heart. Your first job at the firm was fixing the letters. Your first job here is the window catch. You are home.",
+    "She steps back and opens the door wide. \"Then you'd better come in out of the cold,\" she says — and that is all, and that is everything. The room is yours: the good light, the grey water below, the window you'll come to know by heart. Your first job at the firm was fixing the letters. Your first job here is the window catch. You are home.",
+    "She steps back and opens the door wide. \"Then you'd better come in out of the cold,\" she says — and that is all of it, and that is everything. The room is yours: the good clean light, the grey water sliding below, the window you'll come to know by heart. Your first job at the firm was fixing the letters. Your first job here is the window catch. You are home, and the word means something again."),
+  [])
+
+P(121,
+  t("She takes the notebook and sits down hard on the packed box. For a long time she says nothing. Then she tells you: her son, gone to sea, no word in a year. These were his people, the ones he meant to write. \"You brought a piece of him back,\" she says at last. The room is yours. So, now, is a place at her table.",
+    "She takes the notebook and sits down hard on the half-packed box. For a long while she says nothing at all. Then it comes out: her son, gone to sea, not a word from him in a year. These were the people he meant to write to. \"You've brought a piece of him back,\" she says at last. The room is yours — and so, now, is a place at her table.",
+    "She takes the notebook and sits down hard on the half-packed box, as if her legs had simply stopped. For a long while she says nothing at all. Then it comes out, quietly: her son, gone to sea, not a single word from him in a year. These were the people he meant to write to, and never did. \"You've brought a piece of him back to me,\" she says at last. The room is yours — and so, now, is a place at her table."),
+  [])
+
+P(122,
+  t("No favours. No con. No one to vouch for you. Just a small, real room. You took it with money you kept safe all day, coin by coin. The walls are bare and the chair is borrowed. But the key is yours, and only yours. You earned every part of it. Tonight you sleep in a room that owes nobody anything.",
+    "No favours, no con, no one vouching for you. Just a small, real room, taken with money you kept safe all day — coin by coin, mile by walked mile. The walls are bare and the chair is borrowed. But the key is yours, and only yours, and you earned every part of it. Tonight you sleep in a room that owes nobody anything.",
+    "No favours, no con, and no one at all vouching for you. Just a small, real room, taken with money you kept safe the whole day — coin by careful coin, mile by walked mile. The walls are bare and the one chair is borrowed. But the key is yours, and only yours, and you earned every last part of it. Tonight you sleep in a room that owes nobody anything."),
+  [])
+
+P(123,
+  t("Ms Rowe's word unlocks the door. One sentence from her, and the good flat is yours — the flat you could never have taken alone. You are still new here. You still know almost no one. But you are known now, by one person who matters. That turns out to be the thing that opens doors. You go up to your own window.",
+    "Ms Rowe's word unlocks the door. One sentence from her and the good flat is yours — the flat you could never have taken on your own. You're still new here, and you still know almost no one. But you're known now, by one person who counts, and that, it turns out, is what opens doors. You climb up to your own window.",
+    "Ms Rowe's word unlocks the door. One sentence from her, and the good flat is yours — the flat you could never have taken on your own. You're still new to the city, and you still know almost no one in it. But you are known now, by one person who counts, and being known, you're learning, is exactly how a stranger turns slowly into a resident. You climb up to your own window."),
+  [])
+
+P(124,
+  t("You took the first thing, sight barely seen. It is yours now. It is fine. It is grey, and quiet, and empty. You lie on the bed with your coat still on and listen to strangers on the stair. You have a room. You wanted a home. Tonight you learn, in the cold, that the two are not the same thing.",
+    "You took the first thing going, sight barely seen. It's yours now, and it's fine, and it's grey and quiet and empty. You lie on the bed with your coat still on, listening to strangers move about on the stair. You have a room. You wanted a home. Tonight you learn, lying there, that the two are not the same thing at all.",
+    "You took the first thing going, sight barely seen, because you were tired and afraid of the dark. It's yours now, and it's fine, and it's grey and quiet and utterly empty. You lie on the bed with your coat still on, listening to strangers move about on the stair. You have a room. You wanted a home. Tonight you learn, lying there in the cold, exactly how far apart the two things are."),
+  [])
+
+P(125,
+  t("No room of your own tonight. But there is a box room at the back of a stranger's flat, warm and small. And a child who says a shy hello. You carried her bags this morning and forgot it by noon. She did not forget. It is not a home yet. But it is warmth, and a door that opens to you. Tonight, that is far from nothing.",
+    "No room of your own tonight. But there's a box room at the back of a stranger's flat — warm, small, and offered freely. You carried her shopping this morning and forgot it by noon; she didn't forget it at all. It isn't a home, not yet. But it's warmth, and a door that opens to you, and tonight that is a very long way from nothing.",
+    "No room of your own tonight. But there's a box room at the back of a stranger's flat — warm, small, and offered without a second thought. You carried her shopping up three flights this morning and had forgotten it by noon; she, it turns out, did not forget it at all. It isn't a home, not yet. But it's warmth, and a door that opens to you, and on a night like this that is a very long way from nothing."),
+  [])
+
+P(126,
+  t("No room today. But at the last door, the landlady looks at you and says your name. She remembers you from the morning. \"Come back Monday,\" she says. \"I may have something then.\" It is not a bed for tonight. But it is a small, real thing: you are becoming someone this city knows. That is a kind of address.",
+    "No room today. But at the last door, the landlady looks at you and says your name — she remembers you from the morning. \"Come back Monday,\" she says. \"I may have something by then.\" It's no bed for tonight. But it's a small, real thing: you're becoming someone this city knows. And that is a kind of address.",
+    "No room today. But at the last door of the day, the landlady looks at you and says your name — she remembers you from the morning, out of all the faces. \"Come back Monday,\" she says. \"I may well have something by then.\" It's no bed for tonight. But it's a small, real thing all the same: you are slowly becoming someone this city knows by name. And that, in the end, is its own kind of address."),
+  [])
+
+P(127,
+  t("Nothing signed today. But you did not lose your money, and you did not lose your head. You know the city's map now, and its prices, and its tricks. You buy one more week at the hotel and set your alarm for early. It is not a loss. It is a day spent learning the ground. Tomorrow you look again, and better.",
+    "Nothing signed today — but you didn't lose your money, and you didn't lose your head. You know the city's map now, its prices, its tricks. You buy one more week at the hotel and set the alarm for early. It isn't a loss; it's a day spent learning the ground. Tomorrow you look again, and look better.",
+    "Nothing signed today — but you didn't lose your money, and, just as importantly, you didn't lose your head. You know the city's map now, and its prices, and its handful of tricks. You buy yourself one more week at the hotel and set the alarm for early. It isn't a loss; it's a day spent learning the ground under your feet. Tomorrow you'll look again, and look better."),
+  [])
+
+P(128,
+  t("The room was never his to let. You know that now, standing in the dark with a key that fits no door. The money — most of a week's pay — is gone, and it is not coming back. The hotel wants its key by ten. You knew the tune. You heard it once before, on your first night. And still you danced to it.",
+    "The room was never his to let — you understand that now, standing in the dark with a key that opens nothing. The money, most of a week's pay, is gone, and it isn't coming back. The hotel wants its key by ten. You knew this tune; you heard it once before, on your first night. And you danced to it anyway.",
+    "The room was never his to let, and you understand that completely now, standing in the dark with a key that opens nothing at all. The money — most of a week's hard pay — is gone, and it is not coming back. The hotel wants its key by ten. You knew this tune; you heard it played once already, on your first night in the city. And you danced to it anyway."),
+  [])
+
+P(129,
+  t("No money kept. No name to vouch for you. Nothing at all to set against a stranger's tired face. Every good door today was a polite no, said kindly, and shut all the same. You did nothing wrong. You were just new, and alone, and the day was too short for that. The light is gone, and so is your chance.",
+    "No money kept, no name to vouch for you, nothing at all to set against a stranger's tired face. Every good door today was a polite no — said kindly enough, and shut all the same. You did nothing wrong. You were simply new, and alone, and the day was too short for that. The light is gone now, and so is your chance.",
+    "No money kept, no name to vouch for you, and nothing at all to set against a stranger's tired face. Every good door in the city today was a polite no — said kindly enough, and shut all the same. You did nothing wrong. You were simply new, and alone, and the short winter day was never going to be long enough for that. The light is gone now, and your chance has gone with it."),
+  [])
+
+P(130,
+  t("You spent the daylight on the wrong lead, and now it is gone. By the time you turned back, the real rooms were already taken. The city did not cheat you today. You simply ran out of light, and light was the one thing you could not buy back. You walk to the dark hotel to beg one more night.",
+    "You spent the daylight chasing the wrong lead, and now the daylight is gone. By the time you turned back, the real rooms had all been taken. The city didn't cheat you today — you simply ran out of light, and light was the one thing you couldn't buy back. You trudge to the hotel to beg one more night.",
+    "You spent the whole of the daylight chasing the wrong lead, and now the daylight is simply gone. By the time you turned back toward the real rooms, every one of them had been taken. The city didn't cheat you today — you merely ran out of light, and light was the one thing you couldn't buy back at any price. You trudge to the darkened hotel to beg one more night."),
+  [])
+
+P(131,
+  t("No room. No welcome. And then the old thought comes again, the one from your first night. A two-o'clock train. A way back to a place where they know your face. You stand on that cold platform in your mind and feel how easy it would be. You do not buy the ticket. Not yet. But tonight, for the first time, you truly think about it.",
+    "No room. No welcome. And then the old thought comes back, the one from your very first night. A two-o'clock train, a way back to a place where they know your face. You stand on that cold platform in your mind and feel how easy it would be to go. You don't buy the ticket. Not yet. But tonight, for the first time, you truly think about it.",
+    "No room. No welcome. And then the old thought comes back, the one from your very first night in the city. A two-o'clock train. A way back to a place where they at least know your face. You stand on that cold platform in your mind and feel just how easy it would be to go. You don't buy the ticket. Not yet. But tonight, for the first time, you genuinely think about it."),
+  [])
+
+
 # ============================ apply ========================================
 def main():
     book = json.load(open(BOOK, encoding="utf-8"))

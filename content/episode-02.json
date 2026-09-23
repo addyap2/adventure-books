@@ -2558,9 +2558,9 @@
     {
       "id": 96,
       "text": {
-        "A2": "[stub] Dusk. The hotel wants its room tonight. You have one evening and whatever the day has left you.",
-        "B1": "[stub] Dusk. The hotel wants its room tonight. You have one evening and whatever the day has left you.",
-        "B2": "[stub] Dusk. The hotel wants its room tonight. You have one evening and whatever the day has left you."
+        "A2": "Dusk. The hotel wants its room back tonight. You have one evening left, and whatever the day has given you. Money, maybe. A name to vouch for you, maybe. Or only tired feet and a cold nose. Where do you go first, while there is still light to go by?",
+        "B1": "Dusk. The hotel wants its room back tonight, and there's no more time. You have one evening left, and whatever the long day has given you — money kept, a name to vouch for you, or only tired feet. Where do you go first, while there's still light to go by?",
+        "B2": "Dusk. The hotel wants its room back tonight, and there is no more time to play with. You have one evening left, and whatever the long day has handed you: money kept, perhaps, or a name to vouch for you, or only tired feet and a cold nose. Where do you go first, while there is still a little light to go by?"
       },
       "choices": [
         {
@@ -2575,7 +2575,7 @@
           "text": {
             "A2": "Claim the good flat.",
             "B1": "Claim the good flat.",
-            "B2": "Claim the good flat."
+            "B2": "Go and claim the good flat."
           },
           "goto": 101,
           "requires": [
@@ -2586,7 +2586,7 @@
           "text": {
             "A2": "Weigh the other options.",
             "B1": "Weigh the other options.",
-            "B2": "Weigh the other options."
+            "B2": "Weigh up the other options."
           },
           "goto": 97
         }
@@ -2595,9 +2595,9 @@
     {
       "id": 97,
       "text": {
-        "A2": "[stub] The light is nearly gone. What's actually within your reach tonight?",
-        "B1": "[stub] The light is nearly gone. What's actually within your reach tonight?",
-        "B2": "[stub] The light is nearly gone. What's actually within your reach tonight?"
+        "A2": "The light is nearly gone. You think about what is really in your reach tonight. Not dreams. Not the good flat you cannot afford. What can your hands actually close on, before the dark? You look at what you have, and what you did today, and you weigh it.",
+        "B1": "The light is nearly gone. You think hard about what's actually within your reach tonight. Not dreams, not the good flat you can't afford, but what your hands can really close on before dark. You look at what you have, and what you did today, and you weigh it.",
+        "B2": "The light is nearly gone. You think hard about what's actually within your reach tonight. Not dreams, and not the good flat you can't afford — only what your hands can really close on before the dark comes down. You look at what you have, and at what you did today, and you weigh the two together."
       },
       "choices": [
         {
@@ -2615,7 +2615,7 @@
           "text": {
             "A2": "Sign for the bedsit.",
             "B1": "Sign for the bedsit.",
-            "B2": "Sign for the bedsit."
+            "B2": "Go and sign for the bedsit."
           },
           "goto": 103,
           "requires": [
@@ -2626,13 +2626,13 @@
           "text": {
             "A2": "One last phone check.",
             "B1": "One last phone check.",
-            "B2": "One last phone check."
+            "B2": "One last check of the phone."
           },
           "goto": 114
         },
         {
           "text": {
-            "A2": "None of these — think again.",
+            "A2": "None of these. Think again.",
             "B1": "None of these — think again.",
             "B2": "None of these — think again."
           },
@@ -2643,16 +2643,16 @@
     {
       "id": 98,
       "text": {
-        "A2": "[stub] Nothing has quite worked. The hotel closes to you at ten.",
-        "B1": "[stub] Nothing has quite worked. The hotel closes to you at ten.",
-        "B2": "[stub] Nothing has quite worked. The hotel closes to you at ten."
+        "A2": "Nothing has quite worked today. The hotel closes its door to you at ten o'clock. You are nearly out of choices, and nearly out of light. But not quite. There may be one more door to knock on. Or there may only be the long, cold thought of leaving this city.",
+        "B1": "Nothing has quite worked today, and the hotel shuts its door to you at ten. You're nearly out of choices and nearly out of light — but not quite. There may still be one more door worth knocking on. Or there may only be the long, cold thought of leaving.",
+        "B2": "Nothing has quite worked today, and the hotel shuts its door to you at ten o'clock sharp. You're nearly out of choices, and nearly out of light — but not, yet, entirely. There may still be one last door worth the knocking. Or there may only be the long, cold thought of leaving this city the way you came."
       },
       "choices": [
         {
           "text": {
             "A2": "Ask the neighbour you helped.",
             "B1": "Ask the neighbour you helped.",
-            "B2": "Ask the neighbour you helped."
+            "B2": "Ask the neighbour you helped this morning."
           },
           "goto": 113,
           "requires": [
@@ -2661,7 +2661,7 @@
         },
         {
           "text": {
-            "A2": "Try the landlady who remembered your name.",
+            "A2": "Try the landlady who knew your name.",
             "B1": "Try the landlady who remembered your name.",
             "B2": "Try the landlady who remembered your name."
           },
@@ -2672,17 +2672,17 @@
         },
         {
           "text": {
-            "A2": "Accept the rooms are gone for today.",
+            "A2": "Accept the rooms are gone.",
             "B1": "Accept the rooms are gone for today.",
-            "B2": "Accept the rooms are gone for today."
+            "B2": "Accept the rooms are gone for the day."
           },
           "goto": 130
         },
         {
           "text": {
-            "A2": "Wonder if this city will ever have you.",
+            "A2": "Wonder if the city will have you.",
             "B1": "Wonder if this city will ever have you.",
-            "B2": "Wonder if this city will ever have you."
+            "B2": "Wonder whether this city will ever have you."
           },
           "goto": 131
         }
@@ -2691,24 +2691,24 @@
     {
       "id": 99,
       "text": {
-        "A2": "[stub] You add the day up on a bench: the fare, the wasted trip, the rooms seen, the one that felt like a home.",
-        "B1": "[stub] You add the day up on a bench: the fare, the wasted trip, the rooms seen, the one that felt like a home.",
-        "B2": "[stub] You add the day up on a bench: the fare, the wasted trip, the rooms seen, the one that felt like a home."
+        "A2": "You sit on a cold bench and add the day up. The bus fares you spent. The wasted trip out of town. The rooms you saw. And the one room by the water that felt, for a moment, like a home. The light is going now. You have to choose where to spend the last of it.",
+        "B1": "You sit on a cold bench and add the day up. The fares spent, the wasted trip out of town, the grim rooms seen. And the one room by the water that felt, for a moment, like a home. The light is going now. You have to choose where to spend the last of it.",
+        "B2": "You sit on a cold bench and add the day up honestly. The fares spent, the wasted trip out of town, the grim rooms seen. And the one room by the water that felt, just for a moment, like a home. The light is going now, and going fast. You have to choose where to spend the very last of it."
       },
       "choices": [
         {
           "text": {
             "A2": "Decide where to go as the light goes.",
             "B1": "Decide where to go as the light goes.",
-            "B2": "Decide where to go as the light goes."
+            "B2": "Decide where to go while the light lasts."
           },
           "goto": 96
         },
         {
           "text": {
-            "A2": "None of it's enough — think harder.",
+            "A2": "None of it's enough. Think harder.",
             "B1": "None of it's enough — think harder.",
-            "B2": "None of it's enough — think harder."
+            "B2": "None of it's quite enough — think harder."
           },
           "goto": 98
         },
@@ -2716,7 +2716,7 @@
           "text": {
             "A2": "The stalls are closing around you.",
             "B1": "The stalls are closing around you.",
-            "B2": "The stalls are closing around you."
+            "B2": "The stalls are folding up around you."
           },
           "goto": 115
         }
@@ -2725,9 +2725,9 @@
     {
       "id": 100,
       "text": {
-        "A2": "[stub] Halloran's stair again, the light in her window just come on. You climb.",
-        "B1": "[stub] Halloran's stair again, the light in her window just come on. You climb.",
-        "B2": "[stub] Halloran's stair again, the light in her window just come on. You climb."
+        "A2": "You climb Halloran's stair again. The light in her window has just come on. It is warm and yellow against the grey evening. Your feet are heavy, and your heart is louder than it should be. This is the room you want. You knew it at noon. You know it now.",
+        "B1": "You climb Halloran's stair again. The light in her window has just come on, warm and yellow against the grey evening. Your feet are heavy, and your heart is louder than it should be. This is the room you want — you knew it at noon, and you know it now.",
+        "B2": "You climb Halloran's stair again in the failing light. The lamp in her window has just come on, warm and yellow against the grey of the evening. Your feet are heavy, and your heart is beating louder than it has any need to. This is the room you want. You knew it at noon, and you know it still."
       },
       "choices": [
         {
@@ -2753,7 +2753,7 @@
           "text": {
             "A2": "The walk up feels longer at dusk.",
             "B1": "The walk up feels longer at dusk.",
-            "B2": "The walk up feels longer at dusk."
+            "B2": "The climb feels longer at dusk."
           },
           "goto": 110
         }
@@ -2762,24 +2762,24 @@
     {
       "id": 101,
       "text": {
-        "A2": "[stub] The good flat, clean and bright, and a letting man who only wants your reference to be real.",
-        "B1": "[stub] The good flat, clean and bright, and a letting man who only wants your reference to be real.",
-        "B2": "[stub] The good flat, clean and bright, and a letting man who only wants your reference to be real."
+        "A2": "The good flat is clean and bright and real. A little home, up two flights, with a window that gets the morning. The letting man barely looks at you. He only wants your reference to be real, and it is. There is nothing here to fear, and nothing hidden. Just a door, and a key.",
+        "B1": "The good flat is clean and bright and real — a proper little home, two flights up, with a window that catches the morning. The letting man barely looks at you; he only needs your reference to be real, and it is. There's nothing hidden here, nothing to fear. Just a door and a key.",
+        "B2": "The good flat is clean and bright and unmistakably real — a proper little home, two flights up, with a window that catches the morning light. The letting man barely looks at you; he only needs your reference to be genuine, and it is. There is nothing hidden here, and nothing to fear. Just a door, and a key, and your own name on the paper."
       },
       "choices": [
         {
           "text": {
             "A2": "Take it; you're vouched for.",
             "B1": "Take it; you're vouched for.",
-            "B2": "Take it; you're vouched for."
+            "B2": "Take it — you're vouched for."
           },
           "goto": 123
         },
         {
           "text": {
-            "A2": "Hesitate — it's more than you can hold.",
+            "A2": "Hesitate; it's a lot to hold.",
             "B1": "Hesitate — it's more than you can hold.",
-            "B2": "Hesitate — it's more than you can hold."
+            "B2": "Hesitate — it feels like more than you can hold."
           },
           "goto": 127
         }
@@ -2788,9 +2788,9 @@
     {
       "id": 102,
       "text": {
-        "A2": "[stub] Vann's 'address' at last — a slip of paper, a street you don't know, a key that's cold in your hand.",
-        "B1": "[stub] Vann's 'address' at last — a slip of paper, a street you don't know, a key that's cold in your hand.",
-        "B2": "[stub] Vann's 'address' at last — a slip of paper, a street you don't know, a key that's cold in your hand."
+        "A2": "You have Vann's address at last. It is a slip of cheap paper and a cold key. The street name means nothing to you. The key is heavy and strange in your hand. Somewhere out there, he promised, is your room. You have paid for it already. Now you go to find it.",
+        "B1": "You have Vann's address at last — a slip of cheap paper and a cold, heavy key. The street name means nothing to you. Somewhere out there, he promised, is the room you already paid for. You button your coat against the dark and go to find it.",
+        "B2": "You have Vann's address at last: a slip of cheap paper and a cold, heavy key that means nothing yet. The street name is one you've never heard. Somewhere out there, he promised, warmly, is the room you have already paid most of a week's wage for. You button your coat against the dark, and go to find it."
       },
       "choices": [
         {
@@ -2805,7 +2805,7 @@
           "text": {
             "A2": "Hesitate on the dark street.",
             "B1": "Hesitate on the dark street.",
-            "B2": "Hesitate on the dark street."
+            "B2": "Hesitate a moment on the dark street."
           },
           "goto": 130
         }
@@ -2814,16 +2814,16 @@
     {
       "id": 103,
       "text": {
-        "A2": "[stub] The bedsit landlord counts your cash again and pushes a scrap of paper across for your name.",
-        "B1": "[stub] The bedsit landlord counts your cash again and pushes a scrap of paper across for your name.",
-        "B2": "[stub] The bedsit landlord counts your cash again and pushes a scrap of paper across for your name."
+        "A2": "The bedsit landlord counts your cash again, slowly, and pushes a scrap of paper across for your name. No lease. No handshake. No welcome. Just a room with a wall for a view, and a shared bathroom down a cold stair. It is a room. Tonight, a room is what you need.",
+        "B1": "The bedsit landlord counts your cash again, slowly, then pushes a scrap of paper across for your name. No lease, no handshake, no welcome — just a room with a wall for a view and a shared bathroom down a cold stair. It's a room. Tonight, a room is what you need.",
+        "B2": "The bedsit landlord counts your cash again, slowly, and then pushes a scrap of paper across the table for your name. No lease, no handshake, no welcome of any kind — just a room with a blank wall for a view and a shared bathroom down a cold stair. It is a room, all the same. And tonight, a room is what you need."
       },
       "choices": [
         {
           "text": {
             "A2": "Sign; it's yours tonight.",
             "B1": "Sign; it's yours tonight.",
-            "B2": "Sign; it's yours tonight."
+            "B2": "Sign — it's yours tonight."
           },
           "goto": 124
         },
@@ -2831,7 +2831,7 @@
           "text": {
             "A2": "Back out at the last second.",
             "B1": "Back out at the last second.",
-            "B2": "Back out at the last second."
+            "B2": "Back out at the very last second."
           },
           "goto": 127
         }
@@ -2840,9 +2840,9 @@
     {
       "id": 104,
       "text": {
-        "A2": "[stub] Mrs Halloran in the doorway, the warm room behind her, the deposit money warm in your hand.",
-        "B1": "[stub] Mrs Halloran in the doorway, the warm room behind her, the deposit money warm in your hand.",
-        "B2": "[stub] Mrs Halloran in the doorway, the warm room behind her, the deposit money warm in your hand."
+        "A2": "Mrs Halloran stands in the doorway. Behind her, the room is warm and lit. The deposit money is warm too, folded tight in your hand. She looks at you and waits. She is not a woman who fills a silence for you. Whatever happens next, you will have to begin it.",
+        "B1": "Mrs Halloran stands in the doorway, the warm room lit behind her, the deposit money folded tight and warm in your hand. She looks at you and waits. She isn't a woman who'll fill a silence for you. Whatever happens next, you'll have to be the one to begin it.",
+        "B2": "Mrs Halloran stands in the doorway, the warm room lit behind her, the deposit money folded tight and warm in your hand. She looks at you and waits. She isn't the kind of woman who will fill a silence on your behalf. Whatever happens next, you are the one who is going to have to begin it."
       },
       "choices": [
         {
@@ -2857,7 +2857,7 @@
           "text": {
             "A2": "Step back onto the stair a moment.",
             "B1": "Step back onto the stair a moment.",
-            "B2": "Step back onto the stair a moment."
+            "B2": "Step back onto the stair for a moment."
           },
           "goto": 100
         }
@@ -2866,16 +2866,16 @@
     {
       "id": 105,
       "text": {
-        "A2": "[stub] She waits. This is the moment the whole day was walking toward.",
-        "B1": "[stub] She waits. This is the moment the whole day was walking toward.",
-        "B2": "[stub] She waits. This is the moment the whole day was walking toward."
+        "A2": "She waits. This is the moment the whole long day has been walking toward. You can tell her the plain truth about yourself — new, alone, with no one behind you. Or you can keep it safe and small. Just the rent, just the dates, nothing that costs you anything to say.",
+        "B1": "She waits. This is the moment the whole long day has been walking toward. You can tell her the plain truth about yourself — new, alone, with no one at your back. Or you can keep it safe and businesslike: just the rent, just the dates, nothing that costs you anything to say.",
+        "B2": "She waits. This is the moment the whole long day has been walking toward. You can tell her the plain truth of yourself — new, alone, with no one at all standing behind you. Or you can keep it safe and businesslike: just the rent, just the dates, nothing that costs you a thing to say aloud."
       },
       "choices": [
         {
           "text": {
-            "A2": "Tell her the truth of your circumstances.",
+            "A2": "Tell her the truth about yourself.",
             "B1": "Tell her the truth of your circumstances.",
-            "B2": "Tell her the truth of your circumstances."
+            "B2": "Tell her the plain truth of your circumstances."
           },
           "goto": 106
         },
@@ -2883,7 +2883,7 @@
           "text": {
             "A2": "Keep it businesslike; just the rent.",
             "B1": "Keep it businesslike; just the rent.",
-            "B2": "Keep it businesslike; just the rent."
+            "B2": "Keep it businesslike — just the rent."
           },
           "goto": 107
         }
@@ -2892,9 +2892,9 @@
     {
       "id": 106,
       "text": {
-        "A2": "[stub] You tell her plainly: new, alone, a week's pay, no one to vouch — but honest, and you'll mind the place. Her grey eyes hold yours.",
-        "B1": "[stub] You tell her plainly: new, alone, a week's pay, no one to vouch — but honest, and you'll mind the place. Her grey eyes hold yours.",
-        "B2": "[stub] You tell her plainly: new, alone, a week's pay, no one to vouch — but honest, and you'll mind the place. Her grey eyes hold yours."
+        "A2": "You tell her the truth, all of it. New to the city. Alone. A week's pay and no one to vouch for you. But honest, and careful, and someone who will look after her room like it matters. Her grey eyes hold yours the whole time. She does not look away.",
+        "B1": "You tell her the truth of it, plainly. New to the city, alone, a week's pay and no one to vouch for you. But honest, and careful, and someone who'll look after her room as if it mattered. Her grey eyes hold yours the whole time. She doesn't look away once.",
+        "B2": "You tell her the truth of it, plainly and without decoration. New to the city, alone, a week's pay and no one alive here to vouch for you. But honest, and careful, and someone who will look after her room as though it mattered. Her grey eyes hold yours the whole time. She does not look away once."
       },
       "choices": [
         {
@@ -2910,7 +2910,7 @@
         },
         {
           "text": {
-            "A2": "On second thought, retreat to business.",
+            "A2": "Retreat to business after all.",
             "B1": "On second thought, retreat to business.",
             "B2": "On second thought, retreat to business."
           },
@@ -2921,16 +2921,16 @@
     {
       "id": 107,
       "text": {
-        "A2": "[stub] You keep it to rent and dates and deposits. Correct. Cool. She nods along, and something doesn't quite open.",
-        "B1": "[stub] You keep it to rent and dates and deposits. Correct. Cool. She nods along, and something doesn't quite open.",
-        "B2": "[stub] You keep it to rent and dates and deposits. Correct. Cool. She nods along, and something doesn't quite open."
+        "A2": "You keep it to rent and dates and deposits. It is correct. It is cool. You give her nothing of yourself, because giving things away has hurt before. She nods along and writes nothing down. Something in the room stays shut, and you feel it stay shut, and you say nothing.",
+        "B1": "You keep it to rent and dates and deposits — correct, cool, careful. You give her nothing of yourself, because giving yourself away has cost you before. She nods along and writes nothing down. Something in the room stays shut, and you feel it stay shut, and you let it.",
+        "B2": "You keep it strictly to rent and dates and deposits — correct, cool, careful. You give her nothing of yourself, because giving yourself away has cost you before, more than once. She nods along and writes nothing down. Something in the room stays shut the whole time, and you feel it stay shut, and you let it."
       },
       "choices": [
         {
           "text": {
             "A2": "She weighs it.",
             "B1": "She weighs it.",
-            "B2": "She weighs it."
+            "B2": "She weighs it up."
           },
           "goto": 109
         },
@@ -2938,7 +2938,7 @@
           "text": {
             "A2": "Change tack; be honest after all.",
             "B1": "Change tack; be honest after all.",
-            "B2": "Change tack; be honest after all."
+            "B2": "Change tack — be honest after all."
           },
           "goto": 106
         }
@@ -2947,9 +2947,9 @@
     {
       "id": 108,
       "text": {
-        "A2": "[stub] She looks at you a long moment, then at the packed box she cannot bring herself to move.",
-        "B1": "[stub] She looks at you a long moment, then at the packed box she cannot bring herself to move.",
-        "B2": "[stub] She looks at you a long moment, then at the packed box she cannot bring herself to move."
+        "A2": "She looks at you for a long moment. Then she looks at the box by the wall, the one she cannot make herself finish packing. Something passes over her face, and softens it. She has been holding this room for someone. Maybe, tonight, she is ready to let someone new into it.",
+        "B1": "She looks at you for a long moment. Then she looks at the box by the wall — the one she can't quite bring herself to finish packing. Something passes over her face and softens it. She's been holding this room for someone. Maybe tonight she's ready to let someone new into it.",
+        "B2": "She looks at you for a long moment. Then she looks past you, at the box by the wall — the one she has never quite been able to make herself finish packing. Something passes over her face and softens it by a degree. She has been holding this room for someone who isn't coming. Maybe tonight, at last, she is ready to let someone new into it."
       },
       "choices": [
         {
@@ -2967,7 +2967,7 @@
           "text": {
             "A2": "It doesn't quite land; back to the hotel.",
             "B1": "It doesn't quite land; back to the hotel.",
-            "B2": "It doesn't quite land; back to the hotel."
+            "B2": "It doesn't quite land — back to the hotel."
           },
           "goto": 127
         }
@@ -2976,14 +2976,14 @@
     {
       "id": 109,
       "text": {
-        "A2": "[stub] She weighs you like a form to be processed: money present, references absent.",
-        "B1": "[stub] She weighs you like a form to be processed: money present, references absent.",
-        "B2": "[stub] She weighs you like a form to be processed: money present, references absent."
+        "A2": "She weighs you the way you weigh a form. Money: yes, or no. References: yes, or no. Her face does not change. She has let rooms for thirty years, and she has learned to trust the paper, not the person. For a stranger with a cool voice and no name behind them, the paper is thin.",
+        "B1": "She weighs you the way you'd weigh a form. Money present, or not. A reference, or not. Her face doesn't change at all. She's let rooms for thirty years and learned to trust the paper, not the person. And for a stranger with a cool voice and no name behind them, the paper is thin.",
+        "B2": "She weighs you the way one weighs a form. Money present, or not. A reference, or not. Her face does not change by a flicker. She has let rooms for thirty years, and long since learned to trust the paper rather than the person. And for a stranger with a cool voice and no name at all behind them, the paper is very thin."
       },
       "choices": [
         {
           "text": {
-            "A2": "You cover it cleanly, by your own careful means.",
+            "A2": "You cover it by your own means.",
             "B1": "You cover it cleanly, by your own careful means.",
             "B2": "You cover it cleanly, by your own careful means."
           },
@@ -2995,7 +2995,7 @@
         },
         {
           "text": {
-            "A2": "No money kept, no one to vouch — a polite no.",
+            "A2": "A polite no — nothing to show her.",
             "B1": "No money kept, no one to vouch — a polite no.",
             "B2": "No money kept, no one to vouch — a polite no."
           },
@@ -3006,9 +3006,9 @@
     {
       "id": 110,
       "text": {
-        "A2": "[stub] The canal is black glass; the rope-works quiet; her window the one warm square in the dark.",
-        "B1": "[stub] The canal is black glass; the rope-works quiet; her window the one warm square in the dark.",
-        "B2": "[stub] The canal is black glass; the rope-works quiet; her window the one warm square in the dark."
+        "A2": "The canal is black glass now. The old rope-works stands quiet and dark. Her window is the one warm square in all of it. You stand at the foot of the stair a moment. Then you make yourself climb. You did not cross a whole city today to lose your nerve on a step.",
+        "B1": "The canal is black glass now, the rope-works quiet and dark, and her lit window the one warm square in all of it. You stand at the foot of the stair a moment. Then you make yourself climb. You didn't cross a whole cold city today to lose your nerve on the last step.",
+        "B2": "The canal is black glass now, the rope-works quiet and dark, and her lit window the one warm square in all of it. You stand at the foot of the stair a moment longer than you mean to. Then you make yourself climb. You did not cross a whole cold city today only to lose your nerve on the very last step."
       },
       "choices": [
         {
@@ -3023,7 +3023,7 @@
           "text": {
             "A2": "Her stair light comes on above.",
             "B1": "Her stair light comes on above.",
-            "B2": "Her stair light comes on above."
+            "B2": "A stair light comes on above you."
           },
           "goto": 116
         },
@@ -3031,7 +3031,7 @@
           "text": {
             "A2": "Lose your nerve; think again.",
             "B1": "Lose your nerve; think again.",
-            "B2": "Lose your nerve; think again."
+            "B2": "Lose your nerve, and think again."
           },
           "goto": 96
         }
@@ -3040,9 +3040,9 @@
     {
       "id": 111,
       "text": {
-        "A2": "[stub] On the step you hold out the notebook. 'This was up there. I think it's his.' The colour leaves her face.",
-        "B1": "[stub] On the step you hold out the notebook. 'This was up there. I think it's his.' The colour leaves her face.",
-        "B2": "[stub] On the step you hold out the notebook. 'This was up there. I think it's his.' The colour leaves her face."
+        "A2": "On the step you hold out the notebook. \"This was up in the room,\" you say. \"I think it's his.\" The colour leaves her face. She takes it in both hands, very carefully, as if it might break. She does not speak. She does not need to. You have given her back a piece of him.",
+        "B1": "On the step you hold out the notebook. \"This was up in the room,\" you say. \"I think it's his.\" The colour leaves her face. She takes it in both hands, very carefully, the way you'd hold something that might break. She doesn't speak. She doesn't need to.",
+        "B2": "On the step you hold out the notebook. \"This was up in the room,\" you say quietly. \"I think it must be his.\" The colour drains out of her face. She takes it in both hands, very carefully, the way you'd hold something that might break in your grip. She doesn't speak. She doesn't need to; her face is doing all of it."
       },
       "choices": [
         {
@@ -3060,7 +3060,7 @@
           "text": {
             "A2": "Then talk about the room.",
             "B1": "Then talk about the room.",
-            "B2": "Then talk about the room."
+            "B2": "Then turn to talk about the room."
           },
           "goto": 104
         }
@@ -3069,9 +3069,9 @@
     {
       "id": 112,
       "text": {
-        "A2": "[stub] The street is a car park behind a hoarding. The key fits no door because there is no door. There never was a room.",
-        "B1": "[stub] The street is a car park behind a hoarding. The key fits no door because there is no door. There never was a room.",
-        "B2": "[stub] The street is a car park behind a hoarding. The key fits no door because there is no door. There never was a room."
+        "A2": "You find the street. It is a car park behind a builder's hoarding. There is no building. There is no door. There is no room, and there never was one. The key in your hand fits nothing at all. You stand in the cold and understand, slowly, exactly what you have done.",
+        "B1": "You find the street. It's a car park behind a builder's hoarding — no building, no door, no room, and there never was one. The key in your hand fits nothing at all. You stand there in the cold and understand, slowly, exactly what you've done.",
+        "B2": "You find the street at last. It's a car park behind a builder's hoarding — no building, no door, no room, and, you understand now, there never was one. The key in your hand fits nothing on this earth. You stand there in the cold and grasp, slowly and completely, exactly what you have done."
       },
       "choices": [
         {
@@ -3084,9 +3084,9 @@
         },
         {
           "text": {
-            "A2": "Back to argue — but the office is dark.",
+            "A2": "Back to argue — the office is dark.",
             "B1": "Back to argue — but the office is dark.",
-            "B2": "Back to argue — but the office is dark."
+            "B2": "Back to argue — but the office is dark now."
           },
           "goto": 130
         }
@@ -3095,9 +3095,9 @@
     {
       "id": 113,
       "text": {
-        "A2": "[stub] The neighbour you helped opens her door, the child behind her knees. 'You carried my bags. There's a box room. It's yours till you're sorted.'",
-        "B1": "[stub] The neighbour you helped opens her door, the child behind her knees. 'You carried my bags. There's a box room. It's yours till you're sorted.'",
-        "B2": "[stub] The neighbour you helped opens her door, the child behind her knees. 'You carried my bags. There's a box room. It's yours till you're sorted.'"
+        "A2": "The neighbour you helped opens her door. The small child hides behind her knees and watches you. \"You carried my bags,\" she says, as if that settled everything. \"There's a box room at the back. It's small, but it's warm. It's yours, love, till you're on your feet.\"",
+        "B1": "The neighbour you helped opens her door, the small child half-hidden behind her knees. \"You carried my bags,\" she says, as if that settled the whole matter. \"There's a box room at the back. It's small, but it's warm, and it's yours, love, till you're properly on your feet.\"",
+        "B2": "The neighbour you helped opens her door, the small child half-hidden behind her knees and watching you gravely. \"You carried my bags,\" she says, as if that alone settled the entire matter. \"There's a box room at the back. It's small, but it's warm, and it's yours, love, for as long as you need it, till you're properly on your feet.\""
       },
       "choices": [
         {
@@ -3115,7 +3115,7 @@
           "text": {
             "A2": "Thank her, but keep looking.",
             "B1": "Thank her, but keep looking.",
-            "B2": "Thank her, but keep looking."
+            "B2": "Thank her, but keep on looking."
           },
           "goto": 127
         }
@@ -3124,9 +3124,9 @@
     {
       "id": 114,
       "text": {
-        "A2": "[stub] A last scroll: the good listings are all marked LET now. Only Vann's kind are still bright and still lying.",
-        "B1": "[stub] A last scroll: the good listings are all marked LET now. Only Vann's kind are still bright and still lying.",
-        "B2": "[stub] A last scroll: the good listings are all marked LET now. Only Vann's kind are still bright and still lying."
+        "A2": "You look at your phone one last time. The good rooms are all marked LET now. They are gone. Only the bright, cheap, lying ones are still there — Vann's kind, smiling out of the screen. The real ones went while you were walking. There is nothing here for you now.",
+        "B1": "You scroll your phone one last time. The good rooms are all marked LET now — gone while you were out walking. Only the bright, cheap, lying ones are still up, Vann's kind, smiling out of the screen. There's nothing real left here tonight.",
+        "B2": "You scroll your phone one last time. The good rooms are all marked LET now — every one of them gone while you were out walking the streets. Only the bright, cheap, lying ones are still up, Vann's kind, smiling out of the screen at whoever's desperate enough. There's nothing real left here tonight."
       },
       "choices": [
         {
@@ -3141,7 +3141,7 @@
           "text": {
             "A2": "It really is too late.",
             "B1": "It really is too late.",
-            "B2": "It really is too late."
+            "B2": "It really is too late now."
           },
           "goto": 130
         }
@@ -3150,9 +3150,9 @@
     {
       "id": 115,
       "text": {
-        "A2": "[stub] The market folds up around you — shutters, crates, the smell of the day ending.",
-        "B1": "[stub] The market folds up around you — shutters, crates, the smell of the day ending.",
-        "B2": "[stub] The market folds up around you — shutters, crates, the smell of the day ending."
+        "A2": "The market folds up around you. Traders pull down shutters. They stack crates and sweep the ground. The day is packing itself away, and it did not find you a home. You could follow the evening wherever it leads. Or you could sit here, and let the city win, just for a moment.",
+        "B1": "The market folds up around you — shutters coming down, crates stacked, the ground swept, the smell of a day ending. It packed itself away without finding you a home. You could follow the evening wherever it leads. Or you could sit here and let the city win, just for a moment.",
+        "B2": "The market folds up around you — shutters coming down, crates stacked, the ground swept, the whole smell of a day ending. It has packed itself neatly away without troubling to find you a home. You could follow the evening wherever it happens to lead. Or you could sit down right here, and let the city win, just for a moment."
       },
       "choices": [
         {
@@ -3165,9 +3165,9 @@
         },
         {
           "text": {
-            "A2": "Sit, and let the city win a moment.",
+            "A2": "Sit, and let the city win.",
             "B1": "Sit, and let the city win a moment.",
-            "B2": "Sit, and let the city win a moment."
+            "B2": "Sit down, and let the city win a moment."
           },
           "goto": 131
         },
@@ -3175,7 +3175,7 @@
           "text": {
             "A2": "One last idea.",
             "B1": "One last idea.",
-            "B2": "One last idea."
+            "B2": "One last idea, then."
           },
           "goto": 119
         }
@@ -3184,9 +3184,9 @@
     {
       "id": 116,
       "text": {
-        "A2": "[stub] A light climbs the stair to meet you. She heard you coming.",
-        "B1": "[stub] A light climbs the stair to meet you. She heard you coming.",
-        "B2": "[stub] A light climbs the stair to meet you. She heard you coming."
+        "A2": "A light comes down the stair to meet you. She heard your feet on the steps. Mrs Halloran does not call out. She just waits, with the lamp, in the doorway above. There is nothing to do now but go up. Go up, meet her, and say what you came to say.",
+        "B1": "A light comes down the stair to meet you — she heard your feet on the steps. Mrs Halloran doesn't call out; she just waits with the lamp in the doorway above. There's nothing to do now but go up, meet her, and say what you came to say.",
+        "B2": "A light comes down the stair to meet you; she heard your feet on the steps below. Mrs Halloran doesn't call out or hurry you. She just waits there, with the lamp, in the lit doorway above. There is nothing to do now but climb up, and meet her, and say the thing you came to say."
       },
       "choices": [
         {
@@ -3201,7 +3201,7 @@
           "text": {
             "A2": "Back down a step, and up again.",
             "B1": "Back down a step, and up again.",
-            "B2": "Back down a step, and up again."
+            "B2": "Back down a step, then up again."
           },
           "goto": 100
         }
@@ -3262,9 +3262,9 @@
     {
       "id": 119,
       "text": {
-        "A2": "[stub] The last of the light on the wet square. Somewhere a door is warm; the question is whether one is warm for you.",
-        "B1": "[stub] The last of the light on the wet square. Somewhere a door is warm; the question is whether one is warm for you.",
-        "B2": "[stub] The last of the light on the wet square. Somewhere a door is warm; the question is whether one is warm for you."
+        "A2": "The last of the light lies on the wet square. Somewhere close, a door is warm, and a room is lit, and someone is home. The question is only whether one of them is warm for you. You have one idea left, or none. You stand, and you decide which.",
+        "B1": "The last of the light lies on the wet square. Somewhere close a door is warm, a room is lit, someone is home. The only question left is whether one of them is warm for you. You have one idea left — or none at all. You stand, and decide which.",
+        "B2": "The last of the light lies on the wet square. Somewhere close a door is warm, a room is lit, someone is safely home. The only real question left is whether one of them, tonight, is warm for you. You have one idea left, or perhaps none at all. You stand up, and decide which it is."
       },
       "choices": [
         {
@@ -3279,7 +3279,7 @@
           "text": {
             "A2": "Give the day up.",
             "B1": "Give the day up.",
-            "B2": "Give the day up."
+            "B2": "Give the day up for lost."
           },
           "goto": 131
         }
@@ -3288,108 +3288,108 @@
     {
       "id": 120,
       "text": {
-        "A2": "[stub] GOOD — A home, honestly. She gives you the room on trust, because you were straight about having no one. The first job at the firm was fixing the letters; the first thing you fix here is the window catch. It is a home.",
-        "B1": "[stub] GOOD — A home, honestly. She gives you the room on trust, because you were straight about having no one. The first job at the firm was fixing the letters; the first thing you fix here is the window catch. It is a home.",
-        "B2": "[stub] GOOD — A home, honestly. She gives you the room on trust, because you were straight about having no one. The first job at the firm was fixing the letters; the first thing you fix here is the window catch. It is a home."
+        "A2": "She stands back and opens the door wide. \"Then you'd better come in out of the cold,\" she says. That is all. That is everything. The room is yours — the good light, the water below, the window you will learn by heart. Your first job at the firm was fixing the letters. Your first job here is the window catch. You are home.",
+        "B1": "She steps back and opens the door wide. \"Then you'd better come in out of the cold,\" she says — and that is all, and that is everything. The room is yours: the good light, the grey water below, the window you'll come to know by heart. Your first job at the firm was fixing the letters. Your first job here is the window catch. You are home.",
+        "B2": "She steps back and opens the door wide. \"Then you'd better come in out of the cold,\" she says — and that is all of it, and that is everything. The room is yours: the good clean light, the grey water sliding below, the window you'll come to know by heart. Your first job at the firm was fixing the letters. Your first job here is the window catch. You are home, and the word means something again."
       },
       "ending": "good"
     },
     {
       "id": 121,
       "text": {
-        "A2": "[stub] GOOD — The room returned (secret). She takes the notebook, sits down hard on the packed box, and tells you about her son gone to sea. You gave her back a piece of him. The room is yours; so, now, is a place at her table.",
-        "B1": "[stub] GOOD — The room returned (secret). She takes the notebook, sits down hard on the packed box, and tells you about her son gone to sea. You gave her back a piece of him. The room is yours; so, now, is a place at her table.",
-        "B2": "[stub] GOOD — The room returned (secret). She takes the notebook, sits down hard on the packed box, and tells you about her son gone to sea. You gave her back a piece of him. The room is yours; so, now, is a place at her table."
+        "A2": "She takes the notebook and sits down hard on the packed box. For a long time she says nothing. Then she tells you: her son, gone to sea, no word in a year. These were his people, the ones he meant to write. \"You brought a piece of him back,\" she says at last. The room is yours. So, now, is a place at her table.",
+        "B1": "She takes the notebook and sits down hard on the half-packed box. For a long while she says nothing at all. Then it comes out: her son, gone to sea, not a word from him in a year. These were the people he meant to write to. \"You've brought a piece of him back,\" she says at last. The room is yours — and so, now, is a place at her table.",
+        "B2": "She takes the notebook and sits down hard on the half-packed box, as if her legs had simply stopped. For a long while she says nothing at all. Then it comes out, quietly: her son, gone to sea, not a single word from him in a year. These were the people he meant to write to, and never did. \"You've brought a piece of him back to me,\" she says at last. The room is yours — and so, now, is a place at her table."
       },
       "ending": "good"
     },
     {
       "id": 122,
       "text": {
-        "A2": "[stub] GOOD — On your own terms. No favours, no con, no one vouching — just a modest real room secured by your own careful means. Bare walls, a borrowed chair, a key you earned. Yours, and only yours.",
-        "B1": "[stub] GOOD — On your own terms. No favours, no con, no one vouching — just a modest real room secured by your own careful means. Bare walls, a borrowed chair, a key you earned. Yours, and only yours.",
-        "B2": "[stub] GOOD — On your own terms. No favours, no con, no one vouching — just a modest real room secured by your own careful means. Bare walls, a borrowed chair, a key you earned. Yours, and only yours."
+        "A2": "No favours. No con. No one to vouch for you. Just a small, real room. You took it with money you kept safe all day, coin by coin. The walls are bare and the chair is borrowed. But the key is yours, and only yours. You earned every part of it. Tonight you sleep in a room that owes nobody anything.",
+        "B1": "No favours, no con, no one vouching for you. Just a small, real room, taken with money you kept safe all day — coin by coin, mile by walked mile. The walls are bare and the chair is borrowed. But the key is yours, and only yours, and you earned every part of it. Tonight you sleep in a room that owes nobody anything.",
+        "B2": "No favours, no con, and no one at all vouching for you. Just a small, real room, taken with money you kept safe the whole day — coin by careful coin, mile by walked mile. The walls are bare and the one chair is borrowed. But the key is yours, and only yours, and you earned every last part of it. Tonight you sleep in a room that owes nobody anything."
       },
       "ending": "good"
     },
     {
       "id": 123,
       "text": {
-        "A2": "[stub] GOOD — Vouched for. Ms Rowe's word unlocks the good flat. You are new here, but you are known — and being known, you are beginning to learn, is how a stranger becomes a resident.",
-        "B1": "[stub] GOOD — Vouched for. Ms Rowe's word unlocks the good flat. You are new here, but you are known — and being known, you are beginning to learn, is how a stranger becomes a resident.",
-        "B2": "[stub] GOOD — Vouched for. Ms Rowe's word unlocks the good flat. You are new here, but you are known — and being known, you are beginning to learn, is how a stranger becomes a resident."
+        "A2": "Ms Rowe's word unlocks the door. One sentence from her, and the good flat is yours — the flat you could never have taken alone. You are still new here. You still know almost no one. But you are known now, by one person who matters. That turns out to be the thing that opens doors. You go up to your own window.",
+        "B1": "Ms Rowe's word unlocks the door. One sentence from her and the good flat is yours — the flat you could never have taken on your own. You're still new here, and you still know almost no one. But you're known now, by one person who counts, and that, it turns out, is what opens doors. You climb up to your own window.",
+        "B2": "Ms Rowe's word unlocks the door. One sentence from her, and the good flat is yours — the flat you could never have taken on your own. You're still new to the city, and you still know almost no one in it. But you are known now, by one person who counts, and being known, you're learning, is exactly how a stranger turns slowly into a resident. You climb up to your own window."
       },
       "ending": "good"
     },
     {
       "id": 124,
       "text": {
-        "A2": "[stub] NEUTRAL — A room, not a home. You took the first thing, sight barely seen. It is yours, it is fine, it is grey and empty and quiet. A technical win. You lie on the bed and feel, exactly, nothing.",
-        "B1": "[stub] NEUTRAL — A room, not a home. You took the first thing, sight barely seen. It is yours, it is fine, it is grey and empty and quiet. A technical win. You lie on the bed and feel, exactly, nothing.",
-        "B2": "[stub] NEUTRAL — A room, not a home. You took the first thing, sight barely seen. It is yours, it is fine, it is grey and empty and quiet. A technical win. You lie on the bed and feel, exactly, nothing."
+        "A2": "You took the first thing, sight barely seen. It is yours now. It is fine. It is grey, and quiet, and empty. You lie on the bed with your coat still on and listen to strangers on the stair. You have a room. You wanted a home. Tonight you learn, in the cold, that the two are not the same thing.",
+        "B1": "You took the first thing going, sight barely seen. It's yours now, and it's fine, and it's grey and quiet and empty. You lie on the bed with your coat still on, listening to strangers move about on the stair. You have a room. You wanted a home. Tonight you learn, lying there, that the two are not the same thing at all.",
+        "B2": "You took the first thing going, sight barely seen, because you were tired and afraid of the dark. It's yours now, and it's fine, and it's grey and quiet and utterly empty. You lie on the bed with your coat still on, listening to strangers move about on the stair. You have a room. You wanted a home. Tonight you learn, lying there in the cold, exactly how far apart the two things are."
       },
       "ending": "neutral"
     },
     {
       "id": 125,
       "text": {
-        "A2": "[stub] NEUTRAL — The kindness returned. No room of your own tonight, but the neighbour's box room and the child's shy hello. Warmth without the win — and warmth, tonight, is not nothing.",
-        "B1": "[stub] NEUTRAL — The kindness returned. No room of your own tonight, but the neighbour's box room and the child's shy hello. Warmth without the win — and warmth, tonight, is not nothing.",
-        "B2": "[stub] NEUTRAL — The kindness returned. No room of your own tonight, but the neighbour's box room and the child's shy hello. Warmth without the win — and warmth, tonight, is not nothing."
+        "A2": "No room of your own tonight. But there is a box room at the back of a stranger's flat, warm and small. And a child who says a shy hello. You carried her bags this morning and forgot it by noon. She did not forget. It is not a home yet. But it is warmth, and a door that opens to you. Tonight, that is far from nothing.",
+        "B1": "No room of your own tonight. But there's a box room at the back of a stranger's flat — warm, small, and offered freely. You carried her shopping this morning and forgot it by noon; she didn't forget it at all. It isn't a home, not yet. But it's warmth, and a door that opens to you, and tonight that is a very long way from nothing.",
+        "B2": "No room of your own tonight. But there's a box room at the back of a stranger's flat — warm, small, and offered without a second thought. You carried her shopping up three flights this morning and had forgotten it by noon; she, it turns out, did not forget it at all. It isn't a home, not yet. But it's warmth, and a door that opens to you, and on a night like this that is a very long way from nothing."
       },
       "ending": "neutral"
     },
     {
       "id": 126,
       "text": {
-        "A2": "[stub] NEUTRAL — Remembered. No room today, but a landlady who kept your name says, come back Monday. You are becoming someone the city recognises. That is a kind of address.",
-        "B1": "[stub] NEUTRAL — Remembered. No room today, but a landlady who kept your name says, come back Monday. You are becoming someone the city recognises. That is a kind of address.",
-        "B2": "[stub] NEUTRAL — Remembered. No room today, but a landlady who kept your name says, come back Monday. You are becoming someone the city recognises. That is a kind of address."
+        "A2": "No room today. But at the last door, the landlady looks at you and says your name. She remembers you from the morning. \"Come back Monday,\" she says. \"I may have something then.\" It is not a bed for tonight. But it is a small, real thing: you are becoming someone this city knows. That is a kind of address.",
+        "B1": "No room today. But at the last door, the landlady looks at you and says your name — she remembers you from the morning. \"Come back Monday,\" she says. \"I may have something by then.\" It's no bed for tonight. But it's a small, real thing: you're becoming someone this city knows. And that is a kind of address.",
+        "B2": "No room today. But at the last door of the day, the landlady looks at you and says your name — she remembers you from the morning, out of all the faces. \"Come back Monday,\" she says. \"I may well have something by then.\" It's no bed for tonight. But it's a small, real thing all the same: you are slowly becoming someone this city knows by name. And that, in the end, is its own kind of address."
       },
       "ending": "neutral"
     },
     {
       "id": 127,
       "text": {
-        "A2": "[stub] NEUTRAL — Back to the hotel, one more week. Nothing signed, but you have the city's map now and its prices in your head. You buy one more week and set the alarm. Not a loss — just not yet.",
-        "B1": "[stub] NEUTRAL — Back to the hotel, one more week. Nothing signed, but you have the city's map now and its prices in your head. You buy one more week and set the alarm. Not a loss — just not yet.",
-        "B2": "[stub] NEUTRAL — Back to the hotel, one more week. Nothing signed, but you have the city's map now and its prices in your head. You buy one more week and set the alarm. Not a loss — just not yet."
+        "A2": "Nothing signed today. But you did not lose your money, and you did not lose your head. You know the city's map now, and its prices, and its tricks. You buy one more week at the hotel and set your alarm for early. It is not a loss. It is a day spent learning the ground. Tomorrow you look again, and better.",
+        "B1": "Nothing signed today — but you didn't lose your money, and you didn't lose your head. You know the city's map now, its prices, its tricks. You buy one more week at the hotel and set the alarm for early. It isn't a loss; it's a day spent learning the ground. Tomorrow you look again, and look better.",
+        "B2": "Nothing signed today — but you didn't lose your money, and, just as importantly, you didn't lose your head. You know the city's map now, and its prices, and its handful of tricks. You buy yourself one more week at the hotel and set the alarm for early. It isn't a loss; it's a day spent learning the ground under your feet. Tomorrow you'll look again, and look better."
       },
       "ending": "neutral"
     },
     {
       "id": 128,
       "text": {
-        "A2": "[stub] BAD — The deposit gone. The room was never his to let. Your deposit — most of a week's pay — is gone, and the hotel wants its key by ten. You knew the tune and danced anyway.",
-        "B1": "[stub] BAD — The deposit gone. The room was never his to let. Your deposit — most of a week's pay — is gone, and the hotel wants its key by ten. You knew the tune and danced anyway.",
-        "B2": "[stub] BAD — The deposit gone. The room was never his to let. Your deposit — most of a week's pay — is gone, and the hotel wants its key by ten. You knew the tune and danced anyway."
+        "A2": "The room was never his to let. You know that now, standing in the dark with a key that fits no door. The money — most of a week's pay — is gone, and it is not coming back. The hotel wants its key by ten. You knew the tune. You heard it once before, on your first night. And still you danced to it.",
+        "B1": "The room was never his to let — you understand that now, standing in the dark with a key that opens nothing. The money, most of a week's pay, is gone, and it isn't coming back. The hotel wants its key by ten. You knew this tune; you heard it once before, on your first night. And you danced to it anyway.",
+        "B2": "The room was never his to let, and you understand that completely now, standing in the dark with a key that opens nothing at all. The money — most of a week's hard pay — is gone, and it is not coming back. The hotel wants its key by ten. You knew this tune; you heard it played once already, on your first night in the city. And you danced to it anyway."
       },
       "ending": "bad"
     },
     {
       "id": 129,
       "text": {
-        "A2": "[stub] BAD — No one to vouch. No money kept, no reference, nothing to set against a stranger's face. Every good door was a polite no, and the day has simply run out.",
-        "B1": "[stub] BAD — No one to vouch. No money kept, no reference, nothing to set against a stranger's face. Every good door was a polite no, and the day has simply run out.",
-        "B2": "[stub] BAD — No one to vouch. No money kept, no reference, nothing to set against a stranger's face. Every good door was a polite no, and the day has simply run out."
+        "A2": "No money kept. No name to vouch for you. Nothing at all to set against a stranger's tired face. Every good door today was a polite no, said kindly, and shut all the same. You did nothing wrong. You were just new, and alone, and the day was too short for that. The light is gone, and so is your chance.",
+        "B1": "No money kept, no name to vouch for you, nothing at all to set against a stranger's tired face. Every good door today was a polite no — said kindly enough, and shut all the same. You did nothing wrong. You were simply new, and alone, and the day was too short for that. The light is gone now, and so is your chance.",
+        "B2": "No money kept, no name to vouch for you, and nothing at all to set against a stranger's tired face. Every good door in the city today was a polite no — said kindly enough, and shut all the same. You did nothing wrong. You were simply new, and alone, and the short winter day was never going to be long enough for that. The light is gone now, and your chance has gone with it."
       },
       "ending": "bad"
     },
     {
       "id": 130,
       "text": {
-        "A2": "[stub] BAD — Too late to look. You spent the daylight on the wrong lead, and by dark the real rooms are all taken. The city didn't cheat you; you just ran out of light.",
-        "B1": "[stub] BAD — Too late to look. You spent the daylight on the wrong lead, and by dark the real rooms are all taken. The city didn't cheat you; you just ran out of light.",
-        "B2": "[stub] BAD — Too late to look. You spent the daylight on the wrong lead, and by dark the real rooms are all taken. The city didn't cheat you; you just ran out of light."
+        "A2": "You spent the daylight on the wrong lead, and now it is gone. By the time you turned back, the real rooms were already taken. The city did not cheat you today. You simply ran out of light, and light was the one thing you could not buy back. You walk to the dark hotel to beg one more night.",
+        "B1": "You spent the daylight chasing the wrong lead, and now the daylight is gone. By the time you turned back, the real rooms had all been taken. The city didn't cheat you today — you simply ran out of light, and light was the one thing you couldn't buy back. You trudge to the hotel to beg one more night.",
+        "B2": "You spent the whole of the daylight chasing the wrong lead, and now the daylight is simply gone. By the time you turned back toward the real rooms, every one of them had been taken. The city didn't cheat you today — you merely ran out of light, and light was the one thing you couldn't buy back at any price. You trudge to the darkened hotel to beg one more night."
       },
       "ending": "bad"
     },
     {
       "id": 131,
       "text": {
-        "A2": "[stub] BAD — You think about leaving. No room, no welcome, and the old thought again: a two-o'clock train, a way back to where they know you. You don't buy the ticket. But tonight, you think about it.",
-        "B1": "[stub] BAD — You think about leaving. No room, no welcome, and the old thought again: a two-o'clock train, a way back to where they know you. You don't buy the ticket. But tonight, you think about it.",
-        "B2": "[stub] BAD — You think about leaving. No room, no welcome, and the old thought again: a two-o'clock train, a way back to where they know you. You don't buy the ticket. But tonight, you think about it."
+        "A2": "No room. No welcome. And then the old thought comes again, the one from your first night. A two-o'clock train. A way back to a place where they know your face. You stand on that cold platform in your mind and feel how easy it would be. You do not buy the ticket. Not yet. But tonight, for the first time, you truly think about it.",
+        "B1": "No room. No welcome. And then the old thought comes back, the one from your very first night. A two-o'clock train, a way back to a place where they know your face. You stand on that cold platform in your mind and feel how easy it would be to go. You don't buy the ticket. Not yet. But tonight, for the first time, you truly think about it.",
+        "B2": "No room. No welcome. And then the old thought comes back, the one from your very first night in the city. A two-o'clock train. A way back to a place where they at least know your face. You stand on that cold platform in your mind and feel just how easy it would be to go. You don't buy the ticket. Not yet. But tonight, for the first time, you genuinely think about it."
       },
       "ending": "bad"
     }
