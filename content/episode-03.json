@@ -1,0 +1,3090 @@
+{
+  "schema": "adventure-book/episode@1",
+  "series": "first-light",
+  "episode": 3,
+  "title": "First Light",
+  "slug": "first-light",
+  "blurb": "The power fails across a snowed-in town on the coldest night of the winter. Up the hill, a frail neighbour needs heat to survive. You have until first light to keep her — and whoever else you meet — warm and alive.",
+  "identity": {
+    "name": "Cold Snap",
+    "mood": "A frozen town gone dark; the only light is the warmth people carry to each other.",
+    "palette": {
+      "ground": "#0A111F",
+      "surface": "#131E30",
+      "ink": "#EEF2F7",
+      "muted": "#7E8CA0",
+      "line": "#223350",
+      "accent": "#F2C065",
+      "accentHot": "#FADB92",
+      "secondary": "#8FC7E8"
+    },
+    "cover": {
+      "kind": "candlelight",
+      "glow": true
+    },
+    "type": {
+      "display": "Fraunces",
+      "ui": "Hanken Grotesk",
+      "mono": "JetBrains Mono"
+    },
+    "hero": {
+      "line": {
+        "en": "The lights go out. Someone up the hill needs the warmth you carry.",
+        "fr": "Les lumières s'éteignent. Là-haut, quelqu'un a besoin de la chaleur que vous portez.",
+        "es": "Las luces se apagan. Alguien en la colina necesita el calor que llevas.",
+        "it": "Le luci si spengono. Su in collina qualcuno ha bisogno del calore che porti.",
+        "de": "Die Lichter gehen aus. Oben am Hügel braucht jemand die Wärme, die du trägst.",
+        "pt": "As luzes apagam-se. Lá na colina, alguém precisa do calor que levas.",
+        "ru": "Свет гаснет. Там, на холме, кому-то нужно тепло, которое ты несёшь.",
+        "zh": "灯全灭了。山上有人需要你带去的那点温暖。",
+        "ar": "تنطفئ الأضواء. في أعلى التل، شخص يحتاج إلى الدفء الذي تحمله."
+      },
+      "sub": "A story where you are the hero — and every choice turns you to a new page. Written for people learning English, at your level, with meaning in your language whenever you need it."
+    }
+  },
+  "levels": [
+    "A2",
+    "B1",
+    "B2"
+  ],
+  "start": 1,
+  "language_focus": {
+    "A2": [
+      "imperatives and going to",
+      "the home, weather and warmth"
+    ],
+    "B1": [
+      "the first conditional and modals of advice",
+      "helping, warning and planning"
+    ],
+    "B2": [
+      "inference, obligation and conditionals",
+      "community, risk and responsibility"
+    ]
+  },
+  "state_in": [],
+  "state_out": [
+    "has_heater",
+    "dodged_seller",
+    "paid_seller",
+    "found_light",
+    "rallied_town",
+    "helped_neighbour",
+    "gave_warmth",
+    "took_shortcut"
+  ],
+  "arc_flags": [],
+  "nodes": [
+    {
+      "id": 1,
+      "text": {
+        "A2": "[stub] Just after dark, every light in the town goes out at once. A power cut. The heating dies. Up the hill, old Mrs Ada, who was kind to you as a child, needs her electric heater — and she has a weak chest.",
+        "B1": "[stub] Just after dark, every light in the town goes out at once. A power cut. The heating dies. Up the hill, old Mrs Ada, who was kind to you as a child, needs her electric heater — and she has a weak chest.",
+        "B2": "[stub] Just after dark, every light in the town goes out at once. A power cut. The heating dies. Up the hill, old Mrs Ada, who was kind to you as a child, needs her electric heater — and she has a weak chest."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Light a candle and find your coat.",
+            "B1": "Light a candle and find your coat.",
+            "B2": "Light a candle and find your coat."
+          },
+          "goto": 2
+        },
+        {
+          "text": {
+            "A2": "Try the phone for news.",
+            "B1": "Try the phone for news.",
+            "B2": "Try the phone for news."
+          },
+          "goto": 3
+        },
+        {
+          "text": {
+            "A2": "Rush straight out to Ada.",
+            "B1": "Rush straight out to Ada.",
+            "B2": "Rush straight out to Ada."
+          },
+          "goto": 4
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": {
+        "A2": "[stub] You find a candle, a torch, your coat and boots. The house is already going cold.",
+        "B1": "[stub] You find a candle, a torch, your coat and boots. The house is already going cold.",
+        "B2": "[stub] You find a candle, a torch, your coat and boots. The house is already going cold."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Step out into the street.",
+            "B1": "Step out into the street.",
+            "B2": "Step out into the street."
+          },
+          "goto": 5
+        },
+        {
+          "text": {
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "The torch batteries are dead.",
+            "B1": "The torch batteries are dead.",
+            "B2": "The torch batteries are dead."
+          },
+          "goto": 29
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": {
+        "A2": "[stub] The phone is patchy. Word gets through: the roads are blocked, help comes at first light, stay in and keep warm.",
+        "B1": "[stub] The phone is patchy. Word gets through: the roads are blocked, help comes at first light, stay in and keep warm.",
+        "B2": "[stub] The phone is patchy. Word gets through: the roads are blocked, help comes at first light, stay in and keep warm."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "But Ada can't wait that long.",
+            "B1": "But Ada can't wait that long.",
+            "B2": "But Ada can't wait that long."
+          },
+          "goto": 8
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": {
+        "A2": "[stub] You rush out with nothing. The cold hits like a wall. You will need supplies to do any good.",
+        "B1": "[stub] You rush out with nothing. The cold hits like a wall. You will need supplies to do any good.",
+        "B2": "[stub] You rush out with nothing. The cold hits like a wall. You will need supplies to do any good."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go back for supplies.",
+            "B1": "Go back for supplies.",
+            "B2": "Go back for supplies."
+          },
+          "goto": 2
+        },
+        {
+          "text": {
+            "A2": "Feel how serious this is.",
+            "B1": "Feel how serious this is.",
+            "B2": "Feel how serious this is."
+          },
+          "goto": 8
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": {
+        "A2": "[stub] The dark street: black houses, one candlelit window, snow, deep cold.",
+        "B1": "[stub] The dark street: black houses, one candlelit window, snow, deep cold.",
+        "B2": "[stub] The dark street: black houses, one candlelit window, snow, deep cold."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The corner shop is still open.",
+            "B1": "The corner shop is still open.",
+            "B2": "The corner shop is still open."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "Knock on a neighbour's door.",
+            "B1": "Knock on a neighbour's door.",
+            "B2": "Knock on a neighbour's door."
+          },
+          "goto": 10
+        },
+        {
+          "text": {
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "A kid is out in the dark, searching.",
+            "B1": "A kid is out in the dark, searching.",
+            "B2": "A kid is out in the dark, searching."
+          },
+          "goto": 60
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": {
+        "A2": "[stub] Gather supplies first, or rush straight to Ada?",
+        "B1": "[stub] Gather supplies first, or rush straight to Ada?",
+        "B2": "[stub] Gather supplies first, or rush straight to Ada?"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The shop, for supplies.",
+            "B1": "The shop, for supplies.",
+            "B2": "The shop, for supplies."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "Rush up the hill.",
+            "B1": "Rush up the hill.",
+            "B2": "Rush up the hill."
+          },
+          "goto": 11
+        },
+        {
+          "text": {
+            "A2": "Knock on doors to gather help.",
+            "B1": "Knock on doors to gather help.",
+            "B2": "Knock on doors to gather help."
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": {
+        "A2": "[stub] The cold, and Ada with her weak chest in a house with no heat. This is real, and it is on you.",
+        "B1": "[stub] The cold, and Ada with her weak chest in a house with no heat. This is real, and it is on you.",
+        "B2": "[stub] The cold, and Ada with her weak chest in a house with no heat. This is real, and it is on you."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "To the shop.",
+            "B1": "To the shop.",
+            "B2": "To the shop."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "A rumour of panic at the shop.",
+            "B1": "A rumour of panic at the shop.",
+            "B2": "A rumour of panic at the shop."
+          },
+          "goto": 68
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": {
+        "A2": "[stub] Mr Okafor's shop, open by candlelight: a paraffin heater, blankets, a hot flask, batteries.",
+        "B1": "[stub] Mr Okafor's shop, open by candlelight: a paraffin heater, blankets, a hot flask, batteries.",
+        "B2": "[stub] Mr Okafor's shop, open by candlelight: a paraffin heater, blankets, a hot flask, batteries."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take the paraffin heater.",
+            "B1": "Take the paraffin heater.",
+            "B2": "Take the paraffin heater."
+          },
+          "goto": 13,
+          "sets": [
+            "has_heater"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Just candles and batteries.",
+            "B1": "Just candles and batteries.",
+            "B2": "Just candles and batteries."
+          },
+          "goto": 14
+        },
+        {
+          "text": {
+            "A2": "Ask Okafor's advice.",
+            "B1": "Ask Okafor's advice.",
+            "B2": "Ask Okafor's advice."
+          },
+          "goto": 15
+        },
+        {
+          "text": {
+            "A2": "He gives you the last flask.",
+            "B1": "He gives you the last flask.",
+            "B2": "He gives you the last flask."
+          },
+          "goto": 67
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": {
+        "A2": "[stub] A neighbour's door: Mrs Pratt, scared and alone in the dark.",
+        "B1": "[stub] A neighbour's door: Mrs Pratt, scared and alone in the dark.",
+        "B2": "[stub] A neighbour's door: Mrs Pratt, scared and alone in the dark."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Stop and help her.",
+            "B1": "Stop and help her.",
+            "B2": "Stop and help her."
+          },
+          "goto": 16,
+          "sets": [
+            "helped_neighbour"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Say you must reach Ada.",
+            "B1": "Say you must reach Ada.",
+            "B2": "Say you must reach Ada."
+          },
+          "goto": 17
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": {
+        "A2": "[stub] You rush up the hill with what you have. Cold, hard going.",
+        "B1": "[stub] You rush up the hill with what you have. Cold, hard going.",
+        "B2": "[stub] You rush up the hill with what you have. Cold, hard going."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The way splits: road or river.",
+            "B1": "The way splits: road or river.",
+            "B2": "The way splits: road or river."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "You're cold and short of breath.",
+            "B1": "You're cold and short of breath.",
+            "B2": "You're cold and short of breath."
+          },
+          "goto": 18
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": {
+        "A2": "[stub] You knock on doors to gather willing hands.",
+        "B1": "[stub] You knock on doors to gather willing hands.",
+        "B2": "[stub] You knock on doors to gather willing hands."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Neighbours turn out to help.",
+            "B1": "Neighbours turn out to help.",
+            "B2": "Neighbours turn out to help."
+          },
+          "goto": 19,
+          "sets": [
+            "rallied_town"
+          ]
+        },
+        {
+          "text": {
+            "A2": "No one answers; go alone.",
+            "B1": "No one answers; go alone.",
+            "B2": "No one answers; go alone."
+          },
+          "goto": 20
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": {
+        "A2": "[stub] The paraffin heater — heavy, but real warmth for Ada.",
+        "B1": "[stub] The paraffin heater — heavy, but real warmth for Ada.",
+        "B2": "[stub] The paraffin heater — heavy, but real warmth for Ada."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Now the way to her.",
+            "B1": "Now the way to her.",
+            "B2": "Now the way to her."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "Thank Okafor.",
+            "B1": "Thank Okafor.",
+            "B2": "Thank Okafor."
+          },
+          "goto": 15
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": {
+        "A2": "[stub] Candles and batteries: light, but no heat.",
+        "B1": "[stub] Candles and batteries: light, but no heat.",
+        "B2": "[stub] Candles and batteries: light, but no heat."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Now the way to her.",
+            "B1": "Now the way to her.",
+            "B2": "Now the way to her."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "Ask Okafor's advice.",
+            "B1": "Ask Okafor's advice.",
+            "B2": "Ask Okafor's advice."
+          },
+          "goto": 15
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": {
+        "A2": "[stub] Okafor's advice: steer clear of the van man, don't trust the river ice, take the road.",
+        "B1": "[stub] Okafor's advice: steer clear of the van man, don't trust the river ice, take the road.",
+        "B2": "[stub] Okafor's advice: steer clear of the van man, don't trust the river ice, take the road."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take it to heart.",
+            "B1": "Take it to heart.",
+            "B2": "Take it to heart."
+          },
+          "goto": 22
+        },
+        {
+          "text": {
+            "A2": "On with it.",
+            "B1": "On with it.",
+            "B2": "On with it."
+          },
+          "goto": 21
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "text": {
+        "A2": "[stub] You settle Mrs Pratt with a candle and a blanket, and a promise to come back.",
+        "B1": "[stub] You settle Mrs Pratt with a candle and a blanket, and a promise to come back.",
+        "B2": "[stub] You settle Mrs Pratt with a candle and a blanket, and a promise to come back."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On toward Ada.",
+            "B1": "On toward Ada.",
+            "B2": "On toward Ada."
+          },
+          "goto": 23
+        },
+        {
+          "text": {
+            "A2": "She asks you to check on others.",
+            "B1": "She asks you to check on others.",
+            "B2": "She asks you to check on others."
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "text": {
+        "A2": "[stub] You press on toward Ada.",
+        "B1": "[stub] You press on toward Ada.",
+        "B2": "[stub] You press on toward Ada."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The shop first.",
+            "B1": "The shop first.",
+            "B2": "The shop first."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "Straight up the hill.",
+            "B1": "Straight up the hill.",
+            "B2": "Straight up the hill."
+          },
+          "goto": 11
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "text": {
+        "A2": "[stub] Near the hill, cold and unprepared.",
+        "B1": "[stub] Near the hill, cold and unprepared.",
+        "B2": "[stub] Near the hill, cold and unprepared."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The van man's lights are ahead.",
+            "B1": "The van man's lights are ahead.",
+            "B2": "The van man's lights are ahead."
+          },
+          "goto": 24
+        },
+        {
+          "text": {
+            "A2": "Push on.",
+            "B1": "Push on.",
+            "B2": "Push on."
+          },
+          "goto": 21
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "text": {
+        "A2": "[stub] The street wakes to itself; a plan forms; someone has a camping stove.",
+        "B1": "[stub] The street wakes to itself; a plan forms; someone has a camping stove.",
+        "B2": "[stub] The street wakes to itself; a plan forms; someone has a camping stove."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Lead the way to Ada.",
+            "B1": "Lead the way to Ada.",
+            "B2": "Lead the way to Ada."
+          },
+          "goto": 25
+        },
+        {
+          "text": {
+            "A2": "Share one warm room first.",
+            "B1": "Share one warm room first.",
+            "B2": "Share one warm room first."
+          },
+          "goto": 36
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "text": {
+        "A2": "[stub] No one answers. You go on alone.",
+        "B1": "[stub] No one answers. You go on alone.",
+        "B2": "[stub] No one answers. You go on alone."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The shop.",
+            "B1": "The shop.",
+            "B2": "The shop."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "Up the hill.",
+            "B1": "Up the hill.",
+            "B2": "Up the hill."
+          },
+          "goto": 11
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "text": {
+        "A2": "[stub] Supplies decided. Now the way to Ada: the long road, or the frozen river shortcut.",
+        "B1": "[stub] Supplies decided. Now the way to Ada: the long road, or the frozen river shortcut.",
+        "B2": "[stub] Supplies decided. Now the way to Ada: the long road, or the frozen river shortcut."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take the road.",
+            "B1": "Take the road.",
+            "B2": "Take the road."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "Cross the river ice.",
+            "B1": "Cross the river ice.",
+            "B2": "Cross the river ice."
+          },
+          "goto": 27
+        },
+        {
+          "text": {
+            "A2": "The van man's lights ahead.",
+            "B1": "The van man's lights ahead.",
+            "B2": "The van man's lights ahead."
+          },
+          "goto": 24
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "text": {
+        "A2": "[stub] You resolve to be careful tonight.",
+        "B1": "[stub] You resolve to be careful tonight.",
+        "B2": "[stub] You resolve to be careful tonight."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On the way.",
+            "B1": "On the way.",
+            "B2": "On the way."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "Back to the shop.",
+            "B1": "Back to the shop.",
+            "B2": "Back to the shop."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "text": {
+        "A2": "[stub] Warmer inside for the good turn, you go on.",
+        "B1": "[stub] Warmer inside for the good turn, you go on.",
+        "B2": "[stub] Warmer inside for the good turn, you go on."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On with the night.",
+            "B1": "On with the night.",
+            "B2": "On with the night."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "Gather more help.",
+            "B1": "Gather more help.",
+            "B2": "Gather more help."
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "text": {
+        "A2": "[stub] The van man's van, headlights blazing, a frightened crowd around it.",
+        "B1": "[stub] The van man's van, headlights blazing, a frightened crowd around it.",
+        "B2": "[stub] The van man's van, headlights blazing, a frightened crowd around it."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hear what he's selling.",
+            "B1": "Hear what he's selling.",
+            "B2": "Hear what he's selling."
+          },
+          "goto": 40
+        },
+        {
+          "text": {
+            "A2": "Go round him.",
+            "B1": "Go round him.",
+            "B2": "Go round him."
+          },
+          "goto": 26
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "text": {
+        "A2": "[stub] You lead a small band up toward the hill.",
+        "B1": "[stub] You lead a small band up toward the hill.",
+        "B2": "[stub] You lead a small band up toward the hill."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The way.",
+            "B1": "The way.",
+            "B2": "The way."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "The strange light on the hill.",
+            "B1": "The strange light on the hill.",
+            "B2": "The strange light on the hill."
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "text": {
+        "A2": "[stub] The long road: black, iced, hard going, but solid underfoot.",
+        "B1": "[stub] The long road: black, iced, hard going, but solid underfoot.",
+        "B2": "[stub] The long road: black, iced, hard going, but solid underfoot."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Press on.",
+            "B1": "Press on.",
+            "B2": "Press on."
+          },
+          "goto": 30
+        },
+        {
+          "text": {
+            "A2": "Someone's stuck ahead.",
+            "B1": "Someone's stuck ahead.",
+            "B2": "Someone's stuck ahead."
+          },
+          "goto": 31
+        },
+        {
+          "text": {
+            "A2": "The whole town, dark and quiet.",
+            "B1": "The whole town, dark and quiet.",
+            "B2": "The whole town, dark and quiet."
+          },
+          "goto": 64
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "text": {
+        "A2": "[stub] The frozen river shortcut would halve the way. The ice creaks.",
+        "B1": "[stub] The frozen river shortcut would halve the way. The ice creaks.",
+        "B2": "[stub] The frozen river shortcut would halve the way. The ice creaks."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Risk the ice.",
+            "B1": "Risk the ice.",
+            "B2": "Risk the ice."
+          },
+          "goto": 28,
+          "sets": [
+            "took_shortcut"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Too dangerous — back to the road.",
+            "B1": "Too dangerous — back to the road.",
+            "B2": "Too dangerous — back to the road."
+          },
+          "goto": 26
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "text": {
+        "A2": "[stub] Out on the ice, the black river below, every step a gamble.",
+        "B1": "[stub] Out on the ice, the black river below, every step a gamble.",
+        "B2": "[stub] Out on the ice, the black river below, every step a gamble."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Edge across.",
+            "B1": "Edge across.",
+            "B2": "Edge across."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "The ice groans.",
+            "B1": "The ice groans.",
+            "B2": "The ice groans."
+          },
+          "goto": 51
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "text": {
+        "A2": "[stub] The torch batteries are dead; only the candle.",
+        "B1": "[stub] The torch batteries are dead; only the candle.",
+        "B2": "[stub] The torch batteries are dead; only the candle."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Out into the street.",
+            "B1": "Out into the street.",
+            "B2": "Out into the street."
+          },
+          "goto": 5
+        },
+        {
+          "text": {
+            "A2": "To the shop for more.",
+            "B1": "To the shop for more.",
+            "B2": "To the shop for more."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "text": {
+        "A2": "[stub] The road at night, the cold deepening by the hour.",
+        "B1": "[stub] The road at night, the cold deepening by the hour.",
+        "B2": "[stub] The road at night, the cold deepening by the hour."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "A family shivering at a dark window.",
+            "B1": "A family shivering at a dark window.",
+            "B2": "A family shivering at a dark window."
+          },
+          "goto": 32
+        },
+        {
+          "text": {
+            "A2": "Press on.",
+            "B1": "Press on.",
+            "B2": "Press on."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "You can see your breath.",
+            "B1": "You can see your breath.",
+            "B2": "You can see your breath."
+          },
+          "goto": 65
+        },
+        {
+          "text": {
+            "A2": "A signpost, half-buried in snow.",
+            "B1": "A signpost, half-buried in snow.",
+            "B2": "A signpost, half-buried in snow."
+          },
+          "goto": 39
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "text": {
+        "A2": "[stub] A car stuck in the snow, an old man at the wheel.",
+        "B1": "[stub] A car stuck in the snow, an old man at the wheel.",
+        "B2": "[stub] A car stuck in the snow, an old man at the wheel."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Help push it clear.",
+            "B1": "Help push it clear.",
+            "B2": "Help push it clear."
+          },
+          "goto": 34,
+          "sets": [
+            "helped_neighbour"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You can't stop — Ada.",
+            "B1": "You can't stop — Ada.",
+            "B2": "You can't stop — Ada."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "text": {
+        "A2": "[stub] A family with no heat, a baby crying in the cold.",
+        "B1": "[stub] A family with no heat, a baby crying in the cold.",
+        "B2": "[stub] A family with no heat, a baby crying in the cold."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Give them your blanket.",
+            "B1": "Give them your blanket.",
+            "B2": "Give them your blanket."
+          },
+          "goto": 55,
+          "sets": [
+            "gave_warmth"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Promise to send help.",
+            "B1": "Promise to send help.",
+            "B2": "Promise to send help."
+          },
+          "goto": 35
+        },
+        {
+          "text": {
+            "A2": "Try to warm the room.",
+            "B1": "Try to warm the room.",
+            "B2": "Try to warm the room."
+          },
+          "goto": 54
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "text": {
+        "A2": "[stub] On toward the hill.",
+        "B1": "[stub] On toward the hill.",
+        "B2": "[stub] On toward the hill."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The van man again.",
+            "B1": "The van man again.",
+            "B2": "The van man again."
+          },
+          "goto": 40
+        },
+        {
+          "text": {
+            "A2": "The Harrow light.",
+            "B1": "The Harrow light.",
+            "B2": "The Harrow light."
+          },
+          "goto": 70
+        },
+        {
+          "text": {
+            "A2": "The last stretch.",
+            "B1": "The last stretch.",
+            "B2": "The last stretch."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "The cold makes you doubt.",
+            "B1": "The cold makes you doubt.",
+            "B2": "The cold makes you doubt."
+          },
+          "goto": 38
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "text": {
+        "A2": "[stub] The old man's car is free; he presses a flask on you.",
+        "B1": "[stub] The old man's car is free; he presses a flask on you.",
+        "B2": "[stub] The old man's car is free; he presses a flask on you."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On your way.",
+            "B1": "On your way.",
+            "B2": "On your way."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "He tells you of the hill.",
+            "B1": "He tells you of the hill.",
+            "B2": "He tells you of the hill."
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "text": {
+        "A2": "[stub] You promise help and move on.",
+        "B1": "[stub] You promise help and move on.",
+        "B2": "[stub] You promise help and move on."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Rally the street.",
+            "B1": "Rally the street.",
+            "B2": "Rally the street."
+          },
+          "goto": 12
+        },
+        {
+          "text": {
+            "A2": "On toward the hill.",
+            "B1": "On toward the hill.",
+            "B2": "On toward the hill."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "text": {
+        "A2": "[stub] The street shares one warm room: a stove, soup, candlelight.",
+        "B1": "[stub] The street shares one warm room: a stove, soup, candlelight.",
+        "B2": "[stub] The street shares one warm room: a stove, soup, candlelight."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Get Ada down to it.",
+            "B1": "Get Ada down to it.",
+            "B2": "Get Ada down to it."
+          },
+          "goto": 25
+        },
+        {
+          "text": {
+            "A2": "Fetch more neighbours.",
+            "B1": "Fetch more neighbours.",
+            "B2": "Fetch more neighbours."
+          },
+          "goto": 37
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "text": {
+        "A2": "[stub] Door by door, the dark street becomes a lit one.",
+        "B1": "[stub] Door by door, the dark street becomes a lit one.",
+        "B2": "[stub] Door by door, the dark street becomes a lit one."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "To the hill.",
+            "B1": "To the hill.",
+            "B2": "To the hill."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "The last stretch.",
+            "B1": "The last stretch.",
+            "B2": "The last stretch."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "text": {
+        "A2": "[stub] The cold gnaws at your resolve.",
+        "B1": "[stub] The cold gnaws at your resolve.",
+        "B2": "[stub] The cold gnaws at your resolve."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The last stretch.",
+            "B1": "The last stretch.",
+            "B2": "The last stretch."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "The van man's lights.",
+            "B1": "The van man's lights.",
+            "B2": "The van man's lights."
+          },
+          "goto": 40
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "text": {
+        "A2": "[stub] A signpost half-buried in snow; which way?",
+        "B1": "[stub] A signpost half-buried in snow; which way?",
+        "B2": "[stub] A signpost half-buried in snow; which way?"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The road.",
+            "B1": "The road.",
+            "B2": "The road."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "The light on the hill.",
+            "B1": "The light on the hill.",
+            "B2": "The light on the hill."
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "text": {
+        "A2": "[stub] The van man: warm smile, cold stock. Generators, fuel, heaters — tonight only, cash only.",
+        "B1": "[stub] The van man: warm smile, cold stock. Generators, fuel, heaters — tonight only, cash only.",
+        "B2": "[stub] The van man: warm smile, cold stock. Generators, fuel, heaters — tonight only, cash only."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hear the price.",
+            "B1": "Hear the price.",
+            "B2": "Hear the price."
+          },
+          "goto": 41
+        },
+        {
+          "text": {
+            "A2": "Refuse and go round.",
+            "B1": "Refuse and go round.",
+            "B2": "Refuse and go round."
+          },
+          "goto": 42,
+          "sets": [
+            "dodged_seller"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "text": {
+        "A2": "[stub] The price is robbery. He leans in: 'Your Ada won't last, friend. How much is she worth?'",
+        "B1": "[stub] The price is robbery. He leans in: 'Your Ada won't last, friend. How much is she worth?'",
+        "B2": "[stub] The price is robbery. He leans in: 'Your Ada won't last, friend. How much is she worth?'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Pay him.",
+            "B1": "Pay him.",
+            "B2": "Pay him."
+          },
+          "goto": 43,
+          "sets": [
+            "paid_seller"
+          ]
+        },
+        {
+          "text": {
+            "A2": "That line is the tell — refuse.",
+            "B1": "That line is the tell — refuse.",
+            "B2": "That line is the tell — refuse."
+          },
+          "goto": 42,
+          "sets": [
+            "dodged_seller"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Ask if it even works.",
+            "B1": "Ask if it even works.",
+            "B2": "Ask if it even works."
+          },
+          "goto": 44
+        },
+        {
+          "text": {
+            "A2": "The crowd's fear presses in.",
+            "B1": "The crowd's fear presses in.",
+            "B2": "The crowd's fear presses in."
+          },
+          "goto": 49
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "text": {
+        "A2": "[stub] You leave him to the frightened crowd.",
+        "B1": "[stub] You leave him to the frightened crowd.",
+        "B2": "[stub] You leave him to the frightened crowd."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On the way.",
+            "B1": "On the way.",
+            "B2": "On the way."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "To the shop instead.",
+            "B1": "To the shop instead.",
+            "B2": "To the shop instead."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "text": {
+        "A2": "[stub] You hand over the cash. A heavy generator, a can of fuel.",
+        "B1": "[stub] You hand over the cash. A heavy generator, a can of fuel.",
+        "B2": "[stub] You hand over the cash. A heavy generator, a can of fuel."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Haul it up the hill.",
+            "B1": "Haul it up the hill.",
+            "B2": "Haul it up the hill."
+          },
+          "goto": 45
+        },
+        {
+          "text": {
+            "A2": "A doubt already.",
+            "B1": "A doubt already.",
+            "B2": "A doubt already."
+          },
+          "goto": 46
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "text": {
+        "A2": "[stub] He won't quite promise it works.",
+        "B1": "[stub] He won't quite promise it works.",
+        "B2": "[stub] He won't quite promise it works."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "That's your answer — refuse.",
+            "B1": "That's your answer — refuse.",
+            "B2": "That's your answer — refuse."
+          },
+          "goto": 42,
+          "sets": [
+            "dodged_seller"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Buy it anyway.",
+            "B1": "Buy it anyway.",
+            "B2": "Buy it anyway."
+          },
+          "goto": 43,
+          "sets": [
+            "paid_seller"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "text": {
+        "A2": "[stub] The generator is dead weight, and it won't start in the cold.",
+        "B1": "[stub] The generator is dead weight, and it won't start in the cold.",
+        "B2": "[stub] The generator is dead weight, and it won't start in the cold."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Try and try.",
+            "B1": "Try and try.",
+            "B2": "Try and try."
+          },
+          "goto": 47
+        },
+        {
+          "text": {
+            "A2": "On to Ada with nothing.",
+            "B1": "On to Ada with nothing.",
+            "B2": "On to Ada with nothing."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "text": {
+        "A2": "[stub] The fuel smells wrong — watery, thin.",
+        "B1": "[stub] The fuel smells wrong — watery, thin.",
+        "B2": "[stub] The fuel smells wrong — watery, thin."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On to Ada.",
+            "B1": "On to Ada.",
+            "B2": "On to Ada."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "Back to argue.",
+            "B1": "Back to argue.",
+            "B2": "Back to argue."
+          },
+          "goto": 48
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "text": {
+        "A2": "[stub] The generator coughs and dies. The fuel was bad.",
+        "B1": "[stub] The generator coughs and dies. The fuel was bad.",
+        "B2": "[stub] The generator coughs and dies. The fuel was bad."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On to Ada, fleeced.",
+            "B1": "On to Ada, fleeced.",
+            "B2": "On to Ada, fleeced."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "Leave it in the snow.",
+            "B1": "Leave it in the snow.",
+            "B2": "Leave it in the snow."
+          },
+          "goto": 48
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "text": {
+        "A2": "[stub] The van is gone. The crowd is gone. Only the cold, and your empty pockets.",
+        "B1": "[stub] The van is gone. The crowd is gone. Only the cold, and your empty pockets.",
+        "B2": "[stub] The van is gone. The crowd is gone. Only the cold, and your empty pockets."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On to Ada.",
+            "B1": "On to Ada.",
+            "B2": "On to Ada."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "Stand a moment in the dark.",
+            "B1": "Stand a moment in the dark.",
+            "B2": "Stand a moment in the dark."
+          },
+          "goto": 38
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "text": {
+        "A2": "[stub] The frightened crowd shoves cash at him; you see the whole trick.",
+        "B1": "[stub] The frightened crowd shoves cash at him; you see the whole trick.",
+        "B2": "[stub] The frightened crowd shoves cash at him; you see the whole trick."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hear the price anyway.",
+            "B1": "Hear the price anyway.",
+            "B2": "Hear the price anyway."
+          },
+          "goto": 41
+        },
+        {
+          "text": {
+            "A2": "Refuse and go round.",
+            "B1": "Refuse and go round.",
+            "B2": "Refuse and go round."
+          },
+          "goto": 42,
+          "sets": [
+            "dodged_seller"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "text": {
+        "A2": "[stub] Halfway across, the far bank close.",
+        "B1": "[stub] Halfway across, the far bank close.",
+        "B2": "[stub] Halfway across, the far bank close."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Nearly there.",
+            "B1": "Nearly there.",
+            "B2": "Nearly there."
+          },
+          "goto": 52
+        },
+        {
+          "text": {
+            "A2": "The ice cracks.",
+            "B1": "The ice cracks.",
+            "B2": "The ice cracks."
+          },
+          "goto": 51
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "text": {
+        "A2": "[stub] The ice groans, then splits. A choice in a heartbeat.",
+        "B1": "[stub] The ice groans, then splits. A choice in a heartbeat.",
+        "B2": "[stub] The ice groans, then splits. A choice in a heartbeat."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The ice gives way.",
+            "B1": "The ice gives way.",
+            "B2": "The ice gives way."
+          },
+          "goto": 129,
+          "requires": [
+            "took_shortcut"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Scramble back to the bank.",
+            "B1": "Scramble back to the bank.",
+            "B2": "Scramble back to the bank."
+          },
+          "goto": 53
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "text": {
+        "A2": "[stub] You reach the far bank, soaked to the knee, shaking.",
+        "B1": "[stub] You reach the far bank, soaked to the knee, shaking.",
+        "B2": "[stub] You reach the far bank, soaked to the knee, shaking."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Push on, freezing.",
+            "B1": "Push on, freezing.",
+            "B2": "Push on, freezing."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "You lost the heater in the scramble.",
+            "B1": "You lost the heater in the scramble.",
+            "B2": "You lost the heater in the scramble."
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "text": {
+        "A2": "[stub] You crawl back to the road, shaken, time lost.",
+        "B1": "[stub] You crawl back to the road, shaken, time lost.",
+        "B2": "[stub] You crawl back to the road, shaken, time lost."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The long road after all.",
+            "B1": "The long road after all.",
+            "B2": "The long road after all."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "Too shaken to go on.",
+            "B1": "Too shaken to go on.",
+            "B2": "Too shaken to go on."
+          },
+          "goto": 131
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "text": {
+        "A2": "[stub] You try to warm the family's room, but there's no heat to give.",
+        "B1": "[stub] You try to warm the family's room, but there's no heat to give.",
+        "B2": "[stub] You try to warm the family's room, but there's no heat to give."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Give them your blanket.",
+            "B1": "Give them your blanket.",
+            "B2": "Give them your blanket."
+          },
+          "goto": 55,
+          "sets": [
+            "gave_warmth"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Promise to send help.",
+            "B1": "Promise to send help.",
+            "B2": "Promise to send help."
+          },
+          "goto": 35
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "text": {
+        "A2": "[stub] You wrap the baby in your own blanket; the family weeps thanks.",
+        "B1": "[stub] You wrap the baby in your own blanket; the family weeps thanks.",
+        "B2": "[stub] You wrap the baby in your own blanket; the family weeps thanks."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On, colder now.",
+            "B1": "On, colder now.",
+            "B2": "On, colder now."
+          },
+          "goto": 56
+        },
+        {
+          "text": {
+            "A2": "They point you to the hill.",
+            "B1": "They point you to the hill.",
+            "B2": "They point you to the hill."
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "text": {
+        "A2": "[stub] Without your blanket, the cold finds you fast.",
+        "B1": "[stub] Without your blanket, the cold finds you fast.",
+        "B2": "[stub] Without your blanket, the cold finds you fast."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Keep moving to stay warm.",
+            "B1": "Keep moving to stay warm.",
+            "B2": "Keep moving to stay warm."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "A lit doorway offers shelter.",
+            "B1": "A lit doorway offers shelter.",
+            "B2": "A lit doorway offers shelter."
+          },
+          "goto": 57
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "text": {
+        "A2": "[stub] A stranger waves you in from a lit doorway for a minute.",
+        "B1": "[stub] A stranger waves you in from a lit doorway for a minute.",
+        "B2": "[stub] A stranger waves you in from a lit doorway for a minute."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Warm up, then on.",
+            "B1": "Warm up, then on.",
+            "B2": "Warm up, then on."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "Refuse, press on.",
+            "B1": "Refuse, press on.",
+            "B2": "Refuse, press on."
+          },
+          "goto": 58
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "text": {
+        "A2": "[stub] You press on into the dark, teeth chattering.",
+        "B1": "[stub] You press on into the dark, teeth chattering.",
+        "B2": "[stub] You press on into the dark, teeth chattering."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The last stretch.",
+            "B1": "The last stretch.",
+            "B2": "The last stretch."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "On toward the hill.",
+            "B1": "On toward the hill.",
+            "B2": "On toward the hill."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "text": {
+        "A2": "[stub] A kid, Bex, out in the dark, looking for a little brother.",
+        "B1": "[stub] A kid, Bex, out in the dark, looking for a little brother.",
+        "B2": "[stub] A kid, Bex, out in the dark, looking for a little brother."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Help Bex look.",
+            "B1": "Help Bex look.",
+            "B2": "Help Bex look."
+          },
+          "goto": 61,
+          "sets": [
+            "helped_neighbour"
+          ]
+        },
+        {
+          "text": {
+            "A2": "No time — Ada first.",
+            "B1": "No time — Ada first.",
+            "B2": "No time — Ada first."
+          },
+          "goto": 62
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "text": {
+        "A2": "[stub] You find the small brother in a cold shed, frightened.",
+        "B1": "[stub] You find the small brother in a cold shed, frightened.",
+        "B2": "[stub] You find the small brother in a cold shed, frightened."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Get them home.",
+            "B1": "Get them home.",
+            "B2": "Get them home."
+          },
+          "goto": 63
+        },
+        {
+          "text": {
+            "A2": "On to Ada.",
+            "B1": "On to Ada.",
+            "B2": "On to Ada."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "text": {
+        "A2": "[stub] You send Bex home and press on.",
+        "B1": "[stub] You send Bex home and press on.",
+        "B2": "[stub] You send Bex home and press on."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "On toward the hill.",
+            "B1": "On toward the hill.",
+            "B2": "On toward the hill."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "text": {
+        "A2": "[stub] The kids' family thank you; a warm doorway, a hot drink.",
+        "B1": "[stub] The kids' family thank you; a warm doorway, a hot drink.",
+        "B2": "[stub] The kids' family thank you; a warm doorway, a hot drink."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On toward the hill.",
+            "B1": "On toward the hill.",
+            "B2": "On toward the hill."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "The last stretch.",
+            "B1": "The last stretch.",
+            "B2": "The last stretch."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "text": {
+        "A2": "[stub] The whole town is dark and strangely quiet, waiting for the light.",
+        "B1": "[stub] The whole town is dark and strangely quiet, waiting for the light.",
+        "B2": "[stub] The whole town is dark and strangely quiet, waiting for the light."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Press on down the road.",
+            "B1": "Press on down the road.",
+            "B2": "Press on down the road."
+          },
+          "goto": 30
+        },
+        {
+          "text": {
+            "A2": "The light in the Harrow house.",
+            "B1": "The light in the Harrow house.",
+            "B2": "The light in the Harrow house."
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "text": {
+        "A2": "[stub] The temperature drops further; frost on your coat.",
+        "B1": "[stub] The temperature drops further; frost on your coat.",
+        "B2": "[stub] The temperature drops further; frost on your coat."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The shivering family.",
+            "B1": "The shivering family.",
+            "B2": "The shivering family."
+          },
+          "goto": 32
+        },
+        {
+          "text": {
+            "A2": "Press on.",
+            "B1": "Press on.",
+            "B2": "Press on."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "text": {
+        "A2": "[stub] Okafor presses the last flask on you and starts to close up.",
+        "B1": "[stub] Okafor presses the last flask on you and starts to close up.",
+        "B2": "[stub] Okafor presses the last flask on you and starts to close up."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On the way.",
+            "B1": "On the way.",
+            "B2": "On the way."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "His advice first.",
+            "B1": "His advice first.",
+            "B2": "His advice first."
+          },
+          "goto": 22
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "text": {
+        "A2": "[stub] A rumour of panic ripples down the queue at the shop.",
+        "B1": "[stub] A rumour of panic ripples down the queue at the shop.",
+        "B2": "[stub] A rumour of panic ripples down the queue at the shop."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Calm it, and rally them.",
+            "B1": "Calm it, and rally them.",
+            "B2": "Calm it, and rally them."
+          },
+          "goto": 19
+        },
+        {
+          "text": {
+            "A2": "Into the shop.",
+            "B1": "Into the shop.",
+            "B2": "Into the shop."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "text": {
+        "A2": "[stub] Forty years of a shut door, ending tonight, one way or another.",
+        "B1": "[stub] Forty years of a shut door, ending tonight, one way or another.",
+        "B2": "[stub] Forty years of a shut door, ending tonight, one way or another."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "He speaks of Ada.",
+            "B1": "He speaks of Ada.",
+            "B2": "He speaks of Ada."
+          },
+          "goto": 76
+        },
+        {
+          "text": {
+            "A2": "Get him warm.",
+            "B1": "Get him warm.",
+            "B2": "Get him warm."
+          },
+          "goto": 74
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "text": {
+        "A2": "[stub] The old Harrow house, dark for years — but one window glows warm tonight. No one can explain it.",
+        "B1": "[stub] The old Harrow house, dark for years — but one window glows warm tonight. No one can explain it.",
+        "B2": "[stub] The old Harrow house, dark for years — but one window glows warm tonight. No one can explain it."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go and see.",
+            "B1": "Go and see.",
+            "B2": "Go and see."
+          },
+          "goto": 71
+        },
+        {
+          "text": {
+            "A2": "Leave it — Ada first.",
+            "B1": "Leave it — Ada first.",
+            "B2": "Leave it — Ada first."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "text": {
+        "A2": "[stub] You knock. No answer. The door is off the latch.",
+        "B1": "[stub] You knock. No answer. The door is off the latch.",
+        "B2": "[stub] You knock. No answer. The door is off the latch."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go in.",
+            "B1": "Go in.",
+            "B2": "Go in."
+          },
+          "goto": 72
+        },
+        {
+          "text": {
+            "A2": "Call out and wait.",
+            "B1": "Call out and wait.",
+            "B2": "Call out and wait."
+          },
+          "goto": 73
+        },
+        {
+          "text": {
+            "A2": "Years of dust and cold inside.",
+            "B1": "Years of dust and cold inside.",
+            "B2": "Years of dust and cold inside."
+          },
+          "goto": 78
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "text": {
+        "A2": "[stub] Inside: cold, bare, and old Mr Harrow on the floor by a guttering candle.",
+        "B1": "[stub] Inside: cold, bare, and old Mr Harrow on the floor by a guttering candle.",
+        "B2": "[stub] Inside: cold, bare, and old Mr Harrow on the floor by a guttering candle."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Get him warm.",
+            "B1": "Get him warm.",
+            "B2": "Get him warm."
+          },
+          "goto": 74,
+          "sets": [
+            "found_light"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Run for help.",
+            "B1": "Run for help.",
+            "B2": "Run for help."
+          },
+          "goto": 75
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "text": {
+        "A2": "[stub] A weak voice inside calls out.",
+        "B1": "[stub] A weak voice inside calls out.",
+        "B2": "[stub] A weak voice inside calls out."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go in.",
+            "B1": "Go in.",
+            "B2": "Go in."
+          },
+          "goto": 72
+        },
+        {
+          "text": {
+            "A2": "Fetch help.",
+            "B1": "Fetch help.",
+            "B2": "Fetch help."
+          },
+          "goto": 75
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "text": {
+        "A2": "[stub] You wrap Harrow, coax the fire, bring him round.",
+        "B1": "[stub] You wrap Harrow, coax the fire, bring him round.",
+        "B2": "[stub] You wrap Harrow, coax the fire, bring him round."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "He speaks of Ada.",
+            "B1": "He speaks of Ada.",
+            "B2": "He speaks of Ada."
+          },
+          "goto": 76
+        },
+        {
+          "text": {
+            "A2": "Get you both to Ada.",
+            "B1": "Get you both to Ada.",
+            "B2": "Get you both to Ada."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "text": {
+        "A2": "[stub] You run — but no help is coming till dawn. It is you or no one.",
+        "B1": "[stub] You run — but no help is coming till dawn. It is you or no one.",
+        "B2": "[stub] You run — but no help is coming till dawn. It is you or no one."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go back in.",
+            "B1": "Go back in.",
+            "B2": "Go back in."
+          },
+          "goto": 72
+        },
+        {
+          "text": {
+            "A2": "On to Ada, torn.",
+            "B1": "On to Ada, torn.",
+            "B2": "On to Ada, torn."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "text": {
+        "A2": "[stub] Harrow: 'Ada. My sister. We haven't spoken in forty years.'",
+        "B1": "[stub] Harrow: 'Ada. My sister. We haven't spoken in forty years.'",
+        "B2": "[stub] Harrow: 'Ada. My sister. We haven't spoken in forty years.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Resolve to bring them together.",
+            "B1": "Resolve to bring them together.",
+            "B2": "Resolve to bring them together."
+          },
+          "goto": 77
+        },
+        {
+          "text": {
+            "A2": "On to Ada with the news.",
+            "B1": "On to Ada with the news.",
+            "B2": "On to Ada with the news."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "text": {
+        "A2": "[stub] You decide to reunite them tonight.",
+        "B1": "[stub] You decide to reunite them tonight.",
+        "B2": "[stub] You decide to reunite them tonight."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Down to Ada.",
+            "B1": "Down to Ada.",
+            "B2": "Down to Ada."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "Warm Harrow first.",
+            "B1": "Warm Harrow first.",
+            "B2": "Warm Harrow first."
+          },
+          "goto": 74
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "text": {
+        "A2": "[stub] The house holds years of cold and silence.",
+        "B1": "[stub] The house holds years of cold and silence.",
+        "B2": "[stub] The house holds years of cold and silence."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Deeper in.",
+            "B1": "Deeper in.",
+            "B2": "Deeper in."
+          },
+          "goto": 72
+        },
+        {
+          "text": {
+            "A2": "An old photograph on the wall.",
+            "B1": "An old photograph on the wall.",
+            "B2": "An old photograph on the wall."
+          },
+          "goto": 79
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "text": {
+        "A2": "[stub] A photograph: Ada and Harrow, young, laughing together.",
+        "B1": "[stub] A photograph: Ada and Harrow, young, laughing together.",
+        "B2": "[stub] A photograph: Ada and Harrow, young, laughing together."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Get him warm.",
+            "B1": "Get him warm.",
+            "B2": "Get him warm."
+          },
+          "goto": 74
+        },
+        {
+          "text": {
+            "A2": "The years between them.",
+            "B1": "The years between them.",
+            "B2": "The years between them."
+          },
+          "goto": 69
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "text": {
+        "A2": "[stub] The van man on the hill: 'Still cold up here? Last chance, friend.'",
+        "B1": "[stub] The van man on the hill: 'Still cold up here? Last chance, friend.'",
+        "B2": "[stub] The van man on the hill: 'Still cold up here? Last chance, friend.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Pay him.",
+            "B1": "Pay him.",
+            "B2": "Pay him."
+          },
+          "goto": 43,
+          "sets": [
+            "paid_seller"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Refuse for good.",
+            "B1": "Refuse for good.",
+            "B2": "Refuse for good."
+          },
+          "goto": 91,
+          "sets": [
+            "dodged_seller"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "text": {
+        "A2": "[stub] The last stretch to Ada's door on the hill, breath ragged in the cold.",
+        "B1": "[stub] The last stretch to Ada's door on the hill, breath ragged in the cold.",
+        "B2": "[stub] The last stretch to Ada's door on the hill, breath ragged in the cold."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Let yourself in.",
+            "B1": "Let yourself in.",
+            "B2": "Let yourself in."
+          },
+          "goto": 91
+        },
+        {
+          "text": {
+            "A2": "The van man's last offer.",
+            "B1": "The van man's last offer.",
+            "B2": "The van man's last offer."
+          },
+          "goto": 80
+        },
+        {
+          "text": {
+            "A2": "Help arrives behind you.",
+            "B1": "Help arrives behind you.",
+            "B2": "Help arrives behind you."
+          },
+          "goto": 92
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "text": {
+        "A2": "[stub] Inside Ada's: dark, cold, her breathing shallow under thin blankets.",
+        "B1": "[stub] Inside Ada's: dark, cold, her breathing shallow under thin blankets.",
+        "B2": "[stub] Inside Ada's: dark, cold, her breathing shallow under thin blankets."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Set up warmth.",
+            "B1": "Set up warmth.",
+            "B2": "Set up warmth."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "Check she's alright.",
+            "B1": "Check she's alright.",
+            "B2": "Check she's alright."
+          },
+          "goto": 94
+        },
+        {
+          "text": {
+            "A2": "Her window looks toward the hill.",
+            "B1": "Her window looks toward the hill.",
+            "B2": "Her window looks toward the hill."
+          },
+          "goto": 98
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "text": {
+        "A2": "[stub] The street's help reaches the hill behind you.",
+        "B1": "[stub] The street's help reaches the hill behind you.",
+        "B2": "[stub] The street's help reaches the hill behind you."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "In to Ada together.",
+            "B1": "In to Ada together.",
+            "B2": "In to Ada together."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "Hold the night.",
+            "B1": "Hold the night.",
+            "B2": "Hold the night."
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "Fires seen from her window.",
+            "B1": "Fires seen from her window.",
+            "B2": "Fires seen from her window."
+          },
+          "goto": 107
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "text": {
+        "A2": "[stub] Warmth: what you carried decides what you can do now.",
+        "B1": "[stub] Warmth: what you carried decides what you can do now.",
+        "B2": "[stub] Warmth: what you carried decides what you can do now."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The heater.",
+            "B1": "The heater.",
+            "B2": "The heater."
+          },
+          "goto": 95
+        },
+        {
+          "text": {
+            "A2": "Candles, blankets, body heat.",
+            "B1": "Candles, blankets, body heat.",
+            "B2": "Candles, blankets, body heat."
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "text": {
+        "A2": "[stub] Ada wakes, weak but glad to see your face.",
+        "B1": "[stub] Ada wakes, weak but glad to see your face.",
+        "B2": "[stub] Ada wakes, weak but glad to see your face."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Get her warm.",
+            "B1": "Get her warm.",
+            "B2": "Get her warm."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "Set up the heater.",
+            "B1": "Set up the heater.",
+            "B2": "Set up the heater."
+          },
+          "goto": 95
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "text": {
+        "A2": "[stub] The paraffin heater catches; the little room begins to thaw.",
+        "B1": "[stub] The paraffin heater catches; the little room begins to thaw.",
+        "B2": "[stub] The paraffin heater catches; the little room begins to thaw."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hold the night.",
+            "B1": "Hold the night.",
+            "B2": "Hold the night."
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "Help arrives.",
+            "B1": "Help arrives.",
+            "B2": "Help arrives."
+          },
+          "goto": 92
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "text": {
+        "A2": "[stub] No heater. You pile blankets, share heat, keep her talking.",
+        "B1": "[stub] No heater. You pile blankets, share heat, keep her talking.",
+        "B2": "[stub] No heater. You pile blankets, share heat, keep her talking."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hold the night.",
+            "B1": "Hold the night.",
+            "B2": "Hold the night."
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "It may not be enough.",
+            "B1": "It may not be enough.",
+            "B2": "It may not be enough."
+          },
+          "goto": 97
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "text": {
+        "A2": "[stub] The cold is deep, and it may be more than blankets can hold.",
+        "B1": "[stub] The cold is deep, and it may be more than blankets can hold.",
+        "B2": "[stub] The cold is deep, and it may be more than blankets can hold."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hold on to dawn.",
+            "B1": "Hold on to dawn.",
+            "B2": "Hold on to dawn."
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "Send for the rallied help.",
+            "B1": "Send for the rallied help.",
+            "B2": "Send for the rallied help."
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "text": {
+        "A2": "[stub] From her window you can see the dark hill — and the one warm light.",
+        "B1": "[stub] From her window you can see the dark hill — and the one warm light.",
+        "B2": "[stub] From her window you can see the dark hill — and the one warm light."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Get her warm first.",
+            "B1": "Get her warm first.",
+            "B2": "Get her warm first."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "The light nags at you.",
+            "B1": "The light nags at you.",
+            "B2": "The light nags at you."
+          },
+          "goto": 99
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "text": {
+        "A2": "[stub] The light on the hill, burning where no one lives.",
+        "B1": "[stub] The light on the hill, burning where no one lives.",
+        "B2": "[stub] The light on the hill, burning where no one lives."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Warm Ada first.",
+            "B1": "Warm Ada first.",
+            "B2": "Warm Ada first."
+          },
+          "goto": 94
+        },
+        {
+          "text": {
+            "A2": "Hold the night.",
+            "B1": "Hold the night.",
+            "B2": "Hold the night."
+          },
+          "goto": 100
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "text": {
+        "A2": "[stub] The long hold to dawn: you keep the warmth in, keep her breathing easy.",
+        "B1": "[stub] The long hold to dawn: you keep the warmth in, keep her breathing easy.",
+        "B2": "[stub] The long hold to dawn: you keep the warmth in, keep her breathing easy."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Watch for first light.",
+            "B1": "Watch for first light.",
+            "B2": "Watch for first light."
+          },
+          "goto": 101
+        },
+        {
+          "text": {
+            "A2": "The light on the hill nags.",
+            "B1": "The light on the hill nags.",
+            "B2": "The light on the hill nags."
+          },
+          "goto": 70
+        },
+        {
+          "text": {
+            "A2": "The night's longest hour.",
+            "B1": "The night's longest hour.",
+            "B2": "The night's longest hour."
+          },
+          "goto": 102
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "text": {
+        "A2": "[stub] The sky greys. The crews' headlights climb the hill. The power hums back.",
+        "B1": "[stub] The sky greys. The crews' headlights climb the hill. The power hums back.",
+        "B2": "[stub] The sky greys. The crews' headlights climb the hill. The power hums back."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "First light, and what it finds.",
+            "B1": "First light, and what it finds.",
+            "B2": "First light, and what it finds."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "Dawn over the frozen town.",
+            "B1": "Dawn over the frozen town.",
+            "B2": "Dawn over the frozen town."
+          },
+          "goto": 105
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "text": {
+        "A2": "[stub] The longest hour, before the dark thins.",
+        "B1": "[stub] The longest hour, before the dark thins.",
+        "B2": "[stub] The longest hour, before the dark thins."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Watch for first light.",
+            "B1": "Watch for first light.",
+            "B2": "Watch for first light."
+          },
+          "goto": 101
+        },
+        {
+          "text": {
+            "A2": "Neighbours' fires down the hill.",
+            "B1": "Neighbours' fires down the hill.",
+            "B2": "Neighbours' fires down the hill."
+          },
+          "goto": 103
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "text": {
+        "A2": "[stub] Down the hill, small fires and candles — the town got through.",
+        "B1": "[stub] Down the hill, small fires and candles — the town got through.",
+        "B2": "[stub] Down the hill, small fires and candles — the town got through."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "First light.",
+            "B1": "First light.",
+            "B2": "First light."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "The lanterns of the dawn crew.",
+            "B1": "The lanterns of the dawn crew.",
+            "B2": "The lanterns of the dawn crew."
+          },
+          "goto": 104
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "text": {
+        "A2": "[stub] Headlights and grit trucks climb toward you at last.",
+        "B1": "[stub] Headlights and grit trucks climb toward you at last.",
+        "B2": "[stub] Headlights and grit trucks climb toward you at last."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "First light.",
+            "B1": "First light.",
+            "B2": "First light."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "What the night came to.",
+            "B1": "What the night came to.",
+            "B2": "What the night came to."
+          },
+          "goto": 114
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "text": {
+        "A2": "[stub] Dawn over the frozen town, pale and clean.",
+        "B1": "[stub] Dawn over the frozen town, pale and clean.",
+        "B2": "[stub] Dawn over the frozen town, pale and clean."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "First light.",
+            "B1": "First light.",
+            "B2": "First light."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "Help reaches the hill.",
+            "B1": "Help reaches the hill.",
+            "B2": "Help reaches the hill."
+          },
+          "goto": 92
+        },
+        {
+          "text": {
+            "A2": "The first birdsong.",
+            "B1": "The first birdsong.",
+            "B2": "The first birdsong."
+          },
+          "goto": 106
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "text": {
+        "A2": "[stub] The first birdsong, absurd over the ice.",
+        "B1": "[stub] The first birdsong, absurd over the ice.",
+        "B2": "[stub] The first birdsong, absurd over the ice."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "First light.",
+            "B1": "First light.",
+            "B2": "First light."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "Help reaches the hill.",
+            "B1": "Help reaches the hill.",
+            "B2": "Help reaches the hill."
+          },
+          "goto": 92
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "text": {
+        "A2": "[stub] From Ada's window, the neighbours' fires burn all down the hill.",
+        "B1": "[stub] From Ada's window, the neighbours' fires burn all down the hill.",
+        "B2": "[stub] From Ada's window, the neighbours' fires burn all down the hill."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "In to Ada.",
+            "B1": "In to Ada.",
+            "B2": "In to Ada."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "Hold the night.",
+            "B1": "Hold the night.",
+            "B2": "Hold the night."
+          },
+          "goto": 100
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "text": {
+        "A2": "[stub] First light: what the night comes to.",
+        "B1": "[stub] First light: what the night comes to.",
+        "B2": "[stub] First light: what the night comes to."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Ada is warm and safe; the heater held.",
+            "B1": "Ada is warm and safe; the heater held.",
+            "B2": "Ada is warm and safe; the heater held."
+          },
+          "goto": 120,
+          "requires": [
+            "has_heater"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You found the light, and saved Harrow.",
+            "B1": "You found the light, and saved Harrow.",
+            "B2": "You found the light, and saved Harrow."
+          },
+          "goto": 121,
+          "requires": [
+            "found_light"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Weigh the rest.",
+            "B1": "Weigh the rest.",
+            "B2": "Weigh the rest."
+          },
+          "goto": 111
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "text": {
+        "A2": "[stub] The night adds up.",
+        "B1": "[stub] The night adds up.",
+        "B2": "[stub] The night adds up."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The whole street came through together.",
+            "B1": "The whole street came through together.",
+            "B2": "The whole street came through together."
+          },
+          "goto": 122,
+          "requires": [
+            "rallied_town"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You did it clean — no con.",
+            "B1": "You did it clean — no con.",
+            "B2": "You did it clean — no con."
+          },
+          "goto": 123,
+          "requires": [
+            "dodged_seller"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Weigh the rest.",
+            "B1": "Weigh the rest.",
+            "B2": "Weigh the rest."
+          },
+          "goto": 112
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "text": {
+        "A2": "[stub] What else the night held.",
+        "B1": "[stub] What else the night held.",
+        "B2": "[stub] What else the night held."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "A neighbour takes you both in.",
+            "B1": "A neighbour takes you both in.",
+            "B2": "A neighbour takes you both in."
+          },
+          "goto": 124,
+          "requires": [
+            "helped_neighbour"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You gave your warmth away.",
+            "B1": "You gave your warmth away.",
+            "B2": "You gave your warmth away."
+          },
+          "goto": 125,
+          "requires": [
+            "gave_warmth"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Weigh the rest.",
+            "B1": "Weigh the rest.",
+            "B2": "Weigh the rest."
+          },
+          "goto": 113
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "text": {
+        "A2": "[stub] What the night leaves you.",
+        "B1": "[stub] What the night leaves you.",
+        "B2": "[stub] What the night leaves you."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The power flickers back, late.",
+            "B1": "The power flickers back, late.",
+            "B2": "The power flickers back, late."
+          },
+          "goto": 126
+        },
+        {
+          "text": {
+            "A2": "The town saw you go out.",
+            "B1": "The town saw you go out.",
+            "B2": "The town saw you go out."
+          },
+          "goto": 127
+        },
+        {
+          "text": {
+            "A2": "The worst of it.",
+            "B1": "The worst of it.",
+            "B2": "The worst of it."
+          },
+          "goto": 114
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "text": {
+        "A2": "[stub] The hard end of the night.",
+        "B1": "[stub] The hard end of the night.",
+        "B2": "[stub] The hard end of the night."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "You paid the van man — fleeced.",
+            "B1": "You paid the van man — fleeced.",
+            "B2": "You paid the van man — fleeced."
+          },
+          "goto": 128,
+          "requires": [
+            "paid_seller"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You were simply too late.",
+            "B1": "You were simply too late.",
+            "B2": "You were simply too late."
+          },
+          "goto": 130
+        },
+        {
+          "text": {
+            "A2": "The power came back before real harm.",
+            "B1": "The power came back before real harm.",
+            "B2": "The power came back before real harm."
+          },
+          "goto": 126
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "text": {
+        "A2": "[stub] GOOD — Warm till first light. You get Mrs Ada safely through the cold; at dawn the power hums back and the crews' lights come up the hill. She is warm, and alive, because you went out.",
+        "B1": "[stub] GOOD — Warm till first light. You get Mrs Ada safely through the cold; at dawn the power hums back and the crews' lights come up the hill. She is warm, and alive, because you went out.",
+        "B2": "[stub] GOOD — Warm till first light. You get Mrs Ada safely through the cold; at dawn the power hums back and the crews' lights come up the hill. She is warm, and alive, because you went out."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 121,
+      "text": {
+        "A2": "[stub] GOOD — The light in the empty house (secret). You checked the light no one could explain, found Mr Harrow fallen and freezing, and got him warm in time — and reopened a door between him and his sister Ada that had been shut for forty years.",
+        "B1": "[stub] GOOD — The light in the empty house (secret). You checked the light no one could explain, found Mr Harrow fallen and freezing, and got him warm in time — and reopened a door between him and his sister Ada that had been shut for forty years.",
+        "B2": "[stub] GOOD — The light in the empty house (secret). You checked the light no one could explain, found Mr Harrow fallen and freezing, and got him warm in time — and reopened a door between him and his sister Ada that had been shut for forty years."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 122,
+      "text": {
+        "A2": "[stub] GOOD — The whole street, awake. No single heroic move — but you turned a frightened dark street into neighbours sharing one warm room, and everyone came through the night together.",
+        "B1": "[stub] GOOD — The whole street, awake. No single heroic move — but you turned a frightened dark street into neighbours sharing one warm room, and everyone came through the night together.",
+        "B2": "[stub] GOOD — The whole street, awake. No single heroic move — but you turned a frightened dark street into neighbours sharing one warm room, and everyone came through the night together."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 123,
+      "text": {
+        "A2": "[stub] GOOD — You did what you could. You refused the con, kept your head and your money, and got the essentials by decent means. Not perfect. But clean, honest, and enough.",
+        "B1": "[stub] GOOD — You did what you could. You refused the con, kept your head and your money, and got the essentials by decent means. Not perfect. But clean, honest, and enough.",
+        "B2": "[stub] GOOD — You did what you could. You refused the con, kept your head and your money, and got the essentials by decent means. Not perfect. But clean, honest, and enough."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 124,
+      "text": {
+        "A2": "[stub] NEUTRAL — The kindness returned. You fell short of the whole night's goal, but a neighbour you stopped for takes you and Ada in by their fire. Warmth without the full win.",
+        "B1": "[stub] NEUTRAL — The kindness returned. You fell short of the whole night's goal, but a neighbour you stopped for takes you and Ada in by their fire. Warmth without the full win.",
+        "B2": "[stub] NEUTRAL — The kindness returned. You fell short of the whole night's goal, but a neighbour you stopped for takes you and Ada in by their fire. Warmth without the full win."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 125,
+      "text": {
+        "A2": "[stub] NEUTRAL — Shared what little you had. You gave your own warmth away and end the night cold yourself, but not alone — and something in the town has shifted. A start, not a save.",
+        "B1": "[stub] NEUTRAL — Shared what little you had. You gave your own warmth away and end the night cold yourself, but not alone — and something in the town has shifted. A start, not a save.",
+        "B2": "[stub] NEUTRAL — Shared what little you had. You gave your own warmth away and end the night cold yourself, but not alone — and something in the town has shifted. A start, not a save."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 126,
+      "text": {
+        "A2": "[stub] NEUTRAL — One more hour. You scrape through the worst of it; the power flickers back late and grudging. Not triumphant — just, in the end, relieved.",
+        "B1": "[stub] NEUTRAL — One more hour. You scrape through the worst of it; the power flickers back late and grudging. Not triumphant — just, in the end, relieved.",
+        "B2": "[stub] NEUTRAL — One more hour. You scrape through the worst of it; the power flickers back late and grudging. Not triumphant — just, in the end, relieved."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 127,
+      "text": {
+        "A2": "[stub] NEUTRAL — The town remembers. You didn't manage everything, but the street saw you go out into the dark when others didn't. You are, from tonight, someone the town knows.",
+        "B1": "[stub] NEUTRAL — The town remembers. You didn't manage everything, but the street saw you go out into the dark when others didn't. You are, from tonight, someone the town knows.",
+        "B2": "[stub] NEUTRAL — The town remembers. You didn't manage everything, but the street saw you go out into the dark when others didn't. You are, from tonight, someone the town knows."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 128,
+      "text": {
+        "A2": "[stub] BAD — Fleeced in the dark. You paid the van man for a generator that won't start and fuel that won't burn. The money's gone, and the cold is exactly where it was.",
+        "B1": "[stub] BAD — Fleeced in the dark. You paid the van man for a generator that won't start and fuel that won't burn. The money's gone, and the cold is exactly where it was.",
+        "B2": "[stub] BAD — Fleeced in the dark. You paid the van man for a generator that won't start and fuel that won't burn. The money's gone, and the cold is exactly where it was."
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 129,
+      "text": {
+        "A2": "[stub] BAD — The ice gave way. The frozen river was a trap. It nearly takes you, and it takes the night — you reach the hill soaked, frozen, and far too late.",
+        "B1": "[stub] BAD — The ice gave way. The frozen river was a trap. It nearly takes you, and it takes the night — you reach the hill soaked, frozen, and far too late.",
+        "B2": "[stub] BAD — The ice gave way. The frozen river was a trap. It nearly takes you, and it takes the night — you reach the hill soaked, frozen, and far too late."
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 130,
+      "text": {
+        "A2": "[stub] BAD — Too late up the hill. You spent the night on the wrong things, and reach Mrs Ada cold and failing; by dawn she is being carried down to a waiting ambulance.",
+        "B1": "[stub] BAD — Too late up the hill. You spent the night on the wrong things, and reach Mrs Ada cold and failing; by dawn she is being carried down to a waiting ambulance.",
+        "B2": "[stub] BAD — Too late up the hill. You spent the night on the wrong things, and reach Mrs Ada cold and failing; by dawn she is being carried down to a waiting ambulance."
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 131,
+      "text": {
+        "A2": "[stub] BAD — You kept your door shut. You stayed warm and safe behind your own door and never went out. Nothing bad happened to you. You will think about it for a long time.",
+        "B1": "[stub] BAD — You kept your door shut. You stayed warm and safe behind your own door and never went out. Nothing bad happened to you. You will think about it for a long time.",
+        "B2": "[stub] BAD — You kept your door shut. You stayed warm and safe behind your own door and never went out. Nothing bad happened to you. You will think about it for a long time."
+      },
+      "ending": "bad"
+    }
+  ],
+  "lexicon": {
+    "_comment": "First Light's chosen lexicon. Grown in phase 4. Base-keyed; the reader resolves inflections. Translations need a native speaker's check before launch.",
+    "entries": {}
+  }
+}
