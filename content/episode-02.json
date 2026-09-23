@@ -4405,18 +4405,6 @@
         "ar": "سياج مؤقت",
         "zh": "工地围栏"
       },
-      "hold": {
-        "pos": "noun",
-        "en": "money left so a room is kept for you and not given to anyone else",
-        "fr": "la réservation",
-        "es": "la reserva",
-        "pt": "a reserva",
-        "it": "la prenotazione",
-        "de": "die Reservierung",
-        "ru": "бронь",
-        "ar": "حجز",
-        "zh": "预留"
-      },
       "hollow": {
         "pos": "adjective",
         "en": "empty inside; without real feeling or value",
@@ -4596,18 +4584,6 @@
         "ru": "сдача жилья",
         "ar": "تأجير",
         "zh": "出租"
-      },
-      "lie": {
-        "pos": "verb",
-        "en": "to say something that is not true",
-        "fr": "mentir",
-        "es": "mentir",
-        "pt": "mentir",
-        "it": "mentire",
-        "de": "lügen",
-        "ru": "лгать",
-        "ar": "يكذب",
-        "zh": "说谎"
       },
       "listing": {
         "pos": "noun",
@@ -5126,16 +5102,16 @@
         "zh": "卷帘"
       },
       "sign": {
-        "pos": "verb",
-        "en": "to write your name to agree to something",
-        "fr": "signer",
-        "es": "firmar",
-        "pt": "assinar",
-        "it": "firmare",
-        "de": "unterschreiben",
-        "ru": "подписывать",
-        "ar": "يوقّع",
-        "zh": "签字"
+        "pos": "noun",
+        "en": "a board with words that gives information or advertises something",
+        "fr": "l'enseigne",
+        "es": "el letrero",
+        "pt": "a placa",
+        "it": "l'insegna",
+        "de": "das Schild",
+        "ru": "вывеска",
+        "ar": "لافتة",
+        "zh": "招牌"
       },
       "sill": {
         "pos": "noun",

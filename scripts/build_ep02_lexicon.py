@@ -80,9 +80,6 @@ NEW = {
  "bedsit": e("noun", "one small cheap room to live in, with a shared bathroom",
    "le studio", "la habitación individual", "o quarto individual", "il monolocale",
    "das möblierte Zimmer", "однокомнатная каморка", "غرفة صغيرة", "单间"),
- "hold": e("noun", "money left so a room is kept for you and not given to anyone else",
-   "la réservation", "la reserva", "a reserva", "la prenotazione", "die Reservierung",
-   "бронь", "حجز", "预留"),
  "afford": None,  # placeholder overwritten below (kept from book1 via REUSE)
 
  # --- the canal building & the room ---
@@ -329,9 +326,9 @@ NEW = {
  "commit": e("verb", "to promise firmly to do something",
    "s'engager", "comprometerse", "comprometer-se", "impegnarsi", "sich festlegen",
    "обязываться", "يلتزم", "许诺"),
- "sign": e("verb", "to write your name to agree to something",
-   "signer", "firmar", "assinar", "firmare", "unterschreiben",
-   "подписывать", "يوقّع", "签字"),
+ "sign": e("noun", "a board with words that gives information or advertises something",
+   "l'enseigne", "el letrero", "a placa", "l'insegna", "das Schild",
+   "вывеска", "لافتة", "招牌"),
 
  # --- adjectives ---
  "grim": e("adjective", "gloomy, hard and not pleasant",
@@ -458,9 +455,6 @@ NEW = {
  "spare": e("adjective", "kept extra, ready to be used if needed",
    "de rechange", "de sobra", "sobressalente", "di riserva", "übrig",
    "запасной", "احتياطي", "备用的"),
- "lie": e("verb", "to say something that is not true",
-   "mentir", "mentir", "mentir", "mentire", "lügen",
-   "лгать", "يكذب", "说谎"),
 }
 
 
