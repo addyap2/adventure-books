@@ -86,32 +86,32 @@
     {
       "id": 1,
       "text": {
-        "A2": "[stub] Dawn in the cheap hotel; a note under the door: the room is booked from tonight. In your pocket, one week's pay — a deposit and nothing spare.",
-        "B1": "[stub] Dawn in the cheap hotel; a note under the door: the room is booked from tonight. In your pocket, one week's pay — a deposit and nothing spare.",
-        "B2": "[stub] Dawn in the cheap hotel; a note under the door: the room is booked from tonight. In your pocket, one week's pay — a deposit and nothing spare."
+        "A2": "You wake early in the cheap hotel. There is a note under the door. The room is booked from tonight. You have to leave. In your pocket there is one week's pay. It is enough for a deposit and almost nothing more. You have the job now. You do not have a home.",
+        "B1": "You wake early in the cheap hotel by the yellow agency sign. There is a note under your door: the room is booked from tonight, so you have to be out. In your pocket is one week's pay from Kessler and Rowe — enough for a deposit and almost nothing else. You have the job. What you do not have, yet, is anywhere to live.",
+        "B2": "You wake early in the cheap hotel by the yellow agency sign, the one you learned to distrust on your first night here. A note has been pushed under your door: the room is booked from tonight, and there is someone after you, so you have to be out by evening. In your pocket is one week's pay from Kessler and Rowe — precisely enough for a deposit and almost nothing else. You have the job, which still surprises you. What you do not have, yet, is anywhere in this city to call your own."
       },
       "choices": [
         {
           "text": {
-            "A2": "Ask the hotel man where a stranger looks for a room.",
+            "A2": "Ask the hotel man where to look.",
             "B1": "Ask the hotel man where a stranger looks for a room.",
-            "B2": "Ask the hotel man where a stranger looks for a room."
+            "B2": "Ask the hotel man where a stranger is meant to look for a room."
           },
           "goto": 2
         },
         {
           "text": {
-            "A2": "Go to the corner kiosk for the local paper.",
+            "A2": "Go to the kiosk for a newspaper.",
             "B1": "Go to the corner kiosk for the local paper.",
-            "B2": "Go to the corner kiosk for the local paper."
+            "B2": "Go to the corner kiosk and buy the local paper."
           },
           "goto": 3
         },
         {
           "text": {
-            "A2": "Check the room listings on your phone.",
+            "A2": "Look at rooms on your phone.",
             "B1": "Check the room listings on your phone.",
-            "B2": "Check the room listings on your phone."
+            "B2": "Check the room listings on your phone instead."
           },
           "goto": 4
         }
@@ -120,24 +120,24 @@
     {
       "id": 2,
       "text": {
-        "A2": "[stub] The hotel man, who let you sit by the radiator once, warns you off the flashy agents and says: the paper, or the canal side, is where the cheap real rooms are.",
-        "B1": "[stub] The hotel man, who let you sit by the radiator once, warns you off the flashy agents and says: the paper, or the canal side, is where the cheap real rooms are.",
-        "B2": "[stub] The hotel man, who let you sit by the radiator once, warns you off the flashy agents and says: the paper, or the canal side, is where the cheap real rooms are."
+        "A2": "You ask the hotel man. He once let you sit by the radiator all night, so he is kind. He tells you the truth. \"Stay away from the flashy agents,\" he says. \"They take your money. Try the paper. Or try the canal side. The rooms there are cheap and real.\"",
+        "B1": "You ask the hotel man, the one who let you sit by the radiator on a cold night once. He is honest with you. \"Keep away from the flashy agents,\" he says. \"They'll take your deposit and give you nothing. Try the paper, or try the canal side — the rooms down there are cheap and they're real.\"",
+        "B2": "You ask the hotel man — the one who, on your first night, let you sit by the lobby radiator until it was light. He is honest with you, which is not something this city hands out freely. \"Keep away from the flashy agents,\" he says. \"They'll take your deposit and give you nothing back. Try the paper, or try the canal side; the rooms down there are cheap, and, more to the point, they're real.\""
       },
       "choices": [
         {
           "text": {
-            "A2": "Count exactly what you have before you spend a coin.",
+            "A2": "First count exactly what you have.",
             "B1": "Count exactly what you have before you spend a coin.",
-            "B2": "Count exactly what you have before you spend a coin."
+            "B2": "Count exactly what you have before you spend a single coin."
           },
           "goto": 10
         },
         {
           "text": {
-            "A2": "Head to the kiosk for the paper he means.",
+            "A2": "Go to the kiosk for the paper.",
             "B1": "Head to the kiosk for the paper he means.",
-            "B2": "Head to the kiosk for the paper he means."
+            "B2": "Head to the kiosk for the paper he's talking about."
           },
           "goto": 3
         },
@@ -145,7 +145,7 @@
           "text": {
             "A2": "Look at your phone anyway.",
             "B1": "Look at your phone anyway.",
-            "B2": "Look at your phone anyway."
+            "B2": "Look at your phone anyway, against his advice."
           },
           "goto": 4
         }
@@ -154,32 +154,32 @@
     {
       "id": 3,
       "text": {
-        "A2": "[stub] The kiosk woman from your first night is at her corner. She hands you the paper and circles two ads; over a third — 'KEYS TODAY' — she draws a line.",
-        "B1": "[stub] The kiosk woman from your first night is at her corner. She hands you the paper and circles two ads; over a third — 'KEYS TODAY' — she draws a line.",
-        "B2": "[stub] The kiosk woman from your first night is at her corner. She hands you the paper and circles two ads; over a third — 'KEYS TODAY' — she draws a line."
+        "A2": "The kiosk woman is at her corner. You know her from your first night. She gives you the local paper. She circles two rooms with her pen. Then she sees a third advert — it says KEYS TODAY — and draws a hard line through it. \"Not that one,\" she says.",
+        "B1": "The kiosk woman from your first night is at her corner again. She hands you the local paper and circles two rooms with her pen. Then her eye falls on a third advert — KEYS TODAY, in big letters — and she draws a firm line straight through it. \"Not that one,\" she says.",
+        "B2": "The kiosk woman from your first night is at her corner again, as though she never leaves it. She hands you the local paper and circles two rooms with a stub of pencil. Then her eye catches a third advert — KEYS TODAY, set in the sort of big, warm letters that ought to make you suspicious — and she draws a firm line straight through it. \"Not that one,\" she says, and does not explain."
       },
       "choices": [
         {
           "text": {
             "A2": "Read the two rooms she circled.",
             "B1": "Read the two rooms she circled.",
-            "B2": "Read the two rooms she circled."
+            "B2": "Read the two rooms she's circled."
           },
           "goto": 7
         },
         {
           "text": {
-            "A2": "Dania from the firm is here too, also looking.",
+            "A2": "Dania from work is here too.",
             "B1": "Dania from the firm is here too, also looking.",
-            "B2": "Dania from the firm is here too, also looking."
+            "B2": "Dania from the firm is here too, also looking for a room."
           },
           "goto": 5
         },
         {
           "text": {
-            "A2": "Walk to the canal side to look before the crowds.",
-            "B1": "Walk to the canal side to look before the crowds.",
-            "B2": "Walk to the canal side to look before the crowds."
+            "A2": "Walk to the canal side early.",
+            "B1": "Walk to the canal side before the crowds.",
+            "B2": "Walk to the canal side to look before the crowds arrive."
           },
           "goto": 6
         }
@@ -188,32 +188,32 @@
     {
       "id": 4,
       "text": {
-        "A2": "[stub] Your phone: a bright, cheap room, photos too good for the price. 'Mr Vann — deposit today to hold it, keys today.'",
-        "B1": "[stub] Your phone: a bright, cheap room, photos too good for the price. 'Mr Vann — deposit today to hold it, keys today.'",
-        "B2": "[stub] Your phone: a bright, cheap room, photos too good for the price. 'Mr Vann — deposit today to hold it, keys today.'"
+        "A2": "Your phone shows a bright, cheap room. The photos are beautiful. They are almost too good for the price. Under them there is a name: Mr Vann. The advert says: pay a deposit today to hold the room, and get the keys today. It feels quick. It feels easy.",
+        "B1": "Your phone shows a bright, cheap room — photos far too good for the price. Below them is a name, Mr Vann, and a line that reads: deposit today to hold it, keys today. It's quick, it's easy, and something about how quick and easy it is makes you slow down.",
+        "B2": "Your phone shows a bright, cheap room, the photos far too good for the asking price. Below them sits a name — Mr Vann — and a line designed to move you fast: deposit today to hold it, keys today. It is quick, it is easy, and the very speed of it is the thing that makes some careful part of you slow right down."
       },
       "choices": [
         {
           "text": {
-            "A2": "Go to Vann's office and see the room.",
+            "A2": "Go to Vann's office now.",
             "B1": "Go to Vann's office and see the room.",
-            "B2": "Go to Vann's office and see the room."
+            "B2": "Go to Vann's office and ask to see the room."
           },
           "goto": 8
         },
         {
           "text": {
-            "A2": "Look Vann up before you go anywhere.",
+            "A2": "Look Vann up first.",
             "B1": "Look Vann up before you go anywhere.",
-            "B2": "Look Vann up before you go anywhere."
+            "B2": "Look Vann up properly before you go anywhere near him."
           },
           "goto": 9
         },
         {
           "text": {
-            "A2": "You have met this trick before. Ignore it.",
+            "A2": "You know this trick. Ignore it.",
             "B1": "You have met this trick before. Ignore it.",
-            "B2": "You have met this trick before. Ignore it."
+            "B2": "You have met this exact trick before. Ignore it."
           },
           "goto": 11,
           "requires": [
@@ -225,32 +225,32 @@
     {
       "id": 5,
       "text": {
-        "A2": "[stub] Dania, a new hire at Kessler and Rowe, is as new to the city as you and just as roomless.",
-        "B1": "[stub] Dania, a new hire at Kessler and Rowe, is as new to the city as you and just as roomless.",
-        "B2": "[stub] Dania, a new hire at Kessler and Rowe, is as new to the city as you and just as roomless."
+        "A2": "Dania is a new worker at Kessler and Rowe, like you. She is also new to the city. She also has no room yet. She looks tired but she smiles. \"Two of us can look at more rooms than one,\" she says. \"And it is nicer than looking alone.\"",
+        "B1": "Dania started at Kessler and Rowe the same week you did. She's as new to the city as you are, and just as roomless. She looks tired, but she smiles. \"Two of us can cover more rooms than one,\" she says, \"and it beats looking on your own all day.\"",
+        "B2": "Dania started at Kessler and Rowe the same week you did — as new to the city as you are, and every bit as roomless. She looks tired in the grey morning light, but she smiles at you. \"Two of us can cover twice the rooms,\" she says, \"and, honestly, it beats trudging round on your own all day.\""
       },
       "choices": [
         {
           "text": {
-            "A2": "Agree to look together — two sets of eyes.",
+            "A2": "Look together. Two sets of eyes.",
             "B1": "Agree to look together — two sets of eyes.",
-            "B2": "Agree to look together — two sets of eyes."
+            "B2": "Agree to look together — two sets of eyes are better than one."
           },
           "goto": 27
         },
         {
           "text": {
-            "A2": "Wish her luck and look on your own.",
+            "A2": "Wish her luck. Look alone.",
             "B1": "Wish her luck and look on your own.",
-            "B2": "Wish her luck and look on your own."
+            "B2": "Wish her luck and look on your own instead."
           },
           "goto": 7
         },
         {
           "text": {
-            "A2": "Check your phone listings first.",
+            "A2": "Check your phone first.",
             "B1": "Check your phone listings first.",
-            "B2": "Check your phone listings first."
+            "B2": "Check your phone listings first, before deciding."
           },
           "goto": 4
         }
@@ -259,24 +259,24 @@
     {
       "id": 6,
       "text": {
-        "A2": "[stub] The canal in grey morning light: an old rope-works, washing on a line, a smell of tar and cold water.",
-        "B1": "[stub] The canal in grey morning light: an old rope-works, washing on a line, a smell of tar and cold water.",
-        "B2": "[stub] The canal in grey morning light: an old rope-works, washing on a line, a smell of tar and cold water."
+        "A2": "The canal is grey in the morning light. There is an old rope-works with dark windows. Washing hangs on a line above the water. The air smells of tar and cold water. It is quiet here. It is poor, but it is honest. You could live in a street like this.",
+        "B1": "The canal lies grey in the morning light. An old rope-works stands with dark windows; washing hangs on a line above the water; the air is thick with tar and cold. It's quiet down here, and poor, but it feels honest. This is the kind of street where a room might actually be what the advert says.",
+        "B2": "The canal lies grey in the early light. An old rope-works stands with dark, patient windows; washing hangs on a line above the water; the air is heavy with tar and cold. It's quiet down here, and plainly poor, but it has an honest feel. This is the kind of street where a room might turn out to be exactly what the advert claims — no more, and no less."
       },
       "choices": [
         {
           "text": {
-            "A2": "Decide how to spend the day and the fare money.",
+            "A2": "Decide how to spend your money.",
             "B1": "Decide how to spend the day and the fare money.",
-            "B2": "Decide how to spend the day and the fare money."
+            "B2": "Decide how to spend the day, and the fare money, before you move."
           },
           "goto": 12
         },
         {
           "text": {
-            "A2": "A delivery man here seems to know every door.",
+            "A2": "A delivery man knows every door.",
             "B1": "A delivery man here seems to know every door.",
-            "B2": "A delivery man here seems to know every door."
+            "B2": "A delivery man here looks as though he knows every door on the street."
           },
           "goto": 13
         }
@@ -285,40 +285,40 @@
     {
       "id": 7,
       "text": {
-        "A2": "[stub] The two ads: a room by the canal (a Mrs Halloran, viewing at noon) and a cheap bedsit you could see right now.",
-        "B1": "[stub] The two ads: a room by the canal (a Mrs Halloran, viewing at noon) and a cheap bedsit you could see right now.",
-        "B2": "[stub] The two ads: a room by the canal (a Mrs Halloran, viewing at noon) and a cheap bedsit you could see right now."
+        "A2": "The kiosk woman circled two rooms. One is a room by the canal. A Mrs Halloran owns it. You can see it at noon. The other is a bedsit. It is cheap, and you can see it now. Two rooms, two roads across the city. You cannot see both at the same time.",
+        "B1": "She circled two rooms. One is by the canal — a Mrs Halloran, viewing at noon. The other is a bedsit, cheaper still, and you could see it right now. Two rooms, two directions across the city, and only one of you to walk them.",
+        "B2": "She has circled two rooms. One sits by the canal — a Mrs Halloran, viewing at noon — and the other is a bedsit, cheaper still, that you could go and see this minute. Two rooms, two directions across a city that doesn't know you, and only one pair of legs to walk them on."
       },
       "choices": [
         {
           "text": {
-            "A2": "The bedsit — see it now while it's going.",
+            "A2": "See the cheap bedsit now.",
             "B1": "The bedsit — see it now while it's going.",
-            "B2": "The bedsit — see it now while it's going."
+            "B2": "The bedsit — go and see it now, while it's still going."
           },
           "goto": 14
         },
         {
           "text": {
-            "A2": "Hold out for the canal room at noon.",
+            "A2": "Wait for the canal room at noon.",
             "B1": "Hold out for the canal room at noon.",
-            "B2": "Hold out for the canal room at noon."
+            "B2": "Hold out for the canal room at noon instead."
           },
           "goto": 15
         },
         {
           "text": {
-            "A2": "A third ad: a room to share, very cheap.",
-            "B1": "A third ad: a room to share, very cheap.",
-            "B2": "A third ad: a room to share, very cheap."
+            "A2": "A third advert: a room to share.",
+            "B1": "A third advert: a room to share, very cheap.",
+            "B2": "A third advert: a room to share, and very cheap."
           },
           "goto": 36
         },
         {
           "text": {
             "A2": "Work out your money and route first.",
-            "B1": "Work out your money and route first.",
-            "B2": "Work out your money and route first."
+            "B1": "Work out your money and your route first.",
+            "B2": "Work out your money and your route across the city first."
           },
           "goto": 12
         }
@@ -327,24 +327,24 @@
     {
       "id": 8,
       "text": {
-        "A2": "[stub] You stand at the door of Vann's office. A queue inside; a board of glossy rooms.",
-        "B1": "[stub] You stand at the door of Vann's office. A queue inside; a board of glossy rooms.",
-        "B2": "[stub] You stand at the door of Vann's office. A queue inside; a board of glossy rooms."
+        "A2": "You stand at the door of Vann's office. Inside there is a queue of people. On the wall is a board of glossy rooms, all bright and cheap. Everyone waits. Everyone hopes. A room like the photos would change your whole week. You put your hand on the door.",
+        "B1": "You stand at the door of Vann's office. Inside, a queue of tired people waits under a board of glossy rooms, every one of them bright and cheap. They're all hoping. A room like those photos would change your whole week, and you know it, and that is exactly the problem.",
+        "B2": "You stand at the door of Vann's office. Inside, a queue of tired people waits beneath a board of glossy rooms — every one of them bright, cheap, and just out of reach. They are all hoping, quietly and hard. A room like the ones in those photographs would change your entire week, and you know it, and knowing it is precisely the hook the whole place is built on."
       },
       "choices": [
         {
           "text": {
-            "A2": "Step inside and hear the pitch.",
+            "A2": "Go in and hear the pitch.",
             "B1": "Step inside and hear the pitch.",
-            "B2": "Step inside and hear the pitch."
+            "B2": "Step inside and hear the pitch out."
           },
           "goto": 40
         },
         {
           "text": {
-            "A2": "Hesitate on the step.",
+            "A2": "Wait on the step.",
             "B1": "Hesitate on the step.",
-            "B2": "Hesitate on the step."
+            "B2": "Hesitate on the step a moment longer."
           },
           "goto": 9
         }
@@ -353,32 +353,32 @@
     {
       "id": 9,
       "text": {
-        "A2": "[stub] You look Vann up. A man leaving the office mutters that he never got his keys; the reviews are a wall of one stars.",
-        "B1": "[stub] You look Vann up. A man leaving the office mutters that he never got his keys; the reviews are a wall of one stars.",
-        "B2": "[stub] You look Vann up. A man leaving the office mutters that he never got his keys; the reviews are a wall of one stars."
+        "A2": "You look Vann up first. A man comes out of the office. He is angry. \"I paid him and I never got my keys,\" he says quietly. On your phone, the reviews are bad. Star after star, all one star, all the same story: money in, nothing out.",
+        "B1": "You look Vann up before you commit. A man leaving the office mutters, almost to himself, that he paid and never got his keys. On your phone the reviews are a wall of single stars, all telling the same story: money handed over, nothing given back.",
+        "B2": "You look Vann up before you commit to anything. A man on his way out mutters, half to himself and half to you, that he paid his deposit and never once saw a key. On your phone the reviews are a solid wall of single stars, every one of them the same short story told again: money handed over, and nothing whatever given back."
       },
       "choices": [
         {
           "text": {
-            "A2": "Ask around a little more.",
+            "A2": "Ask a few more people.",
             "B1": "Ask around a little more.",
-            "B2": "Ask around a little more."
+            "B2": "Ask around a little more before deciding."
           },
           "goto": 16
         },
         {
           "text": {
-            "A2": "Decide it's a trap and walk away.",
+            "A2": "Decide it's a trap. Walk away.",
             "B1": "Decide it's a trap and walk away.",
-            "B2": "Decide it's a trap and walk away."
+            "B2": "Decide it's plainly a trap and walk away."
           },
           "goto": 17
         },
         {
           "text": {
-            "A2": "The room looked so good — risk it anyway.",
+            "A2": "Risk it anyway. The room looked good.",
             "B1": "The room looked so good — risk it anyway.",
-            "B2": "The room looked so good — risk it anyway."
+            "B2": "The room looked so good — risk it anyway, against the evidence."
           },
           "goto": 8
         }
@@ -387,16 +387,16 @@
     {
       "id": 10,
       "text": {
-        "A2": "[stub] On the bed you lay the money out. One week. A deposit is most of it. A wrong move today and you have neither room nor fare.",
-        "B1": "[stub] On the bed you lay the money out. One week. A deposit is most of it. A wrong move today and you have neither room nor fare.",
-        "B2": "[stub] On the bed you lay the money out. One week. A deposit is most of it. A wrong move today and you have neither room nor fare."
+        "A2": "You sit on the bed and lay the money out. One week's pay. A deposit will take most of it. There will be almost nothing left for food, or for the bus, or for a mistake. You count it twice. One wrong move today, and you will have no room and no way home.",
+        "B1": "You sit on the bed and lay the money out in a row. One week's pay; a deposit will swallow most of it, leaving almost nothing for food or fares or errors. You count it twice, the way you count things that frighten you. One wrong move today and you'll have neither a room nor the fare to keep looking.",
+        "B2": "You sit on the bed and lay the money out in a neat row, as if seeing it clearly might make it more. One week's pay; a deposit will swallow most of it and leave almost nothing for food, or fares, or the kind of mistake this city seems to specialise in. You count it twice, the way you count things that frighten you. One wrong move today and you'll be left with neither a room nor the fare to go on looking for one."
       },
       "choices": [
         {
           "text": {
             "A2": "Go out and look, carefully.",
             "B1": "Go out and look, carefully.",
-            "B2": "Go out and look, carefully."
+            "B2": "Go out and look, carefully, now that you know the stakes."
           },
           "goto": 6
         },
@@ -404,7 +404,7 @@
           "text": {
             "A2": "Get the paper first.",
             "B1": "Get the paper first.",
-            "B2": "Get the paper first."
+            "B2": "Get the paper first, then set out."
           },
           "goto": 3
         }
@@ -413,16 +413,16 @@
     {
       "id": 11,
       "text": {
-        "A2": "[stub] You know this game now. You put the phone away and trust the paper and your feet.",
-        "B1": "[stub] You know this game now. You put the phone away and trust the paper and your feet.",
-        "B2": "[stub] You know this game now. You put the phone away and trust the paper and your feet."
+        "A2": "You know this game now. You learned it on your first night, from the job agency. Bright, cheap, and today — that is the trap. You put the phone in your pocket. You will trust the paper, your feet, and the people who help for free.",
+        "B1": "You know this game now; you learned it on your first night, from the job agency with the yellow sign. Bright, cheap, and 'today' is always the trap. You put the phone away and decide to trust the paper, your own feet, and the few people in this city who help for nothing.",
+        "B2": "You know this game now — you learned it on your first night, from the job agency behind the yellow sign, and you paid for the lesson in fear if not in money. Bright, cheap, and available 'today' is always, always the trap. You put the phone away and resolve to trust the paper, your own two feet, and the handful of people in this city who help a stranger for nothing at all."
       },
       "choices": [
         {
           "text": {
-            "A2": "Read the paper's real ads.",
+            "A2": "Read the paper's real rooms.",
             "B1": "Read the paper's real ads.",
-            "B2": "Read the paper's real ads."
+            "B2": "Read the paper's real advertisements."
           },
           "goto": 7
         },
@@ -430,7 +430,7 @@
           "text": {
             "A2": "Walk to the canal side.",
             "B1": "Walk to the canal side.",
-            "B2": "Walk to the canal side."
+            "B2": "Walk down to the canal side."
           },
           "goto": 6
         }
@@ -439,16 +439,16 @@
     {
       "id": 12,
       "text": {
-        "A2": "[stub] How you cross the city is how your money lasts.",
-        "B1": "[stub] How you cross the city is how your money lasts.",
-        "B2": "[stub] How you cross the city is how your money lasts."
+        "A2": "How you cross the city is how your money lasts. The bus is fast, but every ride costs coins you may need. Your feet are slow, but they are free. You look at the map and the grey sky. It might rain. You decide.",
+        "B1": "How you cross the city today is how far your money stretches. The bus is quick but every ride costs coins you might need for the deposit; your feet are slow but free. You glance at the map, then at the grey sky that might yet rain, and you decide.",
+        "B2": "How you choose to cross the city today is, in the end, how far your money will stretch. The bus is quick, but every fare is a coin you might want back later for the deposit; your own feet are slow, but they cost nothing at all. You glance at the map, then at the low grey sky that looks as if it might rain before noon, and you make up your mind."
       },
       "choices": [
         {
           "text": {
-            "A2": "Walk everywhere and keep the fare.",
-            "B1": "Walk everywhere and keep the fare.",
-            "B2": "Walk everywhere and keep the fare."
+            "A2": "Walk everywhere. Keep the fare.",
+            "B1": "Walk everywhere and keep the fare money.",
+            "B2": "Walk everywhere and keep the fare money for the deposit."
           },
           "goto": 18,
           "sets": [
@@ -457,9 +457,9 @@
         },
         {
           "text": {
-            "A2": "Take the bus so you can see more rooms.",
+            "A2": "Take the bus. See more rooms.",
             "B1": "Take the bus so you can see more rooms.",
-            "B2": "Take the bus so you can see more rooms."
+            "B2": "Take the bus so you can see more rooms in the time you have."
           },
           "goto": 19
         },
@@ -467,7 +467,7 @@
           "text": {
             "A2": "Go back for the paper first.",
             "B1": "Go back for the paper first.",
-            "B2": "Go back for the paper first."
+            "B2": "Go back for the paper first, then move."
           },
           "goto": 3
         }
@@ -476,24 +476,24 @@
     {
       "id": 13,
       "text": {
-        "A2": "[stub] The delivery man leans on his trolley. 'Halloran's? Over the rope-works. Good stair. Ask for the room at the top.'",
-        "B1": "[stub] The delivery man leans on his trolley. 'Halloran's? Over the rope-works. Good stair. Ask for the room at the top.'",
-        "B2": "[stub] The delivery man leans on his trolley. 'Halloran's? Over the rope-works. Good stair. Ask for the room at the top.'"
+        "A2": "The delivery man leans on his trolley. You ask him about the rooms here. \"Halloran's?\" he says. \"Over the rope-works. Good stair. Ask for the room at the top.\" He knows the street the way only a delivery man can.",
+        "B1": "The delivery man leans on his trolley and listens. \"Halloran's?\" he says, when you ask. \"Over the rope-works. Good stair, clean building. Ask for the room at the top.\" He knows this street the way only someone who delivers to every door can.",
+        "B2": "The delivery man leans on his trolley and hears you out. \"Halloran's?\" he says, when you finally get the question out. \"Over the rope-works. Good stair, clean building — ask for the room at the top.\" He knows this street the way only a man who has delivered to every single door on it possibly could."
       },
       "choices": [
         {
           "text": {
-            "A2": "Thank him and note the stair.",
+            "A2": "Thank him. Note the stair.",
             "B1": "Thank him and note the stair.",
-            "B2": "Thank him and note the stair."
+            "B2": "Thank him and note the stair for noon."
           },
           "goto": 20
         },
         {
           "text": {
-            "A2": "Catch the bus into the centre first.",
+            "A2": "Take the bus to the centre first.",
             "B1": "Catch the bus into the centre first.",
-            "B2": "Catch the bus into the centre first."
+            "B2": "Catch the bus into the centre first, then come back."
           },
           "goto": 19
         }
@@ -502,24 +502,24 @@
     {
       "id": 14,
       "text": {
-        "A2": "[stub] The bedsit's address is close; you could be there in ten minutes.",
-        "B1": "[stub] The bedsit's address is close; you could be there in ten minutes.",
-        "B2": "[stub] The bedsit's address is close; you could be there in ten minutes."
+        "A2": "The bedsit is close. You could be there in ten minutes on foot. It is cheap, and it is free right now. A room in the hand is worth a lot when the hotel wants you out tonight. But the canal room might be better.",
+        "B1": "The bedsit is close — ten minutes on foot, and free to view right now. A room in the hand is worth a great deal when the hotel wants you out by tonight. Still, the canal room at noon might be the better bet, if you can bear to wait.",
+        "B2": "The bedsit is close — ten minutes on foot, and free to view this minute. A room in the hand is worth a good deal when the hotel wants its key back by nightfall. And yet the canal room at noon might well be the better prospect, if you can stand to wait the morning out for it."
       },
       "choices": [
         {
           "text": {
             "A2": "Go straight up to see it.",
-            "B1": "Go straight up to see it.",
-            "B2": "Go straight up to see it."
+            "B1": "Go straight up to see it now.",
+            "B2": "Go straight up and see it now."
           },
           "goto": 30
         },
         {
           "text": {
-            "A2": "Read the canal ad once more first.",
+            "A2": "Read the canal advert again first.",
             "B1": "Read the canal ad once more first.",
-            "B2": "Read the canal ad once more first."
+            "B2": "Read the canal advertisement once more before deciding."
           },
           "goto": 7
         }
@@ -528,24 +528,24 @@
     {
       "id": 15,
       "text": {
-        "A2": "[stub] The canal viewing is at noon. Hours to fill, and a whole city between.",
-        "B1": "[stub] The canal viewing is at noon. Hours to fill, and a whole city between.",
-        "B2": "[stub] The canal viewing is at noon. Hours to fill, and a whole city between."
+        "A2": "The canal viewing is at noon. That is hours away. You have a whole city to wait in, and a whole city between you and the river. You could go there early and wait by the water. Or you could fill the time in the busy market square.",
+        "B1": "The canal viewing isn't until noon. That's hours off, with a whole cold city to wait in and a good half of it between you and the river. You could set off early and wait by the water. Or you could fill the empty hours in the busy market square.",
+        "B2": "The canal viewing isn't until noon. That's hours away yet, with a whole cold city to wait in and a good half of it lying between you and the river. You could set off early and wait out the morning by the water. Or you could kill the empty time in the noise and warmth of the market square."
       },
       "choices": [
         {
           "text": {
             "A2": "Set off for the canal early.",
             "B1": "Set off for the canal early.",
-            "B2": "Set off for the canal early."
+            "B2": "Set off for the canal early and wait."
           },
           "goto": 50
         },
         {
           "text": {
-            "A2": "Kill the time in the market square.",
+            "A2": "Wait in the market square.",
             "B1": "Kill the time in the market square.",
-            "B2": "Kill the time in the market square."
+            "B2": "Kill the time in the market square meanwhile."
           },
           "goto": 25
         }
@@ -554,24 +554,24 @@
     {
       "id": 16,
       "text": {
-        "A2": "[stub] You ask the kiosk woman about Vann. Her face closes. 'That one. Keep your money in your pocket.'",
-        "B1": "[stub] You ask the kiosk woman about Vann. Her face closes. 'That one. Keep your money in your pocket.'",
-        "B2": "[stub] You ask the kiosk woman about Vann. Her face closes. 'That one. Keep your money in your pocket.'"
+        "A2": "You ask the kiosk woman about Vann. Her face closes like a door. \"That one,\" she says. \"Keep your money in your pocket.\" She does not want to say more. She has seen too many people go in bright and come out empty.",
+        "B1": "You ask the kiosk woman about Vann. Her face closes like a door. \"That one,\" she says. \"Keep your money in your pocket.\" She won't say more. You sense she has watched too many hopeful people walk in and come out with nothing.",
+        "B2": "You ask the kiosk woman about Vann, and her face closes like a door in a draught. \"That one,\" she says, and the two words carry a weight of history. \"Keep your money in your pocket.\" She won't be drawn further; you get the distinct sense she has watched too many hopeful strangers walk into that office and come out again with empty hands."
       },
       "choices": [
         {
           "text": {
-            "A2": "Take her word and leave it.",
+            "A2": "Take her word. Leave it.",
             "B1": "Take her word and leave it.",
-            "B2": "Take her word and leave it."
+            "B2": "Take her word for it and leave it there."
           },
           "goto": 17
         },
         {
           "text": {
-            "A2": "Head into the square to think.",
+            "A2": "Go to the square to think.",
             "B1": "Head into the square to think.",
-            "B2": "Head into the square to think."
+            "B2": "Head into the square to think it over."
           },
           "goto": 25
         }
@@ -580,16 +580,16 @@
     {
       "id": 17,
       "text": {
-        "A2": "[stub] You cross Vann off. It stings a little; the photos were lovely. But lovely and cheap and today is the whole trick.",
-        "B1": "[stub] You cross Vann off. It stings a little; the photos were lovely. But lovely and cheap and today is the whole trick.",
-        "B2": "[stub] You cross Vann off. It stings a little; the photos were lovely. But lovely and cheap and today is the whole trick."
+        "A2": "You cross Vann off your list. It stings a little. The photos were lovely, and the price was low. But lovely, and cheap, and today — that is the whole trick. You know it. You have paid to learn it once. You will not pay again.",
+        "B1": "You cross Vann off your list. It stings a little; the photos were lovely and the price was low. But lovely and cheap and 'today' is the entire trick, and you know it. You paid to learn that lesson once already. You don't intend to pay for it twice.",
+        "B2": "You cross Vann off your list, and it stings more than you'd like — the photographs were genuinely lovely and the price genuinely low. But lovely, and cheap, and available 'today' is the whole of the trick, and you know it in your bones by now. You paid once to learn that lesson, on a colder night than this; you have no intention of paying for it a second time."
       },
       "choices": [
         {
           "text": {
-            "A2": "Back to the paper's real rooms.",
+            "A2": "Back to the real rooms.",
             "B1": "Back to the paper's real rooms.",
-            "B2": "Back to the paper's real rooms."
+            "B2": "Back to the paper's real rooms, then."
           },
           "goto": 7
         },
@@ -597,7 +597,7 @@
           "text": {
             "A2": "Into the square.",
             "B1": "Into the square.",
-            "B2": "Into the square."
+            "B2": "Into the square to regroup."
           },
           "goto": 25
         }
@@ -606,16 +606,16 @@
     {
       "id": 18,
       "text": {
-        "A2": "[stub] Walking, you reach the market square by midday, feet already sore but the fare still in your pocket.",
-        "B1": "[stub] Walking, you reach the market square by midday, feet already sore but the fare still in your pocket.",
-        "B2": "[stub] Walking, you reach the market square by midday, feet already sore but the fare still in your pocket."
+        "A2": "You walk. By midday you reach the market square. Your feet are sore and your shoes are wet. But the fare money is still in your pocket, every coin of it. You saved it, step by step. It might be a deposit one day soon. It feels good to have kept it.",
+        "B1": "You walk, and by midday you reach the market square. Your feet are sore and your shoes are wet. But every coin of the fare money is still in your pocket, saved step by step. It might be part of a deposit by tonight. There's a quiet satisfaction in having kept it.",
+        "B2": "You walk, and by midday you've reached the market square with sore feet, wet shoes, and every last coin of the fare money still in your pocket, saved one weary step at a time. It might yet be part of a deposit by nightfall. There is a quiet, stubborn satisfaction in having kept hold of it when the bus would have been so much kinder to your feet."
       },
       "choices": [
         {
           "text": {
-            "A2": "Into the square to choose a direction.",
+            "A2": "Into the square. Choose a way.",
             "B1": "Into the square to choose a direction.",
-            "B2": "Into the square to choose a direction."
+            "B2": "Into the square to choose your next direction."
           },
           "goto": 25
         },
@@ -623,15 +623,15 @@
           "text": {
             "A2": "Straight on to the canal.",
             "B1": "Straight on to the canal.",
-            "B2": "Straight on to the canal."
+            "B2": "Press straight on to the canal."
           },
           "goto": 50
         },
         {
           "text": {
-            "A2": "The square clock says the morning's gone.",
+            "A2": "The clock says the morning's gone.",
             "B1": "The square clock says the morning's gone.",
-            "B2": "The square clock says the morning's gone."
+            "B2": "The square clock warns you the morning's already gone."
           },
           "goto": 26
         }
@@ -640,16 +640,16 @@
     {
       "id": 19,
       "text": {
-        "A2": "[stub] The bus sets you down at the square. Faster, but the coins are fewer now.",
-        "B1": "[stub] The bus sets you down at the square. Faster, but the coins are fewer now.",
-        "B2": "[stub] The bus sets you down at the square. Faster, but the coins are fewer now."
+        "A2": "The bus sets you down at the square. It was fast, and your feet are dry. But there are fewer coins in your pocket now. Each ride is quick, and each ride is gone. You saved time, but you spent money. In this city, you cannot always keep both.",
+        "B1": "The bus drops you at the square — fast, and your feet are dry for it, but the coins in your pocket are fewer now. Each ride is quick and each ride is gone. You bought time with money, and in this city you can rarely keep both at once.",
+        "B2": "The bus drops you at the square — quick, and your feet are dry for it — but the little pile of coins in your pocket is noticeably thinner now. Each ride is fast, and each ride is simply gone. You've bought time with money, which is a fair trade until the evening comes and you find you needed the money more than the hour."
       },
       "choices": [
         {
           "text": {
             "A2": "Into the square.",
             "B1": "Into the square.",
-            "B2": "Into the square."
+            "B2": "Into the square, then."
           },
           "goto": 25
         },
@@ -657,7 +657,7 @@
           "text": {
             "A2": "On to the canal.",
             "B1": "On to the canal.",
-            "B2": "On to the canal."
+            "B2": "Straight on to the canal."
           },
           "goto": 50
         }
@@ -666,24 +666,24 @@
     {
       "id": 20,
       "text": {
-        "A2": "[stub] The delivery man points you to Halloran's stair, then rattles off toward the centre.",
-        "B1": "[stub] The delivery man points you to Halloran's stair, then rattles off toward the centre.",
-        "B2": "[stub] The delivery man points you to Halloran's stair, then rattles off toward the centre."
+        "A2": "The delivery man points you to Halloran's stair. \"Top room,\" he says again. \"Good building.\" Then he rattles his trolley away toward the centre. Now you know the door. You just have to wait for noon, and hope the room is still free.",
+        "B1": "The delivery man points you to Halloran's stair — \"top room, good building,\" he says again — then rattles his trolley off toward the centre. Now you know the door. All that's left is to wait for noon and hope the room is still going.",
+        "B2": "The delivery man points you firmly to Halloran's stair. \"Top room, good building,\" he tells you again, as if repetition were a kind of guarantee. Then he rattles his trolley away toward the centre and is gone. Now, at least, you know the door. All that remains is to wait out the hours until noon and hope the room hasn't gone to someone quicker."
       },
       "choices": [
         {
           "text": {
             "A2": "Go up to the canal building.",
             "B1": "Go up to the canal building.",
-            "B2": "Go up to the canal building."
+            "B2": "Go up to the canal building early."
           },
           "goto": 50
         },
         {
           "text": {
-            "A2": "Fill the time in the square first.",
+            "A2": "Wait in the square first.",
             "B1": "Fill the time in the square first.",
-            "B2": "Fill the time in the square first."
+            "B2": "Fill the time in the square first, then return."
           },
           "goto": 25
         }
@@ -692,24 +692,24 @@
     {
       "id": 21,
       "text": {
-        "A2": "[stub] The bedsit building: a damp stair, a smell of old cooking, a landlord jingling keys.",
-        "B1": "[stub] The bedsit building: a damp stair, a smell of old cooking, a landlord jingling keys.",
-        "B2": "[stub] The bedsit building: a damp stair, a smell of old cooking, a landlord jingling keys."
+        "A2": "The bedsit building has a damp stair. It smells of old cooking and cold air. The landlord waits at the top. He jingles his keys. He does not smile. Something here is not quite right, but the room is cheap, and cheap is what you can pay.",
+        "B1": "The bedsit building greets you with a damp stair and a smell of old cooking. The landlord waits at the top, jingling his keys, not smiling. Something about the place isn't quite right — but the room is cheap, and cheap is all you can afford.",
+        "B2": "The bedsit building greets you with a damp stair and a settled smell of old cooking and colder air. The landlord waits at the top, jingling his keys and not troubling to smile. Something about the whole set-up isn't quite right, and you can feel it — but the room is cheap, and cheap, just now, is the only thing you can actually afford."
       },
       "choices": [
         {
           "text": {
             "A2": "Go up to the room.",
-            "B1": "Go up to the room.",
-            "B2": "Go up to the room."
+            "B1": "Go up to see the room.",
+            "B2": "Go up and see the room."
           },
           "goto": 30
         },
         {
           "text": {
-            "A2": "Back to the square; something's off.",
+            "A2": "Back to the square. Something's off.",
             "B1": "Back to the square; something's off.",
-            "B2": "Back to the square; something's off."
+            "B2": "Back to the square — something here is off."
           },
           "goto": 25
         }
@@ -718,16 +718,16 @@
     {
       "id": 25,
       "text": {
-        "A2": "[stub] The market square: Vann's office on one side, the canal lane on the other, and Dania waving from a stall.",
-        "B1": "[stub] The market square: Vann's office on one side, the canal lane on the other, and Dania waving from a stall.",
-        "B2": "[stub] The market square: Vann's office on one side, the canal lane on the other, and Dania waving from a stall."
+        "A2": "The market square is loud and full. On one side is Vann's office. On the other side is the lane down to the canal. In the middle, Dania waves at you from a stall. Three ways to go, and the day is getting shorter with every hour.",
+        "B1": "The market square is loud and crowded. Vann's office sits on one side, the canal lane on the other, and in between, Dania waves at you from a stall. Three directions, three chances, and the day getting shorter with every hour you stand here choosing.",
+        "B2": "The market square is loud and crowded and warm with people. Vann's office sits on one side of it, the lane down to the canal on the other, and there, in between, Dania waves at you from behind a stall. Three directions, three different chances — and the daylight getting a little shorter with every hour you stand here in the middle, choosing."
       },
       "choices": [
         {
           "text": {
             "A2": "Vann's office.",
             "B1": "Vann's office.",
-            "B2": "Vann's office."
+            "B2": "Try Vann's office."
           },
           "goto": 40
         },
@@ -735,7 +735,7 @@
           "text": {
             "A2": "The canal room.",
             "B1": "The canal room.",
-            "B2": "The canal room."
+            "B2": "Head for the canal room."
           },
           "goto": 50
         },
@@ -743,7 +743,7 @@
           "text": {
             "A2": "Go with Dania.",
             "B1": "Go with Dania.",
-            "B2": "Go with Dania."
+            "B2": "Go over to Dania."
           },
           "goto": 27
         },
@@ -751,7 +751,7 @@
           "text": {
             "A2": "The bedsit first.",
             "B1": "The bedsit first.",
-            "B2": "The bedsit first."
+            "B2": "The bedsit first, then."
           },
           "goto": 21
         }
@@ -760,16 +760,16 @@
     {
       "id": 26,
       "text": {
-        "A2": "[stub] The square clock strikes noon. Half your daylight is spent and you have seen nothing yet.",
-        "B1": "[stub] The square clock strikes noon. Half your daylight is spent and you have seen nothing yet.",
-        "B2": "[stub] The square clock strikes noon. Half your daylight is spent and you have seen nothing yet."
+        "A2": "The square clock strikes noon. The sound is heavy and slow. Half your daylight is spent, and you have not seen a single room yet. Winter days are short here. When the light goes, the hotel closes its door to you. You must move now.",
+        "B1": "The square clock strikes noon, heavy and slow. Half your daylight is gone and you haven't seen a single room yet. The winter days are short in this city, and when the light goes the hotel shuts its door to you. You have to move.",
+        "B2": "The square clock strikes noon, each stroke heavy and slow and faintly accusing. Half your daylight is spent already, and you have not so much as set foot in a single room. The winter days are miserly here, and when the last of the light goes the hotel will shut its door to you for good. There is no more time to stand about; you have to move."
       },
       "choices": [
         {
           "text": {
             "A2": "Choose a direction and move.",
             "B1": "Choose a direction and move.",
-            "B2": "Choose a direction and move."
+            "B2": "Choose a direction and move now."
           },
           "goto": 25
         },
@@ -777,7 +777,7 @@
           "text": {
             "A2": "Vann's office, quickly.",
             "B1": "Vann's office, quickly.",
-            "B2": "Vann's office, quickly."
+            "B2": "Vann's office, and quickly."
           },
           "goto": 40
         }
@@ -786,32 +786,32 @@
     {
       "id": 27,
       "text": {
-        "A2": "[stub] Dania is wary of Vann too. You compare your two ads on a bench.",
-        "B1": "[stub] Dania is wary of Vann too. You compare your two ads on a bench.",
-        "B2": "[stub] Dania is wary of Vann too. You compare your two ads on a bench."
+        "A2": "Dania is wary of Vann too. You sit on a bench and put your two adverts side by side. Hers is a flat that needs a guarantor. Yours is the canal room. Together you know a little more than you did alone. That is worth something today.",
+        "B1": "Dania is just as wary of Vann as you are. You share a bench and lay your two adverts side by side: hers is a flat that needs a guarantor, yours is the canal room. Between you, you know a little more than either of you did alone — and today, that's worth something.",
+        "B2": "Dania, it turns out, is every bit as wary of Vann as you are. You share a bench and lay your two adverts side by side. Hers is a decent flat that needs a guarantor she doesn't have; yours is the canal room. Between you, you know a little more than either of you did alone. In a city like this, on a day like this, that small pooled knowledge is worth something real."
       },
       "choices": [
         {
           "text": {
             "A2": "View the canal room together.",
             "B1": "View the canal room together.",
-            "B2": "View the canal room together."
+            "B2": "Go and view the canal room together."
           },
           "goto": 28
         },
         {
           "text": {
-            "A2": "Split up to cover more ground.",
+            "A2": "Split up to see more.",
             "B1": "Split up to cover more ground.",
-            "B2": "Split up to cover more ground."
+            "B2": "Split up to cover more ground separately."
           },
           "goto": 29
         },
         {
           "text": {
             "A2": "Both try the agent, to be sure.",
-            "B1": "Both try the agent, to be sure.",
-            "B2": "Both try the agent, to be sure."
+            "B1": "Both try the agent, just to be sure.",
+            "B2": "Both try the agent, just to be certain."
           },
           "goto": 40
         }
@@ -820,16 +820,16 @@
     {
       "id": 28,
       "text": {
-        "A2": "[stub] With Dania beside you, the day feels less thin.",
-        "B1": "[stub] With Dania beside you, the day feels less thin.",
-        "B2": "[stub] With Dania beside you, the day feels less thin."
+        "A2": "With Dania beside you, the day feels less thin. Two people looking for rooms is still hard. But it is warmer than one. You talk as you walk. You share what little you know. The city feels a small step less strange with someone in it who is as lost as you.",
+        "B1": "With Dania beside you, the day feels a little less thin. Two people hunting rooms is still hard going, but it's warmer than doing it alone. You talk as you walk and share what little you each know. The city feels one small step less strange for having someone in it as lost as you are.",
+        "B2": "With Dania beside you, the whole day feels a little less thin. Two people hunting for rooms is still hard, discouraging work, but it is warmer than doing it alone in silence. You talk as you walk and pool what little you each know. The city feels one step less strange for holding someone in it as lost, and as hopeful, as you."
       },
       "choices": [
         {
           "text": {
-            "A2": "Go to the canal room together.",
+            "A2": "The canal room together.",
             "B1": "Go to the canal room together.",
-            "B2": "Go to the canal room together."
+            "B2": "Go to the canal room together first."
           },
           "goto": 50
         },
@@ -837,15 +837,15 @@
           "text": {
             "A2": "Try the bedsit together first.",
             "B1": "Try the bedsit together first.",
-            "B2": "Try the bedsit together first."
+            "B2": "Try the bedsit together first, then."
           },
           "goto": 30
         },
         {
           "text": {
-            "A2": "She wants to see one more first.",
-            "B1": "She wants to see one more first.",
-            "B2": "She wants to see one more first."
+            "A2": "She wants one more first.",
+            "B1": "She wants to see one more place first.",
+            "B2": "She wants to see one more place of her own first."
           },
           "goto": 90
         }
@@ -854,16 +854,16 @@
     {
       "id": 29,
       "text": {
-        "A2": "[stub] Alone again, you keep your own counsel.",
-        "B1": "[stub] Alone again, you keep your own counsel.",
-        "B2": "[stub] Alone again, you keep your own counsel."
+        "A2": "Alone again, you keep your own counsel. It is quieter this way, and quicker. You do not wait for anyone. You do not explain your choices. But the day is long, and the streets are cold. There is no one now to share the weight of it.",
+        "B1": "Alone again, you keep your own counsel. It's quieter this way, and quicker, with no one to wait for and no choices to explain. But the day is long, and the streets are cold. There's no one, now, to share the weight of it with.",
+        "B2": "Alone again, you keep your own counsel, and there is something to be said for it. It's quieter this way, and quicker, with no one to wait on and no decisions to justify aloud. But the day is long, and the streets are cold and indifferent. There is no one, now, to help you carry the weight of the hours."
       },
       "choices": [
         {
           "text": {
             "A2": "The canal room.",
             "B1": "The canal room.",
-            "B2": "The canal room."
+            "B2": "Head for the canal room."
           },
           "goto": 50
         },
@@ -871,7 +871,7 @@
           "text": {
             "A2": "Vann's office.",
             "B1": "Vann's office.",
-            "B2": "Vann's office."
+            "B2": "Try Vann's office."
           },
           "goto": 40
         },
@@ -879,7 +879,7 @@
           "text": {
             "A2": "The bedsit.",
             "B1": "The bedsit.",
-            "B2": "The bedsit."
+            "B2": "The bedsit, then."
           },
           "goto": 30
         }
@@ -888,16 +888,16 @@
     {
       "id": 30,
       "text": {
-        "A2": "[stub] The room is small and grey and cheap. The landlord wants cash now, asks nothing, offers nothing.",
-        "B1": "[stub] The room is small and grey and cheap. The landlord wants cash now, asks nothing, offers nothing.",
-        "B2": "[stub] The room is small and grey and cheap. The landlord wants cash now, asks nothing, offers nothing."
+        "A2": "The room is small and grey and cheap. There is a bed, a chair, a window that looks at a wall. The landlord wants cash now. He asks you nothing. He offers you nothing. No lease, no questions, no help. Just a key, if you have the money.",
+        "B1": "The room is small and grey and cheap: a bed, a chair, a window that looks straight at a wall. The landlord wants cash now and asks you nothing — no lease, no questions, no help of any kind. Just a key, if the money's in your hand.",
+        "B2": "The room is small and grey and cheap — a bed, a chair, a window giving onto a blank brick wall. The landlord wants cash on the spot and asks you absolutely nothing: no lease, no references, no questions, no help of any kind. Just a key handed over, if the money happens to be in your hand. It is, you realise, the exact opposite of the canal room, in every way that turns out to matter."
       },
       "choices": [
         {
           "text": {
-            "A2": "Take it on the spot — a room is a room.",
+            "A2": "Take it now. A room is a room.",
             "B1": "Take it on the spot — a room is a room.",
-            "B2": "Take it on the spot — a room is a room."
+            "B2": "Take it on the spot — a room is a room, after all."
           },
           "goto": 31,
           "sets": [
@@ -908,23 +908,23 @@
           "text": {
             "A2": "Say you'll think about it.",
             "B1": "Say you'll think about it.",
-            "B2": "Say you'll think about it."
+            "B2": "Say you'll think it over."
           },
           "goto": 32
         },
         {
           "text": {
-            "A2": "Ask to look at it properly first.",
+            "A2": "Ask to look properly first.",
             "B1": "Ask to look at it properly first.",
-            "B2": "Ask to look at it properly first."
+            "B2": "Ask to look at it properly first, at least."
           },
           "goto": 34
         },
         {
           "text": {
-            "A2": "Ask why it's empty; his face hardens.",
+            "A2": "Ask why it's empty.",
             "B1": "Ask why it's empty; his face hardens.",
-            "B2": "Ask why it's empty; his face hardens."
+            "B2": "Ask why it's stood empty; his face hardens."
           },
           "goto": 35
         }
@@ -933,24 +933,24 @@
     {
       "id": 31,
       "text": {
-        "A2": "[stub] You give him a cash 'hold' and it is, in a way, yours. You didn't really look. You were just tired of looking.",
-        "B1": "[stub] You give him a cash 'hold' and it is, in a way, yours. You didn't really look. You were just tired of looking.",
-        "B2": "[stub] You give him a cash 'hold' and it is, in a way, yours. You didn't really look. You were just tired of looking."
+        "A2": "You give the landlord a cash hold, and the room is yours, in a way. You did not really look at it. You did not ask a single question. You were just tired of looking, and afraid of the dark coming, and it was there. Now it is done.",
+        "B1": "You hand over a cash 'hold', and the room is yours, after a fashion. You didn't really look at it; you didn't ask a single question. You were simply tired of searching and afraid of the dark coming on, and the room was there. Now it's done.",
+        "B2": "You hand over a cash 'hold', and the room is yours, after a fashion. You didn't really look at it, not properly; you didn't ask one honest question. You were simply worn out with searching, and quietly afraid of the dark coming on, and the room was there in front of you. Now it's done, and you feel the odd, hollow lightness of a decision made mostly out of tiredness."
       },
       "choices": [
         {
           "text": {
             "A2": "It's done. Move on.",
-            "B1": "It's done. Move on.",
-            "B2": "It's done. Move on."
+            "B1": "It's done. Move on with the day.",
+            "B2": "It's done. Move on with the rest of the day."
           },
           "goto": 33
         },
         {
           "text": {
             "A2": "A second thought, too late.",
-            "B1": "A second thought, too late.",
-            "B2": "A second thought, too late."
+            "B1": "Have a second thought, too late.",
+            "B2": "Have a second thought about it, too late now."
           },
           "goto": 32
         }
@@ -959,16 +959,16 @@
     {
       "id": 32,
       "text": {
-        "A2": "[stub] You tell him you'll think. He shrugs; there's always someone.",
-        "B1": "[stub] You tell him you'll think. He shrugs; there's always someone.",
-        "B2": "[stub] You tell him you'll think. He shrugs; there's always someone."
+        "A2": "You tell the landlord you will think about it. He shrugs. \"There's always someone,\" he says. He is right. Cheap rooms like this always find a taker by night. You have not lost it yet. But you have not kept it either.",
+        "B1": "You tell him you'll think about it. He shrugs. \"There's always someone,\" he says, and he's right — cheap grey rooms like this always find a taker by nightfall. You haven't lost it yet. But you haven't held onto it, either.",
+        "B2": "You tell him you'll think about it, and he shrugs, entirely unbothered. \"There's always someone,\" he says, and the awful thing is that he's right — cheap grey rooms like this one always find a taker by nightfall. You haven't lost it, exactly. But you haven't held onto it either, and the day keeps moving whether you decide or not."
       },
       "choices": [
         {
           "text": {
             "A2": "Out to look properly.",
-            "B1": "Out to look properly.",
-            "B2": "Out to look properly."
+            "B1": "Out to look properly elsewhere.",
+            "B2": "Out to look properly somewhere else."
           },
           "goto": 34
         },
@@ -976,7 +976,7 @@
           "text": {
             "A2": "On to the canal room.",
             "B1": "On to the canal room.",
-            "B2": "On to the canal room."
+            "B2": "On, then, to the canal room."
           },
           "goto": 50
         }
@@ -985,16 +985,16 @@
     {
       "id": 33,
       "text": {
-        "A2": "[stub] You have a room, of sorts. Grey walls, a shared bathroom, a key that's yours.",
-        "B1": "[stub] You have a room, of sorts. Grey walls, a shared bathroom, a key that's yours.",
-        "B2": "[stub] You have a room, of sorts. Grey walls, a shared bathroom, a key that's yours."
+        "A2": "You have a room, of sorts. Grey walls, a shared bathroom down the stair, a key in your pocket that is yours. It is not warm. It is not a home. But it is a door that shuts, and tonight you will not be on the street. That is not nothing.",
+        "B1": "You have a room, of sorts: grey walls, a shared bathroom down the stair, a key in your pocket that is at least your own. It isn't warm, and it isn't a home — but it's a door that shuts, and tonight you won't be on the street. That is not nothing.",
+        "B2": "You have a room, of sorts — grey walls, a shared bathroom down the draughty stair, a key in your pocket that is, at least, unarguably your own. It isn't warm, and it isn't remotely a home. But it is a door that shuts behind you, and tonight, whatever else is true, you won't be out on the street. In this city, on this day, that is genuinely not nothing."
       },
       "choices": [
         {
           "text": {
             "A2": "Carry on with the day anyway.",
             "B1": "Carry on with the day anyway.",
-            "B2": "Carry on with the day anyway."
+            "B2": "Carry on with the rest of the day anyway."
           },
           "goto": 96
         },
@@ -1002,7 +1002,7 @@
           "text": {
             "A2": "Wonder if you rushed it.",
             "B1": "Wonder if you rushed it.",
-            "B2": "Wonder if you rushed it."
+            "B2": "Wonder, now, if you rushed it."
           },
           "goto": 34
         }
@@ -1011,32 +1011,32 @@
     {
       "id": 34,
       "text": {
-        "A2": "[stub] You back out to keep looking. The bedsit will keep; grim rooms always do.",
-        "B1": "[stub] You back out to keep looking. The bedsit will keep; grim rooms always do.",
-        "B2": "[stub] You back out to keep looking. The bedsit will keep; grim rooms always do."
+        "A2": "You back out to keep looking. The bedsit will keep. Grim rooms always do. Nobody rushes for a room with a wall for a view and a landlord who does not care. You can come back if the day gives you nothing better. For now, you go on.",
+        "B1": "You back out and keep looking. The bedsit will keep — grim rooms always do. Nobody rushes for a room with a wall for a view and a landlord who couldn't care less. You can come back to it if the day turns up nothing better. For now, you move on.",
+        "B2": "You back out of it and keep looking. The bedsit will keep — grim rooms always do, for nobody in their right mind rushes for four grey walls with a landlord who couldn't care less. You can always come back to it if the day turns up nothing better, which is a cold sort of comfort. For now, you move on with the little daylight you have left."
       },
       "choices": [
         {
           "text": {
             "A2": "On to the canal room.",
             "B1": "On to the canal room.",
-            "B2": "On to the canal room."
+            "B2": "On, then, to the canal room."
           },
           "goto": 50
         },
         {
           "text": {
             "A2": "Weigh it against the evening.",
-            "B1": "Weigh it against the evening.",
-            "B2": "Weigh it against the evening."
+            "B1": "Weigh it against the coming evening.",
+            "B2": "Weigh it against the coming evening first."
           },
           "goto": 96
         },
         {
           "text": {
-            "A2": "The shared bathroom decides it — no.",
+            "A2": "The shared bathroom decides it.",
             "B1": "The shared bathroom decides it — no.",
-            "B2": "The shared bathroom decides it — no."
+            "B2": "The shared bathroom decides it for you — no."
           },
           "goto": 39
         }
@@ -1045,24 +1045,24 @@
     {
       "id": 35,
       "text": {
-        "A2": "[stub] You ask why it's stood empty. The landlord bristles: 'You want it or not?' No lease, no questions, no answers.",
-        "B1": "[stub] You ask why it's stood empty. The landlord bristles: 'You want it or not?' No lease, no questions, no answers.",
-        "B2": "[stub] You ask why it's stood empty. The landlord bristles: 'You want it or not?' No lease, no questions, no answers."
+        "A2": "You ask why the room has stood empty. The landlord bristles. \"You want it or not?\" he says. No lease. No questions. No answers. A room this cheap, empty this long, in a city this full. That is a question, and he will not answer it.",
+        "B1": "You ask why the room's stood empty so long. The landlord bristles. \"You want it or not?\" No lease, no questions, no answers. A room this cheap, empty this long, in a city this crowded. That's a question with an answer he plainly doesn't want to give.",
+        "B2": "You ask why the room has stood empty so long, and the landlord bristles at once. \"You want it or not?\" is all you get. No lease, no questions permitted, no answers. A room this cheap, empty this long, in a city this crowded, is a question with an answer somewhere. His refusal to give it is, in its way, the clearest answer of all."
       },
       "choices": [
         {
           "text": {
             "A2": "Say you'll think about it.",
             "B1": "Say you'll think about it.",
-            "B2": "Say you'll think about it."
+            "B2": "Say you'll think it over."
           },
           "goto": 32
         },
         {
           "text": {
             "A2": "Back out.",
-            "B1": "Back out.",
-            "B2": "Back out."
+            "B1": "Back out of it.",
+            "B2": "Back out of it entirely."
           },
           "goto": 34
         }
@@ -1071,24 +1071,24 @@
     {
       "id": 36,
       "text": {
-        "A2": "[stub] The 'room to share' ad is far out, but the price is barely half the rest.",
-        "B1": "[stub] The 'room to share' ad is far out, but the price is barely half the rest.",
-        "B2": "[stub] The 'room to share' ad is far out, but the price is barely half the rest."
+        "A2": "The room-to-share advert is far out, at the edge of the city. But the price is barely half the rest. For that price you could keep money back for food and fares. It is a long way to go on a short day, though. You cannot get the time back.",
+        "B1": "The room-to-share advert is far out, at the edge of the city. But the price is barely half of everything else, low enough to leave you money for food and fares. It's a long way to travel on a short day, though. Time spent going is time you can't get back.",
+        "B2": "The room-to-share advert is far out, right at the ragged edge of the city. But the price is barely half of everything else you've seen, low enough to leave you actual money for food and fares. It's a long way to go on a short winter day, though. Every minute spent travelling out there is a minute of daylight you'll never get back."
       },
       "choices": [
         {
           "text": {
             "A2": "Make the trip to see it.",
-            "B1": "Make the trip to see it.",
-            "B2": "Make the trip to see it."
+            "B1": "Make the trip out to see it.",
+            "B2": "Make the long trip out to see it."
           },
           "goto": 37
         },
         {
           "text": {
-            "A2": "Too far — back to the real ads.",
+            "A2": "Too far. Back to the real ads.",
             "B1": "Too far — back to the real ads.",
-            "B2": "Too far — back to the real ads."
+            "B2": "Too far — back to the ads you can reach."
           },
           "goto": 7
         }
@@ -1097,24 +1097,24 @@
     {
       "id": 37,
       "text": {
-        "A2": "[stub] You get there. The share was taken this morning; the door is already someone else's.",
-        "B1": "[stub] You get there. The share was taken this morning; the door is already someone else's.",
-        "B2": "[stub] You get there. The share was taken this morning; the door is already someone else's."
+        "A2": "You get there at last. The share was taken this morning. The door is already someone else's door. A young man says sorry, and shuts it gently. You came a long way for a closed door. The day is shorter now, and you are further from every other room.",
+        "B1": "You get there at last, only to find the share was taken this morning. The door is already someone else's. A young man says sorry and shuts it gently. You came a long way for a closed door. The day is shorter for it, and you're further now from every other room in the paper.",
+        "B2": "You get there at last, footsore, only to learn the share was taken first thing this morning. The door is already, firmly, someone else's. A young man says he's sorry and closes it gently in your face. You've come a long way for a closed door. The day is markedly shorter for it, and you're now further from every other room than when you set out."
       },
       "choices": [
         {
           "text": {
             "A2": "Nothing here. Move on.",
             "B1": "Nothing here. Move on.",
-            "B2": "Nothing here. Move on."
+            "B2": "Nothing here for you. Move on."
           },
           "goto": 38
         },
         {
           "text": {
-            "A2": "Ask if they know of anything else going.",
+            "A2": "Ask if they know of anything.",
             "B1": "Ask if they know of anything else going.",
-            "B2": "Ask if they know of anything else going."
+            "B2": "Ask whether they know of anything else going."
           },
           "goto": 25
         }
@@ -1123,24 +1123,24 @@
     {
       "id": 38,
       "text": {
-        "A2": "[stub] You are further out than you meant to be, and the daylight is shorter for it.",
-        "B1": "[stub] You are further out than you meant to be, and the daylight is shorter for it.",
-        "B2": "[stub] You are further out than you meant to be, and the daylight is shorter for it."
+        "A2": "You are further out than you meant to be. The houses here are strange to you, and the buses are slow. The day is shorter now, and it is spent on nothing. You have learned one street and lost three hours. You must get back before the light goes.",
+        "B1": "You're further out than you meant to be, among houses you don't know, where the buses run slow. The day is shorter now and spent on nothing: one strange street learned, three good hours lost. You need to get back before the light goes for the evening.",
+        "B2": "You're further out than you ever meant to be, adrift among houses you don't know and buses that seem to run to no timetable at all. The day is markedly shorter now, and spent on precisely nothing: one strange street learned, three good hours simply lost. You need to get yourself back toward the centre before the light goes and takes your last real chances with it."
       },
       "choices": [
         {
           "text": {
             "A2": "Back toward the square.",
             "B1": "Back toward the square.",
-            "B2": "Back toward the square."
+            "B2": "Head back toward the square."
           },
           "goto": 25
         },
         {
           "text": {
-            "A2": "It's getting late — think about the evening.",
+            "A2": "It's late. Think of the evening.",
             "B1": "It's getting late — think about the evening.",
-            "B2": "It's getting late — think about the evening."
+            "B2": "It's getting late — start thinking about the evening."
           },
           "goto": 96
         }
@@ -1149,16 +1149,16 @@
     {
       "id": 39,
       "text": {
-        "A2": "[stub] One cold shared bathroom off the stair, a queue of doors. A room, but never a home.",
-        "B1": "[stub] One cold shared bathroom off the stair, a queue of doors. A room, but never a home.",
-        "B2": "[stub] One cold shared bathroom off the stair, a queue of doors. A room, but never a home."
+        "A2": "You look at the shared bathroom off the stair. One cold room, one door, and a queue of other doors that all use it too. You picture the mornings: waiting, always waiting, in a line of strangers. A room, maybe. But never, ever a home.",
+        "B1": "You take in the shared bathroom off the stair: one cold room, one door, and a row of other doors that all feed into it. You picture the mornings — waiting, always waiting, in a line of strangers. A room, perhaps. But never, in any real sense, a home.",
+        "B2": "You take in the shared bathroom off the stair — one cold, tiled room, one door, and a whole row of other doors that all feed into it. You picture the mornings stretching ahead: waiting, always waiting, in a shivering line of strangers you'll never quite learn the names of. A room, perhaps, at a push. But never, in any sense that means anything, a home."
       },
       "choices": [
         {
           "text": {
             "A2": "On to the canal room.",
             "B1": "On to the canal room.",
-            "B2": "On to the canal room."
+            "B2": "On, then, to the canal room."
           },
           "goto": 50
         },
@@ -1166,7 +1166,7 @@
           "text": {
             "A2": "Think about the evening.",
             "B1": "Think about the evening.",
-            "B2": "Think about the evening."
+            "B2": "Start thinking about the evening."
           },
           "goto": 96
         }
