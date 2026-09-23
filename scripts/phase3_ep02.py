@@ -641,6 +641,226 @@ P(90,
    t("Toward closing.", "Toward closing.", "On toward closing.")])
 
 
+# ============================ ACT III — CLOSING ============================
+
+P(91,
+  t("Closing is near. The crowd is thin now, the noise low. On the back shelf, the saved bowl still waits — cold now, but there. Below it, the stool is still empty. Any moment, the market master will come for the fee. But your eyes keep going to that stool, and the bowl above it. And the question you never answered.",
+    "Closing is near now. The crowd is thin, the noise low. On the back shelf the saved bowl still waits — cold by now, but still there. Below it, the end stool is still empty. Any moment the master will come round for the fee. But your eyes keep drifting to that stool, and the cold bowl above it, and the question you never got answered.",
+    "Closing is near now. The crowd has thinned to a handful, the noise dropped to a murmur. On the back shelf the saved bowl still waits — long cold by now, but still there where you left it. Below it, the end stool stands empty. Any moment now the master will come round for the fee. But your eyes keep drifting back to that stool, and the cold bowl above it, and the question you never quite got answered."),
+  [t("Watch the stool.", "Watch the stool.", "Watch the empty stool."),
+   t("Sould comes for the fee.", "Sould comes for the fee.", "Sould comes for the fee."),
+   t("Remember Auntie's voice.", "You remember Auntie saying his name.", "You remember Auntie saying his name.")])
+
+P(92,
+  t("Sould appears at your counter, right on time. \"Well?\" he says softly. \"Made the fee? Or do you need that loan after all?\" If you are short, this is the easy way out. Take his money, pay the master, keep the corner tonight. But you know the price of his help now. You have to answer him.",
+    "Sould appears at your counter, right on cue. \"Well?\" he says softly. \"Made the fee yet? Or do you need that little loan after all?\" If you're short, this is the easy way out. Take his money, pay the master, keep the corner tonight. But you know the real price of his help now. You have to answer him.",
+    "Sould appears at your counter, right on cue, as if he'd been counting the minutes. \"Well?\" he says softly. \"Made the fee yet? Or do you need that little loan after all?\" If you're short, this is the easy way out — take his money, pay the master, keep the corner for tonight. But you know the real price of his help now, the one he never names. You have to answer him."),
+  [t("Take his loan.", "Take his loan.", "Take his loan."),
+   t("Refuse. Take your chances.", "Refuse, and take your chances.", "Refuse, and take your chances."),
+   t("His smile at closing.", "His smile at closing.", "His smile at closing.")])
+
+P(93,
+  t("An old man comes slowly through the thinning crowd. He is thin, grey, tired. He stops at the end stool — the empty one. He rests a hand on it, as if he knows it. He looks at you, then at the back shelf, then away. He does not sit. He does not order. He just stands there, waiting for something.",
+    "An old man comes slowly through the thinning crowd. He's thin, grey, tired-looking. He stops at the end stool — the empty one — and rests a hand on it, as if he knows it well. He looks at you, then at the back shelf, then away. He doesn't sit. He doesn't order. He just stands there, waiting for something you can't name.",
+    "An old man comes slowly through the thinning crowd. He's thin, grey, tired to the bone. He stops at the end stool — the empty one — and rests a hand on it, lightly, as if he has known it for years. He looks at you, then at the back shelf, then away again. He doesn't sit. He doesn't order. He just stands there, waiting for something you couldn't put a name to."),
+  [t("Offer him the saved bowl.", "Offer him the saved bowl.", "Offer him the saved bowl."),
+   t("Offer a fresh bowl.", "Offer a fresh bowl.", "Offer him a fresh bowl."),
+   t("You have nothing left.", "You have nothing left.", "You have nothing left."),
+   t("An old photo by the till.", "An old photo by the till.", "An old photo by the till.")])
+
+P(94,
+  t("You take the saved bowl from the shelf and set it before him. \"This one is yours,\" you say. \"It always has been.\" The old man looks at the bowl. Then at you. His eyes fill. \"She kept it,\" he says, very quiet. \"All this time. She kept it.\" You do not fully understand yet. But you know you did something right.",
+    "You take the saved bowl down from the shelf and set it before him. \"This one is yours,\" you say. \"It always has been.\" The old man looks at the bowl, then at you, and his eyes fill. \"She kept it,\" he says, very quietly. \"All this time. She kept it.\" You don't fully understand yet — but you know you've done something right.",
+    "You take the saved bowl down from the shelf and set it carefully before him. \"This one is yours,\" you say. \"It always has been.\" The old man looks at the bowl for a long moment, then at you, and his tired eyes fill. \"She kept it,\" he says, very quietly. \"All this time. She kept it for me.\" You don't fully understand it yet — but you know, all the way down, that you've done something right."),
+  [t("Serve it. He stays.", "Serve it, and he stays.", "Serve it, and he stays."),
+   t("Just talk to him.", "Just talk to him.", "Just talk with him.")])
+
+P(95,
+  t("You serve the old man, and he sits at last. As he eats, he talks a little. He and Auntie were close, long ago. Then there was a falling-out — small, silly, the kind that hardens over years. He stopped coming. But he never stopped wanting to. \"Tell her,\" he says. \"Tell her Behn came back.\"",
+    "You serve the old man, and at last he sits. As he eats, he talks a little. He and Auntie were close once, long ago — then there was a falling-out, small and silly, the kind that hardens over the years. He stopped coming. But he never stopped wanting to. \"Tell her,\" he says. \"Tell her Behn came back.\"",
+    "You serve the old man, and at last he sits down on the stool. As he eats, he talks, a little at a time. He and Auntie were close once, long ago — then there was a falling-out, small and silly, the kind that quietly hardens over the years into something neither can cross. He stopped coming. But he never once stopped wanting to. \"Tell her,\" he says at last. \"Tell her Behn came back.\""),
+  [t("Toward closing.", "Toward closing.", "On toward closing."),
+   t("What his return means.", "What his return means.", "What his return means.")])
+
+P(96,
+  t("The end stool has stood empty all night, while every other seat filled and emptied and filled again. One empty stool, one cold bowl above it. It is the quietest thing in a loud market — and somehow the loudest, if you let yourself notice. Auntie kept it for a reason. You wish you knew what it was.",
+    "The end stool has stood empty all night, while every other seat filled and emptied and filled again. One empty stool, one cold saved bowl on the shelf above it. It's the quietest thing in a loud market — and somehow, if you let yourself notice, the loudest. Auntie keeps it for a reason. You wish you knew what.",
+    "The end stool has stood empty the whole night, while every other seat filled and emptied and filled again a dozen times. One empty stool, one cold saved bowl on the shelf above it. It's the quietest thing in the whole loud market — and somehow, if you let yourself really notice it, the loudest. Auntie keeps it for a reason she wouldn't say. You find you badly want to know what."),
+  [t("Watch it a while.", "Watch it a while.", "Watch it a while."),
+   t("Back to work.", "Back to work.", "Back to work.")])
+
+P(97,
+  t("You think of Auntie's face on the phone, the way it changed at the name Behn. Not anger. Something softer and sadder than that. Whoever he is, he matters to her still, after all these years. The bowl on the shelf is not a habit. It is a door she keeps open, in case. You understand that much now.",
+    "You think of Auntie's face on the phone — the way her voice changed at the name Behn. Not anger. Something softer and sadder than anger. Whoever he is, he still matters to her, after all these years. The bowl on the shelf isn't just a habit. It's a door she keeps open, in case. You understand that much now, at least.",
+    "You think of Auntie's face on the phone — the way her voice changed, just slightly, at the name Behn. Not anger. Something softer and sadder than anger, and older. Whoever he is, he still matters to her, after all these years and all this silence. The bowl on the shelf isn't just a habit, you see now. It's a door she keeps quietly open, in case. You understand that much, at least."),
+  [t("Watch the stool.", "Watch the stool.", "Watch the stool."),
+   t("Serve whoever comes.", "Serve whoever comes.", "Serve whoever comes.")])
+
+P(98,
+  t("By the till, half-hidden, there is an old photo. You have passed it all night without looking. Now you do. It is Auntie, years younger, laughing. Beside her stands a young man, laughing too. On the back, in her hand, two words: me and Behn. Now the empty stool and the saved bowl make a kind of sense.",
+    "By the till, half-hidden, sits an old photo. You've passed it all night without looking. Now you do. It's Auntie, years younger, laughing. Beside her stands a young man, laughing too. On the back, in her writing, two words: me and Behn. Now the empty stool and the cold saved bowl make a kind of sense.",
+    "By the till, half-hidden behind the coins, sits an old photograph. You've passed it all night without once looking. Now you do. It's Auntie, years younger, laughing at whoever held the camera. Beside her stands a young man, laughing too, easy and close. On the back, in her writing, two words: me and Behn. And now the empty stool, and the cold saved bowl above it, make a kind of aching sense."),
+  [t("Offer the saved bowl.", "Offer the saved bowl.", "Offer him the saved bowl."),
+   t("Offer a fresh bowl.", "Offer a fresh bowl.", "Offer him a fresh bowl.")])
+
+P(100,
+  t("As Behn eats, you understand what tonight has become. It was never only about the fee. Auntie sent you to keep her stall — but also, without saying so, to keep her door open. And it worked. He came back. Whatever else happens with the money now, this part of the night is already a kind of win.",
+    "As Behn eats, you begin to understand what tonight has really become. It was never only about the fee. Auntie sent you to keep her stall running — but also, without ever saying so, to keep her door open. And it worked: he came back. Whatever happens with the money now, this part of the night is already a kind of win.",
+    "As Behn eats, slowly, you begin to understand what tonight has really become. It was never only about the fee, not entirely. Auntie sent you to keep her stall running — but also, without ever quite saying so, to keep a door open that she couldn't bring herself to close. And it worked: he came back. Whatever happens with the money now, this part of the night is already, quietly, a kind of win."),
+  [t("Toward closing.", "Toward closing.", "On toward closing."),
+   t("Talk with him.", "Talk with him a while.", "Talk with him a while.")])
+
+P(101,
+  t("Closing time. You pull the money box out and count, coin by coin, with the lantern low. Your heart beats hard. Is it enough? The number climbs. You count again, to be sure. Down the row, you can hear the market master coming. Stall to stall, taking the fees, one door at a time. Your turn is close.",
+    "Closing time. You pull the money box out and count it, coin by coin, in the low lantern light. Your heart is beating hard. Is it enough? The number climbs as you count, and you count again to be sure. Down the row you can hear the master coming — stall to stall, taking the fees, one door at a time. Your turn is close.",
+    "Closing time at last. You pull the money box out and count it, coin by coin, in the low lantern light, hands not quite steady. Your heart is beating hard. Is it enough? The number climbs as you count, and you count it again to be sure. Down the row you can hear the market master coming — stall to stall, taking the fees, one door at a time. Your turn is very close now."),
+  [t("Face the master.", "Face the master's round.", "Face the master's round."),
+   t("Watch the stool once more.", "Watch the stool once more.", "Watch the stool once more."),
+   t("The master goes stall to stall.", "The master works stall by stall.", "The master works stall by stall.")])
+
+P(102,
+  t("The market master moves down the row, slow and steady. He is old, fair, and has seen every trick a stall can try. At each pitch he stops, takes the fee, marks his book, moves on. Some stalls pay easily. Some cannot pay at all. You watch him come, and you hold your money box a little tighter.",
+    "The market master moves down the row, slow and steady. He's old, fair, and has seen every trick a stall can try in thirty years. At each pitch he stops, takes the fee, marks his book, and moves on. Some stalls pay easily; some can't pay at all. You watch him come closer, and hold your money box a little tighter.",
+    "The market master moves down the row, slow and steady, missing nothing. He's old, and fair, and has seen every trick a stall can try in a long lifetime of them. At each pitch he stops, takes the fee, marks it in his book, and moves on. Some stalls pay easily; others can't pay at all, and he marks that too. You watch him come closer, and hold your money box a little tighter."),
+  [t("Your turn comes.", "Your turn comes.", "Your turn comes."),
+   t("Others fell short.", "Others who fell short pack up.", "Others who fell short pack up.")])
+
+P(103,
+  t("You watch a stall down the row fall short. The master shakes his head, kind but firm. The stallholder starts, slowly, to pack up — plates, pots, a lifetime of nights, boxed away. No shouting. Just a quiet ending. It could be you in an hour. The thought puts steel in you. Not tonight. Not Auntie's corner.",
+    "You watch a stall down the row come up short. The master shakes his head, kind but firm. The stallholder begins, slowly, to pack up — plates, pots, a lifetime of nights, all boxed away. No shouting, no scene; just a quiet ending. It could be you in an hour. The thought puts steel in you: not tonight, not Auntie's corner.",
+    "You watch a stall further down the row come up short. The master shakes his head, kind but quite firm. The stallholder begins, slowly, to pack it all up — plates, pots, a lifetime of nights, boxed away without a word. No shouting, no scene; just a quiet, final ending. It could be you in an hour, you know. The thought puts steel in you: not tonight, not Auntie's corner, not on your watch."),
+  [t("Your turn.", "Your turn.", "Your turn now."),
+   t("The lanterns come down.", "The lanterns come down.", "The lanterns come down.")])
+
+P(104,
+  t("One by one, down the row, the lanterns come down. The market is putting itself to bed. The bright noisy world of a few hours ago is folding into boxes and shadows. Your two red lanterns still glow, for now. Whether they hang here next season depends on the next few minutes, and the coins in your box.",
+    "One by one, down the whole row, the lanterns are coming down. The market is putting itself to bed. The bright, noisy world of a few hours ago is folding away into boxes and shadows. Your own two red lanterns still glow, for now. Whether they hang here next season comes down to the next few minutes — and the coins in your box.",
+    "One by one, all down the row, the lanterns are coming down. The market is quietly putting itself to bed. The bright, noisy, steaming world of a few hours ago is folding itself away into boxes and shadows. Your own two red lanterns still glow, for now. Whether they hang over this corner next season comes down to the next few minutes — and the coins counted in your box."),
+  [t("Face the master.", "Face the master.", "Face the master."),
+   t("The last of the night.", "The last of the night.", "The last of the night.")])
+
+P(105,
+  t("Grey light creeps over the market roofs. Dawn. The end of the night, and the end of the season. Somewhere a bird starts up. The air smells of cold ash and old steam. You have been on your feet all night, and you can feel every hour of it. But you are still here, and the stall is still yours — for now.",
+    "Grey light creeps over the market roofs: dawn, the end of the night and the end of the season. Somewhere a lone bird starts up. The air smells of cold ash and old steam. You've been on your feet the whole night, and you can feel every single hour of it. But you're still here, and the stall is still yours — for now, at least.",
+    "Grey light creeps up over the market roofs: dawn at last, the end of the night and the end of the whole season. Somewhere a lone bird starts up, absurdly cheerful. The air smells of cold ash and old steam and rain. You've been on your feet the entire night, and you can feel every single hour of it in your bones. But you're still here, and the stall is still yours — for now, at least."),
+  [t("Watch the stool.", "Watch the stool.", "Watch the stool."),
+   t("Toward closing.", "Toward closing.", "On toward closing.")])
+
+P(110,
+  t("The master stops at pitch 24. He looks at you, then at the stall, then at Auntie's empty place. \"So it's you tonight,\" he says. \"How did we do?\" This is it — the whole night, come down to one moment and one number. You take a breath and open the money box. Everything you did tonight is in it.",
+    "The master stops at pitch 24. He looks at you, then at the stall, then at Auntie's empty place behind the counter. \"So it's you tonight,\" he says. \"How did we do?\" This is it — the whole night come down to a single moment and a single number. You take a breath and open the money box. Everything you did tonight is in there.",
+    "The master stops at pitch 24. He looks at you, then at the stall, then at Auntie's empty place behind the counter, and something flickers over his face. \"So it's you tonight,\" he says. \"How did we do?\" This is it — the whole long night come down to a single moment and a single number. You take a breath and open the money box. Everything you did tonight is in there, one way or another."),
+  [t("Pay from an honest night.", "Pay from a proud, honest night.", "Pay from a proud, honest night."),
+   t("Pay cleanly, no debt.", "Pay it cleanly, no fixer, no debt.", "Pay it cleanly, no fixer, no debt."),
+   t("You're not sure you made it.", "You're not sure you've made it.", "You're not sure you've made it.")])
+
+P(111,
+  t("You count it out in front of him, coin by coin. The night is all there in the money: the good bowls, the choices, the corners kept or cut. The master watches, patient, saying nothing. You are close to the fee. Close. But close is a word that can go either way at dawn. It all rests on the last count.",
+    "You count it out in front of him, coin by coin. The whole night is there in the money — the good bowls, the hard choices, the corners kept or cut. The master watches, patient, saying nothing at all. You're close to the fee. Close. But close is a word that can fall either way at dawn, and it all rests on this last count.",
+    "You count it out in front of him, coin by coin, under the last lantern. The whole night is there in the money — the good bowls and the bad, the hard choices, every corner kept or cut. The master watches, patient, saying nothing at all. You're close to the fee. Close. But close is a word that can fall either way at dawn, and it all rests, now, on this last count."),
+  [t("Fell short, but made the name.", "You fell short, but you made the name.", "You fell short, but you made the name."),
+   t("Made it — by cutting corners.", "You made it — but by cutting corners.", "You made it — but by cutting corners."),
+   t("Weigh the rest.", "Weigh the rest.", "Weigh the rest.")])
+
+P(112,
+  t("The count stops short. Not by much — but short is short, and the master's book does not round up. The corner is slipping away, coin by missing coin. Unless. There is still one card or two left to play, if you played the night right. You think fast. What do you have that the money alone does not show?",
+    "The count stops just short. Not by much — but short is short, and the master's book doesn't round up for anyone. The corner is slipping away, coin by missing coin. Unless — there's still a card or two left to play, if you played the rest of the night right. You think fast: what do you have that the money alone doesn't show?",
+    "The count stops just short. Not by much — but short is short, and the master's book doesn't round up for anyone, however hard the night. The corner is slipping away, coin by missing coin. Unless — there's still a card or two left to play, if you played the rest of the night right. You think fast: what do you have, tonight, that the money in the box alone doesn't show?"),
+  [t("Sould covered it — for a price.", "Sould has already covered it — for a price.", "Sould has already covered it — for a price."),
+   t("The tea woman offers to help.", "The tea woman offers to cover you.", "The tea woman offers to cover you."),
+   t("Weigh the last of it.", "Weigh the last of it.", "Weigh the last of it.")])
+
+P(113,
+  t("You are down to the last of it now. The money is short, the fixer refused, the tea woman already stretched. What's left is smaller, quieter things — a kindness done earlier, maybe, coming back around. Or nothing. Sometimes a night just does not add up, however hard you worked. You wait to see which kind of night this was.",
+    "You're down to the very last of it now. The money's short, the fixer refused, the tea woman already stretched thin. What's left is smaller, quieter things — a kindness done earlier, perhaps, coming back around. Or nothing at all. Sometimes a night just doesn't add up, however hard you worked it. You wait to see which kind of night this turns out to be.",
+    "You're down to the very last of it now. The money's short, the fixer refused, the tea woman already stretched too thin to ask. What's left is smaller, quieter things — a kindness done earlier in the night, perhaps, quietly coming back around. Or nothing at all. Sometimes a night just doesn't add up, however hard and honestly you worked it. You wait, heart in your mouth, to see which kind of night this turns out to have been."),
+  [t("The kid's family come.", "The kid's family fill your last bowls.", "The kid's family fill your last bowls."),
+   t("The master gives you a week.", "The master gives you till next week.", "The master gives you till next week."),
+   t("The worst of it.", "The worst of it.", "The worst of it.")])
+
+P(114,
+  t("There is nothing left to set against the fee. No money enough, no favour, no kindness coming back. Just you, a cold box of coins, and a number you could not reach. The master waits, not unkind, for your answer. However this ends now, you worked all night for it. That has to count for something, even if not tonight.",
+    "There's nothing left to set against the fee. Not enough money, no favour owed, no kindness circling back. Just you, a cold box of coins, and a number you couldn't quite reach. The master waits, not unkindly, for your answer. However this ends now, you worked all night for it — and that has to count for something, even if not tonight.",
+    "There's nothing left to set against the fee. Not enough money, no favour owed, no kindness circling back to catch you. Just you, a cold box of coins, and a number you couldn't quite reach however hard you tried. The master waits, not unkindly, for your answer. However this ends now, you worked all night for it, honestly — and that has to count for something, somewhere, even if not tonight."),
+  [t("Short. The pitch is lost.", "You're short; the pitch is lost.", "You're short; the pitch is lost."),
+   t("The pot ran dry too soon.", "The pot ran dry hours ago.", "The pot ran dry hours ago."),
+   t("Think of giving it back.", "You think about handing it back.", "You think about handing it back.")])
+
+# ============================ ENDINGS ======================================
+
+P(120,
+  t("You pour the coins onto the counter, and they are enough — more than enough. The master counts, nods, and marks his book. \"Pitch 24, paid. Good night's work.\" You sold honest food to the very last bowl, and the corner is safe. When Auntie hears, she cries a little, and laughs. Thirty years, and one more to come.",
+    "You pour the coins onto the counter, and they're enough — more than enough. The master counts, nods, and marks his book. \"Pitch 24, paid. Good night's work.\" You sold honest, good food to the very last bowl, and the corner is safe for another season. When Auntie hears, she cries a little, and then laughs. Thirty years — and one more to come.",
+    "You pour the coins out onto the counter, and they're enough — more than enough. The master counts them, nods once, and marks his book. \"Pitch 24, paid. Good night's work.\" You sold honest, good food to the very last bowl in the pot, and the corner is safe for another whole season. When Auntie hears, down the phone, she cries a little, and then laughs. Thirty years — and, thanks to you, one more to come."),
+  [])
+
+P(121,
+  t("Behn eats the saved bowl slowly, like it is the first warm thing in a long time. When the master comes, the money is short. But Behn stands. He speaks for you, and for Auntie. He pays what's short himself. \"For old friends,\" he says. The corner is safe. And so, it seems, is something long broken. Tell her Behn came back.",
+    "Behn eats the saved bowl slowly, as if it's the first warm thing he's had in a long time. When the master comes and the money falls short, Behn stands up. He speaks for you, and for Auntie, and pays what's missing himself. \"For old friends,\" he says. The corner is safe — and so, it seems, is something between them that was broken a long time ago. Tell her Behn came back.",
+    "Behn eats the saved bowl slowly, as if it's the first warm thing he's had in a very long time. When the master comes and the money falls a little short, Behn stands up from the stool. He speaks for you, and for Auntie, and quietly pays what's missing himself. \"For old friends,\" he says. The corner is safe — and so, it seems, is something between the two of them that was broken a long, long time ago. Tell her Behn came back, you think. Tell her tonight."),
+  [])
+
+P(122,
+  t("The coins are enough — just. No loan, no favour, no corner cut. You made the fee with your own two hands, your own honest bowls, your own long night. The master marks his book: \"Pitch 24, paid.\" You lean on the counter, empty and proud. Nobody carried you tonight. You carried the stall yourself.",
+    "The coins are enough — just enough. No loan, no favour called in, no corner cut. You made the fee with your own two hands, your own honest bowls, your own long night on your feet. The master marks his book: \"Pitch 24, paid.\" You lean on the counter, wrung out and quietly proud. Nobody carried you tonight — you carried the stall yourself.",
+    "The coins are enough — just enough, and no more. No loan, no favour called in, no corner cut anywhere. You made the fee with your own two hands, your own honest bowls, your own long night on your aching feet. The master marks his book: \"Pitch 24, paid.\" You lean on the counter, wrung out and quietly, fiercely proud. Nobody carried you tonight. You carried the stall yourself, all the way to dawn."),
+  [])
+
+P(123,
+  t("The money is a little short. But as the master counts, the regulars speak up. \"That one cooked us Sim's own bowl all night,\" one says. \"Same as always.\" The master looks at you a long moment. Then he marks his book. \"A name is worth a few coins,\" he says. \"Pitch 24 stays. Don't be short next time.\"",
+    "The money's a little short. But as the master counts, your regulars speak up for you. \"That one cooked us Sim's own bowl all night,\" one says. \"Same as always.\" The master looks at you a long moment, then marks his book. \"A good name is worth a few coins,\" he says. \"Pitch 24 stays. Don't be short next time.\"",
+    "The money's a little short. But as the master counts, your regulars speak up for you, one after another. \"That one cooked us Sim's own bowl all night long,\" one says. \"Same as always.\" The master looks at you a long, measuring moment, then marks his book. \"A good name is worth a few coins,\" he says. \"Pitch 24 stays. But don't be short next time.\""),
+  [])
+
+P(124,
+  t("The coins reach the fee. Just. The master counts, nods, marks his book. \"Pitch 24, paid.\" You kept the corner. But you cut corners to do it. Half-cooked bowls, short change, a regular or two who won't come back. The pitch is safe. The name is a little poorer. You saved the corner, and spent some of what made it worth saving.",
+    "The coins reach the fee — just. The master counts, nods, and marks his book. \"Pitch 24, paid.\" You kept the corner. But you cut corners to do it: half-cooked bowls, short change, a regular or two who won't be back. The pitch is safe, and the name is a little poorer for the night. You saved the corner, and spent some of what made it worth saving.",
+    "The coins reach the fee — just barely. The master counts, nods, and marks his book. \"Pitch 24, paid.\" You kept the corner. But you cut corners to do it: half-cooked bowls, short change slipped across, a regular or two who quietly won't be back. The pitch is safe, and the name is a little poorer for the night's work. You saved the corner, and spent some of the very thing that made it worth saving."),
+  [])
+
+P(125,
+  t("The count comes up short. Before you can speak, the tea woman is there. She puts her own coins on the counter, enough to close the gap. \"You helped me tonight,\" she says. \"Now I help you.\" The master allows it. The corner is safe — not by your money, but by a kindness returned. You will not forget this, either.",
+    "The count comes up short. But before you can even speak, the tea woman is there beside you. She puts her own coins on the counter, just enough to close the gap. \"You helped me tonight,\" she says. \"Now I help you.\" The master allows it. The corner is safe — not by your money, but by a kindness returned. You won't forget this either.",
+    "The count comes up short. But before you can even speak, the tea woman is there at your side. She lays her own hard-earned coins on the counter, just enough to close the gap. \"You helped me tonight,\" she says simply. \"Now I help you.\" The master allows it, with the ghost of a smile. The corner is safe — not by your money, in the end, but by a kindness given and returned. You won't forget this, either."),
+  [])
+
+P(126,
+  t("The money is short, and the corner is lost tonight. But then the kid appears — with their whole ragged crew. Hungry and grinning, coins in their fists for your last bowls. It is not enough to save the pitch. But it is a start of something. You fed one child tonight, and it fed you back. The stall will find a way.",
+    "The money's short, and the corner is lost for tonight. But then the kid appears — with a whole ragged crew in tow, hungry and grinning, coins in their fists for your last bowls. It isn't enough to save the pitch, not now. But it's the start of something. You fed one child tonight, and it's feeding you back. The stall will find a way.",
+    "The money's short, and the corner is lost for tonight. But then the kid appears out of the dark — with a whole ragged crew in tow, hungry and grinning, coins clutched in their fists for your very last bowls. It isn't enough to save the pitch, not now, not tonight. But it's the start of something real. You fed one hungry child tonight, without asking anything, and now it's quietly feeding you back. The stall will find a way."),
+  [])
+
+P(127,
+  t("The count falls short, and the master sees it. But he also sees the night you had — alone, new, and still standing at dawn. \"Auntie's kept this corner clean for thirty years,\" he says. \"You've earned one more market day. Bring the rest then.\" It is not a win. But it is not a loss. It is another chance, and you will take it.",
+    "The count falls short, and the master sees it plainly. But he also sees the night you've had — alone, new, and still on your feet at dawn. \"Sim's kept this corner honest for thirty years,\" he says. \"You've earned one more market day. Bring the rest then.\" It isn't a win. But it isn't a loss either. It's another chance, and you'll take it.",
+    "The count falls short, and the master sees it plainly enough. But he also sees the night you've had — alone, brand new to it, and still on your feet at dawn. \"Sim's kept this corner honest for thirty years,\" he says, after a moment. \"You've earned one more market day. Bring the rest of it then.\" It isn't a win. But it isn't a loss, either. It's another chance, freely given, and you'll take it with both hands."),
+  [])
+
+P(128,
+  t("The master takes his fee, and the corner is safe — on paper. But the money that paid it was Sould's, and Sould's money is never really yours. Tomorrow he will smile and call you 'friend' and start to name his price. You kept the pitch tonight. But the ground under it belongs to him now, and he does not forget.",
+    "The master takes his fee, and the corner is safe — on paper. But the money that paid it was Sould's, and Sould's money is never really yours. Tomorrow he'll smile, and call you 'friend', and begin, slowly, to name his price. You kept the pitch tonight. But the ground beneath it belongs to him now, and Sould never forgets a debt.",
+    "The master takes his fee, and the corner is safe — on paper, at least. But the money that paid it was Sould's, and Sould's money is never, ever really yours. Tomorrow he'll smile, and call you 'friend', and begin, slowly and pleasantly, to name his price. You kept the pitch tonight. But the ground beneath it belongs to him now, and Sould, as everyone warned you, never forgets a debt."),
+  [])
+
+P(129,
+  t("The coins fall short of the fee. The master counts twice, to be fair, but the number does not change. \"I'm sorry,\" he says, and he means it. \"Pitch 24 goes to the morning list.\" Thirty years, ended on your one night. You did not do anything wrong, exactly. The night was just longer than the money. It happens. It still hurts.",
+    "The coins fall short of the fee. The master counts them twice, to be fair, but the number doesn't change. \"I'm sorry,\" he says, and he means it. \"Pitch 24 goes on the morning list.\" Thirty years, ended on your one night in charge. You didn't do anything wrong, exactly — the night was just longer than the money. It happens. It still hurts like anything.",
+    "The coins fall short of the fee. The master counts them twice over, to be fair to you, but the number doesn't change. \"I'm sorry,\" he says, and he plainly means it. \"Pitch 24 goes on the morning list.\" Thirty years, ended on your one night in charge of it. You didn't do anything wrong, exactly — the night was simply longer than the money would stretch. It happens, to better cooks than you. It still hurts like anything."),
+  [])
+
+P(130,
+  t("You ran out too soon. Hours before dawn, the pot was empty, the stock gone, the counter cold. You stood there while the market moved on around you, unable to sell a thing. By the time the master comes, the box is far short. You didn't lose the night to bad luck. You lost it to bad planning. Next time, you will know better.",
+    "You ran out far too soon. Hours before dawn the pot was empty, the stock gone, the counter cold. You stood there while the market moved on around you, unable to sell a single thing. By the time the master comes, the box is well short. You didn't lose the night to bad luck — you lost it to bad planning. Next time, if there is one, you'll know better.",
+    "You ran out far too soon. Hours before dawn the pot stood empty, the stock gone, the counter going cold. You stood there while the whole market moved on and spent around you, unable to sell a single thing. By the time the master comes, the box is well short. You didn't lose the night to bad luck — you lost it to bad planning, plain and simple. Next time, if there is a next time, you'll know better."),
+  [])
+
+P(131,
+  t("The fee is out of reach, and something in you gives way. You are so tired. The night beat you — the crowd, the fixer, the fear, the endless bowls. As the master marks his book, you think of giving the stall up. Just for a moment. For good. Of telling Auntie you couldn't. You don't say it out loud. But tonight, you think it.",
+    "The fee is out of reach, and something in you quietly gives way. You're so tired. The night beat you — the crowd, the fixer, the fear, the endless bowls. As the master marks his book, you think, just for a moment, about giving the stall up for good. About telling Auntie you couldn't do it. You don't say it out loud. But tonight, for the first time, you think it.",
+    "The fee is out of reach, and something in you quietly gives way. You're so tired you can barely stand. The night beat you — the crowd, the fixer, the fear, the endless, endless bowls. As the master marks his book, you think, just for a moment, about giving the stall up for good. About telling Auntie, gently, that you couldn't do it. You don't say it out loud, of course. But tonight, for the first time, you let yourself think it."),
+  [])
+
+
 # ============================ apply ========================================
 def main():
     book = json.load(open(BOOK, encoding="utf-8"))

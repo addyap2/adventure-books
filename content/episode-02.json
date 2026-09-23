@@ -2480,16 +2480,16 @@
     {
       "id": 91,
       "text": {
-        "A2": "[stub] Near closing: the empty stool, the saved bowl on the shelf.",
-        "B1": "[stub] Near closing: the empty stool, the saved bowl on the shelf.",
-        "B2": "[stub] Near closing: the empty stool, the saved bowl on the shelf."
+        "A2": "Closing is near. The crowd is thin now, the noise low. On the back shelf, the saved bowl still waits — cold now, but there. Below it, the stool is still empty. Any moment, the market master will come for the fee. But your eyes keep going to that stool, and the bowl above it. And the question you never answered.",
+        "B1": "Closing is near now. The crowd is thin, the noise low. On the back shelf the saved bowl still waits — cold by now, but still there. Below it, the end stool is still empty. Any moment the master will come round for the fee. But your eyes keep drifting to that stool, and the cold bowl above it, and the question you never got answered.",
+        "B2": "Closing is near now. The crowd has thinned to a handful, the noise dropped to a murmur. On the back shelf the saved bowl still waits — long cold by now, but still there where you left it. Below it, the end stool stands empty. Any moment now the master will come round for the fee. But your eyes keep drifting back to that stool, and the cold bowl above it, and the question you never quite got answered."
       },
       "choices": [
         {
           "text": {
             "A2": "Watch the stool.",
             "B1": "Watch the stool.",
-            "B2": "Watch the stool."
+            "B2": "Watch the empty stool."
           },
           "goto": 93
         },
@@ -2503,7 +2503,7 @@
         },
         {
           "text": {
-            "A2": "You remember Auntie saying his name.",
+            "A2": "Remember Auntie's voice.",
             "B1": "You remember Auntie saying his name.",
             "B2": "You remember Auntie saying his name."
           },
@@ -2514,9 +2514,9 @@
     {
       "id": 92,
       "text": {
-        "A2": "[stub] Sould's last offer, if you're short.",
-        "B1": "[stub] Sould's last offer, if you're short.",
-        "B2": "[stub] Sould's last offer, if you're short."
+        "A2": "Sould appears at your counter, right on time. \"Well?\" he says softly. \"Made the fee? Or do you need that loan after all?\" If you are short, this is the easy way out. Take his money, pay the master, keep the corner tonight. But you know the price of his help now. You have to answer him.",
+        "B1": "Sould appears at your counter, right on cue. \"Well?\" he says softly. \"Made the fee yet? Or do you need that little loan after all?\" If you're short, this is the easy way out. Take his money, pay the master, keep the corner tonight. But you know the real price of his help now. You have to answer him.",
+        "B2": "Sould appears at your counter, right on cue, as if he'd been counting the minutes. \"Well?\" he says softly. \"Made the fee yet? Or do you need that little loan after all?\" If you're short, this is the easy way out — take his money, pay the master, keep the corner for tonight. But you know the real price of his help now, the one he never names. You have to answer him."
       },
       "choices": [
         {
@@ -2532,7 +2532,7 @@
         },
         {
           "text": {
-            "A2": "Refuse, and take your chances.",
+            "A2": "Refuse. Take your chances.",
             "B1": "Refuse, and take your chances.",
             "B2": "Refuse, and take your chances."
           },
@@ -2554,9 +2554,9 @@
     {
       "id": 93,
       "text": {
-        "A2": "[stub] An old man approaches the empty stool.",
-        "B1": "[stub] An old man approaches the empty stool.",
-        "B2": "[stub] An old man approaches the empty stool."
+        "A2": "An old man comes slowly through the thinning crowd. He is thin, grey, tired. He stops at the end stool — the empty one. He rests a hand on it, as if he knows it. He looks at you, then at the back shelf, then away. He does not sit. He does not order. He just stands there, waiting for something.",
+        "B1": "An old man comes slowly through the thinning crowd. He's thin, grey, tired-looking. He stops at the end stool — the empty one — and rests a hand on it, as if he knows it well. He looks at you, then at the back shelf, then away. He doesn't sit. He doesn't order. He just stands there, waiting for something you can't name.",
+        "B2": "An old man comes slowly through the thinning crowd. He's thin, grey, tired to the bone. He stops at the end stool — the empty one — and rests a hand on it, lightly, as if he has known it for years. He looks at you, then at the back shelf, then away again. He doesn't sit. He doesn't order. He just stands there, waiting for something you couldn't put a name to."
       },
       "choices": [
         {
@@ -2574,7 +2574,7 @@
           "text": {
             "A2": "Offer a fresh bowl.",
             "B1": "Offer a fresh bowl.",
-            "B2": "Offer a fresh bowl."
+            "B2": "Offer him a fresh bowl."
           },
           "goto": 95
         },
@@ -2599,14 +2599,14 @@
     {
       "id": 94,
       "text": {
-        "A2": "[stub] You set the saved bowl before him. His face changes.",
-        "B1": "[stub] You set the saved bowl before him. His face changes.",
-        "B2": "[stub] You set the saved bowl before him. His face changes."
+        "A2": "You take the saved bowl from the shelf and set it before him. \"This one is yours,\" you say. \"It always has been.\" The old man looks at the bowl. Then at you. His eyes fill. \"She kept it,\" he says, very quiet. \"All this time. She kept it.\" You do not fully understand yet. But you know you did something right.",
+        "B1": "You take the saved bowl down from the shelf and set it before him. \"This one is yours,\" you say. \"It always has been.\" The old man looks at the bowl, then at you, and his eyes fill. \"She kept it,\" he says, very quietly. \"All this time. She kept it.\" You don't fully understand yet — but you know you've done something right.",
+        "B2": "You take the saved bowl down from the shelf and set it carefully before him. \"This one is yours,\" you say. \"It always has been.\" The old man looks at the bowl for a long moment, then at you, and his tired eyes fill. \"She kept it,\" he says, very quietly. \"All this time. She kept it for me.\" You don't fully understand it yet — but you know, all the way down, that you've done something right."
       },
       "choices": [
         {
           "text": {
-            "A2": "Serve it, and he stays.",
+            "A2": "Serve it. He stays.",
             "B1": "Serve it, and he stays.",
             "B2": "Serve it, and he stays."
           },
@@ -2619,7 +2619,7 @@
           "text": {
             "A2": "Just talk to him.",
             "B1": "Just talk to him.",
-            "B2": "Just talk to him."
+            "B2": "Just talk with him."
           },
           "goto": 95
         }
@@ -2628,16 +2628,16 @@
     {
       "id": 95,
       "text": {
-        "A2": "[stub] You serve Behn, and he tells you a little.",
-        "B1": "[stub] You serve Behn, and he tells you a little.",
-        "B2": "[stub] You serve Behn, and he tells you a little."
+        "A2": "You serve the old man, and he sits at last. As he eats, he talks a little. He and Auntie were close, long ago. Then there was a falling-out — small, silly, the kind that hardens over years. He stopped coming. But he never stopped wanting to. \"Tell her,\" he says. \"Tell her Behn came back.\"",
+        "B1": "You serve the old man, and at last he sits. As he eats, he talks a little. He and Auntie were close once, long ago — then there was a falling-out, small and silly, the kind that hardens over the years. He stopped coming. But he never stopped wanting to. \"Tell her,\" he says. \"Tell her Behn came back.\"",
+        "B2": "You serve the old man, and at last he sits down on the stool. As he eats, he talks, a little at a time. He and Auntie were close once, long ago — then there was a falling-out, small and silly, the kind that quietly hardens over the years into something neither can cross. He stopped coming. But he never once stopped wanting to. \"Tell her,\" he says at last. \"Tell her Behn came back.\""
       },
       "choices": [
         {
           "text": {
             "A2": "Toward closing.",
             "B1": "Toward closing.",
-            "B2": "Toward closing."
+            "B2": "On toward closing."
           },
           "goto": 110
         },
@@ -2654,9 +2654,9 @@
     {
       "id": 96,
       "text": {
-        "A2": "[stub] The stool has stood empty the whole night.",
-        "B1": "[stub] The stool has stood empty the whole night.",
-        "B2": "[stub] The stool has stood empty the whole night."
+        "A2": "The end stool has stood empty all night, while every other seat filled and emptied and filled again. One empty stool, one cold bowl above it. It is the quietest thing in a loud market — and somehow the loudest, if you let yourself notice. Auntie kept it for a reason. You wish you knew what it was.",
+        "B1": "The end stool has stood empty all night, while every other seat filled and emptied and filled again. One empty stool, one cold saved bowl on the shelf above it. It's the quietest thing in a loud market — and somehow, if you let yourself notice, the loudest. Auntie keeps it for a reason. You wish you knew what.",
+        "B2": "The end stool has stood empty the whole night, while every other seat filled and emptied and filled again a dozen times. One empty stool, one cold saved bowl on the shelf above it. It's the quietest thing in the whole loud market — and somehow, if you let yourself really notice it, the loudest. Auntie keeps it for a reason she wouldn't say. You find you badly want to know what."
       },
       "choices": [
         {
@@ -2680,9 +2680,9 @@
     {
       "id": 97,
       "text": {
-        "A2": "[stub] You remember Auntie's face at his name.",
-        "B1": "[stub] You remember Auntie's face at his name.",
-        "B2": "[stub] You remember Auntie's face at his name."
+        "A2": "You think of Auntie's face on the phone, the way it changed at the name Behn. Not anger. Something softer and sadder than that. Whoever he is, he matters to her still, after all these years. The bowl on the shelf is not a habit. It is a door she keeps open, in case. You understand that much now.",
+        "B1": "You think of Auntie's face on the phone — the way her voice changed at the name Behn. Not anger. Something softer and sadder than anger. Whoever he is, he still matters to her, after all these years. The bowl on the shelf isn't just a habit. It's a door she keeps open, in case. You understand that much now, at least.",
+        "B2": "You think of Auntie's face on the phone — the way her voice changed, just slightly, at the name Behn. Not anger. Something softer and sadder than anger, and older. Whoever he is, he still matters to her, after all these years and all this silence. The bowl on the shelf isn't just a habit, you see now. It's a door she keeps quietly open, in case. You understand that much, at least."
       },
       "choices": [
         {
@@ -2706,16 +2706,16 @@
     {
       "id": 98,
       "text": {
-        "A2": "[stub] An old photo tucked by the till: Auntie, younger, and a man.",
-        "B1": "[stub] An old photo tucked by the till: Auntie, younger, and a man.",
-        "B2": "[stub] An old photo tucked by the till: Auntie, younger, and a man."
+        "A2": "By the till, half-hidden, there is an old photo. You have passed it all night without looking. Now you do. It is Auntie, years younger, laughing. Beside her stands a young man, laughing too. On the back, in her hand, two words: me and Behn. Now the empty stool and the saved bowl make a kind of sense.",
+        "B1": "By the till, half-hidden, sits an old photo. You've passed it all night without looking. Now you do. It's Auntie, years younger, laughing. Beside her stands a young man, laughing too. On the back, in her writing, two words: me and Behn. Now the empty stool and the cold saved bowl make a kind of sense.",
+        "B2": "By the till, half-hidden behind the coins, sits an old photograph. You've passed it all night without once looking. Now you do. It's Auntie, years younger, laughing at whoever held the camera. Beside her stands a young man, laughing too, easy and close. On the back, in her writing, two words: me and Behn. And now the empty stool, and the cold saved bowl above it, make a kind of aching sense."
       },
       "choices": [
         {
           "text": {
             "A2": "Offer the saved bowl.",
             "B1": "Offer the saved bowl.",
-            "B2": "Offer the saved bowl."
+            "B2": "Offer him the saved bowl."
           },
           "goto": 94
         },
@@ -2723,7 +2723,7 @@
           "text": {
             "A2": "Offer a fresh bowl.",
             "B1": "Offer a fresh bowl.",
-            "B2": "Offer a fresh bowl."
+            "B2": "Offer him a fresh bowl."
           },
           "goto": 95
         }
@@ -2732,22 +2732,22 @@
     {
       "id": 100,
       "text": {
-        "A2": "[stub] What Mr Behn's return means to the stall.",
-        "B1": "[stub] What Mr Behn's return means to the stall.",
-        "B2": "[stub] What Mr Behn's return means to the stall."
+        "A2": "As Behn eats, you understand what tonight has become. It was never only about the fee. Auntie sent you to keep her stall — but also, without saying so, to keep her door open. And it worked. He came back. Whatever else happens with the money now, this part of the night is already a kind of win.",
+        "B1": "As Behn eats, you begin to understand what tonight has really become. It was never only about the fee. Auntie sent you to keep her stall running — but also, without ever saying so, to keep her door open. And it worked: he came back. Whatever happens with the money now, this part of the night is already a kind of win.",
+        "B2": "As Behn eats, slowly, you begin to understand what tonight has really become. It was never only about the fee, not entirely. Auntie sent you to keep her stall running — but also, without ever quite saying so, to keep a door open that she couldn't bring herself to close. And it worked: he came back. Whatever happens with the money now, this part of the night is already, quietly, a kind of win."
       },
       "choices": [
         {
           "text": {
             "A2": "Toward closing.",
             "B1": "Toward closing.",
-            "B2": "Toward closing."
+            "B2": "On toward closing."
           },
           "goto": 110
         },
         {
           "text": {
-            "A2": "Talk with him a while.",
+            "A2": "Talk with him.",
             "B1": "Talk with him a while.",
             "B2": "Talk with him a while."
           },
@@ -2758,14 +2758,14 @@
     {
       "id": 101,
       "text": {
-        "A2": "[stub] Closing time nears; you count the takings against the fee.",
-        "B1": "[stub] Closing time nears; you count the takings against the fee.",
-        "B2": "[stub] Closing time nears; you count the takings against the fee."
+        "A2": "Closing time. You pull the money box out and count, coin by coin, with the lantern low. Your heart beats hard. Is it enough? The number climbs. You count again, to be sure. Down the row, you can hear the market master coming. Stall to stall, taking the fees, one door at a time. Your turn is close.",
+        "B1": "Closing time. You pull the money box out and count it, coin by coin, in the low lantern light. Your heart is beating hard. Is it enough? The number climbs as you count, and you count again to be sure. Down the row you can hear the master coming — stall to stall, taking the fees, one door at a time. Your turn is close.",
+        "B2": "Closing time at last. You pull the money box out and count it, coin by coin, in the low lantern light, hands not quite steady. Your heart is beating hard. Is it enough? The number climbs as you count, and you count it again to be sure. Down the row you can hear the market master coming — stall to stall, taking the fees, one door at a time. Your turn is very close now."
       },
       "choices": [
         {
           "text": {
-            "A2": "Face the master's round.",
+            "A2": "Face the master.",
             "B1": "Face the master's round.",
             "B2": "Face the master's round."
           },
@@ -2781,7 +2781,7 @@
         },
         {
           "text": {
-            "A2": "The master works stall by stall.",
+            "A2": "The master goes stall to stall.",
             "B1": "The master works stall by stall.",
             "B2": "The master works stall by stall."
           },
@@ -2792,9 +2792,9 @@
     {
       "id": 102,
       "text": {
-        "A2": "[stub] The market master's slow round, stall by stall.",
-        "B1": "[stub] The market master's slow round, stall by stall.",
-        "B2": "[stub] The market master's slow round, stall by stall."
+        "A2": "The market master moves down the row, slow and steady. He is old, fair, and has seen every trick a stall can try. At each pitch he stops, takes the fee, marks his book, moves on. Some stalls pay easily. Some cannot pay at all. You watch him come, and you hold your money box a little tighter.",
+        "B1": "The market master moves down the row, slow and steady. He's old, fair, and has seen every trick a stall can try in thirty years. At each pitch he stops, takes the fee, marks his book, and moves on. Some stalls pay easily; some can't pay at all. You watch him come closer, and hold your money box a little tighter.",
+        "B2": "The market master moves down the row, slow and steady, missing nothing. He's old, and fair, and has seen every trick a stall can try in a long lifetime of them. At each pitch he stops, takes the fee, marks it in his book, and moves on. Some stalls pay easily; others can't pay at all, and he marks that too. You watch him come closer, and hold your money box a little tighter."
       },
       "choices": [
         {
@@ -2807,7 +2807,7 @@
         },
         {
           "text": {
-            "A2": "Others who fell short pack up.",
+            "A2": "Others fell short.",
             "B1": "Others who fell short pack up.",
             "B2": "Others who fell short pack up."
           },
@@ -2818,16 +2818,16 @@
     {
       "id": 103,
       "text": {
-        "A2": "[stub] Stalls that missed the fee are packing up.",
-        "B1": "[stub] Stalls that missed the fee are packing up.",
-        "B2": "[stub] Stalls that missed the fee are packing up."
+        "A2": "You watch a stall down the row fall short. The master shakes his head, kind but firm. The stallholder starts, slowly, to pack up — plates, pots, a lifetime of nights, boxed away. No shouting. Just a quiet ending. It could be you in an hour. The thought puts steel in you. Not tonight. Not Auntie's corner.",
+        "B1": "You watch a stall down the row come up short. The master shakes his head, kind but firm. The stallholder begins, slowly, to pack up — plates, pots, a lifetime of nights, all boxed away. No shouting, no scene; just a quiet ending. It could be you in an hour. The thought puts steel in you: not tonight, not Auntie's corner.",
+        "B2": "You watch a stall further down the row come up short. The master shakes his head, kind but quite firm. The stallholder begins, slowly, to pack it all up — plates, pots, a lifetime of nights, boxed away without a word. No shouting, no scene; just a quiet, final ending. It could be you in an hour, you know. The thought puts steel in you: not tonight, not Auntie's corner, not on your watch."
       },
       "choices": [
         {
           "text": {
             "A2": "Your turn.",
             "B1": "Your turn.",
-            "B2": "Your turn."
+            "B2": "Your turn now."
           },
           "goto": 110
         },
@@ -2844,9 +2844,9 @@
     {
       "id": 104,
       "text": {
-        "A2": "[stub] The lanterns are lowered one by one.",
-        "B1": "[stub] The lanterns are lowered one by one.",
-        "B2": "[stub] The lanterns are lowered one by one."
+        "A2": "One by one, down the row, the lanterns come down. The market is putting itself to bed. The bright noisy world of a few hours ago is folding into boxes and shadows. Your two red lanterns still glow, for now. Whether they hang here next season depends on the next few minutes, and the coins in your box.",
+        "B1": "One by one, down the whole row, the lanterns are coming down. The market is putting itself to bed. The bright, noisy world of a few hours ago is folding away into boxes and shadows. Your own two red lanterns still glow, for now. Whether they hang here next season comes down to the next few minutes — and the coins in your box.",
+        "B2": "One by one, all down the row, the lanterns are coming down. The market is quietly putting itself to bed. The bright, noisy, steaming world of a few hours ago is folding itself away into boxes and shadows. Your own two red lanterns still glow, for now. Whether they hang over this corner next season comes down to the next few minutes — and the coins counted in your box."
       },
       "choices": [
         {
@@ -2870,9 +2870,9 @@
     {
       "id": 105,
       "text": {
-        "A2": "[stub] Dawn grey spreads over the market roofs.",
-        "B1": "[stub] Dawn grey spreads over the market roofs.",
-        "B2": "[stub] Dawn grey spreads over the market roofs."
+        "A2": "Grey light creeps over the market roofs. Dawn. The end of the night, and the end of the season. Somewhere a bird starts up. The air smells of cold ash and old steam. You have been on your feet all night, and you can feel every hour of it. But you are still here, and the stall is still yours — for now.",
+        "B1": "Grey light creeps over the market roofs: dawn, the end of the night and the end of the season. Somewhere a lone bird starts up. The air smells of cold ash and old steam. You've been on your feet the whole night, and you can feel every single hour of it. But you're still here, and the stall is still yours — for now, at least.",
+        "B2": "Grey light creeps up over the market roofs: dawn at last, the end of the night and the end of the whole season. Somewhere a lone bird starts up, absurdly cheerful. The air smells of cold ash and old steam and rain. You've been on your feet the entire night, and you can feel every single hour of it in your bones. But you're still here, and the stall is still yours — for now, at least."
       },
       "choices": [
         {
@@ -2887,7 +2887,7 @@
           "text": {
             "A2": "Toward closing.",
             "B1": "Toward closing.",
-            "B2": "Toward closing."
+            "B2": "On toward closing."
           },
           "goto": 101
         }
@@ -2896,14 +2896,14 @@
     {
       "id": 110,
       "text": {
-        "A2": "[stub] The master stops at pitch 24. The fee is due.",
-        "B1": "[stub] The master stops at pitch 24. The fee is due.",
-        "B2": "[stub] The master stops at pitch 24. The fee is due."
+        "A2": "The master stops at pitch 24. He looks at you, then at the stall, then at Auntie's empty place. \"So it's you tonight,\" he says. \"How did we do?\" This is it — the whole night, come down to one moment and one number. You take a breath and open the money box. Everything you did tonight is in it.",
+        "B1": "The master stops at pitch 24. He looks at you, then at the stall, then at Auntie's empty place behind the counter. \"So it's you tonight,\" he says. \"How did we do?\" This is it — the whole night come down to a single moment and a single number. You take a breath and open the money box. Everything you did tonight is in there.",
+        "B2": "The master stops at pitch 24. He looks at you, then at the stall, then at Auntie's empty place behind the counter, and something flickers over his face. \"So it's you tonight,\" he says. \"How did we do?\" This is it — the whole long night come down to a single moment and a single number. You take a breath and open the money box. Everything you did tonight is in there, one way or another."
       },
       "choices": [
         {
           "text": {
-            "A2": "Pay from a proud, honest night.",
+            "A2": "Pay from an honest night.",
             "B1": "Pay from a proud, honest night.",
             "B2": "Pay from a proud, honest night."
           },
@@ -2915,7 +2915,7 @@
         },
         {
           "text": {
-            "A2": "Pay it cleanly, no fixer, no debt.",
+            "A2": "Pay cleanly, no debt.",
             "B1": "Pay it cleanly, no fixer, no debt.",
             "B2": "Pay it cleanly, no fixer, no debt."
           },
@@ -2927,7 +2927,7 @@
         },
         {
           "text": {
-            "A2": "You're not sure you've made it.",
+            "A2": "You're not sure you made it.",
             "B1": "You're not sure you've made it.",
             "B2": "You're not sure you've made it."
           },
@@ -2938,14 +2938,14 @@
     {
       "id": 111,
       "text": {
-        "A2": "[stub] You lay out what the night brought.",
-        "B1": "[stub] You lay out what the night brought.",
-        "B2": "[stub] You lay out what the night brought."
+        "A2": "You count it out in front of him, coin by coin. The night is all there in the money: the good bowls, the choices, the corners kept or cut. The master watches, patient, saying nothing. You are close to the fee. Close. But close is a word that can go either way at dawn. It all rests on the last count.",
+        "B1": "You count it out in front of him, coin by coin. The whole night is there in the money — the good bowls, the hard choices, the corners kept or cut. The master watches, patient, saying nothing at all. You're close to the fee. Close. But close is a word that can fall either way at dawn, and it all rests on this last count.",
+        "B2": "You count it out in front of him, coin by coin, under the last lantern. The whole night is there in the money — the good bowls and the bad, the hard choices, every corner kept or cut. The master watches, patient, saying nothing at all. You're close to the fee. Close. But close is a word that can fall either way at dawn, and it all rests, now, on this last count."
       },
       "choices": [
         {
           "text": {
-            "A2": "You fell short, but you made the name.",
+            "A2": "Fell short, but made the name.",
             "B1": "You fell short, but you made the name.",
             "B2": "You fell short, but you made the name."
           },
@@ -2956,7 +2956,7 @@
         },
         {
           "text": {
-            "A2": "You made it — but by cutting corners.",
+            "A2": "Made it — by cutting corners.",
             "B1": "You made it — but by cutting corners.",
             "B2": "You made it — but by cutting corners."
           },
@@ -2978,14 +2978,14 @@
     {
       "id": 112,
       "text": {
-        "A2": "[stub] The fee still isn't quite there.",
-        "B1": "[stub] The fee still isn't quite there.",
-        "B2": "[stub] The fee still isn't quite there."
+        "A2": "The count stops short. Not by much — but short is short, and the master's book does not round up. The corner is slipping away, coin by missing coin. Unless. There is still one card or two left to play, if you played the night right. You think fast. What do you have that the money alone does not show?",
+        "B1": "The count stops just short. Not by much — but short is short, and the master's book doesn't round up for anyone. The corner is slipping away, coin by missing coin. Unless — there's still a card or two left to play, if you played the rest of the night right. You think fast: what do you have that the money alone doesn't show?",
+        "B2": "The count stops just short. Not by much — but short is short, and the master's book doesn't round up for anyone, however hard the night. The corner is slipping away, coin by missing coin. Unless — there's still a card or two left to play, if you played the rest of the night right. You think fast: what do you have, tonight, that the money in the box alone doesn't show?"
       },
       "choices": [
         {
           "text": {
-            "A2": "Sould has already covered it — for a price.",
+            "A2": "Sould covered it — for a price.",
             "B1": "Sould has already covered it — for a price.",
             "B2": "Sould has already covered it — for a price."
           },
@@ -2996,7 +2996,7 @@
         },
         {
           "text": {
-            "A2": "The tea woman offers to cover you.",
+            "A2": "The tea woman offers to help.",
             "B1": "The tea woman offers to cover you.",
             "B2": "The tea woman offers to cover you."
           },
@@ -3018,14 +3018,14 @@
     {
       "id": 113,
       "text": {
-        "A2": "[stub] Down to the last of your choices.",
-        "B1": "[stub] Down to the last of your choices.",
-        "B2": "[stub] Down to the last of your choices."
+        "A2": "You are down to the last of it now. The money is short, the fixer refused, the tea woman already stretched. What's left is smaller, quieter things — a kindness done earlier, maybe, coming back around. Or nothing. Sometimes a night just does not add up, however hard you worked. You wait to see which kind of night this was.",
+        "B1": "You're down to the very last of it now. The money's short, the fixer refused, the tea woman already stretched thin. What's left is smaller, quieter things — a kindness done earlier, perhaps, coming back around. Or nothing at all. Sometimes a night just doesn't add up, however hard you worked it. You wait to see which kind of night this turns out to be.",
+        "B2": "You're down to the very last of it now. The money's short, the fixer refused, the tea woman already stretched too thin to ask. What's left is smaller, quieter things — a kindness done earlier in the night, perhaps, quietly coming back around. Or nothing at all. Sometimes a night just doesn't add up, however hard and honestly you worked it. You wait, heart in your mouth, to see which kind of night this turns out to have been."
       },
       "choices": [
         {
           "text": {
-            "A2": "The kid's family fill your last bowls.",
+            "A2": "The kid's family come.",
             "B1": "The kid's family fill your last bowls.",
             "B2": "The kid's family fill your last bowls."
           },
@@ -3036,7 +3036,7 @@
         },
         {
           "text": {
-            "A2": "The master gives you till next week.",
+            "A2": "The master gives you a week.",
             "B1": "The master gives you till next week.",
             "B2": "The master gives you till next week."
           },
@@ -3055,14 +3055,14 @@
     {
       "id": 114,
       "text": {
-        "A2": "[stub] Nothing left to set against the fee.",
-        "B1": "[stub] Nothing left to set against the fee.",
-        "B2": "[stub] Nothing left to set against the fee."
+        "A2": "There is nothing left to set against the fee. No money enough, no favour, no kindness coming back. Just you, a cold box of coins, and a number you could not reach. The master waits, not unkind, for your answer. However this ends now, you worked all night for it. That has to count for something, even if not tonight.",
+        "B1": "There's nothing left to set against the fee. Not enough money, no favour owed, no kindness circling back. Just you, a cold box of coins, and a number you couldn't quite reach. The master waits, not unkindly, for your answer. However this ends now, you worked all night for it — and that has to count for something, even if not tonight.",
+        "B2": "There's nothing left to set against the fee. Not enough money, no favour owed, no kindness circling back to catch you. Just you, a cold box of coins, and a number you couldn't quite reach however hard you tried. The master waits, not unkindly, for your answer. However this ends now, you worked all night for it, honestly — and that has to count for something, somewhere, even if not tonight."
       },
       "choices": [
         {
           "text": {
-            "A2": "You're short; the pitch is lost.",
+            "A2": "Short. The pitch is lost.",
             "B1": "You're short; the pitch is lost.",
             "B2": "You're short; the pitch is lost."
           },
@@ -3070,7 +3070,7 @@
         },
         {
           "text": {
-            "A2": "The pot ran dry hours ago.",
+            "A2": "The pot ran dry too soon.",
             "B1": "The pot ran dry hours ago.",
             "B2": "The pot ran dry hours ago."
           },
@@ -3078,7 +3078,7 @@
         },
         {
           "text": {
-            "A2": "You think about handing it back.",
+            "A2": "Think of giving it back.",
             "B1": "You think about handing it back.",
             "B2": "You think about handing it back."
           },
@@ -3089,108 +3089,108 @@
     {
       "id": 120,
       "text": {
-        "A2": "[stub] GOOD — Sold out, and proud. Honest good food to the last bowl; the fee paid, pitch 24 kept, the name intact.",
-        "B1": "[stub] GOOD — Sold out, and proud. Honest good food to the last bowl; the fee paid, pitch 24 kept, the name intact.",
-        "B2": "[stub] GOOD — Sold out, and proud. Honest good food to the last bowl; the fee paid, pitch 24 kept, the name intact."
+        "A2": "You pour the coins onto the counter, and they are enough — more than enough. The master counts, nods, and marks his book. \"Pitch 24, paid. Good night's work.\" You sold honest food to the very last bowl, and the corner is safe. When Auntie hears, she cries a little, and laughs. Thirty years, and one more to come.",
+        "B1": "You pour the coins onto the counter, and they're enough — more than enough. The master counts, nods, and marks his book. \"Pitch 24, paid. Good night's work.\" You sold honest, good food to the very last bowl, and the corner is safe for another season. When Auntie hears, she cries a little, and then laughs. Thirty years — and one more to come.",
+        "B2": "You pour the coins out onto the counter, and they're enough — more than enough. The master counts them, nods once, and marks his book. \"Pitch 24, paid. Good night's work.\" You sold honest, good food to the very last bowl in the pot, and the corner is safe for another whole season. When Auntie hears, down the phone, she cries a little, and then laughs. Thirty years — and, thanks to you, one more to come."
       },
       "ending": "good"
     },
     {
       "id": 121,
       "text": {
-        "A2": "[stub] GOOD — The last bowl (secret). Mr Behn returns at dawn; the saved bowl is served, and you learn who he is to Auntie. Something long cold is warmed.",
-        "B1": "[stub] GOOD — The last bowl (secret). Mr Behn returns at dawn; the saved bowl is served, and you learn who he is to Auntie. Something long cold is warmed.",
-        "B2": "[stub] GOOD — The last bowl (secret). Mr Behn returns at dawn; the saved bowl is served, and you learn who he is to Auntie. Something long cold is warmed."
+        "A2": "Behn eats the saved bowl slowly, like it is the first warm thing in a long time. When the master comes, the money is short. But Behn stands. He speaks for you, and for Auntie. He pays what's short himself. \"For old friends,\" he says. The corner is safe. And so, it seems, is something long broken. Tell her Behn came back.",
+        "B1": "Behn eats the saved bowl slowly, as if it's the first warm thing he's had in a long time. When the master comes and the money falls short, Behn stands up. He speaks for you, and for Auntie, and pays what's missing himself. \"For old friends,\" he says. The corner is safe — and so, it seems, is something between them that was broken a long time ago. Tell her Behn came back.",
+        "B2": "Behn eats the saved bowl slowly, as if it's the first warm thing he's had in a very long time. When the master comes and the money falls a little short, Behn stands up from the stool. He speaks for you, and for Auntie, and quietly pays what's missing himself. \"For old friends,\" he says. The corner is safe — and so, it seems, is something between the two of them that was broken a long, long time ago. Tell her Behn came back, you think. Tell her tonight."
       },
       "ending": "good"
     },
     {
       "id": 122,
       "text": {
-        "A2": "[stub] GOOD — On your own terms. You make the fee cleanly — no fixer, no debt, no corners cut. The corner is yours, earned.",
-        "B1": "[stub] GOOD — On your own terms. You make the fee cleanly — no fixer, no debt, no corners cut. The corner is yours, earned.",
-        "B2": "[stub] GOOD — On your own terms. You make the fee cleanly — no fixer, no debt, no corners cut. The corner is yours, earned."
+        "A2": "The coins are enough — just. No loan, no favour, no corner cut. You made the fee with your own two hands, your own honest bowls, your own long night. The master marks his book: \"Pitch 24, paid.\" You lean on the counter, empty and proud. Nobody carried you tonight. You carried the stall yourself.",
+        "B1": "The coins are enough — just enough. No loan, no favour called in, no corner cut. You made the fee with your own two hands, your own honest bowls, your own long night on your feet. The master marks his book: \"Pitch 24, paid.\" You lean on the counter, wrung out and quietly proud. Nobody carried you tonight — you carried the stall yourself.",
+        "B2": "The coins are enough — just enough, and no more. No loan, no favour called in, no corner cut anywhere. You made the fee with your own two hands, your own honest bowls, your own long night on your aching feet. The master marks his book: \"Pitch 24, paid.\" You lean on the counter, wrung out and quietly, fiercely proud. Nobody carried you tonight. You carried the stall yourself, all the way to dawn."
       },
       "ending": "good"
     },
     {
       "id": 123,
       "text": {
-        "A2": "[stub] GOOD — A name, not just a night. You fell short of the full fee, but you made the stall's name tonight, and you're given grace to keep the corner.",
-        "B1": "[stub] GOOD — A name, not just a night. You fell short of the full fee, but you made the stall's name tonight, and you're given grace to keep the corner.",
-        "B2": "[stub] GOOD — A name, not just a night. You fell short of the full fee, but you made the stall's name tonight, and you're given grace to keep the corner."
+        "A2": "The money is a little short. But as the master counts, the regulars speak up. \"That one cooked us Sim's own bowl all night,\" one says. \"Same as always.\" The master looks at you a long moment. Then he marks his book. \"A name is worth a few coins,\" he says. \"Pitch 24 stays. Don't be short next time.\"",
+        "B1": "The money's a little short. But as the master counts, your regulars speak up for you. \"That one cooked us Sim's own bowl all night,\" one says. \"Same as always.\" The master looks at you a long moment, then marks his book. \"A good name is worth a few coins,\" he says. \"Pitch 24 stays. Don't be short next time.\"",
+        "B2": "The money's a little short. But as the master counts, your regulars speak up for you, one after another. \"That one cooked us Sim's own bowl all night long,\" one says. \"Same as always.\" The master looks at you a long, measuring moment, then marks his book. \"A good name is worth a few coins,\" he says. \"Pitch 24 stays. But don't be short next time.\""
       },
       "ending": "good"
     },
     {
       "id": 124,
       "text": {
-        "A2": "[stub] NEUTRAL — The money, not the name. You hit the fee by cutting corners. You keep the pitch, but the regulars saw, and thirty years of trust is thinner tonight.",
-        "B1": "[stub] NEUTRAL — The money, not the name. You hit the fee by cutting corners. You keep the pitch, but the regulars saw, and thirty years of trust is thinner tonight.",
-        "B2": "[stub] NEUTRAL — The money, not the name. You hit the fee by cutting corners. You keep the pitch, but the regulars saw, and thirty years of trust is thinner tonight."
+        "A2": "The coins reach the fee. Just. The master counts, nods, marks his book. \"Pitch 24, paid.\" You kept the corner. But you cut corners to do it. Half-cooked bowls, short change, a regular or two who won't come back. The pitch is safe. The name is a little poorer. You saved the corner, and spent some of what made it worth saving.",
+        "B1": "The coins reach the fee — just. The master counts, nods, and marks his book. \"Pitch 24, paid.\" You kept the corner. But you cut corners to do it: half-cooked bowls, short change, a regular or two who won't be back. The pitch is safe, and the name is a little poorer for the night. You saved the corner, and spent some of what made it worth saving.",
+        "B2": "The coins reach the fee — just barely. The master counts, nods, and marks his book. \"Pitch 24, paid.\" You kept the corner. But you cut corners to do it: half-cooked bowls, short change slipped across, a regular or two who quietly won't be back. The pitch is safe, and the name is a little poorer for the night's work. You saved the corner, and spent some of the very thing that made it worth saving."
       },
       "ending": "neutral"
     },
     {
       "id": 125,
       "text": {
-        "A2": "[stub] NEUTRAL — Covered, this once. You fall short, but the tea woman covers your fee, no strings, because you stood by her. Warmth without the win.",
-        "B1": "[stub] NEUTRAL — Covered, this once. You fall short, but the tea woman covers your fee, no strings, because you stood by her. Warmth without the win.",
-        "B2": "[stub] NEUTRAL — Covered, this once. You fall short, but the tea woman covers your fee, no strings, because you stood by her. Warmth without the win."
+        "A2": "The count comes up short. Before you can speak, the tea woman is there. She puts her own coins on the counter, enough to close the gap. \"You helped me tonight,\" she says. \"Now I help you.\" The master allows it. The corner is safe — not by your money, but by a kindness returned. You will not forget this, either.",
+        "B1": "The count comes up short. But before you can even speak, the tea woman is there beside you. She puts her own coins on the counter, just enough to close the gap. \"You helped me tonight,\" she says. \"Now I help you.\" The master allows it. The corner is safe — not by your money, but by a kindness returned. You won't forget this either.",
+        "B2": "The count comes up short. But before you can even speak, the tea woman is there at your side. She lays her own hard-earned coins on the counter, just enough to close the gap. \"You helped me tonight,\" she says simply. \"Now I help you.\" The master allows it, with the ghost of a smile. The corner is safe — not by your money, in the end, but by a kindness given and returned. You won't forget this, either."
       },
       "ending": "neutral"
     },
     {
       "id": 126,
       "text": {
-        "A2": "[stub] NEUTRAL — The kindness fed back. No fee tonight, but the child you fed brings a hungry crew who'll come back. A start, not a save.",
-        "B1": "[stub] NEUTRAL — The kindness fed back. No fee tonight, but the child you fed brings a hungry crew who'll come back. A start, not a save.",
-        "B2": "[stub] NEUTRAL — The kindness fed back. No fee tonight, but the child you fed brings a hungry crew who'll come back. A start, not a save."
+        "A2": "The money is short, and the corner is lost tonight. But then the kid appears — with their whole ragged crew. Hungry and grinning, coins in their fists for your last bowls. It is not enough to save the pitch. But it is a start of something. You fed one child tonight, and it fed you back. The stall will find a way.",
+        "B1": "The money's short, and the corner is lost for tonight. But then the kid appears — with a whole ragged crew in tow, hungry and grinning, coins in their fists for your last bowls. It isn't enough to save the pitch, not now. But it's the start of something. You fed one child tonight, and it's feeding you back. The stall will find a way.",
+        "B2": "The money's short, and the corner is lost for tonight. But then the kid appears out of the dark — with a whole ragged crew in tow, hungry and grinning, coins clutched in their fists for your very last bowls. It isn't enough to save the pitch, not now, not tonight. But it's the start of something real. You fed one hungry child tonight, without asking anything, and now it's quietly feeding you back. The stall will find a way."
       },
       "ending": "neutral"
     },
     {
       "id": 127,
       "text": {
-        "A2": "[stub] NEUTRAL — One more week. You scrape close; the master gives you till the next market day. Not a loss — just not yet.",
-        "B1": "[stub] NEUTRAL — One more week. You scrape close; the master gives you till the next market day. Not a loss — just not yet.",
-        "B2": "[stub] NEUTRAL — One more week. You scrape close; the master gives you till the next market day. Not a loss — just not yet."
+        "A2": "The count falls short, and the master sees it. But he also sees the night you had — alone, new, and still standing at dawn. \"Auntie's kept this corner clean for thirty years,\" he says. \"You've earned one more market day. Bring the rest then.\" It is not a win. But it is not a loss. It is another chance, and you will take it.",
+        "B1": "The count falls short, and the master sees it plainly. But he also sees the night you've had — alone, new, and still on your feet at dawn. \"Sim's kept this corner honest for thirty years,\" he says. \"You've earned one more market day. Bring the rest then.\" It isn't a win. But it isn't a loss either. It's another chance, and you'll take it.",
+        "B2": "The count falls short, and the master sees it plainly enough. But he also sees the night you've had — alone, brand new to it, and still on your feet at dawn. \"Sim's kept this corner honest for thirty years,\" he says, after a moment. \"You've earned one more market day. Bring the rest of it then.\" It isn't a win. But it isn't a loss, either. It's another chance, freely given, and you'll take it with both hands."
       },
       "ending": "neutral"
     },
     {
       "id": 128,
       "text": {
-        "A2": "[stub] BAD — In Sould's book. The fee's covered tonight, but you owe the fixer now, and that is the worse debt. You kept the pitch and lost the ground under it.",
-        "B1": "[stub] BAD — In Sould's book. The fee's covered tonight, but you owe the fixer now, and that is the worse debt. You kept the pitch and lost the ground under it.",
-        "B2": "[stub] BAD — In Sould's book. The fee's covered tonight, but you owe the fixer now, and that is the worse debt. You kept the pitch and lost the ground under it."
+        "A2": "The master takes his fee, and the corner is safe — on paper. But the money that paid it was Sould's, and Sould's money is never really yours. Tomorrow he will smile and call you 'friend' and start to name his price. You kept the pitch tonight. But the ground under it belongs to him now, and he does not forget.",
+        "B1": "The master takes his fee, and the corner is safe — on paper. But the money that paid it was Sould's, and Sould's money is never really yours. Tomorrow he'll smile, and call you 'friend', and begin, slowly, to name his price. You kept the pitch tonight. But the ground beneath it belongs to him now, and Sould never forgets a debt.",
+        "B2": "The master takes his fee, and the corner is safe — on paper, at least. But the money that paid it was Sould's, and Sould's money is never, ever really yours. Tomorrow he'll smile, and call you 'friend', and begin, slowly and pleasantly, to name his price. You kept the pitch tonight. But the ground beneath it belongs to him now, and Sould, as everyone warned you, never forgets a debt."
       },
       "ending": "bad"
     },
     {
       "id": 129,
       "text": {
-        "A2": "[stub] BAD — Short by dawn. The takings don't reach the fee. Pitch 24, held thirty years, is lost.",
-        "B1": "[stub] BAD — Short by dawn. The takings don't reach the fee. Pitch 24, held thirty years, is lost.",
-        "B2": "[stub] BAD — Short by dawn. The takings don't reach the fee. Pitch 24, held thirty years, is lost."
+        "A2": "The coins fall short of the fee. The master counts twice, to be fair, but the number does not change. \"I'm sorry,\" he says, and he means it. \"Pitch 24 goes to the morning list.\" Thirty years, ended on your one night. You did not do anything wrong, exactly. The night was just longer than the money. It happens. It still hurts.",
+        "B1": "The coins fall short of the fee. The master counts them twice, to be fair, but the number doesn't change. \"I'm sorry,\" he says, and he means it. \"Pitch 24 goes on the morning list.\" Thirty years, ended on your one night in charge. You didn't do anything wrong, exactly — the night was just longer than the money. It happens. It still hurts like anything.",
+        "B2": "The coins fall short of the fee. The master counts them twice over, to be fair to you, but the number doesn't change. \"I'm sorry,\" he says, and he plainly means it. \"Pitch 24 goes on the morning list.\" Thirty years, ended on your one night in charge of it. You didn't do anything wrong, exactly — the night was simply longer than the money would stretch. It happens, to better cooks than you. It still hurts like anything."
       },
       "ending": "bad"
     },
     {
       "id": 130,
       "text": {
-        "A2": "[stub] BAD — The pot ran dry. You ran out hours before dawn and stood at a cold empty stall while the market went on around you.",
-        "B1": "[stub] BAD — The pot ran dry. You ran out hours before dawn and stood at a cold empty stall while the market went on around you.",
-        "B2": "[stub] BAD — The pot ran dry. You ran out hours before dawn and stood at a cold empty stall while the market went on around you."
+        "A2": "You ran out too soon. Hours before dawn, the pot was empty, the stock gone, the counter cold. You stood there while the market moved on around you, unable to sell a thing. By the time the master comes, the box is far short. You didn't lose the night to bad luck. You lost it to bad planning. Next time, you will know better.",
+        "B1": "You ran out far too soon. Hours before dawn the pot was empty, the stock gone, the counter cold. You stood there while the market moved on around you, unable to sell a single thing. By the time the master comes, the box is well short. You didn't lose the night to bad luck — you lost it to bad planning. Next time, if there is one, you'll know better.",
+        "B2": "You ran out far too soon. Hours before dawn the pot stood empty, the stock gone, the counter going cold. You stood there while the whole market moved on and spent around you, unable to sell a single thing. By the time the master comes, the box is well short. You didn't lose the night to bad luck — you lost it to bad planning, plain and simple. Next time, if there is a next time, you'll know better."
       },
       "ending": "bad"
     },
     {
       "id": 131,
       "text": {
-        "A2": "[stub] BAD — You couldn't hold it. The night beat you, and you think about handing the stall back for good.",
-        "B1": "[stub] BAD — You couldn't hold it. The night beat you, and you think about handing the stall back for good.",
-        "B2": "[stub] BAD — You couldn't hold it. The night beat you, and you think about handing the stall back for good."
+        "A2": "The fee is out of reach, and something in you gives way. You are so tired. The night beat you — the crowd, the fixer, the fear, the endless bowls. As the master marks his book, you think of giving the stall up. Just for a moment. For good. Of telling Auntie you couldn't. You don't say it out loud. But tonight, you think it.",
+        "B1": "The fee is out of reach, and something in you quietly gives way. You're so tired. The night beat you — the crowd, the fixer, the fear, the endless bowls. As the master marks his book, you think, just for a moment, about giving the stall up for good. About telling Auntie you couldn't do it. You don't say it out loud. But tonight, for the first time, you think it.",
+        "B2": "The fee is out of reach, and something in you quietly gives way. You're so tired you can barely stand. The night beat you — the crowd, the fixer, the fear, the endless, endless bowls. As the master marks his book, you think, just for a moment, about giving the stall up for good. About telling Auntie, gently, that you couldn't do it. You don't say it out loud, of course. But tonight, for the first time, you let yourself think it."
       },
       "ending": "bad"
     }
