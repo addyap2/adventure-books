@@ -242,6 +242,11 @@ work by design** — the gates are the point.
 
 Everything above — the act discipline, the eight-flag ceiling, the ending taxonomy, the
 per-book lexicon + auto-gloss, the phase gates, the validator-as-CI, the art waves — is the
-**pattern every future book copies**. Book 2 is "episode 2 of the arc": it opens with
-`state_in` = { `dodged_scam`, `told_truth`, `knows_name` } and continues the same person's life
-in the same city. Get this one right and the next one is a fill-in-the-shape.
+**pattern every future book copies**.
+
+> **Update (arc retired):** the series no longer runs an arc. **Every book is a completely
+> new subject, not linked** — its own world, cast and premise, with `state_in = []` and no
+> carried state (see [authoring-playbook.md](authoring-playbook.md) §1/§3). The reusable
+> *pattern* above still holds; only the "same person, same city, carried flags" continuity is
+> dropped. *The Address* remains a self-contained book; what future books inherit from it is the
+> method and the house tone, nothing of its story.

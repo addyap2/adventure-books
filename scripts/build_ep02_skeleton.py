@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Phase 2: build the graph skeleton for book 2, 'The Room' (episode 2).
+"""Phase 2: graph skeleton for book 2, 'The Night Market' (standalone).
 
-The machine before the prose. Every node is id + choices + gotos + flags + ending
-markers, with one-line stub text per level (identical across A2/B1/B2 for now — prose
-phase replaces it). Emits content/episode-02.json. Run the validator on the output;
-it must come back with 0 errors before any real prose is written.
+The machine before the prose: every node is id + choices + gotos + flags + ending markers,
+with one-line stub text per level (identical across A2/B1/B2 for now — prose phase replaces
+it). Emits content/episode-02.json. Run the validator on the output; it must return 0 errors
+before any real prose is written.
 
 Run: python3 scripts/build_ep02_skeleton.py
 """
@@ -13,18 +13,13 @@ import json, os
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 OUT = os.path.join(ROOT, "content", "episode-02.json")
 
-# ---- flags -----------------------------------------------------------------
-# carried in from book 1
-STATE_IN = ["dodged_scam", "told_truth", "knows_name"]
-# book 2's own eight, each set somewhere and read somewhere (see design §4)
-OWN = ["kept_money", "dodged_letting_scam", "paid_letting_scam", "has_reference",
-       "found_keepsake", "helped_neighbour", "rushed", "warm_welcome"]
+# standalone: nothing carried in or out to any other book
+STATE_IN = []
+OWN = ["kept_quality", "sold_well", "dodged_fixer", "paid_fixer",
+       "saved_a_bowl", "helped_neighbour", "gave_freely", "rushed"]
 STATE_OUT = OWN[:]
-ARC_FLAGS = ["dodged_letting_scam", "warm_welcome", "found_keepsake"]
+ARC_FLAGS = []
 
-# ---- the graph -------------------------------------------------------------
-# node: (id, stub, [ (choice_stub, goto, sets|None, requires|None), ... ])
-# ending: (id, stub, valence)
 N = []
 def node(i, stub, choices): N.append({"id": i, "stub": stub, "choices": choices})
 def end(i, stub, val): N.append({"id": i, "stub": stub, "ending": val})
@@ -34,509 +29,381 @@ def c(t, g, sets=None, req=None):
     if req: d["requires"] = req if isinstance(req, list) else [req]
     return d
 
-# === ACT I — MORNING ========================================================
-node(1, "Dawn in the cheap hotel; a note under the door: the room is booked from tonight. In your pocket, one week's pay — a deposit and nothing spare.", [
-    c("Ask the hotel man where a stranger looks for a room.", 2),
-    c("Go to the corner kiosk for the local paper.", 3),
-    c("Check the room listings on your phone.", 4),
-])
-node(2, "The hotel man, who let you sit by the radiator once, warns you off the flashy agents and says: the paper, or the canal side, is where the cheap real rooms are.", [
-    c("Count exactly what you have before you spend a coin.", 10),
-    c("Head to the kiosk for the paper he means.", 3),
-    c("Look at your phone anyway.", 4),
-])
-node(3, "The kiosk woman from your first night is at her corner. She hands you the paper and circles two ads; over a third — 'KEYS TODAY' — she draws a line.", [
-    c("Read the two rooms she circled.", 7),
-    c("Dania from the firm is here too, also looking.", 5),
-    c("Walk to the canal side to look before the crowds.", 6),
-])
-node(4, "Your phone: a bright, cheap room, photos too good for the price. 'Mr Vann — deposit today to hold it, keys today.'", [
-    c("Go to Vann's office and see the room.", 8),
-    c("Look Vann up before you go anywhere.", 9),
-    c("You have met this trick before. Ignore it.", 11, req="dodged_scam"),
-])
-node(5, "Dania, a new hire at Kessler and Rowe, is as new to the city as you and just as roomless.", [
-    c("Agree to look together — two sets of eyes.", 27),
-    c("Wish her luck and look on your own.", 7),
-    c("Check your phone listings first.", 4),
-])
-node(6, "The canal in grey morning light: an old rope-works, washing on a line, a smell of tar and cold water.", [
-    c("Decide how to spend the day and the fare money.", 12),
-    c("A delivery man here seems to know every door.", 13),
-])
-node(7, "The two ads: a room by the canal (a Mrs Halloran, viewing at noon) and a cheap bedsit you could see right now.", [
-    c("The bedsit — see it now while it's going.", 14),
-    c("Hold out for the canal room at noon.", 15),
-    c("A third ad: a room to share, very cheap.", 36),
-    c("Work out your money and route first.", 12),
-])
-node(8, "You stand at the door of Vann's office. A queue inside; a board of glossy rooms.", [
-    c("Step inside and hear the pitch.", 40),
-    c("Hesitate on the step.", 9),
-])
-node(9, "You look Vann up. A man leaving the office mutters that he never got his keys; the reviews are a wall of one stars.", [
-    c("Ask around a little more.", 16),
-    c("Decide it's a trap and walk away.", 17),
-    c("The room looked so good — risk it anyway.", 8),
-])
-node(10, "On the bed you lay the money out. One week. A deposit is most of it. A wrong move today and you have neither room nor fare.", [
-    c("Go out and look, carefully.", 6),
-    c("Get the paper first.", 3),
-])
-node(11, "You know this game now. You put the phone away and trust the paper and your feet.", [
-    c("Read the paper's real ads.", 7),
-    c("Walk to the canal side.", 6),
-])
-node(12, "How you cross the city is how your money lasts.", [
-    c("Walk everywhere and keep the fare.", 18, sets="kept_money"),
-    c("Take the bus so you can see more rooms.", 19),
-    c("Go back for the paper first.", 3),
-])
-node(13, "The delivery man leans on his trolley. 'Halloran's? Over the rope-works. Good stair. Ask for the room at the top.'", [
-    c("Thank him and note the stair.", 20),
-    c("Catch the bus into the centre first.", 19),
-])
-node(14, "The bedsit's address is close; you could be there in ten minutes.", [
-    c("Go straight up to see it.", 30),
-    c("Read the canal ad once more first.", 7),
-])
-node(15, "The canal viewing is at noon. Hours to fill, and a whole city between.", [
-    c("Set off for the canal early.", 50),
-    c("Kill the time in the market square.", 25),
-])
-node(16, "You ask the kiosk woman about Vann. Her face closes. 'That one. Keep your money in your pocket.'", [
-    c("Take her word and leave it.", 17),
-    c("Head into the square to think.", 25),
-])
-node(17, "You cross Vann off. It stings a little; the photos were lovely. But lovely and cheap and today is the whole trick.", [
-    c("Back to the paper's real rooms.", 7),
-    c("Into the square.", 25),
-])
-node(18, "Walking, you reach the market square by midday, feet already sore but the fare still in your pocket.", [
-    c("Into the square to choose a direction.", 25),
-    c("Straight on to the canal.", 50),
-    c("The square clock says the morning's gone.", 26),
-])
-node(19, "The bus sets you down at the square. Faster, but the coins are fewer now.", [
-    c("Into the square.", 25),
-    c("On to the canal.", 50),
-])
-node(20, "The delivery man points you to Halloran's stair, then rattles off toward the centre.", [
-    c("Go up to the canal building.", 50),
-    c("Fill the time in the square first.", 25),
-])
-node(25, "The market square: Vann's office on one side, the canal lane on the other, and Dania waving from a stall.", [
-    c("Vann's office.", 40),
-    c("The canal room.", 50),
-    c("Go with Dania.", 27),
-    c("The bedsit first.", 21),
-])
-node(26, "The square clock strikes noon. Half your daylight is spent and you have seen nothing yet.", [
-    c("Choose a direction and move.", 25),
-    c("Vann's office, quickly.", 40),
-])
-node(27, "Dania is wary of Vann too. You compare your two ads on a bench.", [
-    c("View the canal room together.", 28),
-    c("Split up to cover more ground.", 29),
-    c("Both try the agent, to be sure.", 40),
-])
-node(28, "With Dania beside you, the day feels less thin.", [
-    c("Go to the canal room together.", 50),
-    c("Try the bedsit together first.", 30),
-    c("She wants to see one more first.", 90),
-])
-node(29, "Alone again, you keep your own counsel.", [
-    c("The canal room.", 50),
-    c("Vann's office.", 40),
-    c("The bedsit.", 30),
-])
-node(36, "The 'room to share' ad is far out, but the price is barely half the rest.", [
-    c("Make the trip to see it.", 37),
-    c("Too far — back to the real ads.", 7),
-])
-node(37, "You get there. The share was taken this morning; the door is already someone else's.", [
-    c("Nothing here. Move on.", 38),
-    c("Ask if they know of anything else going.", 25),
-])
-node(38, "You are further out than you meant to be, and the daylight is shorter for it.", [
-    c("Back toward the square.", 25),
-    c("It's getting late — think about the evening.", 96),
-])
+# ===== ACT I — LIGHTING UP =====
+node(1, "Dusk. Auntie has scalded her hand; tonight you run pitch 24 alone, and the season's fee is due to the market master by dawn or the corner is lost.", [
+    c("Light the stall and get started.", 2),
+    c("Call Auntie for instructions first.", 3),
+    c("Check the money box and the fee.", 4)])
+node(2, "You open the stall — burners, lanterns, the counter, the back shelf.", [
+    c("The tea woman next door leans over.", 5),
+    c("The supplier's van pulls up.", 6),
+    c("The big burner won't catch.", 19)])
+node(3, "Auntie on the phone: the broth, the good supplier, and — set a bowl for Mr Behn.", [
+    c("Ask about the good supplier.", 6),
+    c("Ask what else you must know.", 7),
+    c("Taste her broth to learn the balance.", 20)])
+node(4, "The money box, and the fee card in Auntie's hand.", [
+    c("You must match it by dawn. Get cooking.", 2),
+    c("Work out what a bowl earns.", 8),
+    c("Auntie frets down the line.", 21)])
+node(5, "The tea woman at pitch 25 says hello.", [
+    c("Chat a moment.", 9),
+    c("Get to the supplier.", 6)])
+node(6, "The supplier's van: the good pork and greens cost more; the cheap end-of-day stock is half the price and half turned.", [
+    c("Buy the good stock.", 10, sets="kept_quality"),
+    c("Buy the cheap stock to save money.", 11),
+    c("Buy a little of each.", 12)])
+node(7, "Auntie goes quiet at the name Behn.", [
+    c("Ask who he is.", 13),
+    c("Say you will, and hang up.", 6)])
+node(8, "A bowl earns little; the fee needs a whole good night.", [
+    c("Get cooking.", 2),
+    c("Ask the tea woman for tips.", 9)])
+node(9, "The tea woman's tips — and a warning about Mr Sould, the fixer.", [
+    c("Thank her.", 14),
+    c("Sould is already coming over.", 15)])
+node(10, "The good stock, stored and cold.", [
+    c("Back to the stall.", 16),
+    c("Set up the counter.", 18)])
+node(11, "The cheap stock, and a smell you don't like.", [
+    c("Use it anyway.", 16),
+    c("Regret it.", 17)])
+node(12, "Some of each, to hedge.", [
+    c("Back to the stall.", 16),
+    c("Set up the counter.", 18)])
+node(13, "The saved bowl — Auntie's thirty-year habit.", [
+    c("Set a bowl aside now, as she does.", 18, sets="saved_a_bowl"),
+    c("You're too busy for that.", 16)])
+node(14, "You thank the tea woman.", [
+    c("Back to the stall.", 16),
+    c("Open for business.", 31)])
+node(15, "Sould's first, friendly approach.", [
+    c("Hear him out.", 61),
+    c("Wave him off politely.", 16)])
+node(16, "The stall is ready; the market fills up.", [
+    c("Open for business.", 31),
+    c("Set a bowl aside first.", 13),
+    c("The regulars will want the usual.", 22)])
+node(17, "You bin the worst of the cheap stock.", [
+    c("Back to the stall.", 16),
+    c("Open for business.", 31)])
+node(18, "The saved bowl waits on the back shelf.", [
+    c("Open for business.", 31),
+    c("Back to the stall.", 16)])
+node(19, "The burner splutters and won't light.", [
+    c("Coax it alight yourself.", 5),
+    c("The tea woman helps.", 9)])
+node(20, "You taste the broth — salt, ginger, the deep note.", [
+    c("To the supplier.", 6),
+    c("Back to the stall.", 16)])
+node(21, "Auntie frets about the fee down the line.", [
+    c("Reassure her, and cook.", 2),
+    c("Work out the numbers.", 8)])
+node(22, "The regulars will expect Auntie's usual.", [
+    c("Open for business.", 31),
+    c("Ask the tea woman who's who.", 9)])
 
-# === ACT II — VIEWINGS: THE AGENT (the scam) ================================
-node(40, "Vann's office. A queue of tired hopefuls. Vann himself is all warmth and hurry.", [
-    c("Listen to the pitch.", 41),
-    c("Talk to the people in the queue.", 42),
-])
-node(41, "The pitch is perfect: the very room from the photos, cheap, yours — if you leave a deposit today to hold it.", [
-    c("Ask to see the room before you pay.", 43),
-    c("Pay the deposit now, before it's gone.", 44),
-    c("Say you'll think about it, and leave.", 45),
-])
-node(42, "In the queue, a woman whispers she's been 'holding' a room for a week. A man says Vann found his cousin a flat, no trouble.", [
-    c("Ask to see the room first.", 43),
-    c("Leave; you've heard enough.", 45),
-    c("Hear the woman's story out.", 65),
-])
-node(43, "You ask to see it first. Vann's smile holds but his eyes flick to the clock. 'It'll be gone by five. The deposit only holds it.'", [
-    c("Better safe — pay to hold it.", 44),
-    c("Refuse the 'hold' and insist on seeing it.", 46, sets="dodged_letting_scam"),
-    c("Walk. He never once said the address.", 47, sets="dodged_letting_scam", req="dodged_scam"),
-])
-node(44, "You hand over the deposit. A receipt, a firm handshake, 'keys tomorrow, come at nine.'", [
-    c("Pocket the receipt and go.", 48, sets="paid_letting_scam"),
-    c("Head out, already uneasy.", 96, sets="paid_letting_scam"),
-])
-node(45, "You leave without paying. Behind you the queue shuffles up one place.", [
-    c("On to a real room.", 49),
-    c("Back to the square.", 25),
-])
-node(46, "You refuse the hold and ask, plainly, for the address so you can see it. Vann's warmth cools. He hasn't got one to give.", [
-    c("Out the door, money intact.", 49),
-    c("Straight to the canal instead.", 50),
-])
-node(47, "You just walk. On the step you realise: in ten minutes of talk, he never once named a street.", [
-    c("Note it and move on.", 49),
-    c("On to the canal.", 50),
-])
-node(48, "Out on the street with a receipt and no keys, the morning gone, a small cold doubt starting.", [
-    c("On to see a real room too.", 50),
-    c("Read the receipt again.", 117),
-    c("Think about the evening.", 96),
-])
-node(117, "You read Vann's receipt again: a company you can't find online, a number that rings and rings. The cold doubt hardens into something like knowledge.", [
-    c("Try to salvage the day.", 50),
-    c("Face the evening with it.", 96),
-])
-node(49, "Out of Vann's, purse still full, but the clock is unkind. Canal or bedsit left.", [
-    c("The canal room.", 50),
-    c("The bedsit.", 21),
-    c("Leaving, the queue is longer than before.", 68),
-])
-node(65, "The woman's story: a deposit paid, a date given, then another, then Vann 'so sorry, it fell through' — and no money back.", [
-    c("Thank her and refuse to pay.", 45),
-    c("Vann leans in with one last push.", 66),
-])
-node(66, "'Last one at this price,' Vann says, hand out. 'People like you don't get second chances in this city.'", [
-    c("Pay, against your better sense.", 44),
-    c("That line is the tell. Leave.", 45),
-])
-node(68, "Behind you the queue has doubled; the same warmth, the same clock, the same hand out.", [
-    c("On to a real room.", 50),
-    c("Think about the evening.", 96),
-])
+# ===== ACT I — FIRST CUSTOMERS & PRICING =====
+node(31, "The first customers; how do you price the bowls?", [
+    c("A fair price.", 32),
+    c("Charge high for the tourists.", 33),
+    c("Auntie's usual price.", 34),
+    c("A nervous first big order.", 23)])
+node(32, "A fair price it is.", [
+    c("Serve them.", 35),
+    c("A grumble anyway.", 36)])
+node(33, "You mark the price up.", [
+    c("A grumble at the price.", 36),
+    c("Serve them.", 35)])
+node(34, "Auntie's usual price, to the penny.", [
+    c("Serve them.", 35),
+    c("A regular smiles.", 37)])
+node(35, "Serving the first bowls.", [
+    c("A customer praises it.", 37),
+    c("A customer finds it bland.", 38),
+    c("A child counts out coins.", 24)])
+node(36, "Someone grumbles about the price.", [
+    c("Drop it back to fair.", 32),
+    c("Hold firm.", 39)])
+node(37, "A customer loves the broth.", [
+    c("The takings grow.", 39),
+    c("The crowd builds.", 41)])
+node(38, "A customer says it's bland.", [
+    c("The takings grow.", 39),
+    c("The crowd builds.", 41)])
+node(39, "The first takings in the box.", [
+    c("Count so far.", 40),
+    c("The crowd builds.", 41)])
+node(40, "A start — a long way to the fee.", [
+    c("Into the rush.", 41),
+    c("A word with the tea woman.", 9)])
+node(41, "The crowd builds; the rush begins.", [
+    c("Meet the rush.", 42),
+    c("The arcade packs in.", 43),
+    c("Orders shouted from all sides.", 26)])
+node(23, "A family of six, all ordering at once.", [
+    c("Take it carefully.", 35),
+    c("Rush it through.", 45)])
+node(24, "A child counts coins for one bowl.", [
+    c("Serve them kindly.", 37),
+    c("Shoo them on.", 38)])
 
-# === ACT II — VIEWINGS: THE BEDSIT ==========================================
-node(21, "The bedsit building: a damp stair, a smell of old cooking, a landlord jingling keys.", [
-    c("Go up to the room.", 30),
-    c("Back to the square; something's off.", 25),
-])
-node(30, "The room is small and grey and cheap. The landlord wants cash now, asks nothing, offers nothing.", [
-    c("Take it on the spot — a room is a room.", 31, sets="rushed"),
-    c("Say you'll think about it.", 32),
-    c("Ask to look at it properly first.", 34),
-    c("Ask why it's empty; his face hardens.", 35),
-])
-node(31, "You give him a cash 'hold' and it is, in a way, yours. You didn't really look. You were just tired of looking.", [
-    c("It's done. Move on.", 33),
-    c("A second thought, too late.", 32),
-])
-node(32, "You tell him you'll think. He shrugs; there's always someone.", [
-    c("Out to look properly.", 34),
-    c("On to the canal room.", 50),
-])
-node(33, "You have a room, of sorts. Grey walls, a shared bathroom, a key that's yours.", [
-    c("Carry on with the day anyway.", 96),
-    c("Wonder if you rushed it.", 34),
-])
-node(34, "You back out to keep looking. The bedsit will keep; grim rooms always do.", [
-    c("On to the canal room.", 50),
-    c("Weigh it against the evening.", 96),
-    c("The shared bathroom decides it — no.", 39),
-])
-node(35, "You ask why it's stood empty. The landlord bristles: 'You want it or not?' No lease, no questions, no answers.", [
-    c("Say you'll think about it.", 32),
-    c("Back out.", 34),
-])
-node(39, "One cold shared bathroom off the stair, a queue of doors. A room, but never a home.", [
-    c("On to the canal room.", 50),
-    c("Think about the evening.", 96),
-])
+# ===== ACT II — THE LONG RUSH =====
+node(42, "The rush: orders pile up faster than your hands.", [
+    c("Work steadily, keep it right.", 44),
+    c("Rush it — cut a corner to go faster.", 45, sets="rushed"),
+    c("Call for a hand.", 46)])
+node(43, "The arcade is shoulder to shoulder.", [
+    c("Meet the rush.", 42),
+    c("Work steadily.", 44)])
+node(44, "You find a rhythm at the burners.", [
+    c("Work steadily and win the crowd over.", 47, sets="sold_well"),
+    c("Just keep up.", 49)])
+node(45, "You serve one half-done, and short a coin.", [
+    c("Keep going.", 47),
+    c("A customer notices.", 48),
+    c("You burn your hand in the hurry.", 28)])
+node(46, "You call out for help.", [
+    c("Send the market kid on an errand.", 73),
+    c("The tea woman is swamped too.", 58)])
+node(47, "Mid-rush, the box filling.", [
+    c("Keep serving.", 49),
+    c("A brief lull.", 50),
+    c("A regular asks for Auntie.", 27)])
+node(48, "A customer clocks the short change.", [
+    c("Apologise and fix it.", 51),
+    c("Brazen it out.", 54)])
+node(49, "The stock is running low.", [
+    c("Eke it out in small bowls.", 56),
+    c("Send for more.", 55),
+    c("The steamer runs dry.", 29)])
+node(50, "A brief lull; wipe down.", [
+    c("Back to serving.", 49),
+    c("Take a breath.", 52),
+    c("A quiet stretch.", 30)])
+node(51, "You make the short change right.", [
+    c("Back to serving.", 49),
+    c("On through the rush.", 57)])
+node(52, "You breathe; the box is filling.", [
+    c("Count so far.", 40),
+    c("Back in.", 57)])
+node(54, "The customer leaves angry, and talks.", [
+    c("Back to serving.", 49),
+    c("On through the rush.", 57)])
+node(55, "You send the kid for more stock.", [
+    c("The kid returns, hungry.", 73),
+    c("On through the rush.", 57)])
+node(56, "You eke out smaller bowls.", [
+    c("On through the rush.", 57),
+    c("A quiet moment.", 59)])
+node(57, "The rush rolls on.", [
+    c("The tea woman's urn spills.", 58),
+    c("A quiet moment.", 59)])
+node(58, "The tea woman's urn goes over — she's in trouble.", [
+    c("Drop everything and help her.", 88, sets="helped_neighbour"),
+    c("You can't; keep serving.", 60)])
+node(59, "A quiet moment; the back shelf, the empty stool.", [
+    c("Check the saved bowl.", 91),
+    c("Back to work.", 60),
+    c("The stool has been empty all night.", 96)])
+node(60, "The rush peaks and breaks.", [
+    c("The stock is nearly gone.", 80),
+    c("Rain sweeps the arcade.", 79),
+    c("A new stall opposite undercuts you.", 86)])
+node(26, "Orders shouted from every side at once.", [
+    c("Meet the rush.", 42),
+    c("Work steadily.", 44)])
+node(27, "A regular asks where Auntie is.", [
+    c("Tell them the truth.", 49),
+    c("Just serve, and smile.", 50)])
+node(28, "You burn your hand, as Auntie did.", [
+    c("Wrap it and carry on.", 47),
+    c("The tea woman helps.", 58)])
+node(29, "The steamer runs dry; refill it.", [
+    c("Eke it out.", 56),
+    c("On through the rush.", 57)])
+node(30, "A quiet stretch to wipe down and think.", [
+    c("Take a breath.", 52),
+    c("On through the rush.", 57)])
 
-# === ACT II — VIEWINGS: THE CANAL ROOM & THE MYSTERY ========================
-node(50, "Halloran's building over the rope-works. A steep clean stair; at the top, an open door and a woman waiting.", [
-    c("Go up for the viewing.", 51),
-    c("You're early — wait in the square.", 25),
-])
-node(51, "Mrs Halloran is brisk and grey-eyed. The room has good light — and someone's things, half-packed: a coat, a tin of buttons, a box by the wall.", [
-    c("Ask about the last tenant.", 52),
-    c("Look at the room itself first.", 53),
-])
-node(52, "'He's gone. That's all,' she says, and busies herself with the window catch.", [
-    c("Let it go; ask about terms.", 54),
-    c("Look more closely at what he left.", 55),
-])
-node(53, "Good light off the water; a coat still on the hook; the tin of buttons on the sill. Someone lived here, and lately.", [
-    c("Notice the things he left.", 55),
-    c("Ask Halloran what happened here.", 80),
-    c("Picture yourself living here.", 84),
-])
-node(54, "Terms: the rent is fair, the deposit steep, and references — 'people who'll say you're sound' — required.", [
-    c("Face the references problem.", 56),
-    c("Look around once more as she talks.", 53),
-])
-node(55, "Among his things, a notebook lies open on the sill — pages of names and addresses in a careful hand.", [
-    c("Pick it up to return to him.", 57, sets="found_keepsake"),
-    c("Leave it; not your business.", 58),
-    c("Ask Halloran about it.", 80),
-])
-node(56, "References. You know no one in this city who could vouch that you're sound. You've been here three days.", [
-    c("She names her condition — unless.", 59),
-    c("She softens a little as you take it in.", 60),
-])
-node(57, "You slip the notebook into your bag to give back. It feels less like taking and more like keeping safe.", [
-    c("Turn back to Halloran.", 60),
-    c("Ask her about it, holding it.", 80),
-])
-node(58, "You put the notebook down where it lay. Whatever it is, it isn't yours.", [
-    c("Turn back to Halloran.", 60),
-    c("Ask about him instead.", 52),
-])
-node(59, "'No references, no room,' she says. 'Unless you give me a reason to trust my own eyes.'", [
-    c("Mention Kessler and Rowe.", 61),
-    c("Just be honest about who you are.", 62),
-])
-node(60, "She watches how you move through the room — carefully, as if it were already someone's home. Something in her eases.", [
-    c("Mention your job at the firm.", 61),
-    c("Be honest: new here, no one, need a chance.", 62),
-])
-node(61, "You mention Kessler and Rowe. Her eyebrows lift. 'Rowe. I know that name. If she'd say a word for you...'", [
-    c("A reference from the firm — how?", 70),
-    c("Say you'll be honest instead.", 62),
-])
-node(62, "You tell her the plain truth: three days in the city, no one to vouch for you, a week's pay, and today to find a home.", [
-    c("She says: come back at dusk.", 63),
-    c("She studies you a moment longer.", 60),
-])
-node(63, "'Come back when the light goes,' she says. 'I'll have thought.' On the stair, a neighbour is wrestling shopping and a child.", [
-    c("Fill the hours till dusk.", 64),
-    c("Help the neighbour on the stair.", 76),
-])
-node(64, "Hours to kill before dusk, and a whole city that still doesn't know you.", [
-    c("Back to the square.", 25),
-    c("Think ahead to the evening.", 96),
-    c("Count what the day has cost.", 99),
-])
-node(80, "You ask Halloran outright what happened here. She stiffens, straightens the coat on its hook, and changes the subject.", [
-    c("Press gently.", 81),
-    c("Let it drop.", 60),
-])
-node(81, "On the stair a neighbour murmurs: 'The lad up top? Went to sea. Sudden. She won't speak of it.'", [
-    c("Ask the neighbour more.", 82),
-    c("Leave it and help the neighbour instead.", 76),
-    c("Back to Halloran and the room.", 60),
-])
-node(82, "'Owed nothing, harmed no one,' the neighbour says. 'Just gone one morning. It's her boy, see. She won't say.'", [
-    c("Her boy. You understand the packed box now.", 83),
-    c("Enough — help with the shopping.", 76),
-])
-node(83, "Her son. The half-packed room, the coat she won't move, the notebook of addresses he meant to write to.", [
-    c("Take the notebook to return it.", 57, sets="found_keepsake"),
-    c("Say nothing; go back down.", 60),
-])
-node(84, "At the window you can see yourself here: the water, the light, a kettle, a life. It's the first room that felt like one.", [
-    c("Look at what he left behind.", 85),
-    c("Turn back before you hope too hard.", 55),
-])
-node(85, "In the coat pocket, a photograph: the same window, a young man, and Halloran, younger, laughing.", [
-    c("You understand who lived here.", 86),
-    c("Put it back exactly as it was.", 55),
-])
-node(86, "Someone lived here and left fast, and the woman letting the room is not a stranger to him at all.", [
-    c("Take the notebook to give back.", 57, sets="found_keepsake"),
-    c("Say nothing yet.", 60),
-])
+# ===== FIXER (Mr Sould) =====
+node(61, "Sould's pitch: he collects fees, settles trouble, lends to the stuck.", [
+    c("Listen to the offer.", 62),
+    c("Refuse now.", 63, sets="dodged_fixer"),
+    c("Stallholders line up to pay him.", 66)])
+node(62, "The offer: a loan to be safe, or a quiet word with a rival — a price never quite named.", [
+    c("Take the loan.", 64, sets="paid_fixer"),
+    c("Refuse it.", 63, sets="dodged_fixer"),
+    c("Ask what it costs.", 65)])
+node(63, "You send him off.", [
+    c("Back to the stall.", 16),
+    c("Into the night's work.", 60)])
+node(64, "You take his money — relief, then unease.", [
+    c("Back to the stall.", 16),
+    c("On toward closing.", 101)])
+node(65, "He smiles and still won't name the price.", [
+    c("That's the tell — refuse.", 63, sets="dodged_fixer"),
+    c("Take it anyway.", 64, sets="paid_fixer")])
+node(66, "Stallholders queue to hand Sould their fees.", [
+    c("Hear his offer.", 62),
+    c("A stallholder warns you.", 67)])
+node(67, "'Sould never forgets a debt,' the stallholder murmurs.", [
+    c("Refuse him.", 63, sets="dodged_fixer"),
+    c("Still hear him out.", 62)])
+node(68, "Sould's patient smile as closing nears.", [
+    c("Take his loan.", 64, sets="paid_fixer"),
+    c("Refuse, and take your chances.", 110, sets="dodged_fixer")])
 
-# === ACT II — THE GUARANTOR FLAT & THE REFERENCE ============================
-node(70, "There is a better flat across town — but it needs a guarantor, someone to stand behind your rent. You have none. Unless the firm will.", [
-    c("Think how to get the firm's word.", 71),
-    c("Give up on the good flat.", 74),
-])
-node(71, "You could ask. It's your first week; it's a lot to ask. But you did tell Ms Rowe everything, once.", [
-    c("Call Ms Rowe, who trusts you.", 72, sets="has_reference", req="told_truth"),
-    c("Ask a colleague at the firm instead.", 73, sets="has_reference"),
-    c("It's too much to ask. Let it go.", 74),
-])
-node(72, "Ms Rowe listens, then: 'Of course. Put them onto me.' Because you were straight with her once, she is straight with you now.", [
-    c("A reference — you have one.", 75),
-    c("Thank her and get on with the day.", 96),
-])
-node(73, "A colleague hesitates — you're new — then agrees to say you're sound. Not warm, but enough.", [
-    c("A reference, of a kind.", 75),
-    c("On with the day.", 96),
-])
-node(74, "You let the good flat go. You can't ask the firm for your name in your first week.", [
-    c("Back to the day's real chances.", 96),
-    c("Into the square to think.", 25),
-])
-node(75, "You have a reference now — a name that will answer for you. It changes what doors will open.", [
-    c("Carry it to the evening.", 96),
-    c("Into the square first.", 25),
-])
+# ===== THE KID =====
+node(73, "The kid runs your errand, then eyes the bowls, hungry.", [
+    c("Give the kid a bowl.", 74, sets="gave_freely"),
+    c("Pay only in coins.", 75)])
+node(74, "The kid eats, wide-eyed and grateful.", [
+    c("Back to the rush.", 57),
+    c("The kid sticks around.", 76),
+    c("The kid tells you their name.", 77)])
+node(75, "The kid pockets the coins, still hungry.", [
+    c("Back to the rush.", 57),
+    c("The kid sticks around.", 76)])
+node(76, "The kid hangs about, quietly useful.", [
+    c("Back to the rush.", 57),
+    c("On into the night.", 60),
+    c("The kid guards the stall.", 78)])
+node(77, "The kid tells you their name, and where they sleep.", [
+    c("Back to the rush.", 57),
+    c("The kid sticks around.", 76)])
+node(78, "The kid watches the stall while you cook.", [
+    c("Back to the rush.", 57),
+    c("On into the night.", 60)])
 
-# === ACT II — THE NEIGHBOUR =================================================
-node(76, "The neighbour: bags splitting, a small child on the step, three floors to climb.", [
-    c("Take the bags and help up.", 77, sets="helped_neighbour"),
-    c("You're in a hurry — pass by.", 78),
-    c("Mind the child while she manages the bags.", 92),
-])
-node(77, "You carry the shopping up. She's breathless with thanks and insists you'll be repaid one day.", [
-    c("Wave it off; back to the day.", 79),
-    c("She points you back toward Halloran.", 63),
-])
-node(78, "You pass by with a nod. Not unkind, just busy. The stair swallows the sound of her struggling on.", [
-    c("Back to the day.", 79),
-    c("Into the square.", 25),
-])
-node(79, "Back to the day, the small warmth or small guilt of it going with you.", [
-    c("Think toward the evening.", 96),
-    c("Back to Halloran's block at dusk.", 64),
-])
-node(92, "The child holds your hand solemnly while the mother hauls the bags. A tiny trust, freely given.", [
-    c("See them both safely up.", 77, sets="helped_neighbour"),
-    c("Hand the child back and hurry on.", 78),
-])
-node(90, "Dania wants to see a place round the corner first. You go with her.", [
-    c("On to the canal room after.", 50),
-    c("She's found something; you're still looking.", 91),
-])
-node(91, "Dania takes a small room she likes and hugs you goodbye. You're glad for her, and more alone.", [
-    c("Back to the square.", 25),
-    c("On to the evening.", 96),
-    c("She texts you a listing to try.", 118),
-])
-node(118, "Dania's text: a room near hers, going tonight. Kind of her. Probably gone already.", [
-    c("Think toward the evening.", 96),
-    c("Back to the square to chase it.", 25),
-])
+# ===== NEIGHBOUR (result) =====
+node(88, "You mop, relight, and set the tea woman right.", [
+    c("Back to your stall.", 59),
+    c("On into the night.", 60)])
 
-# === ACT III — THE DECISION (dusk) ==========================================
-node(99, "You add the day up on a bench: the fare, the wasted trip, the rooms seen, the one that felt like a home.", [
-    c("Decide where to go as the light goes.", 96),
-    c("None of it's enough — think harder.", 98),
-    c("The stalls are closing around you.", 115),
-])
-node(96, "Dusk. The hotel wants its room tonight. You have one evening and whatever the day has left you.", [
-    c("Back to Mrs Halloran's.", 100),
-    c("Claim the good flat.", 101, req="has_reference"),
-    c("Weigh the other options.", 97),
-])
-node(97, "The light is nearly gone. What's actually within your reach tonight?", [
-    c("Go for the agent's keys.", 102, req="paid_letting_scam"),
-    c("Sign for the bedsit.", 103, req="rushed"),
-    c("One last phone check.", 114),
-    c("None of these — think again.", 98),
-])
-node(98, "Nothing has quite worked. The hotel closes to you at ten.", [
-    c("Ask the neighbour you helped.", 113, req="helped_neighbour"),
-    c("Try the landlady who remembered your name.", 126, req="knows_name"),
-    c("Accept the rooms are gone for today.", 130),
-    c("Wonder if this city will ever have you.", 131),
-])
-node(114, "A last scroll: the good listings are all marked LET now. Only Vann's kind are still bright and still lying.", [
-    c("Back to thinking it through.", 98),
-    c("It really is too late.", 130),
-])
-node(115, "The market folds up around you — shutters, crates, the smell of the day ending.", [
-    c("Go where the evening leads.", 96),
-    c("Sit, and let the city win a moment.", 131),
-    c("One last idea.", 119),
-])
-node(119, "The last of the light on the wet square. Somewhere a door is warm; the question is whether one is warm for you.", [
-    c("Try the last real chance.", 98),
-    c("Give the day up.", 131),
-])
-node(100, "Halloran's stair again, the light in her window just come on. You climb.", [
-    c("She opens the door.", 104),
-    c("Give back his notebook first.", 111, req="found_keepsake"),
-    c("The walk up feels longer at dusk.", 110),
-])
-node(110, "The canal is black glass; the rope-works quiet; her window the one warm square in the dark.", [
-    c("Go up and knock.", 104),
-    c("Her stair light comes on above.", 116),
-    c("Lose your nerve; think again.", 96),
-])
-node(116, "A light climbs the stair to meet you. She heard you coming.", [
-    c("Meet her at the door.", 104),
-    c("Back down a step, and up again.", 100),
-])
-node(104, "Mrs Halloran in the doorway, the warm room behind her, the deposit money warm in your hand.", [
-    c("Talk terms.", 105),
-    c("Step back onto the stair a moment.", 100),
-])
-node(105, "She waits. This is the moment the whole day was walking toward.", [
-    c("Tell her the truth of your circumstances.", 106),
-    c("Keep it businesslike; just the rent.", 107),
-])
-node(106, "You tell her plainly: new, alone, a week's pay, no one to vouch — but honest, and you'll mind the place. Her grey eyes hold yours.", [
-    c("She decides.", 108, sets="warm_welcome"),
-    c("On second thought, retreat to business.", 107),
-])
-node(107, "You keep it to rent and dates and deposits. Correct. Cool. She nods along, and something doesn't quite open.", [
-    c("She weighs it.", 109),
-    c("Change tack; be honest after all.", 106),
-])
-node(108, "She looks at you a long moment, then at the packed box she cannot bring herself to move.", [
-    c("She gives you the room.", 120, req="warm_welcome"),
-    c("It doesn't quite land; back to the hotel.", 127),
-])
-node(109, "She weighs you like a form to be processed: money present, references absent.", [
-    c("You cover it cleanly, by your own careful means.", 122, req=["kept_money", "dodged_letting_scam"]),
-    c("No money kept, no one to vouch — a polite no.", 129),
-])
-node(111, "On the step you hold out the notebook. 'This was up there. I think it's his.' The colour leaves her face.", [
-    c("She takes it, and everything changes.", 121, req="found_keepsake"),
-    c("Then talk about the room.", 104),
-])
-node(101, "The good flat, clean and bright, and a letting man who only wants your reference to be real.", [
-    c("Take it; you're vouched for.", 123),
-    c("Hesitate — it's more than you can hold.", 127),
-])
-node(102, "Vann's 'address' at last — a slip of paper, a street you don't know, a key that's cold in your hand.", [
-    c("Go and let yourself in.", 112),
-    c("Hesitate on the dark street.", 130),
-])
-node(112, "The street is a car park behind a hoarding. The key fits no door because there is no door. There never was a room.", [
-    c("The deposit is gone.", 128),
-    c("Back to argue — but the office is dark.", 130),
-])
-node(103, "The bedsit landlord counts your cash again and pushes a scrap of paper across for your name.", [
-    c("Sign; it's yours tonight.", 124),
-    c("Back out at the last second.", 127),
-])
-node(113, "The neighbour you helped opens her door, the child behind her knees. 'You carried my bags. There's a box room. It's yours till you're sorted.'", [
-    c("Take the box room, gratefully.", 125, req="helped_neighbour"),
-    c("Thank her, but keep looking.", 127),
-])
+# ===== RAIN / STOCK / RIVAL =====
+node(79, "Rain sweeps the arcade; the crowd thins.", [
+    c("Pull the awning and wait it out.", 81),
+    c("Call people in with cheap late bowls.", 82)])
+node(80, "The stock is nearly gone.", [
+    c("The pot's nearly dry.", 83),
+    c("Stretch the last broth.", 84)])
+node(81, "You wait out the rain.", [
+    c("The market quietens.", 85),
+    c("Toward closing.", 101)])
+node(82, "Cheap late bowls pull a small crowd.", [
+    c("The market quietens.", 85),
+    c("Toward closing.", 101)])
+node(83, "The pot is nearly dry.", [
+    c("Make it stretch.", 84),
+    c("The market quietens.", 85)])
+node(84, "You stretch the last of the broth.", [
+    c("The market quietens.", 85),
+    c("Toward closing.", 101)])
+node(85, "The market quietens toward closing.", [
+    c("Watch the empty stool.", 91),
+    c("Toward closing.", 101),
+    c("Dawn grey on the roofs.", 105)])
+node(86, "A new stall opposite undercuts your price.", [
+    c("Match their price.", 87),
+    c("Hold your price.", 89)])
+node(87, "A price war eats your profit.", [
+    c("Hold from here.", 89),
+    c("They burn out by dawn.", 90)])
+node(89, "You hold your price; the regulars stay.", [
+    c("The market quietens.", 85),
+    c("Toward closing.", 101)])
+node(90, "The rival burns out before dawn.", [
+    c("The market quietens.", 85),
+    c("Toward closing.", 101)])
 
-# === ENDINGS (12: 4 good / 4 neutral / 4 bad) ===============================
-end(120, "GOOD — A home, honestly. She gives you the room on trust, because you were straight about having no one. The first job at the firm was fixing the letters; the first thing you fix here is the window catch. It is a home.", "good")
-end(121, "GOOD — The room returned (secret). She takes the notebook, sits down hard on the packed box, and tells you about her son gone to sea. You gave her back a piece of him. The room is yours; so, now, is a place at her table.", "good")
-end(122, "GOOD — On your own terms. No favours, no con, no one vouching — just a modest real room secured by your own careful means. Bare walls, a borrowed chair, a key you earned. Yours, and only yours.", "good")
-end(123, "GOOD — Vouched for. Ms Rowe's word unlocks the good flat. You are new here, but you are known — and being known, you are beginning to learn, is how a stranger becomes a resident.", "good")
-end(124, "NEUTRAL — A room, not a home. You took the first thing, sight barely seen. It is yours, it is fine, it is grey and empty and quiet. A technical win. You lie on the bed and feel, exactly, nothing.", "neutral")
-end(125, "NEUTRAL — The kindness returned. No room of your own tonight, but the neighbour's box room and the child's shy hello. Warmth without the win — and warmth, tonight, is not nothing.", "neutral")
-end(126, "NEUTRAL — Remembered. No room today, but a landlady who kept your name says, come back Monday. You are becoming someone the city recognises. That is a kind of address.", "neutral")
-end(127, "NEUTRAL — Back to the hotel, one more week. Nothing signed, but you have the city's map now and its prices in your head. You buy one more week and set the alarm. Not a loss — just not yet.", "neutral")
-end(128, "BAD — The deposit gone. The room was never his to let. Your deposit — most of a week's pay — is gone, and the hotel wants its key by ten. You knew the tune and danced anyway.", "bad")
-end(129, "BAD — No one to vouch. No money kept, no reference, nothing to set against a stranger's face. Every good door was a polite no, and the day has simply run out.", "bad")
-end(130, "BAD — Too late to look. You spent the daylight on the wrong lead, and by dark the real rooms are all taken. The city didn't cheat you; you just ran out of light.", "bad")
-end(131, "BAD — You think about leaving. No room, no welcome, and the old thought again: a two-o'clock train, a way back to where they know you. You don't buy the ticket. But tonight, you think about it.", "bad")
+# ===== THE SAVED BOWL / MR BEHN =====
+node(91, "Near closing: the empty stool, the saved bowl on the shelf.", [
+    c("Watch the stool.", 93),
+    c("Sould comes for the fee.", 92),
+    c("You remember Auntie saying his name.", 97)])
+node(92, "Sould's last offer, if you're short.", [
+    c("Take his loan.", 64, sets="paid_fixer"),
+    c("Refuse, and take your chances.", 110, sets="dodged_fixer"),
+    c("His smile at closing.", 68)])
+node(93, "An old man approaches the empty stool.", [
+    c("Offer him the saved bowl.", 94, req="saved_a_bowl"),
+    c("Offer a fresh bowl.", 95),
+    c("You have nothing left.", 110),
+    c("An old photo by the till.", 98)])
+node(94, "You set the saved bowl before him. His face changes.", [
+    c("Serve it, and he stays.", 121, req="saved_a_bowl"),
+    c("Just talk to him.", 95)])
+node(95, "You serve Behn, and he tells you a little.", [
+    c("Toward closing.", 110),
+    c("What his return means.", 100)])
+node(96, "The stool has stood empty the whole night.", [
+    c("Watch it a while.", 91),
+    c("Back to work.", 60)])
+node(97, "You remember Auntie's face at his name.", [
+    c("Watch the stool.", 93),
+    c("Serve whoever comes.", 95)])
+node(98, "An old photo tucked by the till: Auntie, younger, and a man.", [
+    c("Offer the saved bowl.", 94),
+    c("Offer a fresh bowl.", 95)])
+node(100, "What Mr Behn's return means to the stall.", [
+    c("Toward closing.", 110),
+    c("Talk with him a while.", 95)])
 
-# ---- assemble --------------------------------------------------------------
-def leveled(s):
-    return {"A2": s, "B1": s, "B2": s}
+# ===== CLOSING & THE COUNT =====
+node(101, "Closing time nears; you count the takings against the fee.", [
+    c("Face the master's round.", 110),
+    c("Watch the stool once more.", 93),
+    c("The master works stall by stall.", 102)])
+node(102, "The market master's slow round, stall by stall.", [
+    c("Your turn comes.", 110),
+    c("Others who fell short pack up.", 103)])
+node(103, "Stalls that missed the fee are packing up.", [
+    c("Your turn.", 110),
+    c("The lanterns come down.", 104)])
+node(104, "The lanterns are lowered one by one.", [
+    c("Face the master.", 110),
+    c("The last of the night.", 114)])
+node(105, "Dawn grey spreads over the market roofs.", [
+    c("Watch the stool.", 91),
+    c("Toward closing.", 101)])
+node(110, "The master stops at pitch 24. The fee is due.", [
+    c("Pay from a proud, honest night.", 120, req=["sold_well", "kept_quality"]),
+    c("Pay it cleanly, no fixer, no debt.", 122, req=["sold_well", "dodged_fixer"]),
+    c("You're not sure you've made it.", 111)])
+node(111, "You lay out what the night brought.", [
+    c("You fell short, but you made the name.", 123, req="kept_quality"),
+    c("You made it — but by cutting corners.", 124, req="rushed"),
+    c("Weigh the rest.", 112)])
+node(112, "The fee still isn't quite there.", [
+    c("Sould has already covered it — for a price.", 128, req="paid_fixer"),
+    c("The tea woman offers to cover you.", 125, req="helped_neighbour"),
+    c("Weigh the last of it.", 113)])
+node(113, "Down to the last of your choices.", [
+    c("The kid's family fill your last bowls.", 126, req="gave_freely"),
+    c("The master gives you till next week.", 127),
+    c("The worst of it.", 114)])
+node(114, "Nothing left to set against the fee.", [
+    c("You're short; the pitch is lost.", 129),
+    c("The pot ran dry hours ago.", 130),
+    c("You think about handing it back.", 131)])
 
+# ===== ENDINGS (12: 4 good / 4 neutral / 4 bad) =====
+end(120, "GOOD — Sold out, and proud. Honest good food to the last bowl; the fee paid, pitch 24 kept, the name intact.", "good")
+end(121, "GOOD — The last bowl (secret). Mr Behn returns at dawn; the saved bowl is served, and you learn who he is to Auntie. Something long cold is warmed.", "good")
+end(122, "GOOD — On your own terms. You make the fee cleanly — no fixer, no debt, no corners cut. The corner is yours, earned.", "good")
+end(123, "GOOD — A name, not just a night. You fell short of the full fee, but you made the stall's name tonight, and you're given grace to keep the corner.", "good")
+end(124, "NEUTRAL — The money, not the name. You hit the fee by cutting corners. You keep the pitch, but the regulars saw, and thirty years of trust is thinner tonight.", "neutral")
+end(125, "NEUTRAL — Covered, this once. You fall short, but the tea woman covers your fee, no strings, because you stood by her. Warmth without the win.", "neutral")
+end(126, "NEUTRAL — The kindness fed back. No fee tonight, but the child you fed brings a hungry crew who'll come back. A start, not a save.", "neutral")
+end(127, "NEUTRAL — One more week. You scrape close; the master gives you till the next market day. Not a loss — just not yet.", "neutral")
+end(128, "BAD — In Sould's book. The fee's covered tonight, but you owe the fixer now, and that is the worse debt. You kept the pitch and lost the ground under it.", "bad")
+end(129, "BAD — Short by dawn. The takings don't reach the fee. Pitch 24, held thirty years, is lost.", "bad")
+end(130, "BAD — The pot ran dry. You ran out hours before dawn and stood at a cold empty stall while the market went on around you.", "bad")
+end(131, "BAD — You couldn't hold it. The night beat you, and you think about handing the stall back for good.", "bad")
+
+# ===== assemble =====
+def leveled(s): return {"A2": s, "B1": s, "B2": s}
 nodes = []
 for n in N:
     out = {"id": n["id"], "text": leveled("[stub] " + n["stub"])}
@@ -554,32 +421,32 @@ nodes.sort(key=lambda x: x["id"])
 
 book = {
     "schema": "adventure-book/episode@1",
-    "series": "new-city",
+    "series": "night-market",
     "episode": 2,
-    "title": "The Room",
-    "slug": "the-room",
-    "blurb": "You have the job. Now you have one grey Saturday, and a week's pay you can't afford to lose, to find somewhere to live in a city that still doesn't know you.",
+    "title": "The Night Market",
+    "slug": "the-night-market",
+    "blurb": "Your aunt has hurt her hand, so for one night the family's dumpling stall is yours — and you must take enough by dawn to keep the pitch she has held for thirty years.",
     "identity": {
-        "name": "Rope-Works Winter",
-        "mood": "A cold bright city by day; one lit doorway with a warm room behind it.",
+        "name": "Lantern Night",
+        "mood": "A loud warm market in the dark; one stall's lantern is the light you keep.",
         "palette": {
-            "ground": "#101A1E", "surface": "#16242C", "ink": "#F3EFE7",
-            "muted": "#8795A1", "line": "#27383F",
-            "accent": "#E2714A", "accentHot": "#F2946B", "secondary": "#6FA9C4"
+            "ground": "#1A0F0A", "surface": "#271711", "ink": "#F6ECDD",
+            "muted": "#A28C77", "line": "#3C2618",
+            "accent": "#E85A34", "accentHot": "#F5934F", "secondary": "#74BE95"
         },
-        "cover": {"kind": "daybreak", "glow": True},
+        "cover": {"kind": "lantern", "glow": True},
         "type": {"display": "Fraunces", "ui": "Hanken Grotesk", "mono": "JetBrains Mono"},
         "hero": {
             "line": {
-                "en": "You have the job. Now you need a room.",
-                "fr": "Vous avez le travail. Il vous faut maintenant une chambre.",
-                "es": "Ya tienes el trabajo. Ahora necesitas una habitación.",
-                "it": "Hai il lavoro. Adesso ti serve una stanza.",
-                "de": "Du hast die Stelle. Jetzt brauchst du ein Zimmer.",
-                "pt": "Já tens o emprego. Agora precisas de um quarto.",
-                "ru": "Работа есть. Теперь нужна комната.",
-                "zh": "工作有了。现在你需要一个房间。",
-                "ar": "حصلت على العمل. الآن تحتاج إلى غرفة."
+                "en": "One night, one stall, and a fee due by dawn.",
+                "fr": "Une nuit, un étal, et une redevance à payer avant l'aube.",
+                "es": "Una noche, un puesto y una cuota que pagar al amanecer.",
+                "it": "Una notte, una bancarella e una quota da pagare all'alba.",
+                "de": "Eine Nacht, ein Stand und eine Gebühr, fällig bis zum Morgengrauen.",
+                "pt": "Uma noite, uma banca e uma taxa a pagar até ao amanhecer.",
+                "ru": "Одна ночь, один прилавок и плата, которую нужно внести к рассвету.",
+                "zh": "一个夜晚，一个摊位，天亮前要交的摊位费。",
+                "ar": "ليلة واحدة، وكشك واحد، ورسوم مستحقة قبل الفجر."
             },
             "sub": "A story where you are the hero — and every choice turns you to a new page. Written for people learning English, at your level, with meaning in your language whenever you need it."
         }
@@ -587,21 +454,20 @@ book = {
     "levels": ["A2", "B1", "B2"],
     "start": 1,
     "language_focus": {
-        "A2": ["present simple, have/have got", "money, prices, rooms and furniture"],
-        "B1": ["future forms and the first conditional", "renting, agreements, comparisons"],
-        "B2": ["inference, conditionals and hedging", "trust, obligation and the housing market"]
+        "A2": ["present continuous and imperatives", "food, cooking and prices"],
+        "B1": ["quantifiers and comparatives", "buying, selling and making change"],
+        "B2": ["inference and negotiation", "obligation, debt and keeping a name"]
     },
     "state_in": STATE_IN,
     "state_out": STATE_OUT,
     "arc_flags": ARC_FLAGS,
     "nodes": nodes,
     "lexicon": {
-        "_comment": "Book 2's chosen lexicon. Grown in phase 4. Any word here is tappable wherever it appears (base form; the reader resolves inflections). Translations need a native speaker's check before launch.",
+        "_comment": "The Night Market's chosen lexicon. Grown in phase 4. Base-keyed; the reader resolves inflections. Translations need a native speaker's check before launch.",
         "entries": {}
     }
 }
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 json.dump(book, open(OUT, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
-print(f"Wrote {OUT}: {len(nodes)} nodes, "
-      f"{sum(1 for n in nodes if n.get('ending'))} endings.")
+print(f"Wrote {OUT}: {len(nodes)} nodes, {sum(1 for n in nodes if n.get('ending'))} endings.")

@@ -47,6 +47,28 @@ function daybreakScene(c) {
   <rect x="0" y="588" width="1200" height="42" fill="${c.ground}"/>
   <g transform="translate(348,-2)"><ellipse cx="300" cy="562" rx="46" ry="7" fill="#000" opacity=".3"/><path d="M300 508 C312 510 317 520 319 534 L324 562 L276 562 L281 534 C283 520 288 510 300 508 Z" fill="#0a1114"/><circle cx="300" cy="499" r="10" fill="#0a1114"/><path d="M289 496 q11 -9 22 0 z" fill="#0a1114"/></g>`;
 }
+function lanternScene(c) {
+  // a warm crowded night market: a row of paper lanterns strung across, a glowing
+  // stall under an awning with a rising column of steam, dark market roofs behind.
+  const lantern = (x, y, r) =>
+    `<g><line x1="${x}" y1="${y - r - 8}" x2="${x}" y2="${y - r}" stroke="${c.line}"/>` +
+    `<ellipse cx="${x}" cy="${y}" rx="${r * 0.72}" ry="${r}" fill="${c.accentHot}" opacity="0.92"/>` +
+    `<ellipse cx="${x}" cy="${y}" rx="${r * 0.72}" ry="${r}" fill="none" stroke="${c.accent}" stroke-width="2"/></g>`;
+  return `
+  <g fill="${c.surface}"><rect x="620" y="250" width="120" height="250"/><rect x="748" y="214" width="96" height="286"/><rect x="852" y="270" width="112" height="230"/><rect x="972" y="234" width="92" height="266"/><rect x="1072" y="286" width="112" height="214"/></g>
+  <path d="M600 150 Q900 120 1200 168" fill="none" stroke="${c.line}" stroke-width="2"/>
+  ${lantern(660, 196, 26)}${lantern(760, 180, 30)}${lantern(872, 176, 28)}${lantern(984, 182, 30)}${lantern(1096, 196, 26)}
+  <ellipse cx="800" cy="470" rx="220" ry="180" fill="url(#glow)"/>
+  <path d="M660 356 l24 -34 h232 l24 34 z" fill="${c.surface}"/>
+  <path d="M660 356 h280" stroke="${c.accent}" stroke-width="3"/>
+  <g stroke="${c.accent}" stroke-width="3" opacity="0.5"><path d="M690 322 l14 34"/><path d="M754 322 l10 34"/><path d="M820 322 l6 34"/><path d="M886 322 l2 34"/></g>
+  <rect x="676" y="356" width="248" height="150" fill="${c.ground}"/>
+  <rect x="676" y="440" width="248" height="12" fill="${c.accent}" opacity="0.32"/>
+  <g><ellipse cx="800" cy="452" rx="46" ry="12" fill="${c.accentHot}" opacity="0.9"/><path d="M792 396 c-6 10 6 14 0 24 M808 396 c-6 10 6 14 0 24" fill="none" stroke="${c.ink}" stroke-width="3" opacity="0.5"/></g>
+  <rect x="0" y="506" width="1200" height="124" fill="${c.surface}"/>
+  <rect x="0" y="588" width="1200" height="42" fill="${c.ground}"/>
+  <g transform="translate(360,4)"><ellipse cx="300" cy="560" rx="48" ry="7" fill="#000" opacity=".3"/><path d="M300 506 C313 508 319 519 321 533 L327 560 L273 560 L279 533 C281 519 287 508 300 506 Z" fill="#160b06"/><circle cx="300" cy="497" r="10" fill="#160b06"/></g>`;
+}
 
 function ogHTML(book) {
   const p = (book.identity && book.identity.palette) || {};
@@ -56,9 +78,10 @@ function ogHTML(book) {
         muted = p.muted || "#8A93A6";
   const c = { ground, surface, ink, accent, accentHot, secondary, muted };
   const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
-  const dawn = kind === "daybreak";
-  const scene = dawn ? daybreakScene(c) : nocturneScene(c);
-  const skyStops = dawn
+  const scene = kind === "daybreak" ? daybreakScene(c)
+              : kind === "lantern" ? lanternScene(c)
+              : nocturneScene(c);
+  const skyStops = kind === "daybreak"
     ? `<stop offset="0" stop-color="#AAB7BF"/><stop offset="0.5" stop-color="#6F838D"/><stop offset="1" stop-color="${surface}"/>`
     : `<stop offset="0" stop-color="${ground}"/><stop offset="0.72" stop-color="${surface}"/><stop offset="1" stop-color="${surface}"/>`;
   const line = (book.identity && book.identity.hero && book.identity.hero.line && book.identity.hero.line.en) || book.blurb || "";

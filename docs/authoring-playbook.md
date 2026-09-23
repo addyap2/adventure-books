@@ -19,8 +19,8 @@ To start one, the instruction is simply: **"Design book N following the playbook
 | Endings | **12**, balanced **4 good / 4 neutral / 4 bad** | Earned replay; two may be secret (clue-gated) |
 | Flags | **≤ 8**, each earned at one moment and paid off at another | Branches that matter, still testable |
 | Glossary | **per-book lexicon ~250 words**, keyed by base form, 8 languages | Auto-gloss makes every word tappable wherever it appears |
-| Series link | `state_out` → next book's `state_in` | Each book is "episode N of an arc" |
-| Tone | Restrained, humane, "warm light in cold places" | The house voice; never breezy or generic |
+| Standalone | `state_in` = `[]`; nothing carried between books | **Every book is a completely new subject, not linked** — new world, cast, city; no arc, no shared characters, no carried state |
+| Tone | Restrained, humane, "warm light in cold places" | The house voice (a platform value, not a shared world); never breezy or generic |
 | Art | ~30 images, **by location**, in waves; endings bespoke | See [art-brief.md](art-brief.md) + per-book shot-list |
 
 **The one caveat to hold in mind (bible §6b):** CEFR governs the *language*, not the
@@ -65,8 +65,14 @@ I (Claude) do phases 1–4 and prep 5–6; people do 5 and 6. Phases 5–6 are r
   directly), following the identical phase order and gates.
 - `docs/<book>-design.md` and `docs/<book>-art-shotlist.md`.
 
-**New series vs. same series:** same series (`new-city`) → reuse the shared base `lexicon.json`
-and carry `state_in`. New series → new folder convention `images/<series>/…` and its own base.
+**Every book is a completely new subject, not linked.** Each book is its own world — new
+premise, setting, and cast — with **no arc and no carried state**: `state_in` is always `[]`,
+`arc_flags` is `[]`, and no character, place, or plot thread crosses from another book. The
+`series`/`episode` fields are only a shelf-ordering hint for the build; they are never shown and
+imply no continuity. A book gets its own `images/<series>/…` folder and its own embedded lexicon;
+a word that happens to recur across books is re-authored to a consistent gloss for the learner's
+sake, but that is the only thing two books ever share. (*The house tone and the three-level +
+8-language pedagogy are platform values, not a shared world.*)
 
 ---
 
