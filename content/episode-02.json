@@ -1,0 +1,3202 @@
+{
+  "schema": "adventure-book/episode@1",
+  "series": "night-market",
+  "episode": 2,
+  "title": "The Night Market",
+  "slug": "the-night-market",
+  "blurb": "Your aunt has hurt her hand, so for one night the family's dumpling stall is yours — and you must take enough by dawn to keep the pitch she has held for thirty years.",
+  "identity": {
+    "name": "Lantern Night",
+    "mood": "A loud warm market in the dark; one stall's lantern is the light you keep.",
+    "palette": {
+      "ground": "#1A0F0A",
+      "surface": "#271711",
+      "ink": "#F6ECDD",
+      "muted": "#A28C77",
+      "line": "#3C2618",
+      "accent": "#E85A34",
+      "accentHot": "#F5934F",
+      "secondary": "#74BE95"
+    },
+    "cover": {
+      "kind": "lantern",
+      "glow": true
+    },
+    "type": {
+      "display": "Fraunces",
+      "ui": "Hanken Grotesk",
+      "mono": "JetBrains Mono"
+    },
+    "hero": {
+      "line": {
+        "en": "One night, one stall, and a fee due by dawn.",
+        "fr": "Une nuit, un étal, et une redevance à payer avant l'aube.",
+        "es": "Una noche, un puesto y una cuota que pagar al amanecer.",
+        "it": "Una notte, una bancarella e una quota da pagare all'alba.",
+        "de": "Eine Nacht, ein Stand und eine Gebühr, fällig bis zum Morgengrauen.",
+        "pt": "Uma noite, uma banca e uma taxa a pagar até ao amanhecer.",
+        "ru": "Одна ночь, один прилавок и плата, которую нужно внести к рассвету.",
+        "zh": "一个夜晚，一个摊位，天亮前要交的摊位费。",
+        "ar": "ليلة واحدة، وكشك واحد، ورسوم مستحقة قبل الفجر."
+      },
+      "sub": "A story where you are the hero — and every choice turns you to a new page. Written for people learning English, at your level, with meaning in your language whenever you need it."
+    }
+  },
+  "levels": [
+    "A2",
+    "B1",
+    "B2"
+  ],
+  "start": 1,
+  "language_focus": {
+    "A2": [
+      "present continuous and imperatives",
+      "food, cooking and prices"
+    ],
+    "B1": [
+      "quantifiers and comparatives",
+      "buying, selling and making change"
+    ],
+    "B2": [
+      "inference and negotiation",
+      "obligation, debt and keeping a name"
+    ]
+  },
+  "state_in": [],
+  "state_out": [
+    "kept_quality",
+    "sold_well",
+    "dodged_fixer",
+    "paid_fixer",
+    "saved_a_bowl",
+    "helped_neighbour",
+    "gave_freely",
+    "rushed"
+  ],
+  "arc_flags": [],
+  "nodes": [
+    {
+      "id": 1,
+      "text": {
+        "A2": "[stub] Dusk. Auntie has scalded her hand; tonight you run pitch 24 alone, and the season's fee is due to the market master by dawn or the corner is lost.",
+        "B1": "[stub] Dusk. Auntie has scalded her hand; tonight you run pitch 24 alone, and the season's fee is due to the market master by dawn or the corner is lost.",
+        "B2": "[stub] Dusk. Auntie has scalded her hand; tonight you run pitch 24 alone, and the season's fee is due to the market master by dawn or the corner is lost."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Light the stall and get started.",
+            "B1": "Light the stall and get started.",
+            "B2": "Light the stall and get started."
+          },
+          "goto": 2
+        },
+        {
+          "text": {
+            "A2": "Call Auntie for instructions first.",
+            "B1": "Call Auntie for instructions first.",
+            "B2": "Call Auntie for instructions first."
+          },
+          "goto": 3
+        },
+        {
+          "text": {
+            "A2": "Check the money box and the fee.",
+            "B1": "Check the money box and the fee.",
+            "B2": "Check the money box and the fee."
+          },
+          "goto": 4
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": {
+        "A2": "[stub] You open the stall — burners, lanterns, the counter, the back shelf.",
+        "B1": "[stub] You open the stall — burners, lanterns, the counter, the back shelf.",
+        "B2": "[stub] You open the stall — burners, lanterns, the counter, the back shelf."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The tea woman next door leans over.",
+            "B1": "The tea woman next door leans over.",
+            "B2": "The tea woman next door leans over."
+          },
+          "goto": 5
+        },
+        {
+          "text": {
+            "A2": "The supplier's van pulls up.",
+            "B1": "The supplier's van pulls up.",
+            "B2": "The supplier's van pulls up."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "The big burner won't catch.",
+            "B1": "The big burner won't catch.",
+            "B2": "The big burner won't catch."
+          },
+          "goto": 19
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": {
+        "A2": "[stub] Auntie on the phone: the broth, the good supplier, and — set a bowl for Mr Behn.",
+        "B1": "[stub] Auntie on the phone: the broth, the good supplier, and — set a bowl for Mr Behn.",
+        "B2": "[stub] Auntie on the phone: the broth, the good supplier, and — set a bowl for Mr Behn."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Ask about the good supplier.",
+            "B1": "Ask about the good supplier.",
+            "B2": "Ask about the good supplier."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "Ask what else you must know.",
+            "B1": "Ask what else you must know.",
+            "B2": "Ask what else you must know."
+          },
+          "goto": 7
+        },
+        {
+          "text": {
+            "A2": "Taste her broth to learn the balance.",
+            "B1": "Taste her broth to learn the balance.",
+            "B2": "Taste her broth to learn the balance."
+          },
+          "goto": 20
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": {
+        "A2": "[stub] The money box, and the fee card in Auntie's hand.",
+        "B1": "[stub] The money box, and the fee card in Auntie's hand.",
+        "B2": "[stub] The money box, and the fee card in Auntie's hand."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "You must match it by dawn. Get cooking.",
+            "B1": "You must match it by dawn. Get cooking.",
+            "B2": "You must match it by dawn. Get cooking."
+          },
+          "goto": 2
+        },
+        {
+          "text": {
+            "A2": "Work out what a bowl earns.",
+            "B1": "Work out what a bowl earns.",
+            "B2": "Work out what a bowl earns."
+          },
+          "goto": 8
+        },
+        {
+          "text": {
+            "A2": "Auntie frets down the line.",
+            "B1": "Auntie frets down the line.",
+            "B2": "Auntie frets down the line."
+          },
+          "goto": 21
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": {
+        "A2": "[stub] The tea woman at pitch 25 says hello.",
+        "B1": "[stub] The tea woman at pitch 25 says hello.",
+        "B2": "[stub] The tea woman at pitch 25 says hello."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Chat a moment.",
+            "B1": "Chat a moment.",
+            "B2": "Chat a moment."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "Get to the supplier.",
+            "B1": "Get to the supplier.",
+            "B2": "Get to the supplier."
+          },
+          "goto": 6
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": {
+        "A2": "[stub] The supplier's van: the good pork and greens cost more; the cheap end-of-day stock is half the price and half turned.",
+        "B1": "[stub] The supplier's van: the good pork and greens cost more; the cheap end-of-day stock is half the price and half turned.",
+        "B2": "[stub] The supplier's van: the good pork and greens cost more; the cheap end-of-day stock is half the price and half turned."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Buy the good stock.",
+            "B1": "Buy the good stock.",
+            "B2": "Buy the good stock."
+          },
+          "goto": 10,
+          "sets": [
+            "kept_quality"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Buy the cheap stock to save money.",
+            "B1": "Buy the cheap stock to save money.",
+            "B2": "Buy the cheap stock to save money."
+          },
+          "goto": 11
+        },
+        {
+          "text": {
+            "A2": "Buy a little of each.",
+            "B1": "Buy a little of each.",
+            "B2": "Buy a little of each."
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": {
+        "A2": "[stub] Auntie goes quiet at the name Behn.",
+        "B1": "[stub] Auntie goes quiet at the name Behn.",
+        "B2": "[stub] Auntie goes quiet at the name Behn."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Ask who he is.",
+            "B1": "Ask who he is.",
+            "B2": "Ask who he is."
+          },
+          "goto": 13
+        },
+        {
+          "text": {
+            "A2": "Say you will, and hang up.",
+            "B1": "Say you will, and hang up.",
+            "B2": "Say you will, and hang up."
+          },
+          "goto": 6
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": {
+        "A2": "[stub] A bowl earns little; the fee needs a whole good night.",
+        "B1": "[stub] A bowl earns little; the fee needs a whole good night.",
+        "B2": "[stub] A bowl earns little; the fee needs a whole good night."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Get cooking.",
+            "B1": "Get cooking.",
+            "B2": "Get cooking."
+          },
+          "goto": 2
+        },
+        {
+          "text": {
+            "A2": "Ask the tea woman for tips.",
+            "B1": "Ask the tea woman for tips.",
+            "B2": "Ask the tea woman for tips."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": {
+        "A2": "[stub] The tea woman's tips — and a warning about Mr Sould, the fixer.",
+        "B1": "[stub] The tea woman's tips — and a warning about Mr Sould, the fixer.",
+        "B2": "[stub] The tea woman's tips — and a warning about Mr Sould, the fixer."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Thank her.",
+            "B1": "Thank her.",
+            "B2": "Thank her."
+          },
+          "goto": 14
+        },
+        {
+          "text": {
+            "A2": "Sould is already coming over.",
+            "B1": "Sould is already coming over.",
+            "B2": "Sould is already coming over."
+          },
+          "goto": 15
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": {
+        "A2": "[stub] The good stock, stored and cold.",
+        "B1": "[stub] The good stock, stored and cold.",
+        "B2": "[stub] The good stock, stored and cold."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the stall.",
+            "B1": "Back to the stall.",
+            "B2": "Back to the stall."
+          },
+          "goto": 16
+        },
+        {
+          "text": {
+            "A2": "Set up the counter.",
+            "B1": "Set up the counter.",
+            "B2": "Set up the counter."
+          },
+          "goto": 18
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": {
+        "A2": "[stub] The cheap stock, and a smell you don't like.",
+        "B1": "[stub] The cheap stock, and a smell you don't like.",
+        "B2": "[stub] The cheap stock, and a smell you don't like."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Use it anyway.",
+            "B1": "Use it anyway.",
+            "B2": "Use it anyway."
+          },
+          "goto": 16
+        },
+        {
+          "text": {
+            "A2": "Regret it.",
+            "B1": "Regret it.",
+            "B2": "Regret it."
+          },
+          "goto": 17
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": {
+        "A2": "[stub] Some of each, to hedge.",
+        "B1": "[stub] Some of each, to hedge.",
+        "B2": "[stub] Some of each, to hedge."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the stall.",
+            "B1": "Back to the stall.",
+            "B2": "Back to the stall."
+          },
+          "goto": 16
+        },
+        {
+          "text": {
+            "A2": "Set up the counter.",
+            "B1": "Set up the counter.",
+            "B2": "Set up the counter."
+          },
+          "goto": 18
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": {
+        "A2": "[stub] The saved bowl — Auntie's thirty-year habit.",
+        "B1": "[stub] The saved bowl — Auntie's thirty-year habit.",
+        "B2": "[stub] The saved bowl — Auntie's thirty-year habit."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Set a bowl aside now, as she does.",
+            "B1": "Set a bowl aside now, as she does.",
+            "B2": "Set a bowl aside now, as she does."
+          },
+          "goto": 18,
+          "sets": [
+            "saved_a_bowl"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You're too busy for that.",
+            "B1": "You're too busy for that.",
+            "B2": "You're too busy for that."
+          },
+          "goto": 16
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": {
+        "A2": "[stub] You thank the tea woman.",
+        "B1": "[stub] You thank the tea woman.",
+        "B2": "[stub] You thank the tea woman."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the stall.",
+            "B1": "Back to the stall.",
+            "B2": "Back to the stall."
+          },
+          "goto": 16
+        },
+        {
+          "text": {
+            "A2": "Open for business.",
+            "B1": "Open for business.",
+            "B2": "Open for business."
+          },
+          "goto": 31
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": {
+        "A2": "[stub] Sould's first, friendly approach.",
+        "B1": "[stub] Sould's first, friendly approach.",
+        "B2": "[stub] Sould's first, friendly approach."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hear him out.",
+            "B1": "Hear him out.",
+            "B2": "Hear him out."
+          },
+          "goto": 61
+        },
+        {
+          "text": {
+            "A2": "Wave him off politely.",
+            "B1": "Wave him off politely.",
+            "B2": "Wave him off politely."
+          },
+          "goto": 16
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "text": {
+        "A2": "[stub] The stall is ready; the market fills up.",
+        "B1": "[stub] The stall is ready; the market fills up.",
+        "B2": "[stub] The stall is ready; the market fills up."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Open for business.",
+            "B1": "Open for business.",
+            "B2": "Open for business."
+          },
+          "goto": 31
+        },
+        {
+          "text": {
+            "A2": "Set a bowl aside first.",
+            "B1": "Set a bowl aside first.",
+            "B2": "Set a bowl aside first."
+          },
+          "goto": 13
+        },
+        {
+          "text": {
+            "A2": "The regulars will want the usual.",
+            "B1": "The regulars will want the usual.",
+            "B2": "The regulars will want the usual."
+          },
+          "goto": 22
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "text": {
+        "A2": "[stub] You bin the worst of the cheap stock.",
+        "B1": "[stub] You bin the worst of the cheap stock.",
+        "B2": "[stub] You bin the worst of the cheap stock."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the stall.",
+            "B1": "Back to the stall.",
+            "B2": "Back to the stall."
+          },
+          "goto": 16
+        },
+        {
+          "text": {
+            "A2": "Open for business.",
+            "B1": "Open for business.",
+            "B2": "Open for business."
+          },
+          "goto": 31
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "text": {
+        "A2": "[stub] The saved bowl waits on the back shelf.",
+        "B1": "[stub] The saved bowl waits on the back shelf.",
+        "B2": "[stub] The saved bowl waits on the back shelf."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Open for business.",
+            "B1": "Open for business.",
+            "B2": "Open for business."
+          },
+          "goto": 31
+        },
+        {
+          "text": {
+            "A2": "Back to the stall.",
+            "B1": "Back to the stall.",
+            "B2": "Back to the stall."
+          },
+          "goto": 16
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "text": {
+        "A2": "[stub] The burner splutters and won't light.",
+        "B1": "[stub] The burner splutters and won't light.",
+        "B2": "[stub] The burner splutters and won't light."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Coax it alight yourself.",
+            "B1": "Coax it alight yourself.",
+            "B2": "Coax it alight yourself."
+          },
+          "goto": 5
+        },
+        {
+          "text": {
+            "A2": "The tea woman helps.",
+            "B1": "The tea woman helps.",
+            "B2": "The tea woman helps."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "text": {
+        "A2": "[stub] You taste the broth — salt, ginger, the deep note.",
+        "B1": "[stub] You taste the broth — salt, ginger, the deep note.",
+        "B2": "[stub] You taste the broth — salt, ginger, the deep note."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "To the supplier.",
+            "B1": "To the supplier.",
+            "B2": "To the supplier."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "Back to the stall.",
+            "B1": "Back to the stall.",
+            "B2": "Back to the stall."
+          },
+          "goto": 16
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "text": {
+        "A2": "[stub] Auntie frets about the fee down the line.",
+        "B1": "[stub] Auntie frets about the fee down the line.",
+        "B2": "[stub] Auntie frets about the fee down the line."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Reassure her, and cook.",
+            "B1": "Reassure her, and cook.",
+            "B2": "Reassure her, and cook."
+          },
+          "goto": 2
+        },
+        {
+          "text": {
+            "A2": "Work out the numbers.",
+            "B1": "Work out the numbers.",
+            "B2": "Work out the numbers."
+          },
+          "goto": 8
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "text": {
+        "A2": "[stub] The regulars will expect Auntie's usual.",
+        "B1": "[stub] The regulars will expect Auntie's usual.",
+        "B2": "[stub] The regulars will expect Auntie's usual."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Open for business.",
+            "B1": "Open for business.",
+            "B2": "Open for business."
+          },
+          "goto": 31
+        },
+        {
+          "text": {
+            "A2": "Ask the tea woman who's who.",
+            "B1": "Ask the tea woman who's who.",
+            "B2": "Ask the tea woman who's who."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "text": {
+        "A2": "[stub] A family of six, all ordering at once.",
+        "B1": "[stub] A family of six, all ordering at once.",
+        "B2": "[stub] A family of six, all ordering at once."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take it carefully.",
+            "B1": "Take it carefully.",
+            "B2": "Take it carefully."
+          },
+          "goto": 35
+        },
+        {
+          "text": {
+            "A2": "Rush it through.",
+            "B1": "Rush it through.",
+            "B2": "Rush it through."
+          },
+          "goto": 45
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "text": {
+        "A2": "[stub] A child counts coins for one bowl.",
+        "B1": "[stub] A child counts coins for one bowl.",
+        "B2": "[stub] A child counts coins for one bowl."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Serve them kindly.",
+            "B1": "Serve them kindly.",
+            "B2": "Serve them kindly."
+          },
+          "goto": 37
+        },
+        {
+          "text": {
+            "A2": "Shoo them on.",
+            "B1": "Shoo them on.",
+            "B2": "Shoo them on."
+          },
+          "goto": 38
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "text": {
+        "A2": "[stub] Orders shouted from every side at once.",
+        "B1": "[stub] Orders shouted from every side at once.",
+        "B2": "[stub] Orders shouted from every side at once."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Meet the rush.",
+            "B1": "Meet the rush.",
+            "B2": "Meet the rush."
+          },
+          "goto": 42
+        },
+        {
+          "text": {
+            "A2": "Work steadily.",
+            "B1": "Work steadily.",
+            "B2": "Work steadily."
+          },
+          "goto": 44
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "text": {
+        "A2": "[stub] A regular asks where Auntie is.",
+        "B1": "[stub] A regular asks where Auntie is.",
+        "B2": "[stub] A regular asks where Auntie is."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Tell them the truth.",
+            "B1": "Tell them the truth.",
+            "B2": "Tell them the truth."
+          },
+          "goto": 49
+        },
+        {
+          "text": {
+            "A2": "Just serve, and smile.",
+            "B1": "Just serve, and smile.",
+            "B2": "Just serve, and smile."
+          },
+          "goto": 50
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "text": {
+        "A2": "[stub] You burn your hand, as Auntie did.",
+        "B1": "[stub] You burn your hand, as Auntie did.",
+        "B2": "[stub] You burn your hand, as Auntie did."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Wrap it and carry on.",
+            "B1": "Wrap it and carry on.",
+            "B2": "Wrap it and carry on."
+          },
+          "goto": 47
+        },
+        {
+          "text": {
+            "A2": "The tea woman helps.",
+            "B1": "The tea woman helps.",
+            "B2": "The tea woman helps."
+          },
+          "goto": 58
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "text": {
+        "A2": "[stub] The steamer runs dry; refill it.",
+        "B1": "[stub] The steamer runs dry; refill it.",
+        "B2": "[stub] The steamer runs dry; refill it."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Eke it out.",
+            "B1": "Eke it out.",
+            "B2": "Eke it out."
+          },
+          "goto": 56
+        },
+        {
+          "text": {
+            "A2": "On through the rush.",
+            "B1": "On through the rush.",
+            "B2": "On through the rush."
+          },
+          "goto": 57
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "text": {
+        "A2": "[stub] A quiet stretch to wipe down and think.",
+        "B1": "[stub] A quiet stretch to wipe down and think.",
+        "B2": "[stub] A quiet stretch to wipe down and think."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take a breath.",
+            "B1": "Take a breath.",
+            "B2": "Take a breath."
+          },
+          "goto": 52
+        },
+        {
+          "text": {
+            "A2": "On through the rush.",
+            "B1": "On through the rush.",
+            "B2": "On through the rush."
+          },
+          "goto": 57
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "text": {
+        "A2": "[stub] The first customers; how do you price the bowls?",
+        "B1": "[stub] The first customers; how do you price the bowls?",
+        "B2": "[stub] The first customers; how do you price the bowls?"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "A fair price.",
+            "B1": "A fair price.",
+            "B2": "A fair price."
+          },
+          "goto": 32
+        },
+        {
+          "text": {
+            "A2": "Charge high for the tourists.",
+            "B1": "Charge high for the tourists.",
+            "B2": "Charge high for the tourists."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "Auntie's usual price.",
+            "B1": "Auntie's usual price.",
+            "B2": "Auntie's usual price."
+          },
+          "goto": 34
+        },
+        {
+          "text": {
+            "A2": "A nervous first big order.",
+            "B1": "A nervous first big order.",
+            "B2": "A nervous first big order."
+          },
+          "goto": 23
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "text": {
+        "A2": "[stub] A fair price it is.",
+        "B1": "[stub] A fair price it is.",
+        "B2": "[stub] A fair price it is."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Serve them.",
+            "B1": "Serve them.",
+            "B2": "Serve them."
+          },
+          "goto": 35
+        },
+        {
+          "text": {
+            "A2": "A grumble anyway.",
+            "B1": "A grumble anyway.",
+            "B2": "A grumble anyway."
+          },
+          "goto": 36
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "text": {
+        "A2": "[stub] You mark the price up.",
+        "B1": "[stub] You mark the price up.",
+        "B2": "[stub] You mark the price up."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "A grumble at the price.",
+            "B1": "A grumble at the price.",
+            "B2": "A grumble at the price."
+          },
+          "goto": 36
+        },
+        {
+          "text": {
+            "A2": "Serve them.",
+            "B1": "Serve them.",
+            "B2": "Serve them."
+          },
+          "goto": 35
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "text": {
+        "A2": "[stub] Auntie's usual price, to the penny.",
+        "B1": "[stub] Auntie's usual price, to the penny.",
+        "B2": "[stub] Auntie's usual price, to the penny."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Serve them.",
+            "B1": "Serve them.",
+            "B2": "Serve them."
+          },
+          "goto": 35
+        },
+        {
+          "text": {
+            "A2": "A regular smiles.",
+            "B1": "A regular smiles.",
+            "B2": "A regular smiles."
+          },
+          "goto": 37
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "text": {
+        "A2": "[stub] Serving the first bowls.",
+        "B1": "[stub] Serving the first bowls.",
+        "B2": "[stub] Serving the first bowls."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "A customer praises it.",
+            "B1": "A customer praises it.",
+            "B2": "A customer praises it."
+          },
+          "goto": 37
+        },
+        {
+          "text": {
+            "A2": "A customer finds it bland.",
+            "B1": "A customer finds it bland.",
+            "B2": "A customer finds it bland."
+          },
+          "goto": 38
+        },
+        {
+          "text": {
+            "A2": "A child counts out coins.",
+            "B1": "A child counts out coins.",
+            "B2": "A child counts out coins."
+          },
+          "goto": 24
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "text": {
+        "A2": "[stub] Someone grumbles about the price.",
+        "B1": "[stub] Someone grumbles about the price.",
+        "B2": "[stub] Someone grumbles about the price."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Drop it back to fair.",
+            "B1": "Drop it back to fair.",
+            "B2": "Drop it back to fair."
+          },
+          "goto": 32
+        },
+        {
+          "text": {
+            "A2": "Hold firm.",
+            "B1": "Hold firm.",
+            "B2": "Hold firm."
+          },
+          "goto": 39
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "text": {
+        "A2": "[stub] A customer loves the broth.",
+        "B1": "[stub] A customer loves the broth.",
+        "B2": "[stub] A customer loves the broth."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The takings grow.",
+            "B1": "The takings grow.",
+            "B2": "The takings grow."
+          },
+          "goto": 39
+        },
+        {
+          "text": {
+            "A2": "The crowd builds.",
+            "B1": "The crowd builds.",
+            "B2": "The crowd builds."
+          },
+          "goto": 41
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "text": {
+        "A2": "[stub] A customer says it's bland.",
+        "B1": "[stub] A customer says it's bland.",
+        "B2": "[stub] A customer says it's bland."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The takings grow.",
+            "B1": "The takings grow.",
+            "B2": "The takings grow."
+          },
+          "goto": 39
+        },
+        {
+          "text": {
+            "A2": "The crowd builds.",
+            "B1": "The crowd builds.",
+            "B2": "The crowd builds."
+          },
+          "goto": 41
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "text": {
+        "A2": "[stub] The first takings in the box.",
+        "B1": "[stub] The first takings in the box.",
+        "B2": "[stub] The first takings in the box."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Count so far.",
+            "B1": "Count so far.",
+            "B2": "Count so far."
+          },
+          "goto": 40
+        },
+        {
+          "text": {
+            "A2": "The crowd builds.",
+            "B1": "The crowd builds.",
+            "B2": "The crowd builds."
+          },
+          "goto": 41
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "text": {
+        "A2": "[stub] A start — a long way to the fee.",
+        "B1": "[stub] A start — a long way to the fee.",
+        "B2": "[stub] A start — a long way to the fee."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Into the rush.",
+            "B1": "Into the rush.",
+            "B2": "Into the rush."
+          },
+          "goto": 41
+        },
+        {
+          "text": {
+            "A2": "A word with the tea woman.",
+            "B1": "A word with the tea woman.",
+            "B2": "A word with the tea woman."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "text": {
+        "A2": "[stub] The crowd builds; the rush begins.",
+        "B1": "[stub] The crowd builds; the rush begins.",
+        "B2": "[stub] The crowd builds; the rush begins."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Meet the rush.",
+            "B1": "Meet the rush.",
+            "B2": "Meet the rush."
+          },
+          "goto": 42
+        },
+        {
+          "text": {
+            "A2": "The arcade packs in.",
+            "B1": "The arcade packs in.",
+            "B2": "The arcade packs in."
+          },
+          "goto": 43
+        },
+        {
+          "text": {
+            "A2": "Orders shouted from all sides.",
+            "B1": "Orders shouted from all sides.",
+            "B2": "Orders shouted from all sides."
+          },
+          "goto": 26
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "text": {
+        "A2": "[stub] The rush: orders pile up faster than your hands.",
+        "B1": "[stub] The rush: orders pile up faster than your hands.",
+        "B2": "[stub] The rush: orders pile up faster than your hands."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Work steadily, keep it right.",
+            "B1": "Work steadily, keep it right.",
+            "B2": "Work steadily, keep it right."
+          },
+          "goto": 44
+        },
+        {
+          "text": {
+            "A2": "Rush it — cut a corner to go faster.",
+            "B1": "Rush it — cut a corner to go faster.",
+            "B2": "Rush it — cut a corner to go faster."
+          },
+          "goto": 45,
+          "sets": [
+            "rushed"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Call for a hand.",
+            "B1": "Call for a hand.",
+            "B2": "Call for a hand."
+          },
+          "goto": 46
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "text": {
+        "A2": "[stub] The arcade is shoulder to shoulder.",
+        "B1": "[stub] The arcade is shoulder to shoulder.",
+        "B2": "[stub] The arcade is shoulder to shoulder."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Meet the rush.",
+            "B1": "Meet the rush.",
+            "B2": "Meet the rush."
+          },
+          "goto": 42
+        },
+        {
+          "text": {
+            "A2": "Work steadily.",
+            "B1": "Work steadily.",
+            "B2": "Work steadily."
+          },
+          "goto": 44
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "text": {
+        "A2": "[stub] You find a rhythm at the burners.",
+        "B1": "[stub] You find a rhythm at the burners.",
+        "B2": "[stub] You find a rhythm at the burners."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Work steadily and win the crowd over.",
+            "B1": "Work steadily and win the crowd over.",
+            "B2": "Work steadily and win the crowd over."
+          },
+          "goto": 47,
+          "sets": [
+            "sold_well"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Just keep up.",
+            "B1": "Just keep up.",
+            "B2": "Just keep up."
+          },
+          "goto": 49
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "text": {
+        "A2": "[stub] You serve one half-done, and short a coin.",
+        "B1": "[stub] You serve one half-done, and short a coin.",
+        "B2": "[stub] You serve one half-done, and short a coin."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Keep going.",
+            "B1": "Keep going.",
+            "B2": "Keep going."
+          },
+          "goto": 47
+        },
+        {
+          "text": {
+            "A2": "A customer notices.",
+            "B1": "A customer notices.",
+            "B2": "A customer notices."
+          },
+          "goto": 48
+        },
+        {
+          "text": {
+            "A2": "You burn your hand in the hurry.",
+            "B1": "You burn your hand in the hurry.",
+            "B2": "You burn your hand in the hurry."
+          },
+          "goto": 28
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "text": {
+        "A2": "[stub] You call out for help.",
+        "B1": "[stub] You call out for help.",
+        "B2": "[stub] You call out for help."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Send the market kid on an errand.",
+            "B1": "Send the market kid on an errand.",
+            "B2": "Send the market kid on an errand."
+          },
+          "goto": 73
+        },
+        {
+          "text": {
+            "A2": "The tea woman is swamped too.",
+            "B1": "The tea woman is swamped too.",
+            "B2": "The tea woman is swamped too."
+          },
+          "goto": 58
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "text": {
+        "A2": "[stub] Mid-rush, the box filling.",
+        "B1": "[stub] Mid-rush, the box filling.",
+        "B2": "[stub] Mid-rush, the box filling."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Keep serving.",
+            "B1": "Keep serving.",
+            "B2": "Keep serving."
+          },
+          "goto": 49
+        },
+        {
+          "text": {
+            "A2": "A brief lull.",
+            "B1": "A brief lull.",
+            "B2": "A brief lull."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "A regular asks for Auntie.",
+            "B1": "A regular asks for Auntie.",
+            "B2": "A regular asks for Auntie."
+          },
+          "goto": 27
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "text": {
+        "A2": "[stub] A customer clocks the short change.",
+        "B1": "[stub] A customer clocks the short change.",
+        "B2": "[stub] A customer clocks the short change."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Apologise and fix it.",
+            "B1": "Apologise and fix it.",
+            "B2": "Apologise and fix it."
+          },
+          "goto": 51
+        },
+        {
+          "text": {
+            "A2": "Brazen it out.",
+            "B1": "Brazen it out.",
+            "B2": "Brazen it out."
+          },
+          "goto": 54
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "text": {
+        "A2": "[stub] The stock is running low.",
+        "B1": "[stub] The stock is running low.",
+        "B2": "[stub] The stock is running low."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Eke it out in small bowls.",
+            "B1": "Eke it out in small bowls.",
+            "B2": "Eke it out in small bowls."
+          },
+          "goto": 56
+        },
+        {
+          "text": {
+            "A2": "Send for more.",
+            "B1": "Send for more.",
+            "B2": "Send for more."
+          },
+          "goto": 55
+        },
+        {
+          "text": {
+            "A2": "The steamer runs dry.",
+            "B1": "The steamer runs dry.",
+            "B2": "The steamer runs dry."
+          },
+          "goto": 29
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "text": {
+        "A2": "[stub] A brief lull; wipe down.",
+        "B1": "[stub] A brief lull; wipe down.",
+        "B2": "[stub] A brief lull; wipe down."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to serving.",
+            "B1": "Back to serving.",
+            "B2": "Back to serving."
+          },
+          "goto": 49
+        },
+        {
+          "text": {
+            "A2": "Take a breath.",
+            "B1": "Take a breath.",
+            "B2": "Take a breath."
+          },
+          "goto": 52
+        },
+        {
+          "text": {
+            "A2": "A quiet stretch.",
+            "B1": "A quiet stretch.",
+            "B2": "A quiet stretch."
+          },
+          "goto": 30
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "text": {
+        "A2": "[stub] You make the short change right.",
+        "B1": "[stub] You make the short change right.",
+        "B2": "[stub] You make the short change right."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to serving.",
+            "B1": "Back to serving.",
+            "B2": "Back to serving."
+          },
+          "goto": 49
+        },
+        {
+          "text": {
+            "A2": "On through the rush.",
+            "B1": "On through the rush.",
+            "B2": "On through the rush."
+          },
+          "goto": 57
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "text": {
+        "A2": "[stub] You breathe; the box is filling.",
+        "B1": "[stub] You breathe; the box is filling.",
+        "B2": "[stub] You breathe; the box is filling."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Count so far.",
+            "B1": "Count so far.",
+            "B2": "Count so far."
+          },
+          "goto": 40
+        },
+        {
+          "text": {
+            "A2": "Back in.",
+            "B1": "Back in.",
+            "B2": "Back in."
+          },
+          "goto": 57
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "text": {
+        "A2": "[stub] The customer leaves angry, and talks.",
+        "B1": "[stub] The customer leaves angry, and talks.",
+        "B2": "[stub] The customer leaves angry, and talks."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to serving.",
+            "B1": "Back to serving.",
+            "B2": "Back to serving."
+          },
+          "goto": 49
+        },
+        {
+          "text": {
+            "A2": "On through the rush.",
+            "B1": "On through the rush.",
+            "B2": "On through the rush."
+          },
+          "goto": 57
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "text": {
+        "A2": "[stub] You send the kid for more stock.",
+        "B1": "[stub] You send the kid for more stock.",
+        "B2": "[stub] You send the kid for more stock."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The kid returns, hungry.",
+            "B1": "The kid returns, hungry.",
+            "B2": "The kid returns, hungry."
+          },
+          "goto": 73
+        },
+        {
+          "text": {
+            "A2": "On through the rush.",
+            "B1": "On through the rush.",
+            "B2": "On through the rush."
+          },
+          "goto": 57
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "text": {
+        "A2": "[stub] You eke out smaller bowls.",
+        "B1": "[stub] You eke out smaller bowls.",
+        "B2": "[stub] You eke out smaller bowls."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On through the rush.",
+            "B1": "On through the rush.",
+            "B2": "On through the rush."
+          },
+          "goto": 57
+        },
+        {
+          "text": {
+            "A2": "A quiet moment.",
+            "B1": "A quiet moment.",
+            "B2": "A quiet moment."
+          },
+          "goto": 59
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "text": {
+        "A2": "[stub] The rush rolls on.",
+        "B1": "[stub] The rush rolls on.",
+        "B2": "[stub] The rush rolls on."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The tea woman's urn spills.",
+            "B1": "The tea woman's urn spills.",
+            "B2": "The tea woman's urn spills."
+          },
+          "goto": 58
+        },
+        {
+          "text": {
+            "A2": "A quiet moment.",
+            "B1": "A quiet moment.",
+            "B2": "A quiet moment."
+          },
+          "goto": 59
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "text": {
+        "A2": "[stub] The tea woman's urn goes over — she's in trouble.",
+        "B1": "[stub] The tea woman's urn goes over — she's in trouble.",
+        "B2": "[stub] The tea woman's urn goes over — she's in trouble."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Drop everything and help her.",
+            "B1": "Drop everything and help her.",
+            "B2": "Drop everything and help her."
+          },
+          "goto": 88,
+          "sets": [
+            "helped_neighbour"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You can't; keep serving.",
+            "B1": "You can't; keep serving.",
+            "B2": "You can't; keep serving."
+          },
+          "goto": 60
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "text": {
+        "A2": "[stub] A quiet moment; the back shelf, the empty stool.",
+        "B1": "[stub] A quiet moment; the back shelf, the empty stool.",
+        "B2": "[stub] A quiet moment; the back shelf, the empty stool."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Check the saved bowl.",
+            "B1": "Check the saved bowl.",
+            "B2": "Check the saved bowl."
+          },
+          "goto": 91
+        },
+        {
+          "text": {
+            "A2": "Back to work.",
+            "B1": "Back to work.",
+            "B2": "Back to work."
+          },
+          "goto": 60
+        },
+        {
+          "text": {
+            "A2": "The stool has been empty all night.",
+            "B1": "The stool has been empty all night.",
+            "B2": "The stool has been empty all night."
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "text": {
+        "A2": "[stub] The rush peaks and breaks.",
+        "B1": "[stub] The rush peaks and breaks.",
+        "B2": "[stub] The rush peaks and breaks."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The stock is nearly gone.",
+            "B1": "The stock is nearly gone.",
+            "B2": "The stock is nearly gone."
+          },
+          "goto": 80
+        },
+        {
+          "text": {
+            "A2": "Rain sweeps the arcade.",
+            "B1": "Rain sweeps the arcade.",
+            "B2": "Rain sweeps the arcade."
+          },
+          "goto": 79
+        },
+        {
+          "text": {
+            "A2": "A new stall opposite undercuts you.",
+            "B1": "A new stall opposite undercuts you.",
+            "B2": "A new stall opposite undercuts you."
+          },
+          "goto": 86
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "text": {
+        "A2": "[stub] Sould's pitch: he collects fees, settles trouble, lends to the stuck.",
+        "B1": "[stub] Sould's pitch: he collects fees, settles trouble, lends to the stuck.",
+        "B2": "[stub] Sould's pitch: he collects fees, settles trouble, lends to the stuck."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Listen to the offer.",
+            "B1": "Listen to the offer.",
+            "B2": "Listen to the offer."
+          },
+          "goto": 62
+        },
+        {
+          "text": {
+            "A2": "Refuse now.",
+            "B1": "Refuse now.",
+            "B2": "Refuse now."
+          },
+          "goto": 63,
+          "sets": [
+            "dodged_fixer"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Stallholders line up to pay him.",
+            "B1": "Stallholders line up to pay him.",
+            "B2": "Stallholders line up to pay him."
+          },
+          "goto": 66
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "text": {
+        "A2": "[stub] The offer: a loan to be safe, or a quiet word with a rival — a price never quite named.",
+        "B1": "[stub] The offer: a loan to be safe, or a quiet word with a rival — a price never quite named.",
+        "B2": "[stub] The offer: a loan to be safe, or a quiet word with a rival — a price never quite named."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take the loan.",
+            "B1": "Take the loan.",
+            "B2": "Take the loan."
+          },
+          "goto": 64,
+          "sets": [
+            "paid_fixer"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Refuse it.",
+            "B1": "Refuse it.",
+            "B2": "Refuse it."
+          },
+          "goto": 63,
+          "sets": [
+            "dodged_fixer"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Ask what it costs.",
+            "B1": "Ask what it costs.",
+            "B2": "Ask what it costs."
+          },
+          "goto": 65
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "text": {
+        "A2": "[stub] You send him off.",
+        "B1": "[stub] You send him off.",
+        "B2": "[stub] You send him off."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the stall.",
+            "B1": "Back to the stall.",
+            "B2": "Back to the stall."
+          },
+          "goto": 16
+        },
+        {
+          "text": {
+            "A2": "Into the night's work.",
+            "B1": "Into the night's work.",
+            "B2": "Into the night's work."
+          },
+          "goto": 60
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "text": {
+        "A2": "[stub] You take his money — relief, then unease.",
+        "B1": "[stub] You take his money — relief, then unease.",
+        "B2": "[stub] You take his money — relief, then unease."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the stall.",
+            "B1": "Back to the stall.",
+            "B2": "Back to the stall."
+          },
+          "goto": 16
+        },
+        {
+          "text": {
+            "A2": "On toward closing.",
+            "B1": "On toward closing.",
+            "B2": "On toward closing."
+          },
+          "goto": 101
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "text": {
+        "A2": "[stub] He smiles and still won't name the price.",
+        "B1": "[stub] He smiles and still won't name the price.",
+        "B2": "[stub] He smiles and still won't name the price."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "That's the tell — refuse.",
+            "B1": "That's the tell — refuse.",
+            "B2": "That's the tell — refuse."
+          },
+          "goto": 63,
+          "sets": [
+            "dodged_fixer"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Take it anyway.",
+            "B1": "Take it anyway.",
+            "B2": "Take it anyway."
+          },
+          "goto": 64,
+          "sets": [
+            "paid_fixer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "text": {
+        "A2": "[stub] Stallholders queue to hand Sould their fees.",
+        "B1": "[stub] Stallholders queue to hand Sould their fees.",
+        "B2": "[stub] Stallholders queue to hand Sould their fees."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hear his offer.",
+            "B1": "Hear his offer.",
+            "B2": "Hear his offer."
+          },
+          "goto": 62
+        },
+        {
+          "text": {
+            "A2": "A stallholder warns you.",
+            "B1": "A stallholder warns you.",
+            "B2": "A stallholder warns you."
+          },
+          "goto": 67
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "text": {
+        "A2": "[stub] 'Sould never forgets a debt,' the stallholder murmurs.",
+        "B1": "[stub] 'Sould never forgets a debt,' the stallholder murmurs.",
+        "B2": "[stub] 'Sould never forgets a debt,' the stallholder murmurs."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Refuse him.",
+            "B1": "Refuse him.",
+            "B2": "Refuse him."
+          },
+          "goto": 63,
+          "sets": [
+            "dodged_fixer"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Still hear him out.",
+            "B1": "Still hear him out.",
+            "B2": "Still hear him out."
+          },
+          "goto": 62
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "text": {
+        "A2": "[stub] Sould's patient smile as closing nears.",
+        "B1": "[stub] Sould's patient smile as closing nears.",
+        "B2": "[stub] Sould's patient smile as closing nears."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take his loan.",
+            "B1": "Take his loan.",
+            "B2": "Take his loan."
+          },
+          "goto": 64,
+          "sets": [
+            "paid_fixer"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Refuse, and take your chances.",
+            "B1": "Refuse, and take your chances.",
+            "B2": "Refuse, and take your chances."
+          },
+          "goto": 110,
+          "sets": [
+            "dodged_fixer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "text": {
+        "A2": "[stub] The kid runs your errand, then eyes the bowls, hungry.",
+        "B1": "[stub] The kid runs your errand, then eyes the bowls, hungry.",
+        "B2": "[stub] The kid runs your errand, then eyes the bowls, hungry."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Give the kid a bowl.",
+            "B1": "Give the kid a bowl.",
+            "B2": "Give the kid a bowl."
+          },
+          "goto": 74,
+          "sets": [
+            "gave_freely"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Pay only in coins.",
+            "B1": "Pay only in coins.",
+            "B2": "Pay only in coins."
+          },
+          "goto": 75
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "text": {
+        "A2": "[stub] The kid eats, wide-eyed and grateful.",
+        "B1": "[stub] The kid eats, wide-eyed and grateful.",
+        "B2": "[stub] The kid eats, wide-eyed and grateful."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the rush.",
+            "B1": "Back to the rush.",
+            "B2": "Back to the rush."
+          },
+          "goto": 57
+        },
+        {
+          "text": {
+            "A2": "The kid sticks around.",
+            "B1": "The kid sticks around.",
+            "B2": "The kid sticks around."
+          },
+          "goto": 76
+        },
+        {
+          "text": {
+            "A2": "The kid tells you their name.",
+            "B1": "The kid tells you their name.",
+            "B2": "The kid tells you their name."
+          },
+          "goto": 77
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "text": {
+        "A2": "[stub] The kid pockets the coins, still hungry.",
+        "B1": "[stub] The kid pockets the coins, still hungry.",
+        "B2": "[stub] The kid pockets the coins, still hungry."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the rush.",
+            "B1": "Back to the rush.",
+            "B2": "Back to the rush."
+          },
+          "goto": 57
+        },
+        {
+          "text": {
+            "A2": "The kid sticks around.",
+            "B1": "The kid sticks around.",
+            "B2": "The kid sticks around."
+          },
+          "goto": 76
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "text": {
+        "A2": "[stub] The kid hangs about, quietly useful.",
+        "B1": "[stub] The kid hangs about, quietly useful.",
+        "B2": "[stub] The kid hangs about, quietly useful."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the rush.",
+            "B1": "Back to the rush.",
+            "B2": "Back to the rush."
+          },
+          "goto": 57
+        },
+        {
+          "text": {
+            "A2": "On into the night.",
+            "B1": "On into the night.",
+            "B2": "On into the night."
+          },
+          "goto": 60
+        },
+        {
+          "text": {
+            "A2": "The kid guards the stall.",
+            "B1": "The kid guards the stall.",
+            "B2": "The kid guards the stall."
+          },
+          "goto": 78
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "text": {
+        "A2": "[stub] The kid tells you their name, and where they sleep.",
+        "B1": "[stub] The kid tells you their name, and where they sleep.",
+        "B2": "[stub] The kid tells you their name, and where they sleep."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the rush.",
+            "B1": "Back to the rush.",
+            "B2": "Back to the rush."
+          },
+          "goto": 57
+        },
+        {
+          "text": {
+            "A2": "The kid sticks around.",
+            "B1": "The kid sticks around.",
+            "B2": "The kid sticks around."
+          },
+          "goto": 76
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "text": {
+        "A2": "[stub] The kid watches the stall while you cook.",
+        "B1": "[stub] The kid watches the stall while you cook.",
+        "B2": "[stub] The kid watches the stall while you cook."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the rush.",
+            "B1": "Back to the rush.",
+            "B2": "Back to the rush."
+          },
+          "goto": 57
+        },
+        {
+          "text": {
+            "A2": "On into the night.",
+            "B1": "On into the night.",
+            "B2": "On into the night."
+          },
+          "goto": 60
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "text": {
+        "A2": "[stub] Rain sweeps the arcade; the crowd thins.",
+        "B1": "[stub] Rain sweeps the arcade; the crowd thins.",
+        "B2": "[stub] Rain sweeps the arcade; the crowd thins."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Pull the awning and wait it out.",
+            "B1": "Pull the awning and wait it out.",
+            "B2": "Pull the awning and wait it out."
+          },
+          "goto": 81
+        },
+        {
+          "text": {
+            "A2": "Call people in with cheap late bowls.",
+            "B1": "Call people in with cheap late bowls.",
+            "B2": "Call people in with cheap late bowls."
+          },
+          "goto": 82
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "text": {
+        "A2": "[stub] The stock is nearly gone.",
+        "B1": "[stub] The stock is nearly gone.",
+        "B2": "[stub] The stock is nearly gone."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The pot's nearly dry.",
+            "B1": "The pot's nearly dry.",
+            "B2": "The pot's nearly dry."
+          },
+          "goto": 83
+        },
+        {
+          "text": {
+            "A2": "Stretch the last broth.",
+            "B1": "Stretch the last broth.",
+            "B2": "Stretch the last broth."
+          },
+          "goto": 84
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "text": {
+        "A2": "[stub] You wait out the rain.",
+        "B1": "[stub] You wait out the rain.",
+        "B2": "[stub] You wait out the rain."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The market quietens.",
+            "B1": "The market quietens.",
+            "B2": "The market quietens."
+          },
+          "goto": 85
+        },
+        {
+          "text": {
+            "A2": "Toward closing.",
+            "B1": "Toward closing.",
+            "B2": "Toward closing."
+          },
+          "goto": 101
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "text": {
+        "A2": "[stub] Cheap late bowls pull a small crowd.",
+        "B1": "[stub] Cheap late bowls pull a small crowd.",
+        "B2": "[stub] Cheap late bowls pull a small crowd."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The market quietens.",
+            "B1": "The market quietens.",
+            "B2": "The market quietens."
+          },
+          "goto": 85
+        },
+        {
+          "text": {
+            "A2": "Toward closing.",
+            "B1": "Toward closing.",
+            "B2": "Toward closing."
+          },
+          "goto": 101
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "text": {
+        "A2": "[stub] The pot is nearly dry.",
+        "B1": "[stub] The pot is nearly dry.",
+        "B2": "[stub] The pot is nearly dry."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Make it stretch.",
+            "B1": "Make it stretch.",
+            "B2": "Make it stretch."
+          },
+          "goto": 84
+        },
+        {
+          "text": {
+            "A2": "The market quietens.",
+            "B1": "The market quietens.",
+            "B2": "The market quietens."
+          },
+          "goto": 85
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "text": {
+        "A2": "[stub] You stretch the last of the broth.",
+        "B1": "[stub] You stretch the last of the broth.",
+        "B2": "[stub] You stretch the last of the broth."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The market quietens.",
+            "B1": "The market quietens.",
+            "B2": "The market quietens."
+          },
+          "goto": 85
+        },
+        {
+          "text": {
+            "A2": "Toward closing.",
+            "B1": "Toward closing.",
+            "B2": "Toward closing."
+          },
+          "goto": 101
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "text": {
+        "A2": "[stub] The market quietens toward closing.",
+        "B1": "[stub] The market quietens toward closing.",
+        "B2": "[stub] The market quietens toward closing."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Watch the empty stool.",
+            "B1": "Watch the empty stool.",
+            "B2": "Watch the empty stool."
+          },
+          "goto": 91
+        },
+        {
+          "text": {
+            "A2": "Toward closing.",
+            "B1": "Toward closing.",
+            "B2": "Toward closing."
+          },
+          "goto": 101
+        },
+        {
+          "text": {
+            "A2": "Dawn grey on the roofs.",
+            "B1": "Dawn grey on the roofs.",
+            "B2": "Dawn grey on the roofs."
+          },
+          "goto": 105
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "text": {
+        "A2": "[stub] A new stall opposite undercuts your price.",
+        "B1": "[stub] A new stall opposite undercuts your price.",
+        "B2": "[stub] A new stall opposite undercuts your price."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Match their price.",
+            "B1": "Match their price.",
+            "B2": "Match their price."
+          },
+          "goto": 87
+        },
+        {
+          "text": {
+            "A2": "Hold your price.",
+            "B1": "Hold your price.",
+            "B2": "Hold your price."
+          },
+          "goto": 89
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "text": {
+        "A2": "[stub] A price war eats your profit.",
+        "B1": "[stub] A price war eats your profit.",
+        "B2": "[stub] A price war eats your profit."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hold from here.",
+            "B1": "Hold from here.",
+            "B2": "Hold from here."
+          },
+          "goto": 89
+        },
+        {
+          "text": {
+            "A2": "They burn out by dawn.",
+            "B1": "They burn out by dawn.",
+            "B2": "They burn out by dawn."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "text": {
+        "A2": "[stub] You mop, relight, and set the tea woman right.",
+        "B1": "[stub] You mop, relight, and set the tea woman right.",
+        "B2": "[stub] You mop, relight, and set the tea woman right."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to your stall.",
+            "B1": "Back to your stall.",
+            "B2": "Back to your stall."
+          },
+          "goto": 59
+        },
+        {
+          "text": {
+            "A2": "On into the night.",
+            "B1": "On into the night.",
+            "B2": "On into the night."
+          },
+          "goto": 60
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "text": {
+        "A2": "[stub] You hold your price; the regulars stay.",
+        "B1": "[stub] You hold your price; the regulars stay.",
+        "B2": "[stub] You hold your price; the regulars stay."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The market quietens.",
+            "B1": "The market quietens.",
+            "B2": "The market quietens."
+          },
+          "goto": 85
+        },
+        {
+          "text": {
+            "A2": "Toward closing.",
+            "B1": "Toward closing.",
+            "B2": "Toward closing."
+          },
+          "goto": 101
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "text": {
+        "A2": "[stub] The rival burns out before dawn.",
+        "B1": "[stub] The rival burns out before dawn.",
+        "B2": "[stub] The rival burns out before dawn."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The market quietens.",
+            "B1": "The market quietens.",
+            "B2": "The market quietens."
+          },
+          "goto": 85
+        },
+        {
+          "text": {
+            "A2": "Toward closing.",
+            "B1": "Toward closing.",
+            "B2": "Toward closing."
+          },
+          "goto": 101
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "text": {
+        "A2": "[stub] Near closing: the empty stool, the saved bowl on the shelf.",
+        "B1": "[stub] Near closing: the empty stool, the saved bowl on the shelf.",
+        "B2": "[stub] Near closing: the empty stool, the saved bowl on the shelf."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Watch the stool.",
+            "B1": "Watch the stool.",
+            "B2": "Watch the stool."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "Sould comes for the fee.",
+            "B1": "Sould comes for the fee.",
+            "B2": "Sould comes for the fee."
+          },
+          "goto": 92
+        },
+        {
+          "text": {
+            "A2": "You remember Auntie saying his name.",
+            "B1": "You remember Auntie saying his name.",
+            "B2": "You remember Auntie saying his name."
+          },
+          "goto": 97
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "text": {
+        "A2": "[stub] Sould's last offer, if you're short.",
+        "B1": "[stub] Sould's last offer, if you're short.",
+        "B2": "[stub] Sould's last offer, if you're short."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take his loan.",
+            "B1": "Take his loan.",
+            "B2": "Take his loan."
+          },
+          "goto": 64,
+          "sets": [
+            "paid_fixer"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Refuse, and take your chances.",
+            "B1": "Refuse, and take your chances.",
+            "B2": "Refuse, and take your chances."
+          },
+          "goto": 110,
+          "sets": [
+            "dodged_fixer"
+          ]
+        },
+        {
+          "text": {
+            "A2": "His smile at closing.",
+            "B1": "His smile at closing.",
+            "B2": "His smile at closing."
+          },
+          "goto": 68
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "text": {
+        "A2": "[stub] An old man approaches the empty stool.",
+        "B1": "[stub] An old man approaches the empty stool.",
+        "B2": "[stub] An old man approaches the empty stool."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Offer him the saved bowl.",
+            "B1": "Offer him the saved bowl.",
+            "B2": "Offer him the saved bowl."
+          },
+          "goto": 94,
+          "requires": [
+            "saved_a_bowl"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Offer a fresh bowl.",
+            "B1": "Offer a fresh bowl.",
+            "B2": "Offer a fresh bowl."
+          },
+          "goto": 95
+        },
+        {
+          "text": {
+            "A2": "You have nothing left.",
+            "B1": "You have nothing left.",
+            "B2": "You have nothing left."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "An old photo by the till.",
+            "B1": "An old photo by the till.",
+            "B2": "An old photo by the till."
+          },
+          "goto": 98
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "text": {
+        "A2": "[stub] You set the saved bowl before him. His face changes.",
+        "B1": "[stub] You set the saved bowl before him. His face changes.",
+        "B2": "[stub] You set the saved bowl before him. His face changes."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Serve it, and he stays.",
+            "B1": "Serve it, and he stays.",
+            "B2": "Serve it, and he stays."
+          },
+          "goto": 121,
+          "requires": [
+            "saved_a_bowl"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Just talk to him.",
+            "B1": "Just talk to him.",
+            "B2": "Just talk to him."
+          },
+          "goto": 95
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "text": {
+        "A2": "[stub] You serve Behn, and he tells you a little.",
+        "B1": "[stub] You serve Behn, and he tells you a little.",
+        "B2": "[stub] You serve Behn, and he tells you a little."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Toward closing.",
+            "B1": "Toward closing.",
+            "B2": "Toward closing."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "What his return means.",
+            "B1": "What his return means.",
+            "B2": "What his return means."
+          },
+          "goto": 100
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "text": {
+        "A2": "[stub] The stool has stood empty the whole night.",
+        "B1": "[stub] The stool has stood empty the whole night.",
+        "B2": "[stub] The stool has stood empty the whole night."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Watch it a while.",
+            "B1": "Watch it a while.",
+            "B2": "Watch it a while."
+          },
+          "goto": 91
+        },
+        {
+          "text": {
+            "A2": "Back to work.",
+            "B1": "Back to work.",
+            "B2": "Back to work."
+          },
+          "goto": 60
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "text": {
+        "A2": "[stub] You remember Auntie's face at his name.",
+        "B1": "[stub] You remember Auntie's face at his name.",
+        "B2": "[stub] You remember Auntie's face at his name."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Watch the stool.",
+            "B1": "Watch the stool.",
+            "B2": "Watch the stool."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "Serve whoever comes.",
+            "B1": "Serve whoever comes.",
+            "B2": "Serve whoever comes."
+          },
+          "goto": 95
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "text": {
+        "A2": "[stub] An old photo tucked by the till: Auntie, younger, and a man.",
+        "B1": "[stub] An old photo tucked by the till: Auntie, younger, and a man.",
+        "B2": "[stub] An old photo tucked by the till: Auntie, younger, and a man."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Offer the saved bowl.",
+            "B1": "Offer the saved bowl.",
+            "B2": "Offer the saved bowl."
+          },
+          "goto": 94
+        },
+        {
+          "text": {
+            "A2": "Offer a fresh bowl.",
+            "B1": "Offer a fresh bowl.",
+            "B2": "Offer a fresh bowl."
+          },
+          "goto": 95
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "text": {
+        "A2": "[stub] What Mr Behn's return means to the stall.",
+        "B1": "[stub] What Mr Behn's return means to the stall.",
+        "B2": "[stub] What Mr Behn's return means to the stall."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Toward closing.",
+            "B1": "Toward closing.",
+            "B2": "Toward closing."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "Talk with him a while.",
+            "B1": "Talk with him a while.",
+            "B2": "Talk with him a while."
+          },
+          "goto": 95
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "text": {
+        "A2": "[stub] Closing time nears; you count the takings against the fee.",
+        "B1": "[stub] Closing time nears; you count the takings against the fee.",
+        "B2": "[stub] Closing time nears; you count the takings against the fee."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Face the master's round.",
+            "B1": "Face the master's round.",
+            "B2": "Face the master's round."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "Watch the stool once more.",
+            "B1": "Watch the stool once more.",
+            "B2": "Watch the stool once more."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "The master works stall by stall.",
+            "B1": "The master works stall by stall.",
+            "B2": "The master works stall by stall."
+          },
+          "goto": 102
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "text": {
+        "A2": "[stub] The market master's slow round, stall by stall.",
+        "B1": "[stub] The market master's slow round, stall by stall.",
+        "B2": "[stub] The market master's slow round, stall by stall."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Your turn comes.",
+            "B1": "Your turn comes.",
+            "B2": "Your turn comes."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "Others who fell short pack up.",
+            "B1": "Others who fell short pack up.",
+            "B2": "Others who fell short pack up."
+          },
+          "goto": 103
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "text": {
+        "A2": "[stub] Stalls that missed the fee are packing up.",
+        "B1": "[stub] Stalls that missed the fee are packing up.",
+        "B2": "[stub] Stalls that missed the fee are packing up."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Your turn.",
+            "B1": "Your turn.",
+            "B2": "Your turn."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "The lanterns come down.",
+            "B1": "The lanterns come down.",
+            "B2": "The lanterns come down."
+          },
+          "goto": 104
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "text": {
+        "A2": "[stub] The lanterns are lowered one by one.",
+        "B1": "[stub] The lanterns are lowered one by one.",
+        "B2": "[stub] The lanterns are lowered one by one."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Face the master.",
+            "B1": "Face the master.",
+            "B2": "Face the master."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "The last of the night.",
+            "B1": "The last of the night.",
+            "B2": "The last of the night."
+          },
+          "goto": 114
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "text": {
+        "A2": "[stub] Dawn grey spreads over the market roofs.",
+        "B1": "[stub] Dawn grey spreads over the market roofs.",
+        "B2": "[stub] Dawn grey spreads over the market roofs."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Watch the stool.",
+            "B1": "Watch the stool.",
+            "B2": "Watch the stool."
+          },
+          "goto": 91
+        },
+        {
+          "text": {
+            "A2": "Toward closing.",
+            "B1": "Toward closing.",
+            "B2": "Toward closing."
+          },
+          "goto": 101
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "text": {
+        "A2": "[stub] The master stops at pitch 24. The fee is due.",
+        "B1": "[stub] The master stops at pitch 24. The fee is due.",
+        "B2": "[stub] The master stops at pitch 24. The fee is due."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Pay from a proud, honest night.",
+            "B1": "Pay from a proud, honest night.",
+            "B2": "Pay from a proud, honest night."
+          },
+          "goto": 120,
+          "requires": [
+            "sold_well",
+            "kept_quality"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Pay it cleanly, no fixer, no debt.",
+            "B1": "Pay it cleanly, no fixer, no debt.",
+            "B2": "Pay it cleanly, no fixer, no debt."
+          },
+          "goto": 122,
+          "requires": [
+            "sold_well",
+            "dodged_fixer"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You're not sure you've made it.",
+            "B1": "You're not sure you've made it.",
+            "B2": "You're not sure you've made it."
+          },
+          "goto": 111
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "text": {
+        "A2": "[stub] You lay out what the night brought.",
+        "B1": "[stub] You lay out what the night brought.",
+        "B2": "[stub] You lay out what the night brought."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "You fell short, but you made the name.",
+            "B1": "You fell short, but you made the name.",
+            "B2": "You fell short, but you made the name."
+          },
+          "goto": 123,
+          "requires": [
+            "kept_quality"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You made it — but by cutting corners.",
+            "B1": "You made it — but by cutting corners.",
+            "B2": "You made it — but by cutting corners."
+          },
+          "goto": 124,
+          "requires": [
+            "rushed"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Weigh the rest.",
+            "B1": "Weigh the rest.",
+            "B2": "Weigh the rest."
+          },
+          "goto": 112
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "text": {
+        "A2": "[stub] The fee still isn't quite there.",
+        "B1": "[stub] The fee still isn't quite there.",
+        "B2": "[stub] The fee still isn't quite there."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Sould has already covered it — for a price.",
+            "B1": "Sould has already covered it — for a price.",
+            "B2": "Sould has already covered it — for a price."
+          },
+          "goto": 128,
+          "requires": [
+            "paid_fixer"
+          ]
+        },
+        {
+          "text": {
+            "A2": "The tea woman offers to cover you.",
+            "B1": "The tea woman offers to cover you.",
+            "B2": "The tea woman offers to cover you."
+          },
+          "goto": 125,
+          "requires": [
+            "helped_neighbour"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Weigh the last of it.",
+            "B1": "Weigh the last of it.",
+            "B2": "Weigh the last of it."
+          },
+          "goto": 113
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "text": {
+        "A2": "[stub] Down to the last of your choices.",
+        "B1": "[stub] Down to the last of your choices.",
+        "B2": "[stub] Down to the last of your choices."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The kid's family fill your last bowls.",
+            "B1": "The kid's family fill your last bowls.",
+            "B2": "The kid's family fill your last bowls."
+          },
+          "goto": 126,
+          "requires": [
+            "gave_freely"
+          ]
+        },
+        {
+          "text": {
+            "A2": "The master gives you till next week.",
+            "B1": "The master gives you till next week.",
+            "B2": "The master gives you till next week."
+          },
+          "goto": 127
+        },
+        {
+          "text": {
+            "A2": "The worst of it.",
+            "B1": "The worst of it.",
+            "B2": "The worst of it."
+          },
+          "goto": 114
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "text": {
+        "A2": "[stub] Nothing left to set against the fee.",
+        "B1": "[stub] Nothing left to set against the fee.",
+        "B2": "[stub] Nothing left to set against the fee."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "You're short; the pitch is lost.",
+            "B1": "You're short; the pitch is lost.",
+            "B2": "You're short; the pitch is lost."
+          },
+          "goto": 129
+        },
+        {
+          "text": {
+            "A2": "The pot ran dry hours ago.",
+            "B1": "The pot ran dry hours ago.",
+            "B2": "The pot ran dry hours ago."
+          },
+          "goto": 130
+        },
+        {
+          "text": {
+            "A2": "You think about handing it back.",
+            "B1": "You think about handing it back.",
+            "B2": "You think about handing it back."
+          },
+          "goto": 131
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "text": {
+        "A2": "[stub] GOOD — Sold out, and proud. Honest good food to the last bowl; the fee paid, pitch 24 kept, the name intact.",
+        "B1": "[stub] GOOD — Sold out, and proud. Honest good food to the last bowl; the fee paid, pitch 24 kept, the name intact.",
+        "B2": "[stub] GOOD — Sold out, and proud. Honest good food to the last bowl; the fee paid, pitch 24 kept, the name intact."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 121,
+      "text": {
+        "A2": "[stub] GOOD — The last bowl (secret). Mr Behn returns at dawn; the saved bowl is served, and you learn who he is to Auntie. Something long cold is warmed.",
+        "B1": "[stub] GOOD — The last bowl (secret). Mr Behn returns at dawn; the saved bowl is served, and you learn who he is to Auntie. Something long cold is warmed.",
+        "B2": "[stub] GOOD — The last bowl (secret). Mr Behn returns at dawn; the saved bowl is served, and you learn who he is to Auntie. Something long cold is warmed."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 122,
+      "text": {
+        "A2": "[stub] GOOD — On your own terms. You make the fee cleanly — no fixer, no debt, no corners cut. The corner is yours, earned.",
+        "B1": "[stub] GOOD — On your own terms. You make the fee cleanly — no fixer, no debt, no corners cut. The corner is yours, earned.",
+        "B2": "[stub] GOOD — On your own terms. You make the fee cleanly — no fixer, no debt, no corners cut. The corner is yours, earned."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 123,
+      "text": {
+        "A2": "[stub] GOOD — A name, not just a night. You fell short of the full fee, but you made the stall's name tonight, and you're given grace to keep the corner.",
+        "B1": "[stub] GOOD — A name, not just a night. You fell short of the full fee, but you made the stall's name tonight, and you're given grace to keep the corner.",
+        "B2": "[stub] GOOD — A name, not just a night. You fell short of the full fee, but you made the stall's name tonight, and you're given grace to keep the corner."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 124,
+      "text": {
+        "A2": "[stub] NEUTRAL — The money, not the name. You hit the fee by cutting corners. You keep the pitch, but the regulars saw, and thirty years of trust is thinner tonight.",
+        "B1": "[stub] NEUTRAL — The money, not the name. You hit the fee by cutting corners. You keep the pitch, but the regulars saw, and thirty years of trust is thinner tonight.",
+        "B2": "[stub] NEUTRAL — The money, not the name. You hit the fee by cutting corners. You keep the pitch, but the regulars saw, and thirty years of trust is thinner tonight."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 125,
+      "text": {
+        "A2": "[stub] NEUTRAL — Covered, this once. You fall short, but the tea woman covers your fee, no strings, because you stood by her. Warmth without the win.",
+        "B1": "[stub] NEUTRAL — Covered, this once. You fall short, but the tea woman covers your fee, no strings, because you stood by her. Warmth without the win.",
+        "B2": "[stub] NEUTRAL — Covered, this once. You fall short, but the tea woman covers your fee, no strings, because you stood by her. Warmth without the win."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 126,
+      "text": {
+        "A2": "[stub] NEUTRAL — The kindness fed back. No fee tonight, but the child you fed brings a hungry crew who'll come back. A start, not a save.",
+        "B1": "[stub] NEUTRAL — The kindness fed back. No fee tonight, but the child you fed brings a hungry crew who'll come back. A start, not a save.",
+        "B2": "[stub] NEUTRAL — The kindness fed back. No fee tonight, but the child you fed brings a hungry crew who'll come back. A start, not a save."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 127,
+      "text": {
+        "A2": "[stub] NEUTRAL — One more week. You scrape close; the master gives you till the next market day. Not a loss — just not yet.",
+        "B1": "[stub] NEUTRAL — One more week. You scrape close; the master gives you till the next market day. Not a loss — just not yet.",
+        "B2": "[stub] NEUTRAL — One more week. You scrape close; the master gives you till the next market day. Not a loss — just not yet."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 128,
+      "text": {
+        "A2": "[stub] BAD — In Sould's book. The fee's covered tonight, but you owe the fixer now, and that is the worse debt. You kept the pitch and lost the ground under it.",
+        "B1": "[stub] BAD — In Sould's book. The fee's covered tonight, but you owe the fixer now, and that is the worse debt. You kept the pitch and lost the ground under it.",
+        "B2": "[stub] BAD — In Sould's book. The fee's covered tonight, but you owe the fixer now, and that is the worse debt. You kept the pitch and lost the ground under it."
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 129,
+      "text": {
+        "A2": "[stub] BAD — Short by dawn. The takings don't reach the fee. Pitch 24, held thirty years, is lost.",
+        "B1": "[stub] BAD — Short by dawn. The takings don't reach the fee. Pitch 24, held thirty years, is lost.",
+        "B2": "[stub] BAD — Short by dawn. The takings don't reach the fee. Pitch 24, held thirty years, is lost."
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 130,
+      "text": {
+        "A2": "[stub] BAD — The pot ran dry. You ran out hours before dawn and stood at a cold empty stall while the market went on around you.",
+        "B1": "[stub] BAD — The pot ran dry. You ran out hours before dawn and stood at a cold empty stall while the market went on around you.",
+        "B2": "[stub] BAD — The pot ran dry. You ran out hours before dawn and stood at a cold empty stall while the market went on around you."
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 131,
+      "text": {
+        "A2": "[stub] BAD — You couldn't hold it. The night beat you, and you think about handing the stall back for good.",
+        "B1": "[stub] BAD — You couldn't hold it. The night beat you, and you think about handing the stall back for good.",
+        "B2": "[stub] BAD — You couldn't hold it. The night beat you, and you think about handing the stall back for good."
+      },
+      "ending": "bad"
+    }
+  ],
+  "lexicon": {
+    "_comment": "The Night Market's chosen lexicon. Grown in phase 4. Base-keyed; the reader resolves inflections. Translations need a native speaker's check before launch.",
+    "entries": {}
+  }
+}
