@@ -279,6 +279,368 @@ P(41,
    t("Orders from all sides.", "Orders shouted from all sides.", "Orders shouted from all sides.")])
 
 
+# ============================ ACT II — THE LONG RUSH =======================
+
+P(42,
+  t("The counter is three deep now. Hands wave money. Voices call orders over each other. Steam and smoke sting your eyes. You have two hands and twenty customers. You can work steadily and keep every bowl right. You can go faster and cut a corner. Or you can call for help before you drown.",
+    "The counter is three deep now, hands waving money, voices calling orders over one another. Steam and smoke sting your eyes. You have two hands and twenty customers, and something has to give. You can work steadily and keep every bowl right, go faster and cut a corner, or call for help before you go under.",
+    "The counter is three deep now — hands waving money, voices calling orders over one another, everyone at once. Steam and smoke sting your eyes and the noise is a wall. You have two hands and twenty hungry customers, and something has to give. You can work steadily and keep every single bowl right; you can go faster and cut a corner to survive; or you can call for a hand before you go under entirely."),
+  [t("Work steadily. Keep it right.", "Work steadily, keep it right.", "Work steadily, and keep it right."),
+   t("Go faster. Cut a corner.", "Rush it — cut a corner to go faster.", "Rush it — cut a corner to go faster."),
+   t("Call for help.", "Call for a hand.", "Call for a hand.")])
+
+P(43,
+  t("The arcade is packed shoulder to shoulder. People push past with bags and children. The air is hot with steam and frying. Your little stall is an island in the noise. There is no time to think now, only to move. You take a breath and step into it.",
+    "The arcade is packed shoulder to shoulder, people pushing past with bags and sleepy children. The air is thick and hot with steam and frying oil. Your little stall is an island in all the noise. There's no time to think now, only to move — so you take a breath and step into it.",
+    "The arcade is packed shoulder to shoulder, people shoving past with bags and sleepy children hoisted on hips. The air is thick and hot with steam and frying oil and a hundred voices. Your little stall is an island of order in all the noise. There's no time to think now, only to move — so you take a breath, square your shoulders, and step into it."),
+  [t("Meet the rush.", "Meet the rush.", "Meet the rush."),
+   t("Work steadily.", "Work steadily.", "Work steadily.")])
+
+P(44,
+  t("You find a rhythm. Ladle, bowl, dumplings, coins, next. Your hands learn the moves and stop shaking. You look each person in the eye. You call them 'friend' like Auntie does. People feel it, and they smile. You are not just selling bowls now. You are winning a crowd, one face at a time.",
+    "You find a rhythm at the burners: ladle, bowl, dumplings, coins, next. Your hands learn the moves and stop shaking. You catch each person's eye, call them 'friend' the way Auntie does, and they feel it and smile back. You're not just selling bowls now — you're winning a crowd, one face at a time.",
+    "You find a rhythm at the burners, and it carries you: ladle, bowl, dumplings, coins, next. Your hands learn the moves and finally stop shaking. You catch each person's eye, call them 'friend' the way Auntie always does, and they feel the difference and smile back at you. You're not merely selling bowls any more — you're winning a crowd, one warmed face at a time, and it feels like flying."),
+  [t("Work steadily. Win them over.", "Work steadily and win the crowd over.", "Work steadily, and win the crowd over."),
+   t("Just keep up.", "Just keep up.", "Just try to keep up.")])
+
+P(45,
+  t("You speed up too much. One bowl goes out half-cooked. You short a customer their change, by accident or not. You tell yourself it's the rush, everyone does it. But cutting corners is a hole in a bucket. It leaks your good name, one small cut at a time, until there is none left.",
+    "You speed up too much. One bowl goes out half-cooked; you short a customer their change, whether by accident or not. You tell yourself it's just the rush, that everyone does it. But cutting corners is a hole in the bucket — it leaks your good name, one small cut at a time, until there's none left.",
+    "You speed up too much, and it shows. One bowl goes out half-cooked; you short a customer their change, whether quite by accident or not you couldn't say. You tell yourself it's only the rush, that everyone does it on a night like this. But cutting corners is a hole in the bucket — it leaks your good name quietly, one small cut at a time, until one night you look and there's none left."),
+  [t("Keep going.", "Keep going.", "Keep going."),
+   t("A customer notices.", "A customer notices.", "A customer notices."),
+   t("You burn your hand.", "You burn your hand in the hurry.", "You burn your hand in the hurry.")])
+
+P(46,
+  t("You call out for help. Your voice cracks over the noise. Who can come? The market kid is near, quick on their feet, always hungry, always ready to run for a coin. Or the tea woman next door — but one glance shows she is as swamped as you. You have a second to choose.",
+    "You call out for help, your voice cracking over the noise. But who can come? The market kid is near — quick on their feet, always hungry, always ready to run an errand for a coin. Or the tea woman next door, though one glance shows she's as swamped as you are. You've a second to choose.",
+    "You call out for help, your voice cracking over the noise before you can stop it. But who is there to come? The market kid is near — quick on their feet, perpetually hungry, always ready to run an errand for a single coin. Or the tea woman next door, though one glance across shows she's every bit as swamped as you are. You have about a second to choose."),
+  [t("Send the kid on an errand.", "Send the market kid on an errand.", "Send the market kid on an errand."),
+   t("The tea woman is swamped too.", "The tea woman is swamped too.", "The tea woman is swamped too.")])
+
+P(47,
+  t("The rush rolls on and on. Your arms ache. Your back aches. But the money box is getting heavy, and that sound — coins on coins — keeps you going. Bowl after bowl, face after face. You are in the middle of it now, and holding. You did not think you could. But here you are.",
+    "The rush rolls on and on. Your arms ache, your back aches — but the money box is getting heavy, and that sound, coins falling on coins, keeps you going. Bowl after bowl, face after face. You're in the thick of it now, and holding your own. You didn't think you could. But here you are.",
+    "The rush rolls on and on and on. Your arms ache and your back aches — but the money box is growing satisfyingly heavy, and that sound, coins falling on coins, is what keeps you upright. Bowl after bowl, face after face, order after order. You're in the very thick of it now, and holding your own. You didn't think you could do this. But here you are, doing it."),
+  [t("Keep serving.", "Keep serving.", "Keep serving."),
+   t("A brief lull.", "A brief lull.", "A brief lull."),
+   t("A regular asks for Auntie.", "A regular asks for Auntie.", "A regular asks after Auntie.")])
+
+P(48,
+  t("\"Hey — that's not right.\" The customer holds out their hand. They counted the change, and it is short. A few heads turn to watch. Your face goes hot. This is the moment. You can say sorry and fix it fast. Or you can argue, and hope they back down before more people hear.",
+    "\"Hey — that's not right.\" The customer holds out their hand, palm up. They've counted the change, and it's short. A few heads turn to watch how you'll handle it. Your face goes hot. This is the moment: you can say sorry and fix it at once, or argue and hope they back down before more people hear.",
+    "\"Hey — that's not right.\" The customer holds out their hand, palm up, unhurried. They've counted the change, and it's short. A few heads turn to watch how you'll handle it. Your face goes hot. This is the moment, and everyone near can feel it: you can say sorry and fix it at once, or you can argue and hope they back down before more people hear."),
+  [t("Say sorry and fix it.", "Apologise and fix it.", "Apologise and fix it."),
+   t("Argue it out.", "Brazen it out.", "Brazen it out.")])
+
+P(49,
+  t("You glance at the stock and your stomach drops. The pork is nearly gone. The greens are down to a handful. The night is not half over, and you are running out. You can make smaller bowls to stretch it. You can send someone for more. Or the steamer chooses for you and runs dry.",
+    "You glance at the stock and your stomach drops. The pork is nearly gone, the greens down to a last handful. The night isn't half over, and already you're running out. You can make smaller bowls to stretch what's left, send someone out for more, or watch the steamer run dry and decide for you.",
+    "You glance at the stock and your stomach drops. The pork is nearly gone, the greens down to a last sad handful. The night isn't even half over, and already you're running low. You can make smaller bowls to stretch what's left, you can send someone out for more, or you can let the steamer run dry and make the decision for you."),
+  [t("Make smaller bowls.", "Eke it out in small bowls.", "Eke it out in smaller bowls."),
+   t("Send for more.", "Send for more.", "Send out for more."),
+   t("The steamer runs dry.", "The steamer runs dry.", "The steamer runs dry.")])
+
+P(50,
+  t("For a moment, the crowd thins. You can breathe. You wipe the sweat from your face and the counter clean. The lanterns swing a little in the wind. It will not last — the midnight rush is still to come. But a lull is a gift. Use it well, and be ready when the wave returns.",
+    "For a moment the crowd thins, and you can breathe. You wipe the sweat off your face and the counter clean. The lanterns sway a little in the night wind. It won't last — the real midnight rush is still to come — but a lull is a gift. Use it well, and be ready when the wave rolls back in.",
+    "For a moment the crowd thins out, and you can actually breathe. You wipe the sweat off your face and the counter down clean. The red lanterns sway a little in the cold night wind. It won't last — the real midnight rush is still to come — but a lull is a gift all the same. Use it well, wipe down, restock, and be ready when the wave rolls back in."),
+  [t("Back to serving.", "Back to serving.", "Back to serving."),
+   t("Take a breath.", "Take a breath.", "Take a breath."),
+   t("A quiet stretch.", "A quiet stretch.", "A quiet stretch.")])
+
+P(51,
+  t("\"You're right — I'm sorry.\" You count the change again, slowly, and put the missing coin in their hand. \"Long night. Thank you for your patience.\" The customer softens. The watching heads turn away. A mistake fixed fast and kindly is not a black mark. It can even become a small point in your favour.",
+    "\"You're right — I'm sorry.\" You count the change again, slowly this time, and press the missing coin into their hand. \"Long night. Thanks for your patience.\" The customer softens; the watching heads turn away. A mistake fixed fast and kindly isn't a black mark — handled well, it can even count a little in your favour.",
+    "\"You're right — I'm sorry.\" You count the change out again, slowly and clearly this time, and press the missing coin into their hand. \"Long night. Thanks for your patience.\" The customer softens; the watching heads turn away, satisfied. A mistake fixed fast and kindly isn't a black mark at all — handled well, it can even end up counting a little in your favour."),
+  [t("Back to serving.", "Back to serving.", "Back to serving."),
+   t("On through the rush.", "On through the rush.", "On through the rush.")])
+
+P(52,
+  t("You lean on the counter and breathe. The box under it is heavy now — heavier than you dared hope an hour ago. You could count it, to see how close you are. Or you could save the counting for later. Get back in, while the crowd is here and hungry and spending.",
+    "You lean on the counter and just breathe for a second. The box beneath it is heavy now — heavier than you'd dared hope an hour ago. You could stop and count it, to see how close you are to the fee. Or you could save the counting for later and get back in while the crowd is here and spending.",
+    "You lean on the counter and just breathe for a second or two. The box beneath it is heavy now — heavier than you'd have dared hope an hour ago. You could stop and count it, to see how close you are to the fee. Or you could save the counting for later and get straight back in, while the crowd is still here and hungry and spending."),
+  [t("Count so far.", "Count so far.", "Count what you have."),
+   t("Back in.", "Back in.", "Back in, then.")])
+
+P(54,
+  t("\"The change was right,\" you say, and hold their eye. The customer stares, then shrugs and walks off, muttering. You won — but you didn't. They will tell people. In a market, a name travels faster than any customer. You saved one coin tonight and spent something worth far more than a coin.",
+    "\"The change was right,\" you say, and hold their eye until they look away. The customer stares, then shrugs and walks off muttering. You won — except you didn't. They'll tell people, and in a market a name travels faster than any customer. You saved a single coin tonight, and spent something worth far more.",
+    "\"The change was right,\" you say flatly, and hold their eye until they look away. The customer stares a moment, then shrugs and walks off muttering to whoever will listen. You won the argument — except that you didn't, not really. They'll tell people, and in a market a name travels faster and further than any single customer. You saved yourself one coin tonight, and spent something worth a great deal more."),
+  [t("Back to serving.", "Back to serving.", "Back to serving."),
+   t("On through the rush.", "On through the rush.", "On through the rush.")])
+
+P(55,
+  t("You press coins into the kid's hand and send them running for more pork and greens. They know every back way in the market and are gone before you finish the sentence. Now you must hold the stall alone until they return. You hope the stock lasts. You hope the kid is quick and honest. You think they are.",
+    "You press coins into the kid's hand and send them running for more pork and greens. They know every back way in the market and are gone before you've finished the sentence. Now you must hold the stall alone until they're back. You hope the stock lasts, and that the kid is as quick and honest as you think.",
+    "You press coins into the kid's grubby hand and send them running for more pork and greens. They know every back way and shortcut in the market, and are gone before you've even finished the sentence. Now you must hold the stall alone until they get back — hoping the stock lasts the gap, and that the kid is every bit as quick and honest as you've decided to believe."),
+  [t("The kid returns, hungry.", "The kid returns, hungry.", "The kid returns, hungry."),
+   t("On through the rush.", "On through the rush.", "On through the rush.")])
+
+P(56,
+  t("You make the bowls a little smaller. More broth, fewer dumplings, a touch less pork. Most people won't notice on a busy night. It stretches your stock and buys you time. It is not cheating — the bowl is still good, still honest. It is just a cook being careful with what she has. Auntie would nod.",
+    "You make the bowls a little smaller — more broth, fewer dumplings, a touch less pork. Most people won't notice on a night this busy. It stretches your stock and buys you time. It isn't cheating; the bowl is still good, still honest and hot. It's just a cook being careful with what she's got, and Auntie would nod at that.",
+    "You make the bowls a little smaller — more broth, fewer dumplings, a touch less pork in each. Most people won't notice a thing on a night this busy. It stretches your dwindling stock and buys you precious time. It isn't cheating; the bowl is still good, still honest and hot and generous enough. It's just a cook being careful with what she has, and Auntie would nod at that."),
+  [t("On through the rush.", "On through the rush.", "On through the rush."),
+   t("A quiet moment.", "A quiet moment.", "A quiet moment.")])
+
+P(57,
+  t("The rush rolls on. You lose track of time inside it. Just steam, faces, bowls, coins, and the burn of the burners on your arms. Somewhere out there it is getting late. Somewhere the fee is still waiting. But right now there is only the next bowl, and the next, and the next.",
+    "The rush rolls on, and you lose track of time inside it. Just steam, faces, bowls, coins, and the heat of the burners on your arms. Somewhere out there it's getting late; somewhere the fee is still waiting to be met. But right now there's only the next bowl, and the next, and the next.",
+    "The rush rolls on, and you lose all track of time somewhere inside it — just steam, faces, bowls, coins, and the steady heat of the burners on your bare arms. Somewhere out there the night is getting late; somewhere the fee still sits waiting to be met. But right now there is only the next bowl, and the next after that, and the next."),
+  [t("The tea woman's urn spills.", "The tea woman's urn spills.", "The tea woman's urn spills."),
+   t("A quiet moment.", "A quiet moment.", "A quiet moment.")])
+
+P(58,
+  t("A crash next door. The tea woman's big urn has gone over. Hot tea everywhere, her stall in chaos, a queue of cross customers. She looks across at you, just for a second. She would never ask. But she helped you all night, in small ways. You have your own crowd. You have seconds to decide.",
+    "A crash next door. The tea woman's big urn has gone over — hot tea everywhere, her stall in chaos, a queue of cross customers building. She glances across at you, just for a second, and looks away. She'd never ask. But she's helped you all night in small ways, and you have your own crowd waiting. Seconds to decide.",
+    "A crash next door. The tea woman's big urn has gone clean over — hot tea everywhere, her stall in sudden chaos, a queue of cross customers building fast. She glances across at you, just for a second, and then looks away. She would never ask. But she's helped you all night in a dozen small ways, and you have your own crowd waiting and your own fee to make. Seconds to decide."),
+  [t("Help her right now.", "Drop everything and help her.", "Drop everything and help her."),
+   t("You can't. Keep serving.", "You can't; keep serving.", "You can't — keep serving.")])
+
+P(59,
+  t("In a gap between customers, your eye falls on the back shelf. The saved bowl sits there, going cold. Below it, the end stool stands empty, as it has all night. Mr Behn's stool. Who is he? Why does Auntie keep his bowl? The rush pulls at you. But the empty stool pulls too, in a quieter way.",
+    "In a gap between customers, your eye falls on the back shelf. The saved bowl sits there, slowly going cold. Below it, the end stool stands empty, as it has all night — Mr Behn's stool. Who is he? Why does Auntie still keep his bowl? The rush pulls at you, but the empty stool pulls too, in a quieter way.",
+    "In a brief gap between customers, your eye falls on the back shelf. The saved bowl sits there, slowly going cold. Below it, the end stool stands empty, as it has all night long — Mr Behn's stool. Who is he? Why does Auntie still keep a bowl for a man who never comes? The rush keeps pulling at you, but the empty stool pulls too, in its own quieter way."),
+  [t("Check the saved bowl.", "Check the saved bowl.", "Go and check the saved bowl."),
+   t("Back to work.", "Back to work.", "Back to work."),
+   t("The stool, empty all night.", "The stool has been empty all night.", "The stool has been empty all night.")])
+
+P(60,
+  t("At last the rush peaks and breaks. The crowd thins from a wave to a trickle. You look up, blinking, like someone coming out of deep water. You are still standing. The stall is still yours. But the night is not done with you yet. Something always comes in the quiet after a rush.",
+    "At last the rush peaks and breaks. The crowd thins from a wave to a trickle, and you look up, blinking, like someone surfacing from deep water. You're still standing; the stall is still yours. But the night isn't done with you yet — something always comes in the quiet after a rush.",
+    "At last the rush peaks and breaks. The crowd thins from a wave to a trickle, and you look up, blinking, like someone surfacing from deep water into air. You're still standing. The stall is still yours, the box still filling. But the night is not done with you yet — something always comes in the strange quiet after a rush."),
+  [t("Stock is nearly gone.", "The stock is nearly gone.", "The stock is nearly gone."),
+   t("Rain sweeps in.", "Rain sweeps the arcade.", "Rain sweeps the arcade."),
+   t("A rival stall undercuts you.", "A new stall opposite undercuts you.", "A new stall opposite undercuts you.")])
+
+P(26,
+  t("Orders come from every side at once. \"Two bowls!\" \"Extra dumplings!\" \"How long?\" You can't hold them all in your head. You need a system, fast: take them in order, say each one back, keep the line moving. Panic loses bowls. Calm keeps them. You pick calm, and start again from the front.",
+    "Orders fly at you from every side at once. \"Two bowls!\" \"Extra dumplings!\" \"How long's the wait?\" You can't possibly hold them all in your head. You need a system, and fast: take them in order, say each one back, keep the line moving. Panic loses bowls; calm keeps them. You choose calm and start again from the front.",
+    "Orders fly at you from every side at once. \"Two bowls!\" \"Extra dumplings!\" \"How long's the wait?\" You can't possibly hold them all in your head at speed. You need a system, and you need it fast: take them in strict order, say each one back aloud, keep the line moving. Panic loses bowls; calm keeps them. You choose calm, breathe, and start again from the front of the queue."),
+  [t("Meet the rush.", "Meet the rush.", "Meet the rush."),
+   t("Work steadily.", "Work steadily.", "Work steadily.")])
+
+P(27,
+  t("\"Where's Sim?\" a regular asks, looking for her face. \"Is she all right?\" You can tell the truth. Or you can just smile and serve, and keep it light. People come here for the food. But they also come for her.",
+    "\"Where's Sim?\" a regular asks, looking past you for her face. \"Is she all right?\" You can tell the truth — her hand, the burn, you standing in tonight. Or just smile, serve, and keep it light. People come here for the food, but they come for her too. How you answer says what kind of stall this is tonight.",
+    "\"Where's Sim?\" a regular asks, craning past you for her face. \"Is she all right?\" You can tell the truth — her hand, the burn, you standing in for her tonight. Or you can just smile and serve and keep it light. People come here for the food, of course, but a good few of them come for her. How you answer says what kind of stall this is going to be tonight."),
+  [t("Tell the truth.", "Tell them the truth.", "Tell them the truth."),
+   t("Just serve and smile.", "Just serve, and smile.", "Just serve, and smile.")])
+
+P(28,
+  t("Hot broth splashes your hand. You gasp. It burns, sharp and sudden — the same way Auntie hurt hers, you think wildly. Just like her. For a second the pain fills the world. Then you breathe. You wrap it in a wet cloth. The stall does not stop for a burn. You can push through, or let the tea woman look.",
+    "Hot broth splashes across your hand and you gasp. It burns, sharp and sudden — the same way Auntie hurt hers, you think wildly. Just like her. For a second the pain fills the whole world. Then you breathe, and wrap it in a wet cloth. The stall doesn't stop for a burn. You can push through, or let the tea woman take a look.",
+    "Hot broth splashes across the back of your hand and you gasp aloud. It burns, sharp and sudden — the very same way Auntie hurt hers, you think wildly. Just like her. For a second the pain fills the whole world and whites everything out. Then you breathe, and wrap it in a wet cloth. The stall doesn't stop for a burn, not tonight. You can push through it, or let the tea woman take a proper look."),
+  [t("Wrap it. Carry on.", "Wrap it and carry on.", "Wrap it and carry on."),
+   t("The tea woman helps.", "The tea woman helps.", "Let the tea woman help.")])
+
+P(29,
+  t("The steamer hisses and goes quiet. Dry. No water left, and the dumplings inside only half done. You catch it just in time. A minute more and they would have burned, and the smell of burning would empty your counter fast. You refill it, fast and careful. A small save. But small saves add up on a long night.",
+    "The steamer hisses and falls quiet — bone dry, the dumplings inside only half done. You catch it just in time. A minute more and they'd have burned, and the smell of burning empties a counter faster than anything. You refill it fast, and carefully. A small save — but small saves add up over a long night.",
+    "The steamer hisses and falls suddenly quiet — bone dry, the dumplings stacked inside only half done. You catch it just in time. A minute more and they'd have burned, and the smell of burning dumplings empties a counter faster than almost anything. You refill it fast, and carefully, hands steady now. A small save — but small saves are what add up, one after another, over a long night."),
+  [t("Eke it out.", "Eke it out.", "Eke it out."),
+   t("On through the rush.", "On through the rush.", "On through the rush.")])
+
+P(30,
+  t("A quieter stretch. You wipe down, restock the bowls, straighten the counter. In the calm, your mind drifts to the fee, the empty stool, Auntie's worried voice on the phone. Then a customer appears, and you are back in it. But the quiet stretches are where you think, and thinking is how you last the night.",
+    "A quieter stretch. You wipe down, restock the bowls, straighten the counter. In the calm, your mind drifts — to the fee, the empty stool, Auntie's worried voice on the phone. Then a customer appears and you're back in it. But the quiet stretches are where you think, and thinking is how you last a whole night.",
+    "A quieter stretch, at last. You wipe down, restock the bowls, straighten the counter into order. In the sudden calm your mind drifts — to the fee, to the empty stool, to Auntie's worried voice down the phone. Then a customer appears out of the smoke and you're back in it. But the quiet stretches are where you actually think, and thinking, tonight, is how you'll last until dawn."),
+  [t("Take a breath.", "Take a breath.", "Take a breath."),
+   t("On through the rush.", "On through the rush.", "On through the rush.")])
+
+# --- the fixer, Mr Sould ---
+P(61,
+  t("Mr Sould leans on your counter, easy and slow. \"Hard night, running it alone,\" he says. \"I can help. A small loan to cover the fee. Or a quiet word with that rival across the way. I look after people who look after me.\" He waits, still smiling. Behind him, other stallholders line up to pay him.",
+    "Mr Sould leans on your counter, easy and slow. \"Hard night, running it all alone,\" he says. \"I can help. A small loan to cover the fee, say. Or a quiet word with that rival across the way. I look after people who look after me.\" He waits, still smiling. Behind him, other stallholders queue up to hand him money.",
+    "Mr Sould leans on your counter, easy and unhurried. \"Hard night, running it all on your own,\" he says, warm as ever. \"I can help, you know. A small loan to cover the fee, perhaps. Or a quiet word with that rival across the way — I can make trouble go away. I look after people who look after me.\" He waits, still smiling. Behind him, a line of other stallholders waits to hand him money."),
+  [t("Hear the offer.", "Listen to the offer.", "Listen to the offer."),
+   t("Say no now.", "Refuse now.", "Refuse him now."),
+   t("Others line up to pay him.", "Stallholders line up to pay him.", "Stallholders line up to pay him.")])
+
+P(62,
+  t("\"Just a loan,\" Sould says. \"Pay the fee tonight, pay me back later. Easy.\" He never says the interest. He never says what 'later' costs. His help is real — but so is the hook inside it. You could take the money and breathe easy tonight. Or ask what it really costs. Or just walk away.",
+    "\"Just a loan,\" Sould says smoothly. \"Pay the fee tonight, pay me back later. Easy.\" He never mentions the interest. He never says what 'later' will cost you. His help is real enough — but so is the hook buried inside it. You could take the money and breathe easy tonight, ask what it really costs, or simply walk away.",
+    "\"Just a loan,\" Sould says smoothly, spreading his hands. \"Pay the fee tonight, pay me back later. Easy.\" He never once mentions the interest. He never says what 'later' will actually cost you. His help is real enough — but so is the hook buried carefully inside it. You could take the money and breathe easy tonight; you could ask what it really costs; or you could simply walk away."),
+  [t("Take the loan.", "Take the loan.", "Take the loan."),
+   t("Refuse it.", "Refuse it.", "Refuse it."),
+   t("Ask what it costs.", "Ask what it costs.", "Ask what it really costs.")])
+
+P(63,
+  t("\"No, thank you,\" you say. \"We'll manage.\" Sould's smile stays, but his eyes cool. \"Suit yourself,\" he says, and moves on to the next stall. You feel lighter the moment he goes. Whatever happens tonight, it will be yours — the win or the loss, but no one's hook in you. That is worth something.",
+    "\"No, thank you,\" you say. \"We'll manage.\" Sould's smile holds, but his eyes cool a degree. \"Suit yourself,\" he says, and moves on to the next stall. You feel lighter the moment he's gone. Whatever happens tonight will be yours — the win or the loss, but nobody's hook in you. That's worth something.",
+    "\"No, thank you,\" you say, as steadily as you can manage. \"We'll manage.\" Sould's smile holds, but his eyes cool by a degree. \"Suit yourself,\" he says lightly, and moves on to the next stall down. You feel lighter the moment he's gone. Whatever happens tonight will be yours — the win or the loss, but nobody's hook set in you. That, you're fairly sure, is worth something."),
+  [t("Back to the stall.", "Back to the stall.", "Back to the stall."),
+   t("Into the night's work.", "Into the night's work.", "Back into the night's work.")])
+
+P(64,
+  t("You take Sould's money. The fee is covered now, whatever the night does. For one moment, the weight lifts, and you can breathe. Then the unease creeps in. You did not read the terms. You do not know what 'later' means. You have traded one worry for another — and this one has a smile and knows your name.",
+    "You take Sould's money. The fee's covered now, whatever else the night does. For a moment the weight lifts and you can breathe. Then the unease creeps in. You didn't read any terms; you don't know what 'later' really means. You've traded one worry for another — and this one has a smile, and knows exactly where to find you.",
+    "You take Sould's money, and it's warm from his pocket. The fee is covered now, whatever else the night throws at you. For one blessed moment the weight lifts clean off your shoulders and you can breathe. Then the unease begins to creep in. You didn't read any terms; you don't know what 'later' really means. You've traded one worry for another — and this new one has a smile, and knows your name, and knows exactly where to find you."),
+  [t("Back to the stall.", "Back to the stall.", "Back to the stall."),
+   t("On toward closing.", "On toward closing.", "On toward closing.")])
+
+P(65,
+  t("\"What does it cost?\" you ask. Sould only smiles wider. \"Don't worry about that now,\" he says. \"We'll sort it out later. Friends always do.\" He won't name a number. That is the whole trick, right there. A real price you can weigh. A price with no number is a rope with no end. You see it clearly now.",
+    "\"What does it cost?\" you ask. Sould only smiles wider. \"Don't you worry about that now,\" he says. \"We'll sort it out later. Friends always do.\" He won't name a number, and that's the whole trick, right there. A real price you can weigh up. A price with no number is a rope with no end. You see it clearly now.",
+    "\"What does it cost?\" you ask him, plainly. Sould only smiles wider. \"Don't you worry about that now,\" he says. \"We'll sort it all out later. Friends always do.\" He won't name a number, and that, right there, is the whole trick. A real price you can weigh up and decide about. A price with no number attached is a rope with no end. You can see it clearly now, and you're glad you asked."),
+  [t("That's the tell. Refuse.", "That's the tell — refuse.", "That's the tell — refuse."),
+   t("Take it anyway.", "Take it anyway.", "Take it anyway.")])
+
+P(66,
+  t("You watch the line of stallholders wait to pay Sould. Some look calm. Some look tired, and a little afraid. One old woman counts her coins twice before she hands them over. This is how the market really works, under the lights and the noise. A quiet man, a long line, and money moving his way all night.",
+    "You watch the line of stallholders waiting to pay Sould. Some look calm enough; others look tired, and a little afraid. One old woman counts her coins twice before she hands them over. This is how the market really works, under the lanterns and the noise. A quiet man, a long line, and money moving his way all night.",
+    "You watch the line of stallholders waiting their turn to pay Sould. Some look calm enough about it; others look tired, and a little afraid. One old woman counts her coins twice over before she hands them across. This, you realise, is how the market really works, under the lanterns and the noise — a quiet man, a patient line, and money moving steadily his way all night long."),
+  [t("Hear his offer.", "Hear his offer.", "Hear his offer."),
+   t("A stallholder warns you.", "A stallholder warns you.", "A stallholder warns you quietly.")])
+
+P(67,
+  t("The stallholder beside you leans in. \"Whatever he offers, say no,\" she murmurs. \"Sould never forgets a debt. My cousin borrowed once. Three years, he paid. Three years.\" She straightens up as Sould glances over. \"Just... be careful,\" she says, and turns back to her stall. The warning sits cold in your chest.",
+    "The stallholder beside you leans in close. \"Whatever he offers, say no,\" she murmurs. \"Sould never forgets a debt. My cousin borrowed once. Three years he paid it back. Three years.\" She straightens as Sould glances over. \"Just... be careful,\" she says, and turns back to her stall. The warning sits cold in your chest.",
+    "The stallholder beside you leans in close, under the noise. \"Whatever he offers, say no,\" she murmurs. \"Sould never forgets a debt. My cousin borrowed from him once. Three years he spent paying it back. Three years.\" She straightens up quickly as Sould glances over. \"Just... be careful,\" she says, and turns back to her own stall. The warning sits cold and clear in your chest."),
+  [t("Refuse him.", "Refuse him.", "Refuse him."),
+   t("Still hear him out.", "Still hear him out.", "Still hear him out.")])
+
+P(68,
+  t("Near closing, Sould drifts back. \"Made the fee yet?\" he asks, gentle, like he cares. \"Because the offer's still open. Last chance tonight.\" He knows exactly how the night has gone for you. He always does. His loan would end the fear right now. But his loan never really ends. You know which way to answer.",
+    "Near closing, Sould drifts back over. \"Made the fee yet?\" he asks, gentle, like he cares. \"Because the offer's still open. Last chance tonight.\" He knows exactly how the night has gone for you — he always does. His loan would end the fear right now. But his loan never really ends. You know which way you're going to answer.",
+    "Near closing, Sould drifts back over, unhurried. \"Made the fee yet?\" he asks, gentle, as if he cares. \"Because the offer's still open. Last chance tonight.\" He knows exactly how the night has gone for you — he always does, that's his whole trade. His loan would end the fear right here, right now. But his loan never really ends, does it. You know which way you're going to answer."),
+  [t("Take his loan.", "Take his loan.", "Take his loan."),
+   t("Refuse. Take your chances.", "Refuse, and take your chances.", "Refuse, and take your chances.")])
+
+# --- the kid ---
+P(73,
+  t("The kid comes back with the stock, breathing hard, proud to have been quick. Then they see the bowls, and the steam, and go still. They don't ask. They just look — the way hungry children look at food, trying not to. You have a bowl in your hand. You have a choice in the other.",
+    "The kid comes back with the stock, breathing hard and proud to have been quick about it. Then they catch sight of the bowls, and the steam, and go very still. They don't ask for anything. They just look — the way hungry children look at food, trying hard not to. You've a bowl in one hand, and a choice in the other.",
+    "The kid comes back with the stock, breathing hard and visibly proud to have been so quick about it. Then they catch sight of the bowls, and the rising steam, and go very still. They don't ask for anything, of course. They just look — the way hungry children look at food when they're trying hard not to be caught looking. You've a bowl in one hand, and a choice in the other."),
+  [t("Give the kid a bowl.", "Give the kid a bowl.", "Give the kid a bowl."),
+   t("Pay in coins only.", "Pay only in coins.", "Pay only in coins.")])
+
+P(74,
+  t("You hand the kid a full bowl. \"Eat,\" you say. \"You earned it.\" Their whole face changes. They eat fast, in the corner, like they're afraid it will vanish. It is one bowl. It costs you almost nothing. But to the kid it is the whole world for a moment. They will not forget who gave it.",
+    "You hand the kid a full bowl. \"Eat,\" you say. \"You earned it.\" Their whole face changes. They eat fast, in the corner, as if afraid it might vanish. It's one bowl; it costs you almost nothing. But to the kid it's the whole world for a moment — and they won't forget who gave it to them.",
+    "You hand the kid a full, hot bowl. \"Eat,\" you say. \"You earned it.\" Their whole face changes at once. They eat fast, hunched in the corner, as if afraid it might vanish before they finish. It's one bowl; it costs you almost nothing tonight. But to the kid it's the whole world for a few minutes — and they are not going to forget who gave it to them."),
+  [t("Back to the rush.", "Back to the rush.", "Back to the rush."),
+   t("The kid stays.", "The kid sticks around.", "The kid sticks around."),
+   t("The kid tells you their name.", "The kid tells you their name.", "The kid tells you their name.")])
+
+P(75,
+  t("You pay the kid in coins, the way you agreed, and nothing more. They pocket them and nod. They understand. Coins are fair; coins are the deal. But they are still hungry, and they still look at the bowls as they go. You were fair tonight. Fair is fine. But fair is not the same as kind.",
+    "You pay the kid in coins, as you agreed, and nothing more. They pocket them and nod — they understand; coins are the deal, and the deal is fair. But they're still hungry, and they still glance at the bowls as they turn to go. You were fair tonight. Fair is fine. But fair isn't quite the same as kind.",
+    "You pay the kid in coins, exactly as you agreed, and nothing more than that. They pocket them and nod — they understand; coins are the deal, and the deal is fair enough. But they're still hungry, and they still glance back at the steaming bowls as they turn to go. You were fair tonight, perfectly fair. Fair is fine. But fair, you half-notice, isn't quite the same thing as kind."),
+  [t("Back to the rush.", "Back to the rush.", "Back to the rush."),
+   t("The kid stays.", "The kid sticks around.", "The kid sticks around.")])
+
+P(76,
+  t("The kid doesn't leave. They hang about at the edge of the stall. They watch, they learn, they fetch a cloth or a spoon before you ask. Having them near makes the work lighter. A market is full of people who slip through the cracks. Sometimes a stall is the one warm place that lets them stay.",
+    "The kid doesn't leave. They hang about at the edge of the stall — watching, learning, fetching a cloth or a spoon before you even ask. Having them near makes the whole night's work feel lighter. A market is full of people who slip through the cracks, and sometimes a stall is the one warm place that lets them stay.",
+    "The kid doesn't leave. They hang about at the edge of the stall — watching, learning, fetching a cloth or a spoon before you've even thought to ask. Having them near somehow makes the whole night's work feel lighter. A market is full of people who slip quietly through the cracks, and sometimes a single stall is the one warm place that lets them stand a while."),
+  [t("Back to the rush.", "Back to the rush.", "Back to the rush."),
+   t("On into the night.", "On into the night.", "On into the night."),
+   t("The kid guards the stall.", "The kid guards the stall.", "The kid guards the stall.")])
+
+P(77,
+  t("Between bowls, the kid tells you their name. They tell you where they sleep — a dry corner behind the fish arch, most nights. They say it plainly, not asking for pity. You listen. You remember it. A name is a small thing to give and a big thing to hold. The market feels a little less like strangers now.",
+    "Between bowls, the kid tells you their name. They tell you where they sleep, too — a dry corner behind the fish arch, most nights. They say it plainly, not fishing for pity. You listen, and you remember it. A name is a small thing to give and a big thing to hold, and the market feels a little less like strangers now.",
+    "Between bowls, the kid tells you their name. They tell you where they sleep, too — a dry corner behind the fish arch, most nights, when the weather allows. They say it plainly, not fishing for pity, just offering it. You listen, and you remember it. A name is a small thing to give and a surprisingly big thing to hold, and the market feels a little less like a place full of strangers now."),
+  [t("Back to the rush.", "Back to the rush.", "Back to the rush."),
+   t("The kid stays.", "The kid sticks around.", "The kid sticks around.")])
+
+P(78,
+  t("You leave the kid to watch the stall while you duck to the back for more stock. It is a small trust, and they take it seriously. They stand tall, wave customers to wait, guard the money box with both eyes. When you come back, nothing is missing. Trust given and trust kept. It matters, in a place like this.",
+    "You leave the kid to watch the stall while you duck out back for more stock. It's a small trust, and they take it seriously — standing tall, waving customers to wait, guarding the money box with both eyes. When you get back, nothing is missing. Trust given, trust kept — and that matters, in a place like this.",
+    "You leave the kid to watch the stall while you duck out back for more stock. It's a small trust, and they take it entirely seriously — standing tall, waving customers to wait their turn, guarding the money box with both eyes at once. When you get back, nothing is missing, not a coin. Trust given, and trust kept — and that matters more than it sounds, in a place like this."),
+  [t("Back to the rush.", "Back to the rush.", "Back to the rush."),
+   t("On into the night.", "On into the night.", "On into the night.")])
+
+# --- neighbour (result) ---
+P(88,
+  t("You leave your own counter and go to her. Together you right the urn, mop the hot tea, calm her cross customers, get her going again. It costs you a few minutes and a few sales. She grips your arm, breathless. \"I won't forget this,\" she says. And on this corner, that is not just words.",
+    "You leave your own counter and go straight to her. Together you right the urn, mop up the hot tea, calm her cross customers, and get her going again. It costs you a few minutes and a few lost sales. She grips your arm, breathless. \"I won't forget this,\" she says — and on this corner, that isn't just words.",
+    "You leave your own counter and go straight to her. Together you right the heavy urn, mop up the spreading hot tea, calm her cross customers, and get her going again. It costs you a few minutes and a handful of lost sales. She grips your arm, breathless and grateful. \"I won't forget this,\" she says — and on this corner, from her, that isn't just words."),
+  [t("Back to your stall.", "Back to your stall.", "Back to your own stall."),
+   t("On into the night.", "On into the night.", "On into the night.")])
+
+# --- rain / stock / rival ---
+P(79,
+  t("Rain sweeps down the arcade, sudden and hard. It drums on the roofs and runs off the awnings. The crowd scatters for cover, and your counter empties in seconds. Rain can kill a night's trade. Or, handled right, it can fill your stall with cold, wet people who suddenly want something hot. It depends on you.",
+    "Rain sweeps down the arcade, sudden and hard, drumming on the roofs and sheeting off the awnings. The crowd scatters for cover, and your counter empties in seconds. Rain can kill a night's trade stone dead. Or, handled right, it can pack your stall with cold, wet people who suddenly want something hot. It depends on you.",
+    "Rain sweeps down the arcade, sudden and hard, drumming on the tin roofs and sheeting off the awnings in ropes. The crowd scatters for cover, and your counter empties in a matter of seconds. Rain can kill a night's trade stone dead. Or, handled right, it can pack your stall with cold, wet, miserable people who suddenly want nothing in the world so much as something hot. It depends entirely on you."),
+  [t("Pull the awning. Wait.", "Pull the awning and wait it out.", "Pull the awning and wait it out."),
+   t("Call people in for hot bowls.", "Call people in with cheap late bowls.", "Call people in with cheap late bowls.")])
+
+P(80,
+  t("You check the pots. The broth is low, the stock nearly finished. You have enough for a while, not for the whole night. Now you must choose how to spend what's left. Small careful bowls, to reach dawn. Or full generous bowls now, and risk running dry with hours still to go and customers still coming.",
+    "You check the pots. The broth is low, the stock nearly finished — enough for a while, but not for the whole night. Now you must choose how to spend what's left. Small careful bowls, to eke your way to dawn. Or full generous bowls now, and risk running dry with hours still to go and customers still coming.",
+    "You check the pots, and the news isn't good. The broth is low, the stock nearly finished — enough for a while yet, but nowhere near the whole night. Now you must choose how to spend what's left of it. Small, careful bowls, to eke your way to dawn. Or full, generous bowls now, and risk running dry with hours still to go and customers still coming through the rain."),
+  [t("The pot's nearly dry.", "The pot's nearly dry.", "The pot's nearly dry."),
+   t("Stretch the last broth.", "Stretch the last broth.", "Stretch the last of the broth.")])
+
+P(81,
+  t("You pull the awning low and wait. Rain sheets off the edge in a silver line. For a while, almost no one comes. You use the time: wipe down, restock, rest your feet, taste the broth. Rain always passes. When it does, the market comes back out, hungry and cold — and you will be ready and warm.",
+    "You pull the awning low and wait it out. Rain sheets off the edge in a long silver line. For a while almost no one comes, so you use the time — wipe down, restock, rest your aching feet, taste the broth. Rain always passes in the end. When it does, the market comes back out, cold and hungry, and you'll be ready and warm.",
+    "You pull the awning down low and wait it out. Rain sheets off the edge of it in a long silver line. For a while almost no one comes, so you use the time well — wipe down, restock, rest your aching feet, taste and adjust the broth. Rain always passes in the end. And when it does, the market comes flooding back out, cold and hungry and glad of you, and you'll be ready for them, and warm."),
+  [t("The market quietens.", "The market quietens.", "The market quietens."),
+   t("Toward closing.", "Toward closing.", "On toward closing.")])
+
+P(82,
+  t("You call out into the rain: \"Hot bowls! Get out of the wet!\" A few cold, soaked people duck under your awning, grateful. You sell them smaller, cheaper bowls, quick and warm. It is less money each. But a full stall pulls more people than an empty one. And warmth sells itself on a cold, wet night.",
+    "You call out into the rain: \"Hot bowls! Get out of the wet!\" A few cold, soaked people duck under your awning, grateful. You sell them smaller, cheaper bowls, quick and hot. It's less money on each. But a full stall pulls in more people than an empty one, and warmth sells itself on a cold, wet night.",
+    "You call out into the downpour: \"Hot bowls! Get out of the wet!\" A few cold, soaked people duck gratefully under your awning. You sell them smaller, cheaper bowls, quick and hot and cheering. It's less money on each. But a full stall pulls in far more people than an empty one, and warmth sells itself on a cold, wet night with no persuading at all."),
+  [t("The market quietens.", "The market quietens.", "The market quietens."),
+   t("Toward closing.", "Toward closing.", "On toward closing.")])
+
+P(83,
+  t("The big pot is nearly empty now. You can see the bottom through the last of the broth. This is the danger point of the night. Run dry too soon, and you stand at a cold stall while the market still moves. You can make the very last of it stretch. Or accept the pot is done and count what you have.",
+    "The big pot is nearly empty now — you can see the bottom through the last of the broth. This is the real danger point of the night. Run dry too early, and you'll stand at a cold, closed stall while the market still moves around you. You can make the very last of it stretch, or accept the pot is done and count what you've made.",
+    "The big pot is nearly empty now — you can see the bottom through the last inch of broth. This is the real danger point of the whole night. Run dry too early, and you'll stand at a cold, closed stall while the market still moves and spends all around you. You can make the very last of it stretch, or you can accept the pot is done and count up what you've made."),
+  [t("Make it stretch.", "Make it stretch.", "Make it stretch."),
+   t("The market quietens.", "The market quietens.", "The market quietens.")])
+
+P(84,
+  t("You stretch the last of the broth. More water, a careful hand with the spice, small bowls for small prices. It is thinner than Auntie's best, and you know it. But it is still warm, still honest, still hers in shape. Better a smaller true bowl than none at all. You keep the lantern lit and the pot going.",
+    "You stretch the last of the broth — a little more water, a careful hand with the spice, small bowls at small prices. It's thinner than Auntie's best, and you know it. But it's still warm, still honest, still hers in shape. Better a smaller true bowl than none at all — so you keep the lantern lit and the pot going a while longer.",
+    "You stretch the last of the broth — a little more water, a careful hand with the spice, small bowls at small honest prices. It's thinner than Auntie's best, and you know it perfectly well. But it's still warm, still honest, still hers in shape and spirit. Better a smaller true bowl than none at all — so you keep the lantern lit and the pot quietly going a while longer yet."),
+  [t("The market quietens.", "The market quietens.", "The market quietens."),
+   t("Toward closing.", "Toward closing.", "On toward closing.")])
+
+P(85,
+  t("The night is turning. The crowd thins, the noise softens, the market begins its slow slide toward dawn. Stalls further down are already pulling in. Soon the master will come for the fees. You feel the whole night in your arms and back. But it is nearly done, and you are nearly through it, one way or another.",
+    "The night is turning now. The crowd thins, the noise softens, and the market begins its slow slide toward dawn. Stalls further down are already pulling in their shutters. Soon the master will come round for the fees. You feel the whole long night in your arms and your back — but it's nearly done, and you're nearly through it, one way or another.",
+    "The night is turning now, unmistakably. The crowd thins, the noise softens, and the market begins its slow slide toward dawn. Stalls further down the row are already pulling in their shutters for the last time this season. Soon enough the master will come round for the fees. You feel the whole long night in your arms and your aching back — but it's nearly done now, and you're nearly through it, one way or the other."),
+  [t("Watch the empty stool.", "Watch the empty stool.", "Watch the empty stool."),
+   t("Toward closing.", "Toward closing.", "On toward closing."),
+   t("Dawn grey on the roofs.", "Dawn grey on the roofs.", "Dawn grey on the roofs.")])
+
+P(86,
+  t("A new stall has opened right across from you, selling bowls at half your price. The owner calls loud, waving people over. Some of your queue drifts across to him. Cheap and loud can pull a crowd fast. You can drop your price to match him, and fight. Or hold your price, and trust your food to hold your people.",
+    "A new stall has opened right across from you, selling bowls at half your price. The owner calls out loud, waving people over, and some of your queue drifts across to him. Cheap and loud can pull a crowd fast on a night like this. You can drop your price to match him and fight it out — or hold your price, and trust your food to hold your people.",
+    "A new stall has opened up right across from you, selling bowls at half your price. The owner calls out loud and constant, waving people over, and some of your own queue begins to drift across to him. Cheap and loud can pull a crowd fast on a night like this. You can drop your price to match him and fight it out toe to toe — or you can hold your price steady, and trust your food to hold your people."),
+  [t("Match his price.", "Match their price.", "Match their price."),
+   t("Hold your price.", "Hold your price.", "Hold your price.")])
+
+P(87,
+  t("You drop your price to match him. Now you are in a price war. Bowls fly out, but each one earns almost nothing. You are busy, and going nowhere. This is a race to the bottom, and the bottom is where stalls close. You cannot win a night like this on price alone. You need another way, and soon.",
+    "You drop your price to match him, and now you're in a price war. Bowls fly out of the stall, but each one earns you almost nothing. You're rushed off your feet and going nowhere. It's a race to the bottom, and the bottom is where stalls close for good. You can't win a night like this on price alone — you need another way, and fast.",
+    "You drop your price to match him, and just like that you're in a price war. Bowls fly out of the stall, but each one earns you almost nothing at all. You're rushed clean off your feet and going precisely nowhere. It's a race to the bottom, and the bottom, everyone knows, is where stalls quietly close for good. You can't win a night like this on price alone — you're going to need another way, and fast."),
+  [t("Hold from here.", "Hold from here.", "Stop, and hold from here."),
+   t("They burn out by dawn.", "They burn out by dawn.", "They burn out by dawn.")])
+
+P(89,
+  t("You hold your price and let the cheap stall shout. Some people go to him. But your regulars stay. \"His is water,\" one says, nodding at your pot. \"Yours is the real thing.\" Good food is a slower way to win, but a surer one. You are not the cheapest stall tonight. You are the one worth queuing for.",
+    "You hold your price and let the cheap stall shout itself hoarse. Some people drift to him, sure. But your regulars stay put. \"His is water,\" one says, nodding at your pot. \"Yours is the real thing.\" Good food is a slower way to win a night, but a surer one. You're not the cheapest stall tonight — you're the one worth queuing for.",
+    "You hold your price steady and let the cheap stall across the way shout itself hoarse. Some people drift over to him, of course. But your regulars stay right where they are. \"His is water,\" one says, nodding contemptuously at your pot. \"Yours is the real thing.\" Good food is a slower way to win a night, but a far surer one. You're not the cheapest stall in the market tonight — you're the one worth queuing for."),
+  [t("The market quietens.", "The market quietens.", "The market quietens."),
+   t("Toward closing.", "Toward closing.", "On toward closing.")])
+
+P(90,
+  t("By the small hours, the cheap stall across the way goes dark. He sold everything too cheap, made nothing, and ran out of stock and heart at the same time. The owner packs up, tired and cross. Your lantern is still lit, your pot still warm. Slow and steady and honest outlasts loud and cheap, most nights.",
+    "By the small hours, the cheap stall across the way goes dark. He sold everything far too cheap, made almost nothing, and ran out of stock and heart at the same time. The owner packs up, tired and cross. Your lantern is still lit, your pot still warm. Slow and steady and honest outlasts loud and cheap, most nights.",
+    "By the small hours, the cheap stall across the way goes dark and quiet. He sold everything far too cheap, made almost nothing on any of it, and ran clean out of stock and heart at the same moment. The owner packs up, tired and cross and no richer. Your lantern is still lit, your pot still warm. Slow and steady and honest outlasts loud and cheap, most nights — and tonight was one of them."),
+  [t("The market quietens.", "The market quietens.", "The market quietens."),
+   t("Toward closing.", "Toward closing.", "On toward closing.")])
+
+
 # ============================ apply ========================================
 def main():
     book = json.load(open(BOOK, encoding="utf-8"))
