@@ -78,14 +78,14 @@
     {
       "id": 1,
       "text": {
-        "A2": "[stub] Dusk. Auntie has scalded her hand; tonight you run pitch 24 alone, and the season's fee is due to the market master by dawn or the corner is lost.",
-        "B1": "[stub] Dusk. Auntie has scalded her hand; tonight you run pitch 24 alone, and the season's fee is due to the market master by dawn or the corner is lost.",
-        "B2": "[stub] Dusk. Auntie has scalded her hand; tonight you run pitch 24 alone, and the season's fee is due to the market master by dawn or the corner is lost."
+        "A2": "The market opens at dusk. Tonight the stall is yours. Auntie burned her hand two days ago, so she cannot cook. She has run pitch 24 for thirty years. The season's fee is due to the market master by dawn. If you do not pay it, the family loses the corner. You have never run the stall alone before.",
+        "B1": "The market opens at dusk, and tonight the stall is yours. Auntie scalded her hand two days ago and cannot hold a ladle, so the cooking falls to you. She has run pitch 24 for thirty years. The season's fee is due to the market master by dawn — miss it, and the family loses the corner. You have never run the stall alone.",
+        "B2": "The market opens at dusk, and tonight, for the first time, the stall is yours. Auntie scalded her hand badly two days ago and cannot so much as hold a ladle, so the whole night's cooking falls to you. She has held pitch 24 for thirty years. The season's fee is due to the market master by the time the lanterns go out at dawn — and if you don't pay it, the family loses the corner for good. You have never once run the stall on your own."
       },
       "choices": [
         {
           "text": {
-            "A2": "Light the stall and get started.",
+            "A2": "Light the stall and start.",
             "B1": "Light the stall and get started.",
             "B2": "Light the stall and get started."
           },
@@ -93,7 +93,7 @@
         },
         {
           "text": {
-            "A2": "Call Auntie for instructions first.",
+            "A2": "Call Auntie first.",
             "B1": "Call Auntie for instructions first.",
             "B2": "Call Auntie for instructions first."
           },
@@ -101,9 +101,9 @@
         },
         {
           "text": {
-            "A2": "Check the money box and the fee.",
+            "A2": "Check the money and the fee.",
             "B1": "Check the money box and the fee.",
-            "B2": "Check the money box and the fee."
+            "B2": "Check the money box and the fee owed."
           },
           "goto": 4
         }
@@ -112,32 +112,32 @@
     {
       "id": 2,
       "text": {
-        "A2": "[stub] You open the stall — burners, lanterns, the counter, the back shelf.",
-        "B1": "[stub] You open the stall — burners, lanterns, the counter, the back shelf.",
-        "B2": "[stub] You open the stall — burners, lanterns, the counter, the back shelf."
+        "A2": "You lift the shutter and light the burners. Blue flames catch under the big pot. You hang the two red lanterns. You wipe the counter and set out the bowls. The back shelf is empty, waiting. The market is waking up around you: voices, smoke, the smell of frying.",
+        "B1": "You lift the shutter and light the burners; blue flames catch under the big pot. You hang the two red lanterns and wipe down the counter. On the back shelf, one space stands empty, waiting. All around you the market is waking — voices, smoke, the smell of hot oil and frying garlic.",
+        "B2": "You lift the heavy shutter and light the burners, and blue flames catch, one by one, under the big pot. You hang the two red lanterns, wipe down the long counter, and set the bowls out in their stacks. On the back shelf, one space stands empty, as if it were waiting for something. All around you the market is coming awake — voices, smoke, the smell of hot oil and frying garlic."
       },
       "choices": [
         {
           "text": {
-            "A2": "The tea woman next door leans over.",
+            "A2": "The tea woman says hello.",
             "B1": "The tea woman next door leans over.",
-            "B2": "The tea woman next door leans over."
+            "B2": "The tea woman next door leans over to you."
           },
           "goto": 5
         },
         {
           "text": {
-            "A2": "The supplier's van pulls up.",
+            "A2": "The supplier's van arrives.",
             "B1": "The supplier's van pulls up.",
-            "B2": "The supplier's van pulls up."
+            "B2": "The supplier's van pulls up at the kerb."
           },
           "goto": 6
         },
         {
           "text": {
-            "A2": "The big burner won't catch.",
+            "A2": "The big burner won't light.",
             "B1": "The big burner won't catch.",
-            "B2": "The big burner won't catch."
+            "B2": "The big burner splutters and won't catch."
           },
           "goto": 19
         }
@@ -146,31 +146,31 @@
     {
       "id": 3,
       "text": {
-        "A2": "[stub] Auntie on the phone: the broth, the good supplier, and — set a bowl for Mr Behn.",
-        "B1": "[stub] Auntie on the phone: the broth, the good supplier, and — set a bowl for Mr Behn.",
-        "B2": "[stub] Auntie on the phone: the broth, the good supplier, and — set a bowl for Mr Behn."
+        "A2": "You call Auntie. Her voice is tired but clear. \"Taste the broth before you sell it. Buy from Old Han, not the cheap van. And set a bowl aside for Mr Behn.\" You want to ask more. But she is in pain, and rings off.",
+        "B1": "You call Auntie. Her voice is tired but clear. \"Taste the broth before you sell it. Buy from Old Han, not the cheap van. And set a bowl aside for Mr Behn.\" You want to ask what that last part means. But she is in pain, and she rings off before you can.",
+        "B2": "You call Auntie, and her voice comes down the line tired but perfectly clear. \"Taste the broth before you sell a drop of it. Buy from Old Han, never the cheap van. And set one bowl aside, on the back shelf, for Mr Behn.\" You want to ask what that last part means, and who Mr Behn is. But she is in pain, and she rings off before you can get the question out."
       },
       "choices": [
         {
           "text": {
             "A2": "Ask about the good supplier.",
             "B1": "Ask about the good supplier.",
-            "B2": "Ask about the good supplier."
+            "B2": "Ask her about the good supplier."
           },
           "goto": 6
         },
         {
           "text": {
-            "A2": "Ask what else you must know.",
+            "A2": "Ask what else to know.",
             "B1": "Ask what else you must know.",
-            "B2": "Ask what else you must know."
+            "B2": "Ask what else you need to know."
           },
           "goto": 7
         },
         {
           "text": {
-            "A2": "Taste her broth to learn the balance.",
-            "B1": "Taste her broth to learn the balance.",
+            "A2": "Taste the broth first.",
+            "B1": "Taste her broth to learn it.",
             "B2": "Taste her broth to learn the balance."
           },
           "goto": 20
@@ -180,14 +180,14 @@
     {
       "id": 4,
       "text": {
-        "A2": "[stub] The money box, and the fee card in Auntie's hand.",
-        "B1": "[stub] The money box, and the fee card in Auntie's hand.",
-        "B2": "[stub] The money box, and the fee card in Auntie's hand."
+        "A2": "You open the money box. Inside is a card in Auntie's hand. On it is the fee: the number you must reach by dawn. It is a big number. A bowl of broth is only a few coins. You count in your head. It will take a full, busy night to make it.",
+        "B1": "You open the money box. Inside is a card in Auntie's writing, with the fee on it — the number you must reach by dawn. It's a big number, and a bowl of broth is only a few coins. You do the sum in your head: it will take a full, busy night to get there.",
+        "B2": "You open the money box. Inside, in Auntie's careful hand, is a card with the fee written on it — the number you have to reach by the time the lanterns go out. It is a big number. A single bowl of broth is only a few coins, and you do the arithmetic in your head with a sinking feeling: it will take a full, hard, busy night to get anywhere near it."
       },
       "choices": [
         {
           "text": {
-            "A2": "You must match it by dawn. Get cooking.",
+            "A2": "Match it by dawn. Cook.",
             "B1": "You must match it by dawn. Get cooking.",
             "B2": "You must match it by dawn. Get cooking."
           },
@@ -197,15 +197,15 @@
           "text": {
             "A2": "Work out what a bowl earns.",
             "B1": "Work out what a bowl earns.",
-            "B2": "Work out what a bowl earns."
+            "B2": "Work out what a single bowl earns."
           },
           "goto": 8
         },
         {
           "text": {
-            "A2": "Auntie frets down the line.",
+            "A2": "Auntie worries on the phone.",
             "B1": "Auntie frets down the line.",
-            "B2": "Auntie frets down the line."
+            "B2": "Auntie frets away down the line."
           },
           "goto": 21
         }
@@ -214,24 +214,24 @@
     {
       "id": 5,
       "text": {
-        "A2": "[stub] The tea woman at pitch 25 says hello.",
-        "B1": "[stub] The tea woman at pitch 25 says hello.",
-        "B2": "[stub] The tea woman at pitch 25 says hello."
+        "A2": "The tea woman at pitch 25 leans over. She has sold tea here for years. \"So it's you tonight,\" she says, kindly. \"Your auntie's hand — how bad?\" She looks at your empty counter and your nervous hands, and she smiles. \"Don't worry. I'll keep an eye on you.\"",
+        "B1": "The tea woman at pitch 25 leans over — she's sold tea on this corner for years. \"So it's you tonight,\" she says kindly. \"Your auntie's hand, how bad is it?\" She takes in your empty counter and your nervous hands, and smiles. \"Don't fret. I'll keep half an eye on you.\"",
+        "B2": "The tea woman at pitch 25 leans over — she has sold tea on this corner longer than you've been alive. \"So it's you tonight,\" she says, kindly enough. \"Your auntie's hand — how bad is it?\" She takes in your empty counter and your visibly nervous hands, and something in her face softens. \"Don't fret. I'll keep half an eye on you.\""
       },
       "choices": [
         {
           "text": {
-            "A2": "Chat a moment.",
+            "A2": "Talk with her a moment.",
             "B1": "Chat a moment.",
-            "B2": "Chat a moment."
+            "B2": "Chat with her a moment."
           },
           "goto": 9
         },
         {
           "text": {
-            "A2": "Get to the supplier.",
+            "A2": "Go to the supplier.",
             "B1": "Get to the supplier.",
-            "B2": "Get to the supplier."
+            "B2": "Get on to the supplier."
           },
           "goto": 6
         }
@@ -240,16 +240,16 @@
     {
       "id": 6,
       "text": {
-        "A2": "[stub] The supplier's van: the good pork and greens cost more; the cheap end-of-day stock is half the price and half turned.",
-        "B1": "[stub] The supplier's van: the good pork and greens cost more; the cheap end-of-day stock is half the price and half turned.",
-        "B2": "[stub] The supplier's van: the good pork and greens cost more; the cheap end-of-day stock is half the price and half turned."
+        "A2": "The supplier's van is here. Old Han has good pork and fresh greens, but they cost more. The cheap van next to him sells end-of-day stock. It is half the price. But some of it has turned, and it does not smell fresh. Good food costs money. Cheap food costs your name.",
+        "B1": "The supplier's van pulls up. Old Han has good pork and fresh greens, but they cost more. Beside him, the cheap van is selling off end-of-day stock at half the price. Some of it has turned, though, and none of it smells quite fresh. Good stock costs money now. Cheap stock costs your name later.",
+        "B2": "The supplier's van pulls up at the kerb. Old Han has good pork and greens, fresh that morning, but they cost more than you'd like. Beside him, the cheap van is selling off end-of-day stock at half the price. Some of it has quietly turned, though, and none of it smells the way it should. Good stock costs you money tonight. Cheap stock costs you the stall's name, which took thirty years to build."
       },
       "choices": [
         {
           "text": {
             "A2": "Buy the good stock.",
             "B1": "Buy the good stock.",
-            "B2": "Buy the good stock."
+            "B2": "Buy the good stock from Old Han."
           },
           "goto": 10,
           "sets": [
@@ -258,7 +258,7 @@
         },
         {
           "text": {
-            "A2": "Buy the cheap stock to save money.",
+            "A2": "Buy the cheap stock.",
             "B1": "Buy the cheap stock to save money.",
             "B2": "Buy the cheap stock to save money."
           },
@@ -266,9 +266,9 @@
         },
         {
           "text": {
-            "A2": "Buy a little of each.",
+            "A2": "Buy some of each.",
             "B1": "Buy a little of each.",
-            "B2": "Buy a little of each."
+            "B2": "Buy a little of each, to hedge."
           },
           "goto": 12
         }
@@ -277,22 +277,22 @@
     {
       "id": 7,
       "text": {
-        "A2": "[stub] Auntie goes quiet at the name Behn.",
-        "B1": "[stub] Auntie goes quiet at the name Behn.",
-        "B2": "[stub] Auntie goes quiet at the name Behn."
+        "A2": "You ask about Mr Behn. The line goes quiet. \"An old friend,\" Auntie says at last. \"He used to come every night. Just keep his bowl. Please.\" There is something in her voice. You do not push. Some things wait for the right moment.",
+        "B1": "You ask who Mr Behn is. The line goes quiet for a moment. \"An old friend,\" Auntie says at last. \"He used to come every night, and then he stopped. Just keep his bowl for me. Please.\" There's something under her voice you can't read. You don't push it.",
+        "B2": "You ask who Mr Behn is, and the line goes quiet for a long moment. \"An old friend,\" Auntie says at last. \"He came every night for years, and then, one day, he stopped. Just keep his bowl for me. Please.\" There is something running under her voice that you can't quite read, and you decide not to push it. Some questions wait for their moment."
       },
       "choices": [
         {
           "text": {
-            "A2": "Ask who he is.",
-            "B1": "Ask who he is.",
-            "B2": "Ask who he is."
+            "A2": "Set his bowl aside now.",
+            "B1": "Go and set his bowl aside.",
+            "B2": "Go and set his bowl aside now."
           },
           "goto": 13
         },
         {
           "text": {
-            "A2": "Say you will, and hang up.",
+            "A2": "Say you will, and go.",
             "B1": "Say you will, and hang up.",
             "B2": "Say you will, and hang up."
           },
@@ -303,16 +303,16 @@
     {
       "id": 8,
       "text": {
-        "A2": "[stub] A bowl earns little; the fee needs a whole good night.",
-        "B1": "[stub] A bowl earns little; the fee needs a whole good night.",
-        "B2": "[stub] A bowl earns little; the fee needs a whole good night."
+        "A2": "You work it out. One bowl earns only a few coins. The fee needs many, many bowls. You will have to sell all night, without stopping, and waste nothing. It can be done. Auntie does it every season. But she is fast, and you are not — not yet.",
+        "B1": "You work it out. A single bowl earns only a few coins. The fee will take many, many bowls — a whole night of selling without a pause, and wasting nothing. It can be done; Auntie does it every season. But she is fast and sure, and you are neither, not yet.",
+        "B2": "You work it out, and the sums are sobering. A single bowl earns only a few coins, so the fee will take many, many bowls — a whole night of selling without a pause, and not a scrap wasted. It can be done; Auntie does it every single season. But she is fast, and sure, and reads a crowd in a glance, and you are none of those things, not yet."
       },
       "choices": [
         {
           "text": {
             "A2": "Get cooking.",
             "B1": "Get cooking.",
-            "B2": "Get cooking."
+            "B2": "Get cooking, then."
           },
           "goto": 2
         },
@@ -320,7 +320,7 @@
           "text": {
             "A2": "Ask the tea woman for tips.",
             "B1": "Ask the tea woman for tips.",
-            "B2": "Ask the tea woman for tips."
+            "B2": "Ask the tea woman for some tips."
           },
           "goto": 9
         }
@@ -329,22 +329,22 @@
     {
       "id": 9,
       "text": {
-        "A2": "[stub] The tea woman's tips — and a warning about Mr Sould, the fixer.",
-        "B1": "[stub] The tea woman's tips — and a warning about Mr Sould, the fixer.",
-        "B2": "[stub] The tea woman's tips — and a warning about Mr Sould, the fixer."
+        "A2": "The tea woman tells you how the night goes. \"Busy at nine, busy again at midnight,\" she says. \"Price fair. Be quick. Don't waste.\" Then she lowers her voice. \"And Mr Sould will come. He offers help. Loans. A quiet word. Say no. His help is a hook.\"",
+        "B1": "The tea woman runs you through the night. \"Busy about nine, busy again at midnight,\" she says. \"Price it fair, be quick, waste nothing.\" Then she drops her voice. \"And Mr Sould will come round. He'll offer help — a loan, a quiet word with a rival. Say no. His help is a hook.\"",
+        "B2": "The tea woman runs you through the shape of the night. \"Busy about nine, quiet, then busy again at midnight,\" she says. \"Price it fair, be quick, and waste nothing.\" Then she drops her voice and leans in. \"And Mr Sould will come round, he always does. He'll offer to help — a loan, a quiet word with a rival, a fee smoothed over. Say no to all of it. His help is a hook, and the price is never named until it's too late.\""
       },
       "choices": [
         {
           "text": {
             "A2": "Thank her.",
             "B1": "Thank her.",
-            "B2": "Thank her."
+            "B2": "Thank her for the warning."
           },
           "goto": 14
         },
         {
           "text": {
-            "A2": "Sould is already coming over.",
+            "A2": "Sould is coming over now.",
             "B1": "Sould is already coming over.",
             "B2": "Sould is already coming over."
           },
@@ -355,9 +355,9 @@
     {
       "id": 10,
       "text": {
-        "A2": "[stub] The good stock, stored and cold.",
-        "B1": "[stub] The good stock, stored and cold.",
-        "B2": "[stub] The good stock, stored and cold."
+        "A2": "The good pork is pink and fresh. The greens are crisp and green. You store them in the cold box. It cost more than you wanted. But you can taste the difference already, and so will they. Good food is how Auntie kept this corner for thirty years.",
+        "B1": "Old Han's pork is pink and fresh, his greens crisp and bright. You pack them into the cold box. It cost more than you'd have liked — but you can already taste the difference, and so will the customers. Good food is how Auntie has held this corner for thirty years.",
+        "B2": "Old Han's pork is pink and fresh, his greens crisp and bright with the morning still on them. You pack it all carefully into the cold box. It cost more than you'd have liked — but you can already taste the difference it will make, and so, you're sure, will the customers. Good food, honestly made, is how Auntie has held this corner for thirty years, and you mean to hold it the same way tonight."
       },
       "choices": [
         {
@@ -381,9 +381,9 @@
     {
       "id": 11,
       "text": {
-        "A2": "[stub] The cheap stock, and a smell you don't like.",
-        "B1": "[stub] The cheap stock, and a smell you don't like.",
-        "B2": "[stub] The cheap stock, and a smell you don't like."
+        "A2": "The cheap stock is half the price. You carry it back. But the pork smells wrong, and the greens are going soft. You saved money. Did you save the wrong thing? A bad bowl is not cheap. A bad bowl is one lost customer, and everyone they tell.",
+        "B1": "The cheap stock is half the price, so you carry it back to the stall. But the pork has a smell you don't trust, and the greens are already going soft. You saved money — but maybe the wrong money. A bad bowl isn't cheap: it's a lost customer, and everyone that customer tells.",
+        "B2": "The cheap stock is half the price, so you carry it back to the stall telling yourself it will be fine. But the pork has a smell you don't quite trust, and the greens are already going soft at the edges. You saved money tonight — but perhaps the wrong money. A bad bowl is never really cheap: it costs you a customer, and everyone that customer ever mentions it to."
       },
       "choices": [
         {
@@ -398,7 +398,7 @@
           "text": {
             "A2": "Regret it.",
             "B1": "Regret it.",
-            "B2": "Regret it."
+            "B2": "Regret it already."
           },
           "goto": 17
         }
@@ -407,9 +407,9 @@
     {
       "id": 12,
       "text": {
-        "A2": "[stub] Some of each, to hedge.",
-        "B1": "[stub] Some of each, to hedge.",
-        "B2": "[stub] Some of each, to hedge."
+        "A2": "You buy some good and some cheap. It feels safe. Half your bowls will be fine. But half will be less than Auntie's best. On a slow night, that might be enough. On a busy night, one bad bowl at the wrong moment can turn the crowd. You will have to be careful.",
+        "B1": "You buy some good and some cheap, to hedge your bets. It feels like the safe middle. But half your bowls will fall short of Auntie's best. And on a busy night, one weak bowl at the wrong moment can turn a whole crowd. You'll have to watch which stock goes into which bowl.",
+        "B2": "You buy some of the good and some of the cheap, hedging your bets. It feels like the safe middle path. But half your bowls will fall short of Auntie's best, and on a busy night a single weak bowl at the wrong moment can turn a whole crowd against you. You'll have to keep careful track of which stock goes into which pot."
       },
       "choices": [
         {
@@ -433,16 +433,16 @@
     {
       "id": 13,
       "text": {
-        "A2": "[stub] The saved bowl — Auntie's thirty-year habit.",
-        "B1": "[stub] The saved bowl — Auntie's thirty-year habit.",
-        "B2": "[stub] The saved bowl — Auntie's thirty-year habit."
+        "A2": "The back shelf waits. Auntie keeps one bowl there every night, for Mr Behn. She has done it for years, even when he stopped coming. It is a small thing. It costs one bowl. But it is her habit, and habits like this are how people stay in each other's lives.",
+        "B1": "The back shelf waits, empty. Every night for years, Auntie has kept one bowl there for Mr Behn — even now, even though he stopped coming a season ago. It's a small thing; it costs a single bowl. But it's her habit, and habits like that are how people stay in each other's lives.",
+        "B2": "The back shelf waits, empty. Every night for years, without fail, Auntie has kept one bowl there for Mr Behn — even now, even though his stool has stood empty for a whole season. It is a small thing, and it costs you a single bowl of broth. But it is her habit, kept quietly when no one is watching, and habits like that are how people stay in one another's lives."
       },
       "choices": [
         {
           "text": {
-            "A2": "Set a bowl aside now, as she does.",
+            "A2": "Set a bowl aside, like Auntie.",
             "B1": "Set a bowl aside now, as she does.",
-            "B2": "Set a bowl aside now, as she does."
+            "B2": "Set a bowl aside now, exactly as she does."
           },
           "goto": 18,
           "sets": [
@@ -453,7 +453,7 @@
           "text": {
             "A2": "You're too busy for that.",
             "B1": "You're too busy for that.",
-            "B2": "You're too busy for that."
+            "B2": "You're too busy for that tonight."
           },
           "goto": 16
         }
@@ -462,9 +462,9 @@
     {
       "id": 14,
       "text": {
-        "A2": "[stub] You thank the tea woman.",
-        "B1": "[stub] You thank the tea woman.",
-        "B2": "[stub] You thank the tea woman."
+        "A2": "You thank her. \"We look after each other on this corner,\" she says. \"Your auntie would do the same for me. She has, many times.\" It is good to know you are not quite alone tonight. One friendly face is worth a lot when the crowd comes.",
+        "B1": "You thank her. \"We look after each other on this corner,\" she says. \"Your auntie's done the same for me more times than I can count.\" It's good to know you're not alone tonight. One friendly face is worth a great deal once the crowd comes.",
+        "B2": "You thank her, and mean it. \"We look after each other on this corner,\" she says simply. \"Your auntie's done the same for me more times than I could count.\" It's good to know you aren't quite alone tonight. One friendly face two feet away is worth a great deal once the crowd comes pressing in."
       },
       "choices": [
         {
@@ -488,9 +488,9 @@
     {
       "id": 15,
       "text": {
-        "A2": "[stub] Sould's first, friendly approach.",
-        "B1": "[stub] Sould's first, friendly approach.",
-        "B2": "[stub] Sould's first, friendly approach."
+        "A2": "A man in a clean coat stops at your counter. He smiles like an old friend. \"You must be Sim's family. Terrible, her hand. Don't worry. I look after this market. Anything you need tonight, you come to Mr Sould.\" His smile is warm. His eyes are not.",
+        "B1": "A man in a clean coat stops at your counter, smiling like an old friend. \"You must be Sim's family. Terrible thing, her hand. Don't you worry — I look after this market. Anything you need tonight, you come straight to Mr Sould.\" His smile is warm. His eyes, you notice, are not.",
+        "B2": "A man in a clean, pressed coat stops at your counter, smiling like an old friend you can't quite place. \"You must be Sim's family. Terrible thing, her hand. Don't you worry now — I look after this market, everyone on it. Anything you need tonight, anything at all, you come straight to Mr Sould.\" His smile is warm and easy. His eyes, you can't help noticing, are doing something else entirely."
       },
       "choices": [
         {
@@ -505,7 +505,7 @@
           "text": {
             "A2": "Wave him off politely.",
             "B1": "Wave him off politely.",
-            "B2": "Wave him off politely."
+            "B2": "Politely wave him off."
           },
           "goto": 16
         }
@@ -514,9 +514,9 @@
     {
       "id": 16,
       "text": {
-        "A2": "[stub] The stall is ready; the market fills up.",
-        "B1": "[stub] The stall is ready; the market fills up.",
-        "B2": "[stub] The stall is ready; the market fills up."
+        "A2": "The stall is ready. The lanterns glow red. The broth steams. The bowls are stacked and waiting. Out in the market, the crowd is thick now, moving past in the smoke and noise. Some of them are hungry. Some of them will stop here. It is time to open.",
+        "B1": "The stall is ready at last. The lanterns glow red, the broth steams, the bowls stand stacked and waiting. Out in the arcade the crowd is thick now, flowing past in the smoke and the noise and the smell of a hundred kitchens. Some of them are hungry. Some will stop here, if you're quick and the food is good.",
+        "B2": "The stall is ready at last. The lanterns glow red overhead, the broth steams and mutters, the bowls stand stacked and waiting in their neat towers. Out in the arcade the crowd is thick now, flowing past in the smoke and the noise and the mingled smell of a hundred kitchens. Some of them are hungry. Some of them will stop here — if you're quick enough, and the food is good enough, and you don't lose your nerve."
       },
       "choices": [
         {
@@ -537,7 +537,7 @@
         },
         {
           "text": {
-            "A2": "The regulars will want the usual.",
+            "A2": "The regulars want the usual.",
             "B1": "The regulars will want the usual.",
             "B2": "The regulars will want the usual."
           },
@@ -548,9 +548,9 @@
     {
       "id": 17,
       "text": {
-        "A2": "[stub] You bin the worst of the cheap stock.",
-        "B1": "[stub] You bin the worst of the cheap stock.",
-        "B2": "[stub] You bin the worst of the cheap stock."
+        "A2": "You throw out the worst of the cheap stock. It hurts to waste money you already spent. But a bad bowl would hurt more. You keep the parts that still look good. The rest goes in the bin. Better a smaller night than a bad name. Auntie would do the same.",
+        "B1": "You bin the worst of the cheap stock. It stings to throw away money you've already spent — but a bad bowl would cost far more. You keep what still looks and smells right, and the rest goes. Better a smaller night than a stained name. Auntie would have done exactly the same.",
+        "B2": "You bin the worst of the cheap stock. It genuinely stings to throw away money you've already handed over — but a single bad bowl, on a night like this, would cost you far more than a few coins. You keep what still looks and smells right, and the rest goes in the bin without ceremony. Better a smaller, honest night than a stained name. Auntie would have done exactly the same."
       },
       "choices": [
         {
@@ -574,9 +574,9 @@
     {
       "id": 18,
       "text": {
-        "A2": "[stub] The saved bowl waits on the back shelf.",
-        "B1": "[stub] The saved bowl waits on the back shelf.",
-        "B2": "[stub] The saved bowl waits on the back shelf."
+        "A2": "One bowl sits on the back shelf now, full and warm. It waits for a man who may not come. It looks small up there, and a little sad. But it also looks right. It is Auntie's stall, and this is how Auntie's stall has always been. You are keeping more than a business tonight.",
+        "B1": "One bowl sits on the back shelf now, full and warm, waiting for a man who may never come. It looks small up there, and a little sad — but it also looks right. This is Auntie's stall, and this is how Auntie's stall has always been. You're keeping more than a business alive tonight.",
+        "B2": "One bowl sits on the back shelf now, full and warm, waiting patiently for a man who may never come at all. It looks small up there, and a little sad — but it also, somehow, looks exactly right. This is Auntie's stall, and this is how Auntie's stall has always been, night after night, year after year. You are keeping more than a business alive tonight, though you couldn't yet say what."
       },
       "choices": [
         {
@@ -600,9 +600,9 @@
     {
       "id": 19,
       "text": {
-        "A2": "[stub] The burner splutters and won't light.",
-        "B1": "[stub] The burner splutters and won't light.",
-        "B2": "[stub] The burner splutters and won't light."
+        "A2": "The big burner clicks and clicks but will not light. Gas hisses. No flame. You try again. Nothing. Without this burner, the broth stays cold, and cold broth sells nothing. Your hands are shaking a little. It is not a good start. But every cook has fought a bad burner before.",
+        "B1": "The big burner clicks and clicks but won't light — gas hissing, no flame, nothing. You try again, and again. Without it the broth stays cold, and cold broth sells nothing to anyone. Your hands shake a little; it's not the start you wanted. But every cook alive has fought a stubborn burner before.",
+        "B2": "The big burner clicks and clicks and simply won't light — gas hissing out, no flame, nothing at all. You try again, and then again, willing it. Without this burner the broth stays cold, and cold broth sells precisely nothing. Your hands are shaking a little now, and it is not the start you'd hoped for. But every cook who ever lived has fought a stubborn burner, and won."
       },
       "choices": [
         {
@@ -617,7 +617,7 @@
           "text": {
             "A2": "The tea woman helps.",
             "B1": "The tea woman helps.",
-            "B2": "The tea woman helps."
+            "B2": "The tea woman comes to help."
           },
           "goto": 9
         }
@@ -626,9 +626,9 @@
     {
       "id": 20,
       "text": {
-        "A2": "[stub] You taste the broth — salt, ginger, the deep note.",
-        "B1": "[stub] You taste the broth — salt, ginger, the deep note.",
-        "B2": "[stub] You taste the broth — salt, ginger, the deep note."
+        "A2": "You taste the broth. Salt first, then ginger, then something deep and warm under it all. This is the taste people walk across the market for. This is thirty years of care in one spoon. You must not lose it tonight. Cook it the way she taught you, and the broth will do half the work.",
+        "B1": "You taste the broth: salt first, then ginger, then a deep warm note under it all that you can't quite name. This is the taste people cross the whole market for. It's thirty years of care in a single spoonful, and you mustn't lose it tonight. Cook it the way she taught you, and the broth will do half your selling for you.",
+        "B2": "You taste the broth: salt first, then ginger, then a deep warm note beneath it all that you couldn't name if you tried. This is the taste people cross the entire market for, elbowing through the crowd. It is thirty years of quiet care held in a single spoonful, and you must not lose it tonight of all nights. Cook it the way she taught you, exactly, and the broth will do half your selling for you."
       },
       "choices": [
         {
@@ -652,9 +652,9 @@
     {
       "id": 21,
       "text": {
-        "A2": "[stub] Auntie frets about the fee down the line.",
-        "B1": "[stub] Auntie frets about the fee down the line.",
-        "B2": "[stub] Auntie frets about the fee down the line."
+        "A2": "Auntie keeps talking about the fee. \"Don't lose the corner,\" she says. \"My mother had it before me. Thirty years.\" You can hear the fear under her words. You tell her it will be fine. You are not sure it will be. But she needs to rest her hand, and worry helps no one tonight.",
+        "B1": "Auntie keeps circling back to the fee. \"Don't lose the corner,\" she says. \"My mother had it before me — thirty years.\" You can hear the fear running under her words. You tell her it'll be fine, though you're not at all sure it will. But she needs to rest that hand, and worrying down the phone helps neither of you.",
+        "B2": "Auntie keeps circling back to the fee, unable to let it go. \"Don't lose the corner,\" she says, and her voice thins. \"My mother had it before me. Thirty years, it's been ours.\" You can hear the fear running clear under her words now. You tell her it will be fine, though you are not remotely sure it will. But she needs to rest that scalded hand, and worrying at each other down the phone helps neither of you tonight."
       },
       "choices": [
         {
@@ -678,9 +678,9 @@
     {
       "id": 22,
       "text": {
-        "A2": "[stub] The regulars will expect Auntie's usual.",
-        "B1": "[stub] The regulars will expect Auntie's usual.",
-        "B2": "[stub] The regulars will expect Auntie's usual."
+        "A2": "The regulars will come. They know Auntie's bowl by heart: how big, how hot, how much. If yours is different, they will feel it at once. You cannot be Auntie tonight. But you can make her bowl her way, and let it speak for her. That is the safest path through a busy night.",
+        "B1": "The regulars will come, and they know Auntie's bowl by heart — the size, the heat, the price, the exact balance. If yours is different, they'll feel it in the first mouthful. You can't be Auntie tonight. But you can make her bowl her way and let it speak for her, and that's the safest path through a busy night.",
+        "B2": "The regulars will come, and they know Auntie's bowl by heart — its size, its heat, its price, the exact balance of it on the tongue. If yours is different, even a little, they will feel it in the very first mouthful and say nothing and not come back. You can't be Auntie tonight. But you can make her bowl her way, and let it speak for her, and that is the safest path you have through a busy night."
       },
       "choices": [
         {
@@ -693,7 +693,7 @@
         },
         {
           "text": {
-            "A2": "Ask the tea woman who's who.",
+            "A2": "Ask who's who.",
             "B1": "Ask the tea woman who's who.",
             "B2": "Ask the tea woman who's who."
           },
@@ -704,16 +704,16 @@
     {
       "id": 23,
       "text": {
-        "A2": "[stub] A family of six, all ordering at once.",
-        "B1": "[stub] A family of six, all ordering at once.",
-        "B2": "[stub] A family of six, all ordering at once."
+        "A2": "Your first big order: a family of six, all talking at once. Six bowls. Different ones for the children. It is a lot for your first hour. Take it slowly and get it right, and they will come back all season. Rush it and drop something, and your first story tonight is a bad one.",
+        "B1": "Your very first big order: a family of six, all talking over each other. Six bowls, with small changes for the children. It's a lot to hold in your head in your first hour. Take it slowly and get it right, and they may come back all season. Rush it and drop something, and your first story of the night is a bad one.",
+        "B2": "Your very first big order, and it's a hard one: a family of six, all talking over one another. Six bowls, with small changes for the children. It is a great deal to hold in your head in your first hour behind the counter. Take it slowly and get it exactly right, and they may come back all season. Rush it and drop a plate, and the first story told about you tonight is a bad one."
       },
       "choices": [
         {
           "text": {
             "A2": "Take it carefully.",
             "B1": "Take it carefully.",
-            "B2": "Take it carefully."
+            "B2": "Take it carefully, one bowl at a time."
           },
           "goto": 35
         },
@@ -721,7 +721,7 @@
           "text": {
             "A2": "Rush it through.",
             "B1": "Rush it through.",
-            "B2": "Rush it through."
+            "B2": "Rush it through fast."
           },
           "goto": 45
         }
@@ -730,22 +730,22 @@
     {
       "id": 24,
       "text": {
-        "A2": "[stub] A child counts coins for one bowl.",
-        "B1": "[stub] A child counts coins for one bowl.",
-        "B2": "[stub] A child counts coins for one bowl."
+        "A2": "A small child stands at the counter, counting coins into a little pile. They are one coin short of a bowl. They look up at you, then down at the coins, then up again. It is a small moment. But how you answer it is the kind of thing a market remembers about a stall.",
+        "B1": "A small child stands at the counter, counting coins into a careful little pile. They're one coin short of a bowl. They look up at you, then down at the coins, then up again, saying nothing. It's a tiny moment — but how you answer it is exactly the kind of thing a market remembers about a stall.",
+        "B2": "A small child stands at the counter, counting coins into a careful little pile on the wood. They are one coin short of a single bowl. They look up at you, then down at the coins, then up again, and say nothing at all. It is the tiniest of moments. But how you answer it is precisely the kind of thing a market remembers, and repeats, about a stall."
       },
       "choices": [
         {
           "text": {
             "A2": "Serve them kindly.",
             "B1": "Serve them kindly.",
-            "B2": "Serve them kindly."
+            "B2": "Serve them anyway, kindly."
           },
           "goto": 37
         },
         {
           "text": {
-            "A2": "Shoo them on.",
+            "A2": "Send them on.",
             "B1": "Shoo them on.",
             "B2": "Shoo them on."
           },
@@ -886,9 +886,9 @@
     {
       "id": 31,
       "text": {
-        "A2": "[stub] The first customers; how do you price the bowls?",
-        "B1": "[stub] The first customers; how do you price the bowls?",
-        "B2": "[stub] The first customers; how do you price the bowls?"
+        "A2": "The first real customers reach your counter, hungry and ready to pay. Now: what do you charge? Auntie has a price, fair and steady, that her regulars know. You could match it. You could go higher for the tourists. Or you could keep it low and sell more. The number you pick tonight is a kind of promise.",
+        "B1": "The first real customers reach the counter, hungry and ready to pay. So — what do you charge? Auntie has a price, fair and steady, that all her regulars know by heart. You could match it, go higher for the tourists who don't know better, or keep it low and hope to sell more. The number you pick tonight is a kind of promise.",
+        "B2": "The first real customers reach the counter, hungry and ready to hand over money. So — what do you charge them? Auntie has a price, fair and steady, that every one of her regulars knows by heart. You could match it exactly; you could go higher for the tourists, who won't know the difference; or you could keep it low and gamble on selling more. The number you settle on tonight is a kind of promise, and the market hears it."
       },
       "choices": [
         {
@@ -901,7 +901,7 @@
         },
         {
           "text": {
-            "A2": "Charge high for the tourists.",
+            "A2": "Charge high for tourists.",
             "B1": "Charge high for the tourists.",
             "B2": "Charge high for the tourists."
           },
@@ -917,9 +917,9 @@
         },
         {
           "text": {
-            "A2": "A nervous first big order.",
+            "A2": "A big order arrives.",
             "B1": "A nervous first big order.",
-            "B2": "A nervous first big order."
+            "B2": "A nervous first big order arrives."
           },
           "goto": 23
         }
@@ -928,9 +928,9 @@
     {
       "id": 32,
       "text": {
-        "A2": "[stub] A fair price it is.",
-        "B1": "[stub] A fair price it is.",
-        "B2": "[stub] A fair price it is."
+        "A2": "You set a fair price — not too high, not too low. It feels honest, and honest is easy to defend. The customers nod and pay. No one argues with fair. It may not make the most each bowl. But it keeps people coming back, and a busy stall beats a greedy one every time.",
+        "B1": "You set a fair price — not too high, not too low. It feels honest, and honest is easy to stand behind. The customers nod and pay without a fuss; no one argues with fair. It won't earn the most per bowl, but it keeps people coming back, and a busy stall beats a greedy one every single time.",
+        "B2": "You set a fair price — not too high, not too low, the price you'd want to pay yourself. It feels honest, and honest is an easy thing to stand behind at midnight. The customers nod and pay without a murmur; nobody ever argues with fair. It won't earn the most on any single bowl, but it keeps people coming back through the smoke, and a busy stall beats a greedy one every single time."
       },
       "choices": [
         {
@@ -945,7 +945,7 @@
           "text": {
             "A2": "A grumble anyway.",
             "B1": "A grumble anyway.",
-            "B2": "A grumble anyway."
+            "B2": "A grumble comes anyway."
           },
           "goto": 36
         }
@@ -954,9 +954,9 @@
     {
       "id": 33,
       "text": {
-        "A2": "[stub] You mark the price up.",
-        "B1": "[stub] You mark the price up.",
-        "B2": "[stub] You mark the price up."
+        "A2": "You mark the price up. The tourists won't know. And more money per bowl means fewer bowls to reach the fee. It is tempting tonight. But word moves fast in a market. If the regulars hear you are charging double, they will feel cheated. And a stall that cheats does not hold a corner for thirty years.",
+        "B1": "You mark the price up. The tourists won't know the difference, and more money per bowl means fewer bowls to reach the fee — tempting, on a night like this. But word travels fast down an arcade. If the regulars catch you charging double, they'll feel cheated, and a stall that cheats doesn't hold a corner for thirty years.",
+        "B2": "You mark the price up. The tourists won't know the difference, and more money on each bowl means fewer bowls to reach the fee — genuinely tempting, on a night as tight as this one. But word travels fast down a crowded arcade. If the regulars catch you charging double, they will feel quietly cheated, and a stall that cheats its regulars does not hold a corner for thirty years."
       },
       "choices": [
         {
@@ -980,9 +980,9 @@
     {
       "id": 34,
       "text": {
-        "A2": "[stub] Auntie's usual price, to the penny.",
-        "B1": "[stub] Auntie's usual price, to the penny.",
-        "B2": "[stub] Auntie's usual price, to the penny."
+        "A2": "You charge Auntie's usual price, to the penny. The first regular sees it, and something eases in his face. \"Same as always,\" he says, pleased. It tells them she is still here, in a way. The stall has not changed, even with her hand hurt. Sometimes the safest choice is also the right one.",
+        "B1": "You charge Auntie's usual price, to the exact penny. The first regular clocks it, and something eases in his face. \"Same as always,\" he says, pleased. It tells them, in a small way, that she's still here — that the stall hasn't changed, even with her hand hurt. Sometimes the safest choice is also simply the right one.",
+        "B2": "You charge Auntie's usual price, down to the exact penny. The first regular clocks it at once, and something visibly eases in his face. \"Same as always,\" he says, pleased. It tells them, in a small and wordless way, that she is still here — that the stall hasn't changed under new hands, even with hers hurt. Sometimes the safest choice turns out to be the right one as well."
       },
       "choices": [
         {
@@ -997,7 +997,7 @@
           "text": {
             "A2": "A regular smiles.",
             "B1": "A regular smiles.",
-            "B2": "A regular smiles."
+            "B2": "A regular smiles at you."
           },
           "goto": 37
         }
@@ -1006,14 +1006,14 @@
     {
       "id": 35,
       "text": {
-        "A2": "[stub] Serving the first bowls.",
-        "B1": "[stub] Serving the first bowls.",
-        "B2": "[stub] Serving the first bowls."
+        "A2": "You ladle the broth, drop in the dumplings, and pass the first bowls across the counter. Steam rises into the cold air. Hands take the bowls. Coins fall into your box. It is working. You are actually doing it. For a moment, over the noise, you feel a small, fierce spark of pride.",
+        "B1": "You ladle the broth, drop in the dumplings, and pass the first bowls across the counter. Steam climbs into the cold night air; hands take the bowls; coins drop into your box. It's working — you're actually doing it. And for a moment, over all the noise, you feel a small fierce spark of pride.",
+        "B2": "You ladle the broth, drop in the dumplings, and pass the first bowls across the counter into waiting hands. Steam climbs into the cold night air; coins drop into your box one after another. It's working. You are actually, genuinely doing it. And for a moment, over all the noise and smoke, you feel a small, fierce, unexpected spark of pride."
       },
       "choices": [
         {
           "text": {
-            "A2": "A customer praises it.",
+            "A2": "A customer loves it.",
             "B1": "A customer praises it.",
             "B2": "A customer praises it."
           },
@@ -1021,7 +1021,7 @@
         },
         {
           "text": {
-            "A2": "A customer finds it bland.",
+            "A2": "A customer says it's bland.",
             "B1": "A customer finds it bland.",
             "B2": "A customer finds it bland."
           },
@@ -1029,7 +1029,7 @@
         },
         {
           "text": {
-            "A2": "A child counts out coins.",
+            "A2": "A child counts coins.",
             "B1": "A child counts out coins.",
             "B2": "A child counts out coins."
           },
@@ -1040,16 +1040,16 @@
     {
       "id": 36,
       "text": {
-        "A2": "[stub] Someone grumbles about the price.",
-        "B1": "[stub] Someone grumbles about the price.",
-        "B2": "[stub] Someone grumbles about the price."
+        "A2": "Someone grumbles that the price is too high. Heads turn. A grumble at a stall can spread, or it can die, depending on what you do next. You can drop the price back to fair and keep the peace. Or you can hold firm and hope the food speaks louder than one loud voice.",
+        "B1": "Someone grumbles, loudly, that the price is too high. A few heads turn. A grumble at a stall can spread down the row or die on the spot, depending entirely on what you do next. You can drop it back to fair and keep the peace, or hold firm and trust the food to speak louder than one loud voice.",
+        "B2": "Someone grumbles, loudly enough for others to hear, that the price is too high. A few heads turn your way. A grumble at a stall can spread down the whole row or die on the spot, depending entirely on what you do in the next few seconds. You can drop it back to fair and keep the peace, or you can hold firm and trust the food to speak louder than one loud, complaining voice."
       },
       "choices": [
         {
           "text": {
             "A2": "Drop it back to fair.",
             "B1": "Drop it back to fair.",
-            "B2": "Drop it back to fair."
+            "B2": "Drop it back to a fair price."
           },
           "goto": 32
         },
@@ -1066,9 +1066,9 @@
     {
       "id": 37,
       "text": {
-        "A2": "[stub] A customer loves the broth.",
-        "B1": "[stub] A customer loves the broth.",
-        "B2": "[stub] A customer loves the broth."
+        "A2": "A customer takes one mouthful and stops. \"That's the real thing,\" he says. \"Just like hers.\" He says it loud. A few people hear, and drift closer to your counter. Good food is its own best seller. One happy mouth can pull a whole queue behind it.",
+        "B1": "A customer takes one mouthful and stops dead. \"That's the real thing,\" he says, surprised. \"Just like hers.\" He says it loud enough for others to hear, and a few people drift closer. Good food is its own best advertisement — one happy mouth can pull a whole queue in behind it.",
+        "B2": "A customer takes one mouthful and stops dead, eyebrows up. \"That's the real thing,\" he says, genuinely surprised. \"Just like hers.\" He says it loud enough for the people around him to hear, and a few of them drift closer to your counter. Good food is its own best advertisement — one happy mouth, at the right moment, can pull a whole queue in behind it."
       },
       "choices": [
         {
@@ -1092,9 +1092,9 @@
     {
       "id": 38,
       "text": {
-        "A2": "[stub] A customer says it's bland.",
-        "B1": "[stub] A customer says it's bland.",
-        "B2": "[stub] A customer says it's bland."
+        "A2": "A customer frowns into the bowl. \"It's a bit flat,\" they say. \"Not like usual.\" Maybe it's the cheap stock. Maybe your hand with the ginger. Either way, it stings to hear. You can fix the seasoning now, before the next bowl. Or you can let it go and hope the rush hides it.",
+        "B1": "A customer frowns down into the bowl. \"It's a bit flat,\" they say. \"Not like the usual.\" Maybe it's the cheap stock; maybe it's your hand with the ginger. Either way, it stings to hear on your first night. You can fix the seasoning now, before the next bowl, or let it go and hope the rush covers it.",
+        "B2": "A customer frowns down into the bowl, unconvinced. \"It's a bit flat,\" they say. \"Not like the usual.\" Maybe it's the cheap stock talking; maybe it's your own unsteady hand with the ginger. Either way, it stings to hear on your first night alone. You can fix the seasoning right now, before the next bowl goes out, or you can let it slide and hope the rush covers it."
       },
       "choices": [
         {
@@ -1118,16 +1118,16 @@
     {
       "id": 39,
       "text": {
-        "A2": "[stub] The first takings in the box.",
-        "B1": "[stub] The first takings in the box.",
-        "B2": "[stub] The first takings in the box."
+        "A2": "You glance at the money box between orders. There are coins in it now — real ones, earned by your own hands. It is not much yet, not against that fee. But it is a start, and a start is more than you had an hour ago. You close the lid and turn back to the steam and the crowd.",
+        "B1": "Between orders, you steal a glance at the money box. There are coins in it now — real ones, earned by your own two hands. It's nowhere near the fee, not yet, but it's a start, and a start is a great deal more than you had an hour ago. You shut the lid and turn back to the steam and the crowd.",
+        "B2": "Between orders, you steal a quick glance into the money box. There are coins in it now — real ones, earned by your own two hands in your own first hour. It's nowhere near the fee, not yet, not remotely. But it's a start, and a start is a great deal more than you had when the lanterns first went up. You shut the lid and turn back to the steam and the noise and the endless waiting faces."
       },
       "choices": [
         {
           "text": {
             "A2": "Count so far.",
             "B1": "Count so far.",
-            "B2": "Count so far."
+            "B2": "Count what you have so far."
           },
           "goto": 40
         },
@@ -1144,16 +1144,16 @@
     {
       "id": 40,
       "text": {
-        "A2": "[stub] A start — a long way to the fee.",
-        "B1": "[stub] A start — a long way to the fee.",
-        "B2": "[stub] A start — a long way to the fee."
+        "A2": "You count quickly. It's a start — but only a start. At this rate, you will not reach the fee by dawn. You need the rush, and you need it soon: the big midnight crowd, hungry and quick to spend. Everything now depends on the next few hours. You breathe, and get ready.",
+        "B1": "You count quickly, under the counter. It's a start — but only a start. At this rate you won't reach the fee by dawn; you need the rush, and you need it to be a good one. The big midnight crowd, hungry and quick to spend, is what makes or breaks a night like this. Everything now rides on the next few hours.",
+        "B2": "You count quickly, under the lip of the counter. It's a start — but only a start, and a modest one. At this rate you won't come close to the fee by dawn; you need the rush, and you need it to be a good one. The big midnight crowd, hungry and quick to spend and forgiving of a queue, is what makes or breaks a night like this. Everything now rides on the next few hours, and you know it."
       },
       "choices": [
         {
           "text": {
             "A2": "Into the rush.",
             "B1": "Into the rush.",
-            "B2": "Into the rush."
+            "B2": "On into the rush."
           },
           "goto": 41
         },
@@ -1161,7 +1161,7 @@
           "text": {
             "A2": "A word with the tea woman.",
             "B1": "A word with the tea woman.",
-            "B2": "A word with the tea woman."
+            "B2": "A quick word with the tea woman."
           },
           "goto": 9
         }
@@ -1170,30 +1170,30 @@
     {
       "id": 41,
       "text": {
-        "A2": "[stub] The crowd builds; the rush begins.",
-        "B1": "[stub] The crowd builds; the rush begins.",
-        "B2": "[stub] The crowd builds; the rush begins."
+        "A2": "And then the crowd comes. Not a trickle now but a wave: office workers, families, night workers, all pouring in at once. The noise doubles. Ten faces wait at your counter, then twenty. Orders fly at you from every side. This is the rush. This is the night. Here it is.",
+        "B1": "And then the crowd comes — not a trickle now but a wave. Office workers, families, night-shift workers, all pouring into the arcade at once, and the noise doubles. Ten faces wait at your counter, then twenty. Orders come flying at you from every side. This is the rush. This is the night. Here it comes.",
+        "B2": "And then the crowd comes — not a trickle any more but a wave. Office workers, families, night-shift workers off the late trains, all pouring into the arcade at once, and the noise simply doubles. Ten faces wait at your counter, then twenty, then more than you can count. Orders come flying at you from every side at once. This is the rush. This is the whole night, arriving all together. Here it comes."
       },
       "choices": [
         {
           "text": {
             "A2": "Meet the rush.",
             "B1": "Meet the rush.",
-            "B2": "Meet the rush."
+            "B2": "Meet the rush head-on."
           },
           "goto": 42
         },
         {
           "text": {
-            "A2": "The arcade packs in.",
+            "A2": "The arcade fills up.",
             "B1": "The arcade packs in.",
-            "B2": "The arcade packs in."
+            "B2": "The arcade packs in tight."
           },
           "goto": 43
         },
         {
           "text": {
-            "A2": "Orders shouted from all sides.",
+            "A2": "Orders from all sides.",
             "B1": "Orders shouted from all sides.",
             "B2": "Orders shouted from all sides."
           },
