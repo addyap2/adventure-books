@@ -8,7 +8,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://adventure-books-five.vercel.app/b/the-address">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="English Adventures">
+<meta property="og:site_name" content="English Reading Adventures">
 <meta property="og:url" content="https://adventure-books-five.vercel.app/b/the-address">
 <meta property="og:title" content="The Address — an English adventure">
 <meta property="og:description" content="You arrive at night in a city you don't know. A story where you are the hero — for people learning English, at three levels, with meaning in eight languages.">
@@ -203,7 +203,7 @@
 <body>
 
 <header class="bar">
-  <a class="brand" href="/" style="text-decoration:none;color:inherit"><span class="mark" aria-hidden="true"></span>English Adventures</a>
+  <a class="brand" href="/" style="text-decoration:none;color:inherit"><span class="mark" aria-hidden="true"></span>English Reading Adventures</a>
   <span class="globe">8 languages · A2 · B1 · B2</span>
   <a class="ghost" href="/read.html?book=episode-01.json" target="_blank" rel="noopener noreferrer">Begin</a>
 </header>
@@ -377,9 +377,9 @@
   <section class="beat series" id="more">
     <div class="wrap">
       <div class="snum reveal">&sect;&nbsp;<b>03</b></div>
-      <p class="klabel reveal d1">English Adventures</p>
+      <p class="klabel reveal d1">English Reading Adventures</p>
       <h2 class="statement reveal d1">A standalone story. <em>One of many.</em></h2>
-      <p class="body reveal d2">Every English Adventures book is its own world &mdash; its own night, its own look, read on its own. When you&rsquo;ve found your way through this one, another is waiting in the library.</p>
+      <p class="body reveal d2">Every English Reading Adventures book is its own world &mdash; its own night, its own look, read on its own. When you&rsquo;ve found your way through this one, another is waiting in the library.</p>
       <div class="actions reveal d2" style="margin-top:28px">
         <a class="libbtn" href="/">Browse the library <span aria-hidden="true">&rarr;</span></a>
       </div>
@@ -395,7 +395,7 @@
         <a class="cta" href="/read.html?book=episode-01.json" target="_blank" rel="noopener noreferrer">Begin your arrival <span aria-hidden="true">&rarr;</span></a>
         <a class="textlink" href="/read.html" target="_blank" rel="noopener noreferrer">Choose language &amp; level</a>
       </div>
-      <p class="footline reveal d2"><b>English Adventures</b> by Antony Addy &nbsp;·&nbsp; An English Reading Adventure</p>
+      <p class="footline reveal d2"><b>English Reading Adventures</b> by Antony Addy &nbsp;·&nbsp; An English Reading Adventure</p>
     </div>
   </section>
 </main>
@@ -442,7 +442,7 @@
       var id=book.identity||{}, pal=id.palette||{}, hero=id.hero||{};
       var map={ground:'--ink',surface:'--card',ink:'--fg',muted:'--muted',line:'--line',accent:'--amber',accentHot:'--amber-hot',secondary:'--dawn'};
       for(var k in map){ if(pal[k]) root.style.setProperty(map[k],pal[k]); }
-      document.title = book.title + ' — English Adventures';
+      document.title = book.title + ' — English Reading Adventures';
       var can=document.querySelector('link[rel=canonical]');
       if(can) can.href='https://adventure-books-five.vercel.app/b/'+(book.slug||ep.slug);
       var eb=document.querySelector('.eyebrow'); if(eb) eb.textContent='An English Adventure';
