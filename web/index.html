@@ -135,7 +135,7 @@
     border-radius:99px; padding:7px 14px; font:inherit; font-size:13px; cursor:pointer; }
   .meaning button:hover { border-color:var(--accent); color:var(--accent); }
   .meaning .mtext { margin-top:10px; padding:12px 14px; border-radius:12px;
-    background:var(--gloss); border:1px solid var(--line); font-size:14.5px; line-height:1.5; }
+    background:var(--card); color:var(--fg); border:1px solid var(--line); font-size:14.5px; line-height:1.5; }
   .meaning .mtext[dir=rtl] { text-align:right; }
 
   /* the classic gamebook prompt before the options */
@@ -240,8 +240,10 @@
   .empty { color:var(--muted); font-family:ui-sans-serif,system-ui,sans-serif; text-align:center; padding:30px; }
 
   /* ---- gloss sheet ---- */
+  /* surface + ink derive from the book's own palette so the popup is legible in every
+     book (a light-palette book kept dark text on a dark default gloss otherwise) */
   .gloss { position:fixed; left:50%; bottom:16px; transform:translateX(-50%) translateY(14px);
-    width:min(32rem,92vw); background:var(--gloss); border:1px solid var(--line);
+    width:min(32rem,92vw); background:var(--card); color:var(--fg); border:1px solid var(--line);
     border-radius:16px; padding:16px 18px; box-shadow:var(--shadow);
     font-family:ui-sans-serif,system-ui,sans-serif; opacity:0; pointer-events:none; z-index:40;
     transition:opacity .18s, transform .18s; }
@@ -369,11 +371,15 @@
   .cover .art { display:none; }               /* drop the placeholder box */
   .cover .body { border-top:none; background:transparent; padding:52px 26px 30px; }
   .cover .kicker { color:var(--accent); }
+  /* cover text uses the book's OWN ink tokens, so a light-palette book (e.g. the bright
+     high-noon world) stays legible under the default dark theme; dark books keep their
+     near-white ink. The [data-theme="light"] block below still handles paper mode. */
   .cover h1 { font-size:clamp(34px,10vw,46px); font-weight:300; font-style:italic;
-    line-height:1.02; letter-spacing:-.015em; color:#F6F1E7; margin:0 0 10px; }
+    line-height:1.02; letter-spacing:-.015em; color:var(--fg); margin:0 0 10px; }
   .cover .tagline { color:var(--accent-2); font-size:17px; }
-  .cover p { color:#c3cad9; }
-  .cover .chips span { background:rgba(255,255,255,.05); border:1px solid var(--line); color:#cfd4e2; }
+  .cover p { color:color-mix(in srgb, var(--fg) 82%, transparent); }
+  .cover .chips span { background:color-mix(in srgb, var(--fg) 7%, transparent);
+    border:1px solid var(--line); color:var(--fg); }
   .start { background:var(--accent); color:#12101a; font-family:var(--grot); font-weight:600;
     box-shadow:0 12px 40px -8px color-mix(in srgb, var(--accent) 55%, transparent); }
 
