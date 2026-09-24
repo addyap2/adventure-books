@@ -88,6 +88,24 @@ function candlelightScene(c) {
   <g transform="translate(320,0)"><ellipse cx="300" cy="556" rx="46" ry="7" fill="#000" opacity=".3"/><path d="M300 502 C313 504 319 515 321 529 L327 556 L273 556 L279 529 C281 515 287 504 300 502 Z" fill="#060b14"/><circle cx="300" cy="493" r="10" fill="#060b14"/><path d="M289 490 q11 -9 22 0 z" fill="#060b14"/></g>`;
 }
 
+function highsunScene(c) {
+  // a desert road at high noon: a bleached sky, a low sand ridge, a heat-shimmer
+  // over the flats, a stalled bus and a lone figure by the road, a white sun.
+  return `
+  <circle cx="1015" cy="118" r="122" fill="${c.secondary}" opacity="0.18"/>
+  <circle cx="1015" cy="118" r="52" fill="#FFFFFF" opacity="0.92"/>
+  <circle cx="1015" cy="118" r="52" fill="none" stroke="${c.secondary}" stroke-width="2" opacity="0.5"/>
+  <path d="M540 322 L700 264 L820 300 L960 250 L1090 296 L1200 260 L1200 360 L540 360 Z" fill="${c.secondary}" opacity="0.26"/>
+  <path d="M540 322 L700 264 L820 300 L960 250 L1090 296 L1200 260" fill="none" stroke="${c.muted}" stroke-width="2" opacity="0.55"/>
+  <rect x="0" y="452" width="1200" height="178" fill="${c.surface}"/>
+  <rect x="0" y="452" width="1200" height="178" fill="${c.secondary}" opacity="0.12"/>
+  <g stroke="${c.secondary}" stroke-width="3" fill="none" opacity="0.4"><path d="M600 372 q28 -9 56 0 t56 0 t56 0 t56 0 t56 0"/><path d="M650 402 q28 -9 56 0 t56 0 t56 0 t56 0"/></g>
+  <path d="M700 630 L1006 452 M1200 604 L1064 452" fill="none" stroke="${c.muted}" stroke-width="3" opacity="0.4"/>
+  <g stroke="${c.accent}" stroke-width="5" opacity="0.5"><path d="M1024 470 l-8 22"/><path d="M1002 516 l-12 32"/><path d="M968 574 l-18 46"/></g>
+  <g transform="translate(818,450)"><rect x="0" y="0" width="150" height="64" rx="8" fill="${c.ink}" opacity="0.82"/><rect x="12" y="12" width="128" height="24" rx="3" fill="${c.surface}"/><circle cx="34" cy="74" r="12" fill="${c.ink}" opacity="0.82"/><circle cx="118" cy="74" r="12" fill="${c.ink}" opacity="0.82"/></g>
+  <g transform="translate(780,0)"><ellipse cx="300" cy="560" rx="42" ry="7" fill="#000" opacity=".14"/><path d="M300 506 C312 508 318 519 320 533 L326 560 L274 560 L280 533 C282 519 288 508 300 506 Z" fill="${c.ink}" opacity="0.82"/><circle cx="300" cy="497" r="10" fill="${c.ink}" opacity="0.82"/></g>`;
+}
+
 function ogHTML(book) {
   const p = (book.identity && book.identity.palette) || {};
   const ground = p.ground || "#0E1320", surface = p.surface || "#121a2c",
@@ -96,11 +114,14 @@ function ogHTML(book) {
         muted = p.muted || "#8A93A6";
   const c = { ground, surface, ink, accent, accentHot, secondary, muted };
   const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
-  const scene = kind === "daybreak" ? daybreakScene(c)
+  const scene = kind === "highsun" ? highsunScene(c)
+              : kind === "daybreak" ? daybreakScene(c)
               : kind === "lantern" ? lanternScene(c)
               : kind === "candlelight" ? candlelightScene(c)
               : nocturneScene(c);
-  const skyStops = kind === "daybreak"
+  const skyStops = kind === "highsun"
+    ? `<stop offset="0" stop-color="#D8E4EA"/><stop offset="0.5" stop-color="#ECE0C6"/><stop offset="1" stop-color="${surface}"/>`
+    : kind === "daybreak"
     ? `<stop offset="0" stop-color="#AAB7BF"/><stop offset="0.5" stop-color="#6F838D"/><stop offset="1" stop-color="${surface}"/>`
     : `<stop offset="0" stop-color="${ground}"/><stop offset="0.72" stop-color="${surface}"/><stop offset="1" stop-color="${surface}"/>`;
   const line = (book.identity && book.identity.hero && book.identity.hero.line && book.identity.hero.line.en) || book.blurb || "";
@@ -119,7 +140,7 @@ function ogHTML(book) {
     <radialGradient id="glow" cx="50%" cy="50%" r="50%">
       <stop offset="0" stop-color="${accentHot}" stop-opacity="0.85"/><stop offset="0.42" stop-color="${accent}" stop-opacity="0.3"/><stop offset="1" stop-color="${accent}" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="vig" cx="50%" cy="42%" r="80%"><stop offset="0.5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.4"/></radialGradient>
+    <radialGradient id="vig" cx="50%" cy="42%" r="80%"><stop offset="0.5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="${kind === "highsun" ? "0.16" : "0.4"}"/></radialGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#sky)"/>
   ${scene}
@@ -127,7 +148,7 @@ function ogHTML(book) {
   <rect width="720" height="630" fill="url(#scrim)"/>
   <text x="72" y="250" font-family="ui-monospace, Menlo, monospace" font-size="17" letter-spacing="5" fill="${accent}">AN INTERACTIVE STORY</text>
   <text x="68" y="360" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="${titleSize}" fill="${ink}">${esc(title)}</text>
-  <text x="72" y="416" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="26" fill="#cdd4e2">${esc(line)}</text>
+  <text x="72" y="416" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="26" fill="${kind === "highsun" ? muted : "#cdd4e2"}">${esc(line)}</text>
   <line x1="74" y1="452" x2="330" y2="452" stroke="${accent}" stroke-width="1.5" opacity=".65"/>
   <text x="72" y="486" font-family="ui-monospace, Menlo, monospace" font-size="13.5" letter-spacing="3" fill="${muted}">FOR ENGLISH LEARNERS &#183; ${esc(levels)} &#183; 8 LANGUAGES</text>
 </svg></body></html>`;
@@ -145,11 +166,14 @@ function coverHTML(book) {
         muted = p.muted || "#8A93A6", line = p.line || "#26304a";
   const c = { ground, surface, ink, accent, accentHot, secondary, muted, line };
   const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
-  const scene = kind === "daybreak" ? daybreakScene(c)
+  const scene = kind === "highsun" ? highsunScene(c)
+              : kind === "daybreak" ? daybreakScene(c)
               : kind === "lantern" ? lanternScene(c)
               : kind === "candlelight" ? candlelightScene(c)
               : nocturneScene(c);
-  const skyStops = kind === "daybreak"
+  const skyStops = kind === "highsun"
+    ? `<stop offset="0" stop-color="#D8E4EA"/><stop offset="0.5" stop-color="#ECE0C6"/><stop offset="1" stop-color="${surface}"/>`
+    : kind === "daybreak"
     ? `<stop offset="0" stop-color="#AAB7BF"/><stop offset="0.5" stop-color="#6F838D"/><stop offset="1" stop-color="${surface}"/>`
     : `<stop offset="0" stop-color="${ground}"/><stop offset="0.72" stop-color="${surface}"/><stop offset="1" stop-color="${surface}"/>`;
   return `<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:${ground}}svg{display:block}</style></head><body>
@@ -157,7 +181,7 @@ function coverHTML(book) {
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">${skyStops}</linearGradient>
     <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="${accentHot}" stop-opacity="0.85"/><stop offset="0.42" stop-color="${accent}" stop-opacity="0.3"/><stop offset="1" stop-color="${accent}" stop-opacity="0"/></radialGradient>
-    <radialGradient id="vig" cx="50%" cy="42%" r="80%"><stop offset="0.5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.4"/></radialGradient>
+    <radialGradient id="vig" cx="50%" cy="42%" r="80%"><stop offset="0.5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="${kind === "highsun" ? "0.16" : "0.4"}"/></radialGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#sky)"/>
   ${scene}
