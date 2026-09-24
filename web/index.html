@@ -342,8 +342,11 @@
   .choices button .goto::before { content:"§ "; opacity:.55; }
   .progress { box-shadow:0 0 10px color-mix(in srgb, var(--accent) 72%, transparent); }
 
-  /* reading surface: a lifted ink card, calm and high-contrast */
-  .para { color:#EAE6DC; }
+  /* reading surface: a lifted ink card, calm and high-contrast.
+     Use the book's --fg (its own ink) so a light-palette book — e.g. a bright
+     daytime world — stays legible under a dark OS scheme; for the dark books
+     --fg is their near-white ink, so this is imperceptible. */
+  .para { color:var(--fg); }
   .meaning button:hover { color:var(--accent); border-color:var(--accent); }
 
   /* ---- the cinematic cover (typographic nocturne, no figurative art) ---- */
