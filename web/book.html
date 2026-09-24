@@ -77,6 +77,24 @@
   .stage{background:linear-gradient(#070a14 0%,#0d1428 42%,#152142 76%,#26314e 100%)}
   #gl{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:6;pointer-events:none}
 
+  /* the book's own generated image, used as the main hero once per story. When present it
+     replaces the shared procedural nocturne; a bottom scrim keeps the hero copy legible. */
+  #art{background-size:cover;background-position:center;background-repeat:no-repeat;
+    z-index:5;opacity:0;transition:opacity .8s ease}
+  .stage.has-art #art{opacity:1}
+  .stage.has-art #gl,.stage.has-art #stars,.stage.has-art #towers,.stage.has-art #town,
+  .stage.has-art #fog,.stage.has-art #river,.stage.has-art #embank,
+  .stage.has-art #figure,.stage.has-art #haze{display:none!important}
+  /* Covers vary from night-dark to noon-bright, but the header and hero copy are always
+     white — so darken the top (behind the nav) and bottom (behind the copy) and lay a mild
+     overall tint, keeping every cover legible and on-brand without hiding the art. */
+  .stage.has-art::after{content:"";position:absolute;inset:0;z-index:6;pointer-events:none;
+    background:
+      linear-gradient(rgba(6,9,20,.20),rgba(6,9,20,.20)),
+      linear-gradient(to bottom,
+        rgba(6,9,20,.62) 0%, rgba(6,9,20,.14) 15%, rgba(6,9,20,0) 34%,
+        rgba(6,9,20,0) 46%, rgba(6,9,20,.46) 72%, rgba(6,9,20,.88) 100%)}
+
   /* the single lit window + its breathing glow (the brand's north star) */
   .win{fill:var(--amber-hot)}
   .glow{transform-origin:center;transform-box:fill-box}
@@ -213,6 +231,7 @@
   <section class="stage" id="stage" aria-label="The arrival">
     <canvas id="gl" aria-hidden="true"></canvas>
     <div class="layer" id="sky" data-depth="0.02" aria-hidden="true"></div>
+    <div class="layer" id="art" data-depth="0.05" aria-hidden="true"></div>
 
     <div class="layer" id="stars" data-depth="0.06" aria-hidden="true">
       <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
@@ -445,6 +464,20 @@
       document.title = book.title + ' — English Reading Adventures';
       var can=document.querySelector('link[rel=canonical]');
       if(can) can.href='https://adventure-books-five.vercel.app/b/'+(book.slug||ep.slug);
+      // use this book's own generated image as the main hero, once. Probe first (awaited,
+      // before boot() picks the scene) so a book without a cover falls back to the shared
+      // procedural nocturne instead of a blank stage.
+      var stageEl=document.getElementById('stage'), artEl=document.getElementById('art');
+      var coverUrl='/cover-'+(book.slug||ep.slug)+'.png';
+      if(stageEl && artEl){
+        await new Promise(function(res){
+          var probe=new Image(), done=false, fin=function(ok){ if(done) return; done=true;
+            if(ok){ artEl.style.backgroundImage='url("'+coverUrl+'")'; stageEl.classList.add('has-art'); } res(); };
+          probe.onload=function(){ fin(true); }; probe.onerror=function(){ fin(false); };
+          setTimeout(function(){ fin(false); }, 2500);   // don't hang the hero on a slow image
+          probe.src=coverUrl;
+        });
+      }
       var eb=document.querySelector('.eyebrow'); if(eb) eb.textContent='An Interactive Story';
       var sub=document.querySelector('.sub'); if(sub && hero.sub) sub.textContent=hero.sub;
       var readHref='/read.html?book='+encodeURIComponent(ep.file);
@@ -706,6 +739,9 @@
 
   function boot(){
     onScroll();
+    // when the book supplies its own hero image, skip the procedural/WebGL scene entirely
+    // and just run the light parallax loop so the still image drifts subtly with the cursor.
+    if(stage && stage.classList.contains('has-art')){ if(!reduce) requestAnimationFrame(frame); return; }
     var glOK=false;
     if(!reduce && window.THREE){ try{ glOK=initGL(); }catch(e){ glOK=false; } }
     if(glOK){
