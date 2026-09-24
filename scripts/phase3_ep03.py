@@ -253,6 +253,329 @@ P(68,
    t("Go into the shop.", "Into the shop.", "Into the shop.")])
 
 
+# ============================ ACT II — INTO THE DARK TOWN ==================
+
+P(21,
+  t("Now the way to Ada. Two ways lead up the hill. The road is long, but it is solid under the snow. The river is frozen, and crossing the ice would be much shorter. But ice can lie. Down by the river you also see the van man's lights, and a crowd around them.",
+    "Now for the way to Ada. Two ways lead up the hill: the long road, solid under the snow, or the frozen river, which would cut the journey in half. But ice can lie. Down by the water you also see the van man's headlights, and a crowd gathered round them.",
+    "Now for the way up to Ada. Two ways climb the hill: the long road, solid enough under the snow, or the frozen river, which would cut the journey clean in half. But ice can lie, and lie well. Down by the water you can also see the van man's headlights, and a restless crowd gathered around them."),
+  [t("Take the road.", "Take the road.", "Take the road."),
+   t("Cross the river ice.", "Cross the river ice.", "Cross the river ice."),
+   t("The van man's lights.", "The van man's lights ahead.", "The van man's lights ahead.")])
+
+P(26,
+  t("You take the road. It is long, and it winds up the hill in the dark. But the ground is solid under the snow, and that matters tonight. Your feet crunch. Your breath smokes. The town is silent all around you, holding its cold breath, waiting for the light.",
+    "You take the road. It's long, winding up the hill in the dark, but the ground is solid under the snow, and tonight that matters more than speed. Your feet crunch; your breath smokes. The whole town is silent around you, holding its cold breath, waiting for the light to return.",
+    "You take the road. It's long, and it winds up the hill in the dark, but the ground is solid under the snow, and tonight that matters far more than speed. Your feet crunch; your breath smokes in the torchlight. The whole town lies silent around you, holding its cold breath, waiting for the light to return at dawn."),
+  [t("Press on.", "Press on.", "Press on."),
+   t("Someone is stuck ahead.", "Someone's stuck ahead.", "Someone's stuck ahead."),
+   t("The town, dark and still.", "The whole town, dark and quiet.", "The whole town, dark and quiet.")])
+
+P(27,
+  t("The frozen river runs at the foot of the hill. Cross it, and you save a lot of time. The ice looks thick and white. But Mr Okafor warned you: it looks strong, but it isn't. Under the ice is black, cold water. Time, or safety. You cannot have both.",
+    "The frozen river lies at the foot of the hill. Cross it, and you'd save a great deal of time. The ice looks thick and white and solid. But Okafor warned you: it looks strong, and it isn't. Under it runs black, freezing water. Time or safety — you can't have both tonight.",
+    "The frozen river lies at the foot of the hill. Cross it, and you'd save a great deal of precious time. The ice looks thick, and white, and solid enough to trust. But Okafor warned you plainly: it looks strong, and it isn't. Under it runs black, freezing water. Time, or safety — you can't have both of them tonight."),
+  [t("Risk the ice.", "Risk the ice.", "Risk the ice."),
+   t("Too dangerous. The road.", "Too dangerous — back to the road.", "Too dangerous — back to the road.")])
+
+P(28,
+  t("You step out onto the ice. It holds. You take another step, and another. The black water waits below you. Every step is a small bet with your life. The far bank is not far now. But the ice makes small sounds under your boots, and you do not like them.",
+    "You step out onto the ice, and it holds. Another step, and another. The black water waits somewhere below you. Every step is a small bet with your own life. The far bank isn't far now — but the ice makes small sounds under your boots, and you don't like them at all.",
+    "You step out onto the ice, and it holds your weight. Another step, and another. The black water waits somewhere below you, patient. Every single step is a small bet made with your own life. The far bank isn't far now — but the ice keeps making small sounds under your boots, and you don't like a single one of them."),
+  [t("Edge across.", "Edge across.", "Edge across."),
+   t("The ice groans.", "The ice groans.", "The ice groans.")])
+
+P(30,
+  t("You climb the road in the deep dark. The cold gets harder every hour. Your face hurts with it. Ahead, at a black window, a family stands shivering, wrapped in every coat they own. And still the hill goes up, and up, toward Ada.",
+    "You climb the road through the deep dark, and the cold grows harder every hour, until your face aches with it. Ahead, at a black window, a family stands shivering, wrapped in every coat they own. And still the hill climbs on, up and up, toward Ada.",
+    "You climb the road through the deep dark, and the cold grows harder with every hour that passes, until your face aches with it. Ahead, at a black window, a whole family stands shivering, wrapped in every coat they own. And still the hill climbs on, up and up and up, toward Ada at the top."),
+  [t("A shivering family.", "A family shivering at a dark window.", "A family shivering at a dark window."),
+   t("Press on.", "Press on.", "Press on."),
+   t("You can see your breath.", "You can see your breath.", "You can see your breath."),
+   t("A buried signpost.", "A signpost, half-buried in snow.", "A signpost, half-buried in snow.")])
+
+P(31,
+  t("A car sits stuck in the snow, its wheels spinning. An old man is at the wheel, alone, his face grey. He cannot go forward or back. If you stop to push, you lose time you may not have. If you don't, he may sit here in the cold all night.",
+    "A car sits stuck in the snow, wheels spinning uselessly. An old man is at the wheel, alone, his face grey with cold. He can't go forward or back. Stop to push, and you lose time you may not have; leave him, and he could sit out here in the cold all night.",
+    "A car sits stuck fast in the snow, its wheels spinning uselessly. An old man is at the wheel, alone, his face grey with the cold. He can't go forward and he can't go back. Stop to push, and you lose time you may not have to spare; leave him, and he could sit out here in the freezing dark all night long."),
+  [t("Help push it clear.", "Help push it clear.", "Help push it clear."),
+   t("You can't stop. Ada.", "You can't stop — Ada.", "You can't stop — Ada.")])
+
+P(32,
+  t("Inside a cold, dark house, a family sits close together. A baby cries and cries. There is no heat here, and no light but one candle. The mother looks at you with wide, tired eyes. You have a blanket for Ada. You have only the one.",
+    "Inside a cold, dark house, a family sits huddled together. A baby cries and cries. There's no heat here, and no light but a single candle. The mother looks at you with wide, tired eyes. You have a blanket meant for Ada — and you have only the one.",
+    "Inside a cold, dark house, a whole family sits huddled together for warmth. A baby cries, and cries, and won't stop. There's no heat in the place, and no light but a single guttering candle. The mother looks up at you with wide, exhausted eyes. You have a blanket, meant for Ada — and you have only the one."),
+  [t("Give them your blanket.", "Give them your blanket.", "Give them your blanket."),
+   t("Promise to send help.", "Promise to send help.", "Promise to send help."),
+   t("Try to warm the room.", "Try to warm the room.", "Try to warm the room.")])
+
+P(33,
+  t("You go on, up toward the hill. The dark is thick. Your torch throws one small circle of light on the snow. There is the van man's van, off to one side. There is the strange light in the old house, high up. And there is the last hard climb to Ada's door.",
+    "You go on, up toward the hill. The dark is thick, and your torch throws one small circle of light onto the snow. Off to one side sits the van man's van. High up burns that strange light in the old house. And ahead lies the last hard climb to Ada's door.",
+    "You press on, up toward the hill. The dark is thick and close, and your torch throws one small circle of light onto the snow ahead. Off to one side sits the van man's van; high up on the hill burns that strange, unexplained light in the old house; and ahead of you lies the last hard climb to Ada's door."),
+  [t("The van man again.", "The van man again.", "The van man again."),
+   t("The Harrow light.", "The Harrow light.", "The Harrow light."),
+   t("The last stretch.", "The last stretch.", "The last stretch."),
+   t("The cold makes you doubt.", "The cold makes you doubt.", "The cold makes you doubt.")])
+
+P(34,
+  t("You put your shoulder to the car and push. Your boots slip. Then, slowly, the wheels grip, and the car pulls free. The old man winds down his window. \"Bless you,\" he says, and pushes a warm flask into your hands. \"Now get where you're going, quick.\"",
+    "You put your shoulder to the car and push. Your boots slip on the ice; then, slowly, the wheels grip and the car pulls free. The old man winds down his window. \"Bless you,\" he says, pressing a warm flask into your hands. \"Now get where you're going, and quick.\"",
+    "You put your shoulder to the back of the car and push with everything you have. Your boots slip on the ice; then, slowly, the wheels find their grip and the car pulls free. The old man winds down his window. \"Bless you,\" he says, pressing a warm flask into your hands. \"Now get where you're going, and be quick about it.\""),
+  [t("On your way.", "On your way.", "On your way."),
+   t("He tells you of the hill.", "He tells you of the hill.", "He tells you of the hill.")])
+
+P(35,
+  t("You promise the family you will send help, and you mean it. But a promise is not heat, and the baby is still crying as you close the door. You feel the weight of it as you walk on. You can only be in one place at a time, tonight of all nights.",
+    "You promise the family you'll send help, and you mean it. But a promise isn't heat, and the baby is still crying as you close the door behind you. You feel the weight of that as you walk on. You can only be in one place at a time, tonight of all nights.",
+    "You promise the family you'll send help, and you mean every word of it — but a promise isn't heat, and the baby is still crying as you close the door softly behind you. You feel the whole weight of that as you walk on into the dark. You can only be in one place at a time, tonight of all nights."),
+  [t("Rally the street.", "Rally the street.", "Rally the street."),
+   t("On toward the hill.", "On toward the hill.", "On toward the hill.")])
+
+P(38,
+  t("The cold gets into your head as well as your bones. A small voice says: go home. Sit by a candle. Nobody would blame you. It would be so easy. Then you think of Ada's face, and the voice goes quiet. You are not going home. Not tonight.",
+    "The cold works into your head as well as your bones. A small voice says: go home, sit by a candle, nobody would blame you. It would be so easy. Then you think of Ada's face, and the voice goes quiet. You are not going home tonight.",
+    "The cold works its way into your head as well as your bones. A small, reasonable voice says: go home, sit by a candle, nobody on earth would blame you. It would be so easy to listen to it. Then you think of Ada's face, and the small voice goes quiet. You are not going home tonight, and that's the end of it."),
+  [t("The last stretch.", "The last stretch.", "The last stretch."),
+   t("The van man's lights.", "The van man's lights.", "The van man's lights.")])
+
+P(39,
+  t("A signpost stands half-buried in snow. You brush the snow away to read it. One arrow points along the road. One points up a path toward the hill. It leads to the old Harrow house, where the light still burns. Which way, in the dark?",
+    "A signpost stands half-buried in snow. You brush it clear to read it. One arrow points along the road; the other up a path toward the hill, and the old Harrow house, where that light still burns. Which way, in the dark?",
+    "A signpost stands half-buried in the snow. You brush it clear enough to read. One arrow points along the winding road; the other up a steeper path toward the hill, and the old Harrow house, where that unexplained light is still burning. Two ways up, and no one to tell you which. Which way, then, in the dark?"),
+  [t("The road.", "The road.", "The road."),
+   t("The light on the hill.", "The light on the hill.", "The light on the hill.")])
+
+P(50,
+  t("You are halfway across the ice now. The far bank is close — you can almost touch it. Just a few more steps. The black water is under your feet, but you try not to think of it. Slow and steady. Nearly there. Nearly—",
+    "You're halfway across the ice now, and the far bank is close — you could almost touch it. Just a few more careful steps. The black water is right under your feet, but you try not to think about that. Slow and steady. Nearly there. Nearly—",
+    "You're halfway across the ice now, and the far bank is close enough that you could almost reach out and touch it. Just a few more careful steps. The black water waits right under your feet, but you try very hard not to think about that. Slow and steady. Nearly there now. Nearly—"),
+  [t("Nearly there.", "Nearly there.", "Nearly there."),
+   t("The ice cracks.", "The ice cracks.", "The ice cracks.")])
+
+P(51,
+  t("A sound like a gunshot cracks the night. The ice splits open under your feet. In one cold second, everything could go wrong — everything. Your heart stops dead. There is no time to think now, only to move, right now, one way or the other.",
+    "A sound like a gunshot cracks the night. The ice splits open under your feet. In one freezing second, everything could go wrong. Your heart stops dead. There's no time to think now — only to move, this instant, one way or the other.",
+    "A sound like a gunshot cracks the night in half. The ice splits open under your feet. In one freezing second, you understand that everything could go wrong, all at once. Your heart stops dead in your chest. There's no time left to think now — only to move, this very instant, one way or the other."),
+  [t("The ice gives way.", "The ice gives way.", "The ice gives way."),
+   t("Scramble back to the bank.", "Scramble back to the bank.", "Scramble back to the bank.")])
+
+P(52,
+  t("You throw yourself at the far bank and grab it. You are safe — but soaked to the knee, and shaking hard. The cold water freezes on your legs at once. You saved time. But now you are wet and freezing, high on a hill, on the coldest night of the year.",
+    "You throw yourself at the far bank and cling to it. You're safe — but soaked to the knee and shaking hard, the river water already freezing on your legs. You saved time, yes. But now you're wet and freezing, high on a cold hill, on the coldest night of the year.",
+    "You throw yourself at the far bank and cling to it with numb hands. You're safe — but soaked to the knee and shaking hard, the river water already freezing solid on your legs. You saved yourself some time, yes. But now you're wet and freezing, high on a cold hill, on the coldest night of the whole year."),
+  [t("Push on, freezing.", "Push on, freezing.", "Push on, freezing."),
+   t("You dropped the heater.", "You lost the heater in the scramble.", "You lost the heater in the scramble.")])
+
+P(53,
+  t("You throw yourself back the way you came. The ice holds — just. You crawl onto the bank, safe but shaking, your heart going wild. The river almost had you. You lost time, and you lost your nerve. But you are alive, and you have learned something. The ice lies.",
+    "You throw yourself back the way you came, and the ice holds — just. You crawl onto the bank, safe but shaking, your heart going wild. The river nearly had you. You've lost time, and lost your nerve with it — but you're alive, and you've learned one thing tonight: the ice lies.",
+    "You throw yourself back the way you came, and the ice holds — just barely. You crawl up onto the solid bank, safe but shaking, your heart going wild in your chest. The river very nearly had you. You've lost time, and lost your nerve along with it — but you're alive, and you've learned one hard thing tonight: the ice lies."),
+  [t("The long road after all.", "The long road after all.", "The long road after all."),
+   t("Too shaken to go on.", "Too shaken to go on.", "Too shaken to go on.")])
+
+P(54,
+  t("You try to warm the family's room. You close the doors. You block the gaps under them with coats. It helps a little, but not enough. Without heat, a room this cold cannot be saved. The baby still cries. There is really only one thing left you can give.",
+    "You try to warm the family's room — closing doors, blocking the gaps beneath them with rolled-up coats. It helps a little, but not nearly enough. Without heat, a room this cold can't really be saved. The baby still cries. There's really only one thing left that you can give.",
+    "You try to warm the family's room as best you can — closing the inner doors, blocking the gaps beneath them with rolled-up coats. It helps a little, but nowhere near enough. Without any heat at all, a room this cold simply can't be saved. The baby is still crying. There's really only one thing left that you can give them."),
+  [t("Give them your blanket.", "Give them your blanket.", "Give them your blanket."),
+   t("Promise to send help.", "Promise to send help.", "Promise to send help.")])
+
+P(55,
+  t("You take out Ada's blanket and wrap it around the baby. The crying softens. The mother holds your arm and cannot speak. You go back out into the cold with less than you came with. But the baby is warm now. Some things you give away, and you feel richer, not poorer.",
+    "You take out Ada's blanket and wrap it snugly around the baby. The crying softens, then stops. The mother grips your arm and can't speak. You step back out into the cold with less than you came with — but the baby is warm now. Some things you give away and feel richer for, not poorer.",
+    "You take out the blanket meant for Ada and wrap it snugly around the crying baby. The crying softens, and then stops altogether. The mother grips your arm and can't find the words. You step back out into the cold with less than you came in with — but the baby is warm now. Some things you give away and feel richer for, not poorer."),
+  [t("On, colder now.", "On, colder now.", "On, colder now."),
+   t("They point you to the hill.", "They point you to the hill.", "They point you to the hill.")])
+
+P(56,
+  t("Without the blanket, the cold finds you fast. It gets in at your collar and your wrists. You walk faster to stay warm. You gave away your warmth, and now you feel it. But you would do it again. Ahead, a doorway glows with candlelight, warm and open.",
+    "Without the blanket, the cold finds you fast — in at your collar, your wrists, the small of your back. You walk faster to stay warm. You gave your warmth away, and now you feel the cost of it. But you'd do it again. Ahead, a doorway glows with candlelight, warm and open.",
+    "Without the blanket, the cold finds you fast — in at your collar, your wrists, the small of your back. You walk faster just to stay warm. You gave your warmth away, and now you feel the exact cost of it. But you'd do it again in a heartbeat. Ahead, a doorway glows with candlelight, warm and open, spilling gold onto the snow."),
+  [t("Keep moving to stay warm.", "Keep moving to stay warm.", "Keep moving to stay warm."),
+   t("A lit doorway, open.", "A lit doorway offers shelter.", "A lit doorway offers shelter.")])
+
+P(57,
+  t("A stranger stands in the lit doorway. \"You look frozen,\" she says. \"Come in, just for a minute. Warm your hands.\" It is so tempting. One warm minute. But Ada is waiting, and one minute has a way of becoming ten. You have to choose.",
+    "A stranger stands in the lit doorway. \"You look half frozen,\" she says. \"Come in, just a minute — warm your hands.\" It's so tempting: one warm minute. But Ada is waiting, and one minute has a way of becoming ten. You have to choose.",
+    "A stranger stands framed in the lit doorway. \"You look half frozen,\" she says kindly. \"Come in, just for a minute — warm your hands at least.\" It's so tempting: one warm minute out of the cold. But Ada is waiting up the hill, and one minute has a way of quietly becoming ten. You have to choose."),
+  [t("Warm up, then on.", "Warm up, then on.", "Warm up, then on."),
+   t("Refuse, and press on.", "Refuse, press on.", "Refuse, press on.")])
+
+P(58,
+  t("You thank her, but you do not stop. You press on into the dark, your teeth going like a drum. The cold is a hand around your chest now. But every step is a step closer to Ada, and that thought is its own small fire. You keep walking.",
+    "You thank her, but you don't stop. You press on into the dark, teeth chattering like a drum. The cold is a hand closed around your chest now. But every step is a step closer to Ada, and that thought is its own small fire. You keep walking.",
+    "You thank her warmly, but you don't stop. You press on into the dark, your teeth chattering like a drum. The cold is a hand closed tight around your chest now. But every single step is a step closer to Ada, and that thought is its own small fire inside you. You keep walking."),
+  [t("The last stretch.", "The last stretch.", "The last stretch."),
+   t("On toward the hill.", "On toward the hill.", "On toward the hill.")])
+
+P(64,
+  t("You stop for a moment and look at the town below. It is all dark. No street lights, no lit windows, only here and there the small gold of a candle. It is strange and beautiful and a little frightening. A whole town, holding its breath in the cold, waiting.",
+    "You stop a moment and look back at the town below. It's all dark — no street lights, no lit windows, only here and there the small gold of a candle. It's strange, and beautiful, and a little frightening: a whole town holding its breath in the cold, waiting for the dawn.",
+    "You stop a moment and look back down at the town below you. It's all dark — no street lights, no lit windows, only here and there the small, stubborn gold of a single candle. It's strange, and beautiful, and more than a little frightening: a whole town holding its breath in the cold, waiting for the dawn to come."),
+  [t("Press on down the road.", "Press on down the road.", "Press on down the road."),
+   t("The light in the Harrow house.", "The light in the Harrow house.", "The light in the Harrow house.")])
+
+P(65,
+  t("The cold is deeper now than before. There is frost on your coat, white on the wool. Your feet feel far away. This is the kind of cold that kills, slowly and quietly, if you let it. You cannot stop moving. You cannot let it win. You keep going.",
+    "The cold drops deeper still. Frost forms on your coat, white on the dark wool; your feet feel far away and strange. This is the kind of cold that kills, slowly and quietly, if you let it. You can't stop moving. You can't let it win. You keep going.",
+    "The cold drops deeper still, past anything you're used to. Frost forms on your coat, white against the dark wool; your feet feel far away and strangely disconnected. This is the kind of cold that kills, slowly and quietly, if you once let it. You can't stop moving. You can't afford to let it win. You keep going."),
+  [t("The shivering family.", "The shivering family.", "The shivering family."),
+   t("Press on.", "Press on.", "Press on.")])
+
+# --- the van man (the trap) ---
+P(40,
+  t("The van man turns his smile on you. \"Cold night, friend,\" he says. \"Somebody up that hill you're worried about? I can help. Heaters, fuel, a generator — I've got it all, right here. But it's going fast. What do you say?\" His voice is warm. His prices, you are sure, are not.",
+    "The van man turns his smile on you. \"Cold night, friend,\" he says. \"Somebody up that hill you're worried about? I can help. Heaters, fuel, a generator — got it all, right here, right now. Going fast, though. What do you say?\" His voice is warm. His prices, you're sure, are not.",
+    "The van man turns the full beam of his smile on you. \"Cold night, friend,\" he says. \"Somebody up that hill you're worried about? I can help with that. Heaters, fuel, a generator — got it all right here, right now. Going fast, mind. What do you say?\" His voice is warm as a fire. His prices, you're quite sure, are not."),
+  [t("Hear the price.", "Hear the price.", "Hear the price."),
+   t("Refuse, and go round.", "Refuse and go round.", "Refuse and go round.")])
+
+P(41,
+  t("He names his price. It is robbery — five times what these things should cost. When you step back, he leans in close. \"Your Ada won't last the night, friend,\" he says softly. \"How much is she worth to you?\" He is using your fear. It is a cruel, clever trick.",
+    "He names his price, and it's robbery — five times what any of it should cost. When you step back, he leans in close. \"Your Ada won't last the night, friend,\" he says softly. \"How much is she worth to you?\" He's using your fear against you. It's a cruel, clever trick.",
+    "He names his price, and it's plain robbery — five times what any of it should cost, and he knows it. When you step back, he leans in close and drops his voice. \"Your Ada won't last the night, friend,\" he says softly. \"How much is she worth to you?\" He's using your fear against you, coldly. It's a cruel, clever trick, and it's working on the crowd."),
+  [t("Pay him.", "Pay him.", "Pay him."),
+   t("That line is the tell. Refuse.", "That line is the tell — refuse.", "That line is the tell — refuse."),
+   t("Ask if it even works.", "Ask if it even works.", "Ask if it even works."),
+   t("The crowd's fear.", "The crowd's fear presses in.", "The crowd's fear presses in.")])
+
+P(42,
+  t("You turn your back on him and walk away. Behind you, the frightened crowd keeps pushing money at him. You feel the pull of it — the fear, the hope of an easy answer. But there are no easy answers tonight, only cold work and good people. You go on, your money safe.",
+    "You turn your back on him and walk away. Behind you, the frightened crowd keeps pushing money into his hands. You feel the pull of it — the fear, the hope of an easy answer. But there are no easy answers tonight, only cold work and good people. You go on, your money still your own.",
+    "You turn your back on him and walk away into the dark. Behind you, the frightened crowd keeps pushing money into his open hands. You feel the pull of it, honestly — the fear, the hope of one easy answer. But there are no easy answers tonight, only cold work and good people. You go on, your money still your own."),
+  [t("On the way.", "On the way.", "On the way."),
+   t("To the shop instead.", "To the shop instead.", "To the shop instead.")])
+
+P(43,
+  t("Fear wins. You count out the money — most of what you have — and hand it over. He gives you a generator and a can of fuel, and a wide, quick smile. \"Good choice, friend,\" he says. The money is gone from your hands. Somehow, you feel colder than before.",
+    "Fear wins. You count out the money — most of what you have — and hand it over. He gives you a generator and a can of fuel, and a wide, quick smile. \"Good choice, friend,\" he says. The money's gone from your pocket now. Somehow, you feel colder than you did before.",
+    "Fear wins the argument. You count out the money — most of what you have on you — and hand it across. He gives you a heavy generator and a can of fuel, and a wide, quick, professional smile. \"Good choice, friend,\" he says. The money is gone from your pocket now. And somehow, you feel colder than you did before."),
+  [t("Haul it up the hill.", "Haul it up the hill.", "Haul it up the hill."),
+   t("A doubt already.", "A doubt already.", "A doubt already.")])
+
+P(44,
+  t("\"Does it work?\" you ask. \"In this cold? For sure?\" His smile flickers, just for a second. \"They all work,\" he says, too fast. \"No promises, mind. No refunds.\" No promises. There is your answer, if you want to hear it. A good thing does not need 'no promises.'",
+    "\"Does it work?\" you ask. \"In this cold? For certain?\" His smile flickers, just for a second. \"They all work,\" he says, too fast. \"No promises, mind. No refunds.\" No promises. There's your answer, if you want to hear it — a good thing doesn't need 'no promises.'",
+    "\"Does it actually work?\" you ask. \"In this cold? For certain?\" His smile flickers, just for a second, before it locks back into place. \"They all work,\" he says, too fast. \"No promises, mind. No refunds.\" No promises. There's your answer, if you're willing to hear it — a good thing has never once needed the words 'no promises.'"),
+  [t("That's your answer. Refuse.", "That's your answer — refuse.", "That's your answer — refuse."),
+   t("Buy it anyway.", "Buy it anyway.", "Buy it anyway.")])
+
+P(45,
+  t("The generator is heavy — a dead weight in your arms. You haul it up the hill, breathing hard. At the top, you set it down and try to start it. It coughs. It sputters. In this cold, it will not catch. You begin to understand what you have really bought.",
+    "The generator is heavy — a dead weight in your aching arms. You haul it up the hill, breathing hard. At the top you set it down and try to start it. It coughs. It sputters. In this cold, it simply won't catch. You're beginning to understand what you've really bought.",
+    "The generator is heavy — a dead weight in your aching arms. You haul it all the way up the hill, breathing hard, telling yourself it'll be worth it. At the top you set it down and try to start it. It coughs. It sputters. In this cold, it simply will not catch. You're beginning to understand exactly what you've really bought."),
+  [t("Try and try.", "Try and try.", "Try and try."),
+   t("On to Ada with nothing.", "On to Ada with nothing.", "On to Ada with nothing.")])
+
+P(46,
+  t("You open the can of fuel and smell it. It is wrong — thin and watery, more water than fuel. He sold you a can of almost nothing, for almost all your money. The doubt in you turns hard and cold. You have been cheated, and the night is only half over.",
+    "You open the fuel can and smell it. It's wrong — thin and watery, more water than fuel. He sold you a can of almost nothing for almost all your money. The doubt in you turns hard and cold. You've been cheated, and the night is only half over.",
+    "You open the fuel can and smell it, and your heart sinks. It's wrong — thin and watery, more water than fuel by the smell of it. He sold you a can of almost nothing for almost all the money you had. The doubt in you turns hard and cold. You've been cheated, plainly, and the night is only half over."),
+  [t("On to Ada.", "On to Ada.", "On to Ada."),
+   t("Back to argue.", "Back to argue.", "Back to argue.")])
+
+P(47,
+  t("You pull the cord again and again. The generator coughs, catches for one second, and dies. The fuel is bad. The machine is junk. You paid nearly everything for a heavy, useless lump of metal in the snow. There is nothing to do but leave it, and go to Ada with empty hands.",
+    "You pull the cord again and again. The generator coughs, catches for a single second, and dies. The fuel is bad, the machine is junk. You paid nearly everything you had for a heavy, useless lump of metal in the snow. Nothing to do now but leave it and go to Ada with empty hands.",
+    "You pull the cord again, and again, and again. The generator coughs, catches for a single hopeful second, and dies. The fuel is bad, and the machine is junk. You paid nearly everything you had for a heavy, useless lump of cold metal in the snow. There's nothing to do now but leave it where it lies and go to Ada with empty hands."),
+  [t("On to Ada, fleeced.", "On to Ada, fleeced.", "On to Ada, fleeced."),
+   t("Leave it in the snow.", "Leave it in the snow.", "Leave it in the snow.")])
+
+P(48,
+  t("You turn to find the van. It is gone. The lights, the man, the crowd — all gone, melted back into the dark. Only the cold is left, and your empty pockets, and the useless thing in the snow. He knew. He always knew. And now he is somewhere else, selling fear to someone else.",
+    "You turn to find the van, but it's gone — the lights, the man, the crowd, all melted back into the dark. Only the cold is left, and your empty pockets, and the useless thing in the snow. He knew. He always knew. And now he's somewhere else, selling fear to someone new.",
+    "You turn to find the van, but it's gone — the lights, the man, the whole frightened crowd, all melted back into the dark as if they'd never been. Only the cold is left, and your empty pockets, and the useless machine in the snow. He knew. He always knew. And now he's somewhere else in the dark, selling the same fear to someone new."),
+  [t("On to Ada.", "On to Ada.", "On to Ada."),
+   t("Stand a moment in the dark.", "Stand a moment in the dark.", "Stand a moment in the dark.")])
+
+P(49,
+  t("You look at the crowd around the van. They are not fools. They are just afraid — for their children, their parents, themselves. Fear makes good people do foolish things. You see the whole trick now, laid out clear. The man sells fear, and tonight, fear sells itself.",
+    "You look at the crowd around the van. They're not fools — they're just afraid, for their children, their parents, themselves. Fear makes good people do foolish things. You can see the whole trick now, laid out clear: the man sells fear, and on a night like this, fear sells itself.",
+    "You look properly at the crowd pressing around the van. They're not fools, any of them — they're just afraid, for their children, their parents, themselves. Fear makes good people do foolish things. You can see the whole trick now, laid out perfectly clear: the man sells fear, and on a night like this one, fear sells itself."),
+  [t("Hear the price anyway.", "Hear the price anyway.", "Hear the price anyway."),
+   t("Refuse, and go round.", "Refuse and go round.", "Refuse and go round.")])
+
+# --- the light in the Harrow house (the mystery) ---
+P(70,
+  t("The old Harrow house stands on the hill. It has been empty for years — dark, cold, forgotten. But tonight, one window glows with a warm, steady light. No one lives there. No one should be there. And yet the light burns, gold in the dark, as if someone is home.",
+    "The old Harrow house stands high on the hill. It's been empty for years — dark, cold, forgotten by everyone. But tonight, one window glows with a warm, steady light. No one lives there. No one should be there. And yet the light burns on, gold in the dark, as if someone were home.",
+    "The old Harrow house stands high on the hill. It's been empty for years — dark, cold, and quietly forgotten by the whole town. But tonight, one single window glows with a warm, steady light. No one lives there. No one should be there at all. And yet the light burns on, gold in the dark, exactly as if someone were home."),
+  [t("Go and see.", "Go and see.", "Go and see."),
+   t("Leave it. Ada first.", "Leave it — Ada first.", "Leave it — Ada first.")])
+
+P(71,
+  t("You knock on the old door. No answer. You knock again, and call out. Still nothing. But when you push, the door swings open — it was never locked. Inside is cold and dark, and it smells of dust and years. But somewhere further in, that warm light is still burning.",
+    "You knock on the old door. No answer. You knock again and call out; still nothing. But when you push, the door swings open — never locked. Inside it's cold and dark, and it smells of dust and years. But somewhere further in, that warm light is still burning.",
+    "You knock on the old door. No answer. You knock again, harder, and call out; still nothing at all. But when you push, the door swings quietly open — it was never locked. Inside it's cold and dark, and it smells of dust and long-shut years. But somewhere further in, that warm light is still burning."),
+  [t("Go in.", "Go in.", "Go in."),
+   t("Call out and wait.", "Call out and wait.", "Call out and wait."),
+   t("Dust and cold inside.", "Years of dust and cold inside.", "Years of dust and cold inside.")])
+
+P(72,
+  t("You go in, following the light. In a back room, by a candle almost burned down, an old man lies on the floor. He is thin, and grey, and very cold. He fell hours ago, and could not get up. His eyes find yours. \"You came,\" he whispers. \"Nobody comes.\"",
+    "You go in, following the light. In a back room, by a candle burned almost to nothing, an old man lies on the floor. He's thin, grey, and dangerously cold. He fell hours ago and couldn't get up again. His eyes find yours. \"You came,\" he whispers. \"Nobody comes.\"",
+    "You go in, following the warm light. In a back room, by a candle burned almost down to nothing, an old man lies on the floor. He's thin, and grey, and dangerously cold to the touch. He fell hours ago, it's clear, and hasn't been able to get up again. His eyes find yours in the dark. \"You came,\" he whispers. \"Nobody ever comes.\""),
+  [t("Get him warm.", "Get him warm.", "Get him warm."),
+   t("Run for help.", "Run for help.", "Run for help.")])
+
+P(73,
+  t("You call out into the dark house. For a long moment, nothing. Then, from a back room, a weak voice answers — thin, cracked, afraid. Someone is here. Someone needs help. You cannot walk away from that, not tonight, not ever.",
+    "You call out into the dark house. For a long moment, nothing at all. Then, from a back room, a weak voice answers — thin, cracked, and afraid. Someone is here. Someone needs help. You can't walk away from that, not tonight, not ever.",
+    "You call out into the dark, silent house. For a long moment there's nothing at all. Then, from a back room, a weak voice answers — thin, cracked, and clearly afraid. Someone is here after all, in the cold and the dark. Someone needs help. You can't just walk away from that, not tonight, and not ever."),
+  [t("Go in.", "Go in.", "Go in."),
+   t("Fetch help.", "Fetch help.", "Fetch help.")])
+
+P(74,
+  t("You wrap the old man in your coat. You build up the little fire and hold his cold hands in yours. Slowly, slowly, the colour comes back to his face. He drinks a little from your flask. \"Thank you,\" he says, and his eyes fill. You got here in time. Just in time.",
+    "You wrap the old man in your coat, build up the little fire, and hold his cold hands in yours. Slowly, slowly, the colour comes back into his face. He drinks a little from your flask. \"Thank you,\" he says, and his eyes fill. You got here in time — only just, but in time.",
+    "You wrap the old man in your own coat, build up the little fire, and hold his cold hands between yours. Slowly, slowly, the colour comes back into his grey face. He drinks a little from your flask. \"Thank you,\" he says, and his tired eyes fill. You got here in time — only just, but in time. A few hours more and it would have been another story."),
+  [t("He speaks of Ada.", "He speaks of Ada.", "He speaks of Ada."),
+   t("Get you both to Ada.", "Get you both to Ada.", "Get you both to Ada.")])
+
+P(75,
+  t("You turn to run for help — then stop. There is no help coming. The roads are blocked. The phones are down. It is you, or it is no one, for this man too. You cannot save everyone tonight. But you cannot leave him on the floor to freeze, either.",
+    "You turn to run for help — then stop cold. There is no help coming. The roads are blocked, the phones are down. It's you or no one, for this man as well. You can't save everyone tonight. But you can't leave him on the floor to freeze, either.",
+    "You turn to run for help — and then stop cold, understanding. There is no help coming. The roads are blocked, the phones are down, and dawn is hours away. It's you or it's no one, for this man too. You can't save everyone tonight, you know that. But you can't leave him on the floor to freeze, either."),
+  [t("Go back in.", "Go back in.", "Go back in."),
+   t("On to Ada, torn.", "On to Ada, torn.", "On to Ada, torn.")])
+
+P(76,
+  t("Warm now, the old man talks. \"My name is Harrow,\" he says. \"I came back months ago. I told no one.\" He looks at the fire. \"Ada. She is my sister. We had a fight, long ago. Forty years, we haven't spoken. Forty years. And she is just down the hill.\"",
+    "Warm now, the old man talks. \"My name is Harrow,\" he says. \"I came back months ago. I told no one.\" He looks into the fire. \"Ada is my sister. We fought, long ago — a stupid thing. Forty years, we haven't spoken. Forty years. And she's just down the hill.\"",
+    "Warm now, and steadier, the old man talks. \"My name is Harrow,\" he says. \"I came back months ago. I told no one — I was ashamed to.\" He looks into the fire. \"Ada is my sister. We fought, long ago, over something stupid. Forty years, we haven't spoken a word. Forty years. And she's been just down the hill the whole time.\""),
+  [t("Bring them together.", "Resolve to bring them together.", "Resolve to bring them together."),
+   t("On to Ada with the news.", "On to Ada with the news.", "On to Ada with the news.")])
+
+P(77,
+  t("Forty years is a long time to be angry. And a cold night is a strange, hard gift: it does not care about old fights. Two old people, a brother and a sister, both alone in the dark, both cold. You are going to bring them together tonight. You have decided.",
+    "Forty years is a long time to stay angry. And a cold night is a strange, hard gift: it doesn't care about old fights. Two old people — a brother and a sister — both alone in the dark, both cold, both a short walk apart. You're going to bring them together tonight. You've decided.",
+    "Forty years is a long time to stay angry at anyone. And a cold night is a strange, hard sort of gift: it doesn't care in the slightest about old fights. Two old people — a brother and a sister — both alone in the dark, both cold, both only a short walk apart. You're going to bring them together tonight. You've decided, and that's that."),
+  [t("Down to Ada.", "Down to Ada.", "Down to Ada."),
+   t("Warm Harrow first.", "Warm Harrow first.", "Warm Harrow first.")])
+
+P(78,
+  t("Inside, the house is a museum of cold. Dust lies thick on everything. Chairs sit under white sheets. It is like walking into a stopped clock. But the warm light pulls you on, room by room, deeper in. Someone made that light. Someone is here.",
+    "Inside, the house is a museum of cold. Dust lies thick on everything; chairs sit under white sheets like ghosts. It's like walking into a stopped clock. But the warm light draws you on, room by room, deeper in. Someone made that light. Someone is here.",
+    "Inside, the house is a kind of museum of cold. Dust lies thick over everything; chairs sit shrouded under white sheets like patient ghosts. It's like walking into a clock that stopped years ago. But the warm light draws you on, room by room, deeper into the dark. Someone made that light. Someone, against all sense, is here."),
+  [t("Deeper in.", "Deeper in.", "Deeper in."),
+   t("An old photograph.", "An old photograph on the wall.", "An old photograph on the wall.")])
+
+P(79,
+  t("On the wall hangs an old photograph. Two young people, a boy and a girl, laugh together in summer light. You look closer. The girl is Ada — young, but her, without a doubt. Then, from the next room, you hear a small sound. Slow, weak breathing.",
+    "On the wall hangs an old photograph: two young people, a boy and a girl, laughing together in summer light. You look closer — the girl is Ada, young, but unmistakably her. Then, from the next room, comes a small sound: slow, weak breathing.",
+    "On the wall hangs an old, faded photograph: two young people, a boy and a girl, laughing together in some long-ago summer light. You look closer, and your breath catches — the girl is Ada, young, but unmistakably her. Then, from the next room, comes a small sound: slow, weak, laboured breathing."),
+  [t("Follow the sound. Find him.", "Follow the sound, and find him.", "Follow the sound, and find him."),
+   t("The years between them.", "The years between them.", "The years between them.")])
+
+P(69,
+  t("Forty years of silence hang in this cold house. A brother and a sister who stopped speaking, and never started again. It is a sad, heavy thing. Then, from the next room, comes the breathing again. Slow. Weak. Someone real, someone alive, right now, needing you.",
+    "Forty years of silence hang in this cold house — a brother and a sister who stopped speaking and never started again. It's a sad, heavy thing to stand inside. Then, from the next room, the breathing comes again: slow, weak. Someone real, someone alive, right now, needing you.",
+    "Forty years of silence hang in the cold air of this house — a brother and a sister who stopped speaking one day and never started again. It's a sad, heavy thing to stand inside of. Then, from the next room, the breathing comes again: slow, and weak, and labouring. Someone real, someone alive, right now, needing you."),
+  [t("Follow the breathing. Find him.", "Follow the breathing, and find him.", "Follow the breathing, and find him."),
+   t("It's too much. Go to Ada.", "It's too much — go to Ada.", "It's too much — go to Ada.")])
+
+
 # ============================ apply ========================================
 def main():
     book = json.load(open(BOOK, encoding="utf-8"))

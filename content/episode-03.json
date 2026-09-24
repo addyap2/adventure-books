@@ -645,9 +645,9 @@
     {
       "id": 21,
       "text": {
-        "A2": "[stub] Supplies decided. Now the way to Ada: the long road, or the frozen river shortcut.",
-        "B1": "[stub] Supplies decided. Now the way to Ada: the long road, or the frozen river shortcut.",
-        "B2": "[stub] Supplies decided. Now the way to Ada: the long road, or the frozen river shortcut."
+        "A2": "Now the way to Ada. Two ways lead up the hill. The road is long, but it is solid under the snow. The river is frozen, and crossing the ice would be much shorter. But ice can lie. Down by the river you also see the van man's lights, and a crowd around them.",
+        "B1": "Now for the way to Ada. Two ways lead up the hill: the long road, solid under the snow, or the frozen river, which would cut the journey in half. But ice can lie. Down by the water you also see the van man's headlights, and a crowd gathered round them.",
+        "B2": "Now for the way up to Ada. Two ways climb the hill: the long road, solid enough under the snow, or the frozen river, which would cut the journey clean in half. But ice can lie, and lie well. Down by the water you can also see the van man's headlights, and a restless crowd gathered around them."
       },
       "choices": [
         {
@@ -668,7 +668,7 @@
         },
         {
           "text": {
-            "A2": "The van man's lights ahead.",
+            "A2": "The van man's lights.",
             "B1": "The van man's lights ahead.",
             "B2": "The van man's lights ahead."
           },
@@ -783,9 +783,9 @@
     {
       "id": 26,
       "text": {
-        "A2": "[stub] The long road: black, iced, hard going, but solid underfoot.",
-        "B1": "[stub] The long road: black, iced, hard going, but solid underfoot.",
-        "B2": "[stub] The long road: black, iced, hard going, but solid underfoot."
+        "A2": "You take the road. It is long, and it winds up the hill in the dark. But the ground is solid under the snow, and that matters tonight. Your feet crunch. Your breath smokes. The town is silent all around you, holding its cold breath, waiting for the light.",
+        "B1": "You take the road. It's long, winding up the hill in the dark, but the ground is solid under the snow, and tonight that matters more than speed. Your feet crunch; your breath smokes. The whole town is silent around you, holding its cold breath, waiting for the light to return.",
+        "B2": "You take the road. It's long, and it winds up the hill in the dark, but the ground is solid under the snow, and tonight that matters far more than speed. Your feet crunch; your breath smokes in the torchlight. The whole town lies silent around you, holding its cold breath, waiting for the light to return at dawn."
       },
       "choices": [
         {
@@ -798,7 +798,7 @@
         },
         {
           "text": {
-            "A2": "Someone's stuck ahead.",
+            "A2": "Someone is stuck ahead.",
             "B1": "Someone's stuck ahead.",
             "B2": "Someone's stuck ahead."
           },
@@ -806,7 +806,7 @@
         },
         {
           "text": {
-            "A2": "The whole town, dark and quiet.",
+            "A2": "The town, dark and still.",
             "B1": "The whole town, dark and quiet.",
             "B2": "The whole town, dark and quiet."
           },
@@ -817,9 +817,9 @@
     {
       "id": 27,
       "text": {
-        "A2": "[stub] The frozen river shortcut would halve the way. The ice creaks.",
-        "B1": "[stub] The frozen river shortcut would halve the way. The ice creaks.",
-        "B2": "[stub] The frozen river shortcut would halve the way. The ice creaks."
+        "A2": "The frozen river runs at the foot of the hill. Cross it, and you save a lot of time. The ice looks thick and white. But Mr Okafor warned you: it looks strong, but it isn't. Under the ice is black, cold water. Time, or safety. You cannot have both.",
+        "B1": "The frozen river lies at the foot of the hill. Cross it, and you'd save a great deal of time. The ice looks thick and white and solid. But Okafor warned you: it looks strong, and it isn't. Under it runs black, freezing water. Time or safety — you can't have both tonight.",
+        "B2": "The frozen river lies at the foot of the hill. Cross it, and you'd save a great deal of precious time. The ice looks thick, and white, and solid enough to trust. But Okafor warned you plainly: it looks strong, and it isn't. Under it runs black, freezing water. Time, or safety — you can't have both of them tonight."
       },
       "choices": [
         {
@@ -835,7 +835,7 @@
         },
         {
           "text": {
-            "A2": "Too dangerous — back to the road.",
+            "A2": "Too dangerous. The road.",
             "B1": "Too dangerous — back to the road.",
             "B2": "Too dangerous — back to the road."
           },
@@ -846,9 +846,9 @@
     {
       "id": 28,
       "text": {
-        "A2": "[stub] Out on the ice, the black river below, every step a gamble.",
-        "B1": "[stub] Out on the ice, the black river below, every step a gamble.",
-        "B2": "[stub] Out on the ice, the black river below, every step a gamble."
+        "A2": "You step out onto the ice. It holds. You take another step, and another. The black water waits below you. Every step is a small bet with your life. The far bank is not far now. But the ice makes small sounds under your boots, and you do not like them.",
+        "B1": "You step out onto the ice, and it holds. Another step, and another. The black water waits somewhere below you. Every step is a small bet with your own life. The far bank isn't far now — but the ice makes small sounds under your boots, and you don't like them at all.",
+        "B2": "You step out onto the ice, and it holds your weight. Another step, and another. The black water waits somewhere below you, patient. Every single step is a small bet made with your own life. The far bank isn't far now — but the ice keeps making small sounds under your boots, and you don't like a single one of them."
       },
       "choices": [
         {
@@ -898,14 +898,14 @@
     {
       "id": 30,
       "text": {
-        "A2": "[stub] The road at night, the cold deepening by the hour.",
-        "B1": "[stub] The road at night, the cold deepening by the hour.",
-        "B2": "[stub] The road at night, the cold deepening by the hour."
+        "A2": "You climb the road in the deep dark. The cold gets harder every hour. Your face hurts with it. Ahead, at a black window, a family stands shivering, wrapped in every coat they own. And still the hill goes up, and up, toward Ada.",
+        "B1": "You climb the road through the deep dark, and the cold grows harder every hour, until your face aches with it. Ahead, at a black window, a family stands shivering, wrapped in every coat they own. And still the hill climbs on, up and up, toward Ada.",
+        "B2": "You climb the road through the deep dark, and the cold grows harder with every hour that passes, until your face aches with it. Ahead, at a black window, a whole family stands shivering, wrapped in every coat they own. And still the hill climbs on, up and up and up, toward Ada at the top."
       },
       "choices": [
         {
           "text": {
-            "A2": "A family shivering at a dark window.",
+            "A2": "A shivering family.",
             "B1": "A family shivering at a dark window.",
             "B2": "A family shivering at a dark window."
           },
@@ -929,7 +929,7 @@
         },
         {
           "text": {
-            "A2": "A signpost, half-buried in snow.",
+            "A2": "A buried signpost.",
             "B1": "A signpost, half-buried in snow.",
             "B2": "A signpost, half-buried in snow."
           },
@@ -940,9 +940,9 @@
     {
       "id": 31,
       "text": {
-        "A2": "[stub] A car stuck in the snow, an old man at the wheel.",
-        "B1": "[stub] A car stuck in the snow, an old man at the wheel.",
-        "B2": "[stub] A car stuck in the snow, an old man at the wheel."
+        "A2": "A car sits stuck in the snow, its wheels spinning. An old man is at the wheel, alone, his face grey. He cannot go forward or back. If you stop to push, you lose time you may not have. If you don't, he may sit here in the cold all night.",
+        "B1": "A car sits stuck in the snow, wheels spinning uselessly. An old man is at the wheel, alone, his face grey with cold. He can't go forward or back. Stop to push, and you lose time you may not have; leave him, and he could sit out here in the cold all night.",
+        "B2": "A car sits stuck fast in the snow, its wheels spinning uselessly. An old man is at the wheel, alone, his face grey with the cold. He can't go forward and he can't go back. Stop to push, and you lose time you may not have to spare; leave him, and he could sit out here in the freezing dark all night long."
       },
       "choices": [
         {
@@ -958,7 +958,7 @@
         },
         {
           "text": {
-            "A2": "You can't stop — Ada.",
+            "A2": "You can't stop. Ada.",
             "B1": "You can't stop — Ada.",
             "B2": "You can't stop — Ada."
           },
@@ -969,9 +969,9 @@
     {
       "id": 32,
       "text": {
-        "A2": "[stub] A family with no heat, a baby crying in the cold.",
-        "B1": "[stub] A family with no heat, a baby crying in the cold.",
-        "B2": "[stub] A family with no heat, a baby crying in the cold."
+        "A2": "Inside a cold, dark house, a family sits close together. A baby cries and cries. There is no heat here, and no light but one candle. The mother looks at you with wide, tired eyes. You have a blanket for Ada. You have only the one.",
+        "B1": "Inside a cold, dark house, a family sits huddled together. A baby cries and cries. There's no heat here, and no light but a single candle. The mother looks at you with wide, tired eyes. You have a blanket meant for Ada — and you have only the one.",
+        "B2": "Inside a cold, dark house, a whole family sits huddled together for warmth. A baby cries, and cries, and won't stop. There's no heat in the place, and no light but a single guttering candle. The mother looks up at you with wide, exhausted eyes. You have a blanket, meant for Ada — and you have only the one."
       },
       "choices": [
         {
@@ -1006,9 +1006,9 @@
     {
       "id": 33,
       "text": {
-        "A2": "[stub] On toward the hill.",
-        "B1": "[stub] On toward the hill.",
-        "B2": "[stub] On toward the hill."
+        "A2": "You go on, up toward the hill. The dark is thick. Your torch throws one small circle of light on the snow. There is the van man's van, off to one side. There is the strange light in the old house, high up. And there is the last hard climb to Ada's door.",
+        "B1": "You go on, up toward the hill. The dark is thick, and your torch throws one small circle of light onto the snow. Off to one side sits the van man's van. High up burns that strange light in the old house. And ahead lies the last hard climb to Ada's door.",
+        "B2": "You press on, up toward the hill. The dark is thick and close, and your torch throws one small circle of light onto the snow ahead. Off to one side sits the van man's van; high up on the hill burns that strange, unexplained light in the old house; and ahead of you lies the last hard climb to Ada's door."
       },
       "choices": [
         {
@@ -1048,9 +1048,9 @@
     {
       "id": 34,
       "text": {
-        "A2": "[stub] The old man's car is free; he presses a flask on you.",
-        "B1": "[stub] The old man's car is free; he presses a flask on you.",
-        "B2": "[stub] The old man's car is free; he presses a flask on you."
+        "A2": "You put your shoulder to the car and push. Your boots slip. Then, slowly, the wheels grip, and the car pulls free. The old man winds down his window. \"Bless you,\" he says, and pushes a warm flask into your hands. \"Now get where you're going, quick.\"",
+        "B1": "You put your shoulder to the car and push. Your boots slip on the ice; then, slowly, the wheels grip and the car pulls free. The old man winds down his window. \"Bless you,\" he says, pressing a warm flask into your hands. \"Now get where you're going, and quick.\"",
+        "B2": "You put your shoulder to the back of the car and push with everything you have. Your boots slip on the ice; then, slowly, the wheels find their grip and the car pulls free. The old man winds down his window. \"Bless you,\" he says, pressing a warm flask into your hands. \"Now get where you're going, and be quick about it.\""
       },
       "choices": [
         {
@@ -1074,9 +1074,9 @@
     {
       "id": 35,
       "text": {
-        "A2": "[stub] You promise help and move on.",
-        "B1": "[stub] You promise help and move on.",
-        "B2": "[stub] You promise help and move on."
+        "A2": "You promise the family you will send help, and you mean it. But a promise is not heat, and the baby is still crying as you close the door. You feel the weight of it as you walk on. You can only be in one place at a time, tonight of all nights.",
+        "B1": "You promise the family you'll send help, and you mean it. But a promise isn't heat, and the baby is still crying as you close the door behind you. You feel the weight of that as you walk on. You can only be in one place at a time, tonight of all nights.",
+        "B2": "You promise the family you'll send help, and you mean every word of it — but a promise isn't heat, and the baby is still crying as you close the door softly behind you. You feel the whole weight of that as you walk on into the dark. You can only be in one place at a time, tonight of all nights."
       },
       "choices": [
         {
@@ -1152,9 +1152,9 @@
     {
       "id": 38,
       "text": {
-        "A2": "[stub] The cold gnaws at your resolve.",
-        "B1": "[stub] The cold gnaws at your resolve.",
-        "B2": "[stub] The cold gnaws at your resolve."
+        "A2": "The cold gets into your head as well as your bones. A small voice says: go home. Sit by a candle. Nobody would blame you. It would be so easy. Then you think of Ada's face, and the voice goes quiet. You are not going home. Not tonight.",
+        "B1": "The cold works into your head as well as your bones. A small voice says: go home, sit by a candle, nobody would blame you. It would be so easy. Then you think of Ada's face, and the voice goes quiet. You are not going home tonight.",
+        "B2": "The cold works its way into your head as well as your bones. A small, reasonable voice says: go home, sit by a candle, nobody on earth would blame you. It would be so easy to listen to it. Then you think of Ada's face, and the small voice goes quiet. You are not going home tonight, and that's the end of it."
       },
       "choices": [
         {
@@ -1178,9 +1178,9 @@
     {
       "id": 39,
       "text": {
-        "A2": "[stub] A signpost half-buried in snow; which way?",
-        "B1": "[stub] A signpost half-buried in snow; which way?",
-        "B2": "[stub] A signpost half-buried in snow; which way?"
+        "A2": "A signpost stands half-buried in snow. You brush the snow away to read it. One arrow points along the road. One points up a path toward the hill. It leads to the old Harrow house, where the light still burns. Which way, in the dark?",
+        "B1": "A signpost stands half-buried in snow. You brush it clear to read it. One arrow points along the road; the other up a path toward the hill, and the old Harrow house, where that light still burns. Which way, in the dark?",
+        "B2": "A signpost stands half-buried in the snow. You brush it clear enough to read. One arrow points along the winding road; the other up a steeper path toward the hill, and the old Harrow house, where that unexplained light is still burning. Two ways up, and no one to tell you which. Which way, then, in the dark?"
       },
       "choices": [
         {
@@ -1204,9 +1204,9 @@
     {
       "id": 40,
       "text": {
-        "A2": "[stub] The van man: warm smile, cold stock. Generators, fuel, heaters — tonight only, cash only.",
-        "B1": "[stub] The van man: warm smile, cold stock. Generators, fuel, heaters — tonight only, cash only.",
-        "B2": "[stub] The van man: warm smile, cold stock. Generators, fuel, heaters — tonight only, cash only."
+        "A2": "The van man turns his smile on you. \"Cold night, friend,\" he says. \"Somebody up that hill you're worried about? I can help. Heaters, fuel, a generator — I've got it all, right here. But it's going fast. What do you say?\" His voice is warm. His prices, you are sure, are not.",
+        "B1": "The van man turns his smile on you. \"Cold night, friend,\" he says. \"Somebody up that hill you're worried about? I can help. Heaters, fuel, a generator — got it all, right here, right now. Going fast, though. What do you say?\" His voice is warm. His prices, you're sure, are not.",
+        "B2": "The van man turns the full beam of his smile on you. \"Cold night, friend,\" he says. \"Somebody up that hill you're worried about? I can help with that. Heaters, fuel, a generator — got it all right here, right now. Going fast, mind. What do you say?\" His voice is warm as a fire. His prices, you're quite sure, are not."
       },
       "choices": [
         {
@@ -1219,7 +1219,7 @@
         },
         {
           "text": {
-            "A2": "Refuse and go round.",
+            "A2": "Refuse, and go round.",
             "B1": "Refuse and go round.",
             "B2": "Refuse and go round."
           },
@@ -1233,9 +1233,9 @@
     {
       "id": 41,
       "text": {
-        "A2": "[stub] The price is robbery. He leans in: 'Your Ada won't last, friend. How much is she worth?'",
-        "B1": "[stub] The price is robbery. He leans in: 'Your Ada won't last, friend. How much is she worth?'",
-        "B2": "[stub] The price is robbery. He leans in: 'Your Ada won't last, friend. How much is she worth?'"
+        "A2": "He names his price. It is robbery — five times what these things should cost. When you step back, he leans in close. \"Your Ada won't last the night, friend,\" he says softly. \"How much is she worth to you?\" He is using your fear. It is a cruel, clever trick.",
+        "B1": "He names his price, and it's robbery — five times what any of it should cost. When you step back, he leans in close. \"Your Ada won't last the night, friend,\" he says softly. \"How much is she worth to you?\" He's using your fear against you. It's a cruel, clever trick.",
+        "B2": "He names his price, and it's plain robbery — five times what any of it should cost, and he knows it. When you step back, he leans in close and drops his voice. \"Your Ada won't last the night, friend,\" he says softly. \"How much is she worth to you?\" He's using your fear against you, coldly. It's a cruel, clever trick, and it's working on the crowd."
       },
       "choices": [
         {
@@ -1251,7 +1251,7 @@
         },
         {
           "text": {
-            "A2": "That line is the tell — refuse.",
+            "A2": "That line is the tell. Refuse.",
             "B1": "That line is the tell — refuse.",
             "B2": "That line is the tell — refuse."
           },
@@ -1270,7 +1270,7 @@
         },
         {
           "text": {
-            "A2": "The crowd's fear presses in.",
+            "A2": "The crowd's fear.",
             "B1": "The crowd's fear presses in.",
             "B2": "The crowd's fear presses in."
           },
@@ -1281,9 +1281,9 @@
     {
       "id": 42,
       "text": {
-        "A2": "[stub] You leave him to the frightened crowd.",
-        "B1": "[stub] You leave him to the frightened crowd.",
-        "B2": "[stub] You leave him to the frightened crowd."
+        "A2": "You turn your back on him and walk away. Behind you, the frightened crowd keeps pushing money at him. You feel the pull of it — the fear, the hope of an easy answer. But there are no easy answers tonight, only cold work and good people. You go on, your money safe.",
+        "B1": "You turn your back on him and walk away. Behind you, the frightened crowd keeps pushing money into his hands. You feel the pull of it — the fear, the hope of an easy answer. But there are no easy answers tonight, only cold work and good people. You go on, your money still your own.",
+        "B2": "You turn your back on him and walk away into the dark. Behind you, the frightened crowd keeps pushing money into his open hands. You feel the pull of it, honestly — the fear, the hope of one easy answer. But there are no easy answers tonight, only cold work and good people. You go on, your money still your own."
       },
       "choices": [
         {
@@ -1307,9 +1307,9 @@
     {
       "id": 43,
       "text": {
-        "A2": "[stub] You hand over the cash. A heavy generator, a can of fuel.",
-        "B1": "[stub] You hand over the cash. A heavy generator, a can of fuel.",
-        "B2": "[stub] You hand over the cash. A heavy generator, a can of fuel."
+        "A2": "Fear wins. You count out the money — most of what you have — and hand it over. He gives you a generator and a can of fuel, and a wide, quick smile. \"Good choice, friend,\" he says. The money is gone from your hands. Somehow, you feel colder than before.",
+        "B1": "Fear wins. You count out the money — most of what you have — and hand it over. He gives you a generator and a can of fuel, and a wide, quick smile. \"Good choice, friend,\" he says. The money's gone from your pocket now. Somehow, you feel colder than you did before.",
+        "B2": "Fear wins the argument. You count out the money — most of what you have on you — and hand it across. He gives you a heavy generator and a can of fuel, and a wide, quick, professional smile. \"Good choice, friend,\" he says. The money is gone from your pocket now. And somehow, you feel colder than you did before."
       },
       "choices": [
         {
@@ -1333,14 +1333,14 @@
     {
       "id": 44,
       "text": {
-        "A2": "[stub] He won't quite promise it works.",
-        "B1": "[stub] He won't quite promise it works.",
-        "B2": "[stub] He won't quite promise it works."
+        "A2": "\"Does it work?\" you ask. \"In this cold? For sure?\" His smile flickers, just for a second. \"They all work,\" he says, too fast. \"No promises, mind. No refunds.\" No promises. There is your answer, if you want to hear it. A good thing does not need 'no promises.'",
+        "B1": "\"Does it work?\" you ask. \"In this cold? For certain?\" His smile flickers, just for a second. \"They all work,\" he says, too fast. \"No promises, mind. No refunds.\" No promises. There's your answer, if you want to hear it — a good thing doesn't need 'no promises.'",
+        "B2": "\"Does it actually work?\" you ask. \"In this cold? For certain?\" His smile flickers, just for a second, before it locks back into place. \"They all work,\" he says, too fast. \"No promises, mind. No refunds.\" No promises. There's your answer, if you're willing to hear it — a good thing has never once needed the words 'no promises.'"
       },
       "choices": [
         {
           "text": {
-            "A2": "That's your answer — refuse.",
+            "A2": "That's your answer. Refuse.",
             "B1": "That's your answer — refuse.",
             "B2": "That's your answer — refuse."
           },
@@ -1365,9 +1365,9 @@
     {
       "id": 45,
       "text": {
-        "A2": "[stub] The generator is dead weight, and it won't start in the cold.",
-        "B1": "[stub] The generator is dead weight, and it won't start in the cold.",
-        "B2": "[stub] The generator is dead weight, and it won't start in the cold."
+        "A2": "The generator is heavy — a dead weight in your arms. You haul it up the hill, breathing hard. At the top, you set it down and try to start it. It coughs. It sputters. In this cold, it will not catch. You begin to understand what you have really bought.",
+        "B1": "The generator is heavy — a dead weight in your aching arms. You haul it up the hill, breathing hard. At the top you set it down and try to start it. It coughs. It sputters. In this cold, it simply won't catch. You're beginning to understand what you've really bought.",
+        "B2": "The generator is heavy — a dead weight in your aching arms. You haul it all the way up the hill, breathing hard, telling yourself it'll be worth it. At the top you set it down and try to start it. It coughs. It sputters. In this cold, it simply will not catch. You're beginning to understand exactly what you've really bought."
       },
       "choices": [
         {
@@ -1391,9 +1391,9 @@
     {
       "id": 46,
       "text": {
-        "A2": "[stub] The fuel smells wrong — watery, thin.",
-        "B1": "[stub] The fuel smells wrong — watery, thin.",
-        "B2": "[stub] The fuel smells wrong — watery, thin."
+        "A2": "You open the can of fuel and smell it. It is wrong — thin and watery, more water than fuel. He sold you a can of almost nothing, for almost all your money. The doubt in you turns hard and cold. You have been cheated, and the night is only half over.",
+        "B1": "You open the fuel can and smell it. It's wrong — thin and watery, more water than fuel. He sold you a can of almost nothing for almost all your money. The doubt in you turns hard and cold. You've been cheated, and the night is only half over.",
+        "B2": "You open the fuel can and smell it, and your heart sinks. It's wrong — thin and watery, more water than fuel by the smell of it. He sold you a can of almost nothing for almost all the money you had. The doubt in you turns hard and cold. You've been cheated, plainly, and the night is only half over."
       },
       "choices": [
         {
@@ -1417,9 +1417,9 @@
     {
       "id": 47,
       "text": {
-        "A2": "[stub] The generator coughs and dies. The fuel was bad.",
-        "B1": "[stub] The generator coughs and dies. The fuel was bad.",
-        "B2": "[stub] The generator coughs and dies. The fuel was bad."
+        "A2": "You pull the cord again and again. The generator coughs, catches for one second, and dies. The fuel is bad. The machine is junk. You paid nearly everything for a heavy, useless lump of metal in the snow. There is nothing to do but leave it, and go to Ada with empty hands.",
+        "B1": "You pull the cord again and again. The generator coughs, catches for a single second, and dies. The fuel is bad, the machine is junk. You paid nearly everything you had for a heavy, useless lump of metal in the snow. Nothing to do now but leave it and go to Ada with empty hands.",
+        "B2": "You pull the cord again, and again, and again. The generator coughs, catches for a single hopeful second, and dies. The fuel is bad, and the machine is junk. You paid nearly everything you had for a heavy, useless lump of cold metal in the snow. There's nothing to do now but leave it where it lies and go to Ada with empty hands."
       },
       "choices": [
         {
@@ -1443,9 +1443,9 @@
     {
       "id": 48,
       "text": {
-        "A2": "[stub] The van is gone. The crowd is gone. Only the cold, and your empty pockets.",
-        "B1": "[stub] The van is gone. The crowd is gone. Only the cold, and your empty pockets.",
-        "B2": "[stub] The van is gone. The crowd is gone. Only the cold, and your empty pockets."
+        "A2": "You turn to find the van. It is gone. The lights, the man, the crowd — all gone, melted back into the dark. Only the cold is left, and your empty pockets, and the useless thing in the snow. He knew. He always knew. And now he is somewhere else, selling fear to someone else.",
+        "B1": "You turn to find the van, but it's gone — the lights, the man, the crowd, all melted back into the dark. Only the cold is left, and your empty pockets, and the useless thing in the snow. He knew. He always knew. And now he's somewhere else, selling fear to someone new.",
+        "B2": "You turn to find the van, but it's gone — the lights, the man, the whole frightened crowd, all melted back into the dark as if they'd never been. Only the cold is left, and your empty pockets, and the useless machine in the snow. He knew. He always knew. And now he's somewhere else in the dark, selling the same fear to someone new."
       },
       "choices": [
         {
@@ -1469,9 +1469,9 @@
     {
       "id": 49,
       "text": {
-        "A2": "[stub] The frightened crowd shoves cash at him; you see the whole trick.",
-        "B1": "[stub] The frightened crowd shoves cash at him; you see the whole trick.",
-        "B2": "[stub] The frightened crowd shoves cash at him; you see the whole trick."
+        "A2": "You look at the crowd around the van. They are not fools. They are just afraid — for their children, their parents, themselves. Fear makes good people do foolish things. You see the whole trick now, laid out clear. The man sells fear, and tonight, fear sells itself.",
+        "B1": "You look at the crowd around the van. They're not fools — they're just afraid, for their children, their parents, themselves. Fear makes good people do foolish things. You can see the whole trick now, laid out clear: the man sells fear, and on a night like this, fear sells itself.",
+        "B2": "You look properly at the crowd pressing around the van. They're not fools, any of them — they're just afraid, for their children, their parents, themselves. Fear makes good people do foolish things. You can see the whole trick now, laid out perfectly clear: the man sells fear, and on a night like this one, fear sells itself."
       },
       "choices": [
         {
@@ -1484,7 +1484,7 @@
         },
         {
           "text": {
-            "A2": "Refuse and go round.",
+            "A2": "Refuse, and go round.",
             "B1": "Refuse and go round.",
             "B2": "Refuse and go round."
           },
@@ -1498,9 +1498,9 @@
     {
       "id": 50,
       "text": {
-        "A2": "[stub] Halfway across, the far bank close.",
-        "B1": "[stub] Halfway across, the far bank close.",
-        "B2": "[stub] Halfway across, the far bank close."
+        "A2": "You are halfway across the ice now. The far bank is close — you can almost touch it. Just a few more steps. The black water is under your feet, but you try not to think of it. Slow and steady. Nearly there. Nearly—",
+        "B1": "You're halfway across the ice now, and the far bank is close — you could almost touch it. Just a few more careful steps. The black water is right under your feet, but you try not to think about that. Slow and steady. Nearly there. Nearly—",
+        "B2": "You're halfway across the ice now, and the far bank is close enough that you could almost reach out and touch it. Just a few more careful steps. The black water waits right under your feet, but you try very hard not to think about that. Slow and steady. Nearly there now. Nearly—"
       },
       "choices": [
         {
@@ -1524,9 +1524,9 @@
     {
       "id": 51,
       "text": {
-        "A2": "[stub] The ice groans, then splits. A choice in a heartbeat.",
-        "B1": "[stub] The ice groans, then splits. A choice in a heartbeat.",
-        "B2": "[stub] The ice groans, then splits. A choice in a heartbeat."
+        "A2": "A sound like a gunshot cracks the night. The ice splits open under your feet. In one cold second, everything could go wrong — everything. Your heart stops dead. There is no time to think now, only to move, right now, one way or the other.",
+        "B1": "A sound like a gunshot cracks the night. The ice splits open under your feet. In one freezing second, everything could go wrong. Your heart stops dead. There's no time to think now — only to move, this instant, one way or the other.",
+        "B2": "A sound like a gunshot cracks the night in half. The ice splits open under your feet. In one freezing second, you understand that everything could go wrong, all at once. Your heart stops dead in your chest. There's no time left to think now — only to move, this very instant, one way or the other."
       },
       "choices": [
         {
@@ -1553,9 +1553,9 @@
     {
       "id": 52,
       "text": {
-        "A2": "[stub] You reach the far bank, soaked to the knee, shaking.",
-        "B1": "[stub] You reach the far bank, soaked to the knee, shaking.",
-        "B2": "[stub] You reach the far bank, soaked to the knee, shaking."
+        "A2": "You throw yourself at the far bank and grab it. You are safe — but soaked to the knee, and shaking hard. The cold water freezes on your legs at once. You saved time. But now you are wet and freezing, high on a hill, on the coldest night of the year.",
+        "B1": "You throw yourself at the far bank and cling to it. You're safe — but soaked to the knee and shaking hard, the river water already freezing on your legs. You saved time, yes. But now you're wet and freezing, high on a cold hill, on the coldest night of the year.",
+        "B2": "You throw yourself at the far bank and cling to it with numb hands. You're safe — but soaked to the knee and shaking hard, the river water already freezing solid on your legs. You saved yourself some time, yes. But now you're wet and freezing, high on a cold hill, on the coldest night of the whole year."
       },
       "choices": [
         {
@@ -1568,7 +1568,7 @@
         },
         {
           "text": {
-            "A2": "You lost the heater in the scramble.",
+            "A2": "You dropped the heater.",
             "B1": "You lost the heater in the scramble.",
             "B2": "You lost the heater in the scramble."
           },
@@ -1579,9 +1579,9 @@
     {
       "id": 53,
       "text": {
-        "A2": "[stub] You crawl back to the road, shaken, time lost.",
-        "B1": "[stub] You crawl back to the road, shaken, time lost.",
-        "B2": "[stub] You crawl back to the road, shaken, time lost."
+        "A2": "You throw yourself back the way you came. The ice holds — just. You crawl onto the bank, safe but shaking, your heart going wild. The river almost had you. You lost time, and you lost your nerve. But you are alive, and you have learned something. The ice lies.",
+        "B1": "You throw yourself back the way you came, and the ice holds — just. You crawl onto the bank, safe but shaking, your heart going wild. The river nearly had you. You've lost time, and lost your nerve with it — but you're alive, and you've learned one thing tonight: the ice lies.",
+        "B2": "You throw yourself back the way you came, and the ice holds — just barely. You crawl up onto the solid bank, safe but shaking, your heart going wild in your chest. The river very nearly had you. You've lost time, and lost your nerve along with it — but you're alive, and you've learned one hard thing tonight: the ice lies."
       },
       "choices": [
         {
@@ -1605,9 +1605,9 @@
     {
       "id": 54,
       "text": {
-        "A2": "[stub] You try to warm the family's room, but there's no heat to give.",
-        "B1": "[stub] You try to warm the family's room, but there's no heat to give.",
-        "B2": "[stub] You try to warm the family's room, but there's no heat to give."
+        "A2": "You try to warm the family's room. You close the doors. You block the gaps under them with coats. It helps a little, but not enough. Without heat, a room this cold cannot be saved. The baby still cries. There is really only one thing left you can give.",
+        "B1": "You try to warm the family's room — closing doors, blocking the gaps beneath them with rolled-up coats. It helps a little, but not nearly enough. Without heat, a room this cold can't really be saved. The baby still cries. There's really only one thing left that you can give.",
+        "B2": "You try to warm the family's room as best you can — closing the inner doors, blocking the gaps beneath them with rolled-up coats. It helps a little, but nowhere near enough. Without any heat at all, a room this cold simply can't be saved. The baby is still crying. There's really only one thing left that you can give them."
       },
       "choices": [
         {
@@ -1634,9 +1634,9 @@
     {
       "id": 55,
       "text": {
-        "A2": "[stub] You wrap the baby in your own blanket; the family weeps thanks.",
-        "B1": "[stub] You wrap the baby in your own blanket; the family weeps thanks.",
-        "B2": "[stub] You wrap the baby in your own blanket; the family weeps thanks."
+        "A2": "You take out Ada's blanket and wrap it around the baby. The crying softens. The mother holds your arm and cannot speak. You go back out into the cold with less than you came with. But the baby is warm now. Some things you give away, and you feel richer, not poorer.",
+        "B1": "You take out Ada's blanket and wrap it snugly around the baby. The crying softens, then stops. The mother grips your arm and can't speak. You step back out into the cold with less than you came with — but the baby is warm now. Some things you give away and feel richer for, not poorer.",
+        "B2": "You take out the blanket meant for Ada and wrap it snugly around the crying baby. The crying softens, and then stops altogether. The mother grips your arm and can't find the words. You step back out into the cold with less than you came in with — but the baby is warm now. Some things you give away and feel richer for, not poorer."
       },
       "choices": [
         {
@@ -1660,9 +1660,9 @@
     {
       "id": 56,
       "text": {
-        "A2": "[stub] Without your blanket, the cold finds you fast.",
-        "B1": "[stub] Without your blanket, the cold finds you fast.",
-        "B2": "[stub] Without your blanket, the cold finds you fast."
+        "A2": "Without the blanket, the cold finds you fast. It gets in at your collar and your wrists. You walk faster to stay warm. You gave away your warmth, and now you feel it. But you would do it again. Ahead, a doorway glows with candlelight, warm and open.",
+        "B1": "Without the blanket, the cold finds you fast — in at your collar, your wrists, the small of your back. You walk faster to stay warm. You gave your warmth away, and now you feel the cost of it. But you'd do it again. Ahead, a doorway glows with candlelight, warm and open.",
+        "B2": "Without the blanket, the cold finds you fast — in at your collar, your wrists, the small of your back. You walk faster just to stay warm. You gave your warmth away, and now you feel the exact cost of it. But you'd do it again in a heartbeat. Ahead, a doorway glows with candlelight, warm and open, spilling gold onto the snow."
       },
       "choices": [
         {
@@ -1675,7 +1675,7 @@
         },
         {
           "text": {
-            "A2": "A lit doorway offers shelter.",
+            "A2": "A lit doorway, open.",
             "B1": "A lit doorway offers shelter.",
             "B2": "A lit doorway offers shelter."
           },
@@ -1686,9 +1686,9 @@
     {
       "id": 57,
       "text": {
-        "A2": "[stub] A stranger waves you in from a lit doorway for a minute.",
-        "B1": "[stub] A stranger waves you in from a lit doorway for a minute.",
-        "B2": "[stub] A stranger waves you in from a lit doorway for a minute."
+        "A2": "A stranger stands in the lit doorway. \"You look frozen,\" she says. \"Come in, just for a minute. Warm your hands.\" It is so tempting. One warm minute. But Ada is waiting, and one minute has a way of becoming ten. You have to choose.",
+        "B1": "A stranger stands in the lit doorway. \"You look half frozen,\" she says. \"Come in, just a minute — warm your hands.\" It's so tempting: one warm minute. But Ada is waiting, and one minute has a way of becoming ten. You have to choose.",
+        "B2": "A stranger stands framed in the lit doorway. \"You look half frozen,\" she says kindly. \"Come in, just for a minute — warm your hands at least.\" It's so tempting: one warm minute out of the cold. But Ada is waiting up the hill, and one minute has a way of quietly becoming ten. You have to choose."
       },
       "choices": [
         {
@@ -1701,7 +1701,7 @@
         },
         {
           "text": {
-            "A2": "Refuse, press on.",
+            "A2": "Refuse, and press on.",
             "B1": "Refuse, press on.",
             "B2": "Refuse, press on."
           },
@@ -1712,9 +1712,9 @@
     {
       "id": 58,
       "text": {
-        "A2": "[stub] You press on into the dark, teeth chattering.",
-        "B1": "[stub] You press on into the dark, teeth chattering.",
-        "B2": "[stub] You press on into the dark, teeth chattering."
+        "A2": "You thank her, but you do not stop. You press on into the dark, your teeth going like a drum. The cold is a hand around your chest now. But every step is a step closer to Ada, and that thought is its own small fire. You keep walking.",
+        "B1": "You thank her, but you don't stop. You press on into the dark, teeth chattering like a drum. The cold is a hand closed around your chest now. But every step is a step closer to Ada, and that thought is its own small fire. You keep walking.",
+        "B2": "You thank her warmly, but you don't stop. You press on into the dark, your teeth chattering like a drum. The cold is a hand closed tight around your chest now. But every single step is a step closer to Ada, and that thought is its own small fire inside you. You keep walking."
       },
       "choices": [
         {
@@ -1845,9 +1845,9 @@
     {
       "id": 64,
       "text": {
-        "A2": "[stub] The whole town is dark and strangely quiet, waiting for the light.",
-        "B1": "[stub] The whole town is dark and strangely quiet, waiting for the light.",
-        "B2": "[stub] The whole town is dark and strangely quiet, waiting for the light."
+        "A2": "You stop for a moment and look at the town below. It is all dark. No street lights, no lit windows, only here and there the small gold of a candle. It is strange and beautiful and a little frightening. A whole town, holding its breath in the cold, waiting.",
+        "B1": "You stop a moment and look back at the town below. It's all dark — no street lights, no lit windows, only here and there the small gold of a candle. It's strange, and beautiful, and a little frightening: a whole town holding its breath in the cold, waiting for the dawn.",
+        "B2": "You stop a moment and look back down at the town below you. It's all dark — no street lights, no lit windows, only here and there the small, stubborn gold of a single candle. It's strange, and beautiful, and more than a little frightening: a whole town holding its breath in the cold, waiting for the dawn to come."
       },
       "choices": [
         {
@@ -1871,9 +1871,9 @@
     {
       "id": 65,
       "text": {
-        "A2": "[stub] The temperature drops further; frost on your coat.",
-        "B1": "[stub] The temperature drops further; frost on your coat.",
-        "B2": "[stub] The temperature drops further; frost on your coat."
+        "A2": "The cold is deeper now than before. There is frost on your coat, white on the wool. Your feet feel far away. This is the kind of cold that kills, slowly and quietly, if you let it. You cannot stop moving. You cannot let it win. You keep going.",
+        "B1": "The cold drops deeper still. Frost forms on your coat, white on the dark wool; your feet feel far away and strange. This is the kind of cold that kills, slowly and quietly, if you let it. You can't stop moving. You can't let it win. You keep going.",
+        "B2": "The cold drops deeper still, past anything you're used to. Frost forms on your coat, white against the dark wool; your feet feel far away and strangely disconnected. This is the kind of cold that kills, slowly and quietly, if you once let it. You can't stop moving. You can't afford to let it win. You keep going."
       },
       "choices": [
         {
@@ -1949,35 +1949,38 @@
     {
       "id": 69,
       "text": {
-        "A2": "[stub] Forty years of a shut door, ending tonight, one way or another.",
-        "B1": "[stub] Forty years of a shut door, ending tonight, one way or another.",
-        "B2": "[stub] Forty years of a shut door, ending tonight, one way or another."
+        "A2": "Forty years of silence hang in this cold house. A brother and a sister who stopped speaking, and never started again. It is a sad, heavy thing. Then, from the next room, comes the breathing again. Slow. Weak. Someone real, someone alive, right now, needing you.",
+        "B1": "Forty years of silence hang in this cold house — a brother and a sister who stopped speaking and never started again. It's a sad, heavy thing to stand inside. Then, from the next room, the breathing comes again: slow, weak. Someone real, someone alive, right now, needing you.",
+        "B2": "Forty years of silence hang in the cold air of this house — a brother and a sister who stopped speaking one day and never started again. It's a sad, heavy thing to stand inside of. Then, from the next room, the breathing comes again: slow, and weak, and labouring. Someone real, someone alive, right now, needing you."
       },
       "choices": [
         {
           "text": {
-            "A2": "He speaks of Ada.",
-            "B1": "He speaks of Ada.",
-            "B2": "He speaks of Ada."
+            "A2": "Follow the breathing. Find him.",
+            "B1": "Follow the breathing, and find him.",
+            "B2": "Follow the breathing, and find him."
           },
-          "goto": 76
+          "goto": 74,
+          "sets": [
+            "found_light"
+          ]
         },
         {
           "text": {
-            "A2": "Get him warm.",
-            "B1": "Get him warm.",
-            "B2": "Get him warm."
+            "A2": "It's too much. Go to Ada.",
+            "B1": "It's too much — go to Ada.",
+            "B2": "It's too much — go to Ada."
           },
-          "goto": 74
+          "goto": 90
         }
       ]
     },
     {
       "id": 70,
       "text": {
-        "A2": "[stub] The old Harrow house, dark for years — but one window glows warm tonight. No one can explain it.",
-        "B1": "[stub] The old Harrow house, dark for years — but one window glows warm tonight. No one can explain it.",
-        "B2": "[stub] The old Harrow house, dark for years — but one window glows warm tonight. No one can explain it."
+        "A2": "The old Harrow house stands on the hill. It has been empty for years — dark, cold, forgotten. But tonight, one window glows with a warm, steady light. No one lives there. No one should be there. And yet the light burns, gold in the dark, as if someone is home.",
+        "B1": "The old Harrow house stands high on the hill. It's been empty for years — dark, cold, forgotten by everyone. But tonight, one window glows with a warm, steady light. No one lives there. No one should be there. And yet the light burns on, gold in the dark, as if someone were home.",
+        "B2": "The old Harrow house stands high on the hill. It's been empty for years — dark, cold, and quietly forgotten by the whole town. But tonight, one single window glows with a warm, steady light. No one lives there. No one should be there at all. And yet the light burns on, gold in the dark, exactly as if someone were home."
       },
       "choices": [
         {
@@ -1990,7 +1993,7 @@
         },
         {
           "text": {
-            "A2": "Leave it — Ada first.",
+            "A2": "Leave it. Ada first.",
             "B1": "Leave it — Ada first.",
             "B2": "Leave it — Ada first."
           },
@@ -2001,9 +2004,9 @@
     {
       "id": 71,
       "text": {
-        "A2": "[stub] You knock. No answer. The door is off the latch.",
-        "B1": "[stub] You knock. No answer. The door is off the latch.",
-        "B2": "[stub] You knock. No answer. The door is off the latch."
+        "A2": "You knock on the old door. No answer. You knock again, and call out. Still nothing. But when you push, the door swings open — it was never locked. Inside is cold and dark, and it smells of dust and years. But somewhere further in, that warm light is still burning.",
+        "B1": "You knock on the old door. No answer. You knock again and call out; still nothing. But when you push, the door swings open — never locked. Inside it's cold and dark, and it smells of dust and years. But somewhere further in, that warm light is still burning.",
+        "B2": "You knock on the old door. No answer. You knock again, harder, and call out; still nothing at all. But when you push, the door swings quietly open — it was never locked. Inside it's cold and dark, and it smells of dust and long-shut years. But somewhere further in, that warm light is still burning."
       },
       "choices": [
         {
@@ -2024,7 +2027,7 @@
         },
         {
           "text": {
-            "A2": "Years of dust and cold inside.",
+            "A2": "Dust and cold inside.",
             "B1": "Years of dust and cold inside.",
             "B2": "Years of dust and cold inside."
           },
@@ -2035,9 +2038,9 @@
     {
       "id": 72,
       "text": {
-        "A2": "[stub] Inside: cold, bare, and old Mr Harrow on the floor by a guttering candle.",
-        "B1": "[stub] Inside: cold, bare, and old Mr Harrow on the floor by a guttering candle.",
-        "B2": "[stub] Inside: cold, bare, and old Mr Harrow on the floor by a guttering candle."
+        "A2": "You go in, following the light. In a back room, by a candle almost burned down, an old man lies on the floor. He is thin, and grey, and very cold. He fell hours ago, and could not get up. His eyes find yours. \"You came,\" he whispers. \"Nobody comes.\"",
+        "B1": "You go in, following the light. In a back room, by a candle burned almost to nothing, an old man lies on the floor. He's thin, grey, and dangerously cold. He fell hours ago and couldn't get up again. His eyes find yours. \"You came,\" he whispers. \"Nobody comes.\"",
+        "B2": "You go in, following the warm light. In a back room, by a candle burned almost down to nothing, an old man lies on the floor. He's thin, and grey, and dangerously cold to the touch. He fell hours ago, it's clear, and hasn't been able to get up again. His eyes find yours in the dark. \"You came,\" he whispers. \"Nobody ever comes.\""
       },
       "choices": [
         {
@@ -2064,9 +2067,9 @@
     {
       "id": 73,
       "text": {
-        "A2": "[stub] A weak voice inside calls out.",
-        "B1": "[stub] A weak voice inside calls out.",
-        "B2": "[stub] A weak voice inside calls out."
+        "A2": "You call out into the dark house. For a long moment, nothing. Then, from a back room, a weak voice answers — thin, cracked, afraid. Someone is here. Someone needs help. You cannot walk away from that, not tonight, not ever.",
+        "B1": "You call out into the dark house. For a long moment, nothing at all. Then, from a back room, a weak voice answers — thin, cracked, and afraid. Someone is here. Someone needs help. You can't walk away from that, not tonight, not ever.",
+        "B2": "You call out into the dark, silent house. For a long moment there's nothing at all. Then, from a back room, a weak voice answers — thin, cracked, and clearly afraid. Someone is here after all, in the cold and the dark. Someone needs help. You can't just walk away from that, not tonight, and not ever."
       },
       "choices": [
         {
@@ -2090,9 +2093,9 @@
     {
       "id": 74,
       "text": {
-        "A2": "[stub] You wrap Harrow, coax the fire, bring him round.",
-        "B1": "[stub] You wrap Harrow, coax the fire, bring him round.",
-        "B2": "[stub] You wrap Harrow, coax the fire, bring him round."
+        "A2": "You wrap the old man in your coat. You build up the little fire and hold his cold hands in yours. Slowly, slowly, the colour comes back to his face. He drinks a little from your flask. \"Thank you,\" he says, and his eyes fill. You got here in time. Just in time.",
+        "B1": "You wrap the old man in your coat, build up the little fire, and hold his cold hands in yours. Slowly, slowly, the colour comes back into his face. He drinks a little from your flask. \"Thank you,\" he says, and his eyes fill. You got here in time — only just, but in time.",
+        "B2": "You wrap the old man in your own coat, build up the little fire, and hold his cold hands between yours. Slowly, slowly, the colour comes back into his grey face. He drinks a little from your flask. \"Thank you,\" he says, and his tired eyes fill. You got here in time — only just, but in time. A few hours more and it would have been another story."
       },
       "choices": [
         {
@@ -2116,9 +2119,9 @@
     {
       "id": 75,
       "text": {
-        "A2": "[stub] You run — but no help is coming till dawn. It is you or no one.",
-        "B1": "[stub] You run — but no help is coming till dawn. It is you or no one.",
-        "B2": "[stub] You run — but no help is coming till dawn. It is you or no one."
+        "A2": "You turn to run for help — then stop. There is no help coming. The roads are blocked. The phones are down. It is you, or it is no one, for this man too. You cannot save everyone tonight. But you cannot leave him on the floor to freeze, either.",
+        "B1": "You turn to run for help — then stop cold. There is no help coming. The roads are blocked, the phones are down. It's you or no one, for this man as well. You can't save everyone tonight. But you can't leave him on the floor to freeze, either.",
+        "B2": "You turn to run for help — and then stop cold, understanding. There is no help coming. The roads are blocked, the phones are down, and dawn is hours away. It's you or it's no one, for this man too. You can't save everyone tonight, you know that. But you can't leave him on the floor to freeze, either."
       },
       "choices": [
         {
@@ -2142,14 +2145,14 @@
     {
       "id": 76,
       "text": {
-        "A2": "[stub] Harrow: 'Ada. My sister. We haven't spoken in forty years.'",
-        "B1": "[stub] Harrow: 'Ada. My sister. We haven't spoken in forty years.'",
-        "B2": "[stub] Harrow: 'Ada. My sister. We haven't spoken in forty years.'"
+        "A2": "Warm now, the old man talks. \"My name is Harrow,\" he says. \"I came back months ago. I told no one.\" He looks at the fire. \"Ada. She is my sister. We had a fight, long ago. Forty years, we haven't spoken. Forty years. And she is just down the hill.\"",
+        "B1": "Warm now, the old man talks. \"My name is Harrow,\" he says. \"I came back months ago. I told no one.\" He looks into the fire. \"Ada is my sister. We fought, long ago — a stupid thing. Forty years, we haven't spoken. Forty years. And she's just down the hill.\"",
+        "B2": "Warm now, and steadier, the old man talks. \"My name is Harrow,\" he says. \"I came back months ago. I told no one — I was ashamed to.\" He looks into the fire. \"Ada is my sister. We fought, long ago, over something stupid. Forty years, we haven't spoken a word. Forty years. And she's been just down the hill the whole time.\""
       },
       "choices": [
         {
           "text": {
-            "A2": "Resolve to bring them together.",
+            "A2": "Bring them together.",
             "B1": "Resolve to bring them together.",
             "B2": "Resolve to bring them together."
           },
@@ -2168,9 +2171,9 @@
     {
       "id": 77,
       "text": {
-        "A2": "[stub] You decide to reunite them tonight.",
-        "B1": "[stub] You decide to reunite them tonight.",
-        "B2": "[stub] You decide to reunite them tonight."
+        "A2": "Forty years is a long time to be angry. And a cold night is a strange, hard gift: it does not care about old fights. Two old people, a brother and a sister, both alone in the dark, both cold. You are going to bring them together tonight. You have decided.",
+        "B1": "Forty years is a long time to stay angry. And a cold night is a strange, hard gift: it doesn't care about old fights. Two old people — a brother and a sister — both alone in the dark, both cold, both a short walk apart. You're going to bring them together tonight. You've decided.",
+        "B2": "Forty years is a long time to stay angry at anyone. And a cold night is a strange, hard sort of gift: it doesn't care in the slightest about old fights. Two old people — a brother and a sister — both alone in the dark, both cold, both only a short walk apart. You're going to bring them together tonight. You've decided, and that's that."
       },
       "choices": [
         {
@@ -2194,9 +2197,9 @@
     {
       "id": 78,
       "text": {
-        "A2": "[stub] The house holds years of cold and silence.",
-        "B1": "[stub] The house holds years of cold and silence.",
-        "B2": "[stub] The house holds years of cold and silence."
+        "A2": "Inside, the house is a museum of cold. Dust lies thick on everything. Chairs sit under white sheets. It is like walking into a stopped clock. But the warm light pulls you on, room by room, deeper in. Someone made that light. Someone is here.",
+        "B1": "Inside, the house is a museum of cold. Dust lies thick on everything; chairs sit under white sheets like ghosts. It's like walking into a stopped clock. But the warm light draws you on, room by room, deeper in. Someone made that light. Someone is here.",
+        "B2": "Inside, the house is a kind of museum of cold. Dust lies thick over everything; chairs sit shrouded under white sheets like patient ghosts. It's like walking into a clock that stopped years ago. But the warm light draws you on, room by room, deeper into the dark. Someone made that light. Someone, against all sense, is here."
       },
       "choices": [
         {
@@ -2209,7 +2212,7 @@
         },
         {
           "text": {
-            "A2": "An old photograph on the wall.",
+            "A2": "An old photograph.",
             "B1": "An old photograph on the wall.",
             "B2": "An old photograph on the wall."
           },
@@ -2220,18 +2223,21 @@
     {
       "id": 79,
       "text": {
-        "A2": "[stub] A photograph: Ada and Harrow, young, laughing together.",
-        "B1": "[stub] A photograph: Ada and Harrow, young, laughing together.",
-        "B2": "[stub] A photograph: Ada and Harrow, young, laughing together."
+        "A2": "On the wall hangs an old photograph. Two young people, a boy and a girl, laugh together in summer light. You look closer. The girl is Ada — young, but her, without a doubt. Then, from the next room, you hear a small sound. Slow, weak breathing.",
+        "B1": "On the wall hangs an old photograph: two young people, a boy and a girl, laughing together in summer light. You look closer — the girl is Ada, young, but unmistakably her. Then, from the next room, comes a small sound: slow, weak breathing.",
+        "B2": "On the wall hangs an old, faded photograph: two young people, a boy and a girl, laughing together in some long-ago summer light. You look closer, and your breath catches — the girl is Ada, young, but unmistakably her. Then, from the next room, comes a small sound: slow, weak, laboured breathing."
       },
       "choices": [
         {
           "text": {
-            "A2": "Get him warm.",
-            "B1": "Get him warm.",
-            "B2": "Get him warm."
+            "A2": "Follow the sound. Find him.",
+            "B1": "Follow the sound, and find him.",
+            "B2": "Follow the sound, and find him."
           },
-          "goto": 74
+          "goto": 74,
+          "sets": [
+            "found_light"
+          ]
         },
         {
           "text": {

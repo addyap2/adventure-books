@@ -274,12 +274,12 @@ node(77, "You decide to reunite them tonight.", [
 node(78, "The house holds years of cold and silence.", [
     c("Deeper in.", 72),
     c("An old photograph on the wall.", 79)])
-node(79, "A photograph: Ada and Harrow, young, laughing together.", [
-    c("Get him warm.", 74),
+node(79, "A photograph: Ada and Harrow, young, laughing together. A weak sound from the next room.", [
+    c("Follow the sound, and find him.", 74, sets="found_light"),
     c("The years between them.", 69)])
-node(69, "Forty years of a shut door, ending tonight, one way or another.", [
-    c("He speaks of Ada.", 76),
-    c("Get him warm.", 74)])
+node(69, "Forty years of a shut door. Then breathing, slow and weak, from the next room.", [
+    c("Follow the breathing, and find him.", 74, sets="found_light"),
+    c("It's too much — go to Ada.", 90)])
 
 # ===== ACT III — TOWARD FIRST LIGHT (Ada & the close) =====
 node(90, "The last stretch to Ada's door on the hill, breath ragged in the cold.", [
