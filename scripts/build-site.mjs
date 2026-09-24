@@ -74,18 +74,18 @@ const tmpl = await readFile(join(ROOT, "web", "book.html"), "utf8");
 const attr = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 await mkdir(join(DIST, "b"), { recursive: true });
 for (const e of episodes) {
-  const desc = e.blurb || "An English adventure — a branching story for learners.";
+  const desc = e.blurb || "An interactive story for English learners — you choose what happens.";
   const url = `${BASE}/b/${e.slug}`;
   const og = `${BASE}/og-${e.slug}.png`;
   const html = tmpl
-    .replace(/<title>[\s\S]*?<\/title>/, `<title>${attr(e.title)} — an English adventure</title>`)
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${attr(e.title)} — an interactive story</title>`)
     .replace(/(<meta name="description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
     .replace(/(<link rel="canonical" href=")[^"]*(">)/, `$1${url}$2`)
     .replace(/(<meta property="og:url" content=")[^"]*(">)/, `$1${url}$2`)
-    .replace(/(<meta property="og:title" content=")[^"]*(">)/, `$1${attr(e.title)} — an English adventure$2`)
+    .replace(/(<meta property="og:title" content=")[^"]*(">)/, `$1${attr(e.title)} — an interactive story$2`)
     .replace(/(<meta property="og:description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
     .replace(/(<meta property="og:image" content=")[^"]*(">)/, `$1${og}$2`)
-    .replace(/(<meta name="twitter:title" content=")[^"]*(">)/, `$1${attr(e.title)} — an English adventure$2`)
+    .replace(/(<meta name="twitter:title" content=")[^"]*(">)/, `$1${attr(e.title)} — an interactive story$2`)
     .replace(/(<meta name="twitter:description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
     .replace(/(<meta name="twitter:image" content=")[^"]*(">)/, `$1${og}$2`)
     .replace(/<body>/, `<body>\n<script>window.__WM_BOOK=${JSON.stringify({ slug: e.slug, file: e.file })}</script>`);
