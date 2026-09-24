@@ -6,22 +6,22 @@
   "slug": "cool-of-evening",
   "blurb": "A cheap bus dies at noon on an empty desert road, hours from anywhere. A child travelling alone is failing in the heat, and no help will come until the sun drops. You have the long afternoon to keep them — and a busload of strangers — watered, shaded and alive.",
   "identity": {
-    "name": "High Noon",
-    "mood": "A desert road at the hottest hour; the only mercy is the water and shade people share.",
+    "name": "Cool of Evening",
+    "mood": "A desert road as the sun drops and the day's heat finally breaks; travellers share the last water, the first shade and the road ahead.",
     "palette": {
-      "ground": "#E7DBC0",
-      "surface": "#F5EEDC",
-      "ink": "#2C2417",
-      "muted": "#8B7B5E",
-      "line": "#D8C7A2",
-      "accent": "#0E7C7B",
-      "accentHot": "#3FA9A2",
-      "secondary": "#C77A1E"
+      "ground": "#17132A",
+      "surface": "#241E3C",
+      "ink": "#F2ECDE",
+      "muted": "#9E93B0",
+      "line": "#352C50",
+      "accent": "#E8944C",
+      "accentHot": "#F6B96C",
+      "secondary": "#A98FD0"
     },
     "cover": {
-      "kind": "highsun",
+      "kind": "dusk",
       "glow": true,
-      "focal": "74% 50%"
+      "focal": "72% 46%"
     },
     "type": {
       "display": "Fraunces",

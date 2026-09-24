@@ -106,6 +106,25 @@ function highsunScene(c) {
   <g transform="translate(780,0)"><ellipse cx="300" cy="560" rx="42" ry="7" fill="#000" opacity=".14"/><path d="M300 506 C312 508 318 519 320 533 L326 560 L274 560 L280 533 C282 519 288 508 300 506 Z" fill="${c.ink}" opacity="0.82"/><circle cx="300" cy="497" r="10" fill="${c.ink}" opacity="0.82"/></g>`;
 }
 
+function duskScene(c) {
+  // a desert road after sundown: a deep dusk sky with first stars, a low ember sun on the
+  // horizon behind a warm glow, a sand ridge in silhouette, the stalled bus and a lone
+  // figure by the road. Silhouettes are a fixed near-black so they read on the dark sky.
+  const dark = "#0E0A1C";
+  return `
+  <g fill="${c.ink}" opacity="0.45"><circle cx="220" cy="88" r="1.6"/><circle cx="410" cy="140" r="1.2"/><circle cx="330" cy="66" r="1"/><circle cx="560" cy="58" r="1.4"/><circle cx="140" cy="176" r="1.2"/><circle cx="480" cy="196" r="1"/></g>
+  <ellipse cx="1010" cy="330" rx="380" ry="230" fill="url(#glow)"/>
+  <circle cx="1010" cy="346" r="70" fill="${c.accentHot}" opacity="0.95"/>
+  <circle cx="1010" cy="346" r="70" fill="none" stroke="${c.accent}" stroke-width="2" opacity="0.6"/>
+  <path d="M520 366 L700 312 L820 348 L960 300 L1090 344 L1200 306 L1200 452 L520 452 Z" fill="${c.surface}"/>
+  <path d="M520 366 L700 312 L820 348 L960 300 L1090 344 L1200 306" fill="none" stroke="${c.line}" stroke-width="2" opacity="0.6"/>
+  <rect x="0" y="452" width="1200" height="178" fill="${dark}"/>
+  <path d="M700 630 L1006 452 M1200 604 L1064 452" fill="none" stroke="${c.muted}" stroke-width="3" opacity="0.3"/>
+  <g stroke="${c.accent}" stroke-width="5" opacity="0.45"><path d="M1024 470 l-8 22"/><path d="M1002 516 l-12 32"/><path d="M968 574 l-18 46"/></g>
+  <g transform="translate(818,450)"><rect x="0" y="0" width="150" height="64" rx="8" fill="${dark}"/><rect x="12" y="12" width="128" height="24" rx="3" fill="${c.accentHot}" opacity="0.9"/><circle cx="34" cy="74" r="12" fill="${dark}"/><circle cx="118" cy="74" r="12" fill="${dark}"/></g>
+  <g transform="translate(780,0)"><ellipse cx="300" cy="560" rx="42" ry="7" fill="#000" opacity=".3"/><path d="M300 506 C312 508 318 519 320 533 L326 560 L274 560 L280 533 C282 519 288 508 300 506 Z" fill="${dark}"/><circle cx="300" cy="497" r="10" fill="${dark}"/></g>`;
+}
+
 function ogHTML(book) {
   const p = (book.identity && book.identity.palette) || {};
   const ground = p.ground || "#0E1320", surface = p.surface || "#121a2c",
@@ -115,6 +134,7 @@ function ogHTML(book) {
   const c = { ground, surface, ink, accent, accentHot, secondary, muted };
   const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
   const scene = kind === "highsun" ? highsunScene(c)
+              : kind === "dusk" ? duskScene(c)
               : kind === "daybreak" ? daybreakScene(c)
               : kind === "lantern" ? lanternScene(c)
               : kind === "candlelight" ? candlelightScene(c)
@@ -167,6 +187,7 @@ function coverHTML(book) {
   const c = { ground, surface, ink, accent, accentHot, secondary, muted, line };
   const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
   const scene = kind === "highsun" ? highsunScene(c)
+              : kind === "dusk" ? duskScene(c)
               : kind === "daybreak" ? daybreakScene(c)
               : kind === "lantern" ? lanternScene(c)
               : kind === "candlelight" ? candlelightScene(c)
