@@ -19,13 +19,14 @@ const DIST = join(ROOT, "dist");
 
 await rm(DIST, { recursive: true, force: true });
 await mkdir(DIST, { recursive: true });
-// English Adventures: the library is the root; each book has its own page; the reader app is /read.html
-await cp(join(ROOT, "web", "library.html"), join(DIST, "index.html"));    // / — the English Adventures library (cards from manifest)
+// English Reading Adventures: the library is the root; each book has its own page; the reader app is /read.html
+await cp(join(ROOT, "web", "library.html"), join(DIST, "index.html"));    // / — the English Reading Adventures library (cards from manifest)
 await cp(join(ROOT, "web", "index.html"), join(DIST, "read.html"));       // the reader app
 await cp(join(ROOT, "web", "favicon.svg"), join(DIST, "favicon.svg"));
-// social cards (per-book og-<slug>.png + the library card), generated locally by build_og.mjs
+// social cards (og-<slug>.png) and wordless library-card covers (cover-<slug>.png),
+// both generated locally by build_og.mjs
 for (const f of await readdir(join(ROOT, "web"))) {
-  if (/^og.*\.png$/.test(f)) await cp(join(ROOT, "web", f), join(DIST, f));
+  if (/^(og|cover).*\.png$/.test(f)) await cp(join(ROOT, "web", f), join(DIST, f));
 }
 // copy the art folder if the team has added any images
 try { await cp(join(ROOT, "images"), join(DIST, "images"), { recursive: true }); console.log("Copied images/"); } catch { /* no images yet — placeholders show */ }

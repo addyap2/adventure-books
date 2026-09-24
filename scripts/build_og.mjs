@@ -106,7 +106,7 @@ function ogHTML(book) {
   const line = (book.identity && book.identity.hero && book.identity.hero.line && book.identity.hero.line.en) || book.blurb || "";
   const levels = (book.levels || []).join(" · ");
   const title = book.title || "";
-  const titleSize = title.length > 12 ? 92 : 104;
+  const titleSize = title.length > 20 ? 68 : title.length > 12 ? 92 : 104;
   return `<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:${ground}}svg{display:block}</style></head><body>
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -133,6 +133,38 @@ function ogHTML(book) {
 </svg></body></html>`;
 }
 
+// The library-card cover: the same per-book scene as the OG card, but wordless —
+// no scrim, no title — so each card on the main page shows its own distinct picture
+// (nocturne skyline / lantern market / candlelight street) instead of one recoloured
+// treatment. Rendered 1200x630 and used with background-size:cover on the card.
+function coverHTML(book) {
+  const p = (book.identity && book.identity.palette) || {};
+  const ground = p.ground || "#0E1320", surface = p.surface || "#121a2c",
+        ink = p.ink || "#F4EFE6", accent = p.accent || "#E8A24C",
+        accentHot = p.accentHot || "#F4BE72", secondary = p.secondary || "#86C9B4",
+        muted = p.muted || "#8A93A6", line = p.line || "#26304a";
+  const c = { ground, surface, ink, accent, accentHot, secondary, muted, line };
+  const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
+  const scene = kind === "daybreak" ? daybreakScene(c)
+              : kind === "lantern" ? lanternScene(c)
+              : kind === "candlelight" ? candlelightScene(c)
+              : nocturneScene(c);
+  const skyStops = kind === "daybreak"
+    ? `<stop offset="0" stop-color="#AAB7BF"/><stop offset="0.5" stop-color="#6F838D"/><stop offset="1" stop-color="${surface}"/>`
+    : `<stop offset="0" stop-color="${ground}"/><stop offset="0.72" stop-color="${surface}"/><stop offset="1" stop-color="${surface}"/>`;
+  return `<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:${ground}}svg{display:block}</style></head><body>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">${skyStops}</linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="${accentHot}" stop-opacity="0.85"/><stop offset="0.42" stop-color="${accent}" stop-opacity="0.3"/><stop offset="1" stop-color="${accent}" stop-opacity="0"/></radialGradient>
+    <radialGradient id="vig" cx="50%" cy="42%" r="80%"><stop offset="0.5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.4"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky)"/>
+  ${scene}
+  <rect width="1200" height="630" fill="url(#vig)"/>
+</svg></body></html>`;
+}
+
 const files = (await readdir(CONTENT)).filter((f) => f.endsWith(".json"));
 const tmp = await mkdtemp(join(tmpdir(), "wm-og-"));
 let n = 0;
@@ -147,6 +179,14 @@ for (const f of files) {
     "--force-device-scale-factor=1", "--window-size=1200,630",
     `--screenshot=${out}`, `file://${htmlPath}`], { stdio: "ignore" });
   console.log(`og-${slug}.png  ← ${book.title}`);
+  // wordless library-card cover (same scene, no text)
+  const covPath = join(tmp, slug + "-cover.html");
+  const covOut = join(WEB, `cover-${slug}.png`);
+  await writeFile(covPath, coverHTML(book));
+  execFileSync(CHROME, ["--headless", "--disable-gpu", "--hide-scrollbars",
+    "--force-device-scale-factor=1", "--window-size=1200,630",
+    `--screenshot=${covOut}`, `file://${covPath}`], { stdio: "ignore" });
+  console.log(`cover-${slug}.png  ← ${book.title}`);
   n++;
 }
-console.log(`Generated ${n} per-book OG card(s).`);
+console.log(`Generated ${n} per-book OG card(s) and cover(s).`);

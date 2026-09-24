@@ -4,22 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0E1320">
-<meta name="description" content="English Adventures — interactive stories where you are the hero, for people learning English. Read at your level, with meaning in eight languages.">
+<meta name="description" content="English Reading Adventures — interactive stories where you are the hero, for people learning English. Read at your level, with meaning in eight languages.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://adventure-books-five.vercel.app/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="English Adventures">
+<meta property="og:site_name" content="English Reading Adventures">
 <meta property="og:url" content="https://adventure-books-five.vercel.app/">
-<meta property="og:title" content="English Adventures — interactive stories for people learning English">
+<meta property="og:title" content="English Reading Adventures — interactive stories for people learning English">
 <meta property="og:description" content="Find your way, one story at a time. Branching stories where you are the hero — read at your level, with meaning in eight languages.">
 <meta property="og:image" content="https://adventure-books-five.vercel.app/og-english-adventures.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="English Adventures — interactive stories for people learning English">
+<meta name="twitter:title" content="English Reading Adventures — interactive stories for people learning English">
 <meta name="twitter:description" content="Find your way, one story at a time. Stories where you are the hero, for English learners.">
 <meta name="twitter:image" content="https://adventure-books-five.vercel.app/og-english-adventures.png">
-<title>English Adventures</title>
+<title>English Reading Adventures</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -109,7 +109,7 @@
 <body>
 
 <header class="bar">
-  <a class="brand" href="/"><span class="mark" aria-hidden="true"></span>English Adventures</a>
+  <a class="brand" href="/"><span class="mark" aria-hidden="true"></span>English Reading Adventures</a>
   <span class="navnote">An English Reading Adventure</span>
 </header>
 
@@ -117,7 +117,7 @@
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">An English Reading Adventure</p>
-      <h1>English Adventures</h1>
+      <h1>English Reading Adventures</h1>
       <p class="byline">by Antony Addy</p>
       <p class="tagline">Find your way, one story at a time.</p>
       <p class="intro">Branching stories for people learning English. You choose what happens next; the English meets you at your level; and the meaning waits in your language whenever you need it. Every book is its own world &mdash; step into one.</p>
@@ -133,7 +133,7 @@
       <div class="shelf" id="shelf">
 
         <a class="book" data-static href="/b/the-address" style="--accent:#E8A24C">
-          <div class="cov"><span class="win" aria-hidden="true"></span></div>
+          <div class="cov" style="background-image:url(/cover-the-address.png);background-size:cover;background-position:center"></div>
           <div class="meta">
             <span class="ep">An English Adventure</span>
             <h3>The Address</h3>
@@ -148,7 +148,7 @@
           <div class="meta">
             <span class="ep">An English Adventure</span>
             <h3>Coming soon</h3>
-            <p>Another standalone story, its own world and its own look &mdash; each English Adventures book is designed as its own place.</p>
+            <p>Another standalone story, its own world and its own look &mdash; each English Reading Adventures book is designed as its own place.</p>
             <span class="tags">In the works</span>
           </div>
         </div>
@@ -175,12 +175,13 @@
     eps.forEach(function(e){
       var pal=(e.identity&&e.identity.palette)||{};
       var accent=pal.accent||'#E8A24C';
+      var slug=e.slug||e.file.replace(/\.json$/,'');
       var a=document.createElement('a');
-      a.className='book'; a.href='/b/'+(e.slug||e.file.replace(/\.json$/,''));
+      a.className='book'; a.href='/b/'+slug;
       a.style.setProperty('--accent',accent);
       var tags=((e.levels||[]).join(' · '))+(e.levels&&e.levels.length?' · ':'')+'8 languages';
       a.innerHTML=
-        '<div class="cov"><span class="win" aria-hidden="true"></span></div>'+
+        '<div class="cov" style="background-image:url(/cover-'+slug+'.png);background-size:cover;background-position:center"></div>'+
         '<div class="meta">'+
           '<span class="ep">An English Adventure</span>'+
           '<h3>'+esc(e.title)+'</h3>'+
@@ -199,7 +200,7 @@
 })();
 </script>
 
-<footer><div class="wrap"><b>English Adventures</b> by Antony Addy &nbsp;&middot;&nbsp; An English Reading Adventure &nbsp;&middot;&nbsp; A2 B1 B2 &nbsp;&middot;&nbsp; 8 languages</div></footer>
+<footer><div class="wrap"><b>English Reading Adventures</b> by Antony Addy &nbsp;&middot;&nbsp; An English Reading Adventure &nbsp;&middot;&nbsp; A2 B1 B2 &nbsp;&middot;&nbsp; 8 languages</div></footer>
 
 </body>
 </html>
