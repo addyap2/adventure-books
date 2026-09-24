@@ -342,8 +342,11 @@
   .choices button .goto::before { content:"§ "; opacity:.55; }
   .progress { box-shadow:0 0 10px color-mix(in srgb, var(--accent) 72%, transparent); }
 
-  /* reading surface: a lifted ink card, calm and high-contrast */
-  .para { color:#EAE6DC; }
+  /* reading surface: a lifted ink card, calm and high-contrast.
+     Use the book's --fg (its own ink) so a light-palette book — e.g. a bright
+     daytime world — stays legible under a dark OS scheme; for the dark books
+     --fg is their near-white ink, so this is imperceptible. */
+  .para { color:var(--fg); }
   .meaning button:hover { color:var(--accent); border-color:var(--accent); }
 
   /* ---- the cinematic cover (typographic nocturne, no figurative art) ---- */
@@ -493,7 +496,21 @@
     blanket:'<svg '+S+'><rect x="12" y="20" width="40" height="24" rx="3"/><path d="M12 28h40M12 36h40" opacity="0.5"/><path d="M18 20v24M46 20v24" opacity="0.3"/><path d="M12 44l6-4h28l6 4" opacity="0.6"/></svg>',
     van:'<svg '+S+'><path d="M8 24h30v20H8z"/><path d="M38 30h10l6 8v6H38z"/><path d="M42 30h6l4 6h-10z" fill="currentColor" fill-opacity="0.15"/><circle cx="18" cy="48" r="4"/><circle cx="46" cy="48" r="4"/><path d="M8 44h30" opacity="0.5"/></svg>',
     ice:'<svg '+S+'><rect x="10" y="18" width="44" height="26" rx="2"/><path d="M20 18l8 13-6 13M40 18l-6 13 8 13M28 31h6" opacity="0.7"/><path d="M10 44h44" stroke-dasharray="2 4" opacity="0.6"/></svg>',
-    dawn:'<svg '+S+'><path d="M6 44h52"/><path d="M20 44a12 12 0 0 1 24 0z" fill="currentColor" fill-opacity="0.18"/><path d="M32 22v-6M14 30l-4-3M50 30l4-3M22 24l-2-4M42 24l2-4" opacity="0.7"/></svg>'
+    dawn:'<svg '+S+'><path d="M6 44h52"/><path d="M20 44a12 12 0 0 1 24 0z" fill="currentColor" fill-opacity="0.18"/><path d="M32 22v-6M14 30l-4-3M50 30l4-3M22 24l-2-4M42 24l2-4" opacity="0.7"/></svg>',
+    /* --- The Cool of Evening's set (desert / high noon) --- */
+    sun:'<svg '+S+'><circle cx="32" cy="32" r="11"/><path d="M32 6v8M32 50v8M6 32h8M50 32h8M14 14l6 6M44 44l6 6M50 14l-6 6M20 44l-6 6"/></svg>',
+    ridge:'<svg '+S+'><path d="M6 46l14-18 10 12 8-14 20 20"/><path d="M6 52h52"/></svg>',
+    dune:'<svg '+S+'><path d="M6 44c8-10 16-10 24 0M34 44c6-8 14-8 24 0"/><path d="M6 52h52"/></svg>',
+    shimmer:'<svg '+S+'><path d="M10 26c6-4 12 4 18 0s12-4 18 0"/><path d="M10 36c6-4 12 4 18 0s12-4 18 0"/><path d="M10 46c6-4 12 4 18 0s12-4 18 0"/></svg>',
+    road:'<svg '+S+'><path d="M22 52L28 18M42 52L36 18"/><path d="M32 24v4M32 34v4M32 44v4" opacity="0.7"/><path d="M6 52h52" opacity="0.5"/></svg>',
+    bottle:'<svg '+S+'><path d="M26 10h12v6l3 6v28a4 4 0 0 1-4 4H27a4 4 0 0 1-4-4V22l3-6z"/><line x1="23" y1="32" x2="41" y2="32" opacity="0.6"/></svg>',
+    crate:'<svg '+S+'><rect x="12" y="22" width="40" height="30" rx="2"/><path d="M12 32h40M12 42h40M24 22v30M40 22v30" opacity="0.5"/></svg>',
+    windmill:'<svg '+S+'><circle cx="32" cy="22" r="3"/><path d="M32 22V8M32 22l13 7M32 22l-13 7"/><path d="M32 25v18"/><path d="M23 55l9-12 9 12"/></svg>',
+    well:'<svg '+S+'><path d="M16 28h32"/><path d="M19 28l3 26h20l3-26"/><path d="M21 20h22l-4-6H25z" fill="currentColor" fill-opacity="0.14"/><line x1="32" y1="14" x2="32" y2="28" opacity="0.6"/></svg>',
+    pickup:'<svg '+S+'><path d="M6 42V30h26v12"/><path d="M32 42V34h8l6 6v2"/><line x1="6" y1="42" x2="46" y2="42"/><circle cx="16" cy="46" r="4"/><circle cx="40" cy="46" r="4"/></svg>',
+    truck:'<svg '+S+'><rect x="8" y="22" width="28" height="22"/><path d="M36 28h10l8 8v8H36z"/><line x1="8" y1="44" x2="54" y2="44"/><circle cx="18" cy="48" r="4"/><circle cx="44" cy="48" r="4"/></svg>',
+    radio:'<svg '+S+'><rect x="12" y="26" width="40" height="24" rx="2"/><circle cx="24" cy="38" r="6"/><line x1="38" y1="32" x2="48" y2="32"/><line x1="38" y1="38" x2="48" y2="38"/><line x1="38" y1="44" x2="48" y2="44" opacity="0.7"/><path d="M44 26l6-12"/></svg>',
+    tarp:'<svg '+S+'><path d="M8 24c12-6 36-6 48 0"/><path d="M8 24l12 14 12-14 12 14 8-14" opacity="0.6"/><path d="M8 24l4 24M56 24l-4 24"/><path d="M14 48h36" stroke-dasharray="2 4" opacity="0.6"/></svg>'
   };
   /* series -> { node id -> the motif that sums up that passage }. One set per book. */
   window.__ART={
@@ -539,6 +556,20 @@
     101:'dawn',102:'candle',103:'house',104:'van',105:'dawn',106:'dawn',107:'house',110:'dawn',111:'candle',112:'candle',
     113:'candle',114:'snowflake',
     120:'heater',121:'lantern',122:'companions',123:'coin',124:'blanket',125:'blanket',126:'flame',127:'house',128:'coin',129:'ice',130:'bed',131:'door'
+   },
+   "cool-of-evening":{
+    1:'bus',2:'crate',3:'radio',4:'tarp',5:'road',6:'map',8:'child',9:'crate',10:'companions',
+    11:'child',12:'companions',13:'crate',14:'tarp',15:'sign',16:'hand',17:'child',18:'sun',19:'companions',20:'road',
+    21:'road',22:'sign',23:'road',24:'pickup',25:'companions',26:'road',27:'dune',28:'dune',29:'tarp',30:'road',
+    31:'hand',32:'hand',33:'road',34:'bottle',35:'road',36:'tarp',37:'companions',38:'sun',39:'sign',40:'pickup',
+    41:'coin',42:'road',43:'coin',44:'coin',45:'bottle',46:'bottle',47:'pickup',48:'coin',49:'coin',50:'ridge',
+    51:'shimmer',52:'ridge',53:'road',54:'tarp',55:'hand',56:'sun',57:'tarp',58:'sun',60:'road',61:'hand',
+    62:'child',63:'companions',64:'dune',65:'sun',67:'bottle',68:'crate',69:'station',70:'windmill',71:'door',72:'hand',
+    73:'station',74:'well',75:'road',76:'companions',77:'companions',78:'station',79:'photo',80:'pickup',90:'child',
+    91:'child',92:'companions',93:'bottle',94:'child',95:'crate',96:'tarp',97:'child',98:'windmill',99:'windmill',100:'sun',
+    101:'truck',102:'sun',103:'truck',104:'truck',105:'ridge',106:'dune',107:'truck',110:'ridge',111:'map',112:'map',
+    113:'map',114:'map',
+    120:'crate',121:'well',122:'companions',123:'road',124:'hand',125:'hand',126:'truck',127:'road',128:'coin',129:'dune',130:'child',131:'bottle'
    }
   };
 })();
