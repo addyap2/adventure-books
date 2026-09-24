@@ -62,6 +62,18 @@
   .tagline{font-family:var(--serif);font-size:clamp(1.2rem,2.6vw,1.7rem);font-style:italic;color:var(--dawn);margin:10px 0 0}
   .intro{max-width:52ch;color:#c3cad9;font-size:clamp(1rem,1.5vw,1.15rem);margin:22px 0 0;line-height:1.6}
 
+  /* how it works */
+  .how{padding:clamp(16px,4vh,40px) 0 0}
+  .how-grid{display:grid;gap:22px;grid-template-columns:1fr;border-top:1px solid var(--line);padding-top:clamp(26px,5vh,44px)}
+  @media(min-width:720px){.how-grid{grid-template-columns:repeat(3,1fr);gap:34px}}
+  .step{display:flex;flex-direction:column;gap:8px}
+  .step .n{font-family:var(--mono);font-size:12px;letter-spacing:.24em;color:var(--amber)}
+  .step h4{font-family:var(--serif);font-weight:400;font-size:1.3rem;margin:0;letter-spacing:-.01em;color:#fff}
+  .step p{margin:0;color:#aeb6c6;font-size:.98rem;line-height:1.55}
+  .langs{margin:clamp(26px,5vh,42px) 0 0;display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px}
+  .langs .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .langs .list{color:var(--dawn);font-size:1.02rem;font-family:var(--serif)}
+
   /* library */
   .lib{padding:clamp(30px,6vh,64px) 0 clamp(80px,14vh,140px)}
   .lib-head{display:flex;align-items:baseline;gap:16px;margin:0 0 30px;border-top:1px solid var(--line);padding-top:26px}
@@ -118,7 +130,33 @@
       <h1>English Reading Adventures</h1>
       <p class="byline">by Antony Addy</p>
       <p class="tagline">Find your way, one story at a time.</p>
-      <p class="intro">Branching stories for people learning English. You choose what happens next; the English meets you at your level; and the meaning waits in your language whenever you need it. Every book is its own world &mdash; step into one.</p>
+      <p class="intro">Branching stories for people learning English, where you are the hero. The same story is written at three levels &mdash; so you read at A2, B1, or B2, switch level whenever you like, and still make the same choices as everyone else. Every word waits in your language when you need it.</p>
+    </div>
+  </section>
+
+  <section class="how">
+    <div class="wrap">
+      <div class="how-grid">
+        <div class="step">
+          <span class="n">01</span>
+          <h4>Pick your level</h4>
+          <p>Read at A2, B1, or B2 &mdash; beginner to advanced &mdash; and change it any time, even mid-story. Every level follows the same path, so a whole class can read one book together.</p>
+        </div>
+        <div class="step">
+          <span class="n">02</span>
+          <h4>Read and choose</h4>
+          <p>Every page ends in a decision, and you decide what happens next. Choosing well means understanding what you just read.</p>
+        </div>
+        <div class="step">
+          <span class="n">03</span>
+          <h4>Tap any word</h4>
+          <p>See its meaning in your own language, right where you are &mdash; the English first, your language as the safety net beneath it.</p>
+        </div>
+      </div>
+      <p class="langs">
+        <span class="lbl">Word help in</span>
+        <span class="list">Français &middot; Español &middot; Português &middot; Italiano &middot; Deutsch &middot; Русский &middot; العربية &middot; 中文</span>
+      </p>
     </div>
   </section>
 
