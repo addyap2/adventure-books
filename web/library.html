@@ -65,9 +65,13 @@
      when the pointer (or keyboard focus) is over the hero. */
   .morph{transition:opacity .4s ease}
   .morph.fading{opacity:0}
-  .langcode{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
-    color:var(--muted);margin:14px 0 0;min-height:1em;transition:opacity .4s ease}
-  .tagline[dir=rtl],.intro[dir=rtl]{text-align:right}
+  /* a clear, persistent cue that the copy is being shown in different languages */
+  .langpill{display:inline-flex;align-items:center;gap:9px;margin:18px 0 6px;
+    font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:7px 14px}
+  .langpill svg{width:15px;height:15px;color:var(--amber);flex:none}
+  .langpill b{color:var(--amber-hot);font-weight:500}
+  .tagline[dir=rtl],.intro[dir=rtl],.step h4[dir=rtl],.step p[dir=rtl]{text-align:right}
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
   /* how it works */
@@ -139,8 +143,11 @@
       <h1>English Reading Adventures</h1>
       <p class="byline">by Antony Addy</p>
       <div id="heroMorph">
+        <p class="langpill morph" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.8 2.6 15.6 0 18.4M12 2.8c-2.6 2.8-2.6 15.6 0 18.4"/></svg>
+          <span class="lp-static">Shown in</span> <b id="hLang">English</b>
+        </p>
         <p class="tagline morph" id="hTag">Find your way, one story at a time.</p>
-        <p class="langcode morph" id="hLang" aria-hidden="true"></p>
         <p class="intro morph" id="hIntro">Branching stories for people learning English, where you are the hero. The same story is written at three levels &mdash; so you read at A2, B1, or B2, switch level whenever you like, and still make the same choices as everyone else. Every word waits in your language when you need it.</p>
       </div>
       <p class="sr-only">Find your way, one story at a time. Branching stories for people learning English, where you are the hero. The same story is written at three levels — so you read at A2, B1, or B2, switch level whenever you like, and still make the same choices as everyone else. Every word waits in your language when you need it.</p>
@@ -149,23 +156,24 @@
 
   <section class="how">
     <div class="wrap">
-      <div class="how-grid">
+      <div class="how-grid" id="howGrid" aria-hidden="true">
         <div class="step">
           <span class="n">01</span>
-          <h4>Pick your level</h4>
-          <p>Read at A2, B1, or B2 &mdash; beginner to advanced &mdash; and change it any time, even mid-story. Every level follows the same path, so a whole class can read one book together.</p>
+          <h4 class="morph" id="s1h">Pick your level</h4>
+          <p class="morph" id="s1b">Read at A2, B1, or B2 &mdash; beginner to advanced &mdash; and change it any time, even mid-story. Every level follows the same path, so a whole class can read one book together.</p>
         </div>
         <div class="step">
           <span class="n">02</span>
-          <h4>Read and choose</h4>
-          <p>Every page ends in a decision, and you decide what happens next. Choosing well means understanding what you just read.</p>
+          <h4 class="morph" id="s2h">Read and choose</h4>
+          <p class="morph" id="s2b">Every page ends in a decision, and you decide what happens next. Choosing well means understanding what you just read.</p>
         </div>
         <div class="step">
           <span class="n">03</span>
-          <h4>Tap any word</h4>
-          <p>See its meaning in your own language, right where you are &mdash; the English first, your language as the safety net beneath it.</p>
+          <h4 class="morph" id="s3h">Tap any word</h4>
+          <p class="morph" id="s3b">See its meaning in your own language, right where you are &mdash; the English first, your language as the safety net beneath it.</p>
         </div>
       </div>
+      <p class="sr-only">Pick your level. Read at A2, B1, or B2 — beginner to advanced — and change it any time, even mid-story. Every level follows the same path, so a whole class can read one book together. Read and choose. Every page ends in a decision, and you decide what happens next. Choosing well means understanding what you just read. Tap any word. See its meaning in your own language, right where you are — the English first, your language as the safety net beneath it.</p>
       <p class="langs">
         <span class="lbl">Word help in</span>
         <span class="list">Français &middot; Español &middot; Português &middot; Italiano &middot; Deutsch &middot; Русский &middot; العربية &middot; 中文</span>
@@ -250,55 +258,100 @@
 </script>
 
 <script>
-/* Hero language morph: the tagline + intro fade from one site language to the next, and
-   hold while the pointer or keyboard focus is over the hero. Respects reduced-motion, and
-   leaves an accessible English copy (.sr-only) for screen readers. Translations are drafts
-   pending a native-speaker check (esp. ru / ar / zh). */
+/* Home language morph: the hero (tagline + intro) AND the "how it works" steps fade from
+   one site language to the next together, with a persistent "Shown in <language>" pill so
+   the switching is obvious. Holds while the pointer or keyboard focus is over the hero or
+   the steps. Respects reduced-motion (stays English, pill shows the language count), and
+   leaves accessible English copies (.sr-only) for screen readers. Translations are drafts
+   pending a native-speaker check (esp. ru / ar / zh) — see review/ui-strings/. */
 (function(){
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var tag=document.getElementById("hTag"), intro=document.getElementById("hIntro"),
-      lang=document.getElementById("hLang"), morph=document.getElementById("heroMorph"),
-      hero=document.querySelector(".hero");
-  if(!tag||!intro||!lang||!hero||reduce) return;
+  var $ = function(id){ return document.getElementById(id); };
+  var lang=$("hLang"), heroMorph=$("heroMorph"), howGrid=$("howGrid"),
+      hero=document.querySelector(".hero"), how=document.querySelector(".how");
+  var ids=["hTag","hIntro","s1h","s1b","s2h","s2b","s3h","s3b"], el={};
+  ids.forEach(function(k){ el[k]=$(k); });
+  if(!lang||!el.hTag||!el.s1h) return;
+  if(reduce){ var ls=document.querySelector(".lp-static"); if(ls) ls.textContent="In"; lang.textContent="8 languages"; return; }
   var S=[
-    {c:"",         d:"ltr", t:"Find your way, one story at a time.",
-      p:"Branching stories for people learning English, where you are the hero. The same story is written at three levels — so you read at A2, B1, or B2, switch level whenever you like, and still make the same choices as everyone else. Every word waits in your language when you need it."},
-    {c:"Français", d:"ltr", t:"Trouvez votre chemin, une histoire à la fois.",
-      p:"Des histoires à embranchements pour qui apprend l'anglais, où c'est vous le héros. La même histoire est écrite à trois niveaux — vous lisez en A2, B1 ou B2, changez de niveau quand vous voulez, et faites les mêmes choix que tout le monde. Chaque mot vous attend dans votre langue dès que vous en avez besoin."},
-    {c:"Español",  d:"ltr", t:"Encuentra tu camino, una historia a la vez.",
-      p:"Historias ramificadas para quienes aprenden inglés, donde el héroe eres tú. La misma historia está escrita en tres niveles: lees en A2, B1 o B2, cambias de nivel cuando quieras y tomas las mismas decisiones que los demás. Cada palabra te espera en tu idioma cuando la necesitas."},
-    {c:"Português",d:"ltr", t:"Encontra o teu caminho, uma história de cada vez.",
-      p:"Histórias ramificadas para quem aprende inglês, em que o herói és tu. A mesma história está escrita em três níveis — lês em A2, B1 ou B2, mudas de nível quando quiseres e fazes as mesmas escolhas que os outros. Cada palavra espera por ti na tua língua sempre que precisares."},
-    {c:"Italiano", d:"ltr", t:"Trova la tua strada, una storia alla volta.",
-      p:"Storie a bivi per chi impara l'inglese, dove l'eroe sei tu. La stessa storia è scritta su tre livelli: leggi in A2, B1 o B2, cambi livello quando vuoi e fai le stesse scelte di tutti gli altri. Ogni parola ti aspetta nella tua lingua quando ne hai bisogno."},
-    {c:"Deutsch",  d:"ltr", t:"Finde deinen Weg, eine Geschichte nach der anderen.",
-      p:"Verzweigte Geschichten für alle, die Englisch lernen – und du bist die Heldin oder der Held. Dieselbe Geschichte gibt es auf drei Niveaus: Du liest in A2, B1 oder B2, wechselst das Niveau, wann du willst, und triffst dieselben Entscheidungen wie alle anderen. Jedes Wort wartet in deiner Sprache, wenn du es brauchst."},
-    {c:"Русский",  d:"ltr", t:"Найди свой путь — по одной истории за раз.",
-      p:"Разветвлённые истории для тех, кто учит английский, где герой — это ты. Одна и та же история написана на трёх уровнях: читай на A2, B1 или B2, меняй уровень когда захочешь и делай те же выборы, что и все остальные. Каждое слово ждёт тебя на твоём языке, когда оно понадобится."},
-    {c:"العربية",  d:"rtl", t:"اعثر على طريقك، قصة تلو الأخرى.",
-      p:"قصص متشعّبة لمن يتعلّمون الإنجليزية، وأنت البطل فيها. القصة نفسها مكتوبة بثلاثة مستويات — تقرأ في A2 أو B1 أو B2، وتغيّر المستوى متى شئت، وتتّخذ القرارات نفسها التي يتّخذها الجميع. كل كلمة تنتظرك بلغتك عندما تحتاج إليها."},
-    {c:"中文",     d:"ltr", t:"找到你的路，一次一个故事。",
-      p:"为学习英语的人打造的分支故事，你就是主角。同一个故事写成三个难度——你可以用 A2、B1 或 B2 阅读，随时切换难度，并和大家做出相同的选择。每个词都会在你需要时以你的语言等着你。"}
+    {c:"English",  d:"ltr",
+      hTag:"Find your way, one story at a time.",
+      hIntro:"Branching stories for people learning English, where you are the hero. The same story is written at three levels — so you read at A2, B1, or B2, switch level whenever you like, and still make the same choices as everyone else. Every word waits in your language when you need it.",
+      s1h:"Pick your level", s1b:"Read at A2, B1, or B2 — beginner to advanced — and change it any time, even mid-story. Every level follows the same path, so a whole class can read one book together.",
+      s2h:"Read and choose", s2b:"Every page ends in a decision, and you decide what happens next. Choosing well means understanding what you just read.",
+      s3h:"Tap any word", s3b:"See its meaning in your own language, right where you are — the English first, your language as the safety net beneath it."},
+    {c:"Français", d:"ltr",
+      hTag:"Trouvez votre chemin, une histoire à la fois.",
+      hIntro:"Des histoires à embranchements pour qui apprend l'anglais, où c'est vous le héros. La même histoire est écrite à trois niveaux — vous lisez en A2, B1 ou B2, changez de niveau quand vous voulez, et faites les mêmes choix que tout le monde. Chaque mot vous attend dans votre langue dès que vous en avez besoin.",
+      s1h:"Choisissez votre niveau", s1b:"Lisez en A2, B1 ou B2 — du débutant à l'avancé — et changez de niveau quand vous voulez, même en pleine histoire. Chaque niveau suit le même chemin : toute une classe peut lire le même livre ensemble.",
+      s2h:"Lisez et choisissez", s2b:"Chaque page se termine par une décision, et c'est vous qui décidez de la suite. Bien choisir, c'est comprendre ce que vous venez de lire.",
+      s3h:"Touchez n'importe quel mot", s3b:"Voyez son sens dans votre langue, là où vous êtes — l'anglais d'abord, votre langue comme filet de sécurité en dessous."},
+    {c:"Español",  d:"ltr",
+      hTag:"Encuentra tu camino, una historia a la vez.",
+      hIntro:"Historias ramificadas para quienes aprenden inglés, donde el héroe eres tú. La misma historia está escrita en tres niveles: lees en A2, B1 o B2, cambias de nivel cuando quieras y tomas las mismas decisiones que los demás. Cada palabra te espera en tu idioma cuando la necesitas.",
+      s1h:"Elige tu nivel", s1b:"Lee en A2, B1 o B2 —de principiante a avanzado— y cambia de nivel cuando quieras, incluso a mitad de la historia. Todos los niveles siguen el mismo camino, así que una clase entera puede leer el mismo libro junta.",
+      s2h:"Lee y elige", s2b:"Cada página termina en una decisión, y tú decides qué pasa después. Elegir bien significa entender lo que acabas de leer.",
+      s3h:"Toca cualquier palabra", s3b:"Ve su significado en tu propio idioma, justo donde estás: primero el inglés, y tu idioma como red de seguridad debajo."},
+    {c:"Português",d:"ltr",
+      hTag:"Encontra o teu caminho, uma história de cada vez.",
+      hIntro:"Histórias ramificadas para quem aprende inglês, em que o herói és tu. A mesma história está escrita em três níveis — lês em A2, B1 ou B2, mudas de nível quando quiseres e fazes as mesmas escolhas que os outros. Cada palavra espera por ti na tua língua sempre que precisares.",
+      s1h:"Escolhe o teu nível", s1b:"Lê em A2, B1 ou B2 — de principiante a avançado — e muda de nível quando quiseres, mesmo a meio da história. Todos os níveis seguem o mesmo caminho, por isso uma turma inteira pode ler o mesmo livro em conjunto.",
+      s2h:"Lê e escolhe", s2b:"Cada página termina numa decisão, e és tu que decides o que acontece a seguir. Escolher bem é compreender o que acabaste de ler.",
+      s3h:"Toca em qualquer palavra", s3b:"Vê o seu significado na tua língua, ali mesmo — primeiro o inglês, e a tua língua como rede de segurança por baixo."},
+    {c:"Italiano", d:"ltr",
+      hTag:"Trova la tua strada, una storia alla volta.",
+      hIntro:"Storie a bivi per chi impara l'inglese, dove l'eroe sei tu. La stessa storia è scritta su tre livelli: leggi in A2, B1 o B2, cambi livello quando vuoi e fai le stesse scelte di tutti gli altri. Ogni parola ti aspetta nella tua lingua quando ne hai bisogno.",
+      s1h:"Scegli il tuo livello", s1b:"Leggi in A2, B1 o B2 — da principiante ad avanzato — e cambia livello quando vuoi, anche a metà storia. Ogni livello segue lo stesso percorso: un'intera classe può leggere lo stesso libro insieme.",
+      s2h:"Leggi e scegli", s2b:"Ogni pagina finisce con una decisione, e sei tu a decidere cosa succede dopo. Scegliere bene significa capire ciò che hai appena letto.",
+      s3h:"Tocca una parola qualsiasi", s3b:"Scopri il suo significato nella tua lingua, lì dove sei — prima l'inglese, la tua lingua come rete di sicurezza sotto."},
+    {c:"Deutsch",  d:"ltr",
+      hTag:"Finde deinen Weg, eine Geschichte nach der anderen.",
+      hIntro:"Verzweigte Geschichten für alle, die Englisch lernen – und du bist die Heldin oder der Held. Dieselbe Geschichte gibt es auf drei Niveaus: Du liest in A2, B1 oder B2, wechselst das Niveau, wann du willst, und triffst dieselben Entscheidungen wie alle anderen. Jedes Wort wartet in deiner Sprache, wenn du es brauchst.",
+      s1h:"Wähle dein Niveau", s1b:"Lies in A2, B1 oder B2 – vom Anfänger bis fortgeschritten – und wechsle jederzeit, auch mitten in der Geschichte. Jedes Niveau folgt demselben Weg, sodass eine ganze Klasse ein Buch gemeinsam lesen kann.",
+      s2h:"Lies und entscheide", s2b:"Jede Seite endet mit einer Entscheidung, und du bestimmst, wie es weitergeht. Gut zu wählen heißt zu verstehen, was du gerade gelesen hast.",
+      s3h:"Tippe auf jedes Wort", s3b:"Sieh seine Bedeutung in deiner Sprache, genau dort, wo du bist – zuerst das Englische, deine Sprache als Sicherheitsnetz darunter."},
+    {c:"Русский",  d:"ltr",
+      hTag:"Найди свой путь — по одной истории за раз.",
+      hIntro:"Разветвлённые истории для тех, кто учит английский, где герой — это ты. Одна и та же история написана на трёх уровнях: читай на A2, B1 или B2, меняй уровень когда захочешь и делай те же выборы, что и все остальные. Каждое слово ждёт тебя на твоём языке, когда оно понадобится.",
+      s1h:"Выбери свой уровень", s1b:"Читай на A2, B1 или B2 — от начального до продвинутого — и меняй уровень когда угодно, даже посреди истории. Все уровни идут одним путём, так что целый класс может читать одну книгу вместе.",
+      s2h:"Читай и выбирай", s2b:"Каждая страница заканчивается выбором, и ты решаешь, что будет дальше. Выбрать верно — значит понять то, что только что прочитал.",
+      s3h:"Нажми на любое слово", s3b:"Узнай его значение на своём языке, прямо на месте — сначала английский, а твой язык как страховка под ним."},
+    {c:"العربية",  d:"rtl",
+      hTag:"اعثر على طريقك، قصة تلو الأخرى.",
+      hIntro:"قصص متشعّبة لمن يتعلّمون الإنجليزية، وأنت البطل فيها. القصة نفسها مكتوبة بثلاثة مستويات — تقرأ في A2 أو B1 أو B2، وتغيّر المستوى متى شئت، وتتّخذ القرارات نفسها التي يتّخذها الجميع. كل كلمة تنتظرك بلغتك عندما تحتاج إليها.",
+      s1h:"اختر مستواك", s1b:"اقرأ في A2 أو B1 أو B2 — من المبتدئ إلى المتقدّم — وغيّر المستوى متى شئت، حتى في منتصف القصة. كل المستويات تسلك المسار نفسه، فيمكن لصفّ كامل أن يقرأ الكتاب نفسه معًا.",
+      s2h:"اقرأ واختر", s2b:"كل صفحة تنتهي بقرار، وأنت من يقرّر ما يحدث بعد ذلك. حسن الاختيار يعني أن تفهم ما قرأته للتوّ.",
+      s3h:"انقر على أي كلمة", s3b:"اطّلع على معناها بلغتك، في مكانها تمامًا — الإنجليزية أولًا، ولغتك شبكة أمان تحتها."},
+    {c:"中文",     d:"ltr",
+      hTag:"找到你的路，一次一个故事。",
+      hIntro:"为学习英语的人打造的分支故事，你就是主角。同一个故事写成三个难度——你可以用 A2、B1 或 B2 阅读，随时切换难度，并和大家做出相同的选择。每个词都会在你需要时以你的语言等着你。",
+      s1h:"选择你的难度", s1b:"用 A2、B1 或 B2 阅读——从初级到高级——并可随时切换，哪怕在故事中途。每个难度都走同一条路径，所以整个班级可以一起读同一本书。",
+      s2h:"阅读并选择", s2b:"每一页都以一个抉择结束，接下来发生什么由你决定。选得对，意味着你读懂了刚才的内容。",
+      s3h:"点按任意单词", s3b:"就地看到它在你母语中的意思——先是英文，你的语言作为下面的安全网。"}
   ];
-  morph.setAttribute("aria-hidden","true");
+  if(heroMorph) heroMorph.setAttribute("aria-hidden","true");
+  var fadeEls = [lang].concat(ids.map(function(k){ return el[k]; }));
+  var rtlEls  = ids.map(function(k){ return el[k]; });
   var i=0, paused=false;
   function apply(s){
-    tag.setAttribute("dir",s.d); intro.setAttribute("dir",s.d);
-    tag.textContent=s.t; intro.textContent=s.p;
-    lang.textContent = s.c ? ("— "+s.c) : "";
+    rtlEls.forEach(function(e){ e.setAttribute("dir", s.d); });
+    ids.forEach(function(k){ el[k].textContent = s[k]; });
+    lang.textContent = s.c;
   }
-  function fade(on){ [tag,intro,lang].forEach(function(el){ el.classList.toggle("fading",on); }); }
+  function fade(on){ fadeEls.forEach(function(e){ e.classList.toggle("fading", on); }); }
   function step(){
     if(paused) return;
     i=(i+1)%S.length;
     fade(true);
     setTimeout(function(){ apply(S[i]); fade(false); }, 400);
   }
-  setInterval(step, 4200);
-  hero.addEventListener("mouseenter", function(){ paused=true; });
-  hero.addEventListener("mouseleave", function(){ paused=false; });
-  hero.addEventListener("focusin",  function(){ paused=true; });
-  hero.addEventListener("focusout", function(){ paused=false; });
+  setInterval(step, 4800);
+  function pause(){ paused=true; } function resume(){ paused=false; }
+  [hero, how].forEach(function(z){
+    if(!z) return;
+    z.addEventListener("mouseenter", pause); z.addEventListener("mouseleave", resume);
+    z.addEventListener("focusin", pause);    z.addEventListener("focusout", resume);
+  });
 })();
 </script>
 

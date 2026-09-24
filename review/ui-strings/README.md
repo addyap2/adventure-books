@@ -1,9 +1,10 @@
 # UI strings review — native-speaker check
 
-Interface copy that is shown translated (not story text). Right now this is the **home
-hero** — the tagline and intro paragraph that morph through the eight site languages on
-`web/library.html`. The English is authoritative; each translated draft wants a native
-speaker's eyes before launch, exactly like the glossary (`../glossary/`).
+Interface copy that is shown translated (not story text). Right now this is the **home page**
+— the hero (tagline + intro) and the three "how it works" steps (heading + body), which
+morph through the eight site languages on `web/library.html`. The English is authoritative;
+each translated draft wants a native speaker's eyes before launch, exactly like the glossary
+(`../glossary/`).
 
 ## The file
 
@@ -11,7 +12,7 @@ speaker's eyes before launch, exactly like the glossary (`../glossary/`).
 
 | column | what to do |
 |---|---|
-| `string_id` | `tagline` or `intro` — do not change |
+| `string_id` | which string (`tagline`, `intro`, `step1_heading`, `step1_body`, …) — do not change |
 | `location` | where it appears — do not change |
 | `language` | fr / es / pt / it / de / ru / ar / zh — do not change |
 | `english_source` | the meaning to preserve — **match this**, keep it natural, not literal |
