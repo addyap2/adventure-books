@@ -576,6 +576,263 @@ P(69,
    t("It's too much. Go to Ada.", "It's too much — go to Ada.", "It's too much — go to Ada.")])
 
 
+# ============================ ACT III — TOWARD FIRST LIGHT =================
+
+P(90,
+  t("The last stretch to Ada's door. Your legs are lead. Your chest burns with the cold. But her house is right there now, dark and quiet on the top of the hill. You made it. Whatever you carry, whatever you did on the way, this is the moment it was all for.",
+    "The last stretch to Ada's door. Your legs are lead, your chest burning with the cold. But her house is right there now, dark and quiet on the top of the hill. You made it. Whatever you're carrying, whatever you did on the way, this is the moment it was all for.",
+    "The last stretch to Ada's door. Your legs are lead and your chest is burning with the cold — but her house is right there now, dark and quiet on the very top of the hill. You made it. Whatever you're carrying, and whatever you did on the way up, this is the moment it was all for."),
+  [t("Let yourself in.", "Let yourself in.", "Let yourself in."),
+   t("The van man's last offer.", "The van man's last offer.", "The van man's last offer."),
+   t("Help arrives behind you.", "Help arrives behind you.", "Help arrives behind you.")])
+
+P(80,
+  t("The van man has followed the fear all the way up the hill. \"Still cold up here?\" he says, smiling. \"Last chance, friend. One little heater, and she's warm by morning.\" He stands at Ada's very door now. He is selling to you over her cold roof. It is your last chance to say no to him for good.",
+    "The van man has followed the fear all the way up the hill. \"Still cold up here?\" he says, smiling. \"Last chance, friend — one little heater, and she's warm by morning.\" He's at Ada's very door now, selling to you over her cold roof. It's your last chance to refuse him for good.",
+    "The van man has followed the fear all the way up the hill. \"Still cold up here?\" he says, smiling that warm smile. \"Last chance, friend — one little heater, and she's warm by morning.\" He's standing at Ada's very door now, selling to you over her cold roof. It's your last chance to refuse him, for good and all."),
+  [t("Pay him.", "Pay him.", "Pay him."),
+   t("Refuse for good.", "Refuse for good.", "Refuse for good.")])
+
+P(91,
+  t("Inside, Ada's house is dark and terribly cold. She lies under thin blankets, small in the big bed. Her breathing is shallow and quick. \"Is that you?\" she whispers. \"I knew someone would come.\" You have found her in time — but only just. Now everything depends on what you do next.",
+    "Inside, Ada's house is dark and terribly cold. She lies under thin blankets, small in the big bed, her breathing shallow and quick. \"Is that you?\" she whispers. \"I knew someone would come.\" You've found her in time — but only just. Now everything depends on what you do next.",
+    "Inside, Ada's house is dark and terribly cold, colder than the street almost. She lies under thin blankets, small in the big bed, her breathing shallow and quick. \"Is that you?\" she whispers. \"I knew someone would come.\" You've found her in time — but only just. Now everything depends on what you do in the next few minutes."),
+  [t("Set up warmth.", "Set up warmth.", "Set up warmth."),
+   t("Check she's alright.", "Check she's alright.", "Check she's alright."),
+   t("Her window faces the hill.", "Her window looks toward the hill.", "Her window looks toward the hill.")])
+
+P(92,
+  t("Behind you on the hill come lights and voices. The neighbours you rallied have made it up the slope. They carry the stove, the soup, the blankets, the warmth of many hands. You are not alone up here after all. Together, you crowd into Ada's cold house and begin to fill it with life.",
+    "Behind you on the hill come lights and voices. The neighbours you rallied are up the slope at last, carrying the stove, the soup, the blankets, the warmth of many hands. You're not alone up here after all. Together, you crowd into Ada's cold house and begin to fill it with life.",
+    "Behind you on the hill come lights and voices: the neighbours you rallied, up the slope at last, carrying the camping stove, the soup, the blankets, the warmth of many hands at once. You're not alone up here after all. Together, you crowd into Ada's cold, dark house and begin, room by room, to fill it with life."),
+  [t("In to Ada together.", "In to Ada together.", "In to Ada together."),
+   t("Hold the night.", "Hold the night.", "Hold the night."),
+   t("Fires seen from her window.", "Fires seen from her window.", "Fires seen from her window.")])
+
+P(93,
+  t("Now for warmth — and what you can do depends on what you carried up the hill. If you have the paraffin heater, you have real, steady heat. If not, you have candles, blankets, and your own body warmth. It is time to use everything you have, and use it well.",
+    "Now for warmth — and what you can do depends on what you carried up the hill. If you've got the paraffin heater, you have real, steady heat. If not, you have candles, blankets, and your own body warmth. It's time to use everything you have, and use it well.",
+    "Now for warmth — and what you can actually do depends entirely on what you managed to carry up the hill. If you've got the paraffin heater, you have real, steady heat. If not, you have candles, blankets, and your own body warmth. It's time to use everything you have, and to use it well."),
+  [t("The heater.", "The heater.", "The heater."),
+   t("Candles, blankets, body heat.", "Candles, blankets, body heat.", "Candles, blankets, body heat.")])
+
+P(94,
+  t("You kneel by the bed. Ada's eyes open, and she knows you. \"Look at you,\" she says, her voice thin. \"Out in all that, for an old woman.\" She smiles, just a little. She is weak, and cold, but she is here, and awake, and glad. Now you must get her warm, fast.",
+    "You kneel by the bed. Ada's eyes open, and she knows you. \"Look at you,\" she says, her voice thin. \"Out in all that, for an old woman.\" She smiles, just a little. She's weak and cold, but she's here, and awake, and glad of you. Now you have to get her warm, and fast.",
+    "You kneel down by the bed. Ada's eyes open, and she knows you at once. \"Look at you,\" she says, her voice thin as paper. \"Out in all that, for a silly old woman.\" She smiles, just a little. She's weak, and dangerously cold, but she's here, and awake, and glad of you. Now you have to get her warm, and fast."),
+  [t("Get her warm.", "Get her warm.", "Get her warm."),
+   t("Set up the heater.", "Set up the heater.", "Set up the heater.")])
+
+P(95,
+  t("You set the paraffin heater in the middle of the room and light it. It catches with a soft roar, and a circle of real heat spreads out around it. Ada holds her thin hands to the glow. \"Oh,\" she says softly. \"Oh, that's good.\" The little room begins, at last, to thaw.",
+    "You set the paraffin heater in the middle of the room and light it. It catches with a soft roar, and a circle of real heat spreads out around it. Ada holds her thin hands to the glow. \"Oh,\" she says softly. \"Oh, that's good.\" The little room begins, at last, to thaw.",
+    "You set the paraffin heater in the middle of the little room and light it. It catches with a soft roar, and a circle of real, spreading heat opens out around it. Ada holds her thin hands to the glow, trembling. \"Oh,\" she says softly. \"Oh, that's good.\" And the little room begins, at long last, to thaw."),
+  [t("Hold the night.", "Hold the night.", "Hold the night."),
+   t("Help arrives.", "Help arrives.", "Help arrives.")])
+
+P(96,
+  t("You have no heater. So you use everything else. You pile every blanket in the house on the bed. You light candles for their small warmth. You sit close and keep her talking, keep her awake, share your own body heat. It is not much. But sometimes not much, given fully, is enough.",
+    "You have no heater. So you use everything else you've got. You pile every blanket in the house onto the bed. You light candles for their small warmth, sit close, keep her talking and awake, and share your own body heat. It's not much. But sometimes not much, given fully, is enough.",
+    "You have no heater. So you use everything else you've got, and use it well. You pile every blanket in the house onto the bed, light candles for their small warmth, sit close and keep her talking, keep her awake, share your own body heat with her. It isn't much. But sometimes not much, given fully and without holding back, is enough."),
+  [t("Hold the night.", "Hold the night.", "Hold the night."),
+   t("It may not be enough.", "It may not be enough.", "It may not be enough.")])
+
+P(97,
+  t("You do everything you can, but the cold is deep, and Ada is old and weak. Blankets and body heat may not be enough to hold back a night like this. You need more — more heat, more hands, more help. And down the hill, if you rallied them, there are people who could still come.",
+    "You do everything you can, but the cold is deep and Ada is old and weak. Blankets and body heat may not be enough to hold back a night like this. You need more — more heat, more hands, more help. And down the hill, if you rallied them earlier, there are people who could still come.",
+    "You do everything you possibly can, but the cold is deep, and Ada is old and weak. Blankets and body heat alone may not be enough to hold back a night like this one. You need more — more heat, more hands, more help. And down the hill, if you rallied them earlier, there are people who could still come up."),
+  [t("Hold on to dawn.", "Hold on to dawn.", "Hold on to dawn."),
+   t("Send for the rallied help.", "Send for the rallied help.", "Send for the rallied help.")])
+
+P(98,
+  t("From Ada's window, you can see out over the dark hill. And there it is again. The one warm light, burning in the old Harrow house, where no one is meant to be. Ada follows your eyes. \"That house,\" she says slowly. \"That house has been dark for years.\" But it is not dark tonight.",
+    "From Ada's window, you can see out over the dark hill. And there it is again: the one warm light, burning in the old Harrow house, where no one is meant to be. Ada follows your eyes. \"That house,\" she says slowly. \"That house has been dark for years.\" But it isn't dark tonight.",
+    "From Ada's window, you can see out over the dark hill. And there it is again: the one warm light, burning steadily in the old Harrow house, where no one at all is meant to be. Ada follows your eyes to it. \"That house,\" she says slowly, frowning. \"That house has been dark for years.\" But it is not dark tonight."),
+  [t("Get her warm first.", "Get her warm first.", "Get her warm first."),
+   t("The light nags at you.", "The light nags at you.", "The light nags at you.")])
+
+P(99,
+  t("The light on the hill will not leave your mind. A warm light, in a house that should be cold and empty. It could be nothing. It could be someone. On a night like this, a light where no one should be is a real question. You cannot quite ignore it. But Ada needs you here, now.",
+    "The light on the hill won't leave your mind. A warm light, in a house that should be cold and empty. It could be nothing at all. It could be someone. On a night like this, a light where no one should be is a question you can't quite ignore. But Ada needs you here, right now.",
+    "The light on the hill simply won't leave your mind. A warm, steady light, in a house that should by rights be cold and empty. It could be nothing at all. It could be someone. On a night like this, a light where no one should be is a question you can't quite manage to ignore — but Ada needs you here, right now."),
+  [t("Warm Ada first.", "Warm Ada first.", "Warm Ada first."),
+   t("Hold the night.", "Hold the night.", "Hold the night.")])
+
+P(100,
+  t("Now comes the long hold to dawn. You keep the warmth in and the cold out. You watch Ada's breathing. You keep the fire or the candles going, and talk to her softly through the small hours. Hour by slow hour, you hold the night back from her door. And you wait for the light.",
+    "Now comes the long hold to dawn. You keep the warmth in and the cold out. You watch Ada's breathing, keep the fire or the candles going, talk to her softly through the small hours. Hour by slow hour, you hold the night back from her door — and you wait for the light.",
+    "Now comes the long hold to dawn. You keep the warmth in and the cold out. You watch Ada's breathing carefully, keep the fire or the candles going, talk to her softly through the small, dark hours. Hour by slow hour, you hold the night back from her door — and you wait, and wait, for the first light."),
+  [t("Watch for first light.", "Watch for first light.", "Watch for first light."),
+   t("The light on the hill nags.", "The light on the hill nags.", "The light on the hill nags."),
+   t("The night's longest hour.", "The night's longest hour.", "The night's longest hour.")])
+
+P(101,
+  t("Slowly, the sky turns from black to grey. Dawn. And with it, far down the hill, come headlights — the crews, at last, grinding up through the snow. Somewhere, with a low hum, the power comes back on. A lamp glows in the corner. The long night is over, and you held it.",
+    "Slowly, the sky turns from black to grey. Dawn. And with it, far down the hill, come headlights — the crews at last, grinding up through the snow. Somewhere, with a low hum, the power comes back on; a lamp glows in the corner. The long night is over, and you held it.",
+    "Slowly, the sky turns from black to grey. Dawn, at last. And with it, far down the hill, come headlights — the crews at last, grinding their way up through the snow. Somewhere, with a low, blessed hum, the power comes back on; a lamp glows in the corner. The long night is finally over, and you held it back."),
+  [t("First light, and what it finds.", "First light, and what it finds.", "First light, and what it finds."),
+   t("Dawn over the frozen town.", "Dawn over the frozen town.", "Dawn over the frozen town.")])
+
+P(102,
+  t("This is the longest hour, the one just before the dark begins to thin. The cold is at its hardest now. Ada sleeps, then wakes, then sleeps. You fight to stay awake yourself. You have come so far and held so long. You cannot let go now, not with the light so close.",
+    "This is the longest hour — the one just before the dark begins to thin. The cold is at its hardest now. Ada sleeps, then wakes, then sleeps again. You fight to stay awake yourself. You've come so far and held so long; you can't let go now, not with the light so close.",
+    "This is the longest hour of all — the one just before the dark first begins to thin. The cold is at its very hardest now. Ada sleeps, then wakes, then sleeps again. You have to fight to stay awake yourself. You've come so far and held on so long; you can't let go now, not with the first light so close."),
+  [t("Watch for first light.", "Watch for first light.", "Watch for first light."),
+   t("Neighbours' fires down the hill.", "Neighbours' fires down the hill.", "Neighbours' fires down the hill.")])
+
+P(103,
+  t("You look down the hill from the window. All the way down, small fires and candles burn in window after window. The town did not sit alone in the dark. It kept itself warm, house helping house, all through the night. It is a beautiful thing to see. The town got through.",
+    "You look down the hill from the window. All the way down, small fires and candles burn in window after window. The town didn't sit alone in the dark; it kept itself warm, house helping house, all through the night. It's a beautiful thing to see. The town got through.",
+    "You look down the hill from the window. All the way down the slope, small fires and candles burn in window after window after window. The town didn't sit alone in the dark tonight; it kept itself warm, house helping house, all the way through the night. It's a genuinely beautiful thing to see. The town got through."),
+  [t("First light.", "First light.", "First light."),
+   t("The lanterns of the dawn crew.", "The lanterns of the dawn crew.", "The lanterns of the dawn crew.")])
+
+P(104,
+  t("At last, headlights and grit trucks come grinding up the hill toward you. Help has arrived. Men in bright coats climb down, carrying lamps and warm gear. The long wait is over. Whatever the night came to, it is nearly settled now, up here in this cold room. One way or another.",
+    "At last, headlights and grit trucks come grinding up the hill toward you. Help has arrived — men in bright coats climbing down, carrying lamps and warm gear. The long wait is over. Whatever the night came to, up here in this cold room, it's nearly settled now, one way or another.",
+    "At last, headlights and grit trucks come grinding up the hill toward you through the snow. Help has arrived — men in bright coats climbing down, carrying lamps and warm gear and thermoses. The long wait is finally over. Whatever the night came to, up here in this cold room, it's nearly settled now, one way or another."),
+  [t("First light.", "First light.", "First light."),
+   t("What the night came to.", "What the night came to.", "What the night came to.")])
+
+P(105,
+  t("Dawn spreads over the frozen town, pale and clean and quiet. The snow turns from grey to soft white to gold at the edges. After the long black night, the light feels like a gift you had almost forgotten was coming. You stand at the window and watch the world come back.",
+    "Dawn spreads over the frozen town, pale and clean and quiet. The snow turns from grey to soft white to gold at the edges. After the long black night, the light feels like a gift you'd almost forgotten was coming. You stand at the window and watch the world come slowly back.",
+    "Dawn spreads over the frozen town, pale and clean and utterly quiet. The snow turns from grey to soft white to gold at its edges. After the long black night, the light feels like a gift you'd half forgotten was even coming. You stand at the window and watch the whole world come slowly, gently back."),
+  [t("First light.", "First light.", "First light."),
+   t("Help reaches the hill.", "Help reaches the hill.", "Help reaches the hill."),
+   t("The first birdsong.", "The first birdsong.", "The first birdsong.")])
+
+P(106,
+  t("Somewhere out in the white cold, a single bird begins to sing. It sounds absurd, and brave, and beautiful, over all that ice. Morning is coming. Life is coming back. You listen to it, tired to the bone, and something in your chest lifts. You made it. You both made it, to the light.",
+    "Somewhere out in the white cold, a single bird begins to sing. It sounds absurd, and brave, and beautiful, over all that ice. Morning is coming; life is coming back. You listen to it, tired to the bone, and something in your chest lifts. You made it — you both made it, to the light.",
+    "Somewhere out in the white cold, a single bird begins, absurdly, to sing. It sounds brave, and beautiful, and a little mad, over all that ice. Morning is coming; life is coming back to the world. You listen to it, tired to the very bone, and something in your chest lifts. You made it. You both made it, all the way to the light."),
+  [t("First light.", "First light.", "First light."),
+   t("Help reaches the hill.", "Help reaches the hill.", "Help reaches the hill.")])
+
+P(107,
+  t("From Ada's window, you can see the neighbours' fires burning all the way down the hill. Every window a small warm light. The whole street stayed awake together, kept each other going, refused to let the dark win. You started it, back at the bottom, hours and a lifetime ago.",
+    "From Ada's window, you can see the neighbours' fires burning all the way down the hill — every window a small warm light. The whole street stayed awake together, kept each other going, refused to let the dark win. You started it, back at the bottom, hours and a lifetime ago.",
+    "From Ada's window, you can see the neighbours' fires burning all the way down the hill — every window holding its own small warm light. The whole street stayed awake together tonight, kept each other going, and flatly refused to let the dark win. And you started it, back at the bottom of the hill, hours and a whole lifetime ago."),
+  [t("In to Ada.", "In to Ada.", "In to Ada."),
+   t("Hold the night.", "Hold the night.", "Hold the night.")])
+
+# ============================ CLOSING HUBS =================================
+
+P(110,
+  t("First light at last. The crews are here. The power is back. The long night is done. Now, in the grey morning, you see what it all came to, up here on this cold hill. Every choice you made in the dark.",
+    "First light at last. The crews are grinding up the hill, the power is humming back, and the long night is finally done. Now, in the thin grey morning, you can see what it all came to. Every choice you made in the dark, adding up at last to this.",
+    "First light at last. The crews are grinding their way up the hill, the power is humming back into the wires, and the long, hard night is finally done. Now, in the thin grey light of morning, you can see clearly what it all came to. Every single choice you made out there in the dark, adding up at last, up here on this cold hill, to this."),
+  [t("Ada is warm and safe.", "Ada is warm and safe; the heater held.", "Ada is warm and safe; the heater held."),
+   t("You found the light, saved Harrow.", "You found the light, and saved Harrow.", "You found the light, and saved Harrow."),
+   t("Weigh the rest.", "Weigh the rest.", "Weigh the rest.")])
+
+P(111,
+  t("The night adds up now, choice by choice, into what it truly was. Everything you did, and everything you did not do, comes back to you here in the grey light. What did the night make of you?",
+    "The night adds up now, choice by choice, into what it truly was. Everything you did out there in the cold, and everything you chose not to do, comes back to you here in the grey morning light. You take a slow breath, and you weigh it.",
+    "The night adds up now, slowly and honestly, choice by choice, into whatever it truly was. Everything you did out there in the cold and the dark, and everything you quietly chose not to do, comes back to you here in the grey morning light. You take a slow breath, and you make yourself weigh it, all of it, fairly."),
+  [t("The whole street came through.", "The whole street came through together.", "The whole street came through together."),
+   t("You did it clean — no con.", "You did it clean — no con.", "You did it clean — no con."),
+   t("Weigh the rest.", "Weigh the rest.", "Weigh the rest.")])
+
+P(112,
+  t("There is more still to weigh in what the night held. Not everything is a clean win or a clear loss. Some of it is smaller than that, and quieter, and still worth counting in the cold morning light.",
+    "There is more still to weigh in what the night held. Not everything comes down to a clean win or a clear loss; some of it is smaller than that, and quieter, and easy to miss. But it is still worth counting here in the cold morning light.",
+    "There is more still to weigh in what the night held, if you are honest about it. Not everything comes down to a clean win or a clear loss; a good deal of it is smaller than that, and quieter, and easy to miss in the telling. But it is still worth counting here in the cold, grey morning light."),
+  [t("A neighbour takes you both in.", "A neighbour takes you both in.", "A neighbour takes you both in."),
+   t("You gave your warmth away.", "You gave your warmth away.", "You gave your warmth away."),
+   t("Weigh the rest.", "Weigh the rest.", "Weigh the rest.")])
+
+P(113,
+  t("And then there is what the night simply leaves you with, when the winning and losing are done. Not a prize, and not a punishment. Just the plain truth of how it went, and who you were in it.",
+    "And then there is what the night simply leaves you with, when the winning and the losing are both done. Not a prize, and not a punishment. Just the plain truth of how it all went, and of who you turned out to be when the lights went out.",
+    "And then there is what the night simply leaves you with, when the winning and the losing are both done and counted. Not a prize, exactly, and not a punishment either. Just the plain, quiet truth of how it all went in the end, and of who, exactly, you turned out to be when the lights went out and the cold came down."),
+  [t("The power flickers back, late.", "The power flickers back, late.", "The power flickers back, late."),
+   t("The town saw you go out.", "The town saw you go out.", "The town saw you go out."),
+   t("The worst of it.", "The worst of it.", "The worst of it.")])
+
+P(114,
+  t("And then there is the hard end of the night, if it went that way. Not every night can be saved, however hard you try. Sometimes the cold, or the dark, or a wrong turn, is simply stronger. This is where those nights end.",
+    "And then there is the hard end of the night, if that is the way it went for you. Not every night can be saved, however hard you try to save it. Sometimes the cold, or the dark, or one wrong turn, is simply stronger than you are. This is where those nights end.",
+    "And then there is the hard end of the night, if that is the way it went for you in the end. Not every night can be saved, however hard you try to save it, and however far you are willing to go into the cold. Sometimes the dark, or one wrong turn, or a con you should have seen through, is simply stronger than you are. This is where those nights end."),
+  [t("You paid the van man — fleeced.", "You paid the van man — fleeced.", "You paid the van man — fleeced."),
+   t("You were simply too late.", "You were simply too late.", "You were simply too late."),
+   t("The power came back in time.", "The power came back before real harm.", "The power came back before real harm.")])
+
+# ============================ ENDINGS ======================================
+
+P(120,
+  t("The heater held all night, and Ada held with it. At first light she is warm, and breathing easy, and cross with you for worrying. \"All that fuss,\" she says, \"for me.\" The crews find you both asleep by the heater's glow. She is alive because you went out into the dark. That is the whole of it.",
+    "The heater held all night, and Ada held with it. At first light she's warm, and breathing easy, and mock-cross with you for worrying. \"All that fuss,\" she says, \"for me.\" The crews find you both asleep by the heater's glow. She is alive because you went out into the dark. That's the whole of it.",
+    "The heater held all night long, and Ada held on with it. At first light she's warm, and breathing easy, and mock-cross with you for worrying so. \"All that fuss,\" she says, \"for a silly old woman.\" The crews find you both by the glow of the heater, fast asleep in your chairs. She is alive because you went out into the dark and came back. That is the whole of it, and it is enough."),
+  [])
+
+P(121,
+  t("Because you followed a light no one could explain, Mr Harrow is alive. And in the grey dawn, you bring him down the hill to Ada's door. Two old faces meet again by the light of a candle. A brother and a sister, forty years apart. Nobody speaks. Nobody needs to. You did that. On the coldest night, you gave two people back to each other.",
+    "Because you followed a light no one could explain, Mr Harrow is alive. And in the grey dawn, you bring him down the hill to Ada's door. Two old faces — a brother and a sister, forty years apart — meet again by candlelight. Nobody speaks. Nobody needs to. You did that. On the coldest night, you gave two people back to each other.",
+    "Because you followed a light that no one could explain, old Mr Harrow is alive. And in the grey light of dawn, you bring him slowly down the hill to Ada's door. Two old faces — a brother and a sister, forty years apart — meet again by the light of a single candle. Nobody speaks. Nobody needs to. You did that. On the coldest night of the year, you gave two people back to each other."),
+  [])
+
+P(122,
+  t("You never did it alone. By the time the light comes, half the street is awake. One warm room after another glows down the hill. Ada is warm, and so is Mrs Pratt, and so is the family with the baby. The town looked after itself in the dark, because you knocked on the first door. That is what a town is for.",
+    "You never did it alone. By the time the light comes, half the street is awake. One warm room after another glows down the hill. Ada is warm — and so is Mrs Pratt, and the family with the baby. The town looked after itself in the dark, because you knocked on the first door. That's what a town is for.",
+    "You never did any of it alone. By the time the light comes, half the street is awake, and one warm room after another glows all the way down the hill. Ada is warm — and so is Mrs Pratt, and the family with the crying baby. The whole town looked after itself in the dark, because you knocked on that first door. That, in the end, is what a town is for."),
+  [])
+
+P(123,
+  t("You refused the man who sold fear. You took no shortcuts and cut no corners. You got what Ada needed the honest way. From a good shopkeeper, from your own two feet, from people who help for nothing. It was harder. It was slower. But it was clean, and it was enough, and you can look anyone in the eye come morning.",
+    "You refused the man who sold fear. You took no shortcuts and cut no corners. You got what Ada needed the honest way. From a good shopkeeper, from your own two feet, from people who help for nothing. It was harder, and slower. But it was clean, and it was enough, and you can look anyone in the eye come morning.",
+    "You refused the man who sold fear. You took no shortcuts, and you cut no corners. You got what Ada needed the honest way — from a good shopkeeper, from your own two feet, from people who help for nothing at all. It was harder. It was slower. But it was clean, and it was enough, and you can look anyone at all in the eye come morning."),
+  [])
+
+P(124,
+  t("You did not get everything right, and you did not save the night alone. But because you stopped for a stranger earlier, a door opens now that would have stayed shut. A neighbour takes you and Ada both in. They sit you by a real fire and press hot soup into your hands. Warmth, given for warmth. It is not the whole win. But it is real, and it is enough for now.",
+    "You didn't get everything right, and you didn't save the night alone. But because you stopped for a stranger earlier, a door opens now that would otherwise have stayed shut. A neighbour takes you and Ada both in. They sit you by a real fire and press hot soup into your hands. Warmth, given for warmth. It's not the whole win — but it's real, and it's enough for now.",
+    "You didn't get everything right, and you didn't save the night single-handed. But because you stopped for a stranger earlier, a door opens now that would otherwise have stayed shut. A neighbour takes you and Ada both in, sits you by a real fire, and presses hot soup into your frozen hands. Warmth, given freely for warmth. It's not the whole win — but it's real, and it's more than enough for now."),
+  [])
+
+P(125,
+  t("You gave your own warmth away in the dark. Your blanket, your coat, your flask — all to people who had less than you. By first light you are cold, and tired, and you did not save everything. But you are not alone, and neither is anyone you met. Something small and good spread out from you tonight. Warm hand to warm hand, all through the freezing town.",
+    "You gave your own warmth away in the dark — your blanket, your coat, your flask — to people who had less than you. By first light you're cold, and tired, and you didn't save everything. But you're not alone, and neither is anyone you met. Something small and good spread out from you tonight. Warm hand to warm hand, all through the freezing town.",
+    "You gave your own warmth away in the dark — your blanket, your coat, your flask — to people who had even less than you did. By first light you're cold, and bone-tired, and you didn't manage to save everything. But you're not alone, and neither is anyone you met on the way. Something small and good spread out from you tonight. Warm hand to warm hand, all through the freezing town."),
+  [])
+
+P(126,
+  t("It was close — closer than you ever want it again. But the power flickers back just in time, late and grudging, and the worst of the cold lifts. Ada is alright. You are alright. It was not clever, and it was not clean, and you would do a dozen things differently. But you got through the night, and in the morning, that is what counts.",
+    "It was close — closer than you ever want it to be again. But the power flickers back just in time, late and grudging, and the worst of the cold lifts. Ada's alright. You're alright. It wasn't clever, and it wasn't clean, and you'd do a dozen things differently. But you got through the night, and in the morning, that's what counts.",
+    "It was close — far closer than you ever want it to be again. But the power flickers back just in time, late and grudging, and the worst of the cold finally lifts. Ada's alright. You're alright. It wasn't clever, and it certainly wasn't clean, and you'd do a dozen things differently given the chance. But you got through the night, and in the cold morning light, that is what counts."),
+  [])
+
+P(127,
+  t("You did not manage everything. Some of it went wrong; some of it you would take back. But when the lights went out and the town went dark, you went out into it. People saw that. The street saw a young person go up the hill into the cold. For an old woman, on the worst night of the year. From tonight, you are someone the town knows.",
+    "You didn't manage everything. Some of it went wrong; some of it you'd take back. But when the lights went out and the town went dark, you went out into it. People saw that. The street saw a young person climb the hill into the cold, for an old woman, on the worst night of the year. From tonight, you're someone the town knows.",
+    "You didn't manage everything, not by a long way. Some of it went wrong; some of it you'd give a great deal to take back. But when the lights went out and the whole town went dark, you went out into it. And people saw that. The street saw a young person climb the hill into the cold, for an old woman, on the worst night of the year. From tonight, you're someone the town knows by name."),
+  [])
+
+P(128,
+  t("The generator never starts. The fuel never burns. You paid the man with the van almost everything you had. And you got a heavy, cold, useless lump of metal for it. The money is gone. The cold is exactly where it was. You knew, somewhere, that his kind of help was a hook. And still, in your fear, you took it.",
+    "The generator never starts. The fuel never burns. You paid the man with the van almost everything you had, and got a heavy, cold, useless lump of metal for it. The money's gone. The cold is exactly where it was. You knew, somewhere inside, that his kind of help was a hook. And still, in your fear, you took it.",
+    "The generator never starts. The fuel never burns. You paid the man with the van almost everything you had, and got a heavy, cold, useless lump of metal for it. The money is gone. The cold is exactly where it was, to the degree. You knew, somewhere inside, that his kind of help was always a hook. And still, in your fear, you reached out and took it."),
+  [])
+
+P(129,
+  t("The ice was a lie, just as Okafor warned. It gives way beneath you, and the black water takes you in its freezing grip. You drag yourself out — somehow — soaked and shaking and half-frozen. But the night is lost. You reach the hill far too late, wet through and barely standing. The river cost you everything the shortcut promised to save.",
+    "The ice was a lie, just as Okafor warned. It gives way beneath you, and the black water takes you in its freezing grip. You drag yourself out — somehow — soaked, shaking, half-frozen. But the night is lost. You reach the hill far too late, wet through and barely standing. The river cost you everything the shortcut promised to save.",
+    "The ice was a lie, exactly as Okafor warned you it would be. It gives way beneath you, and the black water takes you in its freezing grip. You drag yourself out — somehow, barely — soaked, shaking, and half-frozen. But the night is lost. You reach the hill far too late, wet through and barely able to stand. The river cost you everything the shortcut had promised to save."),
+  [])
+
+P(130,
+  t("You spent the night on the wrong things. A bad deal, a wrong turn, a warm room you should not have stayed in. And when you finally reach Ada's door, the cold has been in the house too long. By first light, the crews carry her down the hill to a waiting ambulance, grey and still. You went out into the dark. But you did not get there in time.",
+    "You spent the night on the wrong things — a bad deal, a wrong turn, a warm room you shouldn't have stayed in. And when you finally reach Ada's door, the cold has been in the house too long. By first light, the crews carry her down the hill to a waiting ambulance, grey and still. You went out into the dark. But you didn't get there in time.",
+    "You spent the night on the wrong things — a bad deal, a wrong turn, a warm room you should never have stayed in. And when you finally reach Ada's door, the cold has been in the house far too long. By first light, the crews carry her down the hill to a waiting ambulance, grey and still. You went out into the dark, and that mattered. But you didn't get there in time, and that matters more."),
+  [])
+
+P(131,
+  t("In the end, you stayed behind your own door, where it was warm and safe. You told yourself the roads were blocked, that help would come at dawn. It was not your job. All of that was true. And all night, up the hill, one small light stayed dark. Nothing bad happened to you. You will think about that for a long, long time.",
+    "In the end, you stayed behind your own door, where it was warm and safe. You told yourself the roads were blocked, that help would come at dawn, that it wasn't your job. All of that was true. And all night, up the hill, one small light stayed dark. Nothing bad happened to you. You'll think about that for a long, long time.",
+    "In the end, you stayed behind your own door, where it was warm and safe. You told yourself the roads were blocked, that help would come at dawn, that it wasn't really your job. All of that was perfectly true. And all night long, up the hill, one small light stayed dark. Nothing bad happened to you at all. You will think about that, quietly, for a long, long time."),
+  [])
+
+
 # ============================ apply ========================================
 def main():
     book = json.load(open(BOOK, encoding="utf-8"))
