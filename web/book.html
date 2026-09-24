@@ -469,10 +469,13 @@
       // procedural nocturne instead of a blank stage.
       var stageEl=document.getElementById('stage'), artEl=document.getElementById('art');
       var coverUrl='/cover-'+(book.slug||ep.slug)+'.png';
+      // focal point keeps each book's key element in frame when the landscape cover is
+      // cropped to a portrait phone hero (identity.cover.focal, e.g. "80% 52%").
+      var focal=(id.cover&&id.cover.focal)||'center';
       if(stageEl && artEl){
         await new Promise(function(res){
           var probe=new Image(), done=false, fin=function(ok){ if(done) return; done=true;
-            if(ok){ artEl.style.backgroundImage='url("'+coverUrl+'")'; stageEl.classList.add('has-art'); } res(); };
+            if(ok){ artEl.style.backgroundImage='url("'+coverUrl+'")'; artEl.style.backgroundPosition=focal; stageEl.classList.add('has-art'); } res(); };
           probe.onload=function(){ fin(true); }; probe.onerror=function(){ fin(false); };
           setTimeout(function(){ fin(false); }, 2500);   // don't hang the hero on a slow image
           probe.src=coverUrl;

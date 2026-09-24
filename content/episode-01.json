@@ -20,7 +20,8 @@
     },
     "cover": {
       "kind": "nocturne",
-      "glow": true
+      "glow": true,
+      "focal": "54% 52%"
     },
     "type": {
       "display": "Fraunces",

@@ -20,7 +20,8 @@
     },
     "cover": {
       "kind": "highsun",
-      "glow": true
+      "glow": true,
+      "focal": "74% 50%"
     },
     "type": {
       "display": "Fraunces",
