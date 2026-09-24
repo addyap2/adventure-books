@@ -1,4 +1,4 @@
-# The Far Ridge — book 4 design & build plan
+# The Cool of Evening — book 4 design & build plan
 
 A **standalone** book. It shares nothing with *The Address*, *The Night Market* or *First Light*
 except the method and the house tone — no arc, no carried state, no shared characters, place or
@@ -9,7 +9,7 @@ The platform's through-phrase is "warm light in cold places." Book 4 turns it in
 purpose: the danger here is not cold and dark but **heat and glare**, and the mercy people carry
 to one another is not warmth but its opposite — **water and shade**. The shape of the kindness is
 the same; only the weather is reversed. Where *First Light* was one young person carrying warmth
-out into a frozen town, *The Far Ridge* is one traveller keeping a busload of strangers alive
+out into a frozen town, *The Cool of Evening* is one traveller keeping a busload of strangers alive
 through the killing hours of a desert afternoon — sharing water, making shade, and deciding, over
 and over, what you owe the people stranded beside you.
 
@@ -197,23 +197,22 @@ sun-blasted world where the one precious colour is **cool**.
   cool **water-teal accent** (the § markers, glossed underlines, the progress bar, the cool-water
   glow) set against a warm sun-ochre **secondary**. This inverts the house pattern on purpose: the
   accent is not the fire but the water. Final values in the JSON `identity` block.
-  *Build note:* the reader is dark-first and applies the book palette scoped so the universal light
-  "paper" mode can still override. Before wiring, I verify this light high-key palette reads cleanly
-  in the reader; if it does not, the documented fallback is a **dusk-desert** dark variant (a deep
-  warm indigo-ochre ground with the same water-teal accent) so the book still ships legibly while
-  staying its own world.
+  **Chosen: the bright high-noon light theme.** *Build note:* the reader is dark-first and applies
+  the book palette scoped so the universal light "paper" mode can still override. I verify this
+  light high-key palette reads cleanly in the reader before wiring; the documented fallback, only
+  if it genuinely breaks, is a **dusk-desert** dark variant (a deep warm indigo-ochre ground with
+  the same water-teal accent).
 - **cover.kind:** a new `highsun` scene added to `scripts/build_og.mjs` (and the browser-canvas
   generator) — a low far ridge under a white sun, a heat-shimmer road, a stalled bus and a lone
   figure — so the social card and library cover are a genuinely different picture, not a recolour.
   `glow: true` is the sun's glare rather than a window.
 - **type:** inherited families (Fraunces / Hanken Grotesk / JetBrains Mono).
-- **slug:** `the-far-ridge`; **series:** `far-ridge`; **episode:** 4. **hero.line** the
+- **slug:** `cool-of-evening`; **series:** `cool-of-evening`; **episode:** 4. **hero.line** the
   eight-language morph sentence; **sub** the same learner promise.
 
 Shipping = write its JSON (prose + lexicon + `identity` + `slug`) and its OG card, plus the free
 per-passage emblem set (a desert/heat motif set added to the reader's per-book `__ART`) and a
-wordless `cover-the-far-ridge.png` for the library card. One zero-config route `/b/the-far-ridge`
-serves it.
+wordless `cover-cool-of-evening.png` for the library card. One zero-config route `/b/cool-of-evening` serves it.
 
 ---
 
@@ -231,6 +230,6 @@ content/lexicon.json` coming back clean.
 4. **Lexicon** — ~250 words, complete in 9 languages; auto-gloss coverage checked.
 5. **Native review** — 8-language pass + A2-choice clarity. *Launch gate.*
 6. **Art** — free per-passage emblems (a desert/heat motif set) + a `highsun` OG/cover scene;
-   painted art optional, dropped in later at `images/far-ridge/ep-04/<id>.webp`.
+   painted art optional, dropped in later at `images/cool-of-evening/ep-04/<id>.webp`.
 
-Built on branch `book-04-far-ridge`; merges to `main` only after the definition-of-done.
+Built on branch `book-04-cool-of-evening`; merges to `main` only after the definition-of-done.
