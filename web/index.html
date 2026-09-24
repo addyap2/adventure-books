@@ -78,7 +78,7 @@
     box-shadow:var(--shadow); overflow:hidden;
     transition:opacity .22s ease, transform .22s ease; }
   .card.leaving { opacity:0; transform:translateY(10px); }
-  .art { position:relative; width:100%; aspect-ratio:3/2; background:var(--accent-soft);
+  .art { position:relative; width:100%; aspect-ratio:auto; height:92px; background:var(--accent-soft);
     display:block; overflow:hidden; }
   .art img { width:100%; height:100%; object-fit:cover; display:block; }
   /* deliberate placeholder while real art is pending — each moment gets its own
@@ -97,14 +97,15 @@
   .art.ph::after { content:""; position:absolute; inset:0; opacity:.5; mix-blend-mode:soft-light;
     background:repeating-linear-gradient(calc(var(--h,0)*1deg + 35deg),
       transparent 0 22px, rgba(0,0,0,.05) 22px 23px); }
-  .art.ph .glyph { position:relative; z-index:1; font-size:30px; opacity:.42;
+  .art.ph .glyph { position:relative; z-index:1; font-size:24px; opacity:.42;
     color:var(--fg); font-family:ui-sans-serif,system-ui,sans-serif;
     transform:rotate(calc(var(--h,0)*1deg)); }
-  /* per-passage emblem — a communicative symbol, tinted by the passage hue */
-  .art.ph .emblem { position:relative; z-index:1; width:34%; max-width:118px;
+  /* per-passage emblem — a communicative symbol, tinted by the passage hue; sized to sit
+     as a compact motif inside the slim chapter band rather than a full illustration */
+  .art.ph .emblem { position:relative; z-index:1; width:auto; max-width:none;
     color:hsl(var(--hue,190) 60% 72%); opacity:.94;
-    filter:drop-shadow(0 8px 20px rgba(0,0,0,.4)); }
-  .art.ph .emblem svg { width:100%; height:auto; display:block; }
+    filter:drop-shadow(0 6px 14px rgba(0,0,0,.4)); }
+  .art.ph .emblem svg { width:auto; height:52px; display:block; }
   :root[data-theme="light"] .art.ph .emblem { color:hsl(var(--hue,190) 42% 40%); }
   .art .tag { position:absolute; left:12px; bottom:10px; z-index:2;
     font-family:ui-sans-serif,system-ui,sans-serif; font-size:11px; letter-spacing:.14em;
@@ -194,16 +195,19 @@
     font-size:17px; font-weight:650; }
 
   /* ---- library home ---- */
-  .home-hero { text-align:center; padding:12px 6px 20px; }
-  .home-hero h1 { font-size:30px; line-height:1.08; margin:6px 0 8px; }
+  /* left-aligned editorial hero, matching the marketing home so the two libraries read as one brand */
+  .home-hero { text-align:left; padding:12px 2px 22px; }
+  .home-hero h1 { font-size:30px; line-height:1.08; margin:6px 0 4px; font-style:italic; font-weight:300; }
   .home-hero .byline { font-family:var(--mono, ui-monospace, monospace); font-size:11px; letter-spacing:.22em;
     text-transform:uppercase; color:var(--muted); margin:8px 0 0; }
+  .home-hero .tagline { font-family:var(--serif); font-style:italic; color:var(--accent-2);
+    font-size:18px; margin:12px 0 0; }
   .home-hero .tolanding { display:inline-block; margin-top:14px; font-family:ui-sans-serif,system-ui,sans-serif;
     font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); text-decoration:none;
     border-bottom:1px solid transparent; padding-bottom:2px; transition:color .2s,border-color .2s; }
   .home-hero .tolanding:hover { color:var(--accent); border-color:var(--accent); }
   .home-hero .lede { color:var(--muted); font-size:15.5px; font-family:ui-sans-serif,system-ui,sans-serif;
-    margin:0 auto; max-width:24rem; }
+    margin:10px 0 0; max-width:34rem; }
   .panel { background:var(--card); border:1px solid var(--line); border-radius:var(--r);
     box-shadow:var(--shadow); padding:4px 16px; margin-bottom:18px; }
   .filters { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:0 2px 14px;
@@ -220,13 +224,14 @@
     font:inherit; display:flex; flex-direction:column; transition:transform .12s, border-color .15s; }
   .book:hover { border-color:var(--accent); }
   .book:active { transform:scale(.99); }
-  .book .art { aspect-ratio:3/4; }
+  .book .art { aspect-ratio:16/10; height:auto; }
   .book-body { padding:12px 13px 14px; display:flex; flex-direction:column; gap:6px; flex:1; }
   .book-series { font-family:ui-sans-serif,system-ui,sans-serif; font-size:10.5px; letter-spacing:.12em;
     text-transform:uppercase; color:var(--accent-2); font-weight:700; }
   .book-body h3 { font-size:18px; line-height:1.15; margin:0; }
   .book-blurb { color:var(--muted); font-size:12.5px; font-family:ui-sans-serif,system-ui,sans-serif;
-    line-height:1.4; }
+    line-height:1.4; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;
+    overflow:hidden; }
   .book-badges { display:flex; gap:5px; flex-wrap:wrap; margin-top:2px; }
   .book-badges span { font-family:ui-sans-serif,system-ui,sans-serif; font-size:11px; padding:2px 7px;
     border-radius:99px; background:var(--accent-soft); border:1px solid var(--line); }
@@ -278,10 +283,16 @@
   }
   @media (min-width:900px){
     main.home { max-width:74rem; padding:28px 28px 64px; }
-    main.reading { max-width:38rem; }
+    main.reading { max-width:38rem; padding-top:24px; padding-bottom:88px; }
+    /* the intro cover is short — centre it so the wide desktop frame reads as composed, not empty */
+    main.reading.intro { display:flex; flex-direction:column; justify-content:center;
+      min-height:calc(100svh - 132px); padding-top:0; }
     .grid { grid-template-columns:repeat(auto-fill,minmax(184px,1fr)); gap:20px; }
-    .home-hero { padding:30px 6px; }
+    .home-hero { padding:30px 2px; }
     .home-hero h1 { font-size:40px; }
+    /* an ambient halo in the book's own accent behind the reading column */
+    main.reading::before { content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+      background:radial-gradient(58% 46% at 50% 2%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 70%); }
   }
   /* mouse + keyboard (desktop): number-key hints on choices, hover cues */
   .fine .choices button { padding-left:42px; }
@@ -717,7 +728,8 @@ function renderHome(){
     <div class="home-hero">
       <h1>English Reading Adventures</h1>
       <p class="byline">by Antony Addy</p>
-      <p class="lede">Read a story. Tap any word to see it in your language.</p>
+      <p class="tagline">Find your way, one story at a time.</p>
+      <p class="lede">Pick a book below. Read it at your level, and tap any word to see it in your language.</p>
       <a class="tolanding" href="/">&larr; English Reading Adventures home</a>
     </div>
     <div class="panel">
@@ -736,9 +748,11 @@ function renderHome(){
 function bookCard(e){
   const key=`${e.series}:${e.episode}`, started=getProgress()[key]!=null;
   const h=hash(e.title||e.file), vars=`--h:${h%54-27};--x:${12+h%30};--y:${8+(h>>3)%26}`;
-  const img=(e.images||[]).includes("cover")
-    ? `<img alt="" loading="lazy" src="images/${e.series}/ep-${pad(e.episode)}/cover.webp"
-         onload="this.parentNode.classList.remove('ph')">` : "";
+  const slug=e.slug||e.file.replace(/\.json$/,"");
+  const focal=(e.identity&&e.identity.cover&&e.identity.cover.focal)||"center";
+  // the book's own generated cover; falls back to the placeholder tint if it 404s
+  const img=`<img alt="" loading="lazy" src="cover-${slug}.png" style="object-position:${focal}"
+         onload="this.parentNode.classList.remove('ph')" onerror="this.remove()">`;
   return `<button class="book" data-file="${e.file}">
     <div class="art ph" style="${vars}"><span class="glyph">❦</span>${img}</div>
     <div class="book-body">
@@ -846,7 +860,7 @@ function artHTML(id,tag,cover){
 }
 
 function renderIntro(){
-  introMode=true;
+  introMode=true; $("main").classList.add("intro");
   const endings=BOOK.nodes.filter(n=>n.ending).length;
   const focus=(at(BOOK.language_focus)||[])[0]||"";
   $("main").innerHTML=`<div class="cover card">
@@ -909,6 +923,7 @@ function meaningHTML(){
 }
 
 function render(){
+  $("main").classList.remove("intro");
   const n=byId(node);
   // remember state for "Continue" — but a finished path resets to "Start" next time
   if(curKey){ n.ending ? clearProgress(curKey) : saveProgress(curKey, node, flags); }
