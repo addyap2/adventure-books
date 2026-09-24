@@ -70,6 +70,24 @@ function lanternScene(c) {
   <g transform="translate(360,4)"><ellipse cx="300" cy="560" rx="48" ry="7" fill="#000" opacity=".3"/><path d="M300 506 C313 508 319 519 321 533 L327 560 L273 560 L279 533 C281 519 287 508 300 506 Z" fill="#160b06"/><circle cx="300" cy="497" r="10" fill="#160b06"/></g>`;
 }
 
+function candlelightScene(c) {
+  // a frozen town in a blackout: a snowy street, a row of dark houses, one warm-lit
+  // gold window, snow falling, a lone figure crossing toward the light.
+  return `
+  <g fill="${c.surface}"><path d="M600 300 h150 v200 h-150z"/><path d="M770 260 h120 v240 h-120z"/><path d="M905 300 h140 v200 h-140z"/><path d="M1060 270 h130 v230 h-130z"/></g>
+  <g stroke="${c.line}" stroke-width="2" opacity="0.7"><path d="M600 300 l75 -34 l75 34"/><path d="M770 260 l60 -30 l60 30"/><path d="M905 300 l70 -32 l70 32"/><path d="M1060 270 l65 -30 l65 30"/></g>
+  <g fill="${c.surface}" opacity="0.85"><rect x="640" y="340" width="26" height="34"/><rect x="700" y="340" width="26" height="34"/><rect x="800" y="300" width="26" height="34"/><rect x="950" y="340" width="26" height="34"/><rect x="1100" y="320" width="26" height="34"/></g>
+  <ellipse cx="1000" cy="360" rx="150" ry="150" fill="url(#glow)"/>
+  <rect x="984" y="336" width="32" height="46" rx="1" fill="${c.accentHot}"/>
+  <rect x="984" y="336" width="32" height="46" rx="1" fill="none" stroke="${c.accent}" stroke-width="2"/>
+  <line x1="984" y1="359" x2="1016" y2="359" stroke="${c.accent}" stroke-width="1.5" opacity="0.7"/>
+  <g fill="${c.ink}" opacity="0.55"><circle cx="660" cy="150" r="2"/><circle cx="820" cy="90" r="1.6"/><circle cx="980" cy="140" r="2.2"/><circle cx="1120" cy="80" r="1.8"/><circle cx="720" cy="220" r="1.6"/><circle cx="900" cy="200" r="2"/><circle cx="1180" cy="200" r="1.6"/><circle cx="1040" cy="240" r="1.8"/></g>
+  <rect x="0" y="500" width="1200" height="130" fill="${c.surface}"/>
+  <path d="M600 500 h600 v130 h-600z" fill="${c.ground}" opacity="0.25"/>
+  <path d="M984 382 L1016 382 L1080 500 L900 500 Z" fill="${c.accent}" opacity=".16"/>
+  <g transform="translate(320,0)"><ellipse cx="300" cy="556" rx="46" ry="7" fill="#000" opacity=".3"/><path d="M300 502 C313 504 319 515 321 529 L327 556 L273 556 L279 529 C281 515 287 504 300 502 Z" fill="#060b14"/><circle cx="300" cy="493" r="10" fill="#060b14"/><path d="M289 490 q11 -9 22 0 z" fill="#060b14"/></g>`;
+}
+
 function ogHTML(book) {
   const p = (book.identity && book.identity.palette) || {};
   const ground = p.ground || "#0E1320", surface = p.surface || "#121a2c",
@@ -80,6 +98,7 @@ function ogHTML(book) {
   const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
   const scene = kind === "daybreak" ? daybreakScene(c)
               : kind === "lantern" ? lanternScene(c)
+              : kind === "candlelight" ? candlelightScene(c)
               : nocturneScene(c);
   const skyStops = kind === "daybreak"
     ? `<stop offset="0" stop-color="#AAB7BF"/><stop offset="0.5" stop-color="#6F838D"/><stop offset="1" stop-color="${surface}"/>`
