@@ -1,0 +1,3096 @@
+{
+  "schema": "adventure-book/episode@1",
+  "series": "cool-of-evening",
+  "episode": 4,
+  "title": "The Cool of Evening",
+  "slug": "cool-of-evening",
+  "blurb": "A cheap bus dies at noon on an empty desert road, hours from anywhere. A child travelling alone is failing in the heat, and no help will come until the sun drops. You have the long afternoon to keep them — and a busload of strangers — watered, shaded and alive.",
+  "identity": {
+    "name": "High Noon",
+    "mood": "A desert road at the hottest hour; the only mercy is the water and shade people share.",
+    "palette": {
+      "ground": "#E7DBC0",
+      "surface": "#F5EEDC",
+      "ink": "#2C2417",
+      "muted": "#8B7B5E",
+      "line": "#D8C7A2",
+      "accent": "#0E7C7B",
+      "accentHot": "#3FA9A2",
+      "secondary": "#C77A1E"
+    },
+    "cover": {
+      "kind": "highsun",
+      "glow": true
+    },
+    "type": {
+      "display": "Fraunces",
+      "ui": "Hanken Grotesk",
+      "mono": "JetBrains Mono"
+    },
+    "hero": {
+      "line": {
+        "en": "The bus dies in the heat. A child aboard needs the water and shade you can find.",
+        "fr": "Le bus tombe en panne dans la chaleur. À bord, un enfant a besoin de l'eau et de l'ombre que vous trouverez.",
+        "es": "El autobús se avería con el calor. A bordo, un niño necesita el agua y la sombra que puedas encontrar.",
+        "it": "L'autobus si ferma nella calura. A bordo, un bambino ha bisogno dell'acqua e dell'ombra che riuscirai a trovare.",
+        "de": "Der Bus bleibt in der Hitze liegen. An Bord braucht ein Kind das Wasser und den Schatten, die du findest.",
+        "pt": "O autocarro avaria no calor. A bordo, uma criança precisa da água e da sombra que conseguires encontrar.",
+        "ru": "Автобус глохнет на жаре. В салоне ребёнку нужны вода и тень, которые ты сможешь найти.",
+        "zh": "大巴在烈日下抛锚了。车上有个孩子，需要你去找来的水和阴凉。",
+        "ar": "تتعطّل الحافلة في الحرّ. على متنها طفل يحتاج إلى ما تجده من ماءٍ وظلّ."
+      },
+      "sub": "A story where you are the hero — and every choice turns you to a new page. Written for people learning English, at your level, with meaning in your language whenever you need it."
+    }
+  },
+  "levels": [
+    "A2",
+    "B1",
+    "B2"
+  ],
+  "start": 1,
+  "language_focus": {
+    "A2": [
+      "imperatives and going to",
+      "the body, heat and water"
+    ],
+    "B1": [
+      "the first conditional and modals of advice",
+      "warning, sharing and planning"
+    ],
+    "B2": [
+      "inference, obligation and conditionals",
+      "strangers, risk and responsibility"
+    ]
+  },
+  "state_in": [],
+  "state_out": [
+    "has_water",
+    "dodged_seller",
+    "paid_seller",
+    "found_well",
+    "rallied_bus",
+    "helped_stranger",
+    "gave_water",
+    "took_shortcut"
+  ],
+  "arc_flags": [],
+  "nodes": [
+    {
+      "id": 1,
+      "text": {
+        "A2": "[stub] At the hottest hour, the bus coughs and dies on an empty desert road — hours from anywhere, no signal. On board is Sami, a child of about eight travelling alone, already going quiet with the heat. There is not much water.",
+        "B1": "[stub] At the hottest hour, the bus coughs and dies on an empty desert road — hours from anywhere, no signal. On board is Sami, a child of about eight travelling alone, already going quiet with the heat. There is not much water.",
+        "B2": "[stub] At the hottest hour, the bus coughs and dies on an empty desert road — hours from anywhere, no signal. On board is Sami, a child of about eight travelling alone, already going quiet with the heat. There is not much water."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take charge of the water.",
+            "B1": "Take charge of the water.",
+            "B2": "Take charge of the water."
+          },
+          "goto": 2
+        },
+        {
+          "text": {
+            "A2": "Try the radio for help.",
+            "B1": "Try the radio for help.",
+            "B2": "Try the radio for help."
+          },
+          "goto": 3
+        },
+        {
+          "text": {
+            "A2": "Get Sami into shade first.",
+            "B1": "Get Sami into shade first.",
+            "B2": "Get Sami into shade first."
+          },
+          "goto": 4
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": {
+        "A2": "[stub] You gather what the bus has: a few water bottles, a first-aid box, a canvas tarp that could make shade. The heat is already building.",
+        "B1": "[stub] You gather what the bus has: a few water bottles, a first-aid box, a canvas tarp that could make shade. The heat is already building.",
+        "B2": "[stub] You gather what the bus has: a few water bottles, a first-aid box, a canvas tarp that could make shade. The heat is already building."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Step out onto the road.",
+            "B1": "Step out onto the road.",
+            "B2": "Step out onto the road."
+          },
+          "goto": 5
+        },
+        {
+          "text": {
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "The tarp is torn and short.",
+            "B1": "The tarp is torn and short.",
+            "B2": "The tarp is torn and short."
+          },
+          "goto": 29
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": {
+        "A2": "[stub] The radio is dead and there is no signal. Word passes back from Mr Bello: nothing moves in this heat, help comes at evening, sit tight and stay cool.",
+        "B1": "[stub] The radio is dead and there is no signal. Word passes back from Mr Bello: nothing moves in this heat, help comes at evening, sit tight and stay cool.",
+        "B2": "[stub] The radio is dead and there is no signal. Word passes back from Mr Bello: nothing moves in this heat, help comes at evening, sit tight and stay cool."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "But Sami can't wait that long.",
+            "B1": "But Sami can't wait that long.",
+            "B2": "But Sami can't wait that long."
+          },
+          "goto": 8
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": {
+        "A2": "[stub] You move Sami into the thin shade of the bus, but shade alone won't be enough. You'll need water and a plan to do any good.",
+        "B1": "[stub] You move Sami into the thin shade of the bus, but shade alone won't be enough. You'll need water and a plan to do any good.",
+        "B2": "[stub] You move Sami into the thin shade of the bus, but shade alone won't be enough. You'll need water and a plan to do any good."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go back and organise supplies.",
+            "B1": "Go back and organise supplies.",
+            "B2": "Go back and organise supplies."
+          },
+          "goto": 2
+        },
+        {
+          "text": {
+            "A2": "Feel how serious this is.",
+            "B1": "Feel how serious this is.",
+            "B2": "Feel how serious this is."
+          },
+          "goto": 8
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": {
+        "A2": "[stub] The road: white glare, ochre flats to the horizon, the far ridge shimmering, heat you can almost lean on.",
+        "B1": "[stub] The road: white glare, ochre flats to the horizon, the far ridge shimmering, heat you can almost lean on.",
+        "B2": "[stub] The road: white glare, ochre flats to the horizon, the far ridge shimmering, heat you can almost lean on."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Mr Bello opens the bus's stores.",
+            "B1": "Mr Bello opens the bus's stores.",
+            "B2": "Mr Bello opens the bus's stores."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "Ask along the seats for water.",
+            "B1": "Ask along the seats for water.",
+            "B2": "Ask along the seats for water."
+          },
+          "goto": 10
+        },
+        {
+          "text": {
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "A passenger has wandered off down the road.",
+            "B1": "A passenger has wandered off down the road.",
+            "B2": "A passenger has wandered off down the road."
+          },
+          "goto": 60
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": {
+        "A2": "[stub] Sort out supplies first, or get straight to keeping Sami cool?",
+        "B1": "[stub] Sort out supplies first, or get straight to keeping Sami cool?",
+        "B2": "[stub] Sort out supplies first, or get straight to keeping Sami cool?"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The bus's stores.",
+            "B1": "The bus's stores.",
+            "B2": "The bus's stores."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "Straight to Sami.",
+            "B1": "Straight to Sami.",
+            "B2": "Straight to Sami."
+          },
+          "goto": 11
+        },
+        {
+          "text": {
+            "A2": "Go seat to seat to gather help.",
+            "B1": "Go seat to seat to gather help.",
+            "B2": "Go seat to seat to gather help."
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": {
+        "A2": "[stub] The heat, and Sami going quiet and dizzy with no water. This is real, and it is on you.",
+        "B1": "[stub] The heat, and Sami going quiet and dizzy with no water. This is real, and it is on you.",
+        "B2": "[stub] The heat, and Sami going quiet and dizzy with no water. This is real, and it is on you."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "To the bus's stores.",
+            "B1": "To the bus's stores.",
+            "B2": "To the bus's stores."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "A rush on the water at the front.",
+            "B1": "A rush on the water at the front.",
+            "B2": "A rush on the water at the front."
+          },
+          "goto": 68
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": {
+        "A2": "[stub] Mr Bello opens the luggage bay, ashamed: a crate of water bottles, a first-aid box, a big canvas tarp, spare rags.",
+        "B1": "[stub] Mr Bello opens the luggage bay, ashamed: a crate of water bottles, a first-aid box, a big canvas tarp, spare rags.",
+        "B2": "[stub] Mr Bello opens the luggage bay, ashamed: a crate of water bottles, a first-aid box, a big canvas tarp, spare rags."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take charge of the water crate.",
+            "B1": "Take charge of the water crate.",
+            "B2": "Take charge of the water crate."
+          },
+          "goto": 13,
+          "sets": [
+            "has_water"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Just the tarp and rags.",
+            "B1": "Just the tarp and rags.",
+            "B2": "Just the tarp and rags."
+          },
+          "goto": 14
+        },
+        {
+          "text": {
+            "A2": "Ask Bello what he knows.",
+            "B1": "Ask Bello what he knows.",
+            "B2": "Ask Bello what he knows."
+          },
+          "goto": 15
+        },
+        {
+          "text": {
+            "A2": "He hands you the last cool bottle.",
+            "B1": "He hands you the last cool bottle.",
+            "B2": "He hands you the last cool bottle."
+          },
+          "goto": 67
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": {
+        "A2": "[stub] Along the seats: old Mr Danso, confused and dry-mouthed, plucking at his collar in the heat.",
+        "B1": "[stub] Along the seats: old Mr Danso, confused and dry-mouthed, plucking at his collar in the heat.",
+        "B2": "[stub] Along the seats: old Mr Danso, confused and dry-mouthed, plucking at his collar in the heat."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Stop and help him.",
+            "B1": "Stop and help him.",
+            "B2": "Stop and help him."
+          },
+          "goto": 16,
+          "sets": [
+            "helped_stranger"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Say you must see to Sami.",
+            "B1": "Say you must see to Sami.",
+            "B2": "Say you must see to Sami."
+          },
+          "goto": 17
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": {
+        "A2": "[stub] You get to Sami fast with what little you have. It steadies the child a moment — but it won't last without more water.",
+        "B1": "[stub] You get to Sami fast with what little you have. It steadies the child a moment — but it won't last without more water.",
+        "B2": "[stub] You get to Sami fast with what little you have. It steadies the child a moment — but it won't last without more water."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Decide how to reach more water.",
+            "B1": "Decide how to reach more water.",
+            "B2": "Decide how to reach more water."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "The heat presses on you too.",
+            "B1": "The heat presses on you too.",
+            "B2": "The heat presses on you too."
+          },
+          "goto": 18
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": {
+        "A2": "[stub] You go seat to seat, asking people to pool their water and share the shade.",
+        "B1": "[stub] You go seat to seat, asking people to pool their water and share the shade.",
+        "B2": "[stub] You go seat to seat, asking people to pool their water and share the shade."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The passengers turn out to help.",
+            "B1": "The passengers turn out to help.",
+            "B2": "The passengers turn out to help."
+          },
+          "goto": 19,
+          "sets": [
+            "rallied_bus"
+          ]
+        },
+        {
+          "text": {
+            "A2": "No one moves; go on alone.",
+            "B1": "No one moves; go on alone.",
+            "B2": "No one moves; go on alone."
+          },
+          "goto": 20
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": {
+        "A2": "[stub] The water crate — heavy, precious, enough if it is shared and rationed well.",
+        "B1": "[stub] The water crate — heavy, precious, enough if it is shared and rationed well.",
+        "B2": "[stub] The water crate — heavy, precious, enough if it is shared and rationed well."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Now, get it to Sami and the weak.",
+            "B1": "Now, get it to Sami and the weak.",
+            "B2": "Now, get it to Sami and the weak."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "Thank Bello.",
+            "B1": "Thank Bello.",
+            "B2": "Thank Bello."
+          },
+          "goto": 15
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": {
+        "A2": "[stub] The tarp and rags: shade, but no water secured.",
+        "B1": "[stub] The tarp and rags: shade, but no water secured.",
+        "B2": "[stub] The tarp and rags: shade, but no water secured."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Now the way to more water.",
+            "B1": "Now the way to more water.",
+            "B2": "Now the way to more water."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "Ask Bello what he knows.",
+            "B1": "Ask Bello what he knows.",
+            "B2": "Ask Bello what he knows."
+          },
+          "goto": 15
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": {
+        "A2": "[stub] Auntie Rose knows this road: keep off the open flats, don't trust the pickup man, ration every drop, wait out the sun.",
+        "B1": "[stub] Auntie Rose knows this road: keep off the open flats, don't trust the pickup man, ration every drop, wait out the sun.",
+        "B2": "[stub] Auntie Rose knows this road: keep off the open flats, don't trust the pickup man, ration every drop, wait out the sun."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take it to heart.",
+            "B1": "Take it to heart.",
+            "B2": "Take it to heart."
+          },
+          "goto": 22
+        },
+        {
+          "text": {
+            "A2": "On with it.",
+            "B1": "On with it.",
+            "B2": "On with it."
+          },
+          "goto": 21
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "text": {
+        "A2": "[stub] You settle Mr Danso in the shade with a mouthful of water and a promise to check back.",
+        "B1": "[stub] You settle Mr Danso in the shade with a mouthful of water and a promise to check back.",
+        "B2": "[stub] You settle Mr Danso in the shade with a mouthful of water and a promise to check back."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On toward Sami.",
+            "B1": "On toward Sami.",
+            "B2": "On toward Sami."
+          },
+          "goto": 23
+        },
+        {
+          "text": {
+            "A2": "He asks you to check the others.",
+            "B1": "He asks you to check the others.",
+            "B2": "He asks you to check the others."
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "text": {
+        "A2": "[stub] You press on to see to Sami.",
+        "B1": "[stub] You press on to see to Sami.",
+        "B2": "[stub] You press on to see to Sami."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The bus's stores first.",
+            "B1": "The bus's stores first.",
+            "B2": "The bus's stores first."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "Straight to the child.",
+            "B1": "Straight to the child.",
+            "B2": "Straight to the child."
+          },
+          "goto": 11
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "text": {
+        "A2": "[stub] Parched and light-headed yourself, near your own limit.",
+        "B1": "[stub] Parched and light-headed yourself, near your own limit.",
+        "B2": "[stub] Parched and light-headed yourself, near your own limit."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The pickup man's dust is ahead.",
+            "B1": "The pickup man's dust is ahead.",
+            "B2": "The pickup man's dust is ahead."
+          },
+          "goto": 24
+        },
+        {
+          "text": {
+            "A2": "Push on.",
+            "B1": "Push on.",
+            "B2": "Push on."
+          },
+          "goto": 21
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "text": {
+        "A2": "[stub] The bus wakes to itself; a plan forms; someone has a big water carrier.",
+        "B1": "[stub] The bus wakes to itself; a plan forms; someone has a big water carrier.",
+        "B2": "[stub] The bus wakes to itself; a plan forms; someone has a big water carrier."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Lead the way to Sami.",
+            "B1": "Lead the way to Sami.",
+            "B2": "Lead the way to Sami."
+          },
+          "goto": 25
+        },
+        {
+          "text": {
+            "A2": "Set up one shaded spot first.",
+            "B1": "Set up one shaded spot first.",
+            "B2": "Set up one shaded spot first."
+          },
+          "goto": 36
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "text": {
+        "A2": "[stub] No one moves. You go on alone.",
+        "B1": "[stub] No one moves. You go on alone.",
+        "B2": "[stub] No one moves. You go on alone."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The bus's stores.",
+            "B1": "The bus's stores.",
+            "B2": "The bus's stores."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "On to the water.",
+            "B1": "On to the water.",
+            "B2": "On to the water."
+          },
+          "goto": 11
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "text": {
+        "A2": "[stub] Supplies decided. Now, real water: the long walk by the road, or the shortcut straight across the open flats to the ridge.",
+        "B1": "[stub] Supplies decided. Now, real water: the long walk by the road, or the shortcut straight across the open flats to the ridge.",
+        "B2": "[stub] Supplies decided. Now, real water: the long walk by the road, or the shortcut straight across the open flats to the ridge."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Keep to the road.",
+            "B1": "Keep to the road.",
+            "B2": "Keep to the road."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "Cut across the flats.",
+            "B1": "Cut across the flats.",
+            "B2": "Cut across the flats."
+          },
+          "goto": 27
+        },
+        {
+          "text": {
+            "A2": "The pickup man's dust ahead.",
+            "B1": "The pickup man's dust ahead.",
+            "B2": "The pickup man's dust ahead."
+          },
+          "goto": 24
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "text": {
+        "A2": "[stub] You resolve to be careful this afternoon.",
+        "B1": "[stub] You resolve to be careful this afternoon.",
+        "B2": "[stub] You resolve to be careful this afternoon."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On the way.",
+            "B1": "On the way.",
+            "B2": "On the way."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "Back to the stores.",
+            "B1": "Back to the stores.",
+            "B2": "Back to the stores."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "text": {
+        "A2": "[stub] Steadier for the good turn, you go on.",
+        "B1": "[stub] Steadier for the good turn, you go on.",
+        "B2": "[stub] Steadier for the good turn, you go on."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On with the afternoon.",
+            "B1": "On with the afternoon.",
+            "B2": "On with the afternoon."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "Gather more help.",
+            "B1": "Gather more help.",
+            "B2": "Gather more help."
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "text": {
+        "A2": "[stub] The pickup man, parked on the shoulder, engine ticking: bottled water, a lift to town, a frightened little crowd around him.",
+        "B1": "[stub] The pickup man, parked on the shoulder, engine ticking: bottled water, a lift to town, a frightened little crowd around him.",
+        "B2": "[stub] The pickup man, parked on the shoulder, engine ticking: bottled water, a lift to town, a frightened little crowd around him."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hear what he's selling.",
+            "B1": "Hear what he's selling.",
+            "B2": "Hear what he's selling."
+          },
+          "goto": 40
+        },
+        {
+          "text": {
+            "A2": "Go round him.",
+            "B1": "Go round him.",
+            "B2": "Go round him."
+          },
+          "goto": 26
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "text": {
+        "A2": "[stub] You lead a small group toward Sami and the shade.",
+        "B1": "[stub] You lead a small group toward Sami and the shade.",
+        "B2": "[stub] You lead a small group toward Sami and the shade."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The way.",
+            "B1": "The way.",
+            "B2": "The way."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "The smoke out at the siding.",
+            "B1": "The smoke out at the siding.",
+            "B2": "The smoke out at the siding."
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "text": {
+        "A2": "[stub] The road: baking tarmac, mirage pools ahead, hard going but a clear line to follow.",
+        "B1": "[stub] The road: baking tarmac, mirage pools ahead, hard going but a clear line to follow.",
+        "B2": "[stub] The road: baking tarmac, mirage pools ahead, hard going but a clear line to follow."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Press on.",
+            "B1": "Press on.",
+            "B2": "Press on."
+          },
+          "goto": 30
+        },
+        {
+          "text": {
+            "A2": "Someone's stuck ahead.",
+            "B1": "Someone's stuck ahead.",
+            "B2": "Someone's stuck ahead."
+          },
+          "goto": 31
+        },
+        {
+          "text": {
+            "A2": "The whole plain, empty and shimmering.",
+            "B1": "The whole plain, empty and shimmering.",
+            "B2": "The whole plain, empty and shimmering."
+          },
+          "goto": 64
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "text": {
+        "A2": "[stub] The flats would halve the way to the ridge — but the ground is open, trackless, and the heat sits on it like a hand.",
+        "B1": "[stub] The flats would halve the way to the ridge — but the ground is open, trackless, and the heat sits on it like a hand.",
+        "B2": "[stub] The flats would halve the way to the ridge — but the ground is open, trackless, and the heat sits on it like a hand."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Risk the flats.",
+            "B1": "Risk the flats.",
+            "B2": "Risk the flats."
+          },
+          "goto": 28,
+          "sets": [
+            "took_shortcut"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Too dangerous — back to the road.",
+            "B1": "Too dangerous — back to the road.",
+            "B2": "Too dangerous — back to the road."
+          },
+          "goto": 26
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "text": {
+        "A2": "[stub] Out on the open flats, the ridge no closer, the shimmer swallowing the road behind you.",
+        "B1": "[stub] Out on the open flats, the ridge no closer, the shimmer swallowing the road behind you.",
+        "B2": "[stub] Out on the open flats, the ridge no closer, the shimmer swallowing the road behind you."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Push on across.",
+            "B1": "Push on across.",
+            "B2": "Push on across."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "The horizon warps and slides.",
+            "B1": "The horizon warps and slides.",
+            "B2": "The horizon warps and slides."
+          },
+          "goto": 51
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "text": {
+        "A2": "[stub] The tarp is torn and too short; only the rags for shade.",
+        "B1": "[stub] The tarp is torn and too short; only the rags for shade.",
+        "B2": "[stub] The tarp is torn and too short; only the rags for shade."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Out onto the road.",
+            "B1": "Out onto the road.",
+            "B2": "Out onto the road."
+          },
+          "goto": 5
+        },
+        {
+          "text": {
+            "A2": "To the stores for better.",
+            "B1": "To the stores for better.",
+            "B2": "To the stores for better."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "text": {
+        "A2": "[stub] The road under the white sun, the heat deepening by the hour.",
+        "B1": "[stub] The road under the white sun, the heat deepening by the hour.",
+        "B2": "[stub] The road under the white sun, the heat deepening by the hour."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "A family stalled at the roadside.",
+            "B1": "A family stalled at the roadside.",
+            "B2": "A family stalled at the roadside."
+          },
+          "goto": 32
+        },
+        {
+          "text": {
+            "A2": "Press on.",
+            "B1": "Press on.",
+            "B2": "Press on."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "The sun sits on your neck like a weight.",
+            "B1": "The sun sits on your neck like a weight.",
+            "B2": "The sun sits on your neck like a weight."
+          },
+          "goto": 65
+        },
+        {
+          "text": {
+            "A2": "A signpost, paint blistered off.",
+            "B1": "A signpost, paint blistered off.",
+            "B2": "A signpost, paint blistered off."
+          },
+          "goto": 39
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "text": {
+        "A2": "[stub] A car stalled in the sand, an old man slumped at the wheel.",
+        "B1": "[stub] A car stalled in the sand, an old man slumped at the wheel.",
+        "B2": "[stub] A car stalled in the sand, an old man slumped at the wheel."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Help get it moving.",
+            "B1": "Help get it moving.",
+            "B2": "Help get it moving."
+          },
+          "goto": 34,
+          "sets": [
+            "helped_stranger"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You can't stop — Sami.",
+            "B1": "You can't stop — Sami.",
+            "B2": "You can't stop — Sami."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "text": {
+        "A2": "[stub] A stalled family, out of water, a small child crying and red in the heat.",
+        "B1": "[stub] A stalled family, out of water, a small child crying and red in the heat.",
+        "B2": "[stub] A stalled family, out of water, a small child crying and red in the heat."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Give them your own water.",
+            "B1": "Give them your own water.",
+            "B2": "Give them your own water."
+          },
+          "goto": 55,
+          "sets": [
+            "gave_water"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Promise to send help.",
+            "B1": "Promise to send help.",
+            "B2": "Promise to send help."
+          },
+          "goto": 35
+        },
+        {
+          "text": {
+            "A2": "Try to make them shade.",
+            "B1": "Try to make them shade.",
+            "B2": "Try to make them shade."
+          },
+          "goto": 54
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "text": {
+        "A2": "[stub] On through the worst of the heat.",
+        "B1": "[stub] On through the worst of the heat.",
+        "B2": "[stub] On through the worst of the heat."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The pickup man again.",
+            "B1": "The pickup man again.",
+            "B2": "The pickup man again."
+          },
+          "goto": 40
+        },
+        {
+          "text": {
+            "A2": "The smoke at the siding.",
+            "B1": "The smoke at the siding.",
+            "B2": "The smoke at the siding."
+          },
+          "goto": 70
+        },
+        {
+          "text": {
+            "A2": "The last stretch of the heat.",
+            "B1": "The last stretch of the heat.",
+            "B2": "The last stretch of the heat."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "The heat makes you doubt.",
+            "B1": "The heat makes you doubt.",
+            "B2": "The heat makes you doubt."
+          },
+          "goto": 38
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "text": {
+        "A2": "[stub] The car's free; the old man presses a warm bottle on you in thanks.",
+        "B1": "[stub] The car's free; the old man presses a warm bottle on you in thanks.",
+        "B2": "[stub] The car's free; the old man presses a warm bottle on you in thanks."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On your way.",
+            "B1": "On your way.",
+            "B2": "On your way."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "He tells you of the siding.",
+            "B1": "He tells you of the siding.",
+            "B2": "He tells you of the siding."
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "text": {
+        "A2": "[stub] You promise help and move on.",
+        "B1": "[stub] You promise help and move on.",
+        "B2": "[stub] You promise help and move on."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Rally the bus.",
+            "B1": "Rally the bus.",
+            "B2": "Rally the bus."
+          },
+          "goto": 12
+        },
+        {
+          "text": {
+            "A2": "On through the heat.",
+            "B1": "On through the heat.",
+            "B2": "On through the heat."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "text": {
+        "A2": "[stub] The bus makes one shaded spot: the tarp rigged, bottles pooled, the weak in the middle.",
+        "B1": "[stub] The bus makes one shaded spot: the tarp rigged, bottles pooled, the weak in the middle.",
+        "B2": "[stub] The bus makes one shaded spot: the tarp rigged, bottles pooled, the weak in the middle."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Get Sami into it.",
+            "B1": "Get Sami into it.",
+            "B2": "Get Sami into it."
+          },
+          "goto": 25
+        },
+        {
+          "text": {
+            "A2": "Fetch more passengers.",
+            "B1": "Fetch more passengers.",
+            "B2": "Fetch more passengers."
+          },
+          "goto": 37
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "text": {
+        "A2": "[stub] Seat by seat, the frightened bus becomes an organised one.",
+        "B1": "[stub] Seat by seat, the frightened bus becomes an organised one.",
+        "B2": "[stub] Seat by seat, the frightened bus becomes an organised one."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "To the water.",
+            "B1": "To the water.",
+            "B2": "To the water."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "The last stretch of the heat.",
+            "B1": "The last stretch of the heat.",
+            "B2": "The last stretch of the heat."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "text": {
+        "A2": "[stub] The heat gnaws at your resolve.",
+        "B1": "[stub] The heat gnaws at your resolve.",
+        "B2": "[stub] The heat gnaws at your resolve."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The last stretch of the heat.",
+            "B1": "The last stretch of the heat.",
+            "B2": "The last stretch of the heat."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "The pickup man's dust.",
+            "B1": "The pickup man's dust.",
+            "B2": "The pickup man's dust."
+          },
+          "goto": 40
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "text": {
+        "A2": "[stub] A signpost, paint blistered white; which way?",
+        "B1": "[stub] A signpost, paint blistered white; which way?",
+        "B2": "[stub] A signpost, paint blistered white; which way?"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The road.",
+            "B1": "The road.",
+            "B2": "The road."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "The smoke at the siding.",
+            "B1": "The smoke at the siding.",
+            "B2": "The smoke at the siding."
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "text": {
+        "A2": "[stub] The pickup man: cool smile, warm bottles, a lift to town — today only, cash only.",
+        "B1": "[stub] The pickup man: cool smile, warm bottles, a lift to town — today only, cash only.",
+        "B2": "[stub] The pickup man: cool smile, warm bottles, a lift to town — today only, cash only."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hear the price.",
+            "B1": "Hear the price.",
+            "B2": "Hear the price."
+          },
+          "goto": 41
+        },
+        {
+          "text": {
+            "A2": "Refuse and go round.",
+            "B1": "Refuse and go round.",
+            "B2": "Refuse and go round."
+          },
+          "goto": 42,
+          "sets": [
+            "dodged_seller"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "text": {
+        "A2": "[stub] The price is robbery. He leans out: 'That kid won't last, friend. What's a child worth to you?'",
+        "B1": "[stub] The price is robbery. He leans out: 'That kid won't last, friend. What's a child worth to you?'",
+        "B2": "[stub] The price is robbery. He leans out: 'That kid won't last, friend. What's a child worth to you?'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Pay him.",
+            "B1": "Pay him.",
+            "B2": "Pay him."
+          },
+          "goto": 43,
+          "sets": [
+            "paid_seller"
+          ]
+        },
+        {
+          "text": {
+            "A2": "That line is the tell — refuse.",
+            "B1": "That line is the tell — refuse.",
+            "B2": "That line is the tell — refuse."
+          },
+          "goto": 42,
+          "sets": [
+            "dodged_seller"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Ask if the water's even cold.",
+            "B1": "Ask if the water's even cold.",
+            "B2": "Ask if the water's even cold."
+          },
+          "goto": 44
+        },
+        {
+          "text": {
+            "A2": "The crowd's fear presses in.",
+            "B1": "The crowd's fear presses in.",
+            "B2": "The crowd's fear presses in."
+          },
+          "goto": 49
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "text": {
+        "A2": "[stub] You leave him to the frightened crowd.",
+        "B1": "[stub] You leave him to the frightened crowd.",
+        "B2": "[stub] You leave him to the frightened crowd."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On the way.",
+            "B1": "On the way.",
+            "B2": "On the way."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "To the bus's stores instead.",
+            "B1": "To the bus's stores instead.",
+            "B2": "To the bus's stores instead."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "text": {
+        "A2": "[stub] You hand over the cash. Warm bottles, a promise of a lift.",
+        "B1": "[stub] You hand over the cash. Warm bottles, a promise of a lift.",
+        "B2": "[stub] You hand over the cash. Warm bottles, a promise of a lift."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Carry them back.",
+            "B1": "Carry them back.",
+            "B2": "Carry them back."
+          },
+          "goto": 45
+        },
+        {
+          "text": {
+            "A2": "A doubt already.",
+            "B1": "A doubt already.",
+            "B2": "A doubt already."
+          },
+          "goto": 46
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "text": {
+        "A2": "[stub] He won't quite say the water's clean or cold.",
+        "B1": "[stub] He won't quite say the water's clean or cold.",
+        "B2": "[stub] He won't quite say the water's clean or cold."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "That's your answer — refuse.",
+            "B1": "That's your answer — refuse.",
+            "B2": "That's your answer — refuse."
+          },
+          "goto": 42,
+          "sets": [
+            "dodged_seller"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Buy it anyway.",
+            "B1": "Buy it anyway.",
+            "B2": "Buy it anyway."
+          },
+          "goto": 43,
+          "sets": [
+            "paid_seller"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "text": {
+        "A2": "[stub] The bottles are hot as bathwater, and the 'lift' never comes.",
+        "B1": "[stub] The bottles are hot as bathwater, and the 'lift' never comes.",
+        "B2": "[stub] The bottles are hot as bathwater, and the 'lift' never comes."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Try to flag him back.",
+            "B1": "Try to flag him back.",
+            "B2": "Try to flag him back."
+          },
+          "goto": 47
+        },
+        {
+          "text": {
+            "A2": "On to Sami with nothing.",
+            "B1": "On to Sami with nothing.",
+            "B2": "On to Sami with nothing."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "text": {
+        "A2": "[stub] The water tastes wrong — brackish, warm, thin.",
+        "B1": "[stub] The water tastes wrong — brackish, warm, thin.",
+        "B2": "[stub] The water tastes wrong — brackish, warm, thin."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On to Sami.",
+            "B1": "On to Sami.",
+            "B2": "On to Sami."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "Back to argue.",
+            "B1": "Back to argue.",
+            "B2": "Back to argue."
+          },
+          "goto": 48
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "text": {
+        "A2": "[stub] The pickup's dust is already on the horizon. The lift was never coming.",
+        "B1": "[stub] The pickup's dust is already on the horizon. The lift was never coming.",
+        "B2": "[stub] The pickup's dust is already on the horizon. The lift was never coming."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On to Sami, fleeced.",
+            "B1": "On to Sami, fleeced.",
+            "B2": "On to Sami, fleeced."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "Leave the hot bottles in the sand.",
+            "B1": "Leave the hot bottles in the sand.",
+            "B2": "Leave the hot bottles in the sand."
+          },
+          "goto": 48
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "text": {
+        "A2": "[stub] The pickup's gone. The crowd's scattered. Only the heat, and your empty pockets.",
+        "B1": "[stub] The pickup's gone. The crowd's scattered. Only the heat, and your empty pockets.",
+        "B2": "[stub] The pickup's gone. The crowd's scattered. Only the heat, and your empty pockets."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On to Sami.",
+            "B1": "On to Sami.",
+            "B2": "On to Sami."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "Stand a moment in the glare.",
+            "B1": "Stand a moment in the glare.",
+            "B2": "Stand a moment in the glare."
+          },
+          "goto": 38
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "text": {
+        "A2": "[stub] The frightened crowd shoves cash at him; you see the whole trick.",
+        "B1": "[stub] The frightened crowd shoves cash at him; you see the whole trick.",
+        "B2": "[stub] The frightened crowd shoves cash at him; you see the whole trick."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hear the price anyway.",
+            "B1": "Hear the price anyway.",
+            "B2": "Hear the price anyway."
+          },
+          "goto": 41
+        },
+        {
+          "text": {
+            "A2": "Refuse and go round.",
+            "B1": "Refuse and go round.",
+            "B2": "Refuse and go round."
+          },
+          "goto": 42,
+          "sets": [
+            "dodged_seller"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "text": {
+        "A2": "[stub] Far out, the ridge at last seems closer — or does it?",
+        "B1": "[stub] Far out, the ridge at last seems closer — or does it?",
+        "B2": "[stub] Far out, the ridge at last seems closer — or does it?"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Nearly there.",
+            "B1": "Nearly there.",
+            "B2": "Nearly there."
+          },
+          "goto": 52
+        },
+        {
+          "text": {
+            "A2": "The ground shimmers and lies.",
+            "B1": "The ground shimmers and lies.",
+            "B2": "The ground shimmers and lies."
+          },
+          "goto": 51
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "text": {
+        "A2": "[stub] The flats go on and on; your head swims, the horizon breaks apart. A choice in a heartbeat.",
+        "B1": "[stub] The flats go on and on; your head swims, the horizon breaks apart. A choice in a heartbeat.",
+        "B2": "[stub] The flats go on and on; your head swims, the horizon breaks apart. A choice in a heartbeat."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "You go down in the open.",
+            "B1": "You go down in the open.",
+            "B2": "You go down in the open."
+          },
+          "goto": 129,
+          "requires": [
+            "took_shortcut"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Turn back for the road while you still can.",
+            "B1": "Turn back for the road while you still can.",
+            "B2": "Turn back for the road while you still can."
+          },
+          "goto": 53
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "text": {
+        "A2": "[stub] You reach the ridge's foot, staggering, tongue thick, but there.",
+        "B1": "[stub] You reach the ridge's foot, staggering, tongue thick, but there.",
+        "B2": "[stub] You reach the ridge's foot, staggering, tongue thick, but there."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Push on, spent.",
+            "B1": "Push on, spent.",
+            "B2": "Push on, spent."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "You dropped the water somewhere back there.",
+            "B1": "You dropped the water somewhere back there.",
+            "B2": "You dropped the water somewhere back there."
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "text": {
+        "A2": "[stub] You struggle back to the road, shaken, the afternoon burning away.",
+        "B1": "[stub] You struggle back to the road, shaken, the afternoon burning away.",
+        "B2": "[stub] You struggle back to the road, shaken, the afternoon burning away."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The long road after all.",
+            "B1": "The long road after all.",
+            "B2": "The long road after all."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "Too spent to go on.",
+            "B1": "Too spent to go on.",
+            "B2": "Too spent to go on."
+          },
+          "goto": 131
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "text": {
+        "A2": "[stub] You try to rig them some shade, but there's no water to give.",
+        "B1": "[stub] You try to rig them some shade, but there's no water to give.",
+        "B2": "[stub] You try to rig them some shade, but there's no water to give."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Give them your own water.",
+            "B1": "Give them your own water.",
+            "B2": "Give them your own water."
+          },
+          "goto": 55,
+          "sets": [
+            "gave_water"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Promise to send help.",
+            "B1": "Promise to send help.",
+            "B2": "Promise to send help."
+          },
+          "goto": 35
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "text": {
+        "A2": "[stub] You hand over your own bottle; the family drink, weak with relief.",
+        "B1": "[stub] You hand over your own bottle; the family drink, weak with relief.",
+        "B2": "[stub] You hand over your own bottle; the family drink, weak with relief."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On, drier now.",
+            "B1": "On, drier now.",
+            "B2": "On, drier now."
+          },
+          "goto": 56
+        },
+        {
+          "text": {
+            "A2": "They point you to the siding.",
+            "B1": "They point you to the siding.",
+            "B2": "They point you to the siding."
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "text": {
+        "A2": "[stub] Without your water, the heat finds you fast.",
+        "B1": "[stub] Without your water, the heat finds you fast.",
+        "B2": "[stub] Without your water, the heat finds you fast."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Keep moving, keep your head.",
+            "B1": "Keep moving, keep your head.",
+            "B2": "Keep moving, keep your head."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "A strip of shade offers a minute's rest.",
+            "B1": "A strip of shade offers a minute's rest.",
+            "B2": "A strip of shade offers a minute's rest."
+          },
+          "goto": 57
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "text": {
+        "A2": "[stub] A stranger waves you into a strip of shade for a minute.",
+        "B1": "[stub] A stranger waves you into a strip of shade for a minute.",
+        "B2": "[stub] A stranger waves you into a strip of shade for a minute."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Rest, then on.",
+            "B1": "Rest, then on.",
+            "B2": "Rest, then on."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "Refuse, press on.",
+            "B1": "Refuse, press on.",
+            "B2": "Refuse, press on."
+          },
+          "goto": 58
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "text": {
+        "A2": "[stub] You press on into the glare, mouth like paper.",
+        "B1": "[stub] You press on into the glare, mouth like paper.",
+        "B2": "[stub] You press on into the glare, mouth like paper."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The last stretch of the heat.",
+            "B1": "The last stretch of the heat.",
+            "B2": "The last stretch of the heat."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "On toward the water.",
+            "B1": "On toward the water.",
+            "B2": "On toward the water."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "text": {
+        "A2": "[stub] Someone points down the road: a passenger has wandered off toward the shimmer, dazed by the heat.",
+        "B1": "[stub] Someone points down the road: a passenger has wandered off toward the shimmer, dazed by the heat.",
+        "B2": "[stub] Someone points down the road: a passenger has wandered off toward the shimmer, dazed by the heat."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go after them.",
+            "B1": "Go after them.",
+            "B2": "Go after them."
+          },
+          "goto": 61,
+          "sets": [
+            "helped_stranger"
+          ]
+        },
+        {
+          "text": {
+            "A2": "No time — Sami first.",
+            "B1": "No time — Sami first.",
+            "B2": "No time — Sami first."
+          },
+          "goto": 62
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "text": {
+        "A2": "[stub] You find them stumbling in a dry gully, sun-struck and lost.",
+        "B1": "[stub] You find them stumbling in a dry gully, sun-struck and lost.",
+        "B2": "[stub] You find them stumbling in a dry gully, sun-struck and lost."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Walk them back.",
+            "B1": "Walk them back.",
+            "B2": "Walk them back."
+          },
+          "goto": 63
+        },
+        {
+          "text": {
+            "A2": "On to Sami.",
+            "B1": "On to Sami.",
+            "B2": "On to Sami."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "text": {
+        "A2": "[stub] You send word for someone else to go, and press on.",
+        "B1": "[stub] You send word for someone else to go, and press on.",
+        "B2": "[stub] You send word for someone else to go, and press on."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "On toward the water.",
+            "B1": "On toward the water.",
+            "B2": "On toward the water."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "text": {
+        "A2": "[stub] Their family on the bus thank you; a shared bottle, a place in the shade.",
+        "B1": "[stub] Their family on the bus thank you; a shared bottle, a place in the shade.",
+        "B2": "[stub] Their family on the bus thank you; a shared bottle, a place in the shade."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On toward the water.",
+            "B1": "On toward the water.",
+            "B2": "On toward the water."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "The last stretch of the heat.",
+            "B1": "The last stretch of the heat.",
+            "B2": "The last stretch of the heat."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "text": {
+        "A2": "[stub] The whole plain lies empty and shimmering, everything waiting for the sun to drop.",
+        "B1": "[stub] The whole plain lies empty and shimmering, everything waiting for the sun to drop.",
+        "B2": "[stub] The whole plain lies empty and shimmering, everything waiting for the sun to drop."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Press on down the road.",
+            "B1": "Press on down the road.",
+            "B2": "Press on down the road."
+          },
+          "goto": 30
+        },
+        {
+          "text": {
+            "A2": "The smoke at the siding.",
+            "B1": "The smoke at the siding.",
+            "B2": "The smoke at the siding."
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "text": {
+        "A2": "[stub] The sun climbs to its worst; the tar softens, the air burns.",
+        "B1": "[stub] The sun climbs to its worst; the tar softens, the air burns.",
+        "B2": "[stub] The sun climbs to its worst; the tar softens, the air burns."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The stalled family.",
+            "B1": "The stalled family.",
+            "B2": "The stalled family."
+          },
+          "goto": 32
+        },
+        {
+          "text": {
+            "A2": "Press on.",
+            "B1": "Press on.",
+            "B2": "Press on."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "text": {
+        "A2": "[stub] Bello presses the last cool bottle on you and turns back to the engine.",
+        "B1": "[stub] Bello presses the last cool bottle on you and turns back to the engine.",
+        "B2": "[stub] Bello presses the last cool bottle on you and turns back to the engine."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On the way.",
+            "B1": "On the way.",
+            "B2": "On the way."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "His warning first.",
+            "B1": "His warning first.",
+            "B2": "His warning first."
+          },
+          "goto": 22
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "text": {
+        "A2": "[stub] A rush on the water at the front of the bus; voices rising, hands grabbing.",
+        "B1": "[stub] A rush on the water at the front of the bus; voices rising, hands grabbing.",
+        "B2": "[stub] A rush on the water at the front of the bus; voices rising, hands grabbing."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Calm it, and get them sharing.",
+            "B1": "Calm it, and get them sharing.",
+            "B2": "Calm it, and get them sharing."
+          },
+          "goto": 19
+        },
+        {
+          "text": {
+            "A2": "Get to the crate.",
+            "B1": "Get to the crate.",
+            "B2": "Get to the crate."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "text": {
+        "A2": "[stub] Years of a shut-up house. Then breathing, slow and shallow, from the back room.",
+        "B1": "[stub] Years of a shut-up house. Then breathing, slow and shallow, from the back room.",
+        "B2": "[stub] Years of a shut-up house. Then breathing, slow and shallow, from the back room."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Follow the breathing, and find him.",
+            "B1": "Follow the breathing, and find him.",
+            "B2": "Follow the breathing, and find him."
+          },
+          "goto": 74,
+          "sets": [
+            "found_well"
+          ]
+        },
+        {
+          "text": {
+            "A2": "It's too much — back to Sami.",
+            "B1": "It's too much — back to Sami.",
+            "B2": "It's too much — back to Sami."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "text": {
+        "A2": "[stub] The old rail-stop siding, shut for years — but a thread of smoke rises and a windmill turns. No one can explain it.",
+        "B1": "[stub] The old rail-stop siding, shut for years — but a thread of smoke rises and a windmill turns. No one can explain it.",
+        "B2": "[stub] The old rail-stop siding, shut for years — but a thread of smoke rises and a windmill turns. No one can explain it."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go and see.",
+            "B1": "Go and see.",
+            "B2": "Go and see."
+          },
+          "goto": 71
+        },
+        {
+          "text": {
+            "A2": "Leave it — Sami first.",
+            "B1": "Leave it — Sami first.",
+            "B2": "Leave it — Sami first."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "text": {
+        "A2": "[stub] You reach it. You knock. No answer. The door stands ajar.",
+        "B1": "[stub] You reach it. You knock. No answer. The door stands ajar.",
+        "B2": "[stub] You reach it. You knock. No answer. The door stands ajar."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go in.",
+            "B1": "Go in.",
+            "B2": "Go in."
+          },
+          "goto": 72
+        },
+        {
+          "text": {
+            "A2": "Call out and wait.",
+            "B1": "Call out and wait.",
+            "B2": "Call out and wait."
+          },
+          "goto": 73
+        },
+        {
+          "text": {
+            "A2": "Years of dust and heat-crack inside.",
+            "B1": "Years of dust and heat-crack inside.",
+            "B2": "Years of dust and heat-crack inside."
+          },
+          "goto": 78
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "text": {
+        "A2": "[stub] Inside, dim and stifling: old Mr Faro, down on the floor by a dead radio, barely moving.",
+        "B1": "[stub] Inside, dim and stifling: old Mr Faro, down on the floor by a dead radio, barely moving.",
+        "B2": "[stub] Inside, dim and stifling: old Mr Faro, down on the floor by a dead radio, barely moving."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Get him cool and watered.",
+            "B1": "Get him cool and watered.",
+            "B2": "Get him cool and watered."
+          },
+          "goto": 74,
+          "sets": [
+            "found_well"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Run for help.",
+            "B1": "Run for help.",
+            "B2": "Run for help."
+          },
+          "goto": 75
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "text": {
+        "A2": "[stub] A weak voice inside answers.",
+        "B1": "[stub] A weak voice inside answers.",
+        "B2": "[stub] A weak voice inside answers."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go in.",
+            "B1": "Go in.",
+            "B2": "Go in."
+          },
+          "goto": 72
+        },
+        {
+          "text": {
+            "A2": "Fetch help.",
+            "B1": "Fetch help.",
+            "B2": "Fetch help."
+          },
+          "goto": 75
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "text": {
+        "A2": "[stub] You get water into Faro, fan him, bring him round. He points: the deep well out back — and the radio, if you can raise it.",
+        "B1": "[stub] You get water into Faro, fan him, bring him round. He points: the deep well out back — and the radio, if you can raise it.",
+        "B2": "[stub] You get water into Faro, fan him, bring him round. He points: the deep well out back — and the radio, if you can raise it."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "He speaks of the road.",
+            "B1": "He speaks of the road.",
+            "B2": "He speaks of the road."
+          },
+          "goto": 76
+        },
+        {
+          "text": {
+            "A2": "Get you both back to the bus.",
+            "B1": "Get you both back to the bus.",
+            "B2": "Get you both back to the bus."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "text": {
+        "A2": "[stub] You run — but there is no help out here till evening. It is you or no one.",
+        "B1": "[stub] You run — but there is no help out here till evening. It is you or no one.",
+        "B2": "[stub] You run — but there is no help out here till evening. It is you or no one."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go back in.",
+            "B1": "Go back in.",
+            "B2": "Go back in."
+          },
+          "goto": 72
+        },
+        {
+          "text": {
+            "A2": "On to Sami, torn.",
+            "B1": "On to Sami, torn.",
+            "B2": "On to Sami, torn."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "text": {
+        "A2": "[stub] Faro looks at you: 'You came off the noon bus? There's an old friend of mine aboard, I'd bet — Rose. Tell her Faro's still here.'",
+        "B1": "[stub] Faro looks at you: 'You came off the noon bus? There's an old friend of mine aboard, I'd bet — Rose. Tell her Faro's still here.'",
+        "B2": "[stub] Faro looks at you: 'You came off the noon bus? There's an old friend of mine aboard, I'd bet — Rose. Tell her Faro's still here.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Resolve to bring them together.",
+            "B1": "Resolve to bring them together.",
+            "B2": "Resolve to bring them together."
+          },
+          "goto": 77
+        },
+        {
+          "text": {
+            "A2": "On to Sami with the news.",
+            "B1": "On to Sami with the news.",
+            "B2": "On to Sami with the news."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "text": {
+        "A2": "[stub] You decide to get them face to face before the day is out.",
+        "B1": "[stub] You decide to get them face to face before the day is out.",
+        "B2": "[stub] You decide to get them face to face before the day is out."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the bus.",
+            "B1": "Back to the bus.",
+            "B2": "Back to the bus."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "Get Faro steady first.",
+            "B1": "Get Faro steady first.",
+            "B2": "Get Faro steady first."
+          },
+          "goto": 74
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "text": {
+        "A2": "[stub] The place holds years of dust, dry heat, and silence.",
+        "B1": "[stub] The place holds years of dust, dry heat, and silence.",
+        "B2": "[stub] The place holds years of dust, dry heat, and silence."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Deeper in.",
+            "B1": "Deeper in.",
+            "B2": "Deeper in."
+          },
+          "goto": 72
+        },
+        {
+          "text": {
+            "A2": "An old photo, curled on the wall.",
+            "B1": "An old photo, curled on the wall.",
+            "B2": "An old photo, curled on the wall."
+          },
+          "goto": 79
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "text": {
+        "A2": "[stub] A photo: Faro and a young woman by this very windmill, both laughing. A weak sound from the back room.",
+        "B1": "[stub] A photo: Faro and a young woman by this very windmill, both laughing. A weak sound from the back room.",
+        "B2": "[stub] A photo: Faro and a young woman by this very windmill, both laughing. A weak sound from the back room."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Follow the sound, and find him.",
+            "B1": "Follow the sound, and find him.",
+            "B2": "Follow the sound, and find him."
+          },
+          "goto": 74,
+          "sets": [
+            "found_well"
+          ]
+        },
+        {
+          "text": {
+            "A2": "The years in the dust.",
+            "B1": "The years in the dust.",
+            "B2": "The years in the dust."
+          },
+          "goto": 69
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "text": {
+        "A2": "[stub] The pickup man rolls back: 'Still stuck? Still thirsty? Last chance, friend.'",
+        "B1": "[stub] The pickup man rolls back: 'Still stuck? Still thirsty? Last chance, friend.'",
+        "B2": "[stub] The pickup man rolls back: 'Still stuck? Still thirsty? Last chance, friend.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Pay him.",
+            "B1": "Pay him.",
+            "B2": "Pay him."
+          },
+          "goto": 43,
+          "sets": [
+            "paid_seller"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Refuse for good.",
+            "B1": "Refuse for good.",
+            "B2": "Refuse for good."
+          },
+          "goto": 91,
+          "sets": [
+            "dodged_seller"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "text": {
+        "A2": "[stub] The last of the worst heat, back at the bus, your breath dry, Sami pale in the shade.",
+        "B1": "[stub] The last of the worst heat, back at the bus, your breath dry, Sami pale in the shade.",
+        "B2": "[stub] The last of the worst heat, back at the bus, your breath dry, Sami pale in the shade."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "See to the child.",
+            "B1": "See to the child.",
+            "B2": "See to the child."
+          },
+          "goto": 91
+        },
+        {
+          "text": {
+            "A2": "The pickup man's last offer.",
+            "B1": "The pickup man's last offer.",
+            "B2": "The pickup man's last offer."
+          },
+          "goto": 80
+        },
+        {
+          "text": {
+            "A2": "Help arrives behind you.",
+            "B1": "Help arrives behind you.",
+            "B2": "Help arrives behind you."
+          },
+          "goto": 92
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "text": {
+        "A2": "[stub] At Sami's side: the child hot, breathing fast and shallow, lips cracked.",
+        "B1": "[stub] At Sami's side: the child hot, breathing fast and shallow, lips cracked.",
+        "B2": "[stub] At Sami's side: the child hot, breathing fast and shallow, lips cracked."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Set up real cooling.",
+            "B1": "Set up real cooling.",
+            "B2": "Set up real cooling."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "Check the child over.",
+            "B1": "Check the child over.",
+            "B2": "Check the child over."
+          },
+          "goto": 94
+        },
+        {
+          "text": {
+            "A2": "A glint far off catches your eye.",
+            "B1": "A glint far off catches your eye.",
+            "B2": "A glint far off catches your eye."
+          },
+          "goto": 98
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "text": {
+        "A2": "[stub] Help reaches the bus behind you — hands, water, a plan.",
+        "B1": "[stub] Help reaches the bus behind you — hands, water, a plan.",
+        "B2": "[stub] Help reaches the bus behind you — hands, water, a plan."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "To Sami together.",
+            "B1": "To Sami together.",
+            "B2": "To Sami together."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "Hold through the worst.",
+            "B1": "Hold through the worst.",
+            "B2": "Hold through the worst."
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "Dust on the road, far off.",
+            "B1": "Dust on the road, far off.",
+            "B2": "Dust on the road, far off."
+          },
+          "goto": 107
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "text": {
+        "A2": "[stub] Cooling the child: what you carried decides what you can do now.",
+        "B1": "[stub] Cooling the child: what you carried decides what you can do now.",
+        "B2": "[stub] Cooling the child: what you carried decides what you can do now."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The water crate.",
+            "B1": "The water crate.",
+            "B2": "The water crate."
+          },
+          "goto": 95
+        },
+        {
+          "text": {
+            "A2": "Wet rags, shade, sips.",
+            "B1": "Wet rags, shade, sips.",
+            "B2": "Wet rags, shade, sips."
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "text": {
+        "A2": "[stub] Sami wakes, weak but calmer to see your face.",
+        "B1": "[stub] Sami wakes, weak but calmer to see your face.",
+        "B2": "[stub] Sami wakes, weak but calmer to see your face."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Get the child cool.",
+            "B1": "Get the child cool.",
+            "B2": "Get the child cool."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "Break out the water.",
+            "B1": "Break out the water.",
+            "B2": "Break out the water."
+          },
+          "goto": 95
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "text": {
+        "A2": "[stub] The water crate does it: steady sips, wet cloths, the fever-heat easing.",
+        "B1": "[stub] The water crate does it: steady sips, wet cloths, the fever-heat easing.",
+        "B2": "[stub] The water crate does it: steady sips, wet cloths, the fever-heat easing."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hold through the worst.",
+            "B1": "Hold through the worst.",
+            "B2": "Hold through the worst."
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "Help arrives.",
+            "B1": "Help arrives.",
+            "B2": "Help arrives."
+          },
+          "goto": 92
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "text": {
+        "A2": "[stub] No crate. You wet rags in your own last water, share the shade, keep the child talking.",
+        "B1": "[stub] No crate. You wet rags in your own last water, share the shade, keep the child talking.",
+        "B2": "[stub] No crate. You wet rags in your own last water, share the shade, keep the child talking."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hold through the worst.",
+            "B1": "Hold through the worst.",
+            "B2": "Hold through the worst."
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "It may not be enough.",
+            "B1": "It may not be enough.",
+            "B2": "It may not be enough."
+          },
+          "goto": 97
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "text": {
+        "A2": "[stub] The heat is deep, and it may be more than rags can hold.",
+        "B1": "[stub] The heat is deep, and it may be more than rags can hold.",
+        "B2": "[stub] The heat is deep, and it may be more than rags can hold."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hold on to evening.",
+            "B1": "Hold on to evening.",
+            "B2": "Hold on to evening."
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "Send for the rallied help.",
+            "B1": "Send for the rallied help.",
+            "B2": "Send for the rallied help."
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "text": {
+        "A2": "[stub] Far off across the flats, a thread of smoke and a turning windmill.",
+        "B1": "[stub] Far off across the flats, a thread of smoke and a turning windmill.",
+        "B2": "[stub] Far off across the flats, a thread of smoke and a turning windmill."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "See to Sami first.",
+            "B1": "See to Sami first.",
+            "B2": "See to Sami first."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "The smoke nags at you.",
+            "B1": "The smoke nags at you.",
+            "B2": "The smoke nags at you."
+          },
+          "goto": 99
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "text": {
+        "A2": "[stub] The smoke, rising where everyone swears no one lives.",
+        "B1": "[stub] The smoke, rising where everyone swears no one lives.",
+        "B2": "[stub] The smoke, rising where everyone swears no one lives."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Sami first.",
+            "B1": "Sami first.",
+            "B2": "Sami first."
+          },
+          "goto": 94
+        },
+        {
+          "text": {
+            "A2": "Hold through the worst.",
+            "B1": "Hold through the worst.",
+            "B2": "Hold through the worst."
+          },
+          "goto": 100
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "text": {
+        "A2": "[stub] The long hold: you keep the child cool, keep the water going round, wait out the sun.",
+        "B1": "[stub] The long hold: you keep the child cool, keep the water going round, wait out the sun.",
+        "B2": "[stub] The long hold: you keep the child cool, keep the water going round, wait out the sun."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Watch for the sun to drop.",
+            "B1": "Watch for the sun to drop.",
+            "B2": "Watch for the sun to drop."
+          },
+          "goto": 101
+        },
+        {
+          "text": {
+            "A2": "The smoke still nags.",
+            "B1": "The smoke still nags.",
+            "B2": "The smoke still nags."
+          },
+          "goto": 70
+        },
+        {
+          "text": {
+            "A2": "The afternoon's worst hour.",
+            "B1": "The afternoon's worst hour.",
+            "B2": "The afternoon's worst hour."
+          },
+          "goto": 102
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "text": {
+        "A2": "[stub] The glare softens. The sun tips west. Dust rises on the road — a truck, at last.",
+        "B1": "[stub] The glare softens. The sun tips west. Dust rises on the road — a truck, at last.",
+        "B2": "[stub] The glare softens. The sun tips west. Dust rises on the road — a truck, at last."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The cool of evening, and what it finds.",
+            "B1": "The cool of evening, and what it finds.",
+            "B2": "The cool of evening, and what it finds."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "Evening over the flats.",
+            "B1": "Evening over the flats.",
+            "B2": "Evening over the flats."
+          },
+          "goto": 105
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "text": {
+        "A2": "[stub] The worst hour, before the heat breaks.",
+        "B1": "[stub] The worst hour, before the heat breaks.",
+        "B2": "[stub] The worst hour, before the heat breaks."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Watch for the sun to drop.",
+            "B1": "Watch for the sun to drop.",
+            "B2": "Watch for the sun to drop."
+          },
+          "goto": 101
+        },
+        {
+          "text": {
+            "A2": "Others' vehicles far down the road.",
+            "B1": "Others' vehicles far down the road.",
+            "B2": "Others' vehicles far down the road."
+          },
+          "goto": 103
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "text": {
+        "A2": "[stub] Down the road, dust and glints — others got through too.",
+        "B1": "[stub] Down the road, dust and glints — others got through too.",
+        "B2": "[stub] Down the road, dust and glints — others got through too."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The cool of evening.",
+            "B1": "The cool of evening.",
+            "B2": "The cool of evening."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "The lights of the coming truck.",
+            "B1": "The lights of the coming truck.",
+            "B2": "The lights of the coming truck."
+          },
+          "goto": 104
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "text": {
+        "A2": "[stub] Headlights and a plume of dust climb toward you at last.",
+        "B1": "[stub] Headlights and a plume of dust climb toward you at last.",
+        "B2": "[stub] Headlights and a plume of dust climb toward you at last."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The cool of evening.",
+            "B1": "The cool of evening.",
+            "B2": "The cool of evening."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "What the afternoon came to.",
+            "B1": "What the afternoon came to.",
+            "B2": "What the afternoon came to."
+          },
+          "goto": 114
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "text": {
+        "A2": "[stub] Evening over the flats, gold and clean, the heat lifting.",
+        "B1": "[stub] Evening over the flats, gold and clean, the heat lifting.",
+        "B2": "[stub] Evening over the flats, gold and clean, the heat lifting."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The cool of evening.",
+            "B1": "The cool of evening.",
+            "B2": "The cool of evening."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "Help reaches the bus.",
+            "B1": "Help reaches the bus.",
+            "B2": "Help reaches the bus."
+          },
+          "goto": 92
+        },
+        {
+          "text": {
+            "A2": "The first cool breath of wind.",
+            "B1": "The first cool breath of wind.",
+            "B2": "The first cool breath of wind."
+          },
+          "goto": 106
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "text": {
+        "A2": "[stub] The first cool breath of wind, unbelievable after the day.",
+        "B1": "[stub] The first cool breath of wind, unbelievable after the day.",
+        "B2": "[stub] The first cool breath of wind, unbelievable after the day."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The cool of evening.",
+            "B1": "The cool of evening.",
+            "B2": "The cool of evening."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "Help reaches the bus.",
+            "B1": "Help reaches the bus.",
+            "B2": "Help reaches the bus."
+          },
+          "goto": 92
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "text": {
+        "A2": "[stub] From the bus, far off on the road, a rising plume of dust.",
+        "B1": "[stub] From the bus, far off on the road, a rising plume of dust.",
+        "B2": "[stub] From the bus, far off on the road, a rising plume of dust."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "To Sami.",
+            "B1": "To Sami.",
+            "B2": "To Sami."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "Hold through the worst.",
+            "B1": "Hold through the worst.",
+            "B2": "Hold through the worst."
+          },
+          "goto": 100
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "text": {
+        "A2": "[stub] The cool of evening: what the afternoon comes to.",
+        "B1": "[stub] The cool of evening: what the afternoon comes to.",
+        "B2": "[stub] The cool of evening: what the afternoon comes to."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Sami is safe; you kept the water going.",
+            "B1": "Sami is safe; you kept the water going.",
+            "B2": "Sami is safe; you kept the water going."
+          },
+          "goto": 120,
+          "requires": [
+            "has_water"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You found the smoke, and saved Faro.",
+            "B1": "You found the smoke, and saved Faro.",
+            "B2": "You found the smoke, and saved Faro."
+          },
+          "goto": 121,
+          "requires": [
+            "found_well"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Weigh the rest.",
+            "B1": "Weigh the rest.",
+            "B2": "Weigh the rest."
+          },
+          "goto": 111
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "text": {
+        "A2": "[stub] The afternoon adds up.",
+        "B1": "[stub] The afternoon adds up.",
+        "B2": "[stub] The afternoon adds up."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The whole bus came through together.",
+            "B1": "The whole bus came through together.",
+            "B2": "The whole bus came through together."
+          },
+          "goto": 122,
+          "requires": [
+            "rallied_bus"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You did it clean — no con.",
+            "B1": "You did it clean — no con.",
+            "B2": "You did it clean — no con."
+          },
+          "goto": 123,
+          "requires": [
+            "dodged_seller"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Weigh the rest.",
+            "B1": "Weigh the rest.",
+            "B2": "Weigh the rest."
+          },
+          "goto": 112
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "text": {
+        "A2": "[stub] What else the afternoon held.",
+        "B1": "[stub] What else the afternoon held.",
+        "B2": "[stub] What else the afternoon held."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "A stranger you helped carries you on.",
+            "B1": "A stranger you helped carries you on.",
+            "B2": "A stranger you helped carries you on."
+          },
+          "goto": 124,
+          "requires": [
+            "helped_stranger"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You gave your own water away.",
+            "B1": "You gave your own water away.",
+            "B2": "You gave your own water away."
+          },
+          "goto": 125,
+          "requires": [
+            "gave_water"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Weigh the rest.",
+            "B1": "Weigh the rest.",
+            "B2": "Weigh the rest."
+          },
+          "goto": 113
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "text": {
+        "A2": "[stub] What the afternoon leaves you.",
+        "B1": "[stub] What the afternoon leaves you.",
+        "B2": "[stub] What the afternoon leaves you."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "A truck comes at last, late.",
+            "B1": "A truck comes at last, late.",
+            "B2": "A truck comes at last, late."
+          },
+          "goto": 126
+        },
+        {
+          "text": {
+            "A2": "The bus saw you get up and act.",
+            "B1": "The bus saw you get up and act.",
+            "B2": "The bus saw you get up and act."
+          },
+          "goto": 127
+        },
+        {
+          "text": {
+            "A2": "The worst of it.",
+            "B1": "The worst of it.",
+            "B2": "The worst of it."
+          },
+          "goto": 114
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "text": {
+        "A2": "[stub] The hard end of the afternoon.",
+        "B1": "[stub] The hard end of the afternoon.",
+        "B2": "[stub] The hard end of the afternoon."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "You paid the pickup man — fleeced.",
+            "B1": "You paid the pickup man — fleeced.",
+            "B2": "You paid the pickup man — fleeced."
+          },
+          "goto": 128,
+          "requires": [
+            "paid_seller"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You were simply too late.",
+            "B1": "You were simply too late.",
+            "B2": "You were simply too late."
+          },
+          "goto": 130
+        },
+        {
+          "text": {
+            "A2": "A truck came before real harm.",
+            "B1": "A truck came before real harm.",
+            "B2": "A truck came before real harm."
+          },
+          "goto": 126
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "text": {
+        "A2": "[stub] GOOD — Everyone drinks. You kept the bus watered and shaded through the worst of the heat; the sun drops, a truck finds you, and Sami reaches the city safe. The child is alive because you got up out of your seat.",
+        "B1": "[stub] GOOD — Everyone drinks. You kept the bus watered and shaded through the worst of the heat; the sun drops, a truck finds you, and Sami reaches the city safe. The child is alive because you got up out of your seat.",
+        "B2": "[stub] GOOD — Everyone drinks. You kept the bus watered and shaded through the worst of the heat; the sun drops, a truck finds you, and Sami reaches the city safe. The child is alive because you got up out of your seat."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 121,
+      "text": {
+        "A2": "[stub] GOOD — The well that wasn't dry (secret). You crossed to the smoke no one could explain, found Mr Faro fallen in the heat, and got him cool in time — and his deep well and old radio saved the whole bus, with a quiet grace note: an old friend, recognised after all these years.",
+        "B1": "[stub] GOOD — The well that wasn't dry (secret). You crossed to the smoke no one could explain, found Mr Faro fallen in the heat, and got him cool in time — and his deep well and old radio saved the whole bus, with a quiet grace note: an old friend, recognised after all these years.",
+        "B2": "[stub] GOOD — The well that wasn't dry (secret). You crossed to the smoke no one could explain, found Mr Faro fallen in the heat, and got him cool in time — and his deep well and old radio saved the whole bus, with a quiet grace note: an old friend, recognised after all these years."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 122,
+      "text": {
+        "A2": "[stub] GOOD — All of us in the shade. No single heroic move — but you turned a busload of frightened strangers into people sharing water and shade and watching the weak, and everyone came through the afternoon together.",
+        "B1": "[stub] GOOD — All of us in the shade. No single heroic move — but you turned a busload of frightened strangers into people sharing water and shade and watching the weak, and everyone came through the afternoon together.",
+        "B2": "[stub] GOOD — All of us in the shade. No single heroic move — but you turned a busload of frightened strangers into people sharing water and shade and watching the weak, and everyone came through the afternoon together."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 123,
+      "text": {
+        "A2": "[stub] GOOD — You did what you could. You refused the con, kept your head and your money, and got water by decent means. Not perfect. But clean, honest, and enough.",
+        "B1": "[stub] GOOD — You did what you could. You refused the con, kept your head and your money, and got water by decent means. Not perfect. But clean, honest, and enough.",
+        "B2": "[stub] GOOD — You did what you could. You refused the con, kept your head and your money, and got water by decent means. Not perfect. But clean, honest, and enough."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 124,
+      "text": {
+        "A2": "[stub] NEUTRAL — The kindness returned. You fell short of the whole afternoon's goal, but the stranger you stopped for comes back with a vehicle and carries you and Sami to town. Rescue without the full win.",
+        "B1": "[stub] NEUTRAL — The kindness returned. You fell short of the whole afternoon's goal, but the stranger you stopped for comes back with a vehicle and carries you and Sami to town. Rescue without the full win.",
+        "B2": "[stub] NEUTRAL — The kindness returned. You fell short of the whole afternoon's goal, but the stranger you stopped for comes back with a vehicle and carries you and Sami to town. Rescue without the full win."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 125,
+      "text": {
+        "A2": "[stub] NEUTRAL — Shared your last mouthful. You gave your own water away and end the day parched yourself, but not alone — and something on that bus has shifted. A start, not a save.",
+        "B1": "[stub] NEUTRAL — Shared your last mouthful. You gave your own water away and end the day parched yourself, but not alone — and something on that bus has shifted. A start, not a save.",
+        "B2": "[stub] NEUTRAL — Shared your last mouthful. You gave your own water away and end the day parched yourself, but not alone — and something on that bus has shifted. A start, not a save."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 126,
+      "text": {
+        "A2": "[stub] NEUTRAL — One more mile. You scrape through the worst of it; a truck finally comes, late and grudging. Not triumphant — just, in the end, relieved.",
+        "B1": "[stub] NEUTRAL — One more mile. You scrape through the worst of it; a truck finally comes, late and grudging. Not triumphant — just, in the end, relieved.",
+        "B2": "[stub] NEUTRAL — One more mile. You scrape through the worst of it; a truck finally comes, late and grudging. Not triumphant — just, in the end, relieved."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 127,
+      "text": {
+        "A2": "[stub] NEUTRAL — The road remembers. You didn't manage everything, but the bus saw you get up and act when others sat still. You are, from today, someone this road knows.",
+        "B1": "[stub] NEUTRAL — The road remembers. You didn't manage everything, but the bus saw you get up and act when others sat still. You are, from today, someone this road knows.",
+        "B2": "[stub] NEUTRAL — The road remembers. You didn't manage everything, but the bus saw you get up and act when others sat still. You are, from today, someone this road knows."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 128,
+      "text": {
+        "A2": "[stub] BAD — Robbed on the road. You paid the pickup man for water that's warm and half-gone and a lift that never comes back. The money's gone, and the thirst is exactly where it was.",
+        "B1": "[stub] BAD — Robbed on the road. You paid the pickup man for water that's warm and half-gone and a lift that never comes back. The money's gone, and the thirst is exactly where it was.",
+        "B2": "[stub] BAD — Robbed on the road. You paid the pickup man for water that's warm and half-gone and a lift that never comes back. The money's gone, and the thirst is exactly where it was."
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 129,
+      "text": {
+        "A2": "[stub] BAD — The flats went on forever. The open ground was a trap; the heat and the distance nearly take you, and they take the afternoon — you get back too late, if you get back at all.",
+        "B1": "[stub] BAD — The flats went on forever. The open ground was a trap; the heat and the distance nearly take you, and they take the afternoon — you get back too late, if you get back at all.",
+        "B2": "[stub] BAD — The flats went on forever. The open ground was a trap; the heat and the distance nearly take you, and they take the afternoon — you get back too late, if you get back at all."
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 130,
+      "text": {
+        "A2": "[stub] BAD — Too late in the heat. You spent the afternoon on the wrong things, and Sami goes down in the heat; by evening the child is being carried, limp and grey, to a waiting truck.",
+        "B1": "[stub] BAD — Too late in the heat. You spent the afternoon on the wrong things, and Sami goes down in the heat; by evening the child is being carried, limp and grey, to a waiting truck.",
+        "B2": "[stub] BAD — Too late in the heat. You spent the afternoon on the wrong things, and Sami goes down in the heat; by evening the child is being carried, limp and grey, to a waiting truck."
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 131,
+      "text": {
+        "A2": "[stub] BAD — You kept your bottle capped. You stayed in your seat and kept your own water and never got up. Nothing bad happened to you. You will think about it for a long time.",
+        "B1": "[stub] BAD — You kept your bottle capped. You stayed in your seat and kept your own water and never got up. Nothing bad happened to you. You will think about it for a long time.",
+        "B2": "[stub] BAD — You kept your bottle capped. You stayed in your seat and kept your own water and never got up. Nothing bad happened to you. You will think about it for a long time."
+      },
+      "ending": "bad"
+    }
+  ],
+  "lexicon": {
+    "_comment": "The Cool of Evening's chosen lexicon. Grown in phase 4. Base-keyed; the reader resolves inflections. Translations need a native speaker's check before launch.",
+    "entries": {}
+  }
+}
