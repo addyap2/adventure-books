@@ -3,6 +3,10 @@
 Tracks what has been checked and what still needs a native speaker, per language.
 (Full instructions for reviewers are in `README.md`.)
 
+> **Also awaiting native review:** the translated **UI copy** (the home-hero tagline +
+> intro that morph through the eight languages) — drafts and instructions are in
+> `../ui-strings/`. Same priority order applies (ru / ar / zh first; settle the pt variety).
+
 **Content coverage: complete for all 8 languages** — every language has the full curated
 lexicon (232 words), the coverage dictionary (516 words) and whole-book passage gists (123).
 Nothing is missing. What remains is **quality**: native review, and for ru/ar/zh a first

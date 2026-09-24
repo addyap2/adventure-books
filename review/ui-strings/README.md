@@ -1,0 +1,35 @@
+# UI strings review — native-speaker check
+
+Interface copy that is shown translated (not story text). Right now this is the **home
+hero** — the tagline and intro paragraph that morph through the eight site languages on
+`web/library.html`. The English is authoritative; each translated draft wants a native
+speaker's eyes before launch, exactly like the glossary (`../glossary/`).
+
+## The file
+
+`home-hero.csv` — one row per (string × language).
+
+| column | what to do |
+|---|---|
+| `string_id` | `tagline` or `intro` — do not change |
+| `location` | where it appears — do not change |
+| `language` | fr / es / pt / it / de / ru / ar / zh — do not change |
+| `english_source` | the meaning to preserve — **match this**, keep it natural, not literal |
+| `draft` | the current draft translation (also live in the hero) |
+| `corrected_translation` | leave blank if the draft is right; otherwise put the correct form here |
+| `reviewer_notes` | register, tone, article, RTL/punctuation, regional variant, anything to flag |
+
+Keep it a warm, plain marketing voice — it is the first line a learner reads. The tagline
+should stay short and rhythmic. `A2` / `B1` / `B2` stay as-is in every language.
+
+## Priority
+
+Same as the glossary: **ru / ar / zh** are machine-authored and are the top priority for a
+native pass; **pt** also needs its variety settled (the draft is European Portuguese — decide
+EU or BR and make it consistent with the glossary's choice).
+
+## Applying corrections
+
+There is no auto-merge script for these yet (there are only 16 rows). Hand the edited CSV
+back and the `corrected_translation` values get pasted into the `S` array in
+`web/library.html` (the hero morph) — matched by `string_id` + `language`.
