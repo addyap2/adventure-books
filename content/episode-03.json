@@ -78,14 +78,14 @@
     {
       "id": 1,
       "text": {
-        "A2": "[stub] Just after dark, every light in the town goes out at once. A power cut. The heating dies. Up the hill, old Mrs Ada, who was kind to you as a child, needs her electric heater — and she has a weak chest.",
-        "B1": "[stub] Just after dark, every light in the town goes out at once. A power cut. The heating dies. Up the hill, old Mrs Ada, who was kind to you as a child, needs her electric heater — and she has a weak chest.",
-        "B2": "[stub] Just after dark, every light in the town goes out at once. A power cut. The heating dies. Up the hill, old Mrs Ada, who was kind to you as a child, needs her electric heater — and she has a weak chest."
+        "A2": "It is the coldest night of the winter. Just after dark, every light in the town goes out at once. The heating stops. The house begins to go cold. Then you think of Mrs Ada, up the hill. She was kind to you when you were small. She is old now, with a weak chest. And her heater needs electricity.",
+        "B1": "It's the coldest night of the winter, and just after dark every light in the town goes out at once. The heating dies with a click, and the house begins to cool. Then you think of Mrs Ada, up the hill. She was kind to you when you were small. She's old now, with a weak chest — and her only heater runs on electricity.",
+        "B2": "It is the coldest night of the whole winter, and just after dark every light in the town goes out at once, as if someone had pulled a single plug. The heating dies with a click, and the house begins, almost at once, to cool. Then you think of Mrs Ada, up the hill. She was kind to you when you were small, in a hundred quiet ways. She is old now, with a weak chest — and the only heater she has runs on electricity."
       },
       "choices": [
         {
           "text": {
-            "A2": "Light a candle and find your coat.",
+            "A2": "Find a candle and your coat.",
             "B1": "Light a candle and find your coat.",
             "B2": "Light a candle and find your coat."
           },
@@ -101,7 +101,7 @@
         },
         {
           "text": {
-            "A2": "Rush straight out to Ada.",
+            "A2": "Run straight out to Ada.",
             "B1": "Rush straight out to Ada.",
             "B2": "Rush straight out to Ada."
           },
@@ -112,14 +112,14 @@
     {
       "id": 2,
       "text": {
-        "A2": "[stub] You find a candle, a torch, your coat and boots. The house is already going cold.",
-        "B1": "[stub] You find a candle, a torch, your coat and boots. The house is already going cold.",
-        "B2": "[stub] You find a candle, a torch, your coat and boots. The house is already going cold."
+        "A2": "You find a candle and light it with shaking hands. You find a torch, your thick coat, your boots. The little flame makes the room gold and small. Outside the window, the whole street is black. The cold is already coming in under the doors. You must decide what to do, and do it soon.",
+        "B1": "You find a candle and light it with hands that won't quite keep still. Then a torch, your thick coat, your boots. The little flame makes the room small and gold. Outside the window the whole street is black, and the cold is already creeping in under the doors. You have to decide what to do, and soon.",
+        "B2": "You find a candle and light it with hands that won't quite keep still, then dig out a torch, your thickest coat, your boots. The little flame shrinks the room to something small and gold. Outside the window the whole street has gone black, and the cold is already creeping in under the doors like water. You have to decide what to do, and you have to decide it soon."
       },
       "choices": [
         {
           "text": {
-            "A2": "Step out into the street.",
+            "A2": "Go out into the street.",
             "B1": "Step out into the street.",
             "B2": "Step out into the street."
           },
@@ -135,7 +135,7 @@
         },
         {
           "text": {
-            "A2": "The torch batteries are dead.",
+            "A2": "The torch is dead.",
             "B1": "The torch batteries are dead.",
             "B2": "The torch batteries are dead."
           },
@@ -146,9 +146,9 @@
     {
       "id": 3,
       "text": {
-        "A2": "[stub] The phone is patchy. Word gets through: the roads are blocked, help comes at first light, stay in and keep warm.",
-        "B1": "[stub] The phone is patchy. Word gets through: the roads are blocked, help comes at first light, stay in and keep warm.",
-        "B2": "[stub] The phone is patchy. Word gets through: the roads are blocked, help comes at first light, stay in and keep warm."
+        "A2": "You try the phone. The signal comes and goes. At last a message gets through from the town hall. The roads are blocked by snow. No help can come until first light. Everyone must stay in and keep warm. But Mrs Ada cannot keep warm. Not with no heat, not on a night like this.",
+        "B1": "You try the phone. The signal comes and goes, but at last a message gets through from the town hall. The roads are blocked with snow; no help can come until first light. Everyone is to stay in and keep warm. But Mrs Ada can't keep warm — not with no heat, not on a night like this.",
+        "B2": "You try the phone. The signal flickers in and out, but at last a message gets through from the town hall. The roads are blocked with snow, and no help can reach the town until first light. Everyone is asked to stay indoors and keep warm. But Mrs Ada can't keep warm — not with no heat at all, and not on a night as bitter as this one."
       },
       "choices": [
         {
@@ -161,7 +161,7 @@
         },
         {
           "text": {
-            "A2": "But Ada can't wait that long.",
+            "A2": "But Ada can't wait.",
             "B1": "But Ada can't wait that long.",
             "B2": "But Ada can't wait that long."
           },
@@ -172,9 +172,9 @@
     {
       "id": 4,
       "text": {
-        "A2": "[stub] You rush out with nothing. The cold hits like a wall. You will need supplies to do any good.",
-        "B1": "[stub] You rush out with nothing. The cold hits like a wall. You will need supplies to do any good.",
-        "B2": "[stub] You rush out with nothing. The cold hits like a wall. You will need supplies to do any good."
+        "A2": "You run straight out, with nothing in your hands. The cold hits you like a wall. It takes your breath away. Your fingers hurt at once. You stop in the dark street and understand. You cannot help Ada with empty hands. You need warm things. You need to think first.",
+        "B1": "You rush straight out with nothing in your hands, and the cold hits you like a wall. It snatches your breath; your fingers ache at once. You stop in the black street and understand: you can't help Ada with empty hands. You need warm things, and you need to think before you run.",
+        "B2": "You rush straight out with nothing in your hands, and the cold hits you like a wall, snatching the breath from your lungs. Your fingers ache almost at once. You stop in the black, silent street and understand, all at once, that you can't help Ada with empty hands. You need warm things. And, before you run anywhere, you need to think."
       },
       "choices": [
         {
@@ -198,14 +198,14 @@
     {
       "id": 5,
       "text": {
-        "A2": "[stub] The dark street: black houses, one candlelit window, snow, deep cold.",
-        "B1": "[stub] The dark street: black houses, one candlelit window, snow, deep cold.",
-        "B2": "[stub] The dark street: black houses, one candlelit window, snow, deep cold."
+        "A2": "You step out. The street is dark and still. Snow covers everything. The houses are black shapes, but in one window a candle burns. Your breath is white in the air. It is very, very cold. Somewhere, a dog barks. The corner shop, you see, still has a small light inside.",
+        "B1": "You step outside. The street is dark and utterly still, snow over everything, the houses just black shapes against the sky. In one window a single candle burns. Your breath hangs white in the air; the cold is fierce. Somewhere a dog barks. And the corner shop, you notice, still shows a small light inside.",
+        "B2": "You step outside into a street gone dark and utterly still, snow lying over everything, the houses reduced to black shapes against a sky with no glow in it. In one window a single candle burns. Your breath hangs white in the air, and the cold is fierce enough to hurt. Somewhere a dog barks. And the corner shop, you notice, still shows a small, stubborn light inside."
       },
       "choices": [
         {
           "text": {
-            "A2": "The corner shop is still open.",
+            "A2": "The corner shop is open.",
             "B1": "The corner shop is still open.",
             "B2": "The corner shop is still open."
           },
@@ -229,7 +229,7 @@
         },
         {
           "text": {
-            "A2": "A kid is out in the dark, searching.",
+            "A2": "A kid is out searching.",
             "B1": "A kid is out in the dark, searching.",
             "B2": "A kid is out in the dark, searching."
           },
@@ -240,9 +240,9 @@
     {
       "id": 6,
       "text": {
-        "A2": "[stub] Gather supplies first, or rush straight to Ada?",
-        "B1": "[stub] Gather supplies first, or rush straight to Ada?",
-        "B2": "[stub] Gather supplies first, or rush straight to Ada?"
+        "A2": "You stand in the cold and think. You could go to the shop first, for a heater and blankets. You could run straight up the hill to Ada, and hope. Or you could knock on doors and find people to help. Each choice takes time. And tonight, time is cold.",
+        "B1": "You stand in the cold and make yourself think. You could go to the shop first, for a heater and blankets. You could rush straight up the hill to Ada and hope for the best. Or you could knock on doors and gather people to help. Every choice costs time — and tonight, time is cold.",
+        "B2": "You stand in the cold and make yourself think clearly. You could go to the shop first, for a heater and blankets. You could rush straight up the hill to Ada and simply hope for the best. Or you could knock on doors and gather people willing to help. Every choice costs time — and tonight, time is measured in how cold it's getting."
       },
       "choices": [
         {
@@ -255,7 +255,7 @@
         },
         {
           "text": {
-            "A2": "Rush up the hill.",
+            "A2": "Run up the hill.",
             "B1": "Rush up the hill.",
             "B2": "Rush up the hill."
           },
@@ -263,7 +263,7 @@
         },
         {
           "text": {
-            "A2": "Knock on doors to gather help.",
+            "A2": "Knock on doors for help.",
             "B1": "Knock on doors to gather help.",
             "B2": "Knock on doors to gather help."
           },
@@ -274,9 +274,9 @@
     {
       "id": 8,
       "text": {
-        "A2": "[stub] The cold, and Ada with her weak chest in a house with no heat. This is real, and it is on you.",
-        "B1": "[stub] The cold, and Ada with her weak chest in a house with no heat. This is real, and it is on you.",
-        "B2": "[stub] The cold, and Ada with her weak chest in a house with no heat. This is real, and it is on you."
+        "A2": "You feel the cold in your bones. And you think of Ada, alone, in a house with no heat, her chest tight with every breath. A night like this could kill her. That is not a thought. It is a fact. No one else is going up that hill tonight. So it is you.",
+        "B1": "You feel the cold settle into your bones. You think of Ada, alone in a house with no heat, her chest tightening with every breath. A night like this could kill her. That isn't a fear; it's a fact. No one else is going up that hill tonight. So it has to be you.",
+        "B2": "You feel the cold settle deep into your bones, and you think of Ada, alone in a house with no heat, her weak chest tightening with every breath she takes. A night as cold as this could kill her. That isn't a fear any more; it's simply a fact. No one else is going up that hill tonight. So, whether you're ready or not, it has to be you."
       },
       "choices": [
         {
@@ -297,7 +297,7 @@
         },
         {
           "text": {
-            "A2": "A rumour of panic at the shop.",
+            "A2": "Panic at the shop.",
             "B1": "A rumour of panic at the shop.",
             "B2": "A rumour of panic at the shop."
           },
@@ -308,9 +308,9 @@
     {
       "id": 9,
       "text": {
-        "A2": "[stub] Mr Okafor's shop, open by candlelight: a paraffin heater, blankets, a hot flask, batteries.",
-        "B1": "[stub] Mr Okafor's shop, open by candlelight: a paraffin heater, blankets, a hot flask, batteries.",
-        "B2": "[stub] Mr Okafor's shop, open by candlelight: a paraffin heater, blankets, a hot flask, batteries."
+        "A2": "Mr Okafor has opened his shop by candlelight. Shelves stand in the gold glow. He has a paraffin heater — real heat, not just light. He has blankets, a hot flask, batteries. \"Take what you need,\" he says. \"Pay me when the lights come back.\" He is a kind man, and tonight it shows.",
+        "B1": "Mr Okafor has opened his shop by candlelight, the shelves glowing gold. He has a paraffin heater — real heat, not just light — and blankets, a hot flask, spare batteries. \"Take what you need,\" he says. \"Pay me when the lights come back.\" He's always been kind, and tonight it shows.",
+        "B2": "Mr Okafor has opened his shop by candlelight, the shelves glowing gold in the dark. He has a paraffin heater — real heat, not merely light — along with blankets, a hot flask and spare batteries. \"Take what you need,\" he says. \"Pay me when the lights come back.\" He has always been a kind man, and tonight, in the dark, it shows."
       },
       "choices": [
         {
@@ -334,7 +334,7 @@
         },
         {
           "text": {
-            "A2": "Ask Okafor's advice.",
+            "A2": "Ask his advice.",
             "B1": "Ask Okafor's advice.",
             "B2": "Ask Okafor's advice."
           },
@@ -342,7 +342,7 @@
         },
         {
           "text": {
-            "A2": "He gives you the last flask.",
+            "A2": "He gives you his flask.",
             "B1": "He gives you the last flask.",
             "B2": "He gives you the last flask."
           },
@@ -353,9 +353,9 @@
     {
       "id": 10,
       "text": {
-        "A2": "[stub] A neighbour's door: Mrs Pratt, scared and alone in the dark.",
-        "B1": "[stub] A neighbour's door: Mrs Pratt, scared and alone in the dark.",
-        "B2": "[stub] A neighbour's door: Mrs Pratt, scared and alone in the dark."
+        "A2": "You knock on a neighbour's door. Mrs Pratt opens it, pale in the candlelight. She is old, and alone, and frightened. \"I can't get warm,\" she says. \"And I can't see.\" You have a long way to go tonight. But she is here, and she is scared, and she is asking.",
+        "B1": "You knock on a neighbour's door, and Mrs Pratt opens it, pale in the candlelight — old, alone, and plainly frightened. \"I can't get warm,\" she says. \"And I can't see a thing.\" You have a long way to go tonight. But she's here, and she's scared, and she's asking you.",
+        "B2": "You knock on a neighbour's door, and Mrs Pratt opens it, pale and small in the candlelight — old, alone, and plainly frightened. \"I can't get warm,\" she says. \"And I can't see a thing.\" You have a long way to go tonight, and Ada is waiting. But Mrs Pratt is here, and she is scared, and she is asking you."
       },
       "choices": [
         {
@@ -382,9 +382,9 @@
     {
       "id": 11,
       "text": {
-        "A2": "[stub] You rush up the hill with what you have. Cold, hard going.",
-        "B1": "[stub] You rush up the hill with what you have. Cold, hard going.",
-        "B2": "[stub] You rush up the hill with what you have. Cold, hard going."
+        "A2": "You set off up the hill with what you have. It is steep, and the snow is deep. Your legs burn. The cold gets into your chest, and each breath hurts. You are not sure you can carry anything useful this way. But you keep climbing, because Ada is at the top.",
+        "B1": "You set off up the hill with what you have. It's steep and the snow is deep, and your legs soon burn. The cold gets into your chest until every breath hurts. You're not sure you're carrying anything useful at all. But you keep climbing, because Ada is at the top.",
+        "B2": "You set off up the hill with whatever you have. It is steep, and the snow is deep, and your legs are burning before you're halfway. The cold works its way into your chest until every breath is a small ache. You aren't sure you're carrying anything that will help. But you keep on climbing, because Ada is at the top."
       },
       "choices": [
         {
@@ -397,7 +397,7 @@
         },
         {
           "text": {
-            "A2": "You're cold and short of breath.",
+            "A2": "You're cold and out of breath.",
             "B1": "You're cold and short of breath.",
             "B2": "You're cold and short of breath."
           },
@@ -408,14 +408,14 @@
     {
       "id": 12,
       "text": {
-        "A2": "[stub] You knock on doors to gather willing hands.",
-        "B1": "[stub] You knock on doors to gather willing hands.",
-        "B2": "[stub] You knock on doors to gather willing hands."
+        "A2": "You go from door to door, knocking. At first, nobody comes. Then a door opens, and another. Tired faces, candles, coats over pyjamas. You tell them about Ada, and about the cold, and about the long night. Some people will help. Some won't. You have to ask anyway.",
+        "B1": "You go from door to door, knocking. At first nobody comes. Then a door opens, and another — tired faces, candles, coats thrown over pyjamas. You tell them about Ada, and the cold, and the long night ahead. Some will help and some won't. You have to ask anyway.",
+        "B2": "You go from door to door along the street, knocking. At first nobody comes at all. Then a door opens, and then another — tired faces, guttering candles, coats thrown over pyjamas. You tell them about Ada, and about the cold, and about the long night still ahead. Some of them will help and some of them won't. You have to ask anyway."
       },
       "choices": [
         {
           "text": {
-            "A2": "Neighbours turn out to help.",
+            "A2": "Neighbours come out to help.",
             "B1": "Neighbours turn out to help.",
             "B2": "Neighbours turn out to help."
           },
@@ -426,7 +426,7 @@
         },
         {
           "text": {
-            "A2": "No one answers; go alone.",
+            "A2": "No one answers. Go alone.",
             "B1": "No one answers; go alone.",
             "B2": "No one answers; go alone."
           },
@@ -437,9 +437,9 @@
     {
       "id": 13,
       "text": {
-        "A2": "[stub] The paraffin heater — heavy, but real warmth for Ada.",
-        "B1": "[stub] The paraffin heater — heavy, but real warmth for Ada.",
-        "B2": "[stub] The paraffin heater — heavy, but real warmth for Ada."
+        "A2": "You take the paraffin heater. It is heavy, and awkward to carry. But it is real heat — the one thing Ada needs most. You thank Mr Okafor, and he nods. \"Mind how you carry it,\" he says. \"And mind the ice.\" With the heater in your arms, you feel you have a chance.",
+        "B1": "You take the paraffin heater. It's heavy and awkward to carry, but it's real heat — the one thing Ada needs most. You thank Mr Okafor and he nods. \"Mind how you carry it,\" he says. \"And mind the ice.\" With the heater in your arms, you feel, for the first time, that you have a chance.",
+        "B2": "You take the paraffin heater. It is heavy, and awkward to carry, but it is real heat — the one thing Ada needs above everything else. You thank Mr Okafor, and he nods. \"Mind how you carry it,\" he says. \"And mind the ice.\" With the heater held against your chest, you feel, for the first time tonight, that you might actually have a chance."
       },
       "choices": [
         {
@@ -452,7 +452,7 @@
         },
         {
           "text": {
-            "A2": "Thank Okafor.",
+            "A2": "Thank Mr Okafor.",
             "B1": "Thank Okafor.",
             "B2": "Thank Okafor."
           },
@@ -463,9 +463,9 @@
     {
       "id": 14,
       "text": {
-        "A2": "[stub] Candles and batteries: light, but no heat.",
-        "B1": "[stub] Candles and batteries: light, but no heat.",
-        "B2": "[stub] Candles and batteries: light, but no heat."
+        "A2": "You take candles and batteries. They will give Ada light, and light helps. But light is not heat. The cold will still come in, and her chest will still be tight. You feel you have chosen something, but maybe not enough. You look back at the heater on the shelf.",
+        "B1": "You take candles and batteries. They'll give Ada light, and light helps — but light isn't heat. The cold will still creep in, and her chest will still tighten. You've chosen something, but maybe not enough. You glance back at the heater on the shelf.",
+        "B2": "You take candles and batteries. They will give Ada light, and light, in the dark, helps more than you'd think — but light is not heat. The cold will still creep in, and her chest will still tighten through the night. You've chosen something, certainly, but perhaps not enough. You glance back at the heater on the shelf."
       },
       "choices": [
         {
@@ -478,7 +478,7 @@
         },
         {
           "text": {
-            "A2": "Ask Okafor's advice.",
+            "A2": "Ask his advice.",
             "B1": "Ask Okafor's advice.",
             "B2": "Ask Okafor's advice."
           },
@@ -489,9 +489,9 @@
     {
       "id": 15,
       "text": {
-        "A2": "[stub] Okafor's advice: steer clear of the van man, don't trust the river ice, take the road.",
-        "B1": "[stub] Okafor's advice: steer clear of the van man, don't trust the river ice, take the road.",
-        "B2": "[stub] Okafor's advice: steer clear of the van man, don't trust the river ice, take the road."
+        "A2": "\"Listen,\" Mr Okafor says. \"Three things.\" He counts on his fingers. \"Stay away from the man with the van. He sells fear. Don't cross the river ice — it looks strong, but it isn't. And take the road, even though it's longer.\" Good advice is rare tonight. You keep it close.",
+        "B1": "\"Listen,\" Mr Okafor says. \"Three things.\" He counts them off. \"Keep away from the man with the van — he sells fear. Don't cross the river ice; it looks strong, but it isn't. And take the road, even though it's longer.\" Good advice is rare tonight. You hold on to it.",
+        "B2": "\"Listen,\" Mr Okafor says. \"Three things.\" He counts them off on his fingers. \"Keep away from the man with the van — he sells fear, nothing else. Don't cross the river ice; it looks strong, but it isn't. And take the road, even though it's longer.\" Good advice is a rare thing on a night like this. You hold on to it tightly."
       },
       "choices": [
         {
@@ -515,9 +515,9 @@
     {
       "id": 16,
       "text": {
-        "A2": "[stub] You settle Mrs Pratt with a candle and a blanket, and a promise to come back.",
-        "B1": "[stub] You settle Mrs Pratt with a candle and a blanket, and a promise to come back.",
-        "B2": "[stub] You settle Mrs Pratt with a candle and a blanket, and a promise to come back."
+        "A2": "You light Mrs Pratt's candles and wrap her in a blanket. You show her how to close the doors to keep the warmth in. Her hands stop shaking. \"You're a good one,\" she says. \"Go on. Someone else needs you more.\" You promise to come back. It costs you minutes. It was worth them.",
+        "B1": "You light Mrs Pratt's candles, wrap her in a blanket, and show her how to shut the doors to keep what warmth there is. Her hands stop shaking. \"You're a good one,\" she says. \"Go on — someone else needs you more.\" You promise to come back. It cost you minutes, and it was worth them.",
+        "B2": "You light Mrs Pratt's candles, wrap her in a blanket, and show her how to shut the inner doors to hold what warmth there is. Slowly, her hands stop shaking. \"You're a good one,\" she says. \"Go on now — someone else needs you more than I do.\" You promise to come back later. It cost you precious minutes, and it was worth every one."
       },
       "choices": [
         {
@@ -541,9 +541,9 @@
     {
       "id": 17,
       "text": {
-        "A2": "[stub] You press on toward Ada.",
-        "B1": "[stub] You press on toward Ada.",
-        "B2": "[stub] You press on toward Ada."
+        "A2": "You tell Mrs Pratt you must reach Ada, and you are sorry. She nods, and closes her door. You feel bad as you walk away. But Ada's need is greater, and the night is getting colder. You go on, faster now, into the dark.",
+        "B1": "You tell Mrs Pratt you have to reach Ada, and that you're sorry. She nods and closes her door. You feel bad walking away. But Ada's need is greater, and the night is only getting colder. You go on, faster now, into the dark.",
+        "B2": "You tell Mrs Pratt that you have to reach Ada first, and that you're sorry. She nods, and quietly closes her door. You feel bad walking away from it. But Ada's need is greater, and the night is only getting colder by the minute. You go on, faster now, into the dark."
       },
       "choices": [
         {
@@ -567,9 +567,9 @@
     {
       "id": 18,
       "text": {
-        "A2": "[stub] Near the hill, cold and unprepared.",
-        "B1": "[stub] Near the hill, cold and unprepared.",
-        "B2": "[stub] Near the hill, cold and unprepared."
+        "A2": "You are near the bottom of the hill, but you are cold and not ready. Your hands are empty and numb. You have no heat to give Ada. Ahead, through the snow, you see bright headlights. A van. A small crowd. Something is being sold.",
+        "B1": "You're near the foot of the hill, but you're cold and not ready — hands empty and numb, nothing warm to give Ada. Ahead, through the falling snow, you see bright headlights: a van, a small crowd around it. Something is being sold.",
+        "B2": "You're near the foot of the hill now, but you're cold and utterly unready — hands empty and numb, nothing warm at all to give Ada. Ahead, through the falling snow, you see bright headlights: a van, with a small, restless crowd gathered around it. Something, clearly, is being sold. You slow down, uneasy."
       },
       "choices": [
         {
@@ -593,9 +593,9 @@
     {
       "id": 19,
       "text": {
-        "A2": "[stub] The street wakes to itself; a plan forms; someone has a camping stove.",
-        "B1": "[stub] The street wakes to itself; a plan forms; someone has a camping stove.",
-        "B2": "[stub] The street wakes to itself; a plan forms; someone has a camping stove."
+        "A2": "The street begins to wake. Doors open. People come out with candles and torches. Someone has a camping stove. Someone has soup. A plan starts to form, all by itself. Suddenly you are not alone in the dark. You are part of something, and it feels warm.",
+        "B1": "The street begins to wake up. Doors open; people come out with candles and torches. Someone has a camping stove, someone has a pot of soup, and a plan starts to form almost by itself. Suddenly you're not alone in the dark. You're part of something — and it feels warm.",
+        "B2": "The street begins, slowly, to wake up. Doors open; people come out with candles and torches. Someone has a camping stove, someone else a pot of soup, and a plan starts to form almost by itself. Suddenly you're no longer alone in the dark. You're part of something larger — and, for the first time all night, it feels warm."
       },
       "choices": [
         {
@@ -619,9 +619,9 @@
     {
       "id": 20,
       "text": {
-        "A2": "[stub] No one answers. You go on alone.",
-        "B1": "[stub] No one answers. You go on alone.",
-        "B2": "[stub] No one answers. You go on alone."
+        "A2": "You knock and knock, but no one answers. Maybe they are asleep. Maybe they are too cold and scared to open. The street stays dark and silent. You feel very alone. But being alone does not change what Ada needs. You will have to go by yourself.",
+        "B1": "You knock and knock, but no one answers. Maybe they're asleep; maybe they're too cold and scared to open up. The street stays dark and silent, and you feel very alone. But being alone doesn't change what Ada needs. You'll have to go by yourself.",
+        "B2": "You knock and knock, but no one answers. Perhaps they're asleep; perhaps they're simply too cold and frightened to open their doors. The street stays dark and silent around you, and you feel very alone in it. But being alone doesn't change what Ada needs tonight. You'll just have to go by yourself."
       },
       "choices": [
         {
@@ -679,9 +679,9 @@
     {
       "id": 22,
       "text": {
-        "A2": "[stub] You resolve to be careful tonight.",
-        "B1": "[stub] You resolve to be careful tonight.",
-        "B2": "[stub] You resolve to be careful tonight."
+        "A2": "You decide to be careful tonight. No shortcuts. No deals in the dark. You will take the long road and trust the people you know. It will be slower. But slower and safe is better than fast and foolish, on the coldest night of the year.",
+        "B1": "You decide to be careful tonight: no shortcuts, no deals in the dark. You'll take the long road and trust the people you know. It'll be slower. But slower and safe beats fast and foolish, on the coldest night of the year.",
+        "B2": "You decide to be careful tonight: no shortcuts, and no deals struck in the dark. You'll take the long road and trust the people you actually know. It will be slower, certainly. But slower and safe beats fast and foolish, on the coldest night of the year. Ada needs you to arrive, not to arrive quickly."
       },
       "choices": [
         {
@@ -705,9 +705,9 @@
     {
       "id": 23,
       "text": {
-        "A2": "[stub] Warmer inside for the good turn, you go on.",
-        "B1": "[stub] Warmer inside for the good turn, you go on.",
-        "B2": "[stub] Warmer inside for the good turn, you go on."
+        "A2": "You walk on, a little warmer inside for the good turn. It is funny: the night is just as cold, but you feel stronger. Helping someone does that. Now, though, you must think of Ada again. The hill is still ahead of you, and it is still dark.",
+        "B1": "You walk on, a little warmer inside for the good turn. It's strange: the night is every bit as cold, but you feel stronger. Helping someone does that. Now, though, you have to think of Ada again. The hill is still ahead, and it's still dark.",
+        "B2": "You walk on, a little warmer inside for the good turn you've done. It's strange: the night is every bit as cold as before, and yet you feel stronger. Helping someone seems to do that. Now, though, your thoughts have to turn back to Ada. The hill still lies ahead of you, and it is still very dark."
       },
       "choices": [
         {
@@ -731,9 +731,9 @@
     {
       "id": 24,
       "text": {
-        "A2": "[stub] The van man's van, headlights blazing, a frightened crowd around it.",
-        "B1": "[stub] The van man's van, headlights blazing, a frightened crowd around it.",
-        "B2": "[stub] The van man's van, headlights blazing, a frightened crowd around it."
+        "A2": "The van is parked in the snow, its lights blazing. A man stands by it, calling out. A crowd of cold, scared people is pushing close. On the van are heaters, generators, cans of fuel. \"Tonight only!\" the man shouts. \"Cash only!\" Everyone here is frightened. He seems to know it.",
+        "B1": "The van is parked in the snow, headlights blazing, a man beside it calling out. A crowd of cold, scared people pushes close. On the van are heaters, generators, cans of fuel. \"Tonight only!\" he shouts. \"Cash only!\" Everyone here is frightened, and he seems to know it.",
+        "B2": "The van is parked in the snow with its headlights blazing, and a man stands beside it calling out. A crowd of cold, frightened people pushes close around him. On the van are heaters, generators, cans of fuel. \"Tonight only!\" he shouts. \"Cash only!\" Everyone here is afraid — and he seems to understand that perfectly."
       },
       "choices": [
         {
@@ -757,9 +757,9 @@
     {
       "id": 25,
       "text": {
-        "A2": "[stub] You lead a small band up toward the hill.",
-        "B1": "[stub] You lead a small band up toward the hill.",
-        "B2": "[stub] You lead a small band up toward the hill."
+        "A2": "You lead a small group up toward the hill. Candles bob in the dark behind you. Someone carries the stove, someone the soup. You feel like the front of something good. Then you see it: a warm light, high on the hill, in the old Harrow house. But that house has been empty for years.",
+        "B1": "You lead a small group up toward the hill, candles bobbing in the dark behind you — someone carrying the stove, someone the soup. You feel like the front of something good. Then you see it: a warm light high on the hill, in the old Harrow house. But that house has stood empty for years.",
+        "B2": "You lead a small group up toward the hill, candles bobbing in the dark behind you — someone carrying the stove, someone else the soup. You feel, for once, like the front of something good. Then you see it: a warm light high on the hill, in the old Harrow house. But that house, everyone knows, has stood empty for years."
       },
       "choices": [
         {
@@ -872,9 +872,9 @@
     {
       "id": 29,
       "text": {
-        "A2": "[stub] The torch batteries are dead; only the candle.",
-        "B1": "[stub] The torch batteries are dead; only the candle.",
-        "B2": "[stub] The torch batteries are dead; only the candle."
+        "A2": "You click the torch. Nothing. The batteries are dead. You have only the one candle now, and a candle blows out in the wind. You will need more light before you go far. The corner shop may still have batteries. Or you can manage, carefully, with what you have.",
+        "B1": "You click the torch — nothing. The batteries are dead. You have only the one candle now, and a candle won't survive the wind outside. You'll need more light before you go far. The corner shop might still have batteries, or you could manage, carefully, with what you've got.",
+        "B2": "You click the torch, and nothing happens: the batteries are dead. You have only the one candle now, and a candle won't last a minute in the wind outside. You'll need more light before you go very far. The corner shop might still have batteries — or you could try to manage, carefully, with what you've got."
       },
       "choices": [
         {
@@ -1100,14 +1100,14 @@
     {
       "id": 36,
       "text": {
-        "A2": "[stub] The street shares one warm room: a stove, soup, candlelight.",
-        "B1": "[stub] The street shares one warm room: a stove, soup, candlelight.",
-        "B2": "[stub] The street shares one warm room: a stove, soup, candlelight."
+        "A2": "The neighbours bring everything into one house with a stove. One warm room, full of candles and soup and people. Children sleep on coats. Old people sit close to the heat. It is crowded and noisy and warm. For the first time tonight, the cold feels far away.",
+        "B1": "The neighbours bring everything into one house with a stove: one warm room, full of candles and soup and people. Children sleep on piled coats; the old sit closest to the heat. It's crowded, noisy and warm. For the first time tonight, the cold feels far away.",
+        "B2": "The neighbours bring everything into the one house that has a stove: one warm room, crammed with candles and soup and people. Children sleep on piled coats; the elderly sit closest to the heat. It is crowded, and noisy, and wonderfully warm. For the first time all night, the cold feels a long way off."
       },
       "choices": [
         {
           "text": {
-            "A2": "Get Ada down to it.",
+            "A2": "Bring Ada down to it.",
             "B1": "Get Ada down to it.",
             "B2": "Get Ada down to it."
           },
@@ -1126,9 +1126,9 @@
     {
       "id": 37,
       "text": {
-        "A2": "[stub] Door by door, the dark street becomes a lit one.",
-        "B1": "[stub] Door by door, the dark street becomes a lit one.",
-        "B2": "[stub] Door by door, the dark street becomes a lit one."
+        "A2": "You go back out and knock on more doors. One by one, more candles appear in more windows. The dark street slowly becomes a lit one. People are helping people now, without being asked. You started this. Now it is bigger than you.",
+        "B1": "You go back out and knock on more doors. One by one, candles appear in more windows, and the dark street slowly becomes a lit one. People are helping people now, without being asked. You started this — and now it's bigger than you.",
+        "B2": "You go back out into the cold and knock on still more doors. One by one, candles appear in more and more windows, and the dark street slowly becomes a lit one. People are helping people now, without needing to be asked. You started this — and now it has grown far bigger than you."
       },
       "choices": [
         {
@@ -1738,9 +1738,9 @@
     {
       "id": 60,
       "text": {
-        "A2": "[stub] A kid, Bex, out in the dark, looking for a little brother.",
-        "B1": "[stub] A kid, Bex, out in the dark, looking for a little brother.",
-        "B2": "[stub] A kid, Bex, out in the dark, looking for a little brother."
+        "A2": "A small figure runs past in the dark — a kid, Bex, from down the road. \"Have you seen my brother?\" Bex asks, crying. \"He went out to find the cat. He isn't back.\" A little child, lost in the snow, on a night like this. You look up at the hill. Then back at Bex.",
+        "B1": "A small figure runs past in the dark: a kid, Bex, from down the road. \"Have you seen my brother?\" Bex asks, crying. \"He went out after the cat, and he isn't back.\" A little child, lost in the snow on a night like this. You look up at the hill, then back at Bex.",
+        "B2": "A small figure comes running past in the dark: a kid, Bex, from further down the road. \"Have you seen my brother?\" Bex asks, crying hard. \"He went out after the cat, and he isn't back.\" A little child, lost somewhere in the snow on a night like this. You look up at the hill, and then back down at Bex."
       },
       "choices": [
         {
@@ -1756,7 +1756,7 @@
         },
         {
           "text": {
-            "A2": "No time — Ada first.",
+            "A2": "No time. Ada first.",
             "B1": "No time — Ada first.",
             "B2": "No time — Ada first."
           },
@@ -1767,9 +1767,9 @@
     {
       "id": 61,
       "text": {
-        "A2": "[stub] You find the small brother in a cold shed, frightened.",
-        "B1": "[stub] You find the small brother in a cold shed, frightened.",
-        "B2": "[stub] You find the small brother in a cold shed, frightened."
+        "A2": "You and Bex search the dark gardens, calling his name. At last you hear a small sound from a shed. Inside, cold and frightened, is Bex's little brother, holding the cat. You wrap him in your scarf. He is safe. Bex holds him and won't let go.",
+        "B1": "You and Bex search the dark gardens, calling his name. At last you hear a small sound from a shed. Inside, cold and frightened, is Bex's little brother, clutching the cat. You wrap him in your scarf. He's safe, and Bex holds him and won't let go.",
+        "B2": "You and Bex search the dark gardens, calling his name into the wind. At last you hear a small sound from a garden shed. Inside, cold and frightened, is Bex's little brother, clutching the cat to his chest. You wrap him in your scarf. He's safe — and Bex holds on to him and won't let go."
       },
       "choices": [
         {
@@ -1793,9 +1793,9 @@
     {
       "id": 62,
       "text": {
-        "A2": "[stub] You send Bex home and press on.",
-        "B1": "[stub] You send Bex home and press on.",
-        "B2": "[stub] You send Bex home and press on."
+        "A2": "You tell Bex to run home and tell a grown-up. It is the fastest help you can give, and Ada is waiting. Bex runs off into the dark. You hope the brother is found. You go on, but the worry comes with you, a small weight in the cold.",
+        "B1": "You tell Bex to run home and fetch a grown-up — it's the fastest help you can give, and Ada is waiting. Bex runs off into the dark. You hope the brother is found soon. You go on, but the worry comes with you, a small weight in the cold.",
+        "B2": "You tell Bex to run home and fetch a grown-up — it's the quickest help you can give, and Ada is still waiting. Bex runs off into the dark. You hope, hard, that the little brother is found soon. You go on, but the worry comes along with you, a small cold weight in your chest."
       },
       "choices": [
         {
@@ -1819,9 +1819,9 @@
     {
       "id": 63,
       "text": {
-        "A2": "[stub] The kids' family thank you; a warm doorway, a hot drink.",
-        "B1": "[stub] The kids' family thank you; a warm doorway, a hot drink.",
-        "B2": "[stub] The kids' family thank you; a warm doorway, a hot drink."
+        "A2": "You walk the two children home. Their mother opens the door and cries with relief. She pulls you inside, just for a moment, and gives you a hot drink by a candle. \"Thank you,\" she says, again and again. Warmth for warmth. Then you must go on.",
+        "B1": "You walk the two children home. Their mother opens the door and cries with relief. She pulls you inside for a moment and presses a hot drink into your hands by candlelight. \"Thank you,\" she keeps saying. Warmth for warmth. Then you have to go on.",
+        "B2": "You walk the two children home through the snow. Their mother opens the door and cries with relief, then pulls you inside for a moment and presses a hot drink into your frozen hands by candlelight. \"Thank you,\" she keeps saying, over and over. Warmth given, warmth returned. Then you have to go on."
       },
       "choices": [
         {
@@ -1897,9 +1897,9 @@
     {
       "id": 67,
       "text": {
-        "A2": "[stub] Okafor presses the last flask on you and starts to close up.",
-        "B1": "[stub] Okafor presses the last flask on you and starts to close up.",
-        "B2": "[stub] Okafor presses the last flask on you and starts to close up."
+        "A2": "Mr Okafor puts his own flask of hot tea into your hands. \"The last one,\" he says. \"For Ada.\" Then he begins to close up, blowing out his candles one by one. He is going home to his own cold house. You feel the warm flask through your gloves. It is a small, good gift.",
+        "B1": "Mr Okafor presses his own flask of hot tea into your hands. \"The last one,\" he says. \"For Ada.\" Then he starts to close up, blowing out his candles one by one, heading home to his own cold house. You feel the warm flask through your gloves — a small, good gift.",
+        "B2": "Mr Okafor presses his own flask of hot tea into your hands. \"The last one,\" he says quietly. \"For Ada.\" Then he begins to close up, blowing out his candles one by one, heading home to a cold house of his own. You feel the warmth of the flask right through your gloves — a small gift, and a good one."
       },
       "choices": [
         {
@@ -1923,14 +1923,14 @@
     {
       "id": 68,
       "text": {
-        "A2": "[stub] A rumour of panic ripples down the queue at the shop.",
-        "B1": "[stub] A rumour of panic ripples down the queue at the shop.",
-        "B2": "[stub] A rumour of panic ripples down the queue at the shop."
+        "A2": "At the shop, a rumour runs through the queue. \"There's no more heaters!\" someone shouts. \"It's every man for himself!\" People start to push. Fear spreads faster than cold. You could step in and calm them. Or you could just push into the shop and get what you can.",
+        "B1": "At the shop, a rumour ripples down the queue. \"There's no more heaters!\" someone shouts. \"It's every man for himself!\" People start to push. Fear spreads faster than the cold. You could step in and calm them, or just push into the shop and grab what you can.",
+        "B2": "At the shop, a rumour ripples down the waiting queue. \"There's no more heaters!\" someone shouts. \"It's every man for himself!\" People begin to push and shove. Fear, you realise, spreads faster than the cold ever could. You could step in and calm them down — or you could simply push into the shop and grab whatever you can."
       },
       "choices": [
         {
           "text": {
-            "A2": "Calm it, and rally them.",
+            "A2": "Calm them and rally them.",
             "B1": "Calm it, and rally them.",
             "B2": "Calm it, and rally them."
           },
@@ -1938,7 +1938,7 @@
         },
         {
           "text": {
-            "A2": "Into the shop.",
+            "A2": "Go into the shop.",
             "B1": "Into the shop.",
             "B2": "Into the shop."
           },
