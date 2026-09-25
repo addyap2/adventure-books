@@ -118,6 +118,18 @@
   .lede .morph[dir=rtl]{font-style:normal}
   .langcode{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--ash);
     min-height:1em}
+  /* clickable language selector — the title in any language, one tap away */
+  .langpick{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:2px 0 2px;max-width:640px}
+  .langpick .lp-lbl{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);margin-right:2px}
+  .langpick .lp-lbl svg{width:14px;height:14px;color:var(--amber);flex:none}
+  .langpick button{font-family:var(--grot);font-size:13px;color:#e9ebf2;
+    background:rgba(10,14,26,.42);border:1px solid rgba(255,255,255,.18);border-radius:99px;
+    padding:5px 12px;cursor:pointer;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
+    transition:color .15s,border-color .15s,background .15s}
+  .langpick button:hover{border-color:var(--amber);color:#fff}
+  .langpick button.on{color:var(--ink);background:var(--amber);border-color:var(--amber)}
+  .langpick button:focus-visible{outline:2px solid var(--amber-hot);outline-offset:2px}
   .sub{font-size:clamp(1rem,1.5vw,1.18rem);color:#cdd4e2;max-width:46ch;margin:0;
     font-weight:400;text-wrap:pretty}
   .actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:4px}
@@ -340,6 +352,7 @@
       </h1>
       <span class="langcode" id="langcode" aria-hidden="true"></span>
       <p class="sub">A story where <em>you</em> are the hero &mdash; and every choice turns you to a new page. Written for people learning English, at your level, with meaning in your language whenever you need it.</p>
+      <div class="langpick" id="bookLangPick" role="group" aria-label="Show the title in your language"></div>
       <div class="actions">
         <a class="cta" href="/read.html?book=episode-01.json" target="_blank" rel="noopener noreferrer">Begin your arrival <span aria-hidden="true">&rarr;</span></a>
         <a class="textlink" href="#how">How it works</a>
@@ -434,6 +447,40 @@
   var root=document.documentElement; root.classList.add('js');
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
 
+  /* ---------- language selector: the title in any language, one tap away ----------
+     Every language is reachable at once (no waiting for the intro morph to reach it).
+     Picking one sets the headline to that language and locks it. Only the headline is
+     translated per book (identity.hero.line); the rest of the page stays English. */
+  var locked=false, pickBtns=[];
+  function setActive(code){ pickBtns.forEach(function(b){ var on=b.dataset.code===code;
+    b.classList.toggle('on',on); b.setAttribute('aria-pressed', on?'true':'false'); }); }
+  function buildLangPick(L){
+    var box=document.getElementById('bookLangPick'); if(!box) return;
+    var NAMES={en:'English',fr:'Français',es:'Español',pt:'Português',it:'Italiano',de:'Deutsch',ru:'Русский',ar:'العربية',zh:'中文'};
+    var SEL=['en','fr','es','pt','it','de','ru','ar','zh'];
+    box.innerHTML='';
+    var lbl=document.createElement('span'); lbl.className='lp-lbl';
+    lbl.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.8 2.6 15.6 0 18.4M12 2.8c-2.6 2.8-2.6 15.6 0 18.4"/></svg><span>Read this in</span>';
+    box.appendChild(lbl);
+    pickBtns=[];
+    var morphEl=document.getElementById('morph');
+    SEL.forEach(function(code){
+      var txt = code==='en' ? (L.en||'') : (L[code]||'');
+      if(!txt) return;
+      var b=document.createElement('button'); b.type='button'; b.textContent=NAMES[code];
+      b.setAttribute('dir', code==='ar'?'rtl':'ltr'); b.setAttribute('aria-pressed','false');
+      b.dataset.code=code;
+      b.addEventListener('click', function(){
+        locked=true;
+        if(morphEl){ morphEl.style.opacity='1'; morphEl.textContent=txt; morphEl.setAttribute('dir', code==='ar'?'rtl':'ltr'); }
+        setActive(code);
+      });
+      box.appendChild(b); pickBtns.push(b);
+    });
+    var lc=document.getElementById('langcode'); if(lc) lc.style.display='none';
+    setActive('en');
+  }
+
   /* ---------- load this book from data and skin the page to its identity ---------- */
   async function loadBook(){
     var EPN=['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten'];
@@ -490,6 +537,7 @@
       out.push({c:'EN',t:L.en||FALLBACK[FALLBACK.length-1].t});
       var m=document.getElementById('morph'); if(m) m.textContent=L.en||FALLBACK[FALLBACK.length-1].t;
       var sr=document.querySelector('.lede .sr-only'); if(sr) sr.textContent=L.en||FALLBACK[FALLBACK.length-1].t;
+      buildLangPick(L);
       return out.length>1?out:FALLBACK;
     }catch(e){ return FALLBACK; }
   }
@@ -511,14 +559,18 @@
   if(morph && !reduce){
     var i=0;
     morph.style.transition='opacity .32s ease';
+    var LOW={FR:'fr',ES:'es',IT:'it',DE:'de',PT:'pt',RU:'ru',ZH:'zh',AR:'ar',EN:'en'};
     function step(){
+      if(locked) return;                       // a reader picked a language — stop the intro
       morph.style.opacity='0';
       setTimeout(function(){
+        if(locked) return;
         var L=lines[i];
         morph.textContent=L.t;
         morph.setAttribute('dir',L.rtl?'rtl':'ltr');
         lc.textContent=L.c==='EN'?'':('— '+L.c);
         morph.style.opacity='1';
+        setActive(LOW[L.c]||'en');             // keep the selector highlight in step
         i++;
         if(i<lines.length) setTimeout(step, L2delay(L));
       },320);
