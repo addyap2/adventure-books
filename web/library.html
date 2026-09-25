@@ -71,6 +71,17 @@
     color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:7px 14px}
   .langpill svg{width:15px;height:15px;color:var(--amber);flex:none}
   .langpill b{color:var(--amber-hot);font-weight:500}
+  /* clickable language selector — every language is one tap away, not a wait */
+  .langpick{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:18px 0 8px}
+  .langpick .lbl{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-right:2px}
+  .langpick .lbl svg{width:14px;height:14px;color:var(--amber);flex:none}
+  .langpick button{font-family:var(--grot);font-size:13px;color:var(--muted);background:transparent;
+    border:1px solid var(--line);border-radius:99px;padding:5px 12px;cursor:pointer;
+    transition:color .15s,border-color .15s,background .15s}
+  .langpick button:hover{color:var(--fg);border-color:var(--amber)}
+  .langpick button.on{color:var(--ink);background:var(--amber);border-color:var(--amber)}
+  .langpick button:focus-visible{outline:2px solid var(--amber-hot);outline-offset:2px}
   .tagline[dir=rtl],.intro[dir=rtl],.step h4[dir=rtl],.step p[dir=rtl]{text-align:right}
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
@@ -267,12 +278,10 @@
 (function(){
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   var $ = function(id){ return document.getElementById(id); };
-  var lang=$("hLang"), heroMorph=$("heroMorph"), howGrid=$("howGrid"),
-      hero=document.querySelector(".hero"), how=document.querySelector(".how");
+  var heroMorph=$("heroMorph"), hero=document.querySelector(".hero"), how=document.querySelector(".how");
   var ids=["hTag","hIntro","s1h","s1b","s2h","s2b","s3h","s3b"], el={};
   ids.forEach(function(k){ el[k]=$(k); });
-  if(!lang||!el.hTag||!el.s1h) return;
-  if(reduce){ var ls=document.querySelector(".lp-static"); if(ls) ls.textContent="In"; lang.textContent="8 languages"; return; }
+  if(!el.hTag||!el.s1h) return;
   var S=[
     {c:"English",  d:"ltr",
       hTag:"Find your way, one story at a time.",
@@ -330,25 +339,40 @@
       s3h:"点按任意单词", s3b:"就地看到它在你母语中的意思——先是英文，你的语言作为下面的安全网。"}
   ];
   if(heroMorph) heroMorph.setAttribute("aria-hidden","true");
-  var fadeEls = [lang].concat(ids.map(function(k){ return el[k]; }));
-  var rtlEls  = ids.map(function(k){ return el[k]; });
-  var i=0, paused=false;
-  function apply(s){
-    rtlEls.forEach(function(e){ e.setAttribute("dir", s.d); });
-    ids.forEach(function(k){ el[k].textContent = s[k]; });
-    lang.textContent = s.c;
-  }
-  function fade(on){ fadeEls.forEach(function(e){ e.classList.toggle("fading", on); }); }
-  function step(){
-    if(paused) return;
-    i=(i+1)%S.length;
-    fade(true);
-    setTimeout(function(){ apply(S[i]); fade(false); }, 400);
-  }
-  setInterval(step, 4800);
-  function pause(){ paused=true; } function resume(){ paused=false; }
-  [hero, how].forEach(function(z){
-    if(!z) return;
+
+  // Build a clickable language selector, so every language is reachable at once — no one
+  // waits for the cycle to reach theirs. Picking one locks the page to it.
+  var pill=document.querySelector(".langpill");
+  var pick=document.createElement("div");
+  pick.className="langpick"; pick.setAttribute("role","group");
+  pick.setAttribute("aria-label","Show this page in your language");
+  var lbl=document.createElement("span"); lbl.className="lbl";
+  lbl.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.8 2.6 15.6 0 18.4M12 2.8c-2.6 2.8-2.6 15.6 0 18.4"/></svg><span>Read this in</span>';
+  pick.appendChild(lbl);
+  var btns=S.map(function(s,idx){
+    var b=document.createElement("button"); b.type="button"; b.textContent=s.c;
+    b.setAttribute("dir", s.d); b.setAttribute("aria-pressed","false");
+    b.addEventListener("click", function(){ choose(idx); });
+    pick.appendChild(b); return b;
+  });
+  if(pill && pill.parentNode){ pill.parentNode.replaceChild(pick, pill); }
+
+  var rtlEls = ids.map(function(k){ return el[k]; });
+  var i=0, paused=false, locked=false;
+  function setActive(idx){ btns.forEach(function(b,k){ var on=k===idx;
+    b.classList.toggle("on",on); b.setAttribute("aria-pressed", on?"true":"false"); }); }
+  function apply(s){ rtlEls.forEach(function(e){ e.setAttribute("dir", s.d); });
+    ids.forEach(function(k){ el[k].textContent = s[k]; }); }
+  function fade(on){ rtlEls.forEach(function(e){ e.classList.toggle("fading", on); }); }
+  function show(idx){ apply(S[idx]); setActive(idx); }
+  function choose(idx){ locked=true; paused=true; i=idx; fade(true);
+    setTimeout(function(){ show(idx); fade(false); }, 180); }
+  show(0);
+  function step(){ if(paused||locked) return; i=(i+1)%S.length; fade(true);
+    setTimeout(function(){ show(i); fade(false); }, 400); }
+  if(!reduce) setInterval(step, 4800);
+  function pause(){ if(!locked) paused=true; } function resume(){ if(!locked) paused=false; }
+  [hero, how].forEach(function(z){ if(!z) return;
     z.addEventListener("mouseenter", pause); z.addEventListener("mouseleave", resume);
     z.addEventListener("focusin", pause);    z.addEventListener("focusout", resume);
   });
