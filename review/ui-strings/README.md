@@ -6,9 +6,11 @@ morph through the eight site languages on `web/library.html`. The English is aut
 each translated draft wants a native speaker's eyes before launch, exactly like the glossary
 (`../glossary/`).
 
-## The file
+## The files
 
-`home-hero.csv` — one row per (string × language).
+`home-hero.csv` — the home page (hero + how-it-works steps), one row per (string × language).
+`book-hero.csv` — the book-page hero sub-line (shared by all books), one row per language.
+Both use the same columns.
 
 | column | what to do |
 |---|---|

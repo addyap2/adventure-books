@@ -451,9 +451,29 @@
      Every language is reachable at once (no waiting for the intro morph to reach it).
      Picking one sets the headline to that language and locks it. Only the headline is
      translated per book (identity.hero.line); the rest of the page stays English. */
-  var locked=false, pickBtns=[];
+  var locked=false, pickBtns=[], HL={};
+  // the hero sub-line is the same across all books, so translate it once here. Drafts
+  // pending a native-speaker check (esp. ru / ar / zh) — see review/ui-strings/.
+  var SUB={
+    en:"A story where you are the hero — and every choice turns you to a new page. Written for people learning English, at your level, with meaning in your language whenever you need it.",
+    fr:"Une histoire où c'est vous le héros — et chaque choix vous tourne vers une nouvelle page. Écrite pour qui apprend l'anglais, à votre niveau, avec le sens dans votre langue dès que vous en avez besoin.",
+    es:"Una historia donde el héroe eres tú, y cada decisión te lleva a una nueva página. Escrita para quienes aprenden inglés, a tu nivel, con el significado en tu idioma cuando lo necesites.",
+    pt:"Uma história em que o herói és tu — e cada escolha te leva a uma nova página. Escrita para quem aprende inglês, ao teu nível, com o significado na tua língua sempre que precisares.",
+    it:"Una storia in cui l'eroe sei tu, e ogni scelta ti porta a una nuova pagina. Scritta per chi impara l'inglese, al tuo livello, con il significato nella tua lingua quando ne hai bisogno.",
+    de:"Eine Geschichte, in der du die Heldin oder der Held bist – und jede Entscheidung führt dich zu einer neuen Seite. Geschrieben für alle, die Englisch lernen, auf deinem Niveau, mit der Bedeutung in deiner Sprache, wann immer du sie brauchst.",
+    ru:"История, в которой герой — ты, и каждый выбор ведёт тебя на новую страницу. Написана для тех, кто учит английский, на твоём уровне, со значением на твоём языке, когда оно нужно.",
+    ar:"قصة تكون فيها أنت البطل، وكل اختيار ينقلك إلى صفحة جديدة. كُتبت لمن يتعلّمون الإنجليزية، على مستواك، مع المعنى بلغتك متى احتجت إليه.",
+    zh:"一个你就是主角的故事——每一个选择都会把你带到新的一页。为学习英语的人而写，贴合你的水平，需要时用你的语言给出含义。"
+  };
   function setActive(code){ pickBtns.forEach(function(b){ var on=b.dataset.code===code;
     b.classList.toggle('on',on); b.setAttribute('aria-pressed', on?'true':'false'); }); }
+  // set the headline AND the sub-line to a language together (used on click)
+  function setLang(code){
+    var m=document.getElementById('morph'), sub=document.querySelector('.sub'), rtl=code==='ar';
+    if(m){ m.style.opacity='1'; m.textContent=HL[code]||HL.en||''; m.setAttribute('dir', rtl?'rtl':'ltr'); }
+    if(sub){ sub.style.opacity='1'; sub.textContent=SUB[code]||SUB.en; sub.setAttribute('dir', rtl?'rtl':'ltr'); }
+    setActive(code);
+  }
   function buildLangPick(L){
     var box=document.getElementById('bookLangPick'); if(!box) return;
     var NAMES={en:'English',fr:'Français',es:'Español',pt:'Português',it:'Italiano',de:'Deutsch',ru:'Русский',ar:'العربية',zh:'中文'};
@@ -462,19 +482,15 @@
     var lbl=document.createElement('span'); lbl.className='lp-lbl';
     lbl.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.8 2.6 15.6 0 18.4M12 2.8c-2.6 2.8-2.6 15.6 0 18.4"/></svg><span>Read this in</span>';
     box.appendChild(lbl);
-    pickBtns=[];
-    var morphEl=document.getElementById('morph');
+    pickBtns=[]; HL={en:(L.en||'')};
     SEL.forEach(function(code){
       var txt = code==='en' ? (L.en||'') : (L[code]||'');
       if(!txt) return;
+      HL[code]=txt;
       var b=document.createElement('button'); b.type='button'; b.textContent=NAMES[code];
       b.setAttribute('dir', code==='ar'?'rtl':'ltr'); b.setAttribute('aria-pressed','false');
       b.dataset.code=code;
-      b.addEventListener('click', function(){
-        locked=true;
-        if(morphEl){ morphEl.style.opacity='1'; morphEl.textContent=txt; morphEl.setAttribute('dir', code==='ar'?'rtl':'ltr'); }
-        setActive(code);
-      });
+      b.addEventListener('click', function(){ locked=true; setLang(code); });
       box.appendChild(b); pickBtns.push(b);
     });
     var lc=document.getElementById('langcode'); if(lc) lc.style.display='none';
@@ -560,17 +576,19 @@
     var i=0;
     morph.style.transition='opacity .32s ease';
     var LOW={FR:'fr',ES:'es',IT:'it',DE:'de',PT:'pt',RU:'ru',ZH:'zh',AR:'ar',EN:'en'};
+    var subEl=document.querySelector('.sub'); if(subEl) subEl.style.transition='opacity .32s ease';
     function step(){
       if(locked) return;                       // a reader picked a language — stop the intro
-      morph.style.opacity='0';
+      morph.style.opacity='0'; if(subEl) subEl.style.opacity='0';
       setTimeout(function(){
         if(locked) return;
-        var L=lines[i];
+        var L=lines[i], code=LOW[L.c]||'en';
         morph.textContent=L.t;
         morph.setAttribute('dir',L.rtl?'rtl':'ltr');
         lc.textContent=L.c==='EN'?'':('— '+L.c);
         morph.style.opacity='1';
-        setActive(LOW[L.c]||'en');             // keep the selector highlight in step
+        if(subEl){ subEl.textContent=SUB[code]||SUB.en; subEl.setAttribute('dir',L.rtl?'rtl':'ltr'); subEl.style.opacity='1'; }
+        setActive(code);                        // keep the selector highlight in step
         i++;
         if(i<lines.length) setTimeout(step, L2delay(L));
       },320);
