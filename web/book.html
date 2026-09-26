@@ -240,7 +240,7 @@
 
 <main>
   <!-- ================= HERO ================= -->
-  <section class="stage" id="stage" aria-label="The arrival">
+  <section class="stage" id="stage" aria-label="Cover scene">
     <canvas id="gl" aria-hidden="true"></canvas>
     <div class="layer" id="sky" data-depth="0.02" aria-hidden="true"></div>
     <div class="layer" id="art" data-depth="0.05" aria-hidden="true"></div>
@@ -354,7 +354,7 @@
       <p class="sub">A story where <em>you</em> are the hero &mdash; and every choice turns you to a new page. Written for people learning English, at your level, with meaning in your language whenever you need it.</p>
       <div class="langpick" id="bookLangPick" role="group" aria-label="Show the title in your language"></div>
       <div class="actions">
-        <a class="cta" href="/read.html?book=episode-01.json" target="_blank" rel="noopener noreferrer">Begin your arrival <span aria-hidden="true">&rarr;</span></a>
+        <a class="cta" href="/read.html?book=episode-01.json" target="_blank" rel="noopener noreferrer">Begin the story <span aria-hidden="true">&rarr;</span></a>
         <a class="textlink" href="#how">How it works</a>
       </div>
     </div>
@@ -424,7 +424,7 @@
       <div class="snum reveal">&sect;&nbsp;<b>&infin;</b></div>
       <h2 class="reveal d1">The train has gone. The city is <em>yours</em> to read.</h2>
       <div class="actions reveal d2">
-        <a class="cta" href="/read.html?book=episode-01.json" target="_blank" rel="noopener noreferrer">Begin your arrival <span aria-hidden="true">&rarr;</span></a>
+        <a class="cta" href="/read.html?book=episode-01.json" target="_blank" rel="noopener noreferrer">Begin the story <span aria-hidden="true">&rarr;</span></a>
         <a class="textlink" href="/read.html" target="_blank" rel="noopener noreferrer">Choose language &amp; level</a>
       </div>
       <p class="footline reveal d2"><b>English Reading Adventures</b> by Antony Addy</p>
@@ -527,6 +527,19 @@
       document.title = book.title + ' — English Reading Adventures';
       var can=document.querySelector('link[rel=canonical]');
       if(can) can.href='https://adventure-books-five.vercel.app/b/'+(book.slug||ep.slug);
+      // Book structured data (JSON-LD) — helps search engines understand each story.
+      try{
+        var base='https://adventure-books-five.vercel.app', bslug=(book.slug||ep.slug);
+        var ld={"@context":"https://schema.org","@type":"Book","name":book.title,
+          "url":base+'/b/'+bslug,"inLanguage":"en","abstract":(book.blurb||''),
+          "image":base+'/og-'+bslug+'.png',
+          "author":{"@type":"Person","name":"Antony Addy"},
+          "publisher":{"@type":"Organization","name":"English Reading Adventures"},
+          "isAccessibleForFree":true,"genre":"Interactive fiction",
+          "audience":{"@type":"Audience","audienceType":"English language learners"}};
+        var lds=document.createElement('script'); lds.type='application/ld+json';
+        lds.textContent=JSON.stringify(ld); document.head.appendChild(lds);
+      }catch(e){}
       // use this book's own generated image as the main hero, once. Probe first (awaited,
       // before boot() picks the scene) so a book without a cover falls back to the shared
       // procedural nocturne instead of a blank stage.

@@ -92,6 +92,17 @@ for (const e of episodes) {
   await writeFile(join(DIST, "b", `${e.slug}.html`), html);
 }
 
+// SEO: a sitemap of the library + every book page, and a robots.txt pointing to it.
+const today = new Date().toISOString().slice(0, 10);
+const urls = ["/", ...episodes.map(e => `/b/${e.slug}`)];
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n` +
+  `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+  urls.map(u => `  <url><loc>${BASE}${u}</loc><lastmod>${today}</lastmod></url>`).join("\n") +
+  `\n</urlset>\n`;
+await writeFile(join(DIST, "sitemap.xml"), sitemap);
+await writeFile(join(DIST, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${BASE}/sitemap.xml\n`);
+console.log("Wrote sitemap.xml + robots.txt");
+
 console.log(`Built ${episodes.length} episode(s) into dist/`);
 for (const e of episodes) {
   console.log(`  ep ${e.episode}: ${e.title} — ${e.paragraphs} paragraphs, ${e.endings} endings, ${e.levels.join("/")}`);

@@ -412,6 +412,21 @@
   [data-theme="light"] .again button, [data-theme="light"] .stamps i.got,
   [data-theme="light"] .start{ color:#fff !important; }
   [data-theme="light"] .bar .brand .dot{ box-shadow:0 0 10px 1px rgba(168,91,34,.35); }
+
+  /* ---- accessibility: visible keyboard focus + reduced-motion ---- */
+  /* Every interactive control shows a clear ring on keyboard focus, in the
+     book's own accent so it reads on both the night worlds and paper mode. */
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
+  input:focus-visible, select:focus-visible, summary:focus-visible {
+    outline:2px solid var(--accent); outline-offset:3px; border-radius:8px; }
+  .choices button:focus-visible { outline-offset:4px; }
+  /* Honour a reader who asks the system for less motion: kill the slides,
+     fades, scale-ins and smooth-scroll, but leave the interfaces working. */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration:.001ms !important; animation-iteration-count:1 !important;
+      transition-duration:.001ms !important; scroll-behavior:auto !important; }
+  }
 </style>
 </head>
 <body>
