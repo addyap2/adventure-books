@@ -352,7 +352,7 @@
       </h1>
       <span class="langcode" id="langcode" aria-hidden="true"></span>
       <p class="sub">A story where <em>you</em> are the hero &mdash; and every choice turns you to a new page. Written for people learning English, at your level, with meaning in your language whenever you need it.</p>
-      <div class="langpick" id="bookLangPick" role="group" aria-label="Show the title in your language"></div>
+      <div class="langpick" id="bookLangPick" role="group" aria-label="Show this introduction in your language"></div>
       <div class="actions">
         <a class="cta" href="/read.html?book=episode-01.json" target="_blank" rel="noopener noreferrer">Begin the story <span aria-hidden="true">&rarr;</span></a>
         <a class="textlink" href="#how">How it works</a>
@@ -480,7 +480,7 @@
     var SEL=['en','fr','es','pt','it','de','ru','ar','zh'];
     box.innerHTML='';
     var lbl=document.createElement('span'); lbl.className='lp-lbl';
-    lbl.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.8 2.6 15.6 0 18.4M12 2.8c-2.6 2.8-2.6 15.6 0 18.4"/></svg><span>Read this in</span>';
+    lbl.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.8 2.6 15.6 0 18.4M12 2.8c-2.6 2.8-2.6 15.6 0 18.4"/></svg><span>View this introduction in</span>';
     box.appendChild(lbl);
     pickBtns=[]; HL={en:(L.en||'')};
     SEL.forEach(function(code){
