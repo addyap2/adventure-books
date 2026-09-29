@@ -66,18 +66,22 @@ const manifest = {
 };
 await writeFile(join(DIST, "manifest.json"), JSON.stringify(manifest, null, 2));
 
-// Prerender one static page per book at dist/b/<slug>.html from the book.html template,
-// stamping per-book meta (title, description, canonical, OG/Twitter, og-<slug>.png) so
-// each book has its own correct social card and SEO — then the client JS hydrates it.
+// Prerender each book's introduction and reader entry with its own content and metadata.
+// Client JavaScript then adds language selection and the interactive reading experience.
 const BASE = "https://adventure-books-five.vercel.app";
 const tmpl = await readFile(join(ROOT, "web", "book.html"), "utf8");
 const attr = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+const htmlText = (s) => attr(s).replace(/>/g, "&gt;");
+const readerTmpl = await readFile(join(ROOT, "web", "index.html"), "utf8");
 await mkdir(join(DIST, "b"), { recursive: true });
+await mkdir(join(DIST, "read"), { recursive: true });
 for (const e of episodes) {
+  const book = JSON.parse(await readFile(join(CONTENT, e.file), "utf8"));
   const desc = e.blurb || "An interactive story for English learners — you choose what happens.";
   const url = `${BASE}/b/${e.slug}`;
   const og = `${BASE}/og-${e.slug}.png`;
-  const html = tmpl
+  const coverAlt = e.identity?.cover?.alt || `${e.title} cover artwork.`;
+  let html = tmpl
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${attr(e.title)} — an interactive story</title>`)
     .replace(/(<meta name="description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
     .replace(/(<link rel="canonical" href=")[^"]*(">)/, `$1${url}$2`)
@@ -85,11 +89,60 @@ for (const e of episodes) {
     .replace(/(<meta property="og:title" content=")[^"]*(">)/, `$1${attr(e.title)} — an interactive story$2`)
     .replace(/(<meta property="og:description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
     .replace(/(<meta property="og:image" content=")[^"]*(">)/, `$1${og}$2`)
+    .replace(/(<meta property="og:image:alt" content=")[^"]*(">)/, `$1${attr(coverAlt)}$2`)
     .replace(/(<meta name="twitter:title" content=")[^"]*(">)/, `$1${attr(e.title)} — an interactive story$2`)
     .replace(/(<meta name="twitter:description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
     .replace(/(<meta name="twitter:image" content=")[^"]*(">)/, `$1${og}$2`)
     .replace(/<body>/, `<body>\n<script>window.__WM_BOOK=${JSON.stringify({ slug: e.slug, file: e.file })}</script>`);
+  // Keep the first painted page specific to this book, including with JavaScript disabled.
+  // The hydration script remains after this boundary and can still enhance the page.
+  const boundary = html.indexOf('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js');
+  if (boundary < 0) throw new Error("Book template script boundary missing");
+  let body = html.slice(0, boundary);
+  const scripts = html.slice(boundary);
+  const headline = htmlText(book.identity?.hero?.line?.en || e.title);
+  const sub = htmlText(book.identity?.hero?.sub || "A story where you are the hero — and every choice turns you to a new page.");
+  body = body
+    .replace(/(<span class="sr-only">)[^<]*(<\/span>)/, `$1${headline}$2`)
+    .replace(/(<span class="morph" aria-hidden="true" id="morph">)[^<]*(<\/span>)/, `$1${headline}$2`)
+    .replace(/(<p class="sub">)[\s\S]*?(<\/p>)/, `$1${sub}$2`)
+    .replaceAll('/read.html?book=episode-01.json&amp;', `/read/${e.slug}.html?`)
+    .replaceAll('/read.html?book=episode-01.json', `/read/${e.slug}.html`)
+    .replace('href="/read.html"', `href="/read/${e.slug}.html"`);
+  if (existsSync(join(ROOT, "web", `cover-${e.slug}.png`))) {
+    const focal = e.identity?.cover?.focal || "center";
+    body = body.replace('class="stage" id="stage"', 'class="stage has-art" id="stage"')
+      .replace('id="art" data-depth="0.05" aria-hidden="true"',
+        `id="art" data-depth="0.05" aria-hidden="true" style="background-image:url('/cover-${e.slug}.png');background-position:${attr(focal)}"`);
+  }
+  if (e.slug !== "the-address") {
+    body = body
+      .replace('Not a course. A city you <em>find your way</em> through.', 'Not a course. A world you <em>choose your way</em> through.')
+      .replace(/(<p class="body reveal d2">)[\s\S]*?(<\/p>)/,
+        `$1${htmlText(desc)} What you do next is yours to choose — and the English bends to your level while you read.$2`)
+      .replace('Branching sections, twelve endings to find. Read it again and the night goes differently.',
+        'Branching sections, twelve endings to find. Read it again and the story goes differently.')
+      .replace('The train has gone. The city is <em>yours</em> to read.',
+        'The story begins. The next choice is <em>yours</em>.');
+  }
+  html = body + scripts;
   await writeFile(join(DIST, "b", `${e.slug}.html`), html);
+
+  const readerUrl = `${BASE}/read/${e.slug}.html`;
+  const reader = readerTmpl
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${attr(e.title)} — English Reading Adventures</title>`)
+    .replace(/(<meta name="description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
+    .replace(/(<link rel="canonical" href=")[^"]*(">)/, `$1${readerUrl}$2`)
+    .replace(/(<meta property="og:url" content=")[^"]*(">)/, `$1${readerUrl}$2`)
+    .replace(/(<meta property="og:title" content=")[^"]*(">)/, `$1${attr(e.title)} — English Reading Adventures$2`)
+    .replace(/(<meta property="og:description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
+    .replace(/(<meta property="og:image" content=")[^"]*(">)/, `$1${og}$2`)
+    .replace(/(<meta property="og:image:alt" content=")[^"]*(">)/, `$1${attr(coverAlt)}$2`)
+    .replace(/(<meta name="twitter:title" content=")[^"]*(">)/, `$1${attr(e.title)} — English Reading Adventures$2`)
+    .replace(/(<meta name="twitter:description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
+    .replace(/(<meta name="twitter:image" content=")[^"]*(">)/, `$1${og}$2`)
+    .replace(/<body>/, `<body>\n<script>window.__WM_READER_BOOK=${JSON.stringify(e.file)}</script>`);
+  await writeFile(join(DIST, "read", `${e.slug}.html`), reader);
 }
 
 // SEO: a sitemap of the library + every book page, and a robots.txt pointing to it.

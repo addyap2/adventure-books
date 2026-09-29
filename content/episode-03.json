@@ -21,7 +21,8 @@
     "cover": {
       "kind": "candlelight",
       "glow": true,
-      "focal": "80% 52%"
+      "focal": "80% 52%",
+      "alt": "A lit doorway shines across a dark, snowbound town at night."
     },
     "type": {
       "display": "Fraunces",

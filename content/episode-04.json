@@ -21,7 +21,8 @@
     "cover": {
       "kind": "dusk",
       "glow": true,
-      "focal": "72% 46%"
+      "focal": "72% 46%",
+      "alt": "A bus stands on an empty desert road beneath the setting sun."
     },
     "type": {
       "display": "Fraunces",

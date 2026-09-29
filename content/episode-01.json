@@ -21,7 +21,8 @@
     "cover": {
       "kind": "nocturne",
       "glow": true,
-      "focal": "54% 52%"
+      "focal": "54% 52%",
+      "alt": "A lone traveller beneath a streetlight in a dark city, with a crescent moon above."
     },
     "type": {
       "display": "Fraunces",

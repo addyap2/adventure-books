@@ -68,6 +68,7 @@
   h1{font-family:var(--serif);font-weight:300;font-style:italic;font-size:clamp(3.8rem,6.4vw,6.5rem);
     line-height:.97;letter-spacing:-.045em;margin:0;max-width:11ch;color:#fff;text-wrap:balance}
   .byline{font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin:14px 0 0}
+  .mobile-summary{display:none}
   .tagline{font-family:var(--serif);font-size:clamp(1.35rem,2.2vw,1.8rem);font-style:italic;color:#d8c49e;margin:26px 0 0}
   .intro{max-width:56ch;color:#c3cad9;font-size:clamp(1rem,1.35vw,1.1rem);margin:14px 0 0;line-height:1.67;min-height:7.4em}
   .hero-cta{display:inline-flex;align-items:center;gap:16px;align-self:flex-start;margin-top:24px;padding:13px 19px;border:1px solid var(--amber);border-radius:3px;background:var(--amber);color:#10151e;text-decoration:none;font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transition:background .2s,border-color .2s,transform .2s}
@@ -171,7 +172,8 @@
     .hero{padding:42px 0 28px}.hero .wrap{display:block;min-height:0}.hero-copy{width:100%;display:flex;flex-direction:column}
     h1{font-size:clamp(3.6rem,12vw,5.5rem);max-width:10ch}
     .hero-art{position:relative;top:auto;right:auto;transform:none;width:100%;height:260px;max-width:440px;margin:12px auto 0}
-    .hero-cta{order:3;margin-top:20px}.hero-copy #heroMorph{order:4}
+    .mobile-summary{display:block;order:3;margin:10px 0 0;color:#c3cad9;font-size:1rem;line-height:1.5;max-width:34ch}
+    .hero-cta{order:4;margin-top:18px}.hero-copy #heroMorph{order:5}
     .hero-book{width:185px}.hero-book-type strong{font-size:1.7rem}.hero-book-type span,.hero-book-type small{font-size:7px}
     .tagline{margin-top:20px}.langpick{margin-top:24px}.intro{font-size:1rem}
     .how-grid{gap:28px}.step{gap:5px}.langs{margin-top:34px}
@@ -206,6 +208,7 @@
           </div>
         </div>
       </div>
+      <p class="mobile-summary" aria-hidden="true">Choose a story, read at your level, and decide what happens next.</p>
       <div id="heroMorph">
         <p class="langpill morph" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.8 2.6 15.6 0 18.4M12 2.8c-2.6 2.8-2.6 15.6 0 18.4"/></svg>
@@ -215,14 +218,13 @@
         <p class="intro morph" id="hIntro">Branching stories for people learning English, where you are the hero. The same story is written at three levels &mdash; so you read at A2, B1, or B2, switch level whenever you like, and still make the same choices as everyone else. Every word waits in your language when you need it.</p>
       </div>
       <a class="hero-cta" href="#library">Explore the books <span aria-hidden="true">↓</span></a>
-      <p class="sr-only">Find your way, one story at a time. Branching stories for people learning English, where you are the hero. The same story is written at three levels — so you read at A2, B1, or B2, switch level whenever you like, and still make the same choices as everyone else. Every word waits in your language when you need it.</p>
       </div>
     </div>
   </section>
 
   <section class="how">
     <div class="wrap">
-      <div class="how-grid" id="howGrid" aria-hidden="true">
+      <div class="how-grid" id="howGrid">
         <div class="step">
           <span class="n">01</span>
           <h4 class="morph" id="s1h">Pick your level</h4>
@@ -239,7 +241,6 @@
           <p class="morph" id="s3b">See its meaning in your own language, right where you are &mdash; the English first, your language as the safety net beneath it.</p>
         </div>
       </div>
-      <p class="sr-only">Pick your level. Read at A2, B1, or B2 — beginner to advanced — and change it any time, even mid-story. Every level follows the same path, so a whole class can read one book together. Read and choose. Every page ends in a decision, and you decide what happens next. Choosing well means understanding what you just read. Tap any word. See its meaning in your own language, right where you are — the English first, your language as the safety net beneath it.</p>
       <p class="langs">
         <span class="lbl">Word help in</span>
         <span class="list">Français &middot; Español &middot; Português &middot; Italiano &middot; Deutsch &middot; Русский &middot; العربية &middot; 中文</span>
@@ -341,7 +342,7 @@
 
 <script>
 /* The visitor chooses the page language; the hero and "how it works" copy update together.
-   Accessible English copies (.sr-only) remain for screen readers. Translations are drafts
+   Translations are drafts
    pending a native-speaker check (esp. ru / ar / zh) — see review/ui-strings/. */
 (function(){
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -406,7 +407,6 @@
       s2h:"阅读并选择", s2b:"每一页都以一个抉择结束，接下来发生什么由你决定。选得对，意味着你读懂了刚才的内容。",
       s3h:"点按任意单词", s3b:"就地看到它在你母语中的意思——先是英文，你的语言作为下面的安全网。"}
   ];
-  if(heroMorph) heroMorph.setAttribute("aria-hidden","true");
 
   // Build a clickable selector so every language is one tap away.
   var pill=document.querySelector(".langpill");
@@ -427,10 +427,11 @@
   var rtlEls = ids.map(function(k){ return el[k]; });
   function setActive(idx){ btns.forEach(function(b,k){ var on=k===idx;
     b.classList.toggle("on",on); b.setAttribute("aria-pressed", on?"true":"false"); }); }
-  function apply(s){ rtlEls.forEach(function(e){ e.setAttribute("dir", s.d); });
+  var codes=['en','fr','es','pt','it','de','ru','ar','zh'];
+  function apply(s,idx){ rtlEls.forEach(function(e){ e.setAttribute("dir", s.d); e.setAttribute("lang",codes[idx]); });
     ids.forEach(function(k){ el[k].textContent = s[k]; }); }
   function fade(on){ rtlEls.forEach(function(e){ e.classList.toggle("fading", on); }); }
-  function show(idx){ apply(S[idx]); setActive(idx); }
+  function show(idx){ apply(S[idx],idx); setActive(idx); }
   function choose(idx){ if(reduce){show(idx);return;} fade(true);
     setTimeout(function(){ show(idx); fade(false); }, 180); }
   show(0);
