@@ -1,0 +1,3096 @@
+{
+  "schema": "adventure-book/episode@1",
+  "series": "the-keeper",
+  "episode": 5,
+  "title": "The Keeper",
+  "slug": "the-keeper",
+  "blurb": "The worst storm of the year kills the power, the lighthouse beacon dies, and the old keeper is hurt at the foot of the stairs — just as a boat's lights struggle offshore. Keeping the great lamp burning by hand is on you now. You have until first light to hold the beam, and whoever the sea sends, against the dark.",
+  "identity": {
+    "name": "Tempest",
+    "mood": "A storm-black coast; the only light is the beam that keeps ships off the rocks.",
+    "palette": {
+      "ground": "#0B141B",
+      "surface": "#14212B",
+      "ink": "#EAF1F5",
+      "muted": "#7C8B98",
+      "line": "#223341",
+      "accent": "#F3D27E",
+      "accentHot": "#FBEBBE",
+      "secondary": "#86B3C4"
+    },
+    "cover": {
+      "kind": "beacon",
+      "glow": true
+    },
+    "type": {
+      "display": "Fraunces",
+      "ui": "Hanken Grotesk",
+      "mono": "JetBrains Mono"
+    },
+    "hero": {
+      "line": {
+        "en": "The light goes out in the storm. A boat out past the rocks needs the beam you keep burning.",
+        "fr": "La lumière s'éteint dans la tempête. Au large des rochers, un bateau a besoin du feu que vous gardez allumé.",
+        "es": "La luz se apaga en la tormenta. Más allá de las rocas, un barco necesita el faro que mantienes encendido.",
+        "it": "La luce si spegne nella tempesta. Oltre gli scogli, una barca ha bisogno del faro che tieni acceso.",
+        "de": "Das Licht erlischt im Sturm. Draußen hinter den Felsen braucht ein Boot den Schein, den du am Brennen hältst.",
+        "pt": "A luz apaga-se na tempestade. Para lá dos rochedos, um barco precisa do farol que manténs aceso.",
+        "ru": "Свет гаснет в шторм. Там, за скалами, лодке нужен луч, который ты не даёшь погаснуть.",
+        "zh": "灯在风暴中熄灭了。礁石之外，一条船需要你守住的那束光。",
+        "ar": "ينطفئ الضوء في العاصفة. خلف الصخور، يحتاج قاربٌ إلى النور الذي تُبقيه مشتعلاً."
+      },
+      "sub": "A story where you are the hero — and every choice turns you to a new page. Written for people learning English, at your level, with meaning in your language whenever you need it."
+    }
+  },
+  "levels": [
+    "A2",
+    "B1",
+    "B2"
+  ],
+  "start": 1,
+  "language_focus": {
+    "A2": [
+      "imperatives and going to",
+      "the sea, weather and the body"
+    ],
+    "B1": [
+      "the first conditional and modals of advice",
+      "warning, helping and planning"
+    ],
+    "B2": [
+      "inference, obligation and conditionals",
+      "duty, risk and responsibility"
+    ]
+  },
+  "state_in": [],
+  "state_out": [
+    "has_light",
+    "dodged_wrecker",
+    "paid_wrecker",
+    "found_boat",
+    "rallied_coast",
+    "helped_stranger",
+    "gave_shelter",
+    "took_shortcut"
+  ],
+  "arc_flags": [],
+  "nodes": [
+    {
+      "id": 1,
+      "text": {
+        "A2": "[stub] The worst storm of the year hits after dark. The power fails, and the lighthouse beacon dies with it. On the wet stairs the old keeper, Nan Bright, falls and cannot get up. Out past the point, a boat's small lights lift and fall in the swell. The great lamp must be kept by hand now — and that is on you.",
+        "B1": "[stub] The worst storm of the year hits after dark. The power fails, and the lighthouse beacon dies with it. On the wet stairs the old keeper, Nan Bright, falls and cannot get up. Out past the point, a boat's small lights lift and fall in the swell. The great lamp must be kept by hand now — and that is on you.",
+        "B2": "[stub] The worst storm of the year hits after dark. The power fails, and the lighthouse beacon dies with it. On the wet stairs the old keeper, Nan Bright, falls and cannot get up. Out past the point, a boat's small lights lift and fall in the swell. The great lamp must be kept by hand now — and that is on you."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take charge of the light.",
+            "B1": "Take charge of the light.",
+            "B2": "Take charge of the light."
+          },
+          "goto": 2
+        },
+        {
+          "text": {
+            "A2": "Try the radio for help.",
+            "B1": "Try the radio for help.",
+            "B2": "Try the radio for help."
+          },
+          "goto": 3
+        },
+        {
+          "text": {
+            "A2": "See to Nan first.",
+            "B1": "See to Nan first.",
+            "B2": "See to Nan first."
+          },
+          "goto": 4
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": {
+        "A2": "[stub] You gather what the tower has: a can of oil, spare wicks, matches, a storm-lamp. The wind screams in the rail outside.",
+        "B1": "[stub] You gather what the tower has: a can of oil, spare wicks, matches, a storm-lamp. The wind screams in the rail outside.",
+        "B2": "[stub] You gather what the tower has: a can of oil, spare wicks, matches, a storm-lamp. The wind screams in the rail outside."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Step out into the storm.",
+            "B1": "Step out into the storm.",
+            "B2": "Step out into the storm."
+          },
+          "goto": 5
+        },
+        {
+          "text": {
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "The hand-lamp's wick is spoiled.",
+            "B1": "The hand-lamp's wick is spoiled.",
+            "B2": "The hand-lamp's wick is spoiled."
+          },
+          "goto": 29
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": {
+        "A2": "[stub] The radio crackles. Word gets through from Tam at the coast station: no lifeboat can launch into this sea until it eases or dawn comes. Keep the light if you can.",
+        "B1": "[stub] The radio crackles. Word gets through from Tam at the coast station: no lifeboat can launch into this sea until it eases or dawn comes. Keep the light if you can.",
+        "B2": "[stub] The radio crackles. Word gets through from Tam at the coast station: no lifeboat can launch into this sea until it eases or dawn comes. Keep the light if you can."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "But that boat can't wait.",
+            "B1": "But that boat can't wait.",
+            "B2": "But that boat can't wait."
+          },
+          "goto": 8
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": {
+        "A2": "[stub] You get to Nan at the foot of the stairs and make her as easy as you can. But the light is still dark, and shelter alone won't do. You'll need oil and a plan.",
+        "B1": "[stub] You get to Nan at the foot of the stairs and make her as easy as you can. But the light is still dark, and shelter alone won't do. You'll need oil and a plan.",
+        "B2": "[stub] You get to Nan at the foot of the stairs and make her as easy as you can. But the light is still dark, and shelter alone won't do. You'll need oil and a plan."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go back and get the light going.",
+            "B1": "Go back and get the light going.",
+            "B2": "Go back and get the light going."
+          },
+          "goto": 2
+        },
+        {
+          "text": {
+            "A2": "Feel how serious this is.",
+            "B1": "Feel how serious this is.",
+            "B2": "Feel how serious this is."
+          },
+          "goto": 8
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": {
+        "A2": "[stub] Out on the gallery: black sea, rain driven flat, the boat's lights small and struggling past the point, the cove a well of dark below.",
+        "B1": "[stub] Out on the gallery: black sea, rain driven flat, the boat's lights small and struggling past the point, the cove a well of dark below.",
+        "B2": "[stub] Out on the gallery: black sea, rain driven flat, the boat's lights small and struggling past the point, the cove a well of dark below."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Tam opens the oil store.",
+            "B1": "Tam opens the oil store.",
+            "B2": "Tam opens the oil store."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "Knock along the cottages for help.",
+            "B1": "Knock along the cottages for help.",
+            "B2": "Knock along the cottages for help."
+          },
+          "goto": 10
+        },
+        {
+          "text": {
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "Someone's out on the head.",
+            "B1": "Someone's out on the head.",
+            "B2": "Someone's out on the head."
+          },
+          "goto": 60
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": {
+        "A2": "[stub] Get the light going first, or see to the rest?",
+        "B1": "[stub] Get the light going first, or see to the rest?",
+        "B2": "[stub] Get the light going first, or see to the rest?"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The oil store.",
+            "B1": "The oil store.",
+            "B2": "The oil store."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "Straight up to the lamp.",
+            "B1": "Straight up to the lamp.",
+            "B2": "Straight up to the lamp."
+          },
+          "goto": 11
+        },
+        {
+          "text": {
+            "A2": "Rouse the coast for help.",
+            "B1": "Rouse the coast for help.",
+            "B2": "Rouse the coast for help."
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": {
+        "A2": "[stub] The storm, and that boat closing on the rocks with no light to steer by. This is real, and it is on you.",
+        "B1": "[stub] The storm, and that boat closing on the rocks with no light to steer by. This is real, and it is on you.",
+        "B2": "[stub] The storm, and that boat closing on the rocks with no light to steer by. This is real, and it is on you."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "To the oil store.",
+            "B1": "To the oil store.",
+            "B2": "To the oil store."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "A scramble at the store.",
+            "B1": "A scramble at the store.",
+            "B2": "A scramble at the store."
+          },
+          "goto": 68
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": {
+        "A2": "[stub] Tam heaves open the oil store: a barrel of oil, spare wicks, a box of matches, a good storm-lamp, dry rope.",
+        "B1": "[stub] Tam heaves open the oil store: a barrel of oil, spare wicks, a box of matches, a good storm-lamp, dry rope.",
+        "B2": "[stub] Tam heaves open the oil store: a barrel of oil, spare wicks, a box of matches, a good storm-lamp, dry rope."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take charge of the oil and wick.",
+            "B1": "Take charge of the oil and wick.",
+            "B2": "Take charge of the oil and wick."
+          },
+          "goto": 13,
+          "sets": [
+            "has_light"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Just a storm-lamp and rope.",
+            "B1": "Just a storm-lamp and rope.",
+            "B2": "Just a storm-lamp and rope."
+          },
+          "goto": 14
+        },
+        {
+          "text": {
+            "A2": "Ask Tam what he knows.",
+            "B1": "Ask Tam what he knows.",
+            "B2": "Ask Tam what he knows."
+          },
+          "goto": 15
+        },
+        {
+          "text": {
+            "A2": "He presses the last dry lamp on you.",
+            "B1": "He presses the last dry lamp on you.",
+            "B2": "He presses the last dry lamp on you."
+          },
+          "goto": 67
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": {
+        "A2": "[stub] Along the cottages: old Da Finch, frightened and fumbling in the dark, his lamp dead and no matches.",
+        "B1": "[stub] Along the cottages: old Da Finch, frightened and fumbling in the dark, his lamp dead and no matches.",
+        "B2": "[stub] Along the cottages: old Da Finch, frightened and fumbling in the dark, his lamp dead and no matches."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Stop and help him.",
+            "B1": "Stop and help him.",
+            "B2": "Stop and help him."
+          },
+          "goto": 16,
+          "sets": [
+            "helped_stranger"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Say you must keep the light.",
+            "B1": "Say you must keep the light.",
+            "B2": "Say you must keep the light."
+          },
+          "goto": 17
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": {
+        "A2": "[stub] You get up to the lamp fast with what little you have. A spark, a flicker — but it won't hold without proper oil.",
+        "B1": "[stub] You get up to the lamp fast with what little you have. A spark, a flicker — but it won't hold without proper oil.",
+        "B2": "[stub] You get up to the lamp fast with what little you have. A spark, a flicker — but it won't hold without proper oil."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Decide how to get real oil.",
+            "B1": "Decide how to get real oil.",
+            "B2": "Decide how to get real oil."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "The climb takes it out of you.",
+            "B1": "The climb takes it out of you.",
+            "B2": "The climb takes it out of you."
+          },
+          "goto": 18
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": {
+        "A2": "[stub] You go cottage to cottage, asking for hands on the rope and wood for a signal fire.",
+        "B1": "[stub] You go cottage to cottage, asking for hands on the rope and wood for a signal fire.",
+        "B2": "[stub] You go cottage to cottage, asking for hands on the rope and wood for a signal fire."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The coast turns out.",
+            "B1": "The coast turns out.",
+            "B2": "The coast turns out."
+          },
+          "goto": 19,
+          "sets": [
+            "rallied_coast"
+          ]
+        },
+        {
+          "text": {
+            "A2": "No one stirs; go on alone.",
+            "B1": "No one stirs; go on alone.",
+            "B2": "No one stirs; go on alone."
+          },
+          "goto": 20
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": {
+        "A2": "[stub] The oil and wick — enough to keep the lamp burning the night, if you tend it well.",
+        "B1": "[stub] The oil and wick — enough to keep the lamp burning the night, if you tend it well.",
+        "B2": "[stub] The oil and wick — enough to keep the lamp burning the night, if you tend it well."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Now, up to the lamp.",
+            "B1": "Now, up to the lamp.",
+            "B2": "Now, up to the lamp."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "Thank Tam.",
+            "B1": "Thank Tam.",
+            "B2": "Thank Tam."
+          },
+          "goto": 15
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": {
+        "A2": "[stub] A storm-lamp and a coil of rope: some light, but not the beam, and no proper oil secured.",
+        "B1": "[stub] A storm-lamp and a coil of rope: some light, but not the beam, and no proper oil secured.",
+        "B2": "[stub] A storm-lamp and a coil of rope: some light, but not the beam, and no proper oil secured."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Now, find real oil.",
+            "B1": "Now, find real oil.",
+            "B2": "Now, find real oil."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "Ask Tam what he knows.",
+            "B1": "Ask Tam what he knows.",
+            "B2": "Ask Tam what he knows."
+          },
+          "goto": 15
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": {
+        "A2": "[stub] Bosun Carrick knows this coast: keep off the cliff path, don't trust the wrecker, mind the oil, hold the light.",
+        "B1": "[stub] Bosun Carrick knows this coast: keep off the cliff path, don't trust the wrecker, mind the oil, hold the light.",
+        "B2": "[stub] Bosun Carrick knows this coast: keep off the cliff path, don't trust the wrecker, mind the oil, hold the light."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take it to heart.",
+            "B1": "Take it to heart.",
+            "B2": "Take it to heart."
+          },
+          "goto": 22
+        },
+        {
+          "text": {
+            "A2": "On with it.",
+            "B1": "On with it.",
+            "B2": "On with it."
+          },
+          "goto": 21
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "text": {
+        "A2": "[stub] You settle Da Finch with a lit lamp and a blanket, and a promise to come back.",
+        "B1": "[stub] You settle Da Finch with a lit lamp and a blanket, and a promise to come back.",
+        "B2": "[stub] You settle Da Finch with a lit lamp and a blanket, and a promise to come back."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On up to the lamp.",
+            "B1": "On up to the lamp.",
+            "B2": "On up to the lamp."
+          },
+          "goto": 23
+        },
+        {
+          "text": {
+            "A2": "He asks you to check the others.",
+            "B1": "He asks you to check the others.",
+            "B2": "He asks you to check the others."
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "text": {
+        "A2": "[stub] You press on to keep the light.",
+        "B1": "[stub] You press on to keep the light.",
+        "B2": "[stub] You press on to keep the light."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The oil store first.",
+            "B1": "The oil store first.",
+            "B2": "The oil store first."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "Straight up to the lamp.",
+            "B1": "Straight up to the lamp.",
+            "B2": "Straight up to the lamp."
+          },
+          "goto": 11
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "text": {
+        "A2": "[stub] Soaked and spent yourself, near your own limit.",
+        "B1": "[stub] Soaked and spent yourself, near your own limit.",
+        "B2": "[stub] Soaked and spent yourself, near your own limit."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The wrecker's lantern is ahead.",
+            "B1": "The wrecker's lantern is ahead.",
+            "B2": "The wrecker's lantern is ahead."
+          },
+          "goto": 24
+        },
+        {
+          "text": {
+            "A2": "Push on.",
+            "B1": "Push on.",
+            "B2": "Push on."
+          },
+          "goto": 21
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "text": {
+        "A2": "[stub] The coast wakes to itself; a plan forms; someone rolls up a barrel of oil.",
+        "B1": "[stub] The coast wakes to itself; a plan forms; someone rolls up a barrel of oil.",
+        "B2": "[stub] The coast wakes to itself; a plan forms; someone rolls up a barrel of oil."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Lead them up to the light.",
+            "B1": "Lead them up to the light.",
+            "B2": "Lead them up to the light."
+          },
+          "goto": 25
+        },
+        {
+          "text": {
+            "A2": "Light the signal fire first.",
+            "B1": "Light the signal fire first.",
+            "B2": "Light the signal fire first."
+          },
+          "goto": 36
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "text": {
+        "A2": "[stub] No one stirs. You go on alone.",
+        "B1": "[stub] No one stirs. You go on alone.",
+        "B2": "[stub] No one stirs. You go on alone."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The oil store.",
+            "B1": "The oil store.",
+            "B2": "The oil store."
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "On up to the lamp.",
+            "B1": "On up to the lamp.",
+            "B2": "On up to the lamp."
+          },
+          "goto": 11
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "text": {
+        "A2": "[stub] Light sorted. Now the cove and that boat: the long safe path round the head, or the cliff path straight down.",
+        "B1": "[stub] Light sorted. Now the cove and that boat: the long safe path round the head, or the cliff path straight down.",
+        "B2": "[stub] Light sorted. Now the cove and that boat: the long safe path round the head, or the cliff path straight down."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Keep to the path.",
+            "B1": "Keep to the path.",
+            "B2": "Keep to the path."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "Take the cliff path.",
+            "B1": "Take the cliff path.",
+            "B2": "Take the cliff path."
+          },
+          "goto": 27
+        },
+        {
+          "text": {
+            "A2": "The wrecker's lantern ahead.",
+            "B1": "The wrecker's lantern ahead.",
+            "B2": "The wrecker's lantern ahead."
+          },
+          "goto": 24
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "text": {
+        "A2": "[stub] You resolve to be careful tonight.",
+        "B1": "[stub] You resolve to be careful tonight.",
+        "B2": "[stub] You resolve to be careful tonight."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On the way.",
+            "B1": "On the way.",
+            "B2": "On the way."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "Back to the store.",
+            "B1": "Back to the store.",
+            "B2": "Back to the store."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "text": {
+        "A2": "[stub] Steadier for the good turn, you go on.",
+        "B1": "[stub] Steadier for the good turn, you go on.",
+        "B2": "[stub] Steadier for the good turn, you go on."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On with the watch.",
+            "B1": "On with the watch.",
+            "B2": "On with the watch."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "Rouse more hands.",
+            "B1": "Rouse more hands.",
+            "B2": "Rouse more hands."
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "text": {
+        "A2": "[stub] The wrecker, lantern swinging, boots in the surf: oil to sell, a strong back to offer, and reasons the light is not your job tonight.",
+        "B1": "[stub] The wrecker, lantern swinging, boots in the surf: oil to sell, a strong back to offer, and reasons the light is not your job tonight.",
+        "B2": "[stub] The wrecker, lantern swinging, boots in the surf: oil to sell, a strong back to offer, and reasons the light is not your job tonight."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hear him out.",
+            "B1": "Hear him out.",
+            "B2": "Hear him out."
+          },
+          "goto": 40
+        },
+        {
+          "text": {
+            "A2": "Go round him.",
+            "B1": "Go round him.",
+            "B2": "Go round him."
+          },
+          "goto": 26
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "text": {
+        "A2": "[stub] You lead a small band up toward the light.",
+        "B1": "[stub] You lead a small band up toward the light.",
+        "B2": "[stub] You lead a small band up toward the light."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The way.",
+            "B1": "The way.",
+            "B2": "The way."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "The light out on the water.",
+            "B1": "The light out on the water.",
+            "B2": "The light out on the water."
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "text": {
+        "A2": "[stub] The head path: black, streaming, hard going, but solid underfoot.",
+        "B1": "[stub] The head path: black, streaming, hard going, but solid underfoot.",
+        "B2": "[stub] The head path: black, streaming, hard going, but solid underfoot."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Press on.",
+            "B1": "Press on.",
+            "B2": "Press on."
+          },
+          "goto": 30
+        },
+        {
+          "text": {
+            "A2": "Someone's in trouble ahead.",
+            "B1": "Someone's in trouble ahead.",
+            "B2": "Someone's in trouble ahead."
+          },
+          "goto": 31
+        },
+        {
+          "text": {
+            "A2": "The whole coast, dark and roaring.",
+            "B1": "The whole coast, dark and roaring.",
+            "B2": "The whole coast, dark and roaring."
+          },
+          "goto": 64
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "text": {
+        "A2": "[stub] The cliff path would halve the way to the cove — but it's a ledge in a gale, wet rock over a black drop.",
+        "B1": "[stub] The cliff path would halve the way to the cove — but it's a ledge in a gale, wet rock over a black drop.",
+        "B2": "[stub] The cliff path would halve the way to the cove — but it's a ledge in a gale, wet rock over a black drop."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Risk the cliff path.",
+            "B1": "Risk the cliff path.",
+            "B2": "Risk the cliff path."
+          },
+          "goto": 28,
+          "sets": [
+            "took_shortcut"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Too dangerous — back to the path.",
+            "B1": "Too dangerous — back to the path.",
+            "B2": "Too dangerous — back to the path."
+          },
+          "goto": 26
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "text": {
+        "A2": "[stub] Out on the ledge, the drop below, every step a gamble in the wind.",
+        "B1": "[stub] Out on the ledge, the drop below, every step a gamble in the wind.",
+        "B2": "[stub] Out on the ledge, the drop below, every step a gamble in the wind."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Edge on.",
+            "B1": "Edge on.",
+            "B2": "Edge on."
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "The wind slams the cliff.",
+            "B1": "The wind slams the cliff.",
+            "B2": "The wind slams the cliff."
+          },
+          "goto": 51
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "text": {
+        "A2": "[stub] The hand-lamp's wick is spoiled; only a guttering flame.",
+        "B1": "[stub] The hand-lamp's wick is spoiled; only a guttering flame.",
+        "B2": "[stub] The hand-lamp's wick is spoiled; only a guttering flame."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Out into the storm.",
+            "B1": "Out into the storm.",
+            "B2": "Out into the storm."
+          },
+          "goto": 5
+        },
+        {
+          "text": {
+            "A2": "To the store for better.",
+            "B1": "To the store for better.",
+            "B2": "To the store for better."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "text": {
+        "A2": "[stub] The path along the head, the storm deepening by the hour.",
+        "B1": "[stub] The path along the head, the storm deepening by the hour.",
+        "B2": "[stub] The path along the head, the storm deepening by the hour."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "A family in a flooding cottage.",
+            "B1": "A family in a flooding cottage.",
+            "B2": "A family in a flooding cottage."
+          },
+          "goto": 32
+        },
+        {
+          "text": {
+            "A2": "Press on.",
+            "B1": "Press on.",
+            "B2": "Press on."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "The wind nearly has you off your feet.",
+            "B1": "The wind nearly has you off your feet.",
+            "B2": "The wind nearly has you off your feet."
+          },
+          "goto": 65
+        },
+        {
+          "text": {
+            "A2": "A marker post, half torn away.",
+            "B1": "A marker post, half torn away.",
+            "B2": "A marker post, half torn away."
+          },
+          "goto": 39
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "text": {
+        "A2": "[stub] A boat swamped on the slip, an old man tangled in the lines.",
+        "B1": "[stub] A boat swamped on the slip, an old man tangled in the lines.",
+        "B2": "[stub] A boat swamped on the slip, an old man tangled in the lines."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Help cut him free.",
+            "B1": "Help cut him free.",
+            "B2": "Help cut him free."
+          },
+          "goto": 34,
+          "sets": [
+            "helped_stranger"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You can't stop — the light.",
+            "B1": "You can't stop — the light.",
+            "B2": "You can't stop — the light."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "text": {
+        "A2": "[stub] A family in a low cottage with the sea coming under the door, no lamp, a child crying.",
+        "B1": "[stub] A family in a low cottage with the sea coming under the door, no lamp, a child crying.",
+        "B2": "[stub] A family in a low cottage with the sea coming under the door, no lamp, a child crying."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Give them your own lamp and coat.",
+            "B1": "Give them your own lamp and coat.",
+            "B2": "Give them your own lamp and coat."
+          },
+          "goto": 55,
+          "sets": [
+            "gave_shelter"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Promise to send help.",
+            "B1": "Promise to send help.",
+            "B2": "Promise to send help."
+          },
+          "goto": 35
+        },
+        {
+          "text": {
+            "A2": "Try to bank the door against the water.",
+            "B1": "Try to bank the door against the water.",
+            "B2": "Try to bank the door against the water."
+          },
+          "goto": 54
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "text": {
+        "A2": "[stub] On through the worst of the storm.",
+        "B1": "[stub] On through the worst of the storm.",
+        "B2": "[stub] On through the worst of the storm."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The wrecker again.",
+            "B1": "The wrecker again.",
+            "B2": "The wrecker again."
+          },
+          "goto": 40
+        },
+        {
+          "text": {
+            "A2": "The light out on the water.",
+            "B1": "The light out on the water.",
+            "B2": "The light out on the water."
+          },
+          "goto": 70
+        },
+        {
+          "text": {
+            "A2": "The last of the watch.",
+            "B1": "The last of the watch.",
+            "B2": "The last of the watch."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "The storm makes you doubt.",
+            "B1": "The storm makes you doubt.",
+            "B2": "The storm makes you doubt."
+          },
+          "goto": 38
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "text": {
+        "A2": "[stub] The man's cut free; he presses a dry oilskin on you in thanks.",
+        "B1": "[stub] The man's cut free; he presses a dry oilskin on you in thanks.",
+        "B2": "[stub] The man's cut free; he presses a dry oilskin on you in thanks."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On your way.",
+            "B1": "On your way.",
+            "B2": "On your way."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "He tells you of the light on the water.",
+            "B1": "He tells you of the light on the water.",
+            "B2": "He tells you of the light on the water."
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "text": {
+        "A2": "[stub] You promise help and move on.",
+        "B1": "[stub] You promise help and move on.",
+        "B2": "[stub] You promise help and move on."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Rouse the coast.",
+            "B1": "Rouse the coast.",
+            "B2": "Rouse the coast."
+          },
+          "goto": 12
+        },
+        {
+          "text": {
+            "A2": "On through the storm.",
+            "B1": "On through the storm.",
+            "B2": "On through the storm."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "text": {
+        "A2": "[stub] The coast lights one signal fire on the head: a barrel ablaze, shelter, hands warming.",
+        "B1": "[stub] The coast lights one signal fire on the head: a barrel ablaze, shelter, hands warming.",
+        "B2": "[stub] The coast lights one signal fire on the head: a barrel ablaze, shelter, hands warming."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Get the beam lit above it.",
+            "B1": "Get the beam lit above it.",
+            "B2": "Get the beam lit above it."
+          },
+          "goto": 25
+        },
+        {
+          "text": {
+            "A2": "Fetch more hands.",
+            "B1": "Fetch more hands.",
+            "B2": "Fetch more hands."
+          },
+          "goto": 37
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "text": {
+        "A2": "[stub] Cottage by cottage, the frightened shore becomes a working one.",
+        "B1": "[stub] Cottage by cottage, the frightened shore becomes a working one.",
+        "B2": "[stub] Cottage by cottage, the frightened shore becomes a working one."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "To the cove.",
+            "B1": "To the cove.",
+            "B2": "To the cove."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "The last of the watch.",
+            "B1": "The last of the watch.",
+            "B2": "The last of the watch."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "text": {
+        "A2": "[stub] The storm gnaws at your resolve.",
+        "B1": "[stub] The storm gnaws at your resolve.",
+        "B2": "[stub] The storm gnaws at your resolve."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The last of the watch.",
+            "B1": "The last of the watch.",
+            "B2": "The last of the watch."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "The wrecker's lantern.",
+            "B1": "The wrecker's lantern.",
+            "B2": "The wrecker's lantern."
+          },
+          "goto": 40
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "text": {
+        "A2": "[stub] A marker post, half torn away; which way?",
+        "B1": "[stub] A marker post, half torn away; which way?",
+        "B2": "[stub] A marker post, half torn away; which way?"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The path.",
+            "B1": "The path.",
+            "B2": "The path."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "The light on the water.",
+            "B1": "The light on the water.",
+            "B2": "The light on the water."
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "text": {
+        "A2": "[stub] The wrecker: easy smile, a can of oil in his fist. 'The light's not your job, friend. Why break yourself for strangers?'",
+        "B1": "[stub] The wrecker: easy smile, a can of oil in his fist. 'The light's not your job, friend. Why break yourself for strangers?'",
+        "B2": "[stub] The wrecker: easy smile, a can of oil in his fist. 'The light's not your job, friend. Why break yourself for strangers?'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hear the price.",
+            "B1": "Hear the price.",
+            "B2": "Hear the price."
+          },
+          "goto": 41
+        },
+        {
+          "text": {
+            "A2": "Refuse and go round.",
+            "B1": "Refuse and go round.",
+            "B2": "Refuse and go round."
+          },
+          "goto": 42,
+          "sets": [
+            "dodged_wrecker"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "text": {
+        "A2": "[stub] The offer is a hook. He leans in: 'That boat's lost anyway. Let the dark do its work, and there's a share in it for you.'",
+        "B1": "[stub] The offer is a hook. He leans in: 'That boat's lost anyway. Let the dark do its work, and there's a share in it for you.'",
+        "B2": "[stub] The offer is a hook. He leans in: 'That boat's lost anyway. Let the dark do its work, and there's a share in it for you.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take his deal.",
+            "B1": "Take his deal.",
+            "B2": "Take his deal."
+          },
+          "goto": 43,
+          "sets": [
+            "paid_wrecker"
+          ]
+        },
+        {
+          "text": {
+            "A2": "That line is the tell — refuse.",
+            "B1": "That line is the tell — refuse.",
+            "B2": "That line is the tell — refuse."
+          },
+          "goto": 42,
+          "sets": [
+            "dodged_wrecker"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Ask what he really wants.",
+            "B1": "Ask what he really wants.",
+            "B2": "Ask what he really wants."
+          },
+          "goto": 44
+        },
+        {
+          "text": {
+            "A2": "The frightened folk press in.",
+            "B1": "The frightened folk press in.",
+            "B2": "The frightened folk press in."
+          },
+          "goto": 49
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "text": {
+        "A2": "[stub] You leave him to the surf.",
+        "B1": "[stub] You leave him to the surf.",
+        "B2": "[stub] You leave him to the surf."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On the way.",
+            "B1": "On the way.",
+            "B2": "On the way."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "To the oil store instead.",
+            "B1": "To the oil store instead.",
+            "B2": "To the oil store instead."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "text": {
+        "A2": "[stub] You take his oil, his coin. Something in you already knows.",
+        "B1": "[stub] You take his oil, his coin. Something in you already knows.",
+        "B2": "[stub] You take his oil, his coin. Something in you already knows."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Carry it up.",
+            "B1": "Carry it up.",
+            "B2": "Carry it up."
+          },
+          "goto": 45
+        },
+        {
+          "text": {
+            "A2": "A doubt already.",
+            "B1": "A doubt already.",
+            "B2": "A doubt already."
+          },
+          "goto": 46
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "text": {
+        "A2": "[stub] He won't quite say why he wants the light left dark.",
+        "B1": "[stub] He won't quite say why he wants the light left dark.",
+        "B2": "[stub] He won't quite say why he wants the light left dark."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "That's your answer — refuse.",
+            "B1": "That's your answer — refuse.",
+            "B2": "That's your answer — refuse."
+          },
+          "goto": 42,
+          "sets": [
+            "dodged_wrecker"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Take it anyway.",
+            "B1": "Take it anyway.",
+            "B2": "Take it anyway."
+          },
+          "goto": 43,
+          "sets": [
+            "paid_wrecker"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "text": {
+        "A2": "[stub] The oil is fouled with seawater; it won't feed the flame, and the beam gutters low.",
+        "B1": "[stub] The oil is fouled with seawater; it won't feed the flame, and the beam gutters low.",
+        "B2": "[stub] The oil is fouled with seawater; it won't feed the flame, and the beam gutters low."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Try to work it.",
+            "B1": "Try to work it.",
+            "B2": "Try to work it."
+          },
+          "goto": 47
+        },
+        {
+          "text": {
+            "A2": "Up to Nan with nothing.",
+            "B1": "Up to Nan with nothing.",
+            "B2": "Up to Nan with nothing."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "text": {
+        "A2": "[stub] The oil smells wrong — salt, thin, cut.",
+        "B1": "[stub] The oil smells wrong — salt, thin, cut.",
+        "B2": "[stub] The oil smells wrong — salt, thin, cut."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Up to the lamp.",
+            "B1": "Up to the lamp.",
+            "B2": "Up to the lamp."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "Back to have it out with him.",
+            "B1": "Back to have it out with him.",
+            "B2": "Back to have it out with him."
+          },
+          "goto": 48
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "text": {
+        "A2": "[stub] The wrecker's lantern is already gone down the cove. He was never helping.",
+        "B1": "[stub] The wrecker's lantern is already gone down the cove. He was never helping.",
+        "B2": "[stub] The wrecker's lantern is already gone down the cove. He was never helping."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Up to the lamp, fooled.",
+            "B1": "Up to the lamp, fooled.",
+            "B2": "Up to the lamp, fooled."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "Fling the fouled can into the surf.",
+            "B1": "Fling the fouled can into the surf.",
+            "B2": "Fling the fouled can into the surf."
+          },
+          "goto": 48
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "text": {
+        "A2": "[stub] The wrecker's gone. The cove's empty. Only the storm, and what you gave him.",
+        "B1": "[stub] The wrecker's gone. The cove's empty. Only the storm, and what you gave him.",
+        "B2": "[stub] The wrecker's gone. The cove's empty. Only the storm, and what you gave him."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Up to the lamp.",
+            "B1": "Up to the lamp.",
+            "B2": "Up to the lamp."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "Stand a moment in the dark.",
+            "B1": "Stand a moment in the dark.",
+            "B2": "Stand a moment in the dark."
+          },
+          "goto": 38
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "text": {
+        "A2": "[stub] The frightened folk press their coins on him; you see the whole trick.",
+        "B1": "[stub] The frightened folk press their coins on him; you see the whole trick.",
+        "B2": "[stub] The frightened folk press their coins on him; you see the whole trick."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hear the price anyway.",
+            "B1": "Hear the price anyway.",
+            "B2": "Hear the price anyway."
+          },
+          "goto": 41
+        },
+        {
+          "text": {
+            "A2": "Refuse and go round.",
+            "B1": "Refuse and go round.",
+            "B2": "Refuse and go round."
+          },
+          "goto": 42,
+          "sets": [
+            "dodged_wrecker"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "text": {
+        "A2": "[stub] Far out on the ledge, the cove at last seems closer — or does it?",
+        "B1": "[stub] Far out on the ledge, the cove at last seems closer — or does it?",
+        "B2": "[stub] Far out on the ledge, the cove at last seems closer — or does it?"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Nearly down.",
+            "B1": "Nearly down.",
+            "B2": "Nearly down."
+          },
+          "goto": 52
+        },
+        {
+          "text": {
+            "A2": "The rock crumbles under you.",
+            "B1": "The rock crumbles under you.",
+            "B2": "The rock crumbles under you."
+          },
+          "goto": 51
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "text": {
+        "A2": "[stub] The ledge, the wind, the black drop; a choice in a heartbeat.",
+        "B1": "[stub] The ledge, the wind, the black drop; a choice in a heartbeat.",
+        "B2": "[stub] The ledge, the wind, the black drop; a choice in a heartbeat."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "You go off the edge.",
+            "B1": "You go off the edge.",
+            "B2": "You go off the edge."
+          },
+          "goto": 129,
+          "requires": [
+            "took_shortcut"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Throw yourself back from the edge while you can.",
+            "B1": "Throw yourself back from the edge while you can.",
+            "B2": "Throw yourself back from the edge while you can."
+          },
+          "goto": 53
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "text": {
+        "A2": "[stub] You reach the cove, soaked and shaking, but down.",
+        "B1": "[stub] You reach the cove, soaked and shaking, but down.",
+        "B2": "[stub] You reach the cove, soaked and shaking, but down."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Push on, spent.",
+            "B1": "Push on, spent.",
+            "B2": "Push on, spent."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "You lost the oil in the scramble.",
+            "B1": "You lost the oil in the scramble.",
+            "B2": "You lost the oil in the scramble."
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "text": {
+        "A2": "[stub] You crawl back to the path, shaken, the night burning away.",
+        "B1": "[stub] You crawl back to the path, shaken, the night burning away.",
+        "B2": "[stub] You crawl back to the path, shaken, the night burning away."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The long path after all.",
+            "B1": "The long path after all.",
+            "B2": "The long path after all."
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "Too spent to go on.",
+            "B1": "Too spent to go on.",
+            "B2": "Too spent to go on."
+          },
+          "goto": 131
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "text": {
+        "A2": "[stub] You try to bank the door against the water, but there's no lamp to give.",
+        "B1": "[stub] You try to bank the door against the water, but there's no lamp to give.",
+        "B2": "[stub] You try to bank the door against the water, but there's no lamp to give."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Give them your own lamp and coat.",
+            "B1": "Give them your own lamp and coat.",
+            "B2": "Give them your own lamp and coat."
+          },
+          "goto": 55,
+          "sets": [
+            "gave_shelter"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Promise to send help.",
+            "B1": "Promise to send help.",
+            "B2": "Promise to send help."
+          },
+          "goto": 35
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "text": {
+        "A2": "[stub] You hand over your own coat and lamp; the family huddle, weak with relief.",
+        "B1": "[stub] You hand over your own coat and lamp; the family huddle, weak with relief.",
+        "B2": "[stub] You hand over your own coat and lamp; the family huddle, weak with relief."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On, colder now.",
+            "B1": "On, colder now.",
+            "B2": "On, colder now."
+          },
+          "goto": 56
+        },
+        {
+          "text": {
+            "A2": "They point you to the light on the water.",
+            "B1": "They point you to the light on the water.",
+            "B2": "They point you to the light on the water."
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "text": {
+        "A2": "[stub] Without your coat, the cold and wet find you fast.",
+        "B1": "[stub] Without your coat, the cold and wet find you fast.",
+        "B2": "[stub] Without your coat, the cold and wet find you fast."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Keep moving, keep your head.",
+            "B1": "Keep moving, keep your head.",
+            "B2": "Keep moving, keep your head."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "A lit doorway offers a minute.",
+            "B1": "A lit doorway offers a minute.",
+            "B2": "A lit doorway offers a minute."
+          },
+          "goto": 57
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "text": {
+        "A2": "[stub] A stranger waves you into a doorway, out of the rain for a minute.",
+        "B1": "[stub] A stranger waves you into a doorway, out of the rain for a minute.",
+        "B2": "[stub] A stranger waves you into a doorway, out of the rain for a minute."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Warm up, then on.",
+            "B1": "Warm up, then on.",
+            "B2": "Warm up, then on."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "Refuse, press on.",
+            "B1": "Refuse, press on.",
+            "B2": "Refuse, press on."
+          },
+          "goto": 58
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "text": {
+        "A2": "[stub] You press on into the storm, soaked to the bone.",
+        "B1": "[stub] You press on into the storm, soaked to the bone.",
+        "B2": "[stub] You press on into the storm, soaked to the bone."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The last of the watch.",
+            "B1": "The last of the watch.",
+            "B2": "The last of the watch."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "On toward the cove.",
+            "B1": "On toward the cove.",
+            "B2": "On toward the cove."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "text": {
+        "A2": "[stub] Someone points to the head: a figure has gone out toward the point in the storm.",
+        "B1": "[stub] Someone points to the head: a figure has gone out toward the point in the storm.",
+        "B2": "[stub] Someone points to the head: a figure has gone out toward the point in the storm."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go after them.",
+            "B1": "Go after them.",
+            "B2": "Go after them."
+          },
+          "goto": 61,
+          "sets": [
+            "helped_stranger"
+          ]
+        },
+        {
+          "text": {
+            "A2": "No time — the light first.",
+            "B1": "No time — the light first.",
+            "B2": "No time — the light first."
+          },
+          "goto": 62
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "text": {
+        "A2": "[stub] You find them clinging in the rocks, half-drowned and lost.",
+        "B1": "[stub] You find them clinging in the rocks, half-drowned and lost.",
+        "B2": "[stub] You find them clinging in the rocks, half-drowned and lost."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Walk them back.",
+            "B1": "Walk them back.",
+            "B2": "Walk them back."
+          },
+          "goto": 63
+        },
+        {
+          "text": {
+            "A2": "On to the light.",
+            "B1": "On to the light.",
+            "B2": "On to the light."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "text": {
+        "A2": "[stub] You send word for someone else to go, and press on.",
+        "B1": "[stub] You send word for someone else to go, and press on.",
+        "B2": "[stub] You send word for someone else to go, and press on."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "On toward the cove.",
+            "B1": "On toward the cove.",
+            "B2": "On toward the cove."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "text": {
+        "A2": "[stub] Their family thank you; a dry coat, a place by the fire.",
+        "B1": "[stub] Their family thank you; a dry coat, a place by the fire.",
+        "B2": "[stub] Their family thank you; a dry coat, a place by the fire."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On toward the cove.",
+            "B1": "On toward the cove.",
+            "B2": "On toward the cove."
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "The last of the watch.",
+            "B1": "The last of the watch.",
+            "B2": "The last of the watch."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "text": {
+        "A2": "[stub] The whole coast, dark and roaring, everything waiting for the storm to break.",
+        "B1": "[stub] The whole coast, dark and roaring, everything waiting for the storm to break.",
+        "B2": "[stub] The whole coast, dark and roaring, everything waiting for the storm to break."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Press on along the head.",
+            "B1": "Press on along the head.",
+            "B2": "Press on along the head."
+          },
+          "goto": 30
+        },
+        {
+          "text": {
+            "A2": "The light on the water.",
+            "B1": "The light on the water.",
+            "B2": "The light on the water."
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "text": {
+        "A2": "[stub] The wind climbs to its worst; it nearly takes you off your feet.",
+        "B1": "[stub] The wind climbs to its worst; it nearly takes you off your feet.",
+        "B2": "[stub] The wind climbs to its worst; it nearly takes you off your feet."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The flooding cottage.",
+            "B1": "The flooding cottage.",
+            "B2": "The flooding cottage."
+          },
+          "goto": 32
+        },
+        {
+          "text": {
+            "A2": "Press on.",
+            "B1": "Press on.",
+            "B2": "Press on."
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "text": {
+        "A2": "[stub] Tam presses the last dry lamp on you and turns back to the crackling radio.",
+        "B1": "[stub] Tam presses the last dry lamp on you and turns back to the crackling radio.",
+        "B2": "[stub] Tam presses the last dry lamp on you and turns back to the crackling radio."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "On the way.",
+            "B1": "On the way.",
+            "B2": "On the way."
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "His warning first.",
+            "B1": "His warning first.",
+            "B2": "His warning first."
+          },
+          "goto": 22
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "text": {
+        "A2": "[stub] A scramble at the oil store; voices rising, hands grabbing the cans.",
+        "B1": "[stub] A scramble at the oil store; voices rising, hands grabbing the cans.",
+        "B2": "[stub] A scramble at the oil store; voices rising, hands grabbing the cans."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Calm it, and share it out.",
+            "B1": "Calm it, and share it out.",
+            "B2": "Calm it, and share it out."
+          },
+          "goto": 19
+        },
+        {
+          "text": {
+            "A2": "Get to the oil.",
+            "B1": "Get to the oil.",
+            "B2": "Get to the oil."
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "text": {
+        "A2": "[stub] Years of a shut door between them. Then a cough, and breathing, from under the hull.",
+        "B1": "[stub] Years of a shut door between them. Then a cough, and breathing, from under the hull.",
+        "B2": "[stub] Years of a shut door between them. Then a cough, and breathing, from under the hull."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Follow the breathing, and find them.",
+            "B1": "Follow the breathing, and find them.",
+            "B2": "Follow the breathing, and find them."
+          },
+          "goto": 74,
+          "sets": [
+            "found_boat"
+          ]
+        },
+        {
+          "text": {
+            "A2": "It's too much — back to the light.",
+            "B1": "It's too much — back to the light.",
+            "B2": "It's too much — back to the light."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "text": {
+        "A2": "[stub] Far out past the point, a second light lifts and falls where no boat should be. No one can explain it.",
+        "B1": "[stub] Far out past the point, a second light lifts and falls where no boat should be. No one can explain it.",
+        "B2": "[stub] Far out past the point, a second light lifts and falls where no boat should be. No one can explain it."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go and answer it.",
+            "B1": "Go and answer it.",
+            "B2": "Go and answer it."
+          },
+          "goto": 71
+        },
+        {
+          "text": {
+            "A2": "Leave it — the light first.",
+            "B1": "Leave it — the light first.",
+            "B2": "Leave it — the light first."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "text": {
+        "A2": "[stub] You get down to the cove. You call out. No answer but the sea — then a boat's shape on the rocks.",
+        "B1": "[stub] You get down to the cove. You call out. No answer but the sea — then a boat's shape on the rocks.",
+        "B2": "[stub] You get down to the cove. You call out. No answer but the sea — then a boat's shape on the rocks."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Wade out to it.",
+            "B1": "Wade out to it.",
+            "B2": "Wade out to it."
+          },
+          "goto": 72
+        },
+        {
+          "text": {
+            "A2": "Call again and wait.",
+            "B1": "Call again and wait.",
+            "B2": "Call again and wait."
+          },
+          "goto": 73
+        },
+        {
+          "text": {
+            "A2": "The boat's stove in, half under.",
+            "B1": "The boat's stove in, half under.",
+            "B2": "The boat's stove in, half under."
+          },
+          "goto": 78
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "text": {
+        "A2": "[stub] On the rocks: old Ash, tangled in a swamped boat, barely holding on.",
+        "B1": "[stub] On the rocks: old Ash, tangled in a swamped boat, barely holding on.",
+        "B2": "[stub] On the rocks: old Ash, tangled in a swamped boat, barely holding on."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Get them off and warm.",
+            "B1": "Get them off and warm.",
+            "B2": "Get them off and warm."
+          },
+          "goto": 74,
+          "sets": [
+            "found_boat"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Run for help.",
+            "B1": "Run for help.",
+            "B2": "Run for help."
+          },
+          "goto": 75
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "text": {
+        "A2": "[stub] A weak voice answers over the wind.",
+        "B1": "[stub] A weak voice answers over the wind.",
+        "B2": "[stub] A weak voice answers over the wind."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Wade out.",
+            "B1": "Wade out.",
+            "B2": "Wade out."
+          },
+          "goto": 72
+        },
+        {
+          "text": {
+            "A2": "Fetch help.",
+            "B1": "Fetch help.",
+            "B2": "Fetch help."
+          },
+          "goto": 75
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "text": {
+        "A2": "[stub] You drag Ash clear, wrap them, bring them round. They gasp it out: keep the light — there may be others out there.",
+        "B1": "[stub] You drag Ash clear, wrap them, bring them round. They gasp it out: keep the light — there may be others out there.",
+        "B2": "[stub] You drag Ash clear, wrap them, bring them round. They gasp it out: keep the light — there may be others out there."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Ash speaks of Nan.",
+            "B1": "Ash speaks of Nan.",
+            "B2": "Ash speaks of Nan."
+          },
+          "goto": 76
+        },
+        {
+          "text": {
+            "A2": "Get you both back to the tower.",
+            "B1": "Get you both back to the tower.",
+            "B2": "Get you both back to the tower."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "text": {
+        "A2": "[stub] You run — but no lifeboat comes till dawn. It is you or no one.",
+        "B1": "[stub] You run — but no lifeboat comes till dawn. It is you or no one.",
+        "B2": "[stub] You run — but no lifeboat comes till dawn. It is you or no one."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Go back for them.",
+            "B1": "Go back for them.",
+            "B2": "Go back for them."
+          },
+          "goto": 72
+        },
+        {
+          "text": {
+            "A2": "Up to the lamp, torn.",
+            "B1": "Up to the lamp, torn.",
+            "B2": "Up to the lamp, torn."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "text": {
+        "A2": "[stub] Ash looks at you: 'The keeper up there — Nan? That's my mother. We haven't spoken in years.'",
+        "B1": "[stub] Ash looks at you: 'The keeper up there — Nan? That's my mother. We haven't spoken in years.'",
+        "B2": "[stub] Ash looks at you: 'The keeper up there — Nan? That's my mother. We haven't spoken in years.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Resolve to bring them together.",
+            "B1": "Resolve to bring them together.",
+            "B2": "Resolve to bring them together."
+          },
+          "goto": 77
+        },
+        {
+          "text": {
+            "A2": "Up with the news.",
+            "B1": "Up with the news.",
+            "B2": "Up with the news."
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "text": {
+        "A2": "[stub] You decide to get them face to face before the night is out.",
+        "B1": "[stub] You decide to get them face to face before the night is out.",
+        "B2": "[stub] You decide to get them face to face before the night is out."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Back to the tower.",
+            "B1": "Back to the tower.",
+            "B2": "Back to the tower."
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "Get Ash steady first.",
+            "B1": "Get Ash steady first.",
+            "B2": "Get Ash steady first."
+          },
+          "goto": 74
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "text": {
+        "A2": "[stub] The boat is stove in, half under, the sea working at it.",
+        "B1": "[stub] The boat is stove in, half under, the sea working at it.",
+        "B2": "[stub] The boat is stove in, half under, the sea working at it."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Wade closer.",
+            "B1": "Wade closer.",
+            "B2": "Wade closer."
+          },
+          "goto": 72
+        },
+        {
+          "text": {
+            "A2": "A name painted on the bow.",
+            "B1": "A name painted on the bow.",
+            "B2": "A name painted on the bow."
+          },
+          "goto": 79
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "text": {
+        "A2": "[stub] A name on the bow — Nan's own boat, thought lost years ago. A weak sound from under the hull.",
+        "B1": "[stub] A name on the bow — Nan's own boat, thought lost years ago. A weak sound from under the hull.",
+        "B2": "[stub] A name on the bow — Nan's own boat, thought lost years ago. A weak sound from under the hull."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Follow the sound, and find them.",
+            "B1": "Follow the sound, and find them.",
+            "B2": "Follow the sound, and find them."
+          },
+          "goto": 74,
+          "sets": [
+            "found_boat"
+          ]
+        },
+        {
+          "text": {
+            "A2": "The years in it.",
+            "B1": "The years in it.",
+            "B2": "The years in it."
+          },
+          "goto": 69
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "text": {
+        "A2": "[stub] The wrecker, one last time: 'Still fighting it? Let it go dark. Last chance to be on the winning side.'",
+        "B1": "[stub] The wrecker, one last time: 'Still fighting it? Let it go dark. Last chance to be on the winning side.'",
+        "B2": "[stub] The wrecker, one last time: 'Still fighting it? Let it go dark. Last chance to be on the winning side.'"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Take his deal.",
+            "B1": "Take his deal.",
+            "B2": "Take his deal."
+          },
+          "goto": 43,
+          "sets": [
+            "paid_wrecker"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Refuse for good.",
+            "B1": "Refuse for good.",
+            "B2": "Refuse for good."
+          },
+          "goto": 91,
+          "sets": [
+            "dodged_wrecker"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "text": {
+        "A2": "[stub] The last of the worst storm, back at the tower, soaked through, Nan grey at the foot of the stairs, the lamp burning low.",
+        "B1": "[stub] The last of the worst storm, back at the tower, soaked through, Nan grey at the foot of the stairs, the lamp burning low.",
+        "B2": "[stub] The last of the worst storm, back at the tower, soaked through, Nan grey at the foot of the stairs, the lamp burning low."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "See to the light.",
+            "B1": "See to the light.",
+            "B2": "See to the light."
+          },
+          "goto": 91
+        },
+        {
+          "text": {
+            "A2": "The wrecker's last offer.",
+            "B1": "The wrecker's last offer.",
+            "B2": "The wrecker's last offer."
+          },
+          "goto": 80
+        },
+        {
+          "text": {
+            "A2": "Help arrives behind you.",
+            "B1": "Help arrives behind you.",
+            "B2": "Help arrives behind you."
+          },
+          "goto": 92
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "text": {
+        "A2": "[stub] At the lamp: the flame low, the lens still, the boat's lights close to the rocks now.",
+        "B1": "[stub] At the lamp: the flame low, the lens still, the boat's lights close to the rocks now.",
+        "B2": "[stub] At the lamp: the flame low, the lens still, the boat's lights close to the rocks now."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Get the beam full and turning.",
+            "B1": "Get the beam full and turning.",
+            "B2": "Get the beam full and turning."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "Check on Nan below.",
+            "B1": "Check on Nan below.",
+            "B2": "Check on Nan below."
+          },
+          "goto": 94
+        },
+        {
+          "text": {
+            "A2": "A light flares far out to sea.",
+            "B1": "A light flares far out to sea.",
+            "B2": "A light flares far out to sea."
+          },
+          "goto": 98
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "text": {
+        "A2": "[stub] Help reaches the tower behind you — hands, oil, a plan.",
+        "B1": "[stub] Help reaches the tower behind you — hands, oil, a plan.",
+        "B2": "[stub] Help reaches the tower behind you — hands, oil, a plan."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "To the lamp together.",
+            "B1": "To the lamp together.",
+            "B2": "To the lamp together."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "Hold the watch.",
+            "B1": "Hold the watch.",
+            "B2": "Hold the watch."
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "A lamp on the water, far off.",
+            "B1": "A lamp on the water, far off.",
+            "B2": "A lamp on the water, far off."
+          },
+          "goto": 107
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "text": {
+        "A2": "[stub] Keeping the beam: what you carried decides what you can do now.",
+        "B1": "[stub] Keeping the beam: what you carried decides what you can do now.",
+        "B2": "[stub] Keeping the beam: what you carried decides what you can do now."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The oil and wick.",
+            "B1": "The oil and wick.",
+            "B2": "The oil and wick."
+          },
+          "goto": 95
+        },
+        {
+          "text": {
+            "A2": "Coax the guttering flame.",
+            "B1": "Coax the guttering flame.",
+            "B2": "Coax the guttering flame."
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "text": {
+        "A2": "[stub] Nan wakes, weak but glad to see your face.",
+        "B1": "[stub] Nan wakes, weak but glad to see your face.",
+        "B2": "[stub] Nan wakes, weak but glad to see your face."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Get the light full.",
+            "B1": "Get the light full.",
+            "B2": "Get the light full."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "Break out the oil.",
+            "B1": "Break out the oil.",
+            "B2": "Break out the oil."
+          },
+          "goto": 95
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "text": {
+        "A2": "[stub] The oil does it: the wick trims true, the lens winds round, and the beam swings out full and gold.",
+        "B1": "[stub] The oil does it: the wick trims true, the lens winds round, and the beam swings out full and gold.",
+        "B2": "[stub] The oil does it: the wick trims true, the lens winds round, and the beam swings out full and gold."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hold the watch.",
+            "B1": "Hold the watch.",
+            "B2": "Hold the watch."
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "Help arrives.",
+            "B1": "Help arrives.",
+            "B2": "Help arrives."
+          },
+          "goto": 92
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "text": {
+        "A2": "[stub] No proper oil. You coax the guttering flame, shield it with your body, keep it just alive.",
+        "B1": "[stub] No proper oil. You coax the guttering flame, shield it with your body, keep it just alive.",
+        "B2": "[stub] No proper oil. You coax the guttering flame, shield it with your body, keep it just alive."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hold the watch.",
+            "B1": "Hold the watch.",
+            "B2": "Hold the watch."
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "It may not be enough.",
+            "B1": "It may not be enough.",
+            "B2": "It may not be enough."
+          },
+          "goto": 97
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "text": {
+        "A2": "[stub] The flame is low, and it may be more than shielding can hold.",
+        "B1": "[stub] The flame is low, and it may be more than shielding can hold.",
+        "B2": "[stub] The flame is low, and it may be more than shielding can hold."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Hold on to first light.",
+            "B1": "Hold on to first light.",
+            "B2": "Hold on to first light."
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "Send for the rallied help.",
+            "B1": "Send for the rallied help.",
+            "B2": "Send for the rallied help."
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "text": {
+        "A2": "[stub] Far out to sea, a light flares and falls where no boat should be.",
+        "B1": "[stub] Far out to sea, a light flares and falls where no boat should be.",
+        "B2": "[stub] Far out to sea, a light flares and falls where no boat should be."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "See to the light first.",
+            "B1": "See to the light first.",
+            "B2": "See to the light first."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "The light nags at you.",
+            "B1": "The light nags at you.",
+            "B2": "The light nags at you."
+          },
+          "goto": 99
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "text": {
+        "A2": "[stub] The light on the water, out where everyone swears no boat would be.",
+        "B1": "[stub] The light on the water, out where everyone swears no boat would be.",
+        "B2": "[stub] The light on the water, out where everyone swears no boat would be."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The lamp first.",
+            "B1": "The lamp first.",
+            "B2": "The lamp first."
+          },
+          "goto": 94
+        },
+        {
+          "text": {
+            "A2": "Hold the watch.",
+            "B1": "Hold the watch.",
+            "B2": "Hold the watch."
+          },
+          "goto": 100
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "text": {
+        "A2": "[stub] The long hold: you keep the beam turning, keep Nan breathing, watch through the storm.",
+        "B1": "[stub] The long hold: you keep the beam turning, keep Nan breathing, watch through the storm.",
+        "B2": "[stub] The long hold: you keep the beam turning, keep Nan breathing, watch through the storm."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Watch for first light.",
+            "B1": "Watch for first light.",
+            "B2": "Watch for first light."
+          },
+          "goto": 101
+        },
+        {
+          "text": {
+            "A2": "The light on the water still nags.",
+            "B1": "The light on the water still nags.",
+            "B2": "The light on the water still nags."
+          },
+          "goto": 70
+        },
+        {
+          "text": {
+            "A2": "The night's worst hour.",
+            "B1": "The night's worst hour.",
+            "B2": "The night's worst hour."
+          },
+          "goto": 102
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "text": {
+        "A2": "[stub] The wind drops a note. The sky greys at the edge. A lamp swings round the point — the lifeboat, at last.",
+        "B1": "[stub] The wind drops a note. The sky greys at the edge. A lamp swings round the point — the lifeboat, at last.",
+        "B2": "[stub] The wind drops a note. The sky greys at the edge. A lamp swings round the point — the lifeboat, at last."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "First light, and what it finds.",
+            "B1": "First light, and what it finds.",
+            "B2": "First light, and what it finds."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "Dawn over the wild sea.",
+            "B1": "Dawn over the wild sea.",
+            "B2": "Dawn over the wild sea."
+          },
+          "goto": 105
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "text": {
+        "A2": "[stub] The worst hour, before the storm breaks.",
+        "B1": "[stub] The worst hour, before the storm breaks.",
+        "B2": "[stub] The worst hour, before the storm breaks."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "Watch for first light.",
+            "B1": "Watch for first light.",
+            "B2": "Watch for first light."
+          },
+          "goto": 101
+        },
+        {
+          "text": {
+            "A2": "Other lamps along the head.",
+            "B1": "Other lamps along the head.",
+            "B2": "Other lamps along the head."
+          },
+          "goto": 103
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "text": {
+        "A2": "[stub] Along the head, lamps and figures — the coast got through too.",
+        "B1": "[stub] Along the head, lamps and figures — the coast got through too.",
+        "B2": "[stub] Along the head, lamps and figures — the coast got through too."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "First light.",
+            "B1": "First light.",
+            "B2": "First light."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "The lifeboat's lamp coming round.",
+            "B1": "The lifeboat's lamp coming round.",
+            "B2": "The lifeboat's lamp coming round."
+          },
+          "goto": 104
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "text": {
+        "A2": "[stub] The lifeboat's lamp and a plume of spray come round the point at last.",
+        "B1": "[stub] The lifeboat's lamp and a plume of spray come round the point at last.",
+        "B2": "[stub] The lifeboat's lamp and a plume of spray come round the point at last."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "First light.",
+            "B1": "First light.",
+            "B2": "First light."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "What the night came to.",
+            "B1": "What the night came to.",
+            "B2": "What the night came to."
+          },
+          "goto": 114
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "text": {
+        "A2": "[stub] Dawn over the wild sea, grey and clean, the storm blowing itself out.",
+        "B1": "[stub] Dawn over the wild sea, grey and clean, the storm blowing itself out.",
+        "B2": "[stub] Dawn over the wild sea, grey and clean, the storm blowing itself out."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "First light.",
+            "B1": "First light.",
+            "B2": "First light."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "Help reaches the tower.",
+            "B1": "Help reaches the tower.",
+            "B2": "Help reaches the tower."
+          },
+          "goto": 92
+        },
+        {
+          "text": {
+            "A2": "The first gull over the water.",
+            "B1": "The first gull over the water.",
+            "B2": "The first gull over the water."
+          },
+          "goto": 106
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "text": {
+        "A2": "[stub] The first gull over the water, absurd after the night.",
+        "B1": "[stub] The first gull over the water, absurd after the night.",
+        "B2": "[stub] The first gull over the water, absurd after the night."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "First light.",
+            "B1": "First light.",
+            "B2": "First light."
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "Help reaches the tower.",
+            "B1": "Help reaches the tower.",
+            "B2": "Help reaches the tower."
+          },
+          "goto": 92
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "text": {
+        "A2": "[stub] From the tower, far off on the water, a lamp lifting and falling.",
+        "B1": "[stub] From the tower, far off on the water, a lamp lifting and falling.",
+        "B2": "[stub] From the tower, far off on the water, a lamp lifting and falling."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "To the lamp.",
+            "B1": "To the lamp.",
+            "B2": "To the lamp."
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "Hold the watch.",
+            "B1": "Hold the watch.",
+            "B2": "Hold the watch."
+          },
+          "goto": 100
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "text": {
+        "A2": "[stub] First light: what the night comes to.",
+        "B1": "[stub] First light: what the night comes to.",
+        "B2": "[stub] First light: what the night comes to."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The boat made harbour; the light held.",
+            "B1": "The boat made harbour; the light held.",
+            "B2": "The boat made harbour; the light held."
+          },
+          "goto": 120,
+          "requires": [
+            "has_light"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You answered the light, and saved Ash.",
+            "B1": "You answered the light, and saved Ash.",
+            "B2": "You answered the light, and saved Ash."
+          },
+          "goto": 121,
+          "requires": [
+            "found_boat"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Weigh the rest.",
+            "B1": "Weigh the rest.",
+            "B2": "Weigh the rest."
+          },
+          "goto": 111
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "text": {
+        "A2": "[stub] The night adds up.",
+        "B1": "[stub] The night adds up.",
+        "B2": "[stub] The night adds up."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The whole coast came through together.",
+            "B1": "The whole coast came through together.",
+            "B2": "The whole coast came through together."
+          },
+          "goto": 122,
+          "requires": [
+            "rallied_coast"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You did it clean — no con.",
+            "B1": "You did it clean — no con.",
+            "B2": "You did it clean — no con."
+          },
+          "goto": 123,
+          "requires": [
+            "dodged_wrecker"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Weigh the rest.",
+            "B1": "Weigh the rest.",
+            "B2": "Weigh the rest."
+          },
+          "goto": 112
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "text": {
+        "A2": "[stub] What else the night held.",
+        "B1": "[stub] What else the night held.",
+        "B2": "[stub] What else the night held."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "A stranger you helped sees you home.",
+            "B1": "A stranger you helped sees you home.",
+            "B2": "A stranger you helped sees you home."
+          },
+          "goto": 124,
+          "requires": [
+            "helped_stranger"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You gave your own lamp away.",
+            "B1": "You gave your own lamp away.",
+            "B2": "You gave your own lamp away."
+          },
+          "goto": 125,
+          "requires": [
+            "gave_shelter"
+          ]
+        },
+        {
+          "text": {
+            "A2": "Weigh the rest.",
+            "B1": "Weigh the rest.",
+            "B2": "Weigh the rest."
+          },
+          "goto": 113
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "text": {
+        "A2": "[stub] What the night leaves you.",
+        "B1": "[stub] What the night leaves you.",
+        "B2": "[stub] What the night leaves you."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "The storm eases at last, late.",
+            "B1": "The storm eases at last, late.",
+            "B2": "The storm eases at last, late."
+          },
+          "goto": 126
+        },
+        {
+          "text": {
+            "A2": "The coast saw you climb to the lamp.",
+            "B1": "The coast saw you climb to the lamp.",
+            "B2": "The coast saw you climb to the lamp."
+          },
+          "goto": 127
+        },
+        {
+          "text": {
+            "A2": "The worst of it.",
+            "B1": "The worst of it.",
+            "B2": "The worst of it."
+          },
+          "goto": 114
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "text": {
+        "A2": "[stub] The hard end of the night.",
+        "B1": "[stub] The hard end of the night.",
+        "B2": "[stub] The hard end of the night."
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "You took the wrecker's deal — a ship struck.",
+            "B1": "You took the wrecker's deal — a ship struck.",
+            "B2": "You took the wrecker's deal — a ship struck."
+          },
+          "goto": 128,
+          "requires": [
+            "paid_wrecker"
+          ]
+        },
+        {
+          "text": {
+            "A2": "You were simply too late.",
+            "B1": "You were simply too late.",
+            "B2": "You were simply too late."
+          },
+          "goto": 130
+        },
+        {
+          "text": {
+            "A2": "The storm broke before real harm.",
+            "B1": "The storm broke before real harm.",
+            "B2": "The storm broke before real harm."
+          },
+          "goto": 126
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "text": {
+        "A2": "[stub] GOOD — The light held. You kept the beam burning all night; at first light the storm breaks, the lifeboat comes round the point, and the boat you were lighting makes the harbour mouth. It is safe because you climbed to the lamp and stayed.",
+        "B1": "[stub] GOOD — The light held. You kept the beam burning all night; at first light the storm breaks, the lifeboat comes round the point, and the boat you were lighting makes the harbour mouth. It is safe because you climbed to the lamp and stayed.",
+        "B2": "[stub] GOOD — The light held. You kept the beam burning all night; at first light the storm breaks, the lifeboat comes round the point, and the boat you were lighting makes the harbour mouth. It is safe because you climbed to the lamp and stayed."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 121,
+      "text": {
+        "A2": "[stub] GOOD — The light on the water (secret). You answered the light no one could explain, found old Ash swamped on the rocks and got them off in time — and reopened a door between Ash and Nan Bright that had been shut for years.",
+        "B1": "[stub] GOOD — The light on the water (secret). You answered the light no one could explain, found old Ash swamped on the rocks and got them off in time — and reopened a door between Ash and Nan Bright that had been shut for years.",
+        "B2": "[stub] GOOD — The light on the water (secret). You answered the light no one could explain, found old Ash swamped on the rocks and got them off in time — and reopened a door between Ash and Nan Bright that had been shut for years."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 122,
+      "text": {
+        "A2": "[stub] GOOD — The whole coast, awake. No single heroic move — but you turned a frightened shore into people on the rope and signal fires along the head, and everyone came through the night together.",
+        "B1": "[stub] GOOD — The whole coast, awake. No single heroic move — but you turned a frightened shore into people on the rope and signal fires along the head, and everyone came through the night together.",
+        "B2": "[stub] GOOD — The whole coast, awake. No single heroic move — but you turned a frightened shore into people on the rope and signal fires along the head, and everyone came through the night together."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 123,
+      "text": {
+        "A2": "[stub] GOOD — You did what you could. You refused the con, kept your head, and kept the light by decent means. Not perfect. But clean, honest, and enough.",
+        "B1": "[stub] GOOD — You did what you could. You refused the con, kept your head, and kept the light by decent means. Not perfect. But clean, honest, and enough.",
+        "B2": "[stub] GOOD — You did what you could. You refused the con, kept your head, and kept the light by decent means. Not perfect. But clean, honest, and enough."
+      },
+      "ending": "good"
+    },
+    {
+      "id": 124,
+      "text": {
+        "A2": "[stub] NEUTRAL — The kindness returned. You fell short of the whole night's goal, but the fisher you stopped for gets you and Nan to safety and helps hold the light. Rescue without the full win.",
+        "B1": "[stub] NEUTRAL — The kindness returned. You fell short of the whole night's goal, but the fisher you stopped for gets you and Nan to safety and helps hold the light. Rescue without the full win.",
+        "B2": "[stub] NEUTRAL — The kindness returned. You fell short of the whole night's goal, but the fisher you stopped for gets you and Nan to safety and helps hold the light. Rescue without the full win."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 125,
+      "text": {
+        "A2": "[stub] NEUTRAL — Shared what you had. You gave your own coat and lamp away and end the night cold yourself, but not alone — and something on the coast has shifted. A start, not a save.",
+        "B1": "[stub] NEUTRAL — Shared what you had. You gave your own coat and lamp away and end the night cold yourself, but not alone — and something on the coast has shifted. A start, not a save.",
+        "B2": "[stub] NEUTRAL — Shared what you had. You gave your own coat and lamp away and end the night cold yourself, but not alone — and something on the coast has shifted. A start, not a save."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 126,
+      "text": {
+        "A2": "[stub] NEUTRAL — One more hour. You scrape through the worst of it; the storm eases late and grudging, and the boat limps in on its own. Not triumphant — just, in the end, relieved.",
+        "B1": "[stub] NEUTRAL — One more hour. You scrape through the worst of it; the storm eases late and grudging, and the boat limps in on its own. Not triumphant — just, in the end, relieved.",
+        "B2": "[stub] NEUTRAL — One more hour. You scrape through the worst of it; the storm eases late and grudging, and the boat limps in on its own. Not triumphant — just, in the end, relieved."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 127,
+      "text": {
+        "A2": "[stub] NEUTRAL — The coast remembers. You didn't manage everything, but the shore saw you climb to the lamp when others barred their doors. You are, from tonight, someone this coast knows.",
+        "B1": "[stub] NEUTRAL — The coast remembers. You didn't manage everything, but the shore saw you climb to the lamp when others barred their doors. You are, from tonight, someone this coast knows.",
+        "B2": "[stub] NEUTRAL — The coast remembers. You didn't manage everything, but the shore saw you climb to the lamp when others barred their doors. You are, from tonight, someone this coast knows."
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 128,
+      "text": {
+        "A2": "[stub] BAD — You lit the wrong way. You took the wrecker's deal, and the light served the wrong master; a ship struck the rocks in the dark, and the sea took what it wanted. The money's cold, and so is the shore by morning.",
+        "B1": "[stub] BAD — You lit the wrong way. You took the wrecker's deal, and the light served the wrong master; a ship struck the rocks in the dark, and the sea took what it wanted. The money's cold, and so is the shore by morning.",
+        "B2": "[stub] BAD — You lit the wrong way. You took the wrecker's deal, and the light served the wrong master; a ship struck the rocks in the dark, and the sea took what it wanted. The money's cold, and so is the shore by morning."
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 129,
+      "text": {
+        "A2": "[stub] BAD — The rocks took it. The cliff path was a trap; the wind nearly takes you off the edge, and it takes the night — you reach the cove soaked, broken, and far too late.",
+        "B1": "[stub] BAD — The rocks took it. The cliff path was a trap; the wind nearly takes you off the edge, and it takes the night — you reach the cove soaked, broken, and far too late.",
+        "B2": "[stub] BAD — The rocks took it. The cliff path was a trap; the wind nearly takes you off the edge, and it takes the night — you reach the cove soaked, broken, and far too late."
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 130,
+      "text": {
+        "A2": "[stub] BAD — Dark too long. You spent the night on the wrong things, and the light went dark too long; by dawn there is wreckage on the shore and a search along the tideline.",
+        "B1": "[stub] BAD — Dark too long. You spent the night on the wrong things, and the light went dark too long; by dawn there is wreckage on the shore and a search along the tideline.",
+        "B2": "[stub] BAD — Dark too long. You spent the night on the wrong things, and the light went dark too long; by dawn there is wreckage on the shore and a search along the tideline."
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 131,
+      "text": {
+        "A2": "[stub] BAD — You barred the door. You stayed safe and dry inside and never climbed to the lamp. Nothing bad happened to you. You will think about it for a long time.",
+        "B1": "[stub] BAD — You barred the door. You stayed safe and dry inside and never climbed to the lamp. Nothing bad happened to you. You will think about it for a long time.",
+        "B2": "[stub] BAD — You barred the door. You stayed safe and dry inside and never climbed to the lamp. Nothing bad happened to you. You will think about it for a long time."
+      },
+      "ending": "bad"
+    }
+  ],
+  "lexicon": {
+    "_comment": "The Keeper's chosen lexicon. Grown in phase 4. Base-keyed; the reader resolves inflections. Translations need a native speaker's check before launch.",
+    "entries": {}
+  }
+}
