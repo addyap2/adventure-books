@@ -60,8 +60,8 @@
   /* hero */
   .hero{padding:clamp(42px,8vh,88px) 0 clamp(44px,7vh,72px);position:relative;overflow:hidden}
   .hero::before{content:"";position:absolute;width:min(70vw,900px);aspect-ratio:1;right:-20%;top:-42%;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(232,162,76,.10),rgba(93,111,153,.06) 36%,transparent 68%)}
-  .hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(330px,.85fr);gap:clamp(36px,5vw,80px);align-items:center}
-  .hero-copy{min-width:0}
+  .hero .wrap{position:relative;display:flex;align-items:center;min-height:clamp(500px,48vw,610px)}
+  .hero-copy{min-width:0;width:58%}
   .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--amber);
     display:flex;align-items:center;gap:12px;margin:0 0 22px}
   .eyebrow::before{content:"";width:34px;height:1px;background:var(--amber);opacity:.7}
@@ -70,7 +70,7 @@
   .byline{font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin:14px 0 0}
   .tagline{font-family:var(--serif);font-size:clamp(1.35rem,2.2vw,1.8rem);font-style:italic;color:#d8c49e;margin:26px 0 0}
   .intro{max-width:56ch;color:#c3cad9;font-size:clamp(1rem,1.35vw,1.1rem);margin:14px 0 0;line-height:1.67;min-height:7.4em}
-  .hero-art{height:clamp(460px,48vw,610px);position:relative;isolation:isolate;pointer-events:none;display:grid;place-items:center;perspective:1100px}
+  .hero-art{height:clamp(460px,48vw,610px);width:40%;position:absolute;right:2%;top:50%;transform:translateY(-50%);isolation:isolate;pointer-events:none;display:grid;place-items:center;perspective:1100px}
   .hero-art::before{content:"";position:absolute;width:105%;aspect-ratio:1;border:1px solid rgba(203,187,160,.12);border-radius:50%;background:radial-gradient(circle,rgba(232,162,76,.11),rgba(103,116,143,.04) 45%,transparent 70%)}
   .hero-art::after{content:"";position:absolute;width:78%;height:10%;bottom:3%;left:15%;background:rgba(0,0,0,.75);filter:blur(30px);border-radius:50%;z-index:-1}
   .hero-book{position:relative;width:min(70%,345px);aspect-ratio:3/4;transform:rotateY(-17deg) rotateZ(5deg);transform-style:preserve-3d;filter:drop-shadow(32px 36px 27px rgba(0,0,0,.54))}
@@ -78,10 +78,14 @@
   .hero-book::after{content:"";position:absolute;inset:0 auto 0 -12px;width:18px;background:linear-gradient(90deg,#060a12,#233047 38%,#0b1220);transform:translateZ(-5px) skewY(-5deg);border-radius:3px 0 0 3px}
   .hero-book-cover{position:absolute;inset:0;overflow:hidden;border:1px solid rgba(240,226,197,.42);border-radius:3px;background:#111a2a;box-shadow:inset 7px 0 10px rgba(0,0,0,.38),inset -1px 0 rgba(255,255,255,.18)}
   .hero-book-cover::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.28),transparent 13%,transparent 83%,rgba(255,255,255,.07))}
-  .hero-book-illustration{height:66%;background:url('/cover-the-address.png') center/cover no-repeat}
+  .hero-book-cover{transition:border-color .9s ease}
+  .hero-book-face{position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;transform:scale(1.035);transition:opacity 1.15s ease,transform 1.4s ease}
+  .hero-book-face.is-active{opacity:1;transform:scale(1)}
+  .hero-book-illustration{height:66%;background:center/cover no-repeat}
   .hero-book-type{height:34%;padding:7% 9%;display:flex;flex-direction:column;justify-content:space-between;border-top:1px solid rgba(232,162,76,.4);background:linear-gradient(145deg,#151d2c,#0a101b);color:#f4efe6}
   .hero-book-type span,.hero-book-type small{font-family:var(--mono);font-size:clamp(7px,.65vw,10px);font-weight:400;letter-spacing:.17em;text-transform:uppercase;color:#cbbba0}
   .hero-book-type strong{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,3.1vw,3rem);line-height:1.05;letter-spacing:-.025em}
+  @media(prefers-reduced-motion:reduce){.hero-book-face{transition:none}}
   /* the tagline + intro morph through the site's languages; they fade together and hold
      when the pointer (or keyboard focus) is over the hero. */
   .morph{transition:opacity .4s ease}
@@ -154,20 +158,21 @@
     color:var(--accent);margin-top:6px}
   .book .enter::after{content:" \2192";opacity:.7}
 
-  .book.soon{opacity:.55;pointer-events:none}
-  .book.soon .cov{background:linear-gradient(#0d1220,#0a0e19)}
-  .book.soon .win{background:var(--muted);box-shadow:none}
+  .coming-note{display:flex;align-items:baseline;gap:18px;margin-top:36px;padding:22px 0;border-top:1px solid var(--line);color:var(--muted)}
+  .coming-note strong{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--dawn);white-space:nowrap}
+  .coming-note p{margin:0;max-width:55ch;font-size:.9rem;line-height:1.55}
 
-  @media(max-width:900px){.hero .wrap{grid-template-columns:minmax(0,1fr) minmax(260px,.75fr);gap:24px}.hero-art{height:440px}.intro{min-height:0}}
+  @media(max-width:900px){.hero-copy{width:60%}.hero-art{height:440px;width:38%}.intro{min-height:0}}
   @media(max-width:700px){
     .bar{padding:14px 20px}.brand{font-size:17px}
-    .hero{padding:54px 0 42px}.hero .wrap{display:block}
+    .hero{padding:42px 0 28px}.hero .wrap{display:block;min-height:0}.hero-copy{width:100%}
     h1{font-size:clamp(3.6rem,12vw,5.5rem);max-width:10ch}
-    .hero-art{height:360px;max-width:440px;margin:20px auto 0}
-    .hero-book{width:215px}.hero-book-type strong{font-size:2rem}.hero-book-type span,.hero-book-type small{font-size:7px}
+    .hero-art{position:relative;top:auto;right:auto;transform:none;width:100%;height:260px;max-width:440px;margin:12px auto 0}
+    .hero-book{width:185px}.hero-book-type strong{font-size:1.7rem}.hero-book-type span,.hero-book-type small{font-size:7px}
     .tagline{margin-top:20px}.langpick{margin-top:24px}.intro{font-size:1rem}
     .how-grid{gap:28px}.step{gap:5px}.langs{margin-top:34px}
     .lib-head{flex-wrap:wrap;gap:8px}.lib-head .count{width:100%;margin-left:0}
+    .coming-note{display:block;margin-top:28px}.coming-note p{margin-top:6px}
   }
 
   footer{border-top:1px solid var(--line);padding:34px 0 60px;color:var(--muted);font-family:var(--mono);
@@ -189,6 +194,14 @@
       <div class="hero-copy">
       <h1>English Reading Adventures</h1>
       <p class="byline">by Antony Addy</p>
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-book">
+          <div class="hero-book-cover">
+            <div class="hero-book-face is-active"><div class="hero-book-illustration" style="background-image:url('/cover-the-address.png')"></div><div class="hero-book-type"><span>English Reading Adventures</span><strong>The Address</strong><small>Antony Addy</small></div></div>
+            <div class="hero-book-face"><div class="hero-book-illustration"></div><div class="hero-book-type"><span>English Reading Adventures</span><strong></strong><small>Antony Addy</small></div></div>
+          </div>
+        </div>
+      </div>
       <div id="heroMorph">
         <p class="langpill morph" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.8 2.6 15.6 0 18.4M12 2.8c-2.6 2.8-2.6 15.6 0 18.4"/></svg>
@@ -198,14 +211,6 @@
         <p class="intro morph" id="hIntro">Branching stories for people learning English, where you are the hero. The same story is written at three levels &mdash; so you read at A2, B1, or B2, switch level whenever you like, and still make the same choices as everyone else. Every word waits in your language when you need it.</p>
       </div>
       <p class="sr-only">Find your way, one story at a time. Branching stories for people learning English, where you are the hero. The same story is written at three levels — so you read at A2, B1, or B2, switch level whenever you like, and still make the same choices as everyone else. Every word waits in your language when you need it.</p>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="hero-book">
-          <div class="hero-book-cover">
-            <div class="hero-book-illustration"></div>
-            <div class="hero-book-type"><span>English Reading Adventures</span><strong>The Address</strong><small>Antony Addy</small></div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -256,17 +261,8 @@
           </div>
         </a>
 
-        <div class="book soon" style="--accent:#6f86c9" aria-hidden="true">
-          <div class="cov"><span class="win"></span></div>
-          <div class="meta">
-            <span class="ep">An Interactive Story</span>
-            <h3>Coming soon</h3>
-            <p>Another standalone story, its own world and its own look &mdash; each English Reading Adventures book is designed as its own place.</p>
-            <span class="tags">In the works</span>
-          </div>
-        </div>
-
       </div>
+      <div class="coming-note"><strong>Coming soon</strong><p>Another standalone story, its own world and its own look &mdash; each English Reading Adventures book is designed as its own place.</p></div>
     </div>
   </section>
 </main>
@@ -284,6 +280,29 @@
     var man=await fetch('/manifest.json').then(function(r){return r.json();});
     var eps=(man.episodes||[]).slice().sort(function(a,b){return (a.episode||0)-(b.episode||0);});
     if(!eps.length) return;
+    var faces=document.querySelectorAll('.hero-book-face');
+    if(faces.length===2){
+      var current=0, activeFace=0;
+      function showBook(e,face){
+        var slug=e.slug||e.file.replace(/\.json$/,'');
+        face.querySelector('.hero-book-illustration').style.backgroundImage='url("/cover-'+encodeURIComponent(slug)+'.png")';
+        face.querySelector('strong').textContent=e.title;
+        face.querySelector('.hero-book-type').style.borderTopColor=((e.identity&&e.identity.palette)||{}).accent||'#E8A24C';
+      }
+      showBook(eps[0],faces[0]);
+      var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(eps.length>1&&!reduce){
+        setInterval(function(){
+          if(document.hidden)return;
+          current=(current+1)%eps.length;
+          var next=1-activeFace;
+          showBook(eps[current],faces[next]);
+          faces[next].classList.add('is-active');
+          faces[activeFace].classList.remove('is-active');
+          activeFace=next;
+        },5500);
+      }
+    }
     var frag=document.createDocumentFragment();
     eps.forEach(function(e){
       var pal=(e.identity&&e.identity.palette)||{};
@@ -304,7 +323,7 @@
         '</div>';
       frag.appendChild(a);
     });
-    // swap the static fallback card(s) for the live ones, keep the "coming soon" tiles
+    // swap the static fallback card(s) for the live ones
     Array.prototype.forEach.call(shelf.querySelectorAll('[data-static]'),function(n){n.remove();});
     shelf.insertBefore(frag, shelf.firstChild);
     var count=document.querySelector('.count');
