@@ -1,4 +1,4 @@
-# The Long Watch — book 5 design & build plan
+# The Keeper — book 5 design & build plan
 
 A **standalone** book. It shares nothing with *The Address*, *The Night Market*, *First Light* or
 *The Cool of Evening* except the method and the house tone — no arc, no carried state, no shared
@@ -9,7 +9,7 @@ storm-black coast, the one light that keeps ships off the rocks is the one you h
 burning, by hand, till morning.
 
 Where *First Light* carried warmth out into a frozen town and *The Cool of Evening* held a busload
-through a killing afternoon, *The Long Watch* is one person keeping a single light alive through a
+through a killing afternoon, *The Keeper* is one person keeping a single light alive through a
 storm — for an old keeper who has gone down, and for a boat somewhere out in the dark. A new
 world: a remote lighthouse, a rising gale, a lamp that must not go out, and a night that has to be
 watched through to first light.
@@ -194,12 +194,12 @@ with the beam the one warm thing.
   card and library cover are a genuinely different picture — a tower, a beam, a black sea — not a
   recolour.
 - **type:** inherited families (Fraunces / Hanken Grotesk / JetBrains Mono).
-- **slug:** `the-long-watch`; **series:** `long-watch`; **episode:** 5. **hero.line** the
+- **slug:** `the-keeper`; **series:** `the-keeper`; **episode:** 5. **hero.line** the
   eight-language morph sentence; **sub** the same learner promise.
 
 Shipping = write its JSON (prose + lexicon + `identity` + `slug`) and its OG card, plus the free
 per-passage emblem set (a storm/coast motif set added to the reader's per-book `__ART`) and a
-wordless `cover-the-long-watch.png` for the library card. One zero-config route `/b/the-long-watch`
+wordless `cover-the-keeper.png` for the library card. One zero-config route `/b/the-keeper`
 serves it.
 
 ---
@@ -218,6 +218,6 @@ content/lexicon.json` coming back clean.
 4. **Lexicon** — ~250 words, complete in 9 languages; auto-gloss coverage checked.
 5. **Native review** — 8-language pass + A2-choice clarity. *Launch gate.*
 6. **Art** — free per-passage emblems (a storm/coast motif set) + a `beacon` OG/cover scene;
-   painted art optional, dropped in later at `images/long-watch/ep-05/<id>.webp`.
+   painted art optional, dropped in later at `images/the-keeper/ep-05/<id>.webp`.
 
-Built on branch `book-05-long-watch`; merges to `main` only after the definition-of-done.
+Built on branch `book-05-the-keeper`; merges to `main` only after the definition-of-done.
