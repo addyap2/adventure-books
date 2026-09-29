@@ -392,7 +392,7 @@
   pick.className="langpick"; pick.setAttribute("role","group");
   pick.setAttribute("aria-label","Show this page in your language");
   var lbl=document.createElement("span"); lbl.className="lbl";
-  lbl.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.8 2.6 15.6 0 18.4M12 2.8c-2.6 2.8-2.6 15.6 0 18.4"/></svg><span>Read this in</span>';
+  lbl.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.8 2.6 15.6 0 18.4M12 2.8c-2.6 2.8-2.6 15.6 0 18.4"/></svg><span>View this page in</span>';
   pick.appendChild(lbl);
   var btns=S.map(function(s,idx){
     var b=document.createElement("button"); b.type="button"; b.textContent=s.c;
