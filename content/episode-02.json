@@ -21,7 +21,8 @@
     "cover": {
       "kind": "lantern",
       "glow": true,
-      "focal": "66% 52%"
+      "focal": "66% 52%",
+      "alt": "Warm lanterns glow above a food stall in a dark night market."
     },
     "type": {
       "display": "Fraunces",

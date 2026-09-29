@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Address — English Reading Adventures</title>
+<base href="/">
+<title>Read a story — English Reading Adventures</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0E1320">
 <meta name="description" content="Choose-your-own-adventure stories for English learners, at three levels, with a glossary in eight languages.">
@@ -11,15 +12,16 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="English Reading Adventures">
 <meta property="og:url" content="https://adventure-books-five.vercel.app/read.html">
-<meta property="og:title" content="The Address — English Reading Adventures">
+<meta property="og:title" content="Read a story — English Reading Adventures">
 <meta property="og:description" content="Choose-your-own-adventure stories for English learners, at three levels, with a glossary in eight languages.">
-<meta property="og:image" content="https://adventure-books-five.vercel.app/og-the-address.png">
+<meta property="og:image" content="https://adventure-books-five.vercel.app/og-english-adventures.png">
+<meta property="og:image:alt" content="English Reading Adventures book collection artwork.">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Address — English Reading Adventures">
+<meta name="twitter:title" content="Read a story — English Reading Adventures">
 <meta name="twitter:description" content="A story where you are the hero — for people learning English.">
-<meta name="twitter:image" content="https://adventure-books-five.vercel.app/og-the-address.png">
+<meta name="twitter:image" content="https://adventure-books-five.vercel.app/og-english-adventures.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -616,6 +618,29 @@
    drops files named by paragraph number and nothing in the JSON has to change.
    Until a file exists, a deliberate placeholder card shows in its place. */
 const $ = id => document.getElementById(id);
+const SITE="https://adventure-books-five.vercel.app";
+function setReaderMeta(book){
+  const slug=book&&book.slug, title=book?`${book.title} — English Reading Adventures`:
+    "Read a story — English Reading Adventures";
+  const desc=book?(book.blurb||"An interactive story for English learners."):
+    "Choose-your-own-adventure stories for English learners, at three levels, with a glossary in eight languages.";
+  const path=slug?`/read/${slug}.html`:"/read.html";
+  const image=SITE+(slug?`/og-${slug}.png`:"/og-english-adventures.png");
+  const imageAlt=slug?(book.identity?.cover?.alt||`${book.title} cover artwork.`):
+    "English Reading Adventures book collection artwork.";
+  document.title=title;
+  const fields=[['link[rel="canonical"]','href',SITE+path],
+    ['meta[name="description"]','content',desc],['meta[property="og:url"]','content',SITE+path],
+    ['meta[property="og:title"]','content',title],['meta[property="og:description"]','content',desc],
+    ['meta[property="og:image"]','content',image],['meta[property="og:image:alt"]','content',imageAlt],
+    ['meta[name="twitter:title"]','content',title],
+    ['meta[name="twitter:description"]','content',desc],['meta[name="twitter:image"]','content',image]];
+  fields.forEach(([selector,attr,value])=>document.querySelector(selector)?.setAttribute(attr,value));
+  const q=new URLSearchParams(location.search);q.delete('book');
+  const search=q.toString();
+  if(location.pathname!==path||location.search!==(search?'?'+search:''))
+    history.replaceState(null,'',path+(search?'?'+search:''));
+}
 let MANIFEST=null, BOOK=null, LEX={}, BASELEX={}, DICT={}, dictLang=null, GIST={}, gistLang=null, level=null, node=null;
 let flags=new Set(), seen=new Set(), maxDepth=0, depth={}, haveImg=new Set();
 let view="home", curKey=null, curFile=null;   // "home" (the library) or "book" (reading)
@@ -701,7 +726,7 @@ async function boot(){
   // deep link from the landing site: ?book=episode-01.json opens that episode at its cover.
   // optional &level=A2|B1|B2 and &lang=<code> preselect difficulty and word-help language.
   const q=new URLSearchParams(location.search);
-  const wantBook=q.get("book");
+  const wantBook=q.get("book")||window.__WM_READER_BOOK;
   if(wantBook && MANIFEST.episodes.some(e=>e.file===wantBook)){
     const wantLang=q.get("lang"), LANGS=["fr","es","it","de","pt","ru","ar","zh"];
     if(wantLang && LANGS.includes(wantLang)){
@@ -736,6 +761,7 @@ function handoffURL(){
 /* ---- the library home ---- */
 function renderHome(){
   view="home"; introMode=false; node=null; curKey=null; hideGloss();
+  setReaderMeta(null);
   $("main").className="home";
   $("back").hidden=true; $("cog").hidden=true;
   applyIdentity(null);   // the in-app library uses the neutral English Reading Adventures nocturne
@@ -830,6 +856,7 @@ function applyIdentity(book){
 async function openEpisode(file,preferLevel,intro,resume){
   view="book"; $("main").className="reading";
   BOOK=await (await fetch(file)).json();
+  setReaderMeta(BOOK);
   applyIdentity(BOOK);
   const meta=MANIFEST.episodes.find(e=>e.file===file)||{};
   haveImg=new Set(meta.images||[]);
