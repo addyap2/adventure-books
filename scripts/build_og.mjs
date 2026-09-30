@@ -125,6 +125,29 @@ function duskScene(c) {
   <g transform="translate(780,0)"><ellipse cx="300" cy="560" rx="42" ry="7" fill="#000" opacity=".3"/><path d="M300 506 C312 508 318 519 320 533 L326 560 L274 560 L280 533 C282 519 288 508 300 506 Z" fill="${dark}"/><circle cx="300" cy="497" r="10" fill="${dark}"/></g>`;
 }
 
+function beaconScene(c) {
+  // a lighthouse on the rocks throwing a gold beam across a stormy sea; a small
+  // boat's light out in the swell, spray at the base of the tower.
+  const dark = "#05090D";
+  return `
+  <rect x="0" y="430" width="1200" height="200" fill="${c.surface}"/>
+  <g stroke="${c.secondary}" stroke-width="3" fill="none" opacity="0.30">
+    <path d="M0 472 q60 -14 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/>
+    <path d="M0 512 q60 -14 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/>
+  </g>
+  <path d="M1048 232 L110 150 L150 330 Z" fill="${c.accent}" opacity="0.12"/>
+  <path d="M1048 232 L150 200 L165 300 Z" fill="${c.accentHot}" opacity="0.14"/>
+  <path d="M985 470 q60 -34 130 -20 q45 8 85 20 Z" fill="${dark}"/>
+  <path d="M1012 470 L1032 250 h36 L1088 470 Z" fill="${dark}"/>
+  <path d="M1012 470 L1032 250 h36 L1088 470 Z" fill="none" stroke="${c.line}" stroke-width="2"/>
+  <g stroke="${c.line}" stroke-width="2" opacity="0.7"><path d="M1022 400 h56"/><path d="M1026 340 h48"/></g>
+  <rect x="1030" y="220" width="40" height="32" fill="${dark}" stroke="${c.line}" stroke-width="2"/>
+  <path d="M1026 220 h48 l-10 -15 h-28 z" fill="${c.line}"/>
+  <ellipse cx="1050" cy="236" rx="170" ry="130" fill="url(#glow)"/>
+  <rect x="1041" y="226" width="18" height="22" fill="${c.accentHot}"/>
+  <g><ellipse cx="300" cy="432" rx="30" ry="18" fill="url(#glow)" opacity="0.5"/><path d="M280 440 h40 l-6 13 h-28 z" fill="${dark}"/><path d="M300 440 v-16 M300 426 l10 5" stroke="${c.line}" stroke-width="2" fill="none"/><circle cx="300" cy="424" r="3" fill="${c.accentHot}"/></g>`;
+}
+
 function ogHTML(book) {
   const p = (book.identity && book.identity.palette) || {};
   const ground = p.ground || "#0E1320", surface = p.surface || "#121a2c",
@@ -133,7 +156,8 @@ function ogHTML(book) {
         muted = p.muted || "#8A93A6";
   const c = { ground, surface, ink, accent, accentHot, secondary, muted };
   const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
-  const scene = kind === "highsun" ? highsunScene(c)
+  const scene = kind === "beacon" ? beaconScene(c)
+              : kind === "highsun" ? highsunScene(c)
               : kind === "dusk" ? duskScene(c)
               : kind === "daybreak" ? daybreakScene(c)
               : kind === "lantern" ? lanternScene(c)
@@ -186,7 +210,8 @@ function coverHTML(book) {
         muted = p.muted || "#8A93A6", line = p.line || "#26304a";
   const c = { ground, surface, ink, accent, accentHot, secondary, muted, line };
   const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
-  const scene = kind === "highsun" ? highsunScene(c)
+  const scene = kind === "beacon" ? beaconScene(c)
+              : kind === "highsun" ? highsunScene(c)
               : kind === "dusk" ? duskScene(c)
               : kind === "daybreak" ? daybreakScene(c)
               : kind === "lantern" ? lanternScene(c)
