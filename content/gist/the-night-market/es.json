@@ -1,0 +1,23 @@
+{
+ "1": "Esta noche llevas tú solo el puesto de la tía (se quemó la mano). La cuota de la temporada hay que pagarla al jefe del mercado antes del alba, o la familia pierde el puesto.",
+ "6": "Elección de proveedor: la mercancía del viejo Han es buena pero cara; la furgoneta barata está a mitad de precio, pero parte está pasada. La calidad cuesta dinero ahora; lo malo costará tu reputación después.",
+ "13": "La tía siempre guarda un cuenco en el estante del fondo para el Sr. Behn, que dejó de venir. Mantener esa costumbre cuesta solo un cuenco, pero así es como la gente sigue en la vida de los demás.",
+ "42": "El mostrador está desbordado. Debes elegir: trabajar con calma y mantener la calidad, ir más rápido haciendo las cosas peor, o pedir ayuda antes de hundirte.",
+ "44": "Encuentras tu ritmo y te ganas a la multitud, tratando a cada cliente como un amigo, igual que hace la tía.",
+ "58": "Se ha volcado el gran caldero de té de la vendedora; su puesto es un caos. Ella nunca pediría ayuda, pero te ha ayudado toda la noche. ¿La ayudas?",
+ "61": "El Sr. Sould, el «arreglador», ofrece ayuda: un préstamo para la cuota, o una palabra contra tu rival, para los que lo «cuidan». Es una trampa.",
+ "62": "Sould ofrece un préstamo: paga la cuota ahora, devuélvelo luego, pero oculta los intereses y el precio real. Aceptarlo, preguntar cuánto cuesta, o marcharte.",
+ "73": "El chico que trajo tus provisiones mira la comida con hambre, sin pedir nada. Tienes un cuenco en una mano y una decisión en la otra.",
+ "120": "FINAL (bueno) — Vendiste comida buena y honrada hasta el último cuenco y pagaste la cuota de sobra: el puesto se salva una temporada más. La tía llora, y luego ríe.",
+ "121": "FINAL (bueno, secreto) — El Sr. Behn se come el cuenco que guardaste; cuando falta dinero, se levanta y paga el resto «por los viejos amigos». El puesto se salva, y una vieja amistad se recompone. Dile a la tía que Behn volvió.",
+ "122": "FINAL (bueno) — Reuniste la cuota tú solo: sin préstamo, sin favores, sin atajos. Agotado y orgulloso, sostuviste el puesto con tus propias fuerzas.",
+ "123": "FINAL (bueno) — Falta un poco de dinero, pero tus clientes de siempre te defienden; por tu buen nombre, el jefe conserva el puesto.",
+ "124": "FINAL (agridulce) — Reuniste la cuota justa, pero a base de atajos: cuencos a medio hacer, cambio corto, algún cliente perdido. El puesto se salva, el nombre algo manchado.",
+ "125": "FINAL (agridulce) — Falta dinero, pero la vendedora de té pone sus propias monedas para cubrir la diferencia: «Me ayudaste, ahora te ayudo». El puesto se salva por una amabilidad devuelta.",
+ "126": "FINAL (agridulce) — El puesto se pierde por esta noche, pero el chico vuelve con toda una pandilla hambrienta y monedas para tus últimos cuencos. No basta para salvar la plaza, pero es el comienzo de algo.",
+ "127": "FINAL (agridulce) — Falta dinero, pero el jefe te concede un día de mercado más, por los treinta años de la tía. Ni victoria ni derrota: otra oportunidad.",
+ "128": "FINAL (malo) — La cuota se paga con el dinero de Sould: el puesto es suyo en todo menos en el nombre. Mañana sonreirá, te llamará «amigo» y empezará a poner su precio.",
+ "129": "FINAL (malo) — El dinero no llega a la cuota. El jefe cuenta dos veces, pero la cifra no cambia: el puesto pasa a la lista de la mañana. Treinta años terminados en una noche, sin culpa tuya.",
+ "130": "FINAL (malo) — Te quedaste sin existencias demasiado pronto: horas antes del alba, la olla estaba vacía. No fue mala suerte, sino mala planificación. Muy lejos de la cuota.",
+ "131": "FINAL (malo) — La cuota queda fuera de alcance y algo en ti se rinde. Agotado, por un momento piensas en dejar el puesto. No lo dices en voz alta, pero esta noche, por primera vez, lo piensas."
+}

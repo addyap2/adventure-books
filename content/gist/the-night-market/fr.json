@@ -1,0 +1,23 @@
+{
+ "1": "Ce soir, vous tenez seul le stand de Tatie (elle s'est brûlé la main). La taxe de la saison doit être payée au maître du marché avant l'aube, sinon la famille perd l'emplacement.",
+ "6": "Choix du fournisseur : la marchandise du vieux Han est bonne mais chère ; la camionnette bon marché est à moitié prix, mais une partie est avariée. La bonne qualité coûte de l'argent ; la mauvaise coûtera votre réputation.",
+ "13": "Tatie garde toujours un bol sur l'étagère du fond pour M. Behn, qui ne vient plus. Garder cette habitude ne coûte qu'un bol, mais c'est ainsi qu'on reste dans la vie des autres.",
+ "42": "Le comptoir est débordé. Vous devez choisir : travailler posément en gardant la qualité, aller plus vite en bâclant, ou appeler de l'aide avant de couler.",
+ "44": "Vous trouvez votre rythme et séduisez la foule, en traitant chaque client comme un ami, comme le fait Tatie.",
+ "58": "La grande bouilloire de la marchande de thé s'est renversée ; son stand est en plein chaos. Elle ne demandera jamais d'aide, mais elle vous a aidé toute la nuit. L'aidez-vous ?",
+ "61": "M. Sould, le « fixeur », propose son aide : un prêt pour la taxe, ou un mot contre votre rival — pour ceux qui « s'occupent » de lui. C'est un piège.",
+ "62": "Sould propose un prêt : payez la taxe maintenant, remboursez plus tard — mais il cache les intérêts et le vrai prix. Le prendre, demander ce qu'il coûte, ou s'en aller.",
+ "73": "Le gamin qui a rapporté vos provisions regarde la nourriture avec faim, sans rien demander. Vous tenez un bol dans une main et un choix dans l'autre.",
+ "120": "FIN (bonne) — Vous avez vendu une bonne cuisine honnête jusqu'au dernier bol et payé la taxe de reste : l'emplacement est sauvé pour une saison de plus. Tatie en pleure, puis rit.",
+ "121": "FIN (bonne, secrète) — M. Behn mange le bol que vous aviez gardé ; quand l'argent manque, il se lève et paie le reste « pour les vieux amis ». L'emplacement est sauvé, et une amitié ancienne renouée. Dites à Tatie que Behn est revenu.",
+ "122": "FIN (bonne) — Vous avez réuni la taxe seul : sans prêt, sans faveur, sans compromis. Épuisé et fier, vous avez porté le stand par vos propres forces.",
+ "123": "FIN (bonne) — L'argent manque un peu, mais vos habitués prennent votre défense ; sur votre bon nom, le maître garde l'emplacement.",
+ "124": "FIN (mitigée) — Vous avez tout juste réuni la taxe, mais en bâclant : bols à moitié cuits, monnaie courte, quelques habitués perdus. L'emplacement est sauvé, le nom un peu terni.",
+ "125": "FIN (mitigée) — L'argent manque, mais la marchande de thé pose ses propres pièces pour combler l'écart : « Tu m'as aidée, je t'aide. » L'emplacement est sauvé par une gentillesse rendue.",
+ "126": "FIN (mitigée) — L'emplacement est perdu pour ce soir, mais le gamin revient avec toute une bande d'affamés et des pièces pour vos derniers bols. Pas assez pour sauver la place, mais le début de quelque chose.",
+ "127": "FIN (mitigée) — L'argent manque, mais le maître vous accorde un jour de marché de plus, au nom des trente ans de Tatie. Ni victoire ni défaite : une nouvelle chance.",
+ "128": "FIN (mauvaise) — La taxe est payée avec l'argent de Sould : l'emplacement est à lui en tout sauf le nom. Demain il sourira, vous appellera « ami », et commencera à fixer son prix.",
+ "129": "FIN (mauvaise) — L'argent reste en dessous de la taxe. Le maître compte deux fois, mais le chiffre ne change pas : l'emplacement passe sur la liste du matin. Trente ans finis en une nuit — sans faute de votre part.",
+ "130": "FIN (mauvaise) — Vous êtes tombé en rupture bien trop tôt : des heures avant l'aube, la marmite était vide. Ce n'est pas la malchance, mais une mauvaise organisation. Loin du compte.",
+ "131": "FIN (mauvaise) — La taxe est hors de portée et quelque chose cède en vous. Épuisé, vous songez un instant à abandonner le stand. Vous ne le dites pas tout haut — mais cette nuit, pour la première fois, vous y pensez."
+}

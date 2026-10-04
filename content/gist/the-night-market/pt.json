@@ -1,0 +1,23 @@
+{
+ "1": "Esta noite ficas sozinho com a banca da tia (queimou a mão). A taxa da época tem de ser paga ao mestre do mercado antes do amanhecer, ou a família perde o lugar.",
+ "6": "Escolha do fornecedor: a mercadoria do velho Han é boa mas cara; a carrinha barata está a metade do preço, mas parte está estragada. A qualidade custa dinheiro agora; a má custará a tua reputação depois.",
+ "13": "A tia guarda sempre uma tigela na prateleira do fundo para o Sr. Behn, que deixou de vir. Manter esse hábito custa só uma tigela, mas é assim que se continua na vida dos outros.",
+ "42": "O balcão está cheio. Tens de escolher: trabalhar com calma mantendo a qualidade, ir mais depressa fazendo pior, ou pedir ajuda antes de afundar.",
+ "44": "Encontras o teu ritmo e conquistas a multidão, tratando cada cliente como um amigo, tal como a tia faz.",
+ "58": "O grande caldeirão de chá da vendedora virou-se; a banca dela é um caos. Ela nunca pediria ajuda, mas ajudou-te a noite toda. Ajudá-la?",
+ "61": "O Sr. Sould, o «resolvedor», oferece ajuda: um empréstimo para a taxa, ou uma palavra contra o teu rival, para quem «cuida» dele. É uma armadilha.",
+ "62": "Sould oferece um empréstimo: paga a taxa agora, devolve depois, mas esconde os juros e o custo real. Aceitá-lo, perguntar quanto custa, ou ir-te embora.",
+ "73": "O miúdo que trouxe as tuas provisões olha a comida com fome, sem pedir nada. Tens uma tigela numa mão e uma decisão na outra.",
+ "120": "FIM (bom) — Vendeste comida boa e honesta até à última tigela e pagaste a taxa de sobra: o lugar está salvo por mais uma época. A tia chora e depois ri.",
+ "121": "FIM (bom, secreto) — O Sr. Behn come a tigela que guardaste; quando falta dinheiro, levanta-se e paga o resto «pelos velhos amigos». O lugar está salvo, e uma velha amizade reatada. Diz à tia que o Behn voltou.",
+ "122": "FIM (bom) — Juntaste a taxa sozinho: sem empréstimo, sem favores, sem atalhos. Exausto e orgulhoso, seguraste a banca com as tuas próprias forças.",
+ "123": "FIM (bom) — Falta um pouco de dinheiro, mas os teus clientes do costume defendem-te; pelo teu bom nome, o mestre mantém o lugar.",
+ "124": "FIM (agridoce) — Juntaste a taxa à justa, mas cortando caminho: tigelas meio cruas, troco a menos, alguns clientes perdidos. O lugar está salvo, o nome um pouco manchado.",
+ "125": "FIM (agridoce) — Falta dinheiro, mas a vendedora de chá põe as suas próprias moedas para cobrir a diferença: «Ajudaste-me, agora ajudo-te». O lugar salva-se por uma gentileza retribuída.",
+ "126": "FIM (agridoce) — O lugar perde-se por esta noite, mas o miúdo volta com um bando faminto e moedas para as tuas últimas tigelas. Não chega para salvar a banca, mas é o início de algo.",
+ "127": "FIM (agridoce) — Falta dinheiro, mas o mestre concede-te mais um dia de mercado, em nome dos trinta anos da tia. Nem vitória nem derrota: outra oportunidade.",
+ "128": "FIM (mau) — A taxa é paga com o dinheiro de Sould: o lugar é dele em tudo menos no nome. Amanhã vai sorrir, chamar-te «amigo» e começar a impor o seu preço.",
+ "129": "FIM (mau) — O dinheiro fica abaixo da taxa. O mestre conta duas vezes, mas o número não muda: o lugar vai para a lista da manhã. Trinta anos acabados numa noite, sem culpa tua.",
+ "130": "FIM (mau) — Ficaste sem stock cedo demais: horas antes do amanhecer, a panela estava vazia. Não foi azar, foi má organização. Muito longe da taxa.",
+ "131": "FIM (mau) — A taxa está fora de alcance e algo em ti cede. Exausto, por um momento pensas em desistir da banca. Não o dizes em voz alta, mas esta noite, pela primeira vez, pensa-lo."
+}

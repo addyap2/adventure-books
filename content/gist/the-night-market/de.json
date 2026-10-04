@@ -1,0 +1,23 @@
+{
+ "1": "Heute Nacht führst du allein den Stand der Tante (sie hat sich die Hand verbrüht). Die Saisongebühr muss bis zum Morgengrauen an den Marktmeister gezahlt werden, sonst verliert die Familie den Platz.",
+ "6": "Lieferanten-Wahl: Alter Hans Ware ist gut, aber teuer; der billige Wagen ist zum halben Preis, doch ein Teil ist verdorben. Gute Ware kostet jetzt Geld; schlechte kostet später deinen Ruf.",
+ "13": "Die Tante hält immer eine Schale im hinteren Regal für Herrn Behn bereit, der nicht mehr kommt. Diese Gewohnheit kostet nur eine Schale, aber so bleibt man im Leben der anderen.",
+ "42": "Der Tresen ist überrannt. Du musst wählen: ruhig arbeiten und die Qualität halten, schneller werden und schludern, oder Hilfe rufen, bevor du untergehst.",
+ "44": "Du findest deinen Rhythmus und gewinnst die Menge für dich, indem du jeden Kunden wie einen Freund behandelst, so wie die Tante.",
+ "58": "Der große Teekessel der Teeverkäuferin ist umgekippt; ihr Stand ist im Chaos. Sie würde nie um Hilfe bitten, aber sie hat dir die ganze Nacht geholfen. Hilfst du ihr?",
+ "61": "Herr Sould, der „Macher“, bietet Hilfe an: ein Darlehen für die Gebühr oder ein Wort gegen deinen Rivalen – für die, die sich um ihn „kümmern“. Es ist eine Falle.",
+ "62": "Sould bietet ein Darlehen: Zahl die Gebühr jetzt, zahl später zurück – doch er verschweigt die Zinsen und den wahren Preis. Annehmen, nach dem Preis fragen, oder weggehen.",
+ "73": "Das Kind, das deine Vorräte geholt hat, sieht das Essen hungrig an, ohne etwas zu verlangen. Du hast eine Schale in der einen Hand und eine Entscheidung in der anderen.",
+ "120": "ENDE (gut) — Du hast gutes, ehrliches Essen bis zur letzten Schale verkauft und die Gebühr mit Überschuss gezahlt: Der Platz ist für eine weitere Saison gerettet. Die Tante weint, dann lacht sie.",
+ "121": "ENDE (gut, geheim) — Herr Behn isst die aufgehobene Schale; als das Geld fehlt, steht er auf und zahlt den Rest „für alte Freunde“. Der Platz ist gerettet, und eine alte Freundschaft wieder gekittet. Sag der Tante, Behn ist zurückgekommen.",
+ "122": "ENDE (gut) — Du hast die Gebühr allein zusammenbekommen: ohne Darlehen, ohne Gefallen, ohne Abkürzung. Erschöpft und stolz hast du den Stand aus eigener Kraft getragen.",
+ "123": "ENDE (gut) — Es fehlt etwas Geld, aber deine Stammkunden legen ein gutes Wort ein; um deines guten Namens willen behält der Meister den Platz.",
+ "124": "ENDE (zwiespältig) — Du hast die Gebühr knapp geschafft, aber mit Pfusch: halbgare Schalen, zu wenig Wechselgeld, ein paar verlorene Stammkunden. Der Platz ist gerettet, der Name etwas ramponiert.",
+ "125": "ENDE (zwiespältig) — Es fehlt Geld, aber die Teeverkäuferin legt ihre eigenen Münzen dazu, um die Lücke zu schließen: „Du hast mir geholfen, jetzt helfe ich dir.“ Der Platz ist durch eine erwiderte Freundlichkeit gerettet.",
+ "126": "ENDE (zwiespältig) — Der Platz ist für heute Nacht verloren, aber das Kind kommt mit einer ganzen hungrigen Bande und Münzen für deine letzten Schalen zurück. Nicht genug, um den Stand zu retten, aber der Anfang von etwas.",
+ "127": "ENDE (zwiespältig) — Es fehlt Geld, aber der Meister gewährt dir im Namen der dreißig Jahre der Tante einen weiteren Markttag. Kein Sieg, keine Niederlage: eine neue Chance.",
+ "128": "ENDE (schlecht) — Die Gebühr ist mit Soulds Geld bezahlt: Der Platz gehört ihm in allem außer dem Namen. Morgen wird er lächeln, dich „Freund“ nennen und anfangen, seinen Preis zu nennen.",
+ "129": "ENDE (schlecht) — Das Geld bleibt unter der Gebühr. Der Meister zählt zweimal, doch die Zahl ändert sich nicht: Der Platz kommt auf die Morgenliste. Dreißig Jahre in einer Nacht zu Ende, ohne deine Schuld.",
+ "130": "ENDE (schlecht) — Dir ging viel zu früh die Ware aus: Stunden vor dem Morgengrauen war der Topf leer. Es war kein Pech, sondern schlechte Planung. Weit unter der Gebühr.",
+ "131": "ENDE (schlecht) — Die Gebühr ist unerreichbar, und etwas in dir gibt auf. Erschöpft denkst du einen Moment daran, den Stand aufzugeben. Du sagst es nicht laut – aber heute Nacht denkst du es zum ersten Mal."
+}
