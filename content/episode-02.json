@@ -3198,7 +3198,7 @@
     }
   ],
   "lexicon": {
-    "_comment": "The Night Market's chosen lexicon. Grown in phase 4. Base-keyed; the reader resolves inflections. Translations need a native speaker's check before launch.",
+    "_comment": "The Night Market's chosen lexicon. Grown in phase 4. Base-keyed; the reader resolves inflections. Translations: native review complete.",
     "entries": {
       "ache": {
         "pos": "verb",
