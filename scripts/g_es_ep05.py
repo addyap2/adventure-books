@@ -1,0 +1,112 @@
+#!/usr/bin/env python3
+"""The Keeper — full Spanish per-passage gist coverage (merges to 112/112).
+Run: python3 scripts/g_es_ep05.py"""
+import json, os
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "content", "gist", "the-keeper", "es.json")
+
+G = {
+ 2: "Reúnes lo que hay en la torre: una lata de aceite, mechas de repuesto, una caja de cerillas, una buena lámpara de tormenta. Fuera, el viento aúlla en la baranda de la galería y la lluvia golpea el cristal como piedras lanzadas. Tienes que decidir qué hacer, y rápido.",
+ 3: "Pruebas la radio. Chisporrotea y escupe, pero al fin la voz de Tam llega desde la estación de la costa. Ningún bote salvavidas puede salir a un mar así, dice, no hasta que amaine o llegue el alba. Mantén la luz encendida, si puedes.",
+ 4: "Llegas hasta Nan al pie de la escalera y la acomodas lo mejor que puedes. Pero la luz sigue apagada, y el refugio solo no basta: ese barco ahí fuera necesita el haz. Necesitas aceite, un plan y la cabeza despejada antes de subir.",
+ 5: "Sales a la galería. El mar es negro y enorme, la lluvia aplanada por el viento. Lejos, pasado el cabo, las luces del barco se ven pequeñas y en apuros. Debajo de ti la cala es un pozo de oscuridad, y toda la costa ruge.",
+ 6: "Te obligas a pensar. Podrías encender la luz primero y preocuparte del resto después. Podrías ir directo con Nan y las casas. O podrías despertar a la costa para que ayude. Cada decisión cuesta tiempo, y esta noche el tiempo es un barco acercándose a las rocas.",
+ 8: "Sientes la tormenta instalarse en tu pecho. Piensas en ese barco pasado el cabo, cerrándose sobre las rocas sin luz que lo guíe. Una noche así puede ahogar a toda una tripulación. No es miedo; es un hecho. Nadie más va a subir esa torre. Así que tienes que ser tú.",
+ 11: "Subes rápido hasta la lámpara con lo poco que tienes. Una cerilla, una chispa, un parpadeo de llama: prende, pero es débil, y no aguantará sin aceite de verdad. No puedes dejarla así y esperar.",
+ 13: "Te haces cargo del aceite y la mecha. La lata pesa, y ahora cada gota cuenta. Bien cuidada, mantendrá la lámpara encendida toda la noche; malgastada, y la luz se apaga. Así que la aprietas contra ti y empiezas a subir.",
+ 14: "Tomas una lámpara de tormenta y un rollo de cuerda. Te dan algo de luz y una forma de atarte, pero no el haz, y no tienes aceite de verdad guardado. Igual necesitarás aceite de verdad, y pronto, o la torre queda a oscuras.",
+ 15: "El contramaestre Carrick conoce esta costa; la ha vigilado años. «No vayas por el sendero del acantilado», dice. «Parece rápido. Mata.» También te advierte del saqueador. «Cuida tu aceite, mantén la luz: eso es todo el trabajo de esta noche.»",
+ 16: "Acomodas al viejo Finch con una lámpara encendida y una manta, y despacio se le calma el temblor. «Bendito seas», dice, apretándote la mano. Prometes volver a verlo, y te vuelves hacia la tormenta.",
+ 17: "Sigues para mantener la luz; eso va primero, y el resto puede esperar un momento. Pero aún debes decidir cómo: asegurar aceite de verdad primero, o subir directo a la lámpara.",
+ 18: "La subida te agota: piernas ardiendo, pecho jadeando, el viento peleándote en cada escalón. Estás cerca de tu propio límite, y lo sabes. Si caes aquí, no queda nadie para mantener la luz. Así que ve despacio, y agárrate a la baranda.",
+ 19: "La costa despierta a sí misma. La gente empieza a moverse. Un hombre hace rodar un barril de aceite, una mujer saca leña seca, y un plan toma forma puerta por puerta. Ya no haces esto solo, y eso lo cambia todo.",
+ 20: "Nadie se mueve. Las puertas siguen cerradas, las caras se apartan de las ventanas: tienen miedo, y la gente con miedo calla. No puedes forzarlos. Así que te das la vuelta y sigues solo; es más difícil así, pero ese barco no puede esperar a que sean valientes.",
+ 21: "La luz está resuelta; ahora, la cala y ese barco. Hay dos caminos para bajar. El largo rodeando el cabo es seguro pero lento. El del acantilado, recto hacia abajo, es rápido, y un asesino con un viento así.",
+ 22: "Te tomas a pecho las palabras de Carrick. Cuidar bien el aceite, mantenerte lejos del acantilado, no fiarte del saqueador, y sostener la luz por encima de todo. Es un consejo sencillo, y bueno. Ahora solo tienes que seguirlo de verdad, aquí fuera en la oscuridad y el viento.",
+ 23: "Te sientes más firme por el buen gesto que hiciste; ayudar a alguien, por raro que parezca, también te afirma a ti. Tienes la cabeza más clara, las manos más seguras. Queda una noche dura por delante, pero te sientes capaz de afrontarla.",
+ 24: "Un hombre está de pie entre el oleaje, un farol balanceándose en su puño: el saqueador. Tiene aceite que vender y una espalda fuerte que ofrecer, y sonríe con demasiada facilidad. «La luz no es tu trabajo esta noche, amigo», dice. Ya conoces a los de su clase.",
+ 25: "Guías a un pequeño grupo hacia la luz. Caminando juntos, todos os sentís más fuertes; cargan aceite, leña, cuerda. «¡Por aquí!», gritas sobre el viento, y vienen: una buena sensación, en una hora difícil.",
+ 26: "El sendero del cabo es negro y duro, la lluvia corriendo por él, el viento empujándote la espalda, sin refugio en ninguna parte. Pero es firme bajo los pies, y va hacia donde necesitas ir. Así que sigues andando.",
+ 28: "Sales a la cornisa, y enseguida sientes que está mal. El vacío se abre abajo, negro y hondo; el viento golpea el acantilado y te tira del abrigo. Cada paso es una apuesta, y ahora estás ahí fuera, solo.",
+ 29: "La mecha del farol de mano está estropeada; da solo una llama baja y vacilante que no alcanza lejos. De poco sirve en una tormenta así. Tendrás que arreglártelas, o volver al almacén por uno mejor.",
+ 30: "El sendero sigue a lo largo del cabo, la tormenta peor a cada hora. Abajo, una casa baja tiene el mar entrando. Delante, el viento casi te tumba. Y hay un poste indicador, medio arrancado por el vendaval.",
+ 31: "Una barca pequeña está anegada en la rampa, un anciano atrapado en los cabos, el mar tirando de él: no puede soltarse. Si paras, pierdes tiempo; si no, la próxima ola grande puede llevárselo.",
+ 33: "Avanzas por lo peor de la tormenta, cada paso ya una pelea, la lluvia hiriéndote la cara. Delante hay opciones: el saqueador puede estar cerca, o la luz extraña sobre el agua, o puedes ir directo a la torre.",
+ 34: "Liberas al anciano, y la barca lo suelta. Se le llenan los ojos; te pone un impermeable seco en las manos. «Tómalo», dice, «por la molestia». Es poca cosa, pero dado de buena fe, y lo tomas y sigues.",
+ 35: "No puedes parar ahora, pero tampoco puedes dejarlos sin más. Así que prometes mandar ayuda. «¡Aguantad!», gritas. «Quedaos arriba, quedaos juntos; no os olvidaré.» Lo dices en serio, y luego te das la vuelta y vas.",
+ 36: "La costa enciende una hoguera de señal en el cabo: un barril ardiendo, lanzando luz y calor a la tormenta. La gente se agolpa cerca, los viejos y los débiles con lo mejor de él. No es el haz. Pero es una luz, y ahora es de todos.",
+ 37: "Casa por casa, la orilla asustada se vuelve una que funciona. Ahora la gente tiene tareas: uno atiende el fuego, otro recoge la cuerda, otro vigila el mar. El miedo se vuelve acción, y la acción le gana a la espera siempre.",
+ 38: "La tormenta te roe la voluntad. Una vocecita dice: para, métete dentro, descansa; nadie te culparía, y sería tan fácil. Pero piensas en ese barco sobre las rocas, y apartas la voz. Todavía no. No mientras la luz esté apagada.",
+ 39: "Llegas al poste indicador, pero el vendaval ha arrancado la mitad; apenas lo lees. Un brazo apunta a lo largo del sendero, el otro hacia el agua. ¿Por dónde? Tendrás que adivinar, y adivinar bien.",
+ 42: "Le das la espalda y lo dejas con el oleaje y su oficio frío. Da gusto alejarse. Te llama a gritos, pero no te vuelves. Los de su clase siempre encuentran a alguien, pero no a ti, y no esta noche.",
+ 43: "Tomas su aceite, su moneda; tus manos se cierran sobre ellos, y algo en ti ya lo sabe. Su sonrisa se ensancha. «Sabio», dice. Pero no se siente sabio. Se siente como una puerta cerrándose en algún lugar de la oscuridad.",
+ 44: "Le preguntas sin rodeos: ¿qué quiere de verdad? ¿Por qué debe quedarse apagada la luz? Sonríe y mira hacia el mar. «Los barcos entran en las rocas», dice. «El mar es generoso, después.» No dirá más, y eso, ahí mismo, es tu respuesta.",
+ 45: "Subes su aceite a la lámpara. Pero al verterlo, la llama se ahoga y escupe: el aceite está contaminado con agua de mar, y no alimenta la mecha. El haz vacila bajo y marrón. Te dio ruina, no ayuda.",
+ 46: "Abres la lata y el olor te golpea: salobre, aguado, cortado con agua. Este aceite jamás alimentará una llama; lo pagaste, y no vale nada. La duda en tus tripas tenía razón sobre él desde el principio.",
+ 47: "Lo buscas, pero el farol del saqueador ya se fue, bajando hacia la cala. Nunca te estuvo ayudando: esperaba la oscuridad, el naufragio, el frío regalo del mar. Te quedas ahí, engañado, con su aceite inútil en las manos.",
+ 48: "El saqueador se fue, la cala vacía: ahora solo la tormenta, la oscuridad, y lo que le entregaste por nada. Aprendiste una lección dura y pagaste de más por ella. Ahora sigues con lo poco que queda.",
+ 49: "La gente asustada le empuja sus monedas: las manos llenas de dinero, las voces rogando aceite, una salida. Y él lo toma, despacio, con esa sonrisa, eligiendo a quién ayudar según quién pueda pagar. Ahora ves el truco entero, claro y feo.",
+ 50: "Lejos en la cornisa, la cala parece por fin más cerca... ¿o no? Ya no estás seguro; la oscuridad engaña, el viento engaña, tus ojos cansados engañan. Estás calado y temblando. Pero avanzas al borde.",
+ 51: "La cornisa, el viento, el vacío negro abajo, y tu pie resbala en la roca mojada. Este es el momento: caer al borde en la oscuridad, o echarte atrás de él ahora, mientras aún puedes.",
+ 52: "Llegas a la cala al fin, calado y temblando, las manos desolladas, pero abajo. De algún modo, lo lograste. Ahora debes decidir: seguir adelante, agotado como estás, o enfrentar lo que perdiste por el camino.",
+ 53: "Te echas atrás del borde mientras aún puedes: la decisión dura y correcta. Haces el último tramo a gatas, y llegas al sendero tembloroso y lento. La noche se consume. Pero estás vivo, y aún puedes ayudar.",
+ 54: "Intentas atrancar la puerta contra el agua: un arcón arrastrado, sacos apilados, lo que puedas. Contiene un poco lo peor del mar. Pero no hay lámpara que dejarles, y un cuarto oscuro e inundado es un mal sitio para esperar. Tienes que elegir.",
+ 55: "Entregas tu propio abrigo y tu lámpara, y la familia se acurruca en torno a la pequeña llama, el alivio extendiéndose por sus caras. El niño deja de llorar al fin. «Gracias», dice la madre, una y otra vez. Ahora tienes menos con que resistir, pero hiciste lo correcto.",
+ 56: "Sin tu abrigo, el frío y la lluvia te encuentran rápido: los dientes castañeteando, los dedos entumeciéndose. Lo diste para ayudar, y lo harías otra vez; pero a la tormenta no le importa. Solo sigue azotando. Tienes que mantener la cabeza, y seguir moviéndote.",
+ 57: "Un desconocido te hace señas hacia un portal. «Solo un minuto», dicen. «Fuera de la lluvia; recupera el aliento.» Es cálido y seco, y tu cuerpo te ruega quedarte. Pero un minuto puede volverse una hora, y la luz sigue apagada.",
+ 58: "Avanzas hacia la tormenta, calado hasta los huesos, el viento peleando cada paso, la lluvia cegándote. Cada paso es una pequeña batalla, pero los sigues dando, uno tras otro. Despacio está bien esta noche. Lo que mata es pararse.",
+ 60: "Alguien señala al cabo: una figura ha salido por ahí, hacia la tormenta, hacia el punto y sola. Por ese lado no hay más que roca, viento y el vacío negro. Si nadie va tras ella, no volverá.",
+ 61: "La encuentras aferrada a las rocas, medio ahogada y perdida, el viento desgarrándole el abrigo. No parece reconocer tu cara. La agarras firme del brazo. «¡Ven conmigo!», gritas sobre la tormenta. «Por aquí. Despacio ahora.»",
+ 62: "No puedes hacerlo todo a la vez, y la luz es la que más te necesita. Así que mandas aviso de que otro vaya tras ella, y sigues. Te sienta mal, pero tienes que elegir, y eliges la luz.",
+ 63: "La llevas sana y salva a las casas, donde su familia grita de alivio. Te envuelven en un abrigo seco y te hacen un sitio junto al fuego. «Gracias», repiten, porque una bondad nunca se queda quieta; se mueve.",
+ 64: "Miras la costa: toda oscura, toda rugiente. Grandes olas rompen blancas en las rocas, y no se ve más luz que el barco lejano y en apuros. Toda la orilla parece contener el aliento, esperando que amaine la tormenta. Y tú también, te das cuenta.",
+ 65: "El viento sube a su peor momento y casi te arranca de pie. Te agachas y te aferras, el aire lleno de rociones y espuma arrancada. Cuesta ver, cuesta respirar. Esta es la hora de sobrevivir: pásala, y ese barco aún tiene una posibilidad.",
+ 67: "Tam te pone la última lámpara seca en las manos. «Para la subida», dice. «Ve; yo me quedo en la radio.» Tiene la cara gris de preocupación. Esta es la ayuda que tiene para dar, y la da. La tomas, y le das las gracias.",
+ 68: "En el almacén de aceite, la gente se lanza por las latas: voces subiendo, manos agarrando, el miedo prendiendo y extendiéndose rápido. Un empujón más y es una pelea. Puedes intentar calmarlos y repartir con justicia, o abrirte paso a la fuerza hasta el aceite.",
+ 70: "Lejos, pasado el cabo, una segunda luz sube y baja. Está donde ningún barco debería estar esta noche, apareciendo y ocultándose y apareciendo otra vez en el oleaje. Nadie sabe explicarlo. Algo hay ahí fuera, o alguien.",
+ 71: "Bajas a la cala y gritas a la oscuridad. No responde más que el mar, y entonces lo ves: la silueta de un barco, baja sobre las rocas, medio tragada por las olas. Alguien armó esa luz. Alguien está ahí fuera.",
+ 72: "Vadeas hasta las rocas. Allí, en el barco anegado, hay un viejo pescador —Ash— enredado en los cabos y apenas resistiendo. El mar tira de ellos con cada ola. No hay tiempo que perder.",
+ 73: "Vuelves a gritar a la oscuridad, y por un momento no hay nada. Luego vuelve una voz, débil y desgarrada por el viento: «¡Aquí! ¡Aquí fuera!» Alguien está en las rocas, y necesita ayuda. Ya no puedes marcharte de esto.",
+ 74: "Sacas a Ash de los cabos, lo subes por las rocas y lo envuelves en tu abrigo. Despacio vuelve en sí, agarrándote el brazo. «La luz», jadea. «Mantén la luz. Puede haber otros ahí fuera.»",
+ 75: "Te vuelves para correr a por ayuda, y te detienes. Aquí fuera no hay ayuda; no hasta el alba. Ni bote salvavidas, ni tripulación, nadie que venga. Eres tú o nadie, y Ash también lo sabe. Sus ojos te siguen por las rocas.",
+ 76: "Ash te mira, con los ojos más claros ahora. «La guardafaro, arriba en la torre... ¿Nan?», dice. «Es mi madre. No hablamos desde hace años. No desde... bueno. Es una larga historia, y una noche fría para ella.»",
+ 77: "Decides juntarlos cara a cara antes de que acabe la noche: Ash y la vieja Nan, después de todos estos años. Es poca cosa, al lado de la luz y la tormenta. Pero no es nada; algunas puertas siguen cerradas años solo porque nadie se atreve a llamar. Tú sí.",
+ 78: "El barco está destrozado, medio hundido, el mar trabajándolo con cada ola: no durará mucho. Y sin embargo alguien encendió una luz en él, alguien salió a estas rocas en la oscuridad. Alguien está aquí.",
+ 79: "Vadeas más cerca y ves el nombre en la proa, y lo reconoces. Es el propio barco de Nan, el que se perdió hace años, o eso decían siempre. Entonces, bajo el casco roto, un sonido débil: una tos. Alguien sigue vivo ahí dentro.",
+ 80: "El saqueador sube una última vez, el farol balanceándose. «¿Aún peleando?», dice. «Déjala apagarse. Última oportunidad de estar en el bando ganador, amigo.» La misma sonrisa, la misma mentira. Sabe que estás agotado, y cuenta con ello. Ahora eliges, para siempre.",
+ 90: "Estás de vuelta en la torre, calado, lo último de la peor tormenta golpeando el cristal. Abajo, Nan yace gris al pie de la escalera; arriba, la lámpara arde baja. Esta es la hora que cuenta; lo que hagas ahora, hazlo bien. Ese barco está cerca de las rocas.",
+ 91: "Llegas a la lámpara: la llama baja, la gran lente quieta. Pasado el cristal, las luces del barco están cerca de las rocas ahora, demasiado cerca. Tienes que poner el haz pleno y girando, y ya. Todo lo que hiciste esta noche se reduce a esto.",
+ 92: "Entonces llega ayuda a la torre tras de ti: manos, aceite, cabezas serenas, gente que conoce la luz. Ya no estás solo con esto; hay otros para compartir el peso. Es como soltar una carga pesada, y por fin sueltas el aire.",
+ 93: "Ahora mantienes el haz, y lo que puedas hacer depende de lo que cargaste. Con aceite de verdad, tienes de sobra con qué trabajar; sin él, debes avivar hasta el último parpadeo de la llama. De un modo u otro, empiezas.",
+ 94: "Bajas a ver a Nan, y sus ojos se abren apenas: miedo en ellos, luego, al verte, un poco menos. «La mantuviste encendida», susurra. «Así es», le dices. «Ahora descansa. Yo tengo la luz.»",
+ 95: "El aceite lo consigue. Recortas la mecha a punto, giras la gran lente como un reloj, y el haz barre pleno y dorado el agua negra. Una luz en toda esa oscuridad. Para esto es la torre; lo sabías, y ahora lo ves.",
+ 96: "No tienes aceite de verdad que verter, así que avivas la llama que hay. La proteges de la corriente con tu propio cuerpo, alimentándola con restos, aliento, voluntad. Arde baja y fina. Puede bastar. Puede que no. Pero no dejarás que se apague.",
+ 97: "La llama está baja y fallando, y temes que protegerla no baste. Has hecho todo lo posible con lo que tienes, pero puede no aguantar. Necesitas más: aceite, o manos, o ambos, y pronto.",
+ 98: "Miras afuera y lo ves. Lejos en el mar, una luz destella y cae, donde ningún barco debería estar, apareciendo y ocultándose y apareciendo otra vez. Te tira del ojo, y de algo dentro de ti. Alguien está ahí fuera.",
+ 99: "La luz sobre el agua aparece de nuevo, donde todos juran que ningún barco estaría. Pero una luz significa una mano que la encendió, y una mano significa una persona, y una persona ahí fuera esta noche está en apuros de verdad. Lo presientes.",
+ 100: "Ahora viene el largo aguante: mantienes el haz girando, mantienes a Nan abrigada y respirando, vigilas el agua negra hora tras hora. No es emocionante, solo trabajo constante, duro, cuidadoso. Pero el trabajo constante es lo que salva a la gente, así que lo haces, y no paras.",
+ 101: "Y entonces, al fin, cambia. El viento baja un tono, la lluvia amaina, el cielo grisea en el borde del mar. Y una luz dobla el cabo: el bote salvavidas, al fin fuera. Sostuviste la luz hasta la primera luz. Lo lograste.",
+ 102: "Esta es la peor hora, la de justo antes del alivio. La tormenta aún no ha cedido; los brazos te duelen de la lente; los ojos te arden. Pero sientes la noche empezando a girar. Aguanta. Aguanta un poco más. El final está cerca ya.",
+ 103: "A lo largo del cabo los ves: lámparas, figuras oscuras moviéndose, hogueras de señal ardiendo bajas contra la lluvia. Otra gente, fuera también. La costa pasó esta noche igual, y no fuiste el único de guardia. Eso te calienta, de algún modo.",
+ 104: "Al fin, el bote salvavidas: su lámpara y un penacho de rocío doblando el cabo, recto contra el mar. Ayuda de verdad, a velocidad de verdad. Agarras la baranda y miras, las piernas temblando bajo ti. Ya casi acaba. Casi. Te permites creerlo.",
+ 105: "El alba sube sobre el mar bravo, la luz volviéndose gris, luego pálida y limpia, la tormenta agotándose ola a ola. Los grandes oleajes aún corren, pero lo peor ha pasado. La costa, tan cruel toda la noche, es casi amable ahora. Te quedas a mirar, y respiras.",
+ 106: "Entonces llega: la primera gaviota, sobre el agua gris, cabalgando el viento con soltura, como si no hubiera habido tormenta alguna. Tras la noche que has tenido, parece absurdo, y hermoso. La miras irse. Lo lograste. Lo lograron todos.",
+ 107: "Desde la torre miras el agua, donde a lo lejos una luz sube y baja en el oleaje y crece despacio. Algo viene al fin, aún demasiado lejos para distinguirlo. Pero una luz ahí fuera significa una mano, y una mano, ahora mismo, significa esperanza. No le quitas ojo, y esperas.",
+ 110: "La primera luz llega al fin, y la noche suma lo que es. Lo que hiciste arriba en esa torre, en la tormenta, vuelve a casa ahora: parte para estar orgulloso, parte no. Aquí es donde todo se aclara.",
+ 111: "La noche suma, no siempre con un gran acto, sino con muchos pequeños. Lo que mantuviste, lo que negaste, por quién subiste. Todo cuenta al final; todo hizo de la noche lo que fue. Entonces, ¿en qué quedó la noche?",
+ 112: "Hay más que sopesar; la noche guardó otras cosas también. Un desconocido al que ayudaste. Un abrigo y una lámpara que diste con mano abierta. Pequeñas decisiones tomadas en la tormenta, cuando pasar de largo habría sido fácil. Eso tiene su propio peso. ¿En qué quedó?",
+ 113: "¿Y con qué te deja la noche? Quizá no con una victoria limpia. Quizá solo con el hecho de que subiste, de que lo intentaste. Cuando estaba oscuro y bravo y era fácil atrancar la puerta, no lo hiciste. Eso vale algo. Siempre valió.",
+ 114: "Pero no toda noche acaba bien. Algunas decisiones cuestan más de lo que sabías; algunas puertas, una vez abiertas, no se vuelven a cerrar. Este es el final duro de la noche, donde vuelve a casa lo peor. No es fácil de mirar, pero es verdad. Así que mira.",
+}
+
+def main():
+    data = json.load(open(OUT, encoding="utf-8")); a = 0
+    for nid, t in G.items():
+        k = str(nid)
+        if k not in data:
+            data[k] = t; a += 1
+    data = {k: data[k] for k in sorted(data, key=lambda x: int(x))}
+    json.dump(data, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"the-keeper/es.json: {len(data)} (+{a})")
+
+if __name__ == "__main__":
+    main()
