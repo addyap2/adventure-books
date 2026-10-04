@@ -1233,9 +1233,9 @@
     {
       "id": 41,
       "text": {
-        "A2": "[stub] The offer is a hook. He leans in: 'That blossom's lost anyway. Let the dark do its work, and there's a share in it for you.'",
-        "B1": "[stub] The offer is a hook. He leans in: 'That blossom's lost anyway. Let the dark do its work, and there's a share in it for you.'",
-        "B2": "[stub] The offer is a hook. He leans in: 'That blossom's lost anyway. Let the dark do its work, and there's a share in it for you.'"
+        "A2": "The offer is a hook, and you feel it set. He leans in close. \"That orchard's lost already,\" he says, low. \"Let the frost take it. There's money in it for you.\" It is a cruel thing to say. And it is meant to work.",
+        "B1": "The offer is a hook, and you feel it set. He leans in close. \"That orchard's lost already,\" he says, low. \"Let the frost take it — and there's a share in it for you.\" It's a cruel thing to say. And it is meant to work on your fear.",
+        "B2": "The offer is a hook, and you feel it set in you. He leans in close. \"That orchard's lost already,\" he says, low and easy. \"Let the frost do its work — and there's a good share in it for you.\" It is a cruel thing to say to you tonight. And every word of it is meant to work on your fear."
       },
       "choices": [
         {
@@ -1251,9 +1251,9 @@
         },
         {
           "text": {
-            "A2": "That line is the tell — refuse.",
-            "B1": "That line is the tell — refuse.",
-            "B2": "That line is the tell — refuse."
+            "A2": "That's the tell — refuse.",
+            "B1": "That's the tell — refuse.",
+            "B2": "That's the tell — refuse."
           },
           "goto": 42,
           "sets": [
@@ -1281,9 +1281,9 @@
     {
       "id": 42,
       "text": {
-        "A2": "[stub] You leave him to the frost.",
-        "B1": "[stub] You leave him to the frost.",
-        "B2": "[stub] You leave him to the frost."
+        "A2": "You turn your back and leave him to his cold trade. It feels good to walk away. He calls after you. You don't turn round. His kind always finds someone. But it won't be you tonight.",
+        "B1": "You turn your back on him and leave him to his cold trade. It feels good to walk away. He calls after you, but you don't turn round. His kind always finds someone, in the end. But it won't be you, not tonight.",
+        "B2": "You turn your back on him and leave him to the dark and his cold trade. It feels good to walk away from it. He calls after you, but you don't turn round. His kind always finds someone, in the end — a frightened person, a bad night. But it won't be you, and it won't be tonight."
       },
       "choices": [
         {
@@ -1296,9 +1296,9 @@
         },
         {
           "text": {
-            "A2": "To the oil store instead.",
-            "B1": "To the oil store instead.",
-            "B2": "To the oil store instead."
+            "A2": "To the fuel store instead.",
+            "B1": "To the fuel store instead.",
+            "B2": "To the fuel store instead."
           },
           "goto": 9
         }
@@ -1307,16 +1307,16 @@
     {
       "id": 43,
       "text": {
-        "A2": "[stub] You take his oil, his coin. Something in you already knows.",
-        "B1": "[stub] You take his oil, his coin. Something in you already knows.",
-        "B2": "[stub] You take his oil, his coin. Something in you already knows."
+        "A2": "You take his oil and his money. Your hands close on them. And something in you already knows. His smile widens. \"Wise,\" he says. But it does not feel wise. It feels like a door shutting.",
+        "B1": "You take his oil and his money. Your hands close on them, and something in you already knows. His smile widens. \"Wise,\" he says. But it doesn't feel wise at all. It feels like a door quietly shutting.",
+        "B2": "You take his oil and his money, and your hands close on them before your head can argue. Something in you already knows. His smile widens. \"Wise,\" he says. But it doesn't feel wise at all. It feels, if anything, like a door shutting somewhere behind you. You cannot take it back now."
       },
       "choices": [
         {
           "text": {
-            "A2": "Carry it up.",
-            "B1": "Carry it up.",
-            "B2": "Carry it up."
+            "A2": "Carry it out to the pots.",
+            "B1": "Carry it out to the pots.",
+            "B2": "Carry it out to the pots."
           },
           "goto": 45
         },
@@ -1333,9 +1333,9 @@
     {
       "id": 44,
       "text": {
-        "A2": "[stub] He won't quite say why he wants the light left dark.",
-        "B1": "[stub] He won't quite say why he wants the light left dark.",
-        "B2": "[stub] He won't quite say why he wants the light left dark."
+        "A2": "You ask him straight. What does he really want? Why should the orchard fail? He smiles and looks away. \"Land comes cheap after a bad year,\" he says. \"The frost is kind — to a buyer.\"",
+        "B1": "You ask him straight: what does he really want, and why should the orchard fail? He smiles and looks off down the lane. \"Land comes cheap after a bad year,\" he says. \"A frost like this is a kindness — to a buyer like me.\"",
+        "B2": "You ask him straight out: what is it he really wants, and why should the orchard be left to fail? He smiles and looks off down the dark lane. \"Land comes cheap after a bad year,\" he says, unhurried. \"A frost like this one is a real kindness — to a buyer like me.\""
       },
       "choices": [
         {
@@ -1365,9 +1365,9 @@
     {
       "id": 45,
       "text": {
-        "A2": "[stub] The oil is fouled with nightwater; it won't feed the flame, and the fires gutters low.",
-        "B1": "[stub] The oil is fouled with nightwater; it won't feed the flame, and the fires gutters low.",
-        "B2": "[stub] The oil is fouled with nightwater; it won't feed the flame, and the fires gutters low."
+        "A2": "You carry his oil out to the pots. But when you pour it, the flame chokes and spits. The oil is cut with water. It won't feed the fire. The flames sink low and brown.",
+        "B1": "You carry his oil out to the pots. But when you pour it in, the flame chokes and spits. The oil is thin, cut with water — it won't feed the fire. The flames sink low and brown and useless.",
+        "B2": "You carry his oil out to the pots and tip it in. But the moment it reaches the flame, the fire chokes and spits. The oil is thin and watered, cut to make it stretch — it will not feed a flame at all. Down the rows, the fires sink low and brown and useless."
       },
       "choices": [
         {
@@ -1380,9 +1380,9 @@
         },
         {
           "text": {
-            "A2": "Up to Edith with nothing.",
-            "B1": "Up to Edith with nothing.",
-            "B2": "Up to Edith with nothing."
+            "A2": "Out to the rows with nothing.",
+            "B1": "Out to the rows with nothing.",
+            "B2": "Out to the rows with nothing."
           },
           "goto": 90
         }
@@ -1391,16 +1391,16 @@
     {
       "id": 46,
       "text": {
-        "A2": "[stub] The oil smells wrong — salt, thin, cut.",
-        "B1": "[stub] The oil smells wrong — salt, thin, cut.",
-        "B2": "[stub] The oil smells wrong — salt, thin, cut."
+        "A2": "You open the can, and the smell hits you. Thin, cut with water. This oil will never feed a flame. You paid for it, and it is worthless. The doubt in your gut was right.",
+        "B1": "You open the can, and the smell hits you — thin, sour, cut with water. This oil will never feed a flame. You paid good money for it, and it's worthless. The doubt in your gut was right all along.",
+        "B2": "You open the can, and the smell hits you at once — thin and sour, cut down with water to stretch it. This oil will never feed a flame; not one pot will light on it. You paid good money for it, and it is worthless. The doubt in your gut, it turns out, was right all along."
       },
       "choices": [
         {
           "text": {
-            "A2": "Up to the fire.",
-            "B1": "Up to the fire.",
-            "B2": "Up to the fire."
+            "A2": "Out to the rows.",
+            "B1": "Out to the rows.",
+            "B2": "Out to the rows."
           },
           "goto": 90
         },
@@ -1417,24 +1417,24 @@
     {
       "id": 47,
       "text": {
-        "A2": "[stub] The buyer's lantern is already gone down the far rows. He was never helping.",
-        "B1": "[stub] The buyer's lantern is already gone down the far rows. He was never helping.",
-        "B2": "[stub] The buyer's lantern is already gone down the far rows. He was never helping."
+        "A2": "You look for him, but he is already gone. His lantern is far down the lane. He was never helping you. He was waiting for the frost, and the failed year, and the cheap land. You were fooled.",
+        "B1": "You look for him, but the buyer's lantern is already gone, off down the lane. He was never helping you at all. He was waiting for the frost, the failed harvest, the cheap land after. You were fooled, plain and simple.",
+        "B2": "You look for him, but the buyer's lantern is already gone, bobbing away down the lane. He was never helping you at all, not for a moment. He was only waiting for the frost, the failed harvest, and the cheap land that comes after a ruined year. You were fooled, plain and simple."
       },
       "choices": [
         {
           "text": {
-            "A2": "Up to the fire, fooled.",
-            "B1": "Up to the fire, fooled.",
-            "B2": "Up to the fire, fooled."
+            "A2": "Out to the rows, fooled.",
+            "B1": "Out to the rows, fooled.",
+            "B2": "Out to the rows, fooled."
           },
           "goto": 90
         },
         {
           "text": {
-            "A2": "Fling the fouled can into the frost.",
-            "B1": "Fling the fouled can into the frost.",
-            "B2": "Fling the fouled can into the frost."
+            "A2": "Fling the fouled can down.",
+            "B1": "Fling the fouled can down.",
+            "B2": "Fling the fouled can down."
           },
           "goto": 48
         }
@@ -1443,16 +1443,16 @@
     {
       "id": 48,
       "text": {
-        "A2": "[stub] The buyer's gone. The far rows's empty. Only the frost, and what you gave him.",
-        "B1": "[stub] The buyer's gone. The far rows's empty. Only the frost, and what you gave him.",
-        "B2": "[stub] The buyer's gone. The far rows's empty. Only the frost, and what you gave him."
+        "A2": "He is gone, the lane empty. There is only the cold now, and the dark, and what you gave him for nothing. You learned a hard lesson. And you paid far too much for it. Now you go on with less.",
+        "B1": "He's gone, and the lane is empty — only the cold now, the dark, and what you handed him for nothing. You learned a hard lesson tonight. And you paid far too much for it. Now you go on with less than you started.",
+        "B2": "He is gone, and the lane is empty — only the cold now, the dark, and the thought of what you handed him for nothing at all. You learned a hard lesson tonight, about who smiles and why. And you paid far too much for the learning. Now you have to go on with less than you started with."
       },
       "choices": [
         {
           "text": {
-            "A2": "Up to the fire.",
-            "B1": "Up to the fire.",
-            "B2": "Up to the fire."
+            "A2": "Out to the rows.",
+            "B1": "Out to the rows.",
+            "B2": "Out to the rows."
           },
           "goto": 90
         },
@@ -1469,9 +1469,9 @@
     {
       "id": 49,
       "text": {
-        "A2": "[stub] The frightened folk press their coins on him; you see the whole trick.",
-        "B1": "[stub] The frightened folk press their coins on him; you see the whole trick.",
-        "B2": "[stub] The frightened folk press their coins on him; you see the whole trick."
+        "A2": "The frightened people press their money on him. Hands full of coins, voices begging for oil. And he takes it, slow, with that smile. He chooses who to help by who pays most.",
+        "B1": "The frightened folk press their coins on him. Hands full of money, voices begging for oil. He takes it slow, with that same smile. He chooses who to help by who can pay the most.",
+        "B2": "The frightened folk press their coins on him. Hands full of money, voices begging for oil, for warmth, for any way through the night. He takes it slow and easy, with that same smile. He chooses who to help and who to pass by. And he chooses by who can pay the most."
       },
       "choices": [
         {
@@ -1498,24 +1498,24 @@
     {
       "id": 50,
       "text": {
-        "A2": "[stub] Far out on the ledge, the far rows at last seems closer — or does it?",
-        "B1": "[stub] Far out on the ledge, the far rows at last seems closer — or does it?",
-        "B2": "[stub] Far out on the ledge, the far rows at last seems closer — or does it?"
+        "A2": "Far out on the ice, the far rows seem nearer at last. Or do they? You can't be sure now. The dark plays tricks. Your tired eyes play tricks. And you are a long way from either side.",
+        "B1": "Far out on the ice, the far rows seem nearer at last — or do they? You can't be sure any more. The dark plays tricks, and so do your tired eyes. And you're a long way now from either bank.",
+        "B2": "Far out on the ice, the far rows seem a little nearer at last — or do they? You can't be sure of anything any more. The dark plays tricks on you, and so do your cold, tired eyes. And you are a long way out now, a long way from either bank."
       },
       "choices": [
         {
           "text": {
-            "A2": "Nearly down.",
-            "B1": "Nearly down.",
-            "B2": "Nearly down."
+            "A2": "Nearly across.",
+            "B1": "Nearly across.",
+            "B2": "Nearly across."
           },
           "goto": 52
         },
         {
           "text": {
-            "A2": "The rock crumbles under you.",
-            "B1": "The rock crumbles under you.",
-            "B2": "The rock crumbles under you."
+            "A2": "The ice cracks under you.",
+            "B1": "The ice cracks under you.",
+            "B2": "The ice cracks under you."
           },
           "goto": 51
         }
@@ -1524,16 +1524,16 @@
     {
       "id": 51,
       "text": {
-        "A2": "[stub] The ledge, the wind, the black drop; a choice in a heartbeat.",
-        "B1": "[stub] The ledge, the wind, the black drop; a choice in a heartbeat.",
-        "B2": "[stub] The ledge, the wind, the black drop; a choice in a heartbeat."
+        "A2": "The ice, the dark, the deep water below — and your foot breaks through. This is the moment. Go down into the black water. Or throw yourself back from the crack, while you still can.",
+        "B1": "The ice, the dark, the deep water below — and a crack runs out from under your foot. This is the moment. You can go down into the freezing water. Or you can throw yourself back from the crack, while you still can.",
+        "B2": "The ice, the dark, the deep black water below — and a long crack runs out from under your foot with a sound like a shot. This is the moment, and there is no other. You can go down into the freezing water. Or you can throw yourself back from the crack, right now, while you still can."
       },
       "choices": [
         {
           "text": {
-            "A2": "You go off the edge.",
-            "B1": "You go off the edge.",
-            "B2": "You go off the edge."
+            "A2": "You go through the ice.",
+            "B1": "You go through the ice.",
+            "B2": "You go through the ice."
           },
           "goto": 129,
           "requires": [
@@ -1542,9 +1542,9 @@
         },
         {
           "text": {
-            "A2": "Throw yourself back from the edge while you can.",
-            "B1": "Throw yourself back from the edge while you can.",
-            "B2": "Throw yourself back from the edge while you can."
+            "A2": "Throw yourself back while you can.",
+            "B1": "Throw yourself back while you can.",
+            "B2": "Throw yourself back while you can."
           },
           "goto": 53
         }
@@ -1553,9 +1553,9 @@
     {
       "id": 52,
       "text": {
-        "A2": "[stub] You reach the far rows, frozen and shaking, but down.",
-        "B1": "[stub] You reach the far rows, frozen and shaking, but down.",
-        "B2": "[stub] You reach the far rows, frozen and shaking, but down."
+        "A2": "You reach the far rows at last. You are soaked, shaking, your hands torn. But you made it across. Now you must decide. Push on, spent as you are. Or face what you dropped on the ice.",
+        "B1": "You reach the far rows at last, soaked and shaking, your hands torn raw — but across. Somehow, you made it. Now you have to decide: push on, spent as you are, or face what you lost out on the ice.",
+        "B2": "You reach the far rows at last, soaked and shaking, your hands torn raw on the ice — but down, and across. Somehow, against the odds, you made it. Now you have to decide what comes next: push on, spent as you are, or face what you dropped out on the ice in the scramble."
       },
       "choices": [
         {
@@ -1568,9 +1568,9 @@
         },
         {
           "text": {
-            "A2": "You lost the oil in the scramble.",
-            "B1": "You lost the oil in the scramble.",
-            "B2": "You lost the oil in the scramble."
+            "A2": "You dropped the oil on the ice.",
+            "B1": "You dropped the oil on the ice.",
+            "B2": "You dropped the oil on the ice."
           },
           "goto": 96
         }
@@ -1579,16 +1579,16 @@
     {
       "id": 53,
       "text": {
-        "A2": "[stub] You crawl back to the path, shaken, the night burning away.",
-        "B1": "[stub] You crawl back to the path, shaken, the night burning away.",
-        "B2": "[stub] You crawl back to the path, shaken, the night burning away."
+        "A2": "You throw yourself back from the crack, while you still can. It is the hard, right choice. You crawl the last stretch on hands and knees. You reach the bank shaken and slow. The night is not lost. But you lost time.",
+        "B1": "You throw yourself back from the crack while you still can — the hard, right choice. You crawl the last stretch on hands and knees, and reach the bank shaken and slow. The night isn't lost. But it cost you time you'll miss.",
+        "B2": "You throw yourself back from the crack while you still can — the hard choice, and the right one. You crawl the last stretch on your hands and knees, and reach the bank at last, shaken and slow and soaked through. The night is not lost. But it has cost you time you are going to miss before dawn."
       },
       "choices": [
         {
           "text": {
-            "A2": "The long path after all.",
-            "B1": "The long path after all.",
-            "B2": "The long path after all."
+            "A2": "The long lane after all.",
+            "B1": "The long lane after all.",
+            "B2": "The long lane after all."
           },
           "goto": 26
         },
@@ -1605,16 +1605,16 @@
     {
       "id": 54,
       "text": {
-        "A2": "[stub] You try to bank the door against the water, but there's no fire to give.",
-        "B1": "[stub] You try to bank the door against the water, but there's no fire to give.",
-        "B2": "[stub] You try to bank the door against the water, but there's no fire to give."
+        "A2": "You try to get their stove going. You block the worst of the draughts with sacks. It holds back a little of the cold. But there is no lamp to leave them. And the night is far from over.",
+        "B1": "You try to get their stove going, and block the worst of the draughts with sacks and an old chest. It holds back a little of the cold. But there's still no lamp to leave them, and the night is far from over.",
+        "B2": "You try to get their stove going again, and pile sacks and an old chest against the worst of the draughts. It holds a little of the cold back, enough to matter. But there is still no lamp to leave them, and the long night is far from over for any of you."
       },
       "choices": [
         {
           "text": {
-            "A2": "Give them your own fire and coat.",
-            "B1": "Give them your own fire and coat.",
-            "B2": "Give them your own fire and coat."
+            "A2": "Give them your own lamp and coat.",
+            "B1": "Give them your own lamp and coat.",
+            "B2": "Give them your own lamp and coat."
           },
           "goto": 55,
           "sets": [
@@ -1634,9 +1634,9 @@
     {
       "id": 55,
       "text": {
-        "A2": "[stub] You hand over your own coat and fire; the family huddle, weak with relief.",
-        "B1": "[stub] You hand over your own coat and fire; the family huddle, weak with relief.",
-        "B2": "[stub] You hand over your own coat and fire; the family huddle, weak with relief."
+        "A2": "You hand over your own coat and lamp. The family huddle round the small flame. Relief spreads across their faces. The child stops crying at last. \"Thank you,\" the mother says. Then she points you to a light out in the trees.",
+        "B1": "You hand over your own coat and lamp, and the family huddle round the small flame, relief spreading across their faces. The child stops crying at last. \"Thank you,\" the mother says — and then she points you toward a light, out among the far trees.",
+        "B2": "You hand over your own coat and your own lamp, and the family huddle close round the small flame, relief spreading slowly across their faces. The child stops crying at last. \"Thank you,\" the mother says, over and over — and then she points you toward something: a light, out among the far trees, where no one should be."
       },
       "choices": [
         {
@@ -1649,9 +1649,9 @@
         },
         {
           "text": {
-            "A2": "They point you to the light among the far trees.",
-            "B1": "They point you to the light among the far trees.",
-            "B2": "They point you to the light among the far trees."
+            "A2": "Ask about the light in the trees.",
+            "B1": "Ask about the light in the trees.",
+            "B2": "Ask about the light in the trees."
           },
           "goto": 70
         }
@@ -1660,9 +1660,9 @@
     {
       "id": 56,
       "text": {
-        "A2": "[stub] Without your coat, the cold and wet find you fast.",
-        "B1": "[stub] Without your coat, the cold and wet find you fast.",
-        "B2": "[stub] Without your coat, the cold and wet find you fast."
+        "A2": "Without your coat, the cold finds you fast. Your teeth chatter. Your fingers go stiff. You gave it to help, and you would do it again. But the frost does not care about that. It just bites.",
+        "B1": "Without your coat, the cold and damp find you fast — teeth chattering, fingers going stiff. You gave it away to help, and you'd do it again. But the frost doesn't care about any of that. It just bites harder.",
+        "B2": "Without your coat, the cold finds you fast and deep — teeth chattering, fingers going stiff and clumsy. You gave it away to help someone with less, and you would do it again tomorrow. But the frost doesn't care about any of that. It simply bites, and goes on biting. You will feel this choice for hours yet."
       },
       "choices": [
         {
@@ -1686,9 +1686,9 @@
     {
       "id": 57,
       "text": {
-        "A2": "[stub] A stranger dark you into a doorway, out of the rain for a minute.",
-        "B1": "[stub] A stranger dark you into a doorway, out of the rain for a minute.",
-        "B2": "[stub] A stranger dark you into a doorway, out of the rain for a minute."
+        "A2": "A stranger waves you into a warm doorway. \"Just a minute,\" they say. \"Get out of the cold. Catch your breath.\" It is warm and dry, and your body begs you to stay. But a minute can turn into an hour.",
+        "B1": "A stranger waves you into a lit doorway. \"Just a minute,\" they say. \"Out of the cold — catch your breath.\" It's warm and dry, and your whole body begs you to stay. But a minute like this can quietly slide into an hour.",
+        "B2": "A stranger waves you into a lit, warm doorway. \"Just a minute,\" they say kindly. \"Get out of the cold, catch your breath.\" It is warm and dry inside, and your whole exhausted body begs you to stay. But a minute like this one can quietly slide into an hour, and an hour is more than the blossom has."
       },
       "choices": [
         {
@@ -1712,9 +1712,9 @@
     {
       "id": 58,
       "text": {
-        "A2": "[stub] You press on into the frost, frozen to the bone.",
-        "B1": "[stub] You press on into the frost, frozen to the bone.",
-        "B2": "[stub] You press on into the frost, frozen to the bone."
+        "A2": "You press on into the frost, chilled to the bone. The cold fights every step. Your eyes water and sting. Each step is a small battle. But you keep them coming, one after another.",
+        "B1": "You press on into the frost, chilled to the bone, the cold fighting every step, your eyes watering and stinging. Each step is a small battle on its own. But you keep them coming, one after another, toward the rows.",
+        "B2": "You press on into the frost, chilled to the bone now, the cold fighting you for every single step, your eyes watering and stinging in the still air. Each step is a small battle fought and won on its own. But you keep them coming, one after another after another, toward the waiting rows."
       },
       "choices": [
         {
@@ -1738,9 +1738,9 @@
     {
       "id": 60,
       "text": {
-        "A2": "[stub] Someone points to the head: a figure has gone out toward the ridge in the frost.",
-        "B1": "[stub] Someone points to the head: a figure has gone out toward the ridge in the frost.",
-        "B2": "[stub] Someone points to the head: a figure has gone out toward the ridge in the frost."
+        "A2": "Someone points out toward the far trees. A figure went that way, alone, into the dark. Out there lies only cold and the deep frost. If no one goes after them, they may not come back.",
+        "B1": "Someone points out toward the far trees: a figure has gone out that way, alone, into the cold and the dark. Out there lies nothing but frost and the low, killing ground. If no one goes after them, they may not come back.",
+        "B2": "Someone points out toward the far trees: a small figure has gone out that way, alone, into the cold and the dark. Out there lies nothing but hard frost and the low ground where the cold pools deepest. If no one goes after them tonight, they may simply not come back at all."
       },
       "choices": [
         {
@@ -1756,9 +1756,9 @@
         },
         {
           "text": {
-            "A2": "No time — the light first.",
-            "B1": "No time — the light first.",
-            "B2": "No time — the light first."
+            "A2": "No time — the fires first.",
+            "B1": "No time — the fires first.",
+            "B2": "No time — the fires first."
           },
           "goto": 62
         }
@@ -1767,9 +1767,9 @@
     {
       "id": 61,
       "text": {
-        "A2": "[stub] You find them clinging in the low ground, half-freezeed and lost.",
-        "B1": "[stub] You find them clinging in the low ground, half-freezeed and lost.",
-        "B2": "[stub] You find them clinging in the low ground, half-freezeed and lost."
+        "A2": "You find them among the far trees, half-frozen and lost. The cold has them, and they don't seem to know your face. You take a firm hold of their arm. \"Come with me,\" you say. \"You're all right now.\"",
+        "B1": "You find them among the far trees, half-frozen and lost, the cold tearing at them. They don't seem to know your face at all. You take a firm hold of their arm. \"Come with me,\" you say. \"You're all right now. I've got you.\"",
+        "B2": "You find them out among the far trees, half-frozen and badly lost, the cold tearing at their thin coat. They don't seem to know your face, or quite where they are. You take a firm, steady hold of their arm. \"Come with me,\" you say, as gently as you can. \"You're all right now. I've got you.\""
       },
       "choices": [
         {
@@ -1782,9 +1782,9 @@
         },
         {
           "text": {
-            "A2": "On to the light.",
-            "B1": "On to the light.",
-            "B2": "On to the light."
+            "A2": "On to the fires.",
+            "B1": "On to the fires.",
+            "B2": "On to the fires."
           },
           "goto": 33
         }
@@ -1793,9 +1793,9 @@
     {
       "id": 62,
       "text": {
-        "A2": "[stub] You send word for someone else to go, and press on.",
-        "B1": "[stub] You send word for someone else to go, and press on.",
-        "B2": "[stub] You send word for someone else to go, and press on."
+        "A2": "You can't do everything at once. And the fires need you most. So you send word for someone else to go after them. Then you press on. It sits badly with you. But you have to choose.",
+        "B1": "You can't do everything at once, and the fires need you most of all. So you send word for someone else to go after them, and press on. It sits badly with you — but tonight, you have to choose, and keep choosing.",
+        "B2": "You can't do everything at once, and the fires are the thing that needs you most of all. So you send word back for someone else to go after them, and you press on into the dark. It sits badly with you, and it will go on sitting badly. But tonight you have to choose, and keep choosing, and live with it."
       },
       "choices": [
         {
@@ -1819,9 +1819,9 @@
     {
       "id": 63,
       "text": {
-        "A2": "[stub] Their family thank you; a dry coat, a place by the fire.",
-        "B1": "[stub] Their family thank you; a dry coat, a place by the fire.",
-        "B2": "[stub] Their family thank you; a dry coat, a place by the fire."
+        "A2": "You walk them safely back to the cottages. Their family cries out with relief. They wrap you in a dry coat and give you a place by the fire. \"Thank you,\" they keep saying. But you can't stay long.",
+        "B1": "You walk them safely back to the cottages, where their family cries out with relief. They wrap you in a dry coat and make you a place by the fire. \"Thank you,\" they keep saying. But the rows are waiting, and you can't stay long.",
+        "B2": "You walk them safely back to the lit cottages, where their family cries out with relief and pulls them inside. They wrap you in a dry coat and make you a place by the fire. \"Thank you,\" they keep saying, again and again. But the rows are still waiting out there in the cold, and you can't stay long."
       },
       "choices": [
         {
@@ -1845,24 +1845,24 @@
     {
       "id": 64,
       "text": {
-        "A2": "[stub] The whole village, dark and roaring, everything waiting for the frost to break.",
-        "B1": "[stub] The whole village, dark and roaring, everything waiting for the frost to break.",
-        "B2": "[stub] The whole village, dark and roaring, everything waiting for the frost to break."
+        "A2": "You look out over the orchard. It is all white and still. The blossom shines pale in the dark. No light shows but the far trees. The whole orchard seems to hold its breath, and wait.",
+        "B1": "You look out over the whole orchard — all white, all still. The blossom shines pale and brittle in the dark. No light shows anywhere but out among the far trees. The whole orchard seems to hold its breath and wait for dawn.",
+        "B2": "You look out over the whole orchard — all white, all still, under a hard and starry sky. The blossom shines pale and brittle on every tree, waiting on a few degrees of warmth. No light shows anywhere but out among the far trees. The whole orchard seems to hold its breath, and wait to see what you will do."
       },
       "choices": [
         {
           "text": {
-            "A2": "Press on along the head.",
-            "B1": "Press on along the head.",
-            "B2": "Press on along the head."
+            "A2": "On along the rows.",
+            "B1": "On along the rows.",
+            "B2": "On along the rows."
           },
           "goto": 30
         },
         {
           "text": {
-            "A2": "The light among the far trees.",
-            "B1": "The light among the far trees.",
-            "B2": "The light among the far trees."
+            "A2": "The light in the trees.",
+            "B1": "The light in the trees.",
+            "B2": "The light in the trees."
           },
           "goto": 70
         }
@@ -1871,16 +1871,16 @@
     {
       "id": 65,
       "text": {
-        "A2": "[stub] The wind climbs to its worst; it nearly takes you off your feet.",
-        "B1": "[stub] The wind climbs to its worst; it nearly takes you off your feet.",
-        "B2": "[stub] The wind climbs to its worst; it nearly takes you off your feet."
+        "A2": "The cold deepens to its worst. The thermometer drops as low as it will go. Your breath hangs white and still. It is hard to think, hard to move. This is the hardest hour of the night.",
+        "B1": "The cold deepens to its very worst now. The thermometer drops as low as it will go, and your breath hangs white in the still air. It's hard to think, hard to move, hard to care. This is the hardest hour of the whole night.",
+        "B2": "The cold deepens now to its very worst. The thermometer slides as low as it will go, and your breath hangs white and unmoving in the dead-still air. It is hard to think, hard to move, hard even to care. This is the hardest hour of the whole long night — the hour when the frost does its real damage."
       },
       "choices": [
         {
           "text": {
-            "A2": "The flooding cottage.",
-            "B1": "The flooding cottage.",
-            "B2": "The flooding cottage."
+            "A2": "The family with no fire.",
+            "B1": "The family with no fire.",
+            "B2": "The family with no fire."
           },
           "goto": 32
         },
@@ -1897,9 +1897,9 @@
     {
       "id": 67,
       "text": {
-        "A2": "[stub] Tom presses the last dry fire on you and turns back to the crackling radio.",
-        "B1": "[stub] Tom presses the last dry fire on you and turns back to the crackling radio.",
-        "B2": "[stub] Tom presses the last dry fire on you and turns back to the crackling radio."
+        "A2": "Tom presses the last dry lantern on you. \"For the rows,\" he says. \"Go on. I'll stay by the phone.\" His face is grey with worry. This is the help he has to give. And he gives it gladly.",
+        "B1": "Tom presses the last dry lantern on you. \"For the rows,\" he says. \"Go on — I'll stay here by the phone.\" His face is grey with worry. This is the help he has to give tonight, and he gives all of it gladly.",
+        "B2": "Tom presses the last dry lantern into your hands. \"For the rows,\" he says. \"Go on — I'll stay here by the phone and raise what hands I can.\" His face is grey with worry under the lamplight. This is the help he has to give tonight, and he gives every bit of it gladly."
       },
       "choices": [
         {
@@ -1923,9 +1923,9 @@
     {
       "id": 68,
       "text": {
-        "A2": "[stub] A scramble at the oil store; voices rising, hands grabbing the cans.",
-        "B1": "[stub] A scramble at the oil store; voices rising, hands grabbing the cans.",
-        "B2": "[stub] A scramble at the oil store; voices rising, hands grabbing the cans."
+        "A2": "At the fuel store, people are rushing the cans. Voices rise, hands grab, fear spreads fast. One more shove and it turns into a fight. You can try to calm them and share it out. Or you can just grab your oil and go.",
+        "B1": "At the fuel store, people are rushing the cans — voices rising, hands grabbing, fear catching and spreading fast. One more shove and it's a fight. You can try to calm them and share the oil out fairly. Or you can just grab yours and go.",
+        "B2": "At the fuel store, people are rushing the cans — voices rising, hands grabbing, fear catching and spreading fast through the crowd. One more hard shove and the whole thing turns into a fight. You can try to calm them down and share the oil out fairly. Or you can just grab what you came for and go."
       },
       "choices": [
         {
@@ -1949,9 +1949,9 @@
     {
       "id": 69,
       "text": {
-        "A2": "[stub] Years of a shut door between them. Then a cough, and breathing, from under the hull.",
-        "B1": "[stub] Years of a shut door between them. Then a cough, and breathing, from under the hull.",
-        "B2": "[stub] Years of a shut door between them. Then a cough, and breathing, from under the hull."
+        "A2": "Years of a shut-up house press in. Dust, silence, old cold — a place where nothing seems alive. Then you hear it. Breathing, weak and close, from the back room. Someone is alive in here after all.",
+        "B1": "A shut-up house presses in around you — dust, silence, old cold, a place where nothing seems left alive. Then you hear it: breathing, weak and close, from the back room. Someone is alive in here after all.",
+        "B2": "A long-shut house presses in around you — dust, deep silence, old cold, a place where nothing seems left alive at all. Then you hear it, and you go still: breathing, weak and close, coming from the back room. Someone is alive in here after all, right now, needing you."
       },
       "choices": [
         {
@@ -1967,9 +1967,9 @@
         },
         {
           "text": {
-            "A2": "It's too much — back to the light.",
-            "B1": "It's too much — back to the light.",
-            "B2": "It's too much — back to the light."
+            "A2": "It's too much — back to the fires.",
+            "B1": "It's too much — back to the fires.",
+            "B2": "It's too much — back to the fires."
           },
           "goto": 90
         }
