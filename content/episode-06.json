@@ -78,24 +78,24 @@
     {
       "id": 1,
       "text": {
-        "A2": "[stub] The worst frost of the year hits after dark. The power fails, and the orchard frost-fire dies with it. On the wet stairs the old grower, Edith Marsh, falls and cannot get up. Out past the ridge, the blossom's small lights lift and fall in the cold. The fires must be kept by hand now — and that is on you.",
-        "B1": "[stub] The worst frost of the year hits after dark. The power fails, and the orchard frost-fire dies with it. On the wet stairs the old grower, Edith Marsh, falls and cannot get up. Out past the ridge, the blossom's small lights lift and fall in the cold. The fires must be kept by hand now — and that is on you.",
-        "B2": "[stub] The worst frost of the year hits after dark. The power fails, and the orchard frost-fire dies with it. On the wet stairs the old grower, Edith Marsh, falls and cannot get up. Out past the ridge, the blossom's small lights lift and fall in the cold. The fires must be kept by hand now — and that is on you."
+        "A2": "It is the coldest night of spring. The cold comes down fast from a clear sky. On every tree the blossom is white and still. Then old Edith Marsh falls on the back steps and cannot get up. The fires along the rows are not lit, and the frost is already here. Keeping the blossom alive is on you now.",
+        "B1": "It is the coldest night of spring, and the cold comes down fast from a clear, still sky. On every tree the blossom stands white and brittle, a whole year's fruit held on a few degrees. Then old Edith Marsh goes over on the back steps and cannot get up. The fires along the rows are unlit, the frost is already down, and no crew will come before morning. Keeping the blossom alive is on you now.",
+        "B2": "It is the coldest night of spring, and the cold settles fast out of a clear, still sky. The thermometer slides past freezing, and on every tree the blossom stands white and brittle. A whole year's fruit now hangs on a few degrees of warmth. Then old Edith Marsh, coming down the back steps to start the work, goes over on her bad hip and cannot rise. The smudge-fires along the rows are unlit, the frost is already down, and no crew will come before morning. Keeping the blossom alive — and the orchard that is all Edith has — is suddenly, entirely on you."
       },
       "choices": [
         {
           "text": {
-            "A2": "Take charge of the light.",
-            "B1": "Take charge of the light.",
-            "B2": "Take charge of the light."
+            "A2": "Take charge of the fires.",
+            "B1": "Take charge of the fires.",
+            "B2": "Take charge of the fires."
           },
           "goto": 2
         },
         {
           "text": {
-            "A2": "Try the radio for help.",
-            "B1": "Try the radio for help.",
-            "B2": "Try the radio for help."
+            "A2": "Try the phone for help.",
+            "B1": "Try the phone for help.",
+            "B2": "Try the phone for help."
           },
           "goto": 3
         },
@@ -112,16 +112,16 @@
     {
       "id": 2,
       "text": {
-        "A2": "[stub] You gather what the house has: a can of oil, spare straws, matches, a frost-fire. The wind screams in the rail outside.",
-        "B1": "[stub] You gather what the house has: a can of oil, spare straws, matches, a frost-fire. The wind screams in the rail outside.",
-        "B2": "[stub] You gather what the house has: a can of oil, spare straws, matches, a frost-fire. The wind screams in the rail outside."
+        "A2": "You gather what the shed holds: oil, matches, a lantern, and dry straw. Outside the air is still and very cold. The frost is already on the grass. You must decide what to do, and do it fast.",
+        "B1": "You gather what the shed holds: a can of oil, matches, a good lantern, an armful of dry straw. Outside, the air is dead still and bitterly cold. The frost is already creeping white across the grass. You have to decide what to do, and do it quickly.",
+        "B2": "You gather what the shed will give you: a can of oil, a box of matches, a good lantern, an armful of dry straw for kindling. Outside the air is dead still under a hard, clear sky, and the cold has real teeth now. You can watch the frost creep white across the grass as you stand there. Whatever you choose, you must choose it fast — every minute you spend thinking is a minute the cold is working on the trees."
       },
       "choices": [
         {
           "text": {
-            "A2": "Step out into the frost.",
-            "B1": "Step out into the frost.",
-            "B2": "Step out into the frost."
+            "A2": "Step out among the rows.",
+            "B1": "Step out among the rows.",
+            "B2": "Step out among the rows."
           },
           "goto": 5
         },
@@ -135,9 +135,9 @@
         },
         {
           "text": {
-            "A2": "The hand-fire's straw is spoiled.",
-            "B1": "The hand-fire's straw is spoiled.",
-            "B2": "The hand-fire's straw is spoiled."
+            "A2": "The straw is damp and won't take.",
+            "B1": "The straw is damp and won't take.",
+            "B2": "The straw is damp and won't take."
           },
           "goto": 29
         }
@@ -146,9 +146,9 @@
     {
       "id": 3,
       "text": {
-        "A2": "[stub] The radio crackles. Word gets through from Tom at the co-op: no morning crew can launch into this night until it eases or dawn comes. Keep the light if you can.",
-        "B1": "[stub] The radio crackles. Word gets through from Tom at the co-op: no morning crew can launch into this night until it eases or dawn comes. Keep the light if you can.",
-        "B2": "[stub] The radio crackles. Word gets through from Tom at the co-op: no morning crew can launch into this night until it eases or dawn comes. Keep the light if you can."
+        "A2": "You try the phone. At last Tom's voice comes through from the co-op. No one can come out before morning, he says — not in a frost like this. Light the fires and keep them going, if you can.",
+        "B1": "You try the phone. It rings and rings, then at last Tom's voice gets through from the co-op. No crew can come out before morning, he says — not in a frost like this one. Light the fires down the rows, he tells you, and keep them going if you possibly can.",
+        "B2": "You try the phone with cold fingers. It rings and rings into the dark, and then, at last, Tom's steady voice gets through from the co-op. No crew can come out before morning, he tells you plainly; not for a frost that drops this hard and this fast. The only thing that beats a frost is fire by hand — so light the pots down the rows, he says, and keep them going, whatever it takes, until the sun comes up."
       },
       "choices": [
         {
@@ -161,9 +161,9 @@
         },
         {
           "text": {
-            "A2": "But that blossom can't wait.",
-            "B1": "But that blossom can't wait.",
-            "B2": "But that blossom can't wait."
+            "A2": "But the blossom can't wait.",
+            "B1": "But the blossom can't wait.",
+            "B2": "But the blossom can't wait."
           },
           "goto": 8
         }
@@ -172,16 +172,16 @@
     {
       "id": 4,
       "text": {
-        "A2": "[stub] You get to Edith at the foot of the back steps and make her as easy as you can. But the light is still dark, and shelter alone won't do. You'll need oil and a plan.",
-        "B1": "[stub] You get to Edith at the foot of the back steps and make her as easy as you can. But the light is still dark, and shelter alone won't do. You'll need oil and a plan.",
-        "B2": "[stub] You get to Edith at the foot of the back steps and make her as easy as you can. But the light is still dark, and shelter alone won't do. You'll need oil and a plan."
+        "A2": "You go to Edith at the foot of the steps and make her as warm as you can. But the fires are still unlit, and shelter is not enough. The blossom out there needs heat. You need oil, a plan, and a clear head before you start.",
+        "B1": "You get to Edith at the foot of the steps. You make her as easy and warm as you can. But the rows are still dark and cold. Shelter alone won't do. The blossom out there needs the fires lit. You need oil, a plan, and a clear head before you go out among the trees.",
+        "B2": "You get to Edith at the foot of the back steps. You make her as easy and as warm as you can, a coat under her head, a blanket over her. But keeping her warm is not the same as keeping the orchard alive. Shelter alone won't save a single tree. The blossom out there needs heat. Heat means fire, and fire means oil, straw, and a clear head. Before you can do any good tonight, you have to decide how to begin."
       },
       "choices": [
         {
           "text": {
-            "A2": "Go back and get the light going.",
-            "B1": "Go back and get the light going.",
-            "B2": "Go back and get the light going."
+            "A2": "Go back and get the fires going.",
+            "B1": "Go back and get the fires going.",
+            "B2": "Go back and get the fires going."
           },
           "goto": 2
         },
@@ -198,16 +198,16 @@
     {
       "id": 5,
       "text": {
-        "A2": "[stub] Out on the gallery: black night, rain driven flat, the blossom's lights small and struggling past the ridge, the far rows a well of dark below.",
-        "B1": "[stub] Out on the gallery: black night, rain driven flat, the blossom's lights small and struggling past the ridge, the far rows a well of dark below.",
-        "B2": "[stub] Out on the gallery: black night, rain driven flat, the blossom's lights small and struggling past the ridge, the far rows a well of dark below."
+        "A2": "You step out among the rows. The night is huge and still, and the blossom is pale all around you. The cold presses down on everything. Far off, among the end trees, a small light moves where no light should be.",
+        "B1": "You step out among the rows. The night is huge and dead still, and the pale blossom seems to glow in the dark. The cold presses down on the whole orchard like a hand. Then, far off among the end trees, you catch it: a small light moving, out where no one should be tonight.",
+        "B2": "You step out among the rows, and the cold takes your breath. The night is huge and dead still, and the pale blossom seems to hold its own faint light in the dark. Over everything the frost presses down like a slow, heavy hand, settling first in the low ground. Then, far off among the trees at the orchard's end, you catch something that stops you: a small light, moving, out where no one in their right mind should be on a night like this."
       },
       "choices": [
         {
           "text": {
-            "A2": "Tom opens the oil store.",
-            "B1": "Tom opens the oil store.",
-            "B2": "Tom opens the oil store."
+            "A2": "Tom opens the fuel store.",
+            "B1": "Tom opens the fuel store.",
+            "B2": "Tom opens the fuel store."
           },
           "goto": 9
         },
@@ -229,9 +229,9 @@
         },
         {
           "text": {
-            "A2": "Someone's out on the head.",
-            "B1": "Someone's out on the head.",
-            "B2": "Someone's out on the head."
+            "A2": "A light out among the far trees.",
+            "B1": "A light out among the far trees.",
+            "B2": "A light out among the far trees."
           },
           "goto": 60
         }
@@ -240,24 +240,24 @@
     {
       "id": 6,
       "text": {
-        "A2": "[stub] Get the light going first, or see to the rest?",
-        "B1": "[stub] Get the light going first, or see to the rest?",
-        "B2": "[stub] Get the light going first, or see to the rest?"
+        "A2": "You make yourself think. You could light the fires first, and worry about the rest after. You could see to Edith and the neighbours. Or you could wake the village to help. Each choice costs time — and the frost is working now.",
+        "B1": "You make yourself stop and think. You could get the fires going first, and worry about everything else after. You could go to Edith and the neighbours instead. Or you could rouse the village and bring more hands. Each choice costs time you don't have — and out in the dark, the frost is already working on the trees.",
+        "B2": "You make yourself stop and think, though every part of you wants to run. You could get the fires going first and leave the rest for later. You could put people before the trees, and go to Edith and the frightened neighbours. Or you could wake the whole village and turn one pair of hands into twenty. Each path costs time, and time is the one thing the frost will not give you — out there, with every still minute, the cold is sinking deeper into the blossom."
       },
       "choices": [
         {
           "text": {
-            "A2": "The oil store.",
-            "B1": "The oil store.",
-            "B2": "The oil store."
+            "A2": "The fuel store.",
+            "B1": "The fuel store.",
+            "B2": "The fuel store."
           },
           "goto": 9
         },
         {
           "text": {
-            "A2": "Straight up to the fire.",
-            "B1": "Straight up to the fire.",
-            "B2": "Straight up to the fire."
+            "A2": "Straight out to the fires.",
+            "B1": "Straight out to the fires.",
+            "B2": "Straight out to the fires."
           },
           "goto": 11
         },
@@ -274,9 +274,9 @@
     {
       "id": 8,
       "text": {
-        "A2": "[stub] The frost, and that blossom closing on the low ground with no light to steer by. This is real, and it is on you.",
-        "B1": "[stub] The frost, and that blossom closing on the low ground with no light to steer by. This is real, and it is on you.",
-        "B2": "[stub] The frost, and that blossom closing on the low ground with no light to steer by. This is real, and it is on you."
+        "A2": "The cold settles in your chest like a weight. You think of the blossom — a whole year's fruit, the orchard that is all Edith has. If the fires stay dark, it is lost by dawn. No one else will do this. It is you, tonight, or no one.",
+        "B1": "The cold settles into your chest like a weight. You think of the blossom out there: a whole year's fruit, the orchard that is all Edith has left. If the fires stay dark much longer, the frost takes every bit of it by dawn. That isn't a fear; it's a plain fact. No one else is coming to climb into this and do it. It is you, tonight, or no one.",
+        "B2": "The cold settles into your chest like a weight. The size of the night opens up in front of you. You think of the blossom on every branch. It is a whole year's fruit, a whole year's living. The orchard is the last thing keeping Edith on her land. If the fires stay dark much longer, the frost will have all of it by first light. No one will be able to undo that. This is not a fear you can talk yourself out of. It is a fact. And no one else is coming to do it. It is you, tonight, or no one at all."
       },
       "choices": [
         {
@@ -289,9 +289,9 @@
         },
         {
           "text": {
-            "A2": "To the oil store.",
-            "B1": "To the oil store.",
-            "B2": "To the oil store."
+            "A2": "To the fuel store.",
+            "B1": "To the fuel store.",
+            "B2": "To the fuel store."
           },
           "goto": 9
         },
@@ -308,9 +308,9 @@
     {
       "id": 9,
       "text": {
-        "A2": "[stub] Tom heaves open the oil store: a barrel of oil, spare straws, a box of matches, a good frost-fire, dry rope.",
-        "B1": "[stub] Tom heaves open the oil store: a barrel of oil, spare straws, a box of matches, a good frost-fire, dry rope.",
-        "B2": "[stub] Tom heaves open the oil store: a barrel of oil, spare straws, a box of matches, a good frost-fire, dry rope."
+        "A2": "Tom heaves open the fuel store. Inside there is a drum of oil, matches, spare straw, a lantern, and dry sacking. \"Take what you need,\" he says. \"I'll stay by the phone.\" He is a steady man. Tonight it shows.",
+        "B1": "Tom heaves open the fuel store and holds up the lantern. Inside are a drum of oil, a box of matches, bundles of spare straw, and dry sacking. \"Take what you need,\" he says. \"I'll stay here by the phone and raise who I can.\" He's a steady man, and on a night like this it shows.",
+        "B2": "Tom heaves open the door of the fuel store and swings the lantern inside. There is a drum of oil, a box of matches, bundles of spare straw, a good storm-lantern, and a roll of dry sacking. \"Take whatever you need,\" he says, no fuss about it. \"I'll stay here by the phone and raise what hands I can.\" He's a steady, unshowy man. He is the kind you only really notice on a night like this. And tonight it shows."
       },
       "choices": [
         {
@@ -326,9 +326,9 @@
         },
         {
           "text": {
-            "A2": "Just a frost-fire and rope.",
-            "B1": "Just a frost-fire and rope.",
-            "B2": "Just a frost-fire and rope."
+            "A2": "Just a lantern and kindling.",
+            "B1": "Just a lantern and kindling.",
+            "B2": "Just a lantern and kindling."
           },
           "goto": 14
         },
@@ -342,9 +342,9 @@
         },
         {
           "text": {
-            "A2": "He presses the last dry fire on you.",
-            "B1": "He presses the last dry fire on you.",
-            "B2": "He presses the last dry fire on you."
+            "A2": "He presses the last dry lantern on you.",
+            "B1": "He presses the last dry lantern on you.",
+            "B2": "He presses the last dry lantern on you."
           },
           "goto": 67
         }
@@ -353,9 +353,9 @@
     {
       "id": 10,
       "text": {
-        "A2": "[stub] Along the cottages: old Da Finch, frightened and fumbling in the dark, his fire dead and no matches.",
-        "B1": "[stub] Along the cottages: old Da Finch, frightened and fumbling in the dark, his fire dead and no matches.",
-        "B2": "[stub] Along the cottages: old Da Finch, frightened and fumbling in the dark, his fire dead and no matches."
+        "A2": "You knock along the cottages. Old Mr Hollis opens up, pale in the dark. His stove is dead, his matches gone, his hands shaking. \"I can't get it lit,\" he says. You have a long night ahead. But he is here, and he is scared, and he is asking you.",
+        "B1": "You knock along the row of cottages, and old Mr Hollis opens up, pale in the cold. His stove has gone out, his matches are finished, and his hands are shaking too hard to strike one. \"I can't get it lit,\" he says. You have a long, hard night ahead of you. But he's here, and he's frightened, and he's asking you.",
+        "B2": "You knock along the row of cottages until a door opens: old Mr Hollis, pale and blinking in the dark, a coat pulled over his nightclothes. His little stove has gone out, his matches are finished, and his hands are shaking far too hard to strike a light even if he had one. \"I can't get it lit,\" he says, and the fear is plain in his voice. You have a long, hard night ahead and an orchard to save. But he is here, now, and he is frightened, and it is you he is asking."
       },
       "choices": [
         {
@@ -371,9 +371,9 @@
         },
         {
           "text": {
-            "A2": "Say you must keep the light.",
-            "B1": "Say you must keep the light.",
-            "B2": "Say you must keep the light."
+            "A2": "Say you must keep the fires.",
+            "B1": "Say you must keep the fires.",
+            "B2": "Say you must keep the fires."
           },
           "goto": 17
         }
@@ -382,9 +382,9 @@
     {
       "id": 11,
       "text": {
-        "A2": "[stub] You get up to the fire fast with what little you have. A spark, a flicker — but it won't hold without proper oil.",
-        "B1": "[stub] You get up to the fire fast with what little you have. A spark, a flicker — but it won't hold without proper oil.",
-        "B2": "[stub] You get up to the fire fast with what little you have. A spark, a flicker — but it won't hold without proper oil."
+        "A2": "You go straight to the rows and light what you can. A match, a flare of straw, a pot catching — but the flames are weak. Without proper oil they will not last. You cannot just leave them and hope.",
+        "B1": "You go straight out to the rows and light what you can. A match, a flare of straw, a pot catching here and there. But the flames are thin and low. Without proper oil they won't last an hour. You can't just light them and walk away and hope.",
+        "B2": "You go straight out to the rows and start lighting what you can. You work as fast as your cold hands will move. A match, a flare of straw, a smudge-pot catching here and there along the line. But the flames come up thin and low. Without proper oil, you can see they will gutter out within the hour. You can't simply set them going and turn your back and hope the cold is kind. A half-lit orchard is no safer than a dark one."
       },
       "choices": [
         {
@@ -397,9 +397,9 @@
         },
         {
           "text": {
-            "A2": "The climb takes it out of you.",
-            "B1": "The climb takes it out of you.",
-            "B2": "The climb takes it out of you."
+            "A2": "The cold takes it out of you.",
+            "B1": "The cold takes it out of you.",
+            "B2": "The cold takes it out of you."
           },
           "goto": 18
         }
@@ -408,9 +408,9 @@
     {
       "id": 12,
       "text": {
-        "A2": "[stub] You go cottage to cottage, asking for hands on the rows and wood for a signal fire.",
-        "B1": "[stub] You go cottage to cottage, asking for hands on the rows and wood for a signal fire.",
-        "B2": "[stub] You go cottage to cottage, asking for hands on the rows and wood for a signal fire."
+        "A2": "You go from door to door with the same words. Bring straw. Lend a hand at the pots. Help me hold the fires. Some turn away. But a few pull on their coats and come out. A few is enough to begin.",
+        "B1": "You go cottage to cottage, asking each door the same thing. Bring straw for the fires. Lend a hand at the pots. Help me hold the light down the rows. Some turn away and shut the door. But a few pull on their coats and step out into the cold. Tonight, a few is enough to begin.",
+        "B2": "You go from cottage to cottage, knocking, asking each sleepy face the same three things. Bring what straw you have. Lend a pair of hands at the pots. Help me hold the fires down the rows till dawn. Some look at the cold and the hour and quietly shut the door. You can't even blame them. But a few reach for their coats and boots and step out with you. On a night like this, a few is all it takes to begin."
       },
       "choices": [
         {
@@ -437,16 +437,16 @@
     {
       "id": 13,
       "text": {
-        "A2": "[stub] The oil and straw — enough to keep the fire burning the night, if you tend it well.",
-        "B1": "[stub] The oil and straw — enough to keep the fire burning the night, if you tend it well.",
-        "B2": "[stub] The oil and straw — enough to keep the fire burning the night, if you tend it well."
+        "A2": "You take charge of the oil and straw. The drum is heavy, and every drop of it counts now. Used well, it keeps the fires going all night. Wasted, and the blossom freezes. You hold it close and head for the rows.",
+        "B1": "You take charge of the oil and the straw yourself. The drum is heavy, and every drop of it matters now. Tended carefully, it will keep the fires burning down the rows all night; wasted, and the blossom freezes before dawn. So you hold it close and head out for the trees.",
+        "B2": "You take charge of the oil and the straw yourself. This, above everything, is the thing the night turns on. The drum is heavy in your arms, and every drop of it counts now. There is no more until the roads clear. Tended with care, it will keep the fires burning down every row until dawn. Spilled or wasted, and the blossom is lost long before the sun. So you hold it close, square your shoulders, and head out into the trees."
       },
       "choices": [
         {
           "text": {
-            "A2": "Now, up to the fire.",
-            "B1": "Now, up to the fire.",
-            "B2": "Now, up to the fire."
+            "A2": "Now, out to the fires.",
+            "B1": "Now, out to the fires.",
+            "B2": "Now, out to the fires."
           },
           "goto": 21
         },
@@ -463,9 +463,9 @@
     {
       "id": 14,
       "text": {
-        "A2": "[stub] A frost-fire and a coil of rope: some light, but not the fires, and no proper oil secured.",
-        "B1": "[stub] A frost-fire and a coil of rope: some light, but not the fires, and no proper oil secured.",
-        "B2": "[stub] A frost-fire and a coil of rope: some light, but not the fires, and no proper oil secured."
+        "A2": "You take just a lantern and some kindling. They give you light and a start. But not the fires. And you have no proper oil set by. You will still need real oil, and soon. If not, the rows stay dark and cold.",
+        "B1": "You take just a lantern and a bundle of kindling. They give you light to work by and a way to start a flame. But not the fires themselves. And you've set no proper oil aside. You'll still need real oil, and soon. If not, the rows stay dark and the frost wins.",
+        "B2": "You take just a lantern and a bundle of kindling. It is enough to see by, enough to coax a first flame. It is nothing like enough to carry the night. You have light and a start, and that is all. You've set no proper oil aside. A few handfuls of straw won't hold the cold off a whole orchard. You'll still need real oil, and you'll need it soon. If not, every row stays dark and the frost does as it likes."
       },
       "choices": [
         {
@@ -489,9 +489,9 @@
     {
       "id": 15,
       "text": {
-        "A2": "[stub] old Jack Hale knows this village: keep off the frozen pond, don't trust the buyer, mind the oil, hold the light.",
-        "B1": "[stub] old Jack Hale knows this village: keep off the frozen pond, don't trust the buyer, mind the oil, hold the light.",
-        "B2": "[stub] old Jack Hale knows this village: keep off the frozen pond, don't trust the buyer, mind the oil, hold the light."
+        "A2": "Old Jack Hale knows this orchard. He has watched it for years. \"Stay off the frozen pond,\" he says. \"It looks quick. It kills.\" He warns you about the buyer too. \"Mind your oil. Hold the fires. That's the whole job tonight.\"",
+        "B1": "Old Jack Hale knows this orchard in the dark better than anyone. \"Stay off the frozen pond,\" he says. \"It looks like a short cut. It isn't — it's a drowning.\" He warns you about the buyer too, that smiling man from the company. \"Mind your oil, hold the fires — that's the whole of the job tonight.\"",
+        "B2": "Old Jack Hale has worked and watched this orchard for more years than you've been alive, and he finds you in the dark to say his piece. \"Stay off the frozen pond,\" he tells you, gripping your arm. \"It looks like it'll save you half the walking. It won't — the ice is rotten, and it's a drowning, not a short cut.\" He warns you about the buyer too, that smiling man from the company who has been circling Edith's land. \"Mind your oil, hold the fires, and don't let anyone talk you off the job,\" he says. \"That's the whole of it tonight.\""
       },
       "choices": [
         {
@@ -515,16 +515,16 @@
     {
       "id": 16,
       "text": {
-        "A2": "[stub] You settle Da Finch with a lit fire and a blanket, and a promise to come back.",
-        "B1": "[stub] You settle Da Finch with a lit fire and a blanket, and a promise to come back.",
-        "B2": "[stub] You settle Da Finch with a lit fire and a blanket, and a promise to come back."
+        "A2": "You settle Mr Hollis by a lit stove with a blanket. Slowly his shaking stops. \"Bless you,\" he says, holding your hand. You promise to look in on him again. Then you turn back out into the cold.",
+        "B1": "You get Mr Hollis's stove lit and settle him by it with a blanket. Little by little, his shaking eases. \"Bless you,\" he says, gripping your hand hard. You promise to look in on him again before morning. Then you turn back out into the frost and the waiting rows.",
+        "B2": "You coax his little stove back to life. You settle Mr Hollis in a chair beside it, a blanket round his shoulders. You wait until, little by little, the shaking goes out of him. \"Bless you,\" he says, and grips your hand with surprising strength. You promise you'll look in on him again before the night is out. Then you turn back to the door, and the frost, and the long dark rows still waiting for their fires."
       },
       "choices": [
         {
           "text": {
-            "A2": "On up to the fire.",
-            "B1": "On up to the fire.",
-            "B2": "On up to the fire."
+            "A2": "On out to the fires.",
+            "B1": "On out to the fires.",
+            "B2": "On out to the fires."
           },
           "goto": 23
         },
