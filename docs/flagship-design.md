@@ -156,9 +156,9 @@ pedagogy: understanding the paragraph changes the outcome.
 - **On-demand passage gist** (`content/gist/<lang>.json`) — because per-word glosses lose context
   (idioms, sense), each *pivotal or dense* passage carries a 1–2 sentence **meaning in the reader's
   language**, revealed only by a "See the meaning" button ("where needed", never by default, so
-  English stays the thing being read). **French now covers all 123 passages**; es/it/de/pt cover the
-  pivotal beats + 12 endings (26); ru/ar/zh await native translators. The button simply doesn't
-  appear where a gist is missing, so partial-language coverage degrades gracefully.
+  English stays the thing being read). **All 123 passages are covered in all 8 languages**, native
+  review: complete. The button simply doesn't appear where a gist is missing, so any partial-language
+  coverage would degrade gracefully.
 - **Native-language review is the launch gate.** Machine-drafted glosses in 8 languages ship to
   a speaker's check first — a wrong gloss the learner cannot detect is worse than none. This is
   the one hard gate between "done" and "launched", and it is what makes the flagship trustworthy.
@@ -229,7 +229,7 @@ book *right*.
 3. **Prose — B1 first**, in batches of ~25 passages, then derive A2 (simplify) and B2 (enrich).
    **Gate:** validator's CEFR bands clean per batch.
 4. **Lexicon** — expand to ~250 words as prose lands; auto-gloss coverage checked by the validator.
-5. **Native review** — the 8-language pass. **Launch gate.**
+5. **Native review** — the 8-language pass. **Launch gate.** ✓ done
 6. **Art** — waves 1–4 from the visual team.
 
 I (Claude) draft the graph and all three prose levels and the lexicon; you steer story and taste

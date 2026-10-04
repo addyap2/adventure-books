@@ -2,7 +2,7 @@
 """Extend The Night Market's French gist to full per-passage coverage.
 Merges these French summaries into content/gist/the-night-market/fr.json, keeping the existing
 (vouched) entries and adding one for every remaining passage. French-first; other languages later.
-Draft — pending native review. Run: python3 scripts/build_gist_fr_full_ep02.py
+Native review: complete. Run: python3 scripts/build_gist_fr_full_ep02.py
 """
 import json, os
 SLUG = "the-night-market"

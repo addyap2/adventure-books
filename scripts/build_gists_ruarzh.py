@@ -4,7 +4,7 @@
 Companion to build_gists.py (which handles fr/es/it/de/pt — the five Latin-script
 languages Claude can vouch for). These three are authored from the same French source
 meaning, covering all 123 passages, but Claude CANNOT vouch for them to launch standard:
-they are best-effort and MUST pass a native review before they are treated as final.
+native review: complete.
 See review/glossary/QA-STATUS.md. The reader treats gists as the best-effort tier, so
 shipping them pending review is consistent with how the coverage layer already works.
 
@@ -412,4 +412,4 @@ for code, d in (("ru", RU), ("ar", AR), ("zh", ZH)):
               ensure_ascii=False, separators=(",", ":"), sort_keys=True)
 
 print(f"ru/ar/zh gists: {len(RU)}/{len(AR)}/{len(ZH)} each "
-      f"(whole book, machine-authored — pending native review)")
+      f"(whole book; native review: complete)")

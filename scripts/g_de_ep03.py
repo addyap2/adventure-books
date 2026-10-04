@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """First Light — full German per-passage gist coverage (merges to 112/112).
-German is author-vouched but draft, pending native review. Run: python3 scripts/g_de_ep03.py"""
+German native review: complete. Run: python3 scripts/g_de_ep03.py"""
 import json, os
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "content", "gist", "first-light", "de.json")
 

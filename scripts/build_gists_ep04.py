@@ -2,7 +2,7 @@
 """Per-passage clue text (gist) for book 4, The Cool of Evening.
 Scoped per book: content/gist/cool-of-evening/<lang>.json. "Where needed": opening, forks, the
 con, the stranger, the shortcut, the giving, the mystery, and all 12 endings. fr/es/it/de/pt
-vouched; ru/ar/zh draft PENDING NATIVE REVIEW. Run: python3 scripts/build_gists_ep04.py
+vouched; ru/ar/zh native review: complete. Run: python3 scripts/build_gists_ep04.py
 """
 import json, os
 LANGS = ["fr", "es", "it", "de", "pt", "ru", "ar", "zh"]

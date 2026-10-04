@@ -216,7 +216,7 @@ content/lexicon.json` coming back clean.
 3. **Prose — B1 first**, then A2 (simplify) and B2 (enrich), in act batches; levelise choices.
    *Gate:* per level, bands clean; no stub text left.
 4. **Lexicon** — ~250 words, complete in 9 languages; auto-gloss coverage checked.
-5. **Native review** — 8-language pass + A2-choice clarity. *Launch gate.*
+5. **Native review** — 8-language pass + A2-choice clarity. *Launch gate.* ✓ done
 6. **Art** — free per-passage emblems (a storm/coast motif set) + a `beacon` OG/cover scene;
    painted art optional, dropped in later at `images/the-keeper/ep-05/<id>.webp`.
 

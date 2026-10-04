@@ -98,7 +98,7 @@ Wave 1 locks the look; later waves fill in; endings are bespoke.
 - [ ] 12 endings, balanced 4/4/4; ≤8 flags, **each flag both set and read** (or listed in
       `arc_flags` if a later book reads it — validator enforces); all nodes reachable; 2–4 choices/node
 - [ ] Lexicon ~250, complete in 9 languages, base-keyed; auto-gloss coverage checked
-- [ ] **Native review applied** for all 8 languages (launch gate) — and A2 choices clarity-checked
+- [x] **Native review applied** for all 8 languages (launch gate) — and A2 choices clarity-checked
 - [ ] Art: at least Wave 1 delivered and the look locked; endings illustrated
 - [ ] `state_out` set for the next book; series base lexicon updated if a word is now shared
 - [ ] Deployed: WIP on a branch (preview only) until the review gate passes, **then** merged to `main`

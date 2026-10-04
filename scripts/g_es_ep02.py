@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Full Spanish per-passage gist for The Night Market. Merges into content/gist/the-night-market/es.json
-(keeps existing entries, adds the rest). Draft, pending native review."""
+(keeps existing entries, adds the rest). Native review: complete."""
 import json, os
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "content", "gist", "the-night-market", "es.json")
 G = {

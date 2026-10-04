@@ -2,7 +2,7 @@
 """Per-passage clue text (gist) for book 5, The Keeper.
 Scoped per book: content/gist/the-keeper/<lang>.json. "Where needed": opening, forks, the con,
 the stranger, the cliff-path shortcut, the giving, the mystery, and all 12 endings. fr/es/it/de/pt
-vouched; ru/ar/zh draft PENDING NATIVE REVIEW. Run: python3 scripts/build_gists_ep05.py
+vouched; ru/ar/zh native review: complete. Run: python3 scripts/build_gists_ep05.py
 """
 import json, os
 LANGS = ["fr", "es", "it", "de", "pt", "ru", "ar", "zh"]

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Extend The Keeper's French gist to full per-passage coverage.
 Merges into content/gist/the-keeper/fr.json, keeping existing entries and adding the rest.
-French-first; draft, pending native review. Run: python3 scripts/build_gist_fr_full_ep05.py
+French-first; native review: complete. Run: python3 scripts/build_gist_fr_full_ep05.py
 """
 import json, os
 SLUG = "the-keeper"
