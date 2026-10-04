@@ -556,7 +556,14 @@
     boat:'<svg '+S+'><path d="M10 40 h44 l-6 12 h-32 z"/><path d="M32 40 v-20 M32 22 l13 9 -13 3" fill="currentColor" fill-opacity="0.14"/><path d="M6 54 q12 -4 24 0 t28 0" opacity="0.5"/></svg>',
     rope:'<svg '+S+'><ellipse cx="30" cy="34" rx="18" ry="12"/><ellipse cx="30" cy="34" rx="11" ry="7"/><ellipse cx="30" cy="34" rx="4" ry="3"/><path d="M48 30 l7 -5" opacity="0.7"/></svg>',
     gull:'<svg '+S+'><path d="M8 32 q11 -13 22 0 q11 -13 22 0"/><path d="M27 32 q5 5 10 0" opacity="0.5"/></svg>',
-    oilcan:'<svg '+S+'><rect x="15" y="24" width="26" height="26" rx="2"/><path d="M41 30 h9 v12 h-6" fill="none"/><rect x="23" y="18" width="10" height="6" rx="1"/><path d="M19 32 h18" opacity="0.5"/></svg>'
+    oilcan:'<svg '+S+'><rect x="15" y="24" width="26" height="26" rx="2"/><path d="M41 30 h9 v12 h-6" fill="none"/><rect x="23" y="18" width="10" height="6" rx="1"/><path d="M19 32 h18" opacity="0.5"/></svg>',
+    /* --- The Orchard's set (frost night / fires among the trees) --- */
+    tree:'<svg '+S+'><path d="M32 54 V36"/><circle cx="32" cy="24" r="14"/><circle cx="22" cy="19" r="2" fill="currentColor" stroke="none"/><circle cx="41" cy="21" r="2" fill="currentColor" stroke="none"/><circle cx="32" cy="12" r="2" fill="currentColor" stroke="none"/><path d="M24 54 h16"/></svg>',
+    firepot:'<svg '+S+'><path d="M18 38 h28 l-3 14 a3 3 0 0 1 -3 2 H24 a3 3 0 0 1 -3 -2 z"/><path d="M15 38 h34"/><path d="M26 38 c-3 -8 3 -8 2 -16 c5 5 8 10 2 16 M37 38 c-2 -6 2 -7 1 -12 c4 4 5 8 1 12" fill="currentColor" fill-opacity="0.18"/></svg>',
+    frost:'<svg '+S+'><g stroke-width="2"><path d="M32 10 V54 M13 21 L51 43 M51 21 L13 43"/><path d="M32 17 l-5 5 M32 17 l5 5 M32 47 l-5 -5 M32 47 l5 -5 M18 24 v6 M18 24 l6 -1 M46 24 v6 M46 24 l-6 -1 M18 40 v-6 M18 40 l6 1 M46 40 v-6 M46 40 l-6 1" opacity="0.6"/></g></svg>',
+    pond:'<svg '+S+'><ellipse cx="32" cy="34" rx="24" ry="14"/><path d="M20 30 l8 6 M38 28 l6 8 M27 41 l11 -4" opacity="0.5"/></svg>',
+    rows:'<svg '+S+'><path d="M8 54 L27 22 M56 54 L37 22 M20 54 L31 22 M44 54 L33 22" opacity="0.8"/><circle cx="29" cy="20" r="3"/><circle cx="36" cy="20" r="3"/><path d="M6 54 h52" opacity="0.5"/></svg>',
+    straw:'<svg '+S+'><rect x="16" y="26" width="32" height="22" rx="3"/><path d="M16 33 h32 M16 41 h32" opacity="0.5"/><path d="M22 26 v22 M30 26 v22 M38 26 v22" opacity="0.3"/><path d="M14 30 c6 -6 10 -6 16 -4 M34 30 c6 -6 10 -6 16 -4" opacity="0.5"/></svg>'
   };
   /* series -> { node id -> the motif that sums up that passage }. One set per book. */
   window.__ART={
@@ -630,6 +637,20 @@
     101:'boat',102:'rain',103:'flame',104:'boat',105:'dawn',106:'gull',107:'beam',110:'dawn',111:'map',112:'map',
     113:'map',114:'map',
     120:'lighthouse',121:'boat',122:'companions',123:'beam',124:'hand',125:'blanket',126:'wave',127:'lighthouse',128:'coin',129:'cliff',130:'rock',131:'door'
+   },
+   "the-orchard":{
+    1:'tree',2:'firepot',3:'phone',4:'companions',5:'frost',6:'map',8:'tree',9:'firepot',10:'lantern',11:'flame',
+    12:'companions',13:'firepot',14:'straw',15:'sign',16:'lantern',17:'tree',18:'tree',19:'companions',20:'frost',21:'pond',
+    22:'sign',23:'tree',24:'coin',25:'companions',26:'frost',27:'pond',28:'pond',29:'flame',30:'frost',31:'hand',
+    32:'house',33:'frost',34:'hand',35:'frost',36:'flame',37:'companions',38:'frost',39:'sign',40:'coin',41:'coin',
+    42:'frost',43:'coin',44:'coin',45:'flame',46:'firepot',47:'coin',48:'coin',49:'coin',50:'pond',51:'pond',
+    52:'rows',53:'pond',54:'house',55:'hand',56:'frost',57:'door',58:'frost',60:'pond',61:'pond',62:'tree',
+    63:'companions',64:'frost',65:'frost',67:'lantern',68:'firepot',69:'child',70:'lantern',71:'child',72:'child',73:'frost',
+    74:'hand',75:'frost',76:'companions',77:'companions',78:'child',79:'child',80:'coin',90:'tree',91:'flame',92:'companions',
+    93:'firepot',94:'companions',95:'firepot',96:'flame',97:'flame',98:'lantern',99:'lantern',100:'tree',101:'dawn',102:'frost',
+    103:'flame',104:'companions',105:'dawn',106:'gull',107:'lantern',110:'dawn',111:'map',112:'map',113:'map',114:'map',
+    120:'tree',121:'child',122:'companions',123:'firepot',124:'hand',125:'blanket',126:'frost',127:'tree',128:'coin',129:'pond',
+    130:'pond',131:'door'
    }
   };
 })();
