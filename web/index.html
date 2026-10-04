@@ -699,12 +699,17 @@ async function loadDict(lang){
   if(!lang) return;
   try{ DICT=await (await fetch(`dict/${lang}.json`)).json(); }catch{ DICT={}; }
 }
-// per-passage gist ({nodeId: "meaning in this language"}) — the on-demand fallback
+// per-passage gist ({nodeId: "meaning in this language"}) — the on-demand fallback.
+// Scoped PER BOOK (gist/<slug>/<lang>.json): node ids repeat across books, so a global
+// file would serve one book's meanings in another. No book slug / no file ⇒ no gist, and
+// the "See the meaning" button simply doesn't appear.
 async function loadGist(lang){
-  if(lang===gistLang) return;
-  gistLang=lang; GIST={};
-  if(!lang) return;
-  try{ GIST=await (await fetch(`gist/${lang}.json`)).json(); }catch{ GIST={}; }
+  const slug = BOOK && BOOK.slug;
+  const key = (slug && lang) ? slug+"/"+lang : "";
+  if(key===gistLang) return;
+  gistLang=key; GIST={};
+  if(!key) return;
+  try{ GIST=await (await fetch(`gist/${slug}/${lang}.json`)).json(); }catch{ GIST={}; }
 }
 // change the word-help language everywhere: persist, load its data, refresh the page
 async function applyLang(lang){
@@ -888,6 +893,7 @@ async function openEpisode(file,preferLevel,intro,resume){
   LEX={...BASELEX};
   const own=BOOK.lexicon&&(BOOK.lexicon.entries||BOOK.lexicon);
   if(own) for(const k in own) LEX[k.toLowerCase()]=own[k];
+  await loadGist($("lang").value);   // this book's own per-passage clue text
   level=BOOK.levels.includes(preferLevel)?preferLevel:BOOK.levels[0];
   curKey=`${BOOK.series}:${BOOK.episode}`; curFile=file;
   $("brand").textContent=BOOK.title; $("back").hidden=false; $("cog").hidden=false;
