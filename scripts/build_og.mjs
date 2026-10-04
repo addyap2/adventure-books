@@ -148,6 +148,22 @@ function beaconScene(c) {
   <g><ellipse cx="300" cy="432" rx="30" ry="18" fill="url(#glow)" opacity="0.5"/><path d="M280 440 h40 l-6 13 h-28 z" fill="${dark}"/><path d="M300 440 v-16 M300 426 l10 5" stroke="${c.line}" stroke-width="2" fill="none"/><circle cx="300" cy="424" r="3" fill="${c.accentHot}"/></g>`;
 }
 
+function frostfireScene(c) {
+  // a frost-blue orchard night: a row of blossom trees in silhouette, warm fires
+  // (smudge pots) glowing low between the rows, cold stars, a lone figure tending one.
+  const dark = "#060A12";
+  const tree = (x, s) => `<g><rect x="${x - 3 * s}" y="330" width="${6 * s}" height="140" fill="${dark}"/><circle cx="${x}" cy="306" r="${46 * s}" fill="${dark}"/></g>`;
+  const fire = (x, y, r) => `<ellipse cx="${x}" cy="${y}" rx="${r}" ry="${r * 0.62}" fill="url(#glow)"/><path d="M${x - 9} ${y + 6} q9 -22 9 -2 q0 -12 7 -3 q4 9 -2 13 z" fill="${c.accentHot}" opacity="0.92"/>`;
+  return `
+  <g fill="${c.secondary}" opacity="0.5"><circle cx="180" cy="90" r="1.6"/><circle cx="420" cy="140" r="1.2"/><circle cx="700" cy="78" r="1.4"/><circle cx="980" cy="120" r="1.2"/><circle cx="1120" cy="68" r="1.5"/><circle cx="300" cy="190" r="1.1"/><circle cx="860" cy="170" r="1.1"/></g>
+  <rect x="0" y="300" width="1200" height="170" fill="${c.secondary}" opacity="0.05"/>
+  ${tree(650, 0.85)}${tree(760, 1)}${tree(900, 1.15)}${tree(1045, 0.95)}${tree(1165, 1.05)}
+  <rect x="0" y="470" width="1200" height="160" fill="${dark}"/>
+  ${fire(700, 466, 92)}${fire(820, 455, 128)}${fire(980, 470, 150)}${fire(1110, 452, 118)}
+  <g transform="translate(360,0)"><ellipse cx="300" cy="560" rx="44" ry="7" fill="#000" opacity=".3"/><path d="M300 506 C312 508 318 519 320 533 L326 560 L274 560 L280 533 C282 519 288 508 300 506 Z" fill="${dark}"/><circle cx="300" cy="497" r="10" fill="${dark}"/></g>
+  <ellipse cx="660" cy="520" rx="64" ry="24" fill="url(#glow)" opacity="0.55"/>`;
+}
+
 function ogHTML(book) {
   const p = (book.identity && book.identity.palette) || {};
   const ground = p.ground || "#0E1320", surface = p.surface || "#121a2c",
@@ -156,7 +172,8 @@ function ogHTML(book) {
         muted = p.muted || "#8A93A6";
   const c = { ground, surface, ink, accent, accentHot, secondary, muted };
   const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
-  const scene = kind === "beacon" ? beaconScene(c)
+  const scene = kind === "frostfire" ? frostfireScene(c)
+              : kind === "beacon" ? beaconScene(c)
               : kind === "highsun" ? highsunScene(c)
               : kind === "dusk" ? duskScene(c)
               : kind === "daybreak" ? daybreakScene(c)
@@ -172,6 +189,7 @@ function ogHTML(book) {
   const levels = (book.levels || []).join(" · ");
   const title = book.title || "";
   const titleSize = title.length > 20 ? 68 : title.length > 12 ? 92 : 104;
+  const lineSize = line.length > 130 ? 19 : line.length > 95 ? 21 : 26;
   return `<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:${ground}}svg{display:block}</style></head><body>
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -192,7 +210,7 @@ function ogHTML(book) {
   <rect width="720" height="630" fill="url(#scrim)"/>
   <text x="72" y="250" font-family="ui-monospace, Menlo, monospace" font-size="17" letter-spacing="5" fill="${accent}">AN INTERACTIVE STORY</text>
   <text x="68" y="360" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="${titleSize}" fill="${ink}">${esc(title)}</text>
-  <text x="72" y="416" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="26" fill="${kind === "highsun" ? muted : "#cdd4e2"}">${esc(line)}</text>
+  <text x="72" y="416" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="${lineSize}" fill="${kind === "highsun" ? muted : "#cdd4e2"}">${esc(line)}</text>
   <line x1="74" y1="452" x2="330" y2="452" stroke="${accent}" stroke-width="1.5" opacity=".65"/>
   <text x="72" y="486" font-family="ui-monospace, Menlo, monospace" font-size="13.5" letter-spacing="3" fill="${muted}">FOR ENGLISH LEARNERS &#183; ${esc(levels)} &#183; 8 LANGUAGES</text>
 </svg></body></html>`;
@@ -210,7 +228,8 @@ function coverHTML(book) {
         muted = p.muted || "#8A93A6", line = p.line || "#26304a";
   const c = { ground, surface, ink, accent, accentHot, secondary, muted, line };
   const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
-  const scene = kind === "beacon" ? beaconScene(c)
+  const scene = kind === "frostfire" ? frostfireScene(c)
+              : kind === "beacon" ? beaconScene(c)
               : kind === "highsun" ? highsunScene(c)
               : kind === "dusk" ? duskScene(c)
               : kind === "daybreak" ? daybreakScene(c)
