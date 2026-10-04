@@ -1,0 +1,112 @@
+#!/usr/bin/env python3
+"""The Cool of Evening — full Spanish per-passage gist coverage (merges to 112/112).
+Run: python3 scripts/g_es_ep04.py"""
+import json, os
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "content", "gist", "cool-of-evening", "es.json")
+
+G = {
+ 2: "Reúnes lo que hay en el autobús: unas botellas de agua, un pequeño botiquín y una gran lona de tela. Podría armarse para hacer sombra. El aire dentro ya se espesa de calor, y el sudor te corre por la espalda. Tienes que decidir qué hacer, y pronto.",
+ 3: "Pruebas la radio, pero está muerta, y ningún teléfono tiene señal. Llega la voz del conductor, el señor Bello: nada se mueve con un calor así, la ayuda solo vendrá al anochecer. Quietos, dice, y a mantenerse frescos. Pero Sami es pequeño y se apaga, y falta mucho para la tarde.",
+ 4: "Llevas a Sami a la fina franja de sombra junto al autobús. Ayuda un poco, pero la sombra sola no basta: el niño necesita agua, y tú necesitas un plan. Te quedas un momento y lo entiendes: con las manos vacías no puedes hacer mucho aquí.",
+ 5: "Bajas a la carretera. El resplandor es blanco y duro, llanuras ocres hasta la cresta que tiembla a lo lejos, el calor lo bastante denso para apoyarse en él. La carretera está vacía en ambos sentidos, salvo, muy lejos, por una figurita que se aleja.",
+ 6: "Te obligas a pensar. Podrías ordenar primero los suministros: agua, sombra, un plan. Podrías ir directo con Sami y quedarte junto al niño. O podrías ir asiento por asiento y poner a los pasajeros a ayudar. Cada decisión cuesta tiempo, y con este calor, el tiempo cuesta agua.",
+ 8: "Sientes el calor pesado en el pecho, y piensas en Sami: pequeño, callado, sin agua, en un aire como un horno. Un calor así puede matar a un niño. No es miedo; es un hecho. Nadie más se va a mover. Así que tienes que ser tú.",
+ 11: "Llegas rápido con Sami con lo poco que tienes: unos sorbos, un paño mojado, un trozo de sombra. Calma al niño un momento. Pero no durará; necesitas agua de verdad, y más, y pronto. No puedes solo sentarte y esperar.",
+ 13: "Te haces cargo de la caja de agua. Pesa, y ahora cada botella cuenta. Repartida despacio y con justicia, alcanza para salir; manoteada y malgastada, no. Así que la cuentas, y la mantienes cerca.",
+ 14: "Tomas la lona y los trapos. Harán sombra, y eso ayuda, pero no has asegurado agua. La sombra quita el sol; no moja una boca reseca. Igual tendrás que encontrar agua, y encontrarla pronto.",
+ 15: "La tía Rose conoce este camino; lo ha cruzado muchas veces. «No salgas a las llanuras abiertas», dice. «Parecen cerca. No lo están.» También te advierte del hombre de la camioneta. «Raciona cada gota, aguanta hasta que baje el sol. Así se vive aquí.»",
+ 16: "Acomodas al señor Danso a la sombra y le das un trago lento de agua. Poco a poco se le aclara la mirada y vuelve en sí. «Gracias», dice, con la mano temblándote entre las tuyas. Prometes volver a verlo, y vuelves al día.",
+ 17: "Sigues para atender a Sami; el niño va primero, y todo lo demás puede esperar un momento. Pero aún debes decidir cómo: si asegurar agua de verdad primero, o ir directo al lado del niño.",
+ 18: "El calor ya está en ti también: la cabeza ligera, la boca seca, las piernas extrañamente lejanas. Estás cerca de tu propio límite, y lo sabes. Si caes, no queda nadie para Sami. Así que muévete despacio, y con cuidado.",
+ 19: "El autobús despierta a sí mismo. La gente empieza a moverse y a compartir. Una mujer saca un gran bidón de agua; un hombre arma la lona para la sombra; y un plan toma forma asiento por asiento. Ya no haces esto solo, y eso lo cambia todo.",
+ 20: "Nadie se mueve. La gente mira sus manos, o afuera al resplandor; asustados, y la gente asustada calla. No puedes forzarlos. Así que te das la vuelta y sigues solo; es más difícil así, pero Sami no puede esperar a que ellos sean valientes.",
+ 21: "Los suministros están ordenados; ahora necesitas agua de verdad. Hay dos caminos a la cresta. Seguir la carretera, larga pero fácil de seguir. O cortar recto por las llanuras abiertas: mucho más corto, pero sin senda, sin sombra y desconocido.",
+ 22: "Te tomas a pecho las palabras de Rose. Racionar el agua. No salir a las llanuras. No fiarte del hombre de la camioneta, y aguantar lo peor del sol. Es un consejo sencillo, y bueno. Ahora solo tienes que seguirlo de verdad.",
+ 23: "Te sientes más firme por el buen gesto que hiciste; ayudar a alguien, por raro que parezca, también te ayuda a ti. Tienes la cabeza más clara, el paso más seguro. Queda mucho por hacer, y el sol sigue alto, pero te sientes capaz.",
+ 24: "Una camioneta está parada en el arcén, el motor tintineando de calor. Un hombre se apoya en ella, todo sonrisas, con agua embotellada y viajes al pueblo que ofrecer. Una pequeña multitud se ha juntado a su alrededor: asustada, sedienta y dispuesta a pagar.",
+ 25: "Guías a un grupito hacia Sami y la sombra. Al caminar juntos, todos se sienten más fuertes; la gente lleva agua, trapos, un poco de esperanza. «Por aquí», dices, y te siguen: una buena sensación, en una hora difícil.",
+ 26: "La carretera es larga y castiga. El asfalto se ablanda bajo los pies; charcos de espejismo brillan delante y se esfuman al llegar; y no hay ni un trozo de sombra en ninguna parte. Pero está despejada, y va hacia donde necesitas ir. Así que sigues andando.",
+ 28: "Sales a las llanuras abiertas, y enseguida sientes que está mal. La cresta no se acerca; detrás de ti la carretera se difumina y se pierde en el temblor del aire. Aquí no hay más que calor y luz dura, y estás en medio, solo.",
+ 29: "La lona está rota y es demasiado corta para hacer mucha sombra; te quedas solo con los trapos, que no cubren a todos. Tendrás que arreglártelas, o volver a los suministros a por algo mejor.",
+ 30: "La carretera sigue bajo el sol blanco, el calor peor a cada hora, tu sombra encogida y dura bajo tus pies. Delante, un coche parado en el borde; el sol te machaca la nuca; y hay una señal, con la pintura reventada por el calor hace tiempo.",
+ 31: "Un coche atascado en la arena, un anciano desplomado sobre el volante, la ventanilla baja, la cabeza colgando. Está sobrecalentado y demasiado agotado para moverse. Si paras, pierdes tiempo; si no, puede que no aguante la tarde.",
+ 33: "Avanzas por lo peor del calor, cada paso más duro que el anterior, el aire quemándote la garganta. Delante hay opciones: el hombre de la camioneta puede estar cerca, o el humo raro en el apartadero, o puedes ir directo al autobús.",
+ 34: "Arrimas el hombro, y el coche se suelta. Al anciano se le llenan los ojos; te pone una botella tibia en las manos. «Tómala», dice, «por la molestia». No está fría, pero es agua, dada de buena fe, y la tomas y sigues.",
+ 35: "No puedes parar ahora, pero tampoco puedes dejarlos sin más. Así que prometes mandar ayuda. «Aguanten», les dices. «Quédense a la sombra. No me olvidaré de ustedes.» Lo dices en serio, y luego te das la vuelta y vas.",
+ 36: "El autobús levanta un único punto de sombra. La lona armada en alto, el agua reunida en el centro, los más débiles —los viejos, los pequeños— acomodados donde más fresco está. No es mucho. Pero es un plan, y ahora es de todos.",
+ 37: "Asiento por asiento, el autobús asustado se vuelve uno que funciona. Ahora la gente tiene tareas: uno vigila a los niños, otro reparte el agua, otro sostiene la sombra. El miedo se vuelve acción, y la acción le gana a la espera siempre.",
+ 38: "El calor te roe la voluntad. Una vocecita dice: para, siéntate, descansa; nadie te culparía, y sería tan fácil. Pero piensas en Sami esperando, y apartas la voz. Todavía no. No mientras el niño aún te necesite.",
+ 39: "Llegas a la señal, pero el sol se ha comido la pintura; no queda ni una palabra que leer. Un brazo apunta carretera abajo, el otro hacia el humo. ¿Por dónde? Tendrás que adivinar, y adivinar bien.",
+ 42: "Le das la espalda y lo dejas con la multitud asustada y su dinero. Da gusto alejarse. Te llama a gritos, pero no te vuelves. Los de su clase siempre encuentran a alguien, pero no a ti, y no hoy.",
+ 43: "Cuentas el dinero —duele entregarlo— y él te da botellas tibias y esa sonrisa ancha. «El transporte vendrá», dice. «Tú espera aquí.» Algo en ti no le cree. Pero ya está hecho, y el dinero se fue.",
+ 44: "Le preguntas sin rodeos: ¿el agua está siquiera fría? ¿Está limpia? Sonríe y mira a otro lado. «Moja, ¿no?», dice, y no promete nada. Ahí tienes tu respuesta: un hombre que no promete tiene algo que esconder.",
+ 45: "Cargas las botellas de vuelta, y en tus manos están calientes, como agua de baño, inútiles para un niño. ¿Y el transporte que prometió? Nunca llega. Esperas, miras la carretera: nada. Se llevó tu dinero y te dio casi nada.",
+ 46: "Abres una botella, y el agua sabe mal: tibia, floja, con un leve tufo. Algo no va bien; no le darías esto a un niño. Pagaste buen dinero por agua mala, y la duda en tus tripas tenía razón desde el principio.",
+ 47: "Lo buscas, pero la camioneta ya se fue; solo su polvo cuelga en la carretera lejana, disolviéndose en el calor. El transporte nunca fue real, nunca iba a venir. Te quedas ahí, engañado, en medio de la carretera vacía, con tu mala agua tibia.",
+ 48: "La camioneta se fue, la multitud se dispersó; ahora solo el calor, la carretera vacía, tus bolsillos vacíos. Aprendiste una lección dura y pagaste de más por ella. Ahora sigues con lo poco que queda, y no es mucho.",
+ 49: "La multitud le empuja dinero: las manos llenas de billetes, las caras rogándole que lo tome. Y él lo toma, despacio, con esa sonrisa, eligiendo a quién ayudar según quién pueda pagar. Ahora ves el truco entero, claro y crudo. Es feo.",
+ 50: "Lejos en las llanuras, la cresta parece por fin más cerca... ¿o no? Ya no estás seguro; el calor dobla el aire, dobla lo que ves, quizá dobla lo que piensas. Estás tan cansado, tan seco. Pero sigues.",
+ 51: "Las llanuras siguen y siguen, la cresta sin crecer nunca, la cabeza dándote vueltas mientras el horizonte se rompe y flota. Tus piernas ya no son tuyas. Este es el momento: caer aquí, a cielo abierto, o volver atrás ahora, mientras aún puedes.",
+ 52: "Llegas al pie de la cresta al fin, tambaleándote, la lengua gruesa y seca, pero allí. De algún modo, la cruzaste. Ahora debes decidir: seguir adelante, agotado como estás, o enfrentar lo que perdiste por el camino.",
+ 53: "Vuelves hacia la carretera mientras aún puedes: la decisión dura y correcta. Haces el último tramo a rastras, de rodillas, y llegas al asfalto tembloroso y lento. La tarde se consume. Pero estás vivo, y aún puedes ayudar.",
+ 54: "Intentas armarle algo de sombra a la familia: una puerta apoyada, una tela colgada, lo que puedas. Quita el sol un poco. Pero no hay agua que dar, y la sombra sin agua solo compra tiempo. Tienes que elegir.",
+ 55: "Entregas tu propia botella, y la familia bebe, despacio y con cuidado, el alivio extendiéndose por sus caras. El niño pequeño deja de llorar al fin. «Gracias», dice la madre, una y otra vez. Ahora tienes menos agua, pero hiciste lo correcto.",
+ 56: "Sin tu agua, el calor te encuentra rápido: la boca secándose, la cabeza doliendo. Diste para ayudar, y lo harías otra vez; pero al sol eso no le importa. Solo aprieta. Tienes que mantener la cabeza, y seguir moviéndote.",
+ 57: "Un desconocido te hace señas hacia una franja de sombra. «Solo un minuto», dice. «Siéntate. Respira.» Fuera del sol, el frescor es una bendición, y tu cuerpo te ruega quedarte. Pero un minuto puede volverse una hora, y Sami espera.",
+ 58: "Avanzas hacia el resplandor, la boca como papel, la luz tan brillante que duele. Cada paso es una pequeña lucha, pero los sigues dando, uno tras otro. Despacio está bien aquí. Lo que te mata es pararte.",
+ 60: "Alguien señala carretera abajo: un pasajero se ha alejado, dicen, hacia el temblor del aire, aturdido por el calor. Solo, a pleno sol, con nada por ese lado salvo calor y distancia. Si nadie va tras él, no volverá.",
+ 61: "Lo encuentras en un barranco seco, trastabillando, parpadeando, sin reconocer tu cara. El sol lo ha golpeado fuerte; su piel está seca, no húmeda, que es mala señal. Lo tomas del brazo. «Ven conmigo», dices. «Por aquí. Despacio ahora.»",
+ 62: "No puedes hacerlo todo a la vez, y Sami es quien más te necesita. Así que mandas aviso de que otro vaya tras el pasajero perdido, y sigues. Te sienta mal, pero tienes que elegir, y eliges al niño.",
+ 63: "Lo llevas sano y salvo al autobús, donde su familia grita de alivio. Te ponen una botella para compartir y te hacen un sitio a la sombra. «Gracias», repiten, porque una bondad nunca se queda quieta; se mueve.",
+ 64: "Miras la llanura: enorme, vacía, temblando de calor, nada que se mueva en ninguna parte. El mundo entero parece quedarse quieto, esperando a que el sol baje al fin. Y tú también, te das cuenta.",
+ 65: "El sol sube a su peor momento; este es el pico del calor. El asfalto se ablanda bajo los pies, el aire mismo parece arder, y pensar se ha vuelto lento y difícil. Esta es la hora de sobrevivir. Pásala, y casi has ganado el día.",
+ 67: "Bello te pone la última botella fresca en las manos. «Para el niño», dice. «Ve; yo me quedo con el motor.» Tiene las manos negras de aceite, y le tiemblan un poco. Esta es la ayuda que tiene para dar, y la da. La tomas, y le das las gracias.",
+ 68: "En la parte delantera del autobús, la gente se lanza por el agua: voces subiendo, manos agarrando, el miedo prendiendo y extendiéndose rápido. Un empujón más y es una pelea. Puedes intentar calmarlos y repartir con justicia, o abrirte paso a la fuerza hasta la caja.",
+ 70: "En el apartadero bajo se alza una vieja estación de tren, cerrada hace años; eso dicen todos. Y sin embargo hoy un fino hilo de humo se eleva de ella, y un viejo molino de viento gira despacio al lado. Nadie sabe explicarlo. Algo, o alguien, está ahí.",
+ 71: "Llegas al viejo apartadero, que de cerca parece menos muerto. Llamas: no hay respuesta. Llamas otra vez: nada. Pero la puerta no está cerrada; está entornada, y por la rendija salen aire caliente y olor a humo.",
+ 72: "Entras, a una habitación en penumbra y sofocante, y allí en el suelo yace un anciano, junto a un aparato de radio muerto, apenas moviéndose. Su respiración es superficial, su piel seca y gris. Lleva aquí un rato, solo. No hay tiempo que perder.",
+ 73: "Llamas en la puerta, y por un momento no hay nada. Luego vuelve una voz: débil, seca, vieja. «Aquí», dice. «Aquí dentro.» Hay alguien dentro, y necesita ayuda. Ya no puedes marcharte de esto.",
+ 74: "Te pones a la obra: agua a sus labios, lento y constante, un paño mojado en el cuello, el aire caliente abanicado de su cara. Poco a poco el anciano vuelve. Abre los ojos. «El pozo», raspa. «Atrás. Hondo y frío. Y la radio, si logras que funcione.»",
+ 75: "Te vuelves para correr a por ayuda, y te detienes. Aquí no hay ayuda; no hasta el anochecer. Ni cuadrillas, ni teléfonos, nadie que venga. Eres tú o nadie, y el anciano en el suelo también lo sabe. Sus ojos te siguen hasta la puerta.",
+ 76: "El anciano te mira, con los ojos más claros ahora. «¿Veníais en el autobús del mediodía?», dice. «Entonces apuesto a que hay una vieja amiga mía a bordo: Rose. Nos conocimos hace mucho, en este camino. Dile que Faro sigue aquí.»",
+ 77: "Decides juntarlos cara a cara antes de que acabe el día: Rose y el viejo Faro, después de todos estos años. Es poca cosa, al lado del agua y la sombra. Pero no es nada; algunas puertas siguen cerradas años solo porque nadie piensa en llamar. Tú sí.",
+ 78: "Dentro, el lugar guarda años de polvo: el aire seco, viejo y quieto, la madera agrietada por el calor, nada movido en mucho tiempo. Y sin embargo algo sí se movió aquí: alguien encendió ese fuego; alguien puso ese molino a girar.",
+ 79: "En la pared cuelga una foto vieja, curvada y amarillenta. En ella, un joven junto a este mismo molino, una joven a su lado, los dos riendo. Conoces esa cara: es Rose, la del autobús, hace mucho. Entonces, desde el cuarto de atrás, un sonido débil.",
+ 80: "La camioneta vuelve una última vez, la ventanilla bajando. «¿Aún atascado? ¿Aún sediento?», dice. «Última oportunidad, amigo.» La misma sonrisa, la misma mentira. Sabe que estás cansado, y cuenta con ello. Ahora eliges, para siempre.",
+ 90: "Estás de vuelta en el autobús, en lo último del peor calor, el aliento seco, la cabeza martilleando. Y ahí está Sami: pálido a la sombra, demasiado quieto. Esta es la hora que cuenta; lo que hagas ahora, hazlo bien. La vida del niño está cerca.",
+ 91: "Te arrodillas junto a Sami. El niño quema al tacto, respira rápido y superficial, los labios agrietados y secos: mal, y a peor. Tienes que refrescarlo, y refrescarlo ya. Todo lo que hiciste hoy se reduce a este momento.",
+ 92: "Entonces llega ayuda al autobús tras de ti: manos, agua, cabezas serenas, gente que sabe qué hacer. Ya no estás solo con esto; hay otros para compartir el peso. Es como soltar una carga pesada, y por fin sueltas el aire.",
+ 93: "Ahora refrescas al niño, y lo que puedas hacer depende de lo que cargaste. Si guardaste una buena reserva de agua, tienes de sobra con qué trabajar; si no, debes sacar el máximo de lo poco que queda. De un modo u otro, empiezas.",
+ 94: "Revisas al niño, con suavidad y cuidado, y los ojos de Sami se abren apenas: miedo en ellos, luego, al verte, un poco menos. «Volviste», susurra el niño. «Dije que lo haría», le dices. «Ahora vamos a refrescarte.»",
+ 95: "Abres la caja de agua, y lo cambia todo. Sorbos regulares, paños mojados cambiados a menudo en cuello y muñecas, el calor de la fiebre cediendo despacio. La respiración de Sami se calma. El agua, bien repartida, es vida; lo sabías, y ahora lo ves.",
+ 96: "No tienes caja que abrir, así que usas lo que hay. Trapos mojados en tu última agua. Cada trozo de sombra arrastrado sobre el niño, a Sami hablándole y esos ojos abiertos. Puede bastar. Puede que no. Pero no dejarás de intentarlo.",
+ 97: "El calor está hondo en el niño ya, y temes que trapos y sombra no lo contengan. Has hecho todo lo posible con lo que tienes, pero puede no bastar. Necesitas más: ayuda, o agua, o ambas, y pronto.",
+ 98: "Alzas la vista y lo ves: lejos, cruzando las llanuras, un hilo de humo, y al lado un molino girando despacio. Está donde no debería haber nada, donde la vieja estación está cerrada. Te tira del ojo, y de algo dentro de ti.",
+ 99: "El humo se eleva donde no vive nadie; todos juran que el lugar está muerto. Pero humo es fuego, y fuego es una mano que lo encendió, y una mano es una persona. Y una persona aquí sola, en un día así, puede estar en apuros de verdad. Lo presientes.",
+ 100: "Ahora viene el largo aguante: mantienes al niño fresco, haces circular el agua, aguantas el sol hora tras hora lenta. No es emocionante, solo trabajo constante, duro, cuidadoso. Pero el trabajo constante es lo que salva a la gente, así que lo haces, y no paras.",
+ 101: "Y entonces, al fin, cambia. El resplandor se ablanda; el sol blanco baja hacia la cresta; el aire empieza, apenas, a refrescar. Y lejos en la carretera, sube polvo: un camión, uno de verdad, que viene hacia aquí. Llegaste al fresco de la tarde.",
+ 102: "Esta es la peor hora, la de justo antes del alivio: el calor aún sin ceder, el cuerpo gastado, la voluntad desgastada. Pero sientes que el día empieza a inclinarse. Aguanta. Aguanta un poco más. El final está cerca ya.",
+ 103: "Carretera abajo los ves: polvo, destellos de cristal al sol bajo, otra gente, otros vehículos. Otros también pasaron este día. No fuiste el único aquí peleando contra el calor, y ese pensamiento te calienta en la luz que se apaga.",
+ 104: "Al fin, faros, y una larga columna de polvo detrás, subiendo la carretera hacia ti. Un camión. Ayuda de verdad, viniendo a velocidad de verdad. Te pones en pie y saludas, las piernas temblando bajo ti. Ya casi acaba. Casi. Te permites creerlo.",
+ 105: "La tarde baja sobre las llanuras. La luz se vuelve larga y dorada y limpia, el calor asesino levantándose aliento a aliento, las sombras estirándose de cada piedra. La tierra, tan cruel hace una hora, es casi amable ahora. Te quedas a mirarla, y respiras.",
+ 106: "Entonces llega: el primer soplo fresco de viento, cruzando las llanuras para tocarte la cara. Tras el día que has tenido, parece un regalo no merecido. Cierras los ojos y dejas que enfríe el sudor de tu piel. Lo lograste. Lo lograron todos.",
+ 107: "Desde el autobús miras la carretera, donde una columna de polvo se alza a lo lejos y crece. Algo viene al fin; aún demasiado lejos para distinguirlo, pero polvo aquí significa ruedas, y ruedas, ahora mismo, significan esperanza. No le quitas ojo, y esperas.",
+ 110: "El fresco de la tarde llega al fin, y el día suma lo que es. Lo que hiciste aquí en el calor vuelve a casa ahora: parte para estar orgulloso, parte no. Aquí es donde todo se aclara.",
+ 111: "La tarde suma, no siempre con un gran acto, sino con muchos pequeños: lo que compartiste, lo que negaste, por quién te detuviste. Todo cuenta al final; todo hizo del día lo que fue. Entonces, ¿en qué quedó el día?",
+ 112: "Hay más que sopesar; el día guardó otras cosas también. Un desconocido al que ayudaste. Agua que diste con mano abierta. Pequeñas decisiones tomadas en el calor, cuando mirar a otro lado habría sido fácil. Eso tiene su propio peso. ¿En qué quedó?",
+ 113: "¿Y con qué te deja el día? Quizá no con una victoria limpia. Quizá solo con el hecho de que te levantaste, de que lo intentaste, de que cuando era duro y caluroso y fácil quedarse quieto, no lo hiciste. Eso vale algo. Siempre valió.",
+ 114: "Pero no todo día acaba bien. Algunas decisiones cuestan más de lo que sabías; algunos caminos, una vez tomados, no se pueden desandar. Este es el final duro del día, donde vuelve a casa lo peor. No es fácil de mirar, pero es verdad. Así que mira.",
+}
+
+def main():
+    data = json.load(open(OUT, encoding="utf-8")); a = 0
+    for nid, t in G.items():
+        k = str(nid)
+        if k not in data:
+            data[k] = t; a += 1
+    data = {k: data[k] for k in sorted(data, key=lambda x: int(x))}
+    json.dump(data, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"cool-of-evening/es.json: {len(data)} (+{a})")
+
+if __name__ == "__main__":
+    main()

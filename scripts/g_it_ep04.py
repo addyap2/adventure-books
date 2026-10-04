@@ -1,0 +1,112 @@
+#!/usr/bin/env python3
+"""The Cool of Evening — full Italian per-passage gist coverage (merges to 112/112).
+Run: python3 scripts/g_it_ep04.py"""
+import json, os
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "content", "gist", "cool-of-evening", "it.json")
+
+G = {
+ 2: "Raccogli ciò che c'è sul pullman: qualche bottiglia d'acqua, una piccola cassetta di pronto soccorso e un grande telo di tela. Potrebbe fare ombra, se montato. L'aria dentro si fa già densa di calore, e il sudore ti cola lungo la schiena. Devi decidere cosa fare, e presto.",
+ 3: "Provi la radio, ma è morta, e nessun telefono prende. Arriva la voce dell'autista, il signor Bello: con un caldo così non si muove nulla, i soccorsi arriveranno solo a sera. State fermi, dice, e al fresco. Ma Sami è piccolo e si sta spegnendo, e la sera è lontana.",
+ 4: "Sposti Sami nella sottile striscia d'ombra accanto al pullman. Aiuta un po', ma l'ombra da sola non basta: il bambino ha bisogno d'acqua, e tu di un piano. Ti fermi un attimo e capisci: a mani vuote non puoi fare molto qui.",
+ 5: "Scendi sulla strada. Il bagliore è bianco e duro, pianure ocra fino al crinale che tremola in lontananza, il caldo tanto denso da potercisi appoggiare. La strada è vuota in entrambi i sensi, tranne, lontanissima, una piccola sagoma che si allontana.",
+ 6: "Ti costringi a pensare. Potresti sistemare prima le scorte: acqua, ombra, un piano. Potresti andare dritto da Sami e restare col bambino. O potresti andare posto per posto e mettere i passeggeri ad aiutare. Ogni scelta costa tempo, e con questo caldo il tempo costa acqua.",
+ 8: "Senti il caldo pesare sul petto, e pensi a Sami: piccolo, zitto ormai, senza acqua, in un'aria come un forno. Un caldo così può uccidere un bambino. Non è paura; è un fatto. Nessun altro si muoverà. Quindi devi essere tu.",
+ 11: "Raggiungi Sami in fretta con il poco che hai: qualche sorso, un panno bagnato, un lembo d'ombra. Calma il bambino per un momento. Ma non reggerà; ti serve acqua vera, e di più, e presto. Non puoi solo sederti e sperare.",
+ 13: "Ti prendi carico della cassa dell'acqua. È pesante, e ora ogni bottiglia conta. Distribuita lenta e con giustizia, basta per farcela; strappata e sprecata, no. Così la conti, e la tieni vicino.",
+ 14: "Prendi il telo e gli stracci. Faranno ombra, e questo aiuta, ma non hai messo al sicuro l'acqua. L'ombra toglie il sole; non bagna una bocca secca. Dovrai comunque trovare acqua, e trovarla presto.",
+ 15: "Zia Rose conosce questa strada; l'ha attraversata molte volte. «Sta' lontano dalle pianure aperte», dice. «Sembrano vicine. Non lo sono.» Ti mette in guardia anche dall'uomo del furgone. «Razioná ogni goccia, aspetta che cali il sole. Si vive così, qui.»",
+ 16: "Sistemi il signor Danso all'ombra e gli dai un sorso lento d'acqua. Pian piano gli occhi gli si schiariscono e torna in sé. «Grazie», dice, con la mano che ti trema tra le tue. Prometti di tornare a vederlo, e torni alla giornata.",
+ 17: "Vai avanti a occuparti di Sami; il bambino viene prima, e tutto il resto può aspettare un momento. Ma devi ancora decidere come: se mettere al sicuro l'acqua vera prima, o andare dritto accanto al bambino.",
+ 18: "Il caldo è ormai anche dentro di te: la testa leggera, la bocca secca, le gambe stranamente lontane. Sei vicino al tuo limite, e lo sai. Se crolli, non resta nessuno per Sami. Quindi muoviti piano, e con prudenza.",
+ 19: "Il pullman si risveglia. La gente comincia a muoversi e a condividere. Una donna tira fuori una grossa tanica d'acqua; un uomo monta il telo per l'ombra; e un piano prende forma posto dopo posto. Non sei più solo in questo, e questo cambia tutto.",
+ 20: "Nessuno si muove. La gente fissa le proprie mani, o fuori il bagliore: spaventati, e gli spaventati tacciono. Non puoi forzarli. Così ti giri e vai avanti da solo; è più dura così, ma Sami non può aspettare che siano coraggiosi.",
+ 21: "Le scorte sono sistemate; ora ti serve acqua vera. Ci sono due vie per il crinale. Seguire la strada, lunga ma facile da seguire. O tagliare dritto per le pianure aperte: molto più corta, ma senza sentiero, senza ombra e sconosciuta.",
+ 22: "Prendi a cuore le parole di Rose. Razionare l'acqua. Stare lontano dalle pianure. Non fidarti dell'uomo del furgone, e aspettare che passi il peggio del sole. È un consiglio semplice, e buono. Ora devi solo seguirlo davvero.",
+ 23: "Ti senti più saldo per il gesto buono che hai fatto; aiutare qualcuno, stranamente, pare aiutare anche te. Hai la testa più lucida, il passo più sicuro. C'è ancora da fare, e il sole è alto, ma ti senti all'altezza.",
+ 24: "Un furgone è fermo sul ciglio, il motore che ticchetta nel caldo. Un uomo vi si appoggia, tutto sorrisi, con acqua in bottiglia e passaggi in paese da offrire. Una piccola folla gli si è raccolta intorno: spaventata, assetata e pronta a pagare.",
+ 25: "Guidi un gruppetto verso Sami e l'ombra. Camminando insieme, vi sentite tutti più forti; la gente porta acqua, stracci, un po' di speranza. «Di qua», dici, e ti seguono: una bella sensazione, in un'ora difficile.",
+ 26: "La strada è lunga e massacrante. L'asfalto cede sotto i piedi; pozze di miraggio brillano davanti e svaniscono quando le raggiungi; e non c'è un lembo d'ombra da nessuna parte. Ma è sgombra, e porta dove devi andare. Così continui a camminare.",
+ 28: "Esci sulle pianure aperte, e subito senti che è sbagliato. Il crinale non si avvicina; dietro di te la strada sfuma e si perde nel tremolio. Qui non c'è altro che caldo e luce dura, e tu sei in mezzo, solo.",
+ 29: "Il telo è strappato e troppo corto per fare molta ombra; ti restano solo gli stracci, che non coprono tutti. Dovrai arrangiarti, o tornare alle scorte per qualcosa di meglio.",
+ 30: "La strada prosegue sotto il sole bianco, il caldo peggiore di ora in ora, la tua ombra ridotta a un nulla sotto i piedi. Davanti, un'auto ferma sul ciglio; il sole ti martella la nuca; e c'è un cartello, con la vernice ormai squamata dal caldo.",
+ 31: "Un'auto bloccata nella sabbia, un vecchio accasciato sul volante, il finestrino abbassato, la testa che penzola. È surriscaldato e troppo sfinito per muoversi. Se ti fermi, perdi tempo; se no, potrebbe non reggere il pomeriggio.",
+ 33: "Avanzi nel peggio del caldo, ogni passo più duro del precedente, l'aria che ti brucia la gola. Davanti ci sono scelte: l'uomo del furgone potrebbe essere vicino, o il fumo strano al raccordo, oppure puoi puntare dritto al pullman.",
+ 34: "Spingi con la spalla, e l'auto si libera. Al vecchio si riempiono gli occhi; ti caccia in mano una bottiglia tiepida. «Prendila», dice, «per il disturbo». Non è fredda, ma è acqua, data di cuore, e la prendi e vai avanti.",
+ 35: "Non puoi fermarti ora, ma non puoi neanche lasciarli così. Allora prometti di mandare aiuto. «Resistete», dici loro. «State all'ombra. Non vi dimenticherò.» E lo pensi davvero; poi ti giri e vai.",
+ 36: "Il pullman costruisce un unico punto d'ombra. Il telo montato in alto, l'acqua raccolta al centro, i più deboli —i vecchi, i piccoli— sistemati dove è più fresco. Non è molto. Ma è un piano, e ora è di tutti.",
+ 37: "Posto dopo posto, il pullman spaventato diventa uno che funziona. Ora la gente ha compiti: uno sorveglia i bambini, uno distribuisce l'acqua, uno regge l'ombra. La paura diventa azione, e l'azione batte sempre l'attesa.",
+ 38: "Il caldo ti rode la volontà. Una vocina dice: fermati, siediti, riposa; nessuno ti biasimerebbe, e sarebbe così facile. Ma pensi a Sami che aspetta, e scacci la voce. Non ancora. Non finché il bambino ha bisogno di te.",
+ 39: "Raggiungi il cartello, ma il sole ha mangiato via la vernice; non resta una parola da leggere. Un braccio indica lungo la strada, l'altro verso il fumo. Da che parte? Dovrai indovinare, e indovinare giusto.",
+ 42: "Gli volti le spalle e lo lasci alla folla spaventata e ai loro soldi. Fa bene andarsene. Ti chiama a gran voce, ma non ti giri. Quelli come lui trovano sempre qualcuno, ma non te, e non oggi.",
+ 43: "Conti i soldi —fa male consegnarli— e lui ti dà bottiglie tiepide e quel sorriso largo. «Il passaggio arriverà», dice. «Aspetta qui.» Qualcosa in te non gli crede. Ma ormai è fatta, e i soldi sono andati.",
+ 44: "Glielo chiedi senza giri: l'acqua è almeno fredda? È pulita? Sorride e guarda altrove. «Bagna, no?», dice, e non promette niente. Ecco la tua risposta, lì: un uomo che non promette ha qualcosa da nascondere.",
+ 45: "Riporti indietro le bottiglie, e tra le mani scottano, calde come acqua da bagno, inutili per un bambino. E il passaggio promesso? Non arriva mai. Aspetti, guardi la strada: niente. Ti ha preso i soldi e dato quasi nulla.",
+ 46: "Apri una bottiglia, e l'acqua sa di sbagliato: tiepida, sciapa, un po' puzzolente. Qualcosa non va; questa non la daresti a un bambino. Hai pagato bei soldi per acqua cattiva, e il dubbio che avevi nello stomaco aveva ragione fin dall'inizio.",
+ 47: "Lo cerchi, ma il furgone è già sparito; solo la sua polvere resta sulla strada lontana, che si dirada nel caldo. Il passaggio non è mai stato vero, non sarebbe mai venuto. Resti lì, truffato, in mezzo alla strada vuota, con la tua acqua cattiva e tiepida.",
+ 48: "Il furgone è sparito, la folla dispersa; ora solo il caldo, la strada vuota, le tasche vuote. Hai imparato una dura lezione e l'hai pagata troppo cara. Ora vai avanti col poco che resta, e non è molto.",
+ 49: "La folla gli spinge addosso i soldi: le mani piene di banconote, i volti che lo pregano di prenderli. E lui li prende, lento, con quel sorriso, scegliendo chi aiutare in base a chi può pagare. Ora vedi tutto il trucco, chiaro e crudo. È brutto.",
+ 50: "Lontano sulle pianure, il crinale sembra finalmente più vicino... o no? Non ne sei più certo; il caldo piega l'aria, piega ciò che vedi, forse piega ciò che pensi. Sei così stanco, così secco. Ma vai avanti.",
+ 51: "Le pianure continuano all'infinito, il crinale che non cresce mai, la testa che gira mentre l'orizzonte si spezza e galleggia. Le gambe non sono più tue. È questo il momento: crollare qui, allo scoperto, o tornare indietro ora, finché puoi.",
+ 52: "Raggiungi il piede del crinale alla fine, barcollando, la lingua gonfia e secca, ma ci arrivi. In qualche modo, l'hai attraversato. Ora devi decidere: andare avanti, sfinito come sei, o affrontare ciò che hai perso per strada.",
+ 53: "Torni verso la strada finché puoi: la scelta dura e giusta. Fai l'ultimo tratto in ginocchio, e raggiungi l'asfalto scosso e lento. Il pomeriggio si consuma. Ma sei vivo, e ancora in grado di aiutare.",
+ 54: "Provi a montare un po' d'ombra per la famiglia: una porta puntellata, un telo appeso, quel che riesci. Toglie un po' il sole. Ma non c'è acqua da dare, e l'ombra senza acqua compra solo tempo. Devi scegliere.",
+ 55: "Consegni la tua bottiglia, e la famiglia beve, lenta e attenta, il sollievo che si allarga sui loro volti. Il bambino più piccolo smette di piangere alla fine. «Grazie», dice la madre, più e più volte. Ora hai meno acqua, ma hai fatto bene.",
+ 56: "Senza la tua acqua, il caldo ti trova in fretta: la bocca che si secca, la testa che duole. Hai dato per aiutare, e lo rifaresti; ma al sole non importa. Preme e basta. Devi tenere la testa, e continuare a muoverti.",
+ 57: "Uno sconosciuto ti fa cenno verso una striscia d'ombra. «Solo un minuto», dice. «Siediti. Respira.» Fuori dal sole il fresco è una benedizione, e il corpo ti implora di restare. Ma un minuto può diventare un'ora, e Sami aspetta.",
+ 58: "Avanzi nel bagliore, la bocca come carta, la luce così forte da far male. Ogni passo è una piccola lotta, ma continui a farne, uno dopo l'altro. Lento va bene qui. È fermarsi che ti uccide.",
+ 60: "Qualcuno indica lungo la strada: un passeggero si è allontanato, dicono, verso il tremolio, stordito dal caldo. Solo, al sole aperto, con niente da quella parte se non caldo e distanza. Se nessuno gli va dietro, non tornerà.",
+ 61: "Lo trovi in un canale secco, che barcolla, sbatte le palpebre, non riconosce il tuo viso. Il sole l'ha colpito forte; la pelle è secca, non umida, che è un brutto segno. Lo prendi per il braccio. «Vieni con me», dici. «Di qua. Piano ora.»",
+ 62: "Non puoi fare tutto insieme, e Sami è quello che ha più bisogno di te. Così mandi a dire che un altro vada dietro al passeggero perduto, e vai avanti. Ti pesa, ma devi scegliere, e scegli il bambino.",
+ 63: "Lo riporti sano e salvo al pullman, dove la sua famiglia grida di sollievo. Ti cacciano in mano una bottiglia da condividere e ti fanno un posto all'ombra. «Grazie», continuano a dire, perché una gentilezza non sta mai ferma; si muove.",
+ 64: "Guardi la pianura: enorme, vuota, che tremola nel caldo, nulla che si muova da nessuna parte. Il mondo intero sembra star fermo, in attesa che il sole cali alla fine. E anche tu, ti rendi conto.",
+ 65: "Il sole sale al suo peggio; è il picco del caldo. L'asfalto cede sotto i piedi, l'aria stessa pare bruciare, e pensare è diventato lento e faticoso. È l'ora di sopravvivere. Superala, e hai quasi vinto la giornata.",
+ 67: "Bello ti caccia in mano l'ultima bottiglia fresca. «Per il bambino», dice. «Va'; io resto col motore.» Ha le mani nere d'olio, e gli tremano un po'. È l'aiuto che ha da dare, e lo dà. La prendi, e lo ringrazi.",
+ 68: "Sul davanti del pullman la gente si avventa sull'acqua: voci che si alzano, mani che afferrano, la paura che prende e si diffonde in fretta. Una spinta in più ed è rissa. Puoi provare a calmarli e distribuire con giustizia, o aprirti la strada con la forza fino alla cassa.",
+ 70: "Sul raccordo basso sorge una vecchia stazioncina, chiusa da anni; lo dicono tutti. Eppure oggi un filo sottile di fumo ne sale, e un vecchio mulino a vento gira lento accanto. Nessuno sa spiegarlo. Qualcosa, o qualcuno, è là.",
+ 71: "Raggiungi il vecchio raccordo, che da vicino sembra meno morto. Bussi: nessuna risposta. Bussi di nuovo: niente. Ma la porta non è chiusa; è socchiusa, e dalla fessura escono aria calda e odore di fumo.",
+ 72: "Entri, in una stanza in penombra e soffocante, e là per terra giace un vecchio, accanto a una radio morta, che si muove appena. Il respiro è corto, la pelle secca e grigia. È a terra da un po', solo. Non c'è tempo da perdere.",
+ 73: "Chiami alla porta, e per un attimo non c'è nulla. Poi torna una voce: debole, secca, vecchia. «Qui», dice. «Qua dentro.» C'è qualcuno dentro, e ha bisogno d'aiuto. Ora non puoi andartene da questo.",
+ 74: "Ti metti all'opera: acqua alle labbra, lenta e costante, un panno bagnato sul collo, l'aria calda sventolata via dal viso. Pian piano il vecchio torna. Apre gli occhi. «Il pozzo», rantola. «Sul retro. Profondo e freddo. E la radio, se riesci a farla parlare.»",
+ 75: "Ti giri per correre a cercare aiuto, poi ti fermi. Qui non c'è aiuto; non fino a sera. Niente squadre, niente telefoni, nessuno in arrivo. Sei tu o nessuno, e il vecchio a terra lo sa anche lui. I suoi occhi ti seguono fino alla porta.",
+ 76: "Il vecchio ti guarda, gli occhi più limpidi ora. «Venivate col pullman di mezzogiorno?», dice. «Allora scommetto che a bordo c'è una mia vecchia amica: Rose. Ci siamo conosciuti tanto tempo fa, su questa strada. Dille che Faro è ancora qui.»",
+ 77: "Decidi di farli incontrare faccia a faccia prima che finisca il giorno: Rose e il vecchio Faro, dopo tutti questi anni. È poca cosa, accanto ad acqua e ombra. Ma non è nulla; certe porte restano chiuse per anni solo perché nessuno pensa a bussare. Tu sì.",
+ 78: "Dentro, il posto conserva anni di polvere: l'aria secca, vecchia e immobile, il legno crepato dal caldo, nulla spostato da tanto. Eppure qualcosa qui si è mosso: qualcuno ha acceso quel fuoco; qualcuno ha messo in moto quel mulino.",
+ 79: "Al muro è appesa una vecchia foto, arricciata e ingiallita. Vi si vede un giovane accanto a questo stesso mulino, una giovane al suo fianco, entrambi che ridono. Quel viso lo conosci: è Rose, quella del pullman, tanto tempo fa. Poi, dalla stanza sul retro, un suono debole.",
+ 80: "Il furgone torna un'ultima volta, il finestrino che si abbassa. «Ancora bloccato? Ancora assetato?», dice. «Ultima occasione, amico.» Lo stesso sorriso, la stessa bugia. Sa che sei stanco, e ci conta. Ora scegli, una volta per tutte.",
+ 90: "Sei di nuovo al pullman, nell'ultimo del peggior caldo, il fiato secco, la testa che martella. E c'è Sami: pallido all'ombra, troppo immobile. È l'ora che conta; qualunque cosa fai ora, falla bene. La vita del bambino è lì a un passo.",
+ 91: "Ti inginocchi accanto a Sami. Il bambino scotta al tatto, respira rapido e corto, le labbra screpolate e secche: male, e sempre peggio. Devi raffreddarlo, e raffreddarlo subito. Tutto quello che hai fatto oggi si riduce a questo momento.",
+ 92: "Poi l'aiuto raggiunge il pullman dietro di te: mani, acqua, teste calme, gente che sa cosa fare. Ora non sei più solo in questo; ci sono altri a dividere il peso. È come posare un carico pesante, e finalmente butti fuori il fiato.",
+ 93: "Ora raffreddi il bambino, e ciò che puoi fare dipende da ciò che hai portato. Se hai tenuto una buona scorta d'acqua, hai di che lavorare; se no, devi sfruttare al massimo il poco che resta. In un modo o nell'altro, cominci.",
+ 94: "Controlli il bambino, dolce e attento, e gli occhi di Sami si aprono appena: paura dentro, poi, vedendoti, un po' meno. «Sei tornato», sussurra il bambino. «Avevo detto che l'avrei fatto», gli dici. «Ora ti rinfreschiamo.»",
+ 95: "Apri la cassa dell'acqua, e cambia tutto. Sorsi regolari, panni bagnati cambiati spesso su collo e polsi, il calore della febbre che cede piano. Il respiro di Sami si calma. L'acqua, divisa bene, è vita; lo sapevi, e ora lo vedi.",
+ 96: "Non hai cassa da aprire, così usi quel che hai. Stracci bagnati nella tua ultima acqua. Ogni lembo d'ombra trascinato sul bambino, Sami tenuto a parlare e quegli occhi tenuti aperti. Può bastare. Può non bastare. Ma non smetterai di provarci.",
+ 97: "Il caldo è ormai profondo nel bambino, e temi che stracci e ombra non lo trattengano. Hai fatto tutto il possibile con ciò che hai, ma potrebbe non bastare. Ti serve di più: aiuto, o acqua, o entrambi, e presto.",
+ 98: "Alzi lo sguardo e lo vedi: lontano, oltre le pianure, un filo di fumo, e accanto un mulino che gira lento. È là dove non dovrebbe esserci nulla, dove la vecchia stazione è chiusa. Ti tira l'occhio, e qualcosa dentro.",
+ 99: "Il fumo sale dove non vive nessuno; tutti giurano che il posto è morto. Ma fumo vuol dire fuoco, e fuoco vuol dire una mano che l'ha acceso, e una mano vuol dire una persona. E una persona qui sola, in un giorno così, può essere nei guai davvero. Lo senti.",
+ 100: "Ora viene la lunga resistenza: tieni fresco il bambino, fai girare l'acqua, aspetti che cali il sole ora dopo ora lenta. Non è emozionante, solo lavoro costante, duro, attento. Ma è il lavoro costante che salva la gente, così lo fai, e non ti fermi.",
+ 101: "E poi, finalmente, cambia. Il bagliore si attenua; il sole bianco scivola verso il crinale; l'aria comincia, appena, a rinfrescarsi. E lontano sulla strada si alza la polvere: un camion, uno vero, che viene da questa parte. Sei arrivato al fresco della sera.",
+ 102: "È l'ora peggiore, quella appena prima della svolta: il caldo non ancora ceduto, il corpo spossato, la volontà logora. Ma senti il giorno che comincia a pendere. Resisti. Resisti ancora un po'. La fine è vicina ormai.",
+ 103: "Lungo la strada li vedi: polvere, bagliori di vetro nel sole basso, altra gente, altri veicoli. Anche altri ce l'hanno fatta oggi. Non eri l'unico qui a lottare contro il caldo, e quel pensiero ti scalda nella luce che svanisce.",
+ 104: "Alla fine, fari, e una lunga scia di polvere dietro, che sale la strada verso di te. Un camion. Aiuto vero, che viene a velocità vera. Ti alzi e fai cenno, le gambe che ti tremano sotto. È quasi finita ormai. Quasi. Ti lasci crederci.",
+ 105: "La sera cala sulle pianure. La luce si fa lunga, dorata e pulita, il caldo assassino che si solleva respiro dopo respiro, le ombre che si allungano da ogni pietra. La terra, così crudele un'ora fa, è quasi gentile ora. Resti a guardarla, e respiri.",
+ 106: "Poi arriva: il primo soffio fresco di vento, che attraversa le pianure a toccarti il viso. Dopo la giornata che hai avuto, sembra un dono non meritato. Chiudi gli occhi e lasci che rinfreschi il sudore sulla pelle. Ce l'hai fatta. Ce l'avete fatta tutti.",
+ 107: "Dal pullman guardi la strada, dove una scia di polvere si alza lontano e cresce. Qualcosa arriva alla fine; ancora troppo lontano per capire cosa, ma polvere qui vuol dire ruote, e ruote, proprio ora, vogliono dire speranza. Non la perdi d'occhio, e aspetti.",
+ 110: "Il fresco della sera arriva alla fine, e il giorno fa la somma di ciò che è. Qualunque cosa tu abbia fatto qui nel caldo torna a casa ora: parte di cui andare fiero, parte no. È qui che tutto si chiarisce.",
+ 111: "Il pomeriggio fa la somma, non sempre con un gesto grande, ma con tanti piccoli: ciò che hai condiviso, ciò che hai rifiutato, per chi ti sei fermato. Tutto conta alla fine; tutto ha fatto del giorno ciò che è stato. Allora, in cosa si è risolto il giorno?",
+ 112: "C'è altro da pesare; il giorno ha tenuto anche altre cose. Uno sconosciuto che hai aiutato. Acqua data a mano aperta. Piccole scelte fatte nel caldo, quando guardare altrove sarebbe stato facile. Hanno un loro peso. In cosa si sono risolte?",
+ 113: "E con cosa ti lascia il giorno? Forse non con una vittoria netta. Forse solo col fatto che ti sei alzato, che hai provato, che quando era duro e caldo e facile star fermo, tu non l'hai fatto. Conta qualcosa. Ha sempre contato.",
+ 114: "Ma non ogni giorno finisce bene. Certe scelte costano più di quanto sapevi; certe strade, una volta prese, non si ripercorrono. È la fine dura del giorno, dove torna a casa il peggio. Non è facile da guardare, ma è vero. Quindi guarda.",
+}
+
+def main():
+    data = json.load(open(OUT, encoding="utf-8")); a = 0
+    for nid, t in G.items():
+        k = str(nid)
+        if k not in data:
+            data[k] = t; a += 1
+    data = {k: data[k] for k in sorted(data, key=lambda x: int(x))}
+    json.dump(data, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"cool-of-evening/it.json: {len(data)} (+{a})")
+
+if __name__ == "__main__":
+    main()

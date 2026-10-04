@@ -1,0 +1,112 @@
+#!/usr/bin/env python3
+"""The Orchard — full Spanish per-passage gist coverage (merges to 112/112).
+Run: python3 scripts/g_es_ep06.py"""
+import json, os
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "content", "gist", "the-orchard", "es.json")
+
+G = {
+ 2: "Reúnes lo que hay en el cobertizo: una lata de aceite, cerillas, una buena linterna, un brazado de paja seca. Fuera, el aire está en calma muerta y hace un frío cortante. La escarcha ya se arrastra blanca por la hierba. Tienes que decidir qué hacer, y hacerlo rápido.",
+ 3: "Pruebas el teléfono. Suena y suena, y al fin la voz de Tom llega desde la cooperativa. Ninguna cuadrilla puede salir antes de la mañana, dice, no con una helada como esta. Enciende las hogueras a lo largo de las hileras, te dice, y mantenlas si de algún modo puedes.",
+ 4: "Llegas hasta Edith al pie de los escalones. La acomodas y la abrigas lo mejor que puedes. Pero las hileras siguen oscuras y frías. El refugio solo no basta. La flor ahí fuera necesita las hogueras encendidas. Necesitas aceite, un plan y la cabeza despejada antes de salir entre los árboles.",
+ 5: "Sales entre las hileras. La noche es enorme y está en calma muerta, y la flor pálida parece brillar en la oscuridad. El frío aprieta todo el huerto como una mano. Entonces, lejos, entre los árboles del fondo, lo captas: una lucecita que se mueve, ahí donde nadie debería estar esta noche.",
+ 6: "Te obligas a parar y a pensar. Podrías encender primero las hogueras y preocuparte del resto después. Podrías ir con Edith y los vecinos en su lugar. O podrías despertar al pueblo y traer más manos. Cada decisión cuesta un tiempo que no tienes, y ahí fuera en la oscuridad la escarcha ya trabaja los árboles.",
+ 8: "El frío se instala en tu pecho como un peso. Piensas en la flor ahí fuera: la fruta de todo un año, el huerto que es todo lo que le queda a Edith. Si las hogueras siguen apagadas mucho más, la escarcha se lo lleva todo para el alba. No es miedo; es un hecho simple. Nadie más va a meterse en esto y hacerlo. Eres tú, esta noche, o nadie.",
+ 11: "Sales directo a las hileras y enciendes lo que puedes. Una cerilla, un fogonazo de paja, un brasero prendiendo aquí y allá. Pero las llamas son finas y bajas. Sin aceite de verdad no durarán ni una hora. No puedes solo encenderlas, irte y esperar.",
+ 13: "Te haces cargo tú mismo del aceite y la paja. El bidón pesa, y ahora cada gota cuenta. Bien cuidado, mantendrá las hogueras ardiendo por las hileras toda la noche; malgastado, y la flor se hiela antes del alba. Así que lo aprietas contra ti y sales hacia los árboles.",
+ 14: "Tomas solo una linterna y un haz de leña menuda. Te dan luz para trabajar y modo de prender una llama. Pero no las hogueras mismas. Y no has apartado aceite de verdad. Igual necesitarás aceite real, y pronto. Si no, las hileras quedan a oscuras y la escarcha vence.",
+ 15: "El viejo Jack Hale conoce este huerto a oscuras mejor que nadie. «No vayas por el estanque helado», dice. «Parece un atajo. No lo es: es ahogarse.» También te advierte del comprador, ese hombre sonriente de la empresa. «Cuida tu aceite, mantén las hogueras: eso es todo el trabajo de esta noche.»",
+ 16: "Enciendes la estufa del señor Hollis y lo acomodas junto a ella con una manta. Poco a poco se le calma el temblor. «Bendito seas», dice, apretándote fuerte la mano. Prometes volver a verlo antes de la mañana. Luego te vuelves a salir al frío y a las hileras que esperan.",
+ 17: "Mantener las hogueras va primero. El resto puede esperar un momento. Pero aún tienes que elegir cómo. Podrías conseguir aceite de verdad del almacén primero. O podrías salir directo a las hileras y empezar.",
+ 18: "El trabajo te agota. Las piernas te arden, el pecho te jadea, y el frío te pelea a cada paso. Estás cerca de tu propio límite, y lo sabes. Si caes aquí, no queda nadie para mantener las hogueras. Así que ve despacio, y ve con cuidado.",
+ 19: "El pueblo despierta a sí mismo, y la gente empieza a moverse. Un hombre saca rodando un barril de aceite. Una mujer arrastra leña seca. Puerta por puerta, un plan toma forma. Ya no haces esto solo. Y eso lo cambia todo.",
+ 20: "Nadie se mueve. Las puertas siguen cerradas, y las caras se apartan de las ventanas. Tienen miedo, y la gente con miedo calla. No puedes forzarlos a ayudar. Así que te das la vuelta y sigues solo. Es más difícil así. Pero la flor no puede esperarlos.",
+ 21: "Las hogueras cercanas van ardiendo. Ahora, las hileras del fondo. Hay dos maneras de llegar allí. El camino largo que rodea es seguro pero lento. El estanque helado es rápido, recto a través. Pero con una helada así, el hielo podría matar.",
+ 22: "Te tomas a pecho las palabras de Jack Hale. Cuida bien el aceite. Mantente lejos del estanque helado. No te fíes del comprador. Y mantén las hogueras por encima de todo lo demás. Es un consejo sencillo, y bueno. Ahora solo tienes que seguirlo.",
+ 23: "Te sientes más firme por el buen gesto que hiciste. Ayudar a alguien, por raro que parezca, también te afirma a ti. Tienes la cabeza más clara, y las manos más seguras. Queda una noche dura por delante. Pero ahora te sientes capaz de afrontarla.",
+ 24: "Un hombre está de pie en el camino, un farol balanceándose en su puño: el comprador. Tiene aceite que vender y una espalda fuerte que ofrecer, y sonríe con demasiada facilidad. «El huerto no es realmente tu trabajo esta noche, amigo», dice. Ya conoces a los de su clase.",
+ 25: "Guías a un pequeño grupo hacia las hogueras. Caminando juntos, todos os sentís más fuertes. Cargan aceite, leña y paja. «¡Por aquí!», gritas al frío, y vienen. Es una buena sensación, en una hora difícil.",
+ 26: "El camino es negro y duro, el frío aplastándolo, sin refugio en ninguna parte. Pero es firme bajo tus pies, y va hacia donde necesitas ir. Así que sigues andando, paso tras paso.",
+ 28: "Sales al hielo, y enseguida sientes que está mal. El agua espera debajo, negra y honda y helada. Cada paso es una apuesta ahora, y estás ahí fuera, solo. No hay vuelta atrás una vez que empiezas a cruzar.",
+ 29: "La paja está húmeda y no prende. Da solo una llama baja y vacilante. De poco sirve en una helada así. Tendrás que arreglártelas con ella. O volver al almacén por paja seca.",
+ 30: "El camino sigue a lo largo de las hileras, el frío ahondándose a cada hora. Abajo, una casa está a oscuras, sin fuego dentro. Delante, el aire quieto y duro parece empujarte hacia atrás. Y hay un marcador de hilera, medio caído por la escarcha.",
+ 31: "Un anciano se ha caído en el camino helado y no puede levantarse. El frío ya se apodera de él. Si paras, pierdes un tiempo que no tienes. Si no, puede que no aguante la hora.",
+ 33: "Avanzas por lo peor del frío, cada paso ya una pelea, la escarcha hiriéndote la cara. Delante hay opciones. El comprador puede estar cerca. Está esa luz extraña entre los árboles del fondo. O puedes seguir directo hacia las hileras.",
+ 34: "Levantas al anciano, lo pones en pie y lo calientas lo mejor que puedes. Se le llenan los ojos, y te pone un saco seco en las manos. «Tómalo», dice, «por la molestia». Es poca cosa, pero dado de buena fe, y lo tomas y sigues.",
+ 35: "No puedes parar ahora, pero tampoco puedes dejarlos sin más. Así que prometes mandar ayuda pronto. «¡Aguantad!», gritas. «Quedaos abrigados, quedaos juntos; no os olvidaré.» Lo dices en serio, además. Y luego te das la vuelta y vas.",
+ 36: "El pueblo enciende una gran hoguera entre las hileras: un barril ardiendo, lanzando luz y calor a la escarcha. La gente se agolpa cerca, los viejos y los débiles con lo mejor de ella. No es todo el huerto salvado. Pero es un calor de verdad, y un comienzo.",
+ 37: "Casa por casa, el pueblo asustado se vuelve uno que funciona. Ahora la gente tiene tareas: uno atiende el fuego, uno acarrea paja, uno vigila las hileras. El miedo se vuelve acción. Y la acción le gana a la espera, cada vez.",
+ 38: "El largo frío te roe la voluntad. Una vocecita dice: para, métete dentro, descansa; nadie te culparía, y sería tan fácil. Pero piensas en la flor ahí fuera en los árboles. Y apartas la voz. Todavía no. No mientras aún pueda salvarse.",
+ 39: "Llegas al viejo marcador de hilera, pero la escarcha lo ha agrietado y medio derribado. Apenas puedes leerlo ahora. Un brazo apunta a lo largo de las hileras. El otro apunta hacia los árboles del fondo. ¿Por dónde? Tendrás que adivinar, y adivinar bien.",
+ 42: "Le das la espalda y lo dejas con su oficio frío. Da gusto alejarse. Te llama a gritos, pero no te vuelves. Los de su clase siempre encuentran a alguien, al final. Pero no serás tú, no esta noche.",
+ 43: "Tomas su aceite y su dinero. Tus manos se cierran sobre ellos, y algo en ti ya lo sabe. Su sonrisa se ensancha. «Sabio», dice. Pero no se siente sabio en absoluto. Se siente como una puerta cerrándose en silencio.",
+ 44: "Le preguntas sin rodeos: ¿qué quiere de verdad, y por qué debe fracasar el huerto? Sonríe y mira camino abajo. «La tierra sale barata tras un mal año», dice. «Una helada así es una bondad, para un comprador como yo.»",
+ 45: "Sacas su aceite a los braseros. Pero al verterlo, la llama se ahoga y escupe. El aceite es flojo, cortado con agua: no alimenta el fuego. Las llamas se hunden bajas y marrones e inútiles.",
+ 46: "Abres la lata, y el olor te golpea: flojo, agrio, cortado con agua. Este aceite jamás alimentará una llama. Pagaste buen dinero por él, y no vale nada. La duda en tus tripas tenía razón desde el principio.",
+ 47: "Lo buscas, pero el farol del comprador ya se fue, camino abajo. Nunca te estuvo ayudando. Esperaba la escarcha, la cosecha perdida, la tierra barata después. Te engañaron, pura y simplemente.",
+ 48: "Se ha ido, y el camino está vacío: ahora solo el frío, la oscuridad, y lo que le entregaste por nada. Aprendiste una lección dura esta noche. Y pagaste de más por ella. Ahora sigues con menos de lo que empezaste.",
+ 49: "La gente asustada le empuja sus monedas. Las manos llenas de dinero, las voces rogando aceite. Él lo toma despacio, con esa misma sonrisa. Elige a quién ayudar según quién pueda pagar más.",
+ 50: "Lejos en el hielo, las hileras del fondo parecen por fin más cerca... ¿o no? Ya no estás seguro. La oscuridad engaña, y tus ojos cansados también. Y ahora estás lejos de ambas orillas.",
+ 51: "El hielo, la oscuridad, el agua honda debajo, y una grieta corre desde bajo tu pie. Este es el momento. Puedes hundirte en el agua helada. O puedes echarte atrás de la grieta, mientras aún puedes.",
+ 52: "Llegas a las hileras del fondo al fin, calado y temblando, las manos en carne viva, pero cruzado. De algún modo, lo lograste. Ahora debes decidir: seguir adelante, agotado como estás, o enfrentar lo que perdiste sobre el hielo.",
+ 53: "Te echas atrás de la grieta mientras aún puedes: la decisión dura y correcta. Haces el último tramo a gatas, y llegas a la orilla tembloroso y lento. La noche no está perdida. Pero te costó un tiempo que echarás de menos.",
+ 54: "Intentas encender su estufa, y tapas lo peor de las corrientes con sacos y un arcón viejo. Contiene un poco el frío. Pero aún no hay lámpara que dejarles, y la noche dista mucho de acabar.",
+ 55: "Entregas tu propio abrigo y tu lámpara, y la familia se acurruca en torno a la pequeña llama, el alivio extendiéndose por sus caras. El niño deja de llorar al fin. «Gracias», dice la madre, y luego te señala hacia una luz, entre los árboles del fondo.",
+ 56: "Sin tu abrigo, el frío y la humedad te encuentran rápido: los dientes castañeteando, los dedos entumeciéndose. Lo diste para ayudar, y lo harías otra vez. Pero a la escarcha no le importa nada de eso. Solo muerde más fuerte.",
+ 57: "Un desconocido te hace señas hacia un portal iluminado. «Solo un minuto», dicen. «Fuera del frío; recupera el aliento.» Es cálido y seco, y todo tu cuerpo te ruega quedarte. Pero un minuto así puede deslizarse en silencio hasta una hora.",
+ 58: "Avanzas hacia la escarcha, helado hasta los huesos, el frío peleando cada paso, los ojos llorosos y escociéndote. Cada paso es una pequeña batalla en sí. Pero los sigues dando, uno tras otro, hacia las hileras.",
+ 60: "Alguien señala hacia los árboles del fondo: una figura ha salido por ahí, sola, al frío y a la oscuridad. Ahí fuera no hay más que escarcha y el suelo bajo y mortal. Si nadie va tras ella, puede que no vuelva.",
+ 61: "La encuentras entre los árboles del fondo, medio helada y perdida, el frío desgarrándola. No parece reconocer tu cara en absoluto. La agarras firme del brazo. «Ven conmigo», dices. «Ya estás bien. Te tengo.»",
+ 62: "No puedes hacerlo todo a la vez, y las hogueras son las que más te necesitan. Así que mandas aviso de que otro vaya tras ella, y sigues. Te sienta mal, pero esta noche tienes que elegir, y seguir eligiendo.",
+ 63: "La llevas sana y salva a las casas, donde su familia grita de alivio. Te envuelven en un abrigo seco y te hacen un sitio junto al fuego. «Gracias», repiten. Pero las hileras esperan, y no puedes quedarte mucho.",
+ 64: "Miras todo el huerto: todo blanco, todo quieto. La flor brilla pálida y quebradiza en la oscuridad. No se ve luz en ninguna parte salvo entre los árboles del fondo. Todo el huerto parece contener el aliento y esperar el alba.",
+ 65: "El frío se ahonda ahora a su peor punto. El termómetro baja todo lo que puede, y tu aliento cuelga blanco en el aire quieto. Cuesta pensar, cuesta moverse, cuesta importarte algo. Esta es la hora más dura de toda la noche.",
+ 67: "Tom te pone la última linterna seca en las manos. «Para las hileras», dice. «Ve; yo me quedo aquí junto al teléfono.» Tiene la cara gris de preocupación. Esta es la ayuda que tiene para dar esta noche, y la da toda de buena gana.",
+ 68: "En el almacén de combustible, la gente se lanza por las latas: voces subiendo, manos agarrando, el miedo prendiendo y extendiéndose rápido. Un empujón más y es una pelea. Puedes intentar calmarlos y repartir el aceite con justicia. O puedes agarrar el tuyo e irte.",
+ 70: "Lejos, entre los árboles del fondo, una lucecita sube y se apaga. Está ahí donde nadie debería estar esta noche: aparece, luego nada, luego aparece otra vez. Nadie sabe explicarlo. Y algo en ti quiere ir a responderle.",
+ 71: "Sales a los árboles del fondo y gritas a la oscuridad. No responde más que el frío. Entonces lo ves: una pequeña silueta, ahí entre los árboles, medio escondida en la escarcha blanca. Alguien está aquí fuera, después de todo. Y apenas se mueve.",
+ 72: "Llegas hasta ellos, y el corazón te da un vuelco. Es un niño —Wren— acurrucado en la escarcha, medio helado y apenas despierto. El frío lo tiene en sus garras. No hay tiempo de esperar y pensar. Tienes que hacer algo ya.",
+ 73: "Vuelves a gritar a la oscuridad, y por un momento no hay nada. Luego vuelve una voz fina, desgarrada por el frío: «¡Aquí! ¡Aquí fuera!» Alguien está entre los árboles, y necesita ayuda. Y no suena nada fuerte.",
+ 74: "Levantas a Wren de la escarcha y lo envuelves bien en tu abrigo. Despacio vuelve en sí, agarrándote el brazo. «Las hogueras», susurra. «Mantén las hogueras. La flor...» Incluso ahora, medio helado, piensa en el huerto.",
+ 75: "Te vuelves para correr a por ayuda, y te paras en seco. Aquí fuera no hay ayuda, no hasta la mañana. Ni cuadrilla, ni vecinos, nadie que venga. Eres tú o nadie, y Wren también lo sabe. Sus ojos asustados te siguen en la oscuridad.",
+ 76: "Wren te mira, con los ojos más claros ahora. «La cultivadora, Edith... es mi abuela», dice. «No hablamos desde hace años. No desde que mi padre y ella se pelearon. Es una historia larga y triste.» Y oyes lo larga que es.",
+ 77: "Decides juntarlos cara a cara antes de que acabe la noche: Wren y la vieja Edith, después de todos estos años. Es poca cosa, al lado de las hogueras y la escarcha. Pero no es nada. Algunas puertas cerradas todavía pueden abrirse.",
+ 78: "La pequeña silueta no se mueve, y la escarcha trabaja sobre ella, fría y paciente. Y sin embargo alguien vino hasta aquí, a la oscuridad, solo. No puedes dejarlo ahí tirado. Tienes que acercarte y saber quién es.",
+ 79: "Te acercas, y los reconoces al instante. Es Wren, el nieto de la vieja Edith, no visto por aquí en años, no desde que la familia se peleó. Entonces un sonido débil llega de la escarcha a tus pies. Te mueves rápido ahora.",
+ 80: "El comprador sube una última vez, el farol balanceándose. «¿Aún peleando?», dice. «Déjaselo a la escarcha. Última oportunidad de estar en el bando ganador, amigo.» La misma sonrisa fácil. La misma vieja mentira.",
+ 90: "Estás de vuelta en el huerto, helado por completo, el frío más duro de la noche aplastándolo todo. Junto a los escalones traseros, Edith yace gris y quieta. Fuera, en las hileras, las hogueras arden bajas. Esta es la hora de la que depende toda la noche.",
+ 91: "Llegas a las hogueras: las llamas bajas, los braseros del fondo apagados y fríos. Entre las hileras del fondo, la escarcha está cerca de llevarse la flor para siempre. Tienes que poner las hogueras plenas y ardiendo de nuevo, y tienes que hacerlo ya, rápido.",
+ 92: "Entonces te llega ayuda al fin: más manos, más aceite, gente serena que conoce el trabajo. Ya no estás solo con esto; hay otros para compartir el peso. Es como soltar algo pesado que has cargado demasiado tiempo.",
+ 93: "Ahora mantienes las hogueras ardiendo, y lo que puedas hacer depende de lo que cargaste aquí. Con aceite de verdad, tienes de sobra con qué trabajar. Sin él, debes avivar hasta el último parpadeo de llama. De un modo u otro, la noche dista mucho de acabar.",
+ 94: "Bajas a ver a Edith, y sus ojos se abren apenas. Hay miedo en ellos; luego, al ver tu cara, un poco menos miedo. «La mantuviste encendida», susurra. «Así es», le dices con suavidad. «Ahora descansa.»",
+ 95: "El aceite lo consigue. Alimentas los braseros y los avivas, y uno por uno las hogueras se levantan plenas y doradas por todas las hileras. Luz cálida empujando atrás todo ese frío. Para esto, piensas, fue toda la noche dura.",
+ 96: "No tienes aceite de verdad que verter, así que avivas la poca llama que hay. La proteges de la corriente con tu propio cuerpo, alimentándola con restos, aliento, pura voluntad. Arde baja y fina. Puede que no baste. Pero no dejarás que muera sin pelear.",
+ 97: "La llama está baja y fallando, y temes que protegerla sola no baste. Has hecho todo lo posible con lo que tienes. Pero puede que aun así no aguante. Necesitas más ahora: más aceite, más manos, o ambos.",
+ 98: "Miras afuera y lo ves. Lejos, entre los árboles del fondo, una luz destella y cae, donde nadie debería estar, apareciendo y ocultándose y apareciendo otra vez. Te tira del ojo. Y te tira de algo más hondo que eso.",
+ 99: "La luz entre los árboles aparece de nuevo, donde todos juran que nadie estaría. Pero una luz significa una mano que la encendió, y una mano significa una persona. Una persona ahí fuera, sola, con un frío como este.",
+ 100: "Ahora viene el largo aguante: mantienes las hogueras alimentadas, mantienes a Edith abrigada, y vigilas el frío hora tras hora. No es emocionante, solo trabajo constante, duro, cuidadoso. Pero es todo el trabajo de esta noche, y es tuyo.",
+ 101: "Y entonces, al fin, cambia. El frío afloja un poco su presa. El cielo grisea en el borde de la loma, y sube la primera luz tenue. La escarcha está perdiendo. Casi has sostenido toda la noche.",
+ 102: "Esta es la peor hora, la de justo antes del alivio. El frío aún no ha cedido; los brazos te duelen, los ojos te arden. Pero sientes la noche empezando a girar, en algún lugar bajo todo. Aguanta un poco más.",
+ 103: "A lo largo de las hileras los ves: faroles, figuras oscuras moviéndose, hogueras ardiendo bajas contra la escarcha. Otra gente, fuera en el frío contigo. El pueblo pasó esta noche también. Nunca estuviste tan solo como te sentías.",
+ 104: "Al fin, llega ayuda por el camino: un camión, más manos, más aceite, ayuda de verdad a velocidad de verdad. Te apoyas en un árbol y la miras venir, las piernas temblándote ahora. Pero lo peor de la noche queda atrás.",
+ 105: "El alba sube sobre el huerto, la luz volviéndose gris, luego pálida y limpia. El sol trepa la loma, y la escarcha suelta su presa. La flor sigue ahí en los árboles. Lo peor ha pasado al fin.",
+ 106: "Entonces llega: el primer pájaro de la mañana, cantando sobre los árboles como si no hubiera habido escarcha alguna. Tras la noche que has tenido, parece casi absurdo. Y es hermoso, y te detienes a escuchar.",
+ 107: "Desde el huerto miras los árboles del fondo, donde una luz sube y baja y crece despacio. Algo viene al fin, aún demasiado lejos para distinguirlo. Pero una luz significa alguien ahí fuera, y alguien es mucho mejor que nadie esta noche.",
+ 110: "La primera luz llega al fin, y la noche suma lo que es. Lo que hiciste ahí fuera en el frío vuelve a casa ahora: parte para estar orgulloso, parte no. Veamos, pues, en qué quedó todo.",
+ 111: "La noche suma, no siempre con un gran acto, sino con muchos pequeños. Lo que mantuviste, lo que negaste, por quién saliste al frío. Todo cuenta al final. Todo hizo de la noche lo que fue.",
+ 112: "Hay más que sopesar; la noche guardó otras cosas también. Un desconocido por el que paraste. Un abrigo y una lámpara que diste con mano abierta. Pequeñas decisiones, tomadas en el frío, cuando habría sido más fácil pasar de largo.",
+ 113: "¿Y con qué te deja la noche? Quizá no con una victoria limpia. Quizá solo con el hecho de que saliste, de que lo intentaste. Cuando estaba oscuro y frío y era fácil atrancar la puerta, no lo hiciste. Eso vale algo.",
+ 114: "Pero no toda noche acaba bien. Algunas decisiones cuestan más de lo que sabías entonces; algunas puertas, una vez abiertas, no se vuelven a cerrar. Este es el final duro de la noche: el lugar donde vuelve a casa lo peor de ella.",
+}
+
+def main():
+    data = json.load(open(OUT, encoding="utf-8")); a = 0
+    for nid, t in G.items():
+        k = str(nid)
+        if k not in data:
+            data[k] = t; a += 1
+    data = {k: data[k] for k in sorted(data, key=lambda x: int(x))}
+    json.dump(data, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"the-orchard/es.json: {len(data)} (+{a})")
+
+if __name__ == "__main__":
+    main()
