@@ -3356,6 +3356,18 @@
         "ar": "يكلف نفسه / يزعج",
         "zh": "费心 / 打扰"
       },
+      "bowl": {
+        "pos": "noun",
+        "en": "a round, deep dish for food",
+        "fr": "le bol",
+        "es": "el cuenco",
+        "pt": "a tigela",
+        "it": "la ciotola",
+        "de": "die Schüssel",
+        "ru": "миска",
+        "ar": "وعاء",
+        "zh": "碗"
+      },
       "breath": {
         "pos": "noun",
         "en": "the air you take into and let out of your body",
@@ -3440,6 +3452,54 @@
         "ar": "موقد",
         "zh": "灶头"
       },
+      "busy": {
+        "pos": "adjective",
+        "en": "with a lot to do",
+        "fr": "occupé",
+        "es": "ocupado",
+        "pt": "ocupado",
+        "it": "occupato",
+        "de": "beschäftigt",
+        "ru": "занятый",
+        "ar": "مشغول",
+        "zh": "忙碌"
+      },
+      "call": {
+        "pos": "verb",
+        "en": "to say loudly; to telephone",
+        "fr": "appeler",
+        "es": "llamar",
+        "pt": "chamar",
+        "it": "chiamare",
+        "de": "rufen",
+        "ru": "звать",
+        "ar": "ينادي",
+        "zh": "呼喊"
+      },
+      "calm": {
+        "pos": "adjective",
+        "en": "quiet and not worried",
+        "fr": "calme",
+        "es": "tranquilo",
+        "pt": "calmo",
+        "it": "calmo",
+        "de": "ruhig",
+        "ru": "спокойный",
+        "ar": "هادئ",
+        "zh": "冷静"
+      },
+      "catch": {
+        "pos": "verb",
+        "en": "to take hold of a moving thing",
+        "fr": "attraper",
+        "es": "atrapar",
+        "pt": "apanhar",
+        "it": "prendere al volo",
+        "de": "fangen",
+        "ru": "ловить",
+        "ar": "يمسك",
+        "zh": "接住"
+      },
       "ceremony": {
         "pos": "noun",
         "en": "a formal set of actions done on an important occasion",
@@ -3475,6 +3535,18 @@
         "ru": "брать плату",
         "ar": "يتقاضى",
         "zh": "收费"
+      },
+      "cheap": {
+        "pos": "adjective",
+        "en": "low in price",
+        "fr": "bon marché",
+        "es": "barato",
+        "pt": "barato",
+        "it": "economico",
+        "de": "billig",
+        "ru": "дешёвый",
+        "ar": "رخيص",
+        "zh": "便宜"
       },
       "cheat": {
         "pos": "verb",
@@ -3548,6 +3620,66 @@
         "ar": "يستدرج",
         "zh": "哄"
       },
+      "coin": {
+        "pos": "noun",
+        "en": "a round piece of metal money",
+        "fr": "la pièce",
+        "es": "la moneda",
+        "pt": "a moeda",
+        "it": "la moneta",
+        "de": "die Münze",
+        "ru": "монета",
+        "ar": "عملة معدنية",
+        "zh": "硬币"
+      },
+      "cold": {
+        "pos": "adjective",
+        "en": "low in temperature; not warm",
+        "fr": "froid",
+        "es": "frío",
+        "pt": "frio",
+        "it": "freddo",
+        "de": "kalt",
+        "ru": "холодный",
+        "ar": "بارد",
+        "zh": "寒冷"
+      },
+      "corner": {
+        "pos": "noun",
+        "en": "where two walls or streets meet",
+        "fr": "le coin",
+        "es": "la esquina",
+        "pt": "a esquina",
+        "it": "l'angolo",
+        "de": "die Ecke",
+        "ru": "угол",
+        "ar": "زاوية",
+        "zh": "角落"
+      },
+      "count": {
+        "pos": "verb",
+        "en": "to say numbers; to add up",
+        "fr": "compter",
+        "es": "contar",
+        "pt": "contar",
+        "it": "contare",
+        "de": "zählen",
+        "ru": "считать",
+        "ar": "يعدّ",
+        "zh": "数"
+      },
+      "counter": {
+        "pos": "noun",
+        "en": "the long table where you are served",
+        "fr": "le comptoir",
+        "es": "el mostrador",
+        "pt": "o balcão",
+        "it": "il bancone",
+        "de": "die Theke",
+        "ru": "прилавок",
+        "ar": "منضدة",
+        "zh": "柜台"
+      },
       "cousin": {
         "pos": "noun",
         "en": "the child of your aunt or uncle",
@@ -3595,6 +3727,30 @@
         "ru": "хрустящий",
         "ar": "مقرمش",
         "zh": "爽脆的"
+      },
+      "cross": {
+        "pos": "verb",
+        "en": "to go from one side to the other",
+        "fr": "traverser",
+        "es": "cruzar",
+        "pt": "atravessar",
+        "it": "attraversare",
+        "de": "überqueren",
+        "ru": "пересекать",
+        "ar": "يعبر",
+        "zh": "穿过"
+      },
+      "crowd": {
+        "pos": "noun",
+        "en": "a large group of people together",
+        "fr": "la foule",
+        "es": "la multitud",
+        "pt": "a multidão",
+        "it": "la folla",
+        "de": "die Menge",
+        "ru": "толпа",
+        "ar": "حشد",
+        "zh": "人群"
       },
       "customer": {
         "pos": "noun",
@@ -3644,6 +3800,30 @@
         "ar": "قرار",
         "zh": "决定"
       },
+      "door": {
+        "pos": "noun",
+        "en": "the way in and out of a room",
+        "fr": "la porte",
+        "es": "la puerta",
+        "pt": "a porta",
+        "it": "la porta",
+        "de": "die Tür",
+        "ru": "дверь",
+        "ar": "باب",
+        "zh": "门"
+      },
+      "drop": {
+        "pos": "verb",
+        "en": "to let something fall",
+        "fr": "laisser tomber",
+        "es": "dejar caer",
+        "pt": "deixar cair",
+        "it": "lasciar cadere",
+        "de": "fallen lassen",
+        "ru": "ронять",
+        "ar": "يُسقط",
+        "zh": "掉落"
+      },
       "duck": {
         "pos": "verb",
         "en": "to move your head or body down quickly",
@@ -3691,6 +3871,30 @@
         "ru": "зарабатывать",
         "ar": "يكسب",
         "zh": "赚"
+      },
+      "easy": {
+        "pos": "adjective",
+        "en": "not hard to do",
+        "fr": "facile",
+        "es": "fácil",
+        "pt": "fácil",
+        "it": "facile",
+        "de": "leicht",
+        "ru": "лёгкий",
+        "ar": "سهل",
+        "zh": "容易"
+      },
+      "empty": {
+        "pos": "adjective",
+        "en": "with nothing inside",
+        "fr": "vide",
+        "es": "vacío",
+        "pt": "vazio",
+        "it": "vuoto",
+        "de": "leer",
+        "ru": "пустой",
+        "ar": "فارغ",
+        "zh": "空"
       },
       "entire": {
         "pos": "adjective",
@@ -3752,6 +3956,18 @@
         "ar": "رسوم",
         "zh": "费用"
       },
+      "feel": {
+        "pos": "verb",
+        "en": "to sense through touch or emotion",
+        "fr": "sentir",
+        "es": "sentir",
+        "pt": "sentir",
+        "it": "sentire",
+        "de": "fühlen",
+        "ru": "чувствовать",
+        "ar": "يشعر",
+        "zh": "感觉"
+      },
       "feet": {
         "pos": "noun",
         "en": "more than one foot (the parts you stand on)",
@@ -3812,6 +4028,18 @@
         "ar": "لهب",
         "zh": "火焰"
       },
+      "food": {
+        "pos": "noun",
+        "en": "what you eat",
+        "fr": "la nourriture",
+        "es": "la comida",
+        "pt": "a comida",
+        "it": "il cibo",
+        "de": "das Essen",
+        "ru": "еда",
+        "ar": "طعام",
+        "zh": "食物"
+      },
       "fret": {
         "pos": "verb",
         "en": "to worry, often about small things",
@@ -3835,6 +4063,18 @@
         "ru": "жарить",
         "ar": "يقلي",
         "zh": "煎炸"
+      },
+      "full": {
+        "pos": "adjective",
+        "en": "holding all it can",
+        "fr": "plein",
+        "es": "lleno",
+        "pt": "cheio",
+        "it": "pieno",
+        "de": "voll",
+        "ru": "полный",
+        "ar": "ممتلئ",
+        "zh": "满"
       },
       "further": {
         "pos": "adverb",
@@ -3968,6 +4208,18 @@
         "ar": "جشع",
         "zh": "贪婪的"
       },
+      "greens": {
+        "pos": "noun",
+        "en": "green leafy vegetables",
+        "fr": "les légumes verts",
+        "es": "las verduras",
+        "pt": "os legumes verdes",
+        "it": "le verdure",
+        "de": "das Grüngemüse",
+        "ru": "зелень",
+        "ar": "خضار",
+        "zh": "青菜"
+      },
       "grumble": {
         "pos": "verb",
         "en": "to complain in a low voice",
@@ -3991,6 +4243,18 @@
         "ru": "привычка",
         "ar": "عادة",
         "zh": "习惯"
+      },
+      "hand": {
+        "pos": "noun",
+        "en": "the part of the arm with fingers",
+        "fr": "la main",
+        "es": "la mano",
+        "pt": "a mão",
+        "it": "la mano",
+        "de": "die Hand",
+        "ru": "рука",
+        "ar": "يد",
+        "zh": "手"
       },
       "handful": {
         "pos": "noun",
@@ -4028,6 +4292,30 @@
         "ar": "يقسو",
         "zh": "变硬"
       },
+      "hear": {
+        "pos": "verb",
+        "en": "to notice a sound",
+        "fr": "entendre",
+        "es": "oír",
+        "pt": "ouvir",
+        "it": "udire",
+        "de": "hören",
+        "ru": "слышать",
+        "ar": "يسمع",
+        "zh": "听见"
+      },
+      "heart": {
+        "pos": "noun",
+        "en": "the organ that pumps blood; your feelings",
+        "fr": "le cœur",
+        "es": "el corazón",
+        "pt": "o coração",
+        "it": "il cuore",
+        "de": "das Herz",
+        "ru": "сердце",
+        "ar": "قلب",
+        "zh": "心"
+      },
       "heavy": {
         "pos": "adjective",
         "en": "weighing a lot; hard to lift",
@@ -4064,6 +4352,30 @@
         "ar": "أجشّ",
         "zh": "沙哑"
       },
+      "hold": {
+        "pos": "verb",
+        "en": "to keep something in your hands",
+        "fr": "tenir",
+        "es": "sostener",
+        "pt": "segurar",
+        "it": "tenere",
+        "de": "halten",
+        "ru": "держать",
+        "ar": "يمسك",
+        "zh": "握住"
+      },
+      "honest": {
+        "pos": "adjective",
+        "en": "truthful; not cheating",
+        "fr": "honnête",
+        "es": "honesto",
+        "pt": "honesto",
+        "it": "onesto",
+        "de": "ehrlich",
+        "ru": "честный",
+        "ar": "صادق",
+        "zh": "诚实"
+      },
       "hook": {
         "pos": "noun",
         "en": "a hidden trap in something that looks like help",
@@ -4076,6 +4388,42 @@
         "ar": "خطاف",
         "zh": "圈套"
       },
+      "hope": {
+        "pos": "verb",
+        "en": "to want something to happen",
+        "fr": "espérer",
+        "es": "esperar",
+        "pt": "esperar",
+        "it": "sperare",
+        "de": "hoffen",
+        "ru": "надеяться",
+        "ar": "يأمل",
+        "zh": "希望"
+      },
+      "hour": {
+        "pos": "noun",
+        "en": "sixty minutes",
+        "fr": "l'heure",
+        "es": "la hora",
+        "pt": "a hora",
+        "it": "l'ora",
+        "de": "die Stunde",
+        "ru": "час",
+        "ar": "ساعة",
+        "zh": "小时"
+      },
+      "hungry": {
+        "pos": "adjective",
+        "en": "wanting food",
+        "fr": "affamé",
+        "es": "hambriento",
+        "pt": "esfomeado",
+        "it": "affamato",
+        "de": "hungrig",
+        "ru": "голодный",
+        "ar": "جائع",
+        "zh": "饿"
+      },
       "instructions": {
         "pos": "noun",
         "en": "words that tell you how to do something",
@@ -4087,6 +4435,18 @@
         "ru": "инструкции",
         "ar": "تعليمات",
         "zh": "指示"
+      },
+      "keep": {
+        "pos": "verb",
+        "en": "to go on having or doing",
+        "fr": "garder",
+        "es": "mantener",
+        "pt": "manter",
+        "it": "tenere",
+        "de": "behalten",
+        "ru": "сохранять",
+        "ar": "يبقي",
+        "zh": "保持"
       },
       "kerb": {
         "pos": "noun",
@@ -4160,6 +4520,18 @@
         "ar": "عمر كامل",
         "zh": "一辈子"
       },
+      "light": {
+        "pos": "noun",
+        "en": "brightness that lets you see",
+        "fr": "la lumière",
+        "es": "la luz",
+        "pt": "a luz",
+        "it": "la luce",
+        "de": "das Licht",
+        "ru": "свет",
+        "ar": "ضوء",
+        "zh": "光"
+      },
       "loan": {
         "pos": "noun",
         "en": "money that is lent and must be paid back",
@@ -4184,6 +4556,18 @@
         "ar": "وحيد",
         "zh": "孤单的"
       },
+      "lose": {
+        "pos": "verb",
+        "en": "to no longer have; to not win",
+        "fr": "perdre",
+        "es": "perder",
+        "pt": "perder",
+        "it": "perdere",
+        "de": "verlieren",
+        "ru": "терять",
+        "ar": "يخسر",
+        "zh": "失去"
+      },
       "loss": {
         "pos": "noun",
         "en": "the fact of no longer having something",
@@ -4195,6 +4579,18 @@
         "ru": "потеря",
         "ar": "خسارة",
         "zh": "损失"
+      },
+      "loud": {
+        "pos": "adjective",
+        "en": "making a lot of sound",
+        "fr": "fort",
+        "es": "ruidoso",
+        "pt": "barulhento",
+        "it": "rumoroso",
+        "de": "laut",
+        "ru": "громкий",
+        "ar": "صاخب",
+        "zh": "吵闹"
       },
       "lull": {
         "pos": "noun",
@@ -4208,6 +4604,18 @@
         "ar": "فترة هدوء",
         "zh": "间歇"
       },
+      "make": {
+        "pos": "verb",
+        "en": "to create or produce",
+        "fr": "faire",
+        "es": "hacer",
+        "pt": "fazer",
+        "it": "fare",
+        "de": "machen",
+        "ru": "делать",
+        "ar": "يصنع",
+        "zh": "做"
+      },
       "manage": {
         "pos": "verb",
         "en": "to cope, or to succeed in doing something hard",
@@ -4219,6 +4627,18 @@
         "ru": "справляться",
         "ar": "يتدبّر",
         "zh": "应付"
+      },
+      "market": {
+        "pos": "noun",
+        "en": "a place where people buy and sell",
+        "fr": "le marché",
+        "es": "el mercado",
+        "pt": "o mercado",
+        "it": "il mercato",
+        "de": "der Markt",
+        "ru": "рынок",
+        "ar": "سوق",
+        "zh": "市场"
       },
       "master": {
         "pos": "noun",
@@ -4256,6 +4676,18 @@
         "ar": "متواضع",
         "zh": "简朴的"
       },
+      "money": {
+        "pos": "noun",
+        "en": "coins and notes you pay with",
+        "fr": "l'argent",
+        "es": "el dinero",
+        "pt": "o dinheiro",
+        "it": "il denaro",
+        "de": "das Geld",
+        "ru": "деньги",
+        "ar": "مال",
+        "zh": "钱"
+      },
       "mouthful": {
         "pos": "noun",
         "en": "the amount of food you put in your mouth at once",
@@ -4279,6 +4711,18 @@
         "ru": "бормотать",
         "ar": "يتمتم",
         "zh": "低声说"
+      },
+      "name": {
+        "pos": "noun",
+        "en": "what someone or something is called",
+        "fr": "le nom",
+        "es": "el nombre",
+        "pt": "o nome",
+        "it": "il nome",
+        "de": "der Name",
+        "ru": "имя",
+        "ar": "اسم",
+        "zh": "名字"
       },
       "neither": {
         "pos": "determiner",
@@ -4316,6 +4760,30 @@
         "ar": "متوتر",
         "zh": "紧张的"
       },
+      "night": {
+        "pos": "noun",
+        "en": "the dark hours when the sun is down",
+        "fr": "la nuit",
+        "es": "la noche",
+        "pt": "a noite",
+        "it": "la notte",
+        "de": "die Nacht",
+        "ru": "ночь",
+        "ar": "الليل",
+        "zh": "夜晚"
+      },
+      "noise": {
+        "pos": "noun",
+        "en": "a loud or unpleasant sound",
+        "fr": "le bruit",
+        "es": "el ruido",
+        "pt": "o barulho",
+        "it": "il rumore",
+        "de": "der Lärm",
+        "ru": "шум",
+        "ar": "ضجيج",
+        "zh": "噪音"
+      },
       "noisy": {
         "pos": "adjective",
         "en": "making a lot of noise",
@@ -4327,6 +4795,30 @@
         "ru": "шумный",
         "ar": "صاخب",
         "zh": "吵闹的"
+      },
+      "number": {
+        "pos": "noun",
+        "en": "a figure like 1, 2, 3",
+        "fr": "le nombre",
+        "es": "el número",
+        "pt": "o número",
+        "it": "il numero",
+        "de": "die Zahl",
+        "ru": "число",
+        "ar": "رقم",
+        "zh": "数字"
+      },
+      "order": {
+        "pos": "noun",
+        "en": "a request for food or goods",
+        "fr": "la commande",
+        "es": "el pedido",
+        "pt": "o pedido",
+        "it": "l'ordine",
+        "de": "die Bestellung",
+        "ru": "заказ",
+        "ar": "طلب",
+        "zh": "点单"
       },
       "outlast": {
         "pos": "verb",
@@ -4508,6 +5000,18 @@
         "ar": "يمدح",
         "zh": "称赞"
       },
+      "price": {
+        "pos": "noun",
+        "en": "the money something costs",
+        "fr": "le prix",
+        "es": "el precio",
+        "pt": "o preço",
+        "it": "il prezzo",
+        "de": "der Preis",
+        "ru": "цена",
+        "ar": "سعر",
+        "zh": "价格"
+      },
       "pride": {
         "pos": "noun",
         "en": "a feeling of pleasure in what you have done",
@@ -4544,6 +5048,18 @@
         "ar": "فخور",
         "zh": "自豪的"
       },
+      "pull": {
+        "pos": "verb",
+        "en": "to move something toward you",
+        "fr": "tirer",
+        "es": "tirar de",
+        "pt": "puxar",
+        "it": "tirare",
+        "de": "ziehen",
+        "ru": "тянуть",
+        "ar": "يسحب",
+        "zh": "拉"
+      },
       "queue": {
         "pos": "noun",
         "en": "a line of people waiting for something",
@@ -4556,6 +5072,30 @@
         "ar": "طابور",
         "zh": "队伍"
       },
+      "quick": {
+        "pos": "adjective",
+        "en": "fast",
+        "fr": "rapide",
+        "es": "rápido",
+        "pt": "rápido",
+        "it": "rapido",
+        "de": "schnell",
+        "ru": "быстрый",
+        "ar": "سريع",
+        "zh": "快"
+      },
+      "quiet": {
+        "pos": "adjective",
+        "en": "with little or no sound",
+        "fr": "silencieux",
+        "es": "silencioso",
+        "pt": "silencioso",
+        "it": "silenzioso",
+        "de": "still",
+        "ru": "тихий",
+        "ar": "هادئ",
+        "zh": "安静"
+      },
       "ragged": {
         "pos": "adjective",
         "en": "old, torn and worn out",
@@ -4567,6 +5107,42 @@
         "ru": "оборванный",
         "ar": "رثّ",
         "zh": "破烂的"
+      },
+      "rain": {
+        "pos": "noun",
+        "en": "water falling from the sky",
+        "fr": "la pluie",
+        "es": "la lluvia",
+        "pt": "a chuva",
+        "it": "la pioggia",
+        "de": "der Regen",
+        "ru": "дождь",
+        "ar": "مطر",
+        "zh": "雨"
+      },
+      "reach": {
+        "pos": "verb",
+        "en": "to arrive at; to stretch out to",
+        "fr": "atteindre",
+        "es": "alcanzar",
+        "pt": "alcançar",
+        "it": "raggiungere",
+        "de": "erreichen",
+        "ru": "достигать",
+        "ar": "يصل إلى",
+        "zh": "到达"
+      },
+      "ready": {
+        "pos": "adjective",
+        "en": "prepared",
+        "fr": "prêt",
+        "es": "listo",
+        "pt": "pronto",
+        "it": "pronto",
+        "de": "bereit",
+        "ru": "готовый",
+        "ar": "جاهز",
+        "zh": "准备好"
       },
       "realise": {
         "pos": "verb",
@@ -4700,6 +5276,18 @@
         "ar": "ذروة الزحام",
         "zh": "高峰"
       },
+      "safe": {
+        "pos": "adjective",
+        "en": "not in danger",
+        "fr": "en sécurité",
+        "es": "seguro",
+        "pt": "seguro",
+        "it": "al sicuro",
+        "de": "sicher",
+        "ru": "в безопасности",
+        "ar": "آمن",
+        "zh": "安全"
+      },
       "scald": {
         "pos": "verb",
         "en": "to burn with very hot liquid or steam",
@@ -4723,6 +5311,18 @@
         "ru": "клочок",
         "ar": "قصاصة",
         "zh": "碎片"
+      },
+      "season": {
+        "pos": "noun",
+        "en": "a part of the year; a busy time of year",
+        "fr": "la saison",
+        "es": "la temporada",
+        "pt": "a estação",
+        "it": "la stagione",
+        "de": "die Jahreszeit",
+        "ru": "сезон",
+        "ar": "موسم",
+        "zh": "季节"
       },
       "sell": {
         "pos": "verb",
@@ -4748,6 +5348,18 @@
         "ar": "يستقر",
         "zh": "安顿"
       },
+      "shelf": {
+        "pos": "noun",
+        "en": "a flat board for holding things",
+        "fr": "l'étagère",
+        "es": "el estante",
+        "pt": "a prateleira",
+        "it": "lo scaffale",
+        "de": "das Regal",
+        "ru": "полка",
+        "ar": "رفّ",
+        "zh": "架子"
+      },
       "shoo": {
         "pos": "verb",
         "en": "to send someone away with words or a wave",
@@ -4759,6 +5371,18 @@
         "ru": "прогонять",
         "ar": "يهشّ",
         "zh": "赶走"
+      },
+      "short": {
+        "pos": "adjective",
+        "en": "little in length or time",
+        "fr": "court",
+        "es": "corto",
+        "pt": "curto",
+        "it": "corto",
+        "de": "kurz",
+        "ru": "короткий",
+        "ar": "قصير",
+        "zh": "短"
       },
       "shutter": {
         "pos": "noun",
@@ -4795,6 +5419,30 @@
         "ru": "скользить",
         "ar": "ينزلق",
         "zh": "滑动"
+      },
+      "small": {
+        "pos": "adjective",
+        "en": "little in size",
+        "fr": "petit",
+        "es": "pequeño",
+        "pt": "pequeno",
+        "it": "piccolo",
+        "de": "klein",
+        "ru": "маленький",
+        "ar": "صغير",
+        "zh": "小"
+      },
+      "smoke": {
+        "pos": "noun",
+        "en": "the grey cloud from a fire",
+        "fr": "la fumée",
+        "es": "el humo",
+        "pt": "o fumo",
+        "it": "il fumo",
+        "de": "der Rauch",
+        "ru": "дым",
+        "ar": "دخان",
+        "zh": "烟"
       },
       "soaked": {
         "pos": "adjective",
@@ -5108,6 +5756,18 @@
         "ar": "يكنس",
         "zh": "扫"
       },
+      "take": {
+        "pos": "verb",
+        "en": "to get hold of and carry",
+        "fr": "prendre",
+        "es": "tomar",
+        "pt": "pegar",
+        "it": "prendere",
+        "de": "nehmen",
+        "ru": "брать",
+        "ar": "يأخذ",
+        "zh": "拿"
+      },
       "takings": {
         "pos": "noun",
         "en": "the money a shop or stall makes in a day",
@@ -5119,6 +5779,30 @@
         "ru": "выручка",
         "ar": "الإيرادات",
         "zh": "营业额"
+      },
+      "taste": {
+        "pos": "noun",
+        "en": "the flavour of food",
+        "fr": "le goût",
+        "es": "el sabor",
+        "pt": "o sabor",
+        "it": "il sapore",
+        "de": "der Geschmack",
+        "ru": "вкус",
+        "ar": "طعم",
+        "zh": "味道"
+      },
+      "tell": {
+        "pos": "verb",
+        "en": "to say something to someone",
+        "fr": "dire",
+        "es": "decir",
+        "pt": "dizer",
+        "it": "dire",
+        "de": "sagen",
+        "ru": "говорить",
+        "ar": "يخبر",
+        "zh": "告诉"
       },
       "tempting": {
         "pos": "adjective",
@@ -5143,6 +5827,18 @@
         "ru": "условия",
         "ar": "الشروط",
         "zh": "条款"
+      },
+      "think": {
+        "pos": "verb",
+        "en": "to use your mind",
+        "fr": "penser",
+        "es": "pensar",
+        "pt": "pensar",
+        "it": "pensare",
+        "de": "denken",
+        "ru": "думать",
+        "ar": "يفكّر",
+        "zh": "想"
       },
       "tight": {
         "pos": "adjective",
@@ -5192,6 +5888,18 @@
         "ar": "نصيحة",
         "zh": "建议"
       },
+      "tired": {
+        "pos": "adjective",
+        "en": "needing rest",
+        "fr": "fatigué",
+        "es": "cansado",
+        "pt": "cansado",
+        "it": "stanco",
+        "de": "müde",
+        "ru": "усталый",
+        "ar": "متعب",
+        "zh": "疲惫"
+      },
       "trade": {
         "pos": "noun",
         "en": "the business of buying and selling",
@@ -5228,6 +5936,18 @@
         "ar": "تدفق ضئيل",
         "zh": "细流"
       },
+      "trust": {
+        "pos": "verb",
+        "en": "to believe someone is honest",
+        "fr": "faire confiance",
+        "es": "confiar",
+        "pt": "confiar",
+        "it": "fidarsi",
+        "de": "vertrauen",
+        "ru": "доверять",
+        "ar": "يثق",
+        "zh": "信任"
+      },
       "truth": {
         "pos": "noun",
         "en": "what is really true",
@@ -5239,6 +5959,18 @@
         "ru": "правда",
         "ar": "الحقيقة",
         "zh": "真相"
+      },
+      "turn": {
+        "pos": "verb",
+        "en": "to move so you face another way",
+        "fr": "tourner",
+        "es": "girar",
+        "pt": "virar",
+        "it": "girare",
+        "de": "drehen",
+        "ru": "поворачивать",
+        "ar": "يستدير",
+        "zh": "转"
       },
       "undercut": {
         "pos": "verb",
@@ -5288,6 +6020,42 @@
         "ar": "يتلاشى",
         "zh": "消失"
       },
+      "voice": {
+        "pos": "noun",
+        "en": "the sound you make when you speak",
+        "fr": "la voix",
+        "es": "la voz",
+        "pt": "a voz",
+        "it": "la voce",
+        "de": "die Stimme",
+        "ru": "голос",
+        "ar": "صوت",
+        "zh": "嗓音"
+      },
+      "wait": {
+        "pos": "verb",
+        "en": "to stay until something happens",
+        "fr": "attendre",
+        "es": "esperar",
+        "pt": "esperar",
+        "it": "aspettare",
+        "de": "warten",
+        "ru": "ждать",
+        "ar": "ينتظر",
+        "zh": "等待"
+      },
+      "warm": {
+        "pos": "adjective",
+        "en": "a little hot; comfortable",
+        "fr": "chaud",
+        "es": "cálido",
+        "pt": "quente",
+        "it": "caldo",
+        "de": "warm",
+        "ru": "тёплый",
+        "ar": "دافئ",
+        "zh": "温暖"
+      },
       "warmth": {
         "pos": "noun",
         "en": "the quality of being warm; gentle heat",
@@ -5336,6 +6104,18 @@
         "ar": "يهدر",
         "zh": "浪费"
       },
+      "watch": {
+        "pos": "verb",
+        "en": "to look at for a time",
+        "fr": "regarder",
+        "es": "mirar",
+        "pt": "observar",
+        "it": "guardare",
+        "de": "beobachten",
+        "ru": "наблюдать",
+        "ar": "يراقب",
+        "zh": "注视"
+      },
       "wave": {
         "pos": "verb",
         "en": "to move your hand to say hello or goodbye",
@@ -5383,6 +6163,18 @@
         "ru": "вытирать",
         "ar": "يمسح",
         "zh": "擦"
+      },
+      "woman": {
+        "pos": "noun",
+        "en": "an adult female person",
+        "fr": "la femme",
+        "es": "la mujer",
+        "pt": "a mulher",
+        "it": "la donna",
+        "de": "die Frau",
+        "ru": "женщина",
+        "ar": "امرأة",
+        "zh": "女人"
       },
       "wrap": {
         "pos": "verb",
