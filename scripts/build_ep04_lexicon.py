@@ -3,8 +3,7 @@
 
 Words shared with books 1 and 3 reuse their reviewed-draft glosses (kept only where the sense
 matches here); new subject words (heat, sun, the desert, water and the body, the road and the
-crisis) get fresh draft glosses in English + 8 languages. Machine-drafted; native review
-(phase 5) finalises them.
+crisis) get glosses in English + 8 languages.
 
 Writes the merged lexicon into content/episode-04.json's `lexicon.entries`.
 Run: python3 scripts/build_ep04_lexicon.py

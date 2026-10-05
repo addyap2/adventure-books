@@ -4,7 +4,7 @@
 Scoped per book: writes content/gist/the-night-market/<lang>.json → {"<nodeId>": "meaning"}.
 Offered "where needed" (the opening, the major forks, the con, the neighbour, the saved bowl,
 the kindness, and every one of the 12 endings), per the authoring playbook — not every passage.
-fr/es/it/de/pt are author-vouched; ru/ar/zh native review: complete.
+fr/es/it/de/pt are author-vouched; ru/ar/zh included.
 
 Run: python3 scripts/build_gists_ep02.py
 """

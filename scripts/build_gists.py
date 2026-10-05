@@ -7,7 +7,7 @@ Emits content/gist/<lang>.json → { "<nodeId>": "gist" }, lazy-loaded per langu
 
 Authored here in the five languages Claude can vouch for (fr, es, it, de, pt). Russian,
 Arabic and Mandarin are built by the companion build_gists_ruarzh.py — machine-authored
-from the same source meaning; native review: complete.
+from the same source meaning.
 """
 import json, os
 
@@ -202,7 +202,7 @@ G = {
 }
 
 # Whole-book gists for the remaining 97 passages, in the five languages Claude can vouch
-# for. ru/ar/zh native review: complete. [fr, es, it, de, pt]
+# for. ru/ar/zh included. [fr, es, it, de, pt]
 G2 = {
  2: ["Au guichet d'information, un homme fatigué lit votre lettre : Rosewater Street est en travaux depuis deux ans ; le bus 9 y va, mais il est presque minuit. Il vous glisse un petit plan.",
      "En el mostrador de información, un hombre cansado lee tu carta: Rosewater Street lleva dos años en obras; el autobús 9 va allí, pero es casi medianoche. Te desliza un pequeño mapa.",
@@ -801,4 +801,4 @@ for i, code in enumerate(L):
     json.dump(data, open(os.path.join(OUT, f"{code}.json"), "w", encoding="utf-8"),
               ensure_ascii=False, separators=(",", ":"), sort_keys=True)
 print(f"Gists: fr/es/it/de/pt = {len(ALL)} each (whole book); "
-      f"ru/ar/zh native review: complete")
+      f"ru/ar/zh included")

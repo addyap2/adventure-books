@@ -3092,7 +3092,7 @@
     }
   ],
   "lexicon": {
-    "_comment": "The Cool of Evening's chosen lexicon. Grown in phase 4. Base-keyed; the reader resolves inflections. Translations: native review complete.",
+    "_comment": "The Cool of Evening's chosen lexicon. Grown in phase 4. Base-keyed; the reader resolves inflections.",
     "entries": {
       "aboard": {
         "pos": "adverb",

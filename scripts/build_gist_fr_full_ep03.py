@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Extend First Light's French gist to full per-passage coverage.
 Merges into content/gist/first-light/fr.json, keeping existing entries and adding the rest.
-French-first; native review: complete. Run: python3 scripts/build_gist_fr_full_ep03.py
+French-first. Run: python3 scripts/build_gist_fr_full_ep03.py
 """
 import json, os
 SLUG = "first-light"

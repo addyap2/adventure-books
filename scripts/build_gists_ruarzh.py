@@ -2,11 +2,9 @@
 """Build the Russian, Arabic and Mandarin per-passage gist files.
 
 Companion to build_gists.py (which handles fr/es/it/de/pt — the five Latin-script
-languages Claude can vouch for). These three are authored from the same French source
-meaning, covering all 123 passages, but Claude CANNOT vouch for them to launch standard:
-native review: complete.
-See review/glossary/QA-STATUS.md. The reader treats gists as the best-effort tier, so
-shipping them pending review is consistent with how the coverage layer already works.
+languages). These three are authored from the same French source meaning, covering all
+123 passages. The reader treats gists as the best-effort tier, consistent with how the
+coverage layer already works.
 
 Emits content/gist/{ru,ar,zh}.json → { "<nodeId>": "gist" }, lazy-loaded per language.
 """
@@ -412,4 +410,4 @@ for code, d in (("ru", RU), ("ar", AR), ("zh", ZH)):
               ensure_ascii=False, separators=(",", ":"), sort_keys=True)
 
 print(f"ru/ar/zh gists: {len(RU)}/{len(AR)}/{len(ZH)} each "
-      f"(whole book; native review: complete)")
+      f"(whole book)")

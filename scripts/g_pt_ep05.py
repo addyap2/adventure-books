@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """The Keeper — full Portuguese per-passage gist coverage (merges to 112/112).
-Native review: complete. Run: python3 scripts/g_pt_ep05.py"""
+Run: python3 scripts/g_pt_ep05.py"""
 import json, os
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "content", "gist", "the-keeper", "pt.json")
 

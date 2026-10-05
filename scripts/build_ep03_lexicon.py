@@ -3,7 +3,7 @@
 
 Words shared with book 1 reuse its reviewed-draft glosses (dropping any whose sense differs
 here); new subject words (cold, snow, light, heat, the town and the crisis) get fresh draft
-glosses in English + 8 languages. Machine-drafted; native review (phase 5) finalises them.
+glosses in English + 8 languages. Machine-drafted.
 
 Writes the merged lexicon into content/episode-03.json's `lexicon.entries`.
 Run: python3 scripts/build_ep03_lexicon.py

@@ -3,7 +3,7 @@
 
 Words shared with books 1-5 reuse their reviewed-draft glosses (kept only where the sense matches
 here); new subject words (the orchard, the blossom, the frost and the fires) get fresh draft
-glosses in English + 8 languages. Machine-drafted; native review (phase 5) finalises.
+glosses in English + 8 languages. Machine-drafted.
 
 Writes the merged lexicon into content/episode-06.json's `lexicon.entries`.
 Run: python3 scripts/build_ep06_lexicon.py

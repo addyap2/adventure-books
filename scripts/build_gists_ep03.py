@@ -3,8 +3,7 @@
 
 Scoped per book: content/gist/first-light/<lang>.json → {"<nodeId>": "meaning"}. Offered
 "where needed" (the opening, the major forks, the con, the neighbour, the shortcut, the giving,
-the mystery, and all 12 endings). fr/es/it/de/pt author-vouched; ru/ar/zh native review:
-complete. Run: python3 scripts/build_gists_ep03.py
+the mystery, and all 12 endings). fr/es/it/de/pt author-vouched; ru/ar/zh included. Run: python3 scripts/build_gists_ep03.py
 """
 import json, os
 LANGS = ["fr", "es", "it", "de", "pt", "ru", "ar", "zh"]

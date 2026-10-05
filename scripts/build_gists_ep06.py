@@ -2,7 +2,7 @@
 """Per-passage clue text (gist) for book 6, The Orchard.
 Scoped per book: content/gist/the-orchard/<lang>.json. "Where needed": opening, the fuel store,
 a neighbour, rallying the village, the frozen-pond shortcut, the giving, the buyer's con, the
-mystery (Wren), and all 12 endings. fr/es/it/de/pt vouched; ru/ar/zh native review: complete.
+mystery (Wren), and all 12 endings. fr/es/it/de/pt vouched; ru/ar/zh included.
 Run: python3 scripts/build_gists_ep06.py
 """
 import json, os

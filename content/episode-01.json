@@ -3841,7 +3841,7 @@
     }
   ],
   "lexicon": {
-    "_comment": "This book's chosen lexicon. Any word here is tappable wherever it appears in the story (base form; the reader resolves inflections). Translations: native review complete.",
+    "_comment": "This book's chosen lexicon. Any word here is tappable wherever it appears in the story (base form; the reader resolves inflections).",
     "entries": {
       "kiosk": {
         "pos": "noun",

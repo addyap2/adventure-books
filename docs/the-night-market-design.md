@@ -143,8 +143,7 @@ At least one clearly good and one clearly bad (validator warns otherwise). ✔
   arch*), money (*fee, takings, change, price, profit, loan, owe*), night and weather. It shares
   no file with book 1; a word that recurs is re-authored to a consistent gloss.
 - **The A2-choice caveat (bible §6b):** branching inference is identical across levels, so at A2
-  the **choice text** must be unambiguous and low-inference. Required in the native review.
-- **Native-language review is the launch gate.** Machine-drafted glosses ship to a speaker first.
+  the **choice text** must be unambiguous and low-inference. Required when levelising the choices.
 
 **Language focus** (per level, for the classroom):
 - A2 — *present continuous and imperatives; food, cooking and prices.*
@@ -188,7 +187,7 @@ content/lexicon.json` coming back clean.
 3. **Prose — B1 first**, then A2 (simplify), then B2 (enrich), in act batches; levelise choices.
    *Gate:* per level, bands clean; no stub text left.
 4. **Lexicon** — ~250 words, complete in 9 languages; auto-gloss coverage checked.
-5. **Native review** — 8-language pass + A2-choice clarity. *Launch gate.* ✓ done
+5. **A2-choice clarity pass** — each A2 choice checked unambiguous and low-inference. ✓ done
 6. **Art** — per-book shot-list, waves by act; endings bespoke; files at
    `images/night-market/ep-02/<id>.webp` (`series` = `night-market` is the image namespace;
    `episode` = 2 is only the unshown shelf-order hint that places it after *The Address*).

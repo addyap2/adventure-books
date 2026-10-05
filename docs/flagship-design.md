@@ -141,7 +141,7 @@ pedagogy: understanding the paragraph changes the outcome.
   inside its CEFR band (sentence length, paragraph length).
 - **Two glossing tiers** so a learner can tap *any* word, not only rare ones:
   - **Featured (curated) lexicon** — the ~250 chosen story words, keyed by base form, with an
-    English definition + native-reviewed translations. Dotted in the accent; rich gloss card.
+    English definition + translations in 8 languages. Dotted in the accent; rich gloss card.
   - **Coverage dictionary** — the book's high-frequency *everyday* words (`content/dict/<lang>.json`,
     lazy-loaded per language, no back end), so common vocabulary is tappable too. Faint underline;
     quick translation, tagged "dictionary". Built by frequency to **~500 words** (the hold point):
@@ -150,18 +150,15 @@ pedagogy: understanding the paragraph changes the outcome.
     fast-diminishing per-passage value and rising translation risk, so we stop hand-adding there.
     For true tail-completeness later, bundle an **open dictionary dataset** (Wiktionary/Kaikki-derived)
     as a build step rather than typing more batches.
-  Curated is authoritative; coverage is quick best-effort and still flows through the review sheets.
+  Curated is authoritative; coverage is quick best-effort.
   - **Word depth is deliberately quiet:** only curated words are underlined (dotted); everyday
     coverage words are tappable but unmarked, so per-word help never crowds the reading.
 - **On-demand passage gist** (`content/gist/<lang>.json`) — because per-word glosses lose context
   (idioms, sense), each *pivotal or dense* passage carries a 1–2 sentence **meaning in the reader's
   language**, revealed only by a "See the meaning" button ("where needed", never by default, so
-  English stays the thing being read). **All 123 passages are covered in all 8 languages**, native
-  review: complete. The button simply doesn't appear where a gist is missing, so any partial-language
-  coverage would degrade gracefully.
-- **Native-language review is the launch gate.** Machine-drafted glosses in 8 languages ship to
-  a speaker's check first — a wrong gloss the learner cannot detect is worse than none. This is
-  the one hard gate between "done" and "launched", and it is what makes the flagship trustworthy.
+  English stays the thing being read). **All 123 passages are covered in all 8 languages.** The
+  button simply doesn't appear where a gist is missing, so any partial-language coverage would
+  degrade gracefully.
 
 ### 6a. Why three levels (A2/B1/B2), and no more
 
@@ -194,7 +191,7 @@ but reasoning that runs ahead of them.
 **Design rule that follows from this:** get the **A2 *choices*, not only the A2 prose, right.** At
 A2 the choice text must be unambiguous and low-inference, so the difficulty the learner meets is
 language — never a logic puzzle they cannot yet read their way through. **This is a required check
-in the pedagogy/native review** (see §6, launch gate): review each A2 choice for clarity and single,
+when levelising the choices:** review each A2 choice for clarity and single,
 obvious meaning, independently of whether the prose passes its band.
 
 ---
@@ -216,7 +213,7 @@ change. Partial delivery looks intentional (clean placeholders until then).
 
 ---
 
-## 8. Build phases & review gates
+## 8. Build phases & gates
 
 Each phase ends at a gate that must pass before the next begins. This is what keeps a 150-node
 book *right*.
@@ -229,11 +226,11 @@ book *right*.
 3. **Prose — B1 first**, in batches of ~25 passages, then derive A2 (simplify) and B2 (enrich).
    **Gate:** validator's CEFR bands clean per batch.
 4. **Lexicon** — expand to ~250 words as prose lands; auto-gloss coverage checked by the validator.
-5. **Native review** — the 8-language pass. **Launch gate.** ✓ done
+5. **A2-choice clarity pass** — each A2 choice checked unambiguous and low-inference. ✓ done
 6. **Art** — waves 1–4 from the visual team.
 
 I (Claude) draft the graph and all three prose levels and the lexicon; you steer story and taste
-at each gate; native speakers verify language; your team illustrates. This is **multi-session
+at each gate; your team illustrates. This is **multi-session
 work by design** — the gates are the point.
 
 ---

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """The Cool of Evening — full Chinese per-passage gist coverage (merges to 112/112).
-Native review: complete. Run: python3 scripts/g_zh_ep04.py"""
+Run: python3 scripts/g_zh_ep04.py"""
 import json, os
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "content", "gist", "cool-of-evening", "zh.json")
 

@@ -3,7 +3,7 @@
 
 Words shared with books 1, 3 and 4 reuse their reviewed-draft glosses (kept only where the sense
 matches here); new subject words (the storm, the sea, the lighthouse and its lamp, the rescue) get
-fresh draft glosses in English + 8 languages. Machine-drafted; native review (phase 5) finalises.
+fresh draft glosses in English + 8 languages. Machine-drafted.
 
 Writes the merged lexicon into content/episode-05.json's `lexicon.entries`.
 Run: python3 scripts/build_ep05_lexicon.py

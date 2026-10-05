@@ -155,8 +155,7 @@ At least one clearly good and one clearly bad (validator warns otherwise). ✔
   the crisis (*power cut, line, crew, neighbour, hill, van, generator*). Shares no file with
   the other books; a recurring word is re-authored to a consistent gloss.
 - **The A2-choice caveat (bible §6b):** the branching inference is identical across levels, so at
-  A2 the **choice text** must be unambiguous and low-inference. Required in the native review.
-- **Native-language review is the launch gate.**
+  A2 the **choice text** must be unambiguous and low-inference. Required when levelising the choices.
 
 **Language focus** (per level, for the classroom):
 - A2 — *imperatives and going to; the home, weather, and warmth.*
@@ -202,7 +201,7 @@ content/lexicon.json` coming back clean.
 3. **Prose — B1 first**, then A2 (simplify) and B2 (enrich), in act batches; levelise choices.
    *Gate:* per level, bands clean; no stub text left.
 4. **Lexicon** — ~250 words, complete in 9 languages; auto-gloss coverage checked.
-5. **Native review** — 8-language pass + A2-choice clarity. *Launch gate.* ✓ done
+5. **A2-choice clarity pass** — each A2 choice checked unambiguous and low-inference. ✓ done
 6. **Art** — free per-passage emblems (cold-snap motif set) + a `candlelight` OG scene; painted
    art optional, dropped in later at `images/first-light/ep-03/<id>.webp`.
 

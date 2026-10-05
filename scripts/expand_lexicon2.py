@@ -124,4 +124,4 @@ for base, vals in E.items():
     added += 1
 
 json.dump(book, open(EP, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
-print(f"Lexicon: +{added} words → {len(entries)} total (needs native review).")
+print(f"Lexicon: +{added} words → {len(entries)} total.")

@@ -26,7 +26,7 @@ To start one, the instruction is simply: **"Design book N following the playbook
 **The one caveat to hold in mind (bible §6b):** CEFR governs the *language*, not the
 branching *inference*. The choices carry the comprehension puzzle and are shared across
 levels, so at A2 the **choice text** must be unambiguous and low-inference — a required
-check in the native/pedagogy review.
+check when levelising the choices.
 
 ---
 
@@ -42,10 +42,9 @@ Each phase is a commit; each gate is `python3 scripts/build_book.py content/<boo
    *Gate:* per level, validator band-clean (A2 mean ≤12/sent ≤18; B1 ≤16/≤25; B2 ≤22/≤35); no `⟨pending⟩` slots left.
 4. **Lexicon** — grow to ~250 concrete, high-tap words (nouns, common verbs, adjectives), base-keyed; skip proper nouns, contractions, B2-only flourishes.
    *Gate:* validator reports every entry complete in English + 8 languages; auto-gloss coverage advisory acceptably low.
-5. **Native-language review** — *launch gate.* Generate sheets, hand to speakers, merge back, re-validate.
-6. **Art** — the visual team works the per-book shot-list in waves; files drop in by convention.
+5. **Art** — the visual team works the per-book shot-list in waves; files drop in by convention.
 
-I (Claude) do phases 1–4 and prep 5–6; people do 5 and 6. Phases 5–6 are run **once per book** on the same rails — routine, not open questions.
+I (Claude) do phases 1–4 and prep the art; people do phase 5. Phase 5 is run **once per book** on the same rails — routine, not an open question.
 
 ---
 
@@ -55,7 +54,6 @@ I (Claude) do phases 1–4 and prep 5–6; people do 5 and 6. Phases 5–6 are r
 - `web/index.html` — the reader (auto-gloss, per-book lexicon, per-moment placeholder art).
 - `scripts/build-site.mjs` — the static build + manifest + image scan.
 - `scripts/build_book.py` — the validator and Markdown renderer (all bands and gates).
-- `scripts/generate_review_sheets.py` + `scripts/apply_review.py` — the native-review round-trip.
 - `docs/flagship-design.md`, `docs/art-brief.md`, this playbook — the standards.
 
 **Re-author per book (same pattern, new content):**
@@ -78,12 +76,6 @@ sake, but that is the only thing two books ever share. (*The house tone and the 
 
 ## 4. Hand-off templates (already built, reusable every book)
 
-**Native review** — `python3 scripts/generate_review_sheets.py` writes one CSV per language to
-`review/glossary/<lang>.csv` (+ a README for reviewers): headword · part of speech · English
-definition · draft translation · blank *corrected* + *notes* columns. Reviewers edit only the
-blanks; `scripts/apply_review.py` merges corrections back by headword. Then re-validate + rebuild.
-*Also review each A2 choice for clarity here (the §6b check).*
-
 **Art** — a per-book `docs/<book>-art-shotlist.md` (see the flagship's
 [art-shotlist.md](art-shotlist.md) as the model): images grouped by location and wave, each with
 a **hero paragraph id** for the filename, the other ids it covers, and a draft faceless alt-line.
@@ -98,20 +90,20 @@ Wave 1 locks the look; later waves fill in; endings are bespoke.
 - [ ] 12 endings, balanced 4/4/4; ≤8 flags, **each flag both set and read** (or listed in
       `arc_flags` if a later book reads it — validator enforces); all nodes reachable; 2–4 choices/node
 - [ ] Lexicon ~250, complete in 9 languages, base-keyed; auto-gloss coverage checked
-- [x] **Native review applied** for all 8 languages (launch gate) — and A2 choices clarity-checked
+- [ ] A2 choice text clarity-checked — unambiguous and low-inference (§6b)
 - [ ] Art: at least Wave 1 delivered and the look locked; endings illustrated
 - [ ] `state_out` set for the next book; series base lexicon updated if a word is now shared
-- [ ] Deployed: WIP on a branch (preview only) until the review gate passes, **then** merged to `main`
+- [ ] Deployed: WIP on a branch (preview only) until the definition-of-done is checked, **then** merged to `main`
 
 ---
 
 ## 6. Branch & deploy discipline
 
 Build every book on a **branch**, never `main`. `main` is production and auto-deploys to the
-live site, so it must only ever hold review-passed, learner-ready content. The branch builds as a
-Vercel **preview**. A book merges to `main` only after its definition-of-done is fully checked —
-in particular the native-review gate. (The flagship *The Address* lives on branch `flagship`;
-production `main` remains the finished 40-passage original until the flagship clears its gates.)
+live site, so it must only ever hold learner-ready content. The branch builds as a
+Vercel **preview**. A book merges to `main` only after its definition-of-done is fully checked.
+(The flagship *The Address* lives on branch `flagship`; production `main` remains the finished
+40-passage original until the flagship clears its gates.)
 
 ---
 

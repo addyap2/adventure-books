@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Full Italian per-passage gist for First Light. Native review: complete."""
+"""Full Italian per-passage gist for First Light."""
 import json, os
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "content", "gist", "first-light", "it.json")
 G = {

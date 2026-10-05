@@ -6,7 +6,7 @@ Two sources, per the playbook:
      learner already met reads identically. (Only words whose *sense* matches this book;
      steel/pointed/handle are excluded because their book-2 use differs.)
   2. New subject words (cooking, the market, money, the night) get fresh draft glosses in
-     English + 8 languages. Machine-drafted; the native review (phase 5) finalises them.
+     English + 8 languages. Machine-drafted.
 
 Writes the merged lexicon into content/episode-02.json's `lexicon.entries`.
 Run: python3 scripts/build_ep02_lexicon.py

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Full Russian per-passage gist for The Night Market. Native review: complete."""
+"""Full Russian per-passage gist for The Night Market."""
 import json, os
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "content", "gist", "the-night-market", "ru.json")
 G = {
