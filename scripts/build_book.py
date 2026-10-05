@@ -358,6 +358,15 @@ def validate_level(book: dict, by_id: dict, level: str, rep: Report, core: set,
         return {}
     stats, flagged = {}, {}
 
+    # Proper nouns: a token that appears only ever capitalised across the book's
+    # prose (Kessler, Bello, Wren) is a name, not vocabulary a reader taps to gloss.
+    seen_lower, seen_cap = set(), set()
+    for n in by_id.values():
+        for lv_text in (n.get("text") or {}).values():
+            for w in words(lv_text):
+                (seen_cap if w[:1].isupper() else seen_lower).add(w.lower())
+    names = seen_cap - seen_lower
+
     for nid, n in sorted(by_id.items()):
         text = per_level(n.get("text"), level)
         if not text or not text.strip():
@@ -400,8 +409,9 @@ def validate_level(book: dict, by_id: dict, level: str, rep: Report, core: set,
                     if k > 0 and w[:1].isupper():
                         continue  # mid-sentence capital: almost certainly a name
                     lw = w.lower()
-                    if len(lw) <= 3 or resolve(lw, glossed) or in_core(lw, core):
-                        continue
+                    if ("'" in lw or lw in names or len(lw) <= 3
+                            or resolve(lw, glossed) or in_core(lw, core)):
+                        continue  # contraction/possessive, name, short, or known
                     flagged.setdefault(lw, []).append(nid)
 
     if flagged:
