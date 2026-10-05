@@ -26,6 +26,9 @@ jobs:
       - name: Check flags and lexicon across the series
         run: python3 scripts/build_book.py --series content/ --lexicon content/lexicon.json
 
+      - name: Check gist + lexicon consistency (all 8 languages)
+        run: python3 scripts/check_gists.py
+
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
