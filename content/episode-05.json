@@ -3092,6 +3092,18 @@
   "lexicon": {
     "_comment": "The Keeper's chosen lexicon. Grown in phase 4. Base-keyed; the reader resolves inflections.",
     "entries": {
+      "ablaze": {
+        "pos": "adjective",
+        "en": "burning strongly; on fire",
+        "fr": "en flammes",
+        "es": "en llamas",
+        "pt": "em chamas",
+        "it": "in fiamme",
+        "de": "in Flammen",
+        "ru": "в огне",
+        "ar": "مشتعل",
+        "zh": "熊熊燃烧"
+      },
       "ache": {
         "pos": "verb",
         "en": "to hurt with a dull, steady pain",
@@ -3176,6 +3188,18 @@
         "ar": "يلطم",
         "zh": "猛烈拍打"
       },
+      "beacon": {
+        "pos": "noun",
+        "en": "a guiding light, especially for ships",
+        "fr": "le phare",
+        "es": "el faro",
+        "pt": "o farol",
+        "it": "il faro",
+        "de": "das Leuchtfeuer",
+        "ru": "маяк",
+        "ar": "منارة",
+        "zh": "灯塔之光"
+      },
       "beam": {
         "pos": "noun",
         "en": "a strong line of light shining out",
@@ -3235,6 +3259,18 @@
         "ru": "кость",
         "ar": "عظم",
         "zh": "骨头"
+      },
+      "bosun": {
+        "pos": "noun",
+        "en": "a ship's officer in charge of the crew and gear",
+        "fr": "le maître d'équipage",
+        "es": "el contramaestre",
+        "pt": "o contramestre",
+        "it": "il nostromo",
+        "de": "der Bootsmann",
+        "ru": "боцман",
+        "ar": "رئيس البحّارة",
+        "zh": "水手长"
       },
       "brave": {
         "pos": "adjective",
@@ -3620,6 +3656,18 @@
         "ar": "يجرّ",
         "zh": "拖"
       },
+      "draught": {
+        "pos": "noun",
+        "en": "a current of cold air indoors",
+        "fr": "le courant d'air",
+        "es": "la corriente de aire",
+        "pt": "a corrente de ar",
+        "it": "la corrente d'aria",
+        "de": "der Luftzug",
+        "ru": "сквозняк",
+        "ar": "تيار هواء",
+        "zh": "穿堂风"
+      },
       "drop": {
         "pos": "verb",
         "en": "to go down; to fall",
@@ -3920,6 +3968,18 @@
         "ar": "توهّج",
         "zh": "微光"
       },
+      "gnaw": {
+        "pos": "verb",
+        "en": "to bite at steadily; to wear away",
+        "fr": "ronger",
+        "es": "roer",
+        "pt": "roer",
+        "it": "rodere",
+        "de": "nagen",
+        "ru": "грызть",
+        "ar": "ينهش",
+        "zh": "啃噬"
+      },
       "grey": {
         "pos": "adjective",
         "en": "of a dull colour between black and white; pale and ill",
@@ -3943,6 +4003,18 @@
         "ru": "хватать",
         "ar": "يمسك بإحكام",
         "zh": "紧握"
+      },
+      "grudging": {
+        "pos": "adjective",
+        "en": "given unwillingly; reluctant",
+        "fr": "réticent",
+        "es": "reacio",
+        "pt": "relutante",
+        "it": "riluttante",
+        "de": "widerwillig",
+        "ru": "неохотный",
+        "ar": "متردّد",
+        "zh": "勉强的"
       },
       "guess": {
         "pos": "verb",
@@ -3979,6 +4051,18 @@
         "ru": "мигать",
         "ar": "يخفت",
         "zh": "摇曳将灭"
+      },
+      "guttering": {
+        "pos": "adjective",
+        "en": "(of a flame) burning low and unsteadily",
+        "fr": "vacillant",
+        "es": "vacilante",
+        "pt": "vacilante",
+        "it": "guizzante",
+        "de": "flackernd",
+        "ru": "мерцающий",
+        "ar": "مرتجف",
+        "zh": "忽明忽暗的"
       },
       "halfway": {
         "pos": "adverb",
@@ -4748,6 +4832,18 @@
         "ar": "البحر",
         "zh": "海"
       },
+      "seawater": {
+        "pos": "noun",
+        "en": "salt water from the sea",
+        "fr": "l'eau de mer",
+        "es": "el agua de mar",
+        "pt": "a água do mar",
+        "it": "l'acqua di mare",
+        "de": "das Meerwasser",
+        "ru": "морская вода",
+        "ar": "ماء البحر",
+        "zh": "海水"
+      },
       "sell": {
         "pos": "verb",
         "en": "to give something in exchange for money",
@@ -5204,6 +5300,18 @@
         "ar": "المدّ",
         "zh": "潮汐"
       },
+      "tideline": {
+        "pos": "noun",
+        "en": "the mark the sea leaves on the shore",
+        "fr": "la laisse de mer",
+        "es": "la línea de marea",
+        "pt": "a linha de maré",
+        "it": "la linea di marea",
+        "de": "die Gezeitenlinie",
+        "ru": "линия прилива",
+        "ar": "خط المد",
+        "zh": "潮痕线"
+      },
       "tired": {
         "pos": "adjective",
         "en": "needing rest or sleep",
@@ -5527,6 +5635,18 @@
         "ru": "неправильный",
         "ar": "خاطئ",
         "zh": "错误的"
+      },
+      "yawn": {
+        "pos": "verb",
+        "en": "to open wide; (of a gap) to gape",
+        "fr": "bâiller",
+        "es": "abrirse / bostezar",
+        "pt": "abrir-se / bocejar",
+        "it": "spalancarsi",
+        "de": "gähnen / klaffen",
+        "ru": "зиять",
+        "ar": "يفغر",
+        "zh": "张开大口"
       }
     }
   }

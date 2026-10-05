@@ -3250,6 +3250,18 @@
         "ar": "بطانية",
         "zh": "毯子"
       },
+      "blessed": {
+        "pos": "adjective",
+        "en": "very welcome; a relief",
+        "fr": "béni",
+        "es": "bendito",
+        "pt": "abençoado",
+        "it": "benedetto",
+        "de": "wohltuend",
+        "ru": "благодатный",
+        "ar": "مبارَك",
+        "zh": "令人宽慰的"
+      },
       "blocked": {
         "pos": "adjective",
         "en": "closed off so nothing can pass",
@@ -3897,6 +3909,30 @@
         "ru": "стонать",
         "ar": "يئنّ",
         "zh": "呻吟"
+      },
+      "grudging": {
+        "pos": "adjective",
+        "en": "given unwillingly; reluctant",
+        "fr": "réticent",
+        "es": "reacio",
+        "pt": "relutante",
+        "it": "riluttante",
+        "de": "widerwillig",
+        "ru": "неохотный",
+        "ar": "متردّد",
+        "zh": "勉强的"
+      },
+      "guttering": {
+        "pos": "adjective",
+        "en": "(of a flame) burning low and unsteadily",
+        "fr": "vacillant",
+        "es": "vacilante",
+        "pt": "vacilante",
+        "it": "guizzante",
+        "de": "flackernd",
+        "ru": "мерцающий",
+        "ar": "مرتجف",
+        "zh": "忽明忽暗的"
       },
       "halfway": {
         "pos": "adverb",
@@ -4582,6 +4618,18 @@
         "ar": "ثلج",
         "zh": "雪"
       },
+      "snug": {
+        "pos": "adjective",
+        "en": "warm, close and comfortable",
+        "fr": "douillet",
+        "es": "acogedor",
+        "pt": "aconchegante",
+        "it": "comodo e caldo",
+        "de": "behaglich",
+        "ru": "уютный",
+        "ar": "دافئ ومريح",
+        "zh": "暖和舒适"
+      },
       "soaked": {
         "pos": "adjective",
         "en": "completely wet",
@@ -4641,6 +4689,18 @@
         "ru": "распространяться",
         "ar": "ينتشر",
         "zh": "蔓延"
+      },
+      "sputter": {
+        "pos": "verb",
+        "en": "to make soft spitting sounds",
+        "fr": "crachoter",
+        "es": "chisporrotear",
+        "pt": "crepitar",
+        "it": "sputacchiare",
+        "de": "stottern",
+        "ru": "фыркать",
+        "ar": "يبصق متقطّعاً",
+        "zh": "噼啪作响"
       },
       "steady": {
         "pos": "adjective",

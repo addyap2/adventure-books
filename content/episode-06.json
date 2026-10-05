@@ -3752,6 +3752,18 @@
         "ar": "شك",
         "zh": "怀疑"
       },
+      "draught": {
+        "pos": "noun",
+        "en": "a current of cold air indoors",
+        "fr": "le courant d'air",
+        "es": "la corriente de aire",
+        "pt": "a corrente de ar",
+        "it": "la corrente d'aria",
+        "de": "der Luftzug",
+        "ru": "сквозняк",
+        "ar": "تيار هواء",
+        "zh": "穿堂风"
+      },
       "drop": {
         "pos": "verb",
         "en": "to go down; to fall",
@@ -4064,6 +4076,18 @@
         "ar": "يلمح",
         "zh": "瞥一眼"
       },
+      "gnaw": {
+        "pos": "verb",
+        "en": "to bite at steadily; to wear away",
+        "fr": "ronger",
+        "es": "roer",
+        "pt": "roer",
+        "it": "rodere",
+        "de": "nagen",
+        "ru": "грызть",
+        "ar": "ينهش",
+        "zh": "啃噬"
+      },
       "grab": {
         "pos": "verb",
         "en": "to take hold of something suddenly and roughly",
@@ -4136,6 +4160,18 @@
         "ar": "المزارع",
         "zh": "果农"
       },
+      "grudging": {
+        "pos": "adjective",
+        "en": "given unwillingly; reluctant",
+        "fr": "réticent",
+        "es": "reacio",
+        "pt": "relutante",
+        "it": "riluttante",
+        "de": "widerwillig",
+        "ru": "неохотный",
+        "ar": "متردّد",
+        "zh": "勉强的"
+      },
       "guess": {
         "pos": "verb",
         "en": "to give an answer you are not sure of",
@@ -4147,6 +4183,18 @@
         "ru": "угадывать",
         "ar": "يخمّن",
         "zh": "猜"
+      },
+      "guttering": {
+        "pos": "adjective",
+        "en": "(of a flame) burning low and unsteadily",
+        "fr": "vacillant",
+        "es": "vacilante",
+        "pt": "vacilante",
+        "it": "guizzante",
+        "de": "flackernd",
+        "ru": "мерцающий",
+        "ar": "مرتجف",
+        "zh": "忽明忽暗的"
       },
       "harvest": {
         "pos": "noun",
@@ -5228,6 +5276,18 @@
         "ar": "تجارة",
         "zh": "生意"
       },
+      "treacherous": {
+        "pos": "adjective",
+        "en": "dangerous and not to be trusted",
+        "fr": "traître",
+        "es": "traicionero",
+        "pt": "traiçoeiro",
+        "it": "infido",
+        "de": "tückisch",
+        "ru": "коварный",
+        "ar": "غادر",
+        "zh": "暗藏危险的"
+      },
       "tree": {
         "pos": "noun",
         "en": "a tall plant with a trunk, branches and leaves",
@@ -5275,6 +5335,18 @@
         "ru": "грузовик",
         "ar": "شاحنة",
         "zh": "卡车"
+      },
+      "unlit": {
+        "pos": "adjective",
+        "en": "not lit; dark",
+        "fr": "non éclairé",
+        "es": "sin luz",
+        "pt": "sem luz",
+        "it": "non illuminato",
+        "de": "unbeleuchtet",
+        "ru": "неосвещённый",
+        "ar": "غير مضاء",
+        "zh": "没点灯的"
       },
       "village": {
         "pos": "noun",

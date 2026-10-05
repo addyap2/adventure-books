@@ -3154,6 +3154,18 @@
         "ar": "ممر",
         "zh": "过道"
       },
+      "ajar": {
+        "pos": "adjective",
+        "en": "slightly open",
+        "fr": "entrouvert",
+        "es": "entreabierto",
+        "pt": "entreaberto",
+        "it": "socchiuso",
+        "de": "angelehnt",
+        "ru": "приоткрытый",
+        "ar": "موارب",
+        "zh": "半开着"
+      },
       "anyway": {
         "pos": "adverb",
         "en": "in spite of that; used to return to a point",
@@ -3202,6 +3214,18 @@
         "ar": "بالكاد",
         "zh": "勉强"
       },
+      "bathwater": {
+        "pos": "noun",
+        "en": "the water in a bath",
+        "fr": "l'eau du bain",
+        "es": "el agua del baño",
+        "pt": "a água do banho",
+        "it": "l'acqua del bagno",
+        "de": "das Badewasser",
+        "ru": "вода для ванны",
+        "ar": "ماء الحمّام",
+        "zh": "洗澡水"
+      },
       "beat": {
         "pos": "verb",
         "en": "to hit again and again; (of the sun) to shine down hard",
@@ -3249,6 +3273,30 @@
         "ru": "винить",
         "ar": "يلوم",
         "zh": "责怪"
+      },
+      "blessed": {
+        "pos": "adjective",
+        "en": "very welcome; a relief",
+        "fr": "béni",
+        "es": "bendito",
+        "pt": "abençoado",
+        "it": "benedetto",
+        "de": "wohltuend",
+        "ru": "благодатный",
+        "ar": "مبارَك",
+        "zh": "令人宽慰的"
+      },
+      "blister": {
+        "pos": "verb",
+        "en": "to swell or peel from heat",
+        "fr": "cloquer",
+        "es": "ampollarse",
+        "pt": "empolar",
+        "it": "coprirsi di bolle",
+        "de": "Blasen werfen",
+        "ru": "покрываться пузырями",
+        "ar": "يتقرّح",
+        "zh": "起泡"
       },
       "bottle": {
         "pos": "noun",
@@ -4042,6 +4090,18 @@
         "ar": "وهج",
         "zh": "刺眼的强光"
       },
+      "gnaw": {
+        "pos": "verb",
+        "en": "to bite at steadily; to wear away",
+        "fr": "ronger",
+        "es": "roer",
+        "pt": "roer",
+        "it": "rodere",
+        "de": "nagen",
+        "ru": "грызть",
+        "ar": "ينهش",
+        "zh": "啃噬"
+      },
       "grab": {
         "pos": "verb",
         "en": "to take hold of something suddenly and roughly",
@@ -4077,6 +4137,18 @@
         "ru": "земля",
         "ar": "الأرض",
         "zh": "地面"
+      },
+      "grudging": {
+        "pos": "adjective",
+        "en": "given unwillingly; reluctant",
+        "fr": "réticent",
+        "es": "reacio",
+        "pt": "relutante",
+        "it": "riluttante",
+        "de": "widerwillig",
+        "ru": "неохотный",
+        "ar": "متردّد",
+        "zh": "勉强的"
       },
       "guess": {
         "pos": "verb",
@@ -4486,6 +4558,18 @@
         "ar": "الظهيرة",
         "zh": "正午"
       },
+      "ochre": {
+        "pos": "adjective",
+        "en": "a yellow-brown earth colour",
+        "fr": "ocre",
+        "es": "ocre",
+        "pt": "ocre",
+        "it": "ocra",
+        "de": "ockerfarben",
+        "ru": "охристый",
+        "ar": "لون مغرة",
+        "zh": "赭色"
+      },
       "offer": {
         "pos": "noun",
         "en": "something you say you will give or do for someone",
@@ -4545,6 +4629,18 @@
         "ru": "тропа",
         "ar": "مسار",
         "zh": "小路"
+      },
+      "pathless": {
+        "pos": "adjective",
+        "en": "having no path",
+        "fr": "sans chemin",
+        "es": "sin senda",
+        "pt": "sem trilho",
+        "it": "senza sentiero",
+        "de": "weglos",
+        "ru": "бездорожный",
+        "ar": "بلا مسار",
+        "zh": "无路可循的"
       },
       "patient": {
         "pos": "adjective",
@@ -4713,6 +4809,18 @@
         "ru": "сплотить",
         "ar": "يحشد",
         "zh": "召集"
+      },
+      "rasp": {
+        "pos": "verb",
+        "en": "to say in a rough, grating voice",
+        "fr": "dire d'une voix râpeuse",
+        "es": "decir con voz áspera",
+        "pt": "dizer com voz áspera",
+        "it": "dire con voce roca",
+        "de": "krächzen",
+        "ru": "хрипеть",
+        "ar": "يقول بصوت خشن",
+        "zh": "嘶哑地说"
       },
       "ration": {
         "pos": "verb",
@@ -4953,6 +5061,18 @@
         "ru": "тень",
         "ar": "ظِلّ",
         "zh": "阴凉处"
+      },
+      "shadeless": {
+        "pos": "adjective",
+        "en": "with no shade from the sun",
+        "fr": "sans ombre",
+        "es": "sin sombra",
+        "pt": "sem sombra",
+        "it": "senz'ombra",
+        "de": "schattenlos",
+        "ru": "без тени",
+        "ar": "بلا ظل",
+        "zh": "没有遮荫的"
       },
       "shadow": {
         "pos": "noun",
@@ -5493,6 +5613,30 @@
         "ru": "к",
         "ar": "نحو",
         "zh": "朝向"
+      },
+      "trackless": {
+        "pos": "adjective",
+        "en": "with no track or path",
+        "fr": "sans piste",
+        "es": "sin camino",
+        "pt": "sem caminho",
+        "it": "senza traccia",
+        "de": "ohne Pfade",
+        "ru": "бездорожный",
+        "ar": "بلا دروب",
+        "zh": "无径可循的"
+      },
+      "treacherous": {
+        "pos": "adjective",
+        "en": "dangerous and not to be trusted",
+        "fr": "traître",
+        "es": "traicionero",
+        "pt": "traiçoeiro",
+        "it": "infido",
+        "de": "tückisch",
+        "ru": "коварный",
+        "ar": "غادر",
+        "zh": "暗藏危险的"
       },
       "trick": {
         "pos": "noun",

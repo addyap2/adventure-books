@@ -3332,6 +3332,18 @@
         "ar": "بلا نكهة",
         "zh": "淡而无味的"
       },
+      "blessed": {
+        "pos": "adjective",
+        "en": "very welcome; a relief",
+        "fr": "béni",
+        "es": "bendito",
+        "pt": "abençoado",
+        "it": "benedetto",
+        "de": "wohltuend",
+        "ru": "благодатный",
+        "ar": "مبارَك",
+        "zh": "令人宽慰的"
+      },
       "bother": {
         "pos": "verb",
         "en": "to make the effort; or to annoy someone",
@@ -4028,6 +4040,30 @@
         "ar": "ثقيل",
         "zh": "重的"
       },
+      "hedge": {
+        "pos": "noun",
+        "en": "a row of bushes forming a boundary",
+        "fr": "la haie",
+        "es": "el seto",
+        "pt": "a sebe",
+        "it": "la siepe",
+        "de": "die Hecke",
+        "ru": "живая изгородь",
+        "ar": "سياج نباتي",
+        "zh": "树篱"
+      },
+      "hoarse": {
+        "pos": "adjective",
+        "en": "rough and harsh in voice",
+        "fr": "rauque",
+        "es": "ronco",
+        "pt": "rouco",
+        "it": "rauco",
+        "de": "heiser",
+        "ru": "хриплый",
+        "ar": "أجشّ",
+        "zh": "沙哑"
+      },
       "hook": {
         "pos": "noun",
         "en": "a hidden trap in something that looks like help",
@@ -4291,6 +4327,18 @@
         "ru": "шумный",
         "ar": "صاخب",
         "zh": "吵闹的"
+      },
+      "outlast": {
+        "pos": "verb",
+        "en": "to last longer than",
+        "fr": "durer plus longtemps que",
+        "es": "durar más que",
+        "pt": "durar mais que",
+        "it": "durare più di",
+        "de": "überdauern",
+        "ru": "пережить",
+        "ar": "يدوم أطول من",
+        "zh": "比…持久"
       },
       "owe": {
         "pos": "verb",
@@ -5347,6 +5395,18 @@
         "ru": "заворачивать",
         "ar": "يلفّ",
         "zh": "包裹"
+      },
+      "wrung": {
+        "pos": "verb",
+        "en": "twisted hard to squeeze water out",
+        "fr": "essoré",
+        "es": "escurrido",
+        "pt": "torcido",
+        "it": "strizzato",
+        "de": "ausgewrungen",
+        "ru": "выжатый",
+        "ar": "معصور",
+        "zh": "拧干的"
       }
     }
   }

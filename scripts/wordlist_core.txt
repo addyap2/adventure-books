@@ -1,4 +1,3 @@
-ablaze
 able
 about
 above
@@ -23,7 +22,6 @@ agree
 ahead
 air
 airport
-ajar
 alive
 all
 allow
@@ -75,11 +73,9 @@ bank
 barely
 barks
 bath
-bathwater
 battle
 be
 beach
-beacon
 beat
 beating
 beats
@@ -119,12 +115,10 @@ birthday
 bit
 black
 blazing
-blessedly
 blinding
 blinds
 blink
 blinking
-blistered
 block
 blocking
 blood
@@ -334,7 +328,6 @@ direction
 dirty
 discover
 dish
-dishwater
 distance
 doctor
 document
@@ -354,8 +347,6 @@ drag
 dragged
 drags
 drank
-draught
-draughts
 draw
 drawn
 dream
@@ -565,7 +556,6 @@ glass
 glasses
 glints
 glow
-gnaws
 go
 goal
 goes
@@ -594,13 +584,11 @@ ground
 group
 grow
 grown
-grudging
 guard
 guess
 guest
 guide
 gunshot
-guttering
 had
 hadn't
 hair
@@ -632,7 +620,6 @@ heat
 heaves
 heavier
 heavy
-hedge
 held
 hello
 help
@@ -651,7 +638,6 @@ hisses
 hissing
 history
 hit
-hoarse
 hold
 hole
 holiday
@@ -886,7 +872,6 @@ nowhere
 number
 nurse
 ocean
-ochre
 oddly
 off
 offer
@@ -906,7 +891,6 @@ other
 ours
 ourselves
 out
-outlasts
 outside
 oven
 over
@@ -928,7 +912,6 @@ pass
 passenger
 passport
 past
-pathless
 patient
 pay
 peace
@@ -1026,7 +1009,6 @@ rain
 raise
 ran
 rang
-rasps
 rate
 reach
 read
@@ -1114,7 +1096,6 @@ sea
 search
 season
 seat
-seawater
 second
 secret
 secure
@@ -1136,7 +1117,6 @@ seventeen
 seventh
 seventy
 several
-shadeless
 shadows
 shake
 shaken
@@ -1220,7 +1200,6 @@ smoke
 smoothly
 snatches
 snow
-snugly
 soap
 soft
 softens
@@ -1263,7 +1242,6 @@ sport
 spot
 spread
 spring
-sputters
 square
 stacked
 stained
@@ -1397,7 +1375,6 @@ thrown
 ticket
 ticking
 ticks
-tideline
 tidy
 tie
 tight
@@ -1430,7 +1407,6 @@ tower
 town
 toy
 track
-trackless
 trade
 traffic
 train
@@ -1438,7 +1414,6 @@ trap
 trapped
 travel
 travellers
-treacherous
 tree
 trip
 triumph
@@ -1467,7 +1442,6 @@ unfriendly
 university
 unknown
 unless
-unlit
 unlocking
 unlocks
 unmarked
@@ -1584,9 +1558,7 @@ writing
 written
 wrong
 wrote
-wrung
 yard
-yawns
 year
 yellow
 yes
