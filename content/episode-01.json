@@ -3879,6 +3879,18 @@
         "ar": "فعلي",
         "zh": "实际的"
       },
+      "address": {
+        "pos": "noun",
+        "en": "the details of where a place is",
+        "fr": "l'adresse",
+        "es": "la dirección",
+        "pt": "a morada",
+        "it": "l'indirizzo",
+        "de": "die Adresse",
+        "ru": "адрес",
+        "ar": "عنوان",
+        "zh": "地址"
+      },
       "admit": {
         "pos": "verb",
         "en": "to agree that something is true, often unwillingly",
@@ -4323,6 +4335,18 @@
         "ar": "ذقن",
         "zh": "下巴"
       },
+      "city": {
+        "pos": "noun",
+        "en": "a large town",
+        "fr": "la ville",
+        "es": "la ciudad",
+        "pt": "a cidade",
+        "it": "la città",
+        "de": "die Stadt",
+        "ru": "город",
+        "ar": "مدينة",
+        "zh": "城市"
+      },
       "civilised": {
         "pos": "adjective",
         "en": "polite and reasonable in behaviour",
@@ -4358,6 +4382,30 @@
         "ru": "булыжник",
         "ar": "حجر رصف",
         "zh": "鹅卵石"
+      },
+      "coffee": {
+        "pos": "noun",
+        "en": "a hot drink made from roasted beans",
+        "fr": "le café",
+        "es": "el café",
+        "pt": "o café",
+        "it": "il caffè",
+        "de": "der Kaffee",
+        "ru": "кофе",
+        "ar": "قهوة",
+        "zh": "咖啡"
+      },
+      "cold": {
+        "pos": "adjective",
+        "en": "low in temperature; not warm",
+        "fr": "froid",
+        "es": "frío",
+        "pt": "frio",
+        "it": "freddo",
+        "de": "kalt",
+        "ru": "холодный",
+        "ar": "بارد",
+        "zh": "寒冷"
       },
       "colleague": {
         "pos": "noun",
@@ -4538,6 +4586,18 @@
         "ru": "отправление",
         "ar": "مغادرة",
         "zh": "出发"
+      },
+      "desk": {
+        "pos": "noun",
+        "en": "a table for writing or working at",
+        "fr": "le bureau",
+        "es": "el escritorio",
+        "pt": "a secretária",
+        "it": "la scrivania",
+        "de": "der Schreibtisch",
+        "ru": "письменный стол",
+        "ar": "مكتب",
+        "zh": "书桌"
       },
       "development": {
         "pos": "noun",
@@ -4959,6 +5019,18 @@
         "ar": "يلمح",
         "zh": "瞥一眼"
       },
+      "glass": {
+        "pos": "noun",
+        "en": "the hard clear material in windows; a cup",
+        "fr": "le verre",
+        "es": "el vidrio",
+        "pt": "o vidro",
+        "it": "il vetro",
+        "de": "das Glas",
+        "ru": "стекло",
+        "ar": "زجاج",
+        "zh": "玻璃"
+      },
       "glow": {
         "pos": "noun",
         "en": "a soft, steady light",
@@ -5307,6 +5379,18 @@
         "ar": "يتكئ / ينحني",
         "zh": "倚靠 / 倾身"
       },
+      "letter": {
+        "pos": "noun",
+        "en": "a written message sent to someone",
+        "fr": "la lettre",
+        "es": "la carta",
+        "pt": "a carta",
+        "it": "la lettera",
+        "de": "der Brief",
+        "ru": "письмо",
+        "ar": "رسالة",
+        "zh": "信"
+      },
       "letterhead": {
         "pos": "noun",
         "en": "the printed name and address at the top of a firm's paper",
@@ -5391,6 +5475,18 @@
         "ar": "منتصف الليل",
         "zh": "午夜"
       },
+      "morning": {
+        "pos": "noun",
+        "en": "the early part of the day",
+        "fr": "le matin",
+        "es": "la mañana",
+        "pt": "a manhã",
+        "it": "la mattina",
+        "de": "der Morgen",
+        "ru": "утро",
+        "ar": "صباح",
+        "zh": "早晨"
+      },
       "murmur": {
         "pos": "verb",
         "en": "to say something in a low, soft voice",
@@ -5402,6 +5498,18 @@
         "ru": "бормотать",
         "ar": "يتمتم",
         "zh": "低声说"
+      },
+      "name": {
+        "pos": "noun",
+        "en": "what someone or something is called",
+        "fr": "le nom",
+        "es": "el nombre",
+        "pt": "o nome",
+        "it": "il nome",
+        "de": "der Name",
+        "ru": "имя",
+        "ar": "اسم",
+        "zh": "名字"
       },
       "napkin": {
         "pos": "noun",
@@ -5498,6 +5606,18 @@
         "ru": "кивать",
         "ar": "يومئ برأسه",
         "zh": "点头"
+      },
+      "number": {
+        "pos": "noun",
+        "en": "a figure like 1, 2, 3",
+        "fr": "le nombre",
+        "es": "el número",
+        "pt": "o número",
+        "it": "il numero",
+        "de": "die Zahl",
+        "ru": "число",
+        "ar": "رقم",
+        "zh": "数字"
       },
       "oar": {
         "pos": "noun",
@@ -5991,6 +6111,18 @@
         "ar": "مريح",
         "zh": "宁静的"
       },
+      "river": {
+        "pos": "noun",
+        "en": "a wide stream of water",
+        "fr": "la rivière",
+        "es": "el río",
+        "pt": "o rio",
+        "it": "il fiume",
+        "de": "der Fluss",
+        "ru": "река",
+        "ar": "نهر",
+        "zh": "河"
+      },
       "rosewater": {
         "pos": "noun",
         "en": "water scented with roses",
@@ -6279,6 +6411,18 @@
         "ar": "حزام",
         "zh": "带子"
       },
+      "street": {
+        "pos": "noun",
+        "en": "a road in a town with buildings",
+        "fr": "la rue",
+        "es": "la calle",
+        "pt": "a rua",
+        "it": "la strada",
+        "de": "die Straße",
+        "ru": "улица",
+        "ar": "شارع",
+        "zh": "街道"
+      },
       "streetlight": {
         "pos": "noun",
         "en": "a tall lamp that lights a street at night",
@@ -6543,6 +6687,18 @@
         "ar": "مرئي",
         "zh": "可见的"
       },
+      "warm": {
+        "pos": "adjective",
+        "en": "a little hot; comfortable",
+        "fr": "chaud",
+        "es": "cálido",
+        "pt": "quente",
+        "it": "caldo",
+        "de": "warm",
+        "ru": "тёплый",
+        "ar": "دافئ",
+        "zh": "温暖"
+      },
       "warmth": {
         "pos": "noun",
         "en": "the quality of being warm; gentle heat",
@@ -6627,6 +6783,18 @@
         "ar": "أيا كان",
         "zh": "无论谁"
       },
+      "window": {
+        "pos": "noun",
+        "en": "a glass opening in a wall",
+        "fr": "la fenêtre",
+        "es": "la ventana",
+        "pt": "a janela",
+        "it": "la finestra",
+        "de": "das Fenster",
+        "ru": "окно",
+        "ar": "نافذة",
+        "zh": "窗户"
+      },
       "windscreen": {
         "pos": "noun",
         "en": "the big glass window at the front of a car",
@@ -6650,6 +6818,18 @@
         "ru": "в пределах",
         "ar": "خلال",
         "zh": "在…之内"
+      },
+      "woman": {
+        "pos": "noun",
+        "en": "an adult female person",
+        "fr": "la femme",
+        "es": "la mujer",
+        "pt": "a mulher",
+        "it": "la donna",
+        "de": "die Frau",
+        "ru": "женщина",
+        "ar": "امرأة",
+        "zh": "女人"
       },
       "wrap": {
         "pos": "verb",

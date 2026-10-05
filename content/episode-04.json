@@ -3166,6 +3166,18 @@
         "ar": "موارب",
         "zh": "半开着"
       },
+      "alone": {
+        "pos": "adjective",
+        "en": "with no one else",
+        "fr": "seul",
+        "es": "solo",
+        "pt": "sozinho",
+        "it": "solo",
+        "de": "allein",
+        "ru": "один",
+        "ar": "وحيد",
+        "zh": "独自"
+      },
       "anyway": {
         "pos": "adverb",
         "en": "in spite of that; used to return to a point",
@@ -3526,6 +3538,18 @@
         "ar": "ذكي",
         "zh": "精明的"
       },
+      "close": {
+        "pos": "adjective",
+        "en": "near",
+        "fr": "proche",
+        "es": "cercano",
+        "pt": "próximo",
+        "it": "vicino",
+        "de": "nah",
+        "ru": "близкий",
+        "ar": "قريب",
+        "zh": "近"
+      },
       "cloth": {
         "pos": "noun",
         "en": "a piece of fabric, used for cleaning or wiping",
@@ -3862,6 +3886,30 @@
         "ar": "المساء",
         "zh": "傍晚"
       },
+      "eyes": {
+        "pos": "noun",
+        "en": "the parts of the body you see with",
+        "fr": "les yeux",
+        "es": "los ojos",
+        "pt": "os olhos",
+        "it": "gli occhi",
+        "de": "die Augen",
+        "ru": "глаза",
+        "ar": "عينان",
+        "zh": "眼睛"
+      },
+      "face": {
+        "pos": "noun",
+        "en": "the front of the head",
+        "fr": "le visage",
+        "es": "la cara",
+        "pt": "o rosto",
+        "it": "il viso",
+        "de": "das Gesicht",
+        "ru": "лицо",
+        "ar": "وجه",
+        "zh": "脸"
+      },
       "fade": {
         "pos": "verb",
         "en": "to slowly grow fainter and disappear",
@@ -4102,6 +4150,18 @@
         "ar": "ينهش",
         "zh": "啃噬"
       },
+      "gone": {
+        "pos": "adjective",
+        "en": "no longer here; left",
+        "fr": "parti",
+        "es": "ido",
+        "pt": "ido",
+        "it": "andato",
+        "de": "weg",
+        "ru": "ушедший",
+        "ar": "مفقود",
+        "zh": "不见了"
+      },
       "grab": {
         "pos": "verb",
         "en": "to take hold of something suddenly and roughly",
@@ -4197,6 +4257,18 @@
         "ru": "дымка",
         "ar": "ضبابٌ خفيف",
         "zh": "薄雾"
+      },
+      "head": {
+        "pos": "noun",
+        "en": "the top part of the body, with the face",
+        "fr": "la tête",
+        "es": "la cabeza",
+        "pt": "a cabeça",
+        "it": "la testa",
+        "de": "der Kopf",
+        "ru": "голова",
+        "ar": "رأس",
+        "zh": "头"
       },
       "headlights": {
         "pos": "noun",
@@ -4426,6 +4498,18 @@
         "ar": "شفتان",
         "zh": "嘴唇"
       },
+      "look": {
+        "pos": "verb",
+        "en": "to turn your eyes to see",
+        "fr": "regarder",
+        "es": "mirar",
+        "pt": "olhar",
+        "it": "guardare",
+        "de": "schauen",
+        "ru": "смотреть",
+        "ar": "ينظر",
+        "zh": "看"
+      },
       "low": {
         "pos": "adjective",
         "en": "close to the ground; not high",
@@ -4533,6 +4617,18 @@
         "ru": "шея",
         "ar": "رقبة",
         "zh": "脖子"
+      },
+      "need": {
+        "pos": "verb",
+        "en": "to have to have something",
+        "fr": "avoir besoin de",
+        "es": "necesitar",
+        "pt": "precisar",
+        "it": "aver bisogno di",
+        "de": "brauchen",
+        "ru": "нуждаться",
+        "ar": "يحتاج",
+        "zh": "需要"
       },
       "nod": {
         "pos": "verb",
@@ -4665,6 +4761,18 @@
         "ru": "платить",
         "ar": "يدفع",
         "zh": "支付"
+      },
+      "people": {
+        "pos": "noun",
+        "en": "human beings; persons",
+        "fr": "les gens",
+        "es": "la gente",
+        "pt": "as pessoas",
+        "it": "la gente",
+        "de": "die Leute",
+        "ru": "люди",
+        "ar": "الناس",
+        "zh": "人们"
       },
       "pickup": {
         "pos": "noun",
@@ -5230,6 +5338,18 @@
         "ar": "جلد",
         "zh": "皮肤"
       },
+      "slow": {
+        "pos": "adjective",
+        "en": "not fast",
+        "fr": "lent",
+        "es": "lento",
+        "pt": "lento",
+        "it": "lento",
+        "de": "langsam",
+        "ru": "медленный",
+        "ar": "بطيء",
+        "zh": "慢"
+      },
       "slump": {
         "pos": "verb",
         "en": "to fall or sit heavily, without strength",
@@ -5386,6 +5506,18 @@
         "ar": "خانق",
         "zh": "闷热的"
       },
+      "stop": {
+        "pos": "verb",
+        "en": "to end moving or doing",
+        "fr": "arrêter",
+        "es": "parar",
+        "pt": "parar",
+        "it": "fermarsi",
+        "de": "aufhören",
+        "ru": "останавливаться",
+        "ar": "يتوقّف",
+        "zh": "停止"
+      },
       "stores": {
         "pos": "noun",
         "en": "a supply of goods kept for use",
@@ -5481,6 +5613,18 @@
         "ru": "пот",
         "ar": "عَرَق",
         "zh": "汗"
+      },
+      "take": {
+        "pos": "verb",
+        "en": "to get hold of and carry",
+        "fr": "prendre",
+        "es": "tomar",
+        "pt": "pegar",
+        "it": "prendere",
+        "de": "nehmen",
+        "ru": "брать",
+        "ar": "يأخذ",
+        "zh": "拿"
       },
       "tarmac": {
         "pos": "noun",
@@ -5686,6 +5830,18 @@
         "ar": "الحقيقة",
         "zh": "真相"
       },
+      "turn": {
+        "pos": "verb",
+        "en": "to move so you face another way",
+        "fr": "tourner",
+        "es": "girar",
+        "pt": "virar",
+        "it": "girare",
+        "de": "drehen",
+        "ru": "поворачивать",
+        "ar": "يستدير",
+        "zh": "转"
+      },
       "underfoot": {
         "pos": "adverb",
         "en": "under your feet; on the ground you walk on",
@@ -5709,6 +5865,18 @@
         "ru": "транспортное средство",
         "ar": "مركبة",
         "zh": "车辆"
+      },
+      "wait": {
+        "pos": "verb",
+        "en": "to stay until something happens",
+        "fr": "attendre",
+        "es": "esperar",
+        "pt": "esperar",
+        "it": "aspettare",
+        "de": "warten",
+        "ru": "ждать",
+        "ar": "ينتظر",
+        "zh": "等待"
       },
       "warm": {
         "pos": "adjective",
