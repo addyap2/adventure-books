@@ -81,7 +81,7 @@
       "id": 1,
       "text": {
         "A2": "It is the hottest hour of the day. The bus coughs, shakes, and stops. Steam comes up from the engine. You are far from any town. There is no phone signal here. On the bus is a child called Sami. Sami is about eight, and travels alone. The child is quiet now, and much too hot. There is not much water left.",
-        "B1": "It is the hottest hour of the day when the bus coughs, shudders and dies. Steam curls from under the hood, and you are hours from the nearest town, with no signal on any phone. On the bus is Sami, a child of about eight, travelling all alone. The child has gone quiet and flushed in the heat, and there is not much water left.",
+        "B1": "It is the hottest hour of the day when the bus coughs, shudders and dies. Steam curls from under the hood. You are hours from the nearest town, with no signal on any phone. On the bus is Sami, a child of about eight, travelling all alone. The child has gone quiet and flushed in the heat. There is not much water left.",
         "B2": "It is the hottest hour of the day when the bus coughs, shudders and dies on an empty road, steam curling from under the hood. You are hours from the nearest town in either direction, and there is no signal on any phone aboard. Among the passengers is Sami, a child of about eight, travelling entirely alone. The child has gone quiet and flushed in the heat, and one look tells you the plain truth: there is very little water left."
       },
       "choices": [
@@ -356,8 +356,8 @@
       "id": 10,
       "text": {
         "A2": "You go along the seats. Old Mr Danso sits there, confused. His mouth is dry. He pulls at his collar. He does not know where he is. He looks up at you with frightened eyes. You have a lot to do. But he is here, and he is scared.",
-        "B1": "You move along the seats and find old Mr Danso, confused and dry-mouthed, plucking at his collar. He doesn't seem to know quite where he is, and he looks up at you with frightened eyes. You have a great deal to do — but he is here, and he is scared.",
-        "B2": "You move along the aisle and come to old Mr Danso, confused and dry-mouthed, plucking weakly at his collar as though it were choking him. He does not seem to know quite where he is, and he turns frightened eyes up to you. You have a great deal to do and very little time — but the old man is here, in front of you, and he is scared."
+        "B1": "You move along the seats and find old Mr Danso. He is confused and dry-mouthed, plucking at his collar. He doesn't seem to know where he is. He looks up at you with frightened eyes. You have a great deal to do — but he is here, and he is scared.",
+        "B2": "You move along the aisle and come to old Mr Danso, confused and dry-mouthed. He plucks weakly at his collar, as though it were choking him. He does not seem to know quite where he is, and he turns frightened eyes up to you. You have a great deal to do and very little time. But the old man is here, in front of you, and he is scared."
       },
       "choices": [
         {
@@ -441,7 +441,7 @@
       "text": {
         "A2": "You take charge of the water crate. It is heavy in your arms. Every bottle matters now. If you share it well, and go slow, there is enough. If people grab and waste it, there is not. So you count it, and you keep it close.",
         "B1": "You take charge of the water crate. It's heavy, and every bottle in it matters now. Shared out slowly and fairly, there's enough to get through; grabbed at and wasted, there isn't. So you count it, and you keep it close.",
-        "B2": "You take charge of the water crate, heavy and cool against your chest, and understand at once that every bottle in it matters now. Rationed slowly and shared out fairly, there is just enough to see the bus through; grabbed at and spilled, there is nothing like enough. So you count it, and you keep it close, and you do not let it out of your sight."
+        "B2": "You take charge of the water crate, heavy and cool against your chest. You understand at once that every bottle in it matters now. Rationed slowly and shared out fairly, there is just enough to see the bus through. Grabbed at and spilled, there is nothing like enough. So you count it, and you keep it close, and you do not let it out of your sight."
       },
       "choices": [
         {
@@ -544,8 +544,8 @@
       "id": 17,
       "text": {
         "A2": "You press on to see to Sami. The child comes first. Everything else can wait a little. But you still have to decide how. Do you find real water first? Or go straight to the child's side?",
-        "B1": "You press on to see to Sami; the child comes first, and everything else can wait a moment. But you still have to decide how — whether to secure real water first, or go straight to the child's side.",
-        "B2": "You press on to see to Sami, because the child comes first and most of the rest can wait a little longer. Even so, you still have to decide the how of it: whether to secure real water first and bring it back, or simply go straight to the child's side and not leave it."
+        "B1": "You press on to see to Sami. The child comes first, and everything else can wait a moment. But you still have to decide how. Do you secure real water first, or go straight to the child's side?",
+        "B2": "You press on to see to Sami, because the child comes first and most of the rest can wait a little longer. Even so, you still have to decide the how of it. Do you secure real water first and bring it back? Or simply go straight to the child's side and not leave it?"
       },
       "choices": [
         {
@@ -850,7 +850,7 @@
       "text": {
         "A2": "You step out onto the open flats. At once, it feels wrong. The ridge does not come any closer. Behind you, the road blurs and fades in the shimmer. There is nothing out here but heat and light. And you are in the middle of it, alone.",
         "B1": "You step out onto the open flats, and at once it feels wrong. The ridge comes no closer; behind you the road blurs and fades into the shimmer. There's nothing out here but heat and hard light — and you're in the middle of it, alone.",
-        "B2": "You step off the road onto the open flats, and almost at once it feels wrong. The ridge, however long you walk toward it, comes no closer; behind you the road smears and dissolves into the shimmer until you can't be sure it's there. There is nothing out here at all but heat and hard, flat light — and you are in the very middle of it, entirely alone."
+        "B2": "You step off the road onto the open flats, and almost at once it feels wrong. The ridge, however long you walk toward it, comes no closer. Behind you the road smears and dissolves into the shimmer, until you can't be sure it's there. There is nothing out here at all but heat and hard, flat light. And you are in the very middle of it, entirely alone."
       },
       "choices": [
         {
@@ -875,8 +875,8 @@
       "id": 29,
       "text": {
         "A2": "The sheet is torn, and too short. It will not make much shade. You have only the rags now. It is not enough for everyone. You will have to make do, or go back for something better.",
-        "B1": "The tarp is torn and too short to make much shade; you're left with just the rags, which won't cover everyone. You'll have to make do — or head back to the stores for something better.",
-        "B2": "The tarp turns out to be torn and far too short to throw much shade at all, which leaves you with a handful of rags that won't begin to cover everyone who needs covering. You will have to make do with what you have — or go back to the stores and hope for something better."
+        "B1": "The tarp is torn and too short to make much shade. You're left with just the rags, which won't cover everyone. You'll have to make do — or head back to the stores for something better.",
+        "B2": "The tarp turns out to be torn and far too short to throw much shade at all. That leaves you with a handful of rags, which won't begin to cover everyone who needs it. You will have to make do with what you have. Or go back to the stores and hope for something better."
       },
       "choices": [
         {
@@ -901,8 +901,8 @@
       "id": 30,
       "text": {
         "A2": "The road runs on under the white sun. The heat grows worse by the hour. Your shadow is small and hard beneath you. Ahead, a car is stopped at the roadside. The sun beats down on your neck. There is a signpost too, its paint gone.",
-        "B1": "The road runs on under the white sun, the heat worsening by the hour, your shadow shrunk hard beneath your feet. Ahead, a car sits stalled at the roadside; the sun hammers your neck; and there's a signpost, its paint long blistered away.",
-        "B2": "The road runs on under a white, pitiless sun, the heat deepening by the hour until your own shadow has shrunk to a hard little pool beneath your feet. Ahead of you a car sits stalled at the roadside, and the sun hammers down on the back of your neck like a weight. Off to one side stands a signpost, its paint long since blistered clean away."
+        "B1": "The road runs on under the white sun. The heat grows worse by the hour, and your shadow is shrunk hard beneath your feet. Ahead, a car sits stalled at the roadside. The sun hammers your neck. And there's a signpost, its paint long blistered away.",
+        "B2": "The road runs on under a white, pitiless sun. The heat deepens by the hour, until your own shadow has shrunk to a hard little pool beneath your feet. Ahead of you a car sits stalled at the roadside. The sun hammers down on the back of your neck like a weight. Off to one side stands a signpost, its paint long since blistered clean away."
       },
       "choices": [
         {
@@ -1009,7 +1009,7 @@
       "id": 33,
       "text": {
         "A2": "You go on through the worst of the heat. Each step is hard now. The air burns your throat. Ahead, you have choices to make. The pickup man may be near. So may the strange smoke at the siding. Or you can just push for the bus.",
-        "B1": "You push on through the worst of the heat, each step harder than the last, the air burning your throat. Ahead lie choices: the pickup man may be near, or the strange smoke at the siding — or you can just drive for the bus.",
+        "B1": "You push on through the worst of the heat. Each step is harder than the last, the air burning your throat. Ahead lie choices. The pickup man may be near, or the strange smoke at the siding. Or you can just drive for the bus.",
         "B2": "You push on through the very worst of the heat, each step costing more than the last, the air scorching the back of your throat. Ahead of you, the afternoon fans out into choices again. The pickup man is somewhere near, and so is that strange thread of smoke at the siding. Or you can put your head down and simply push for the bus."
       },
       "choices": [
@@ -1421,7 +1421,7 @@
       "text": {
         "A2": "You look for him. The pickup is already gone. Only its dust hangs on the far road, thinning in the heat. The lift was never real. It was never coming. You stand there, cheated, in the middle of the empty road, with your bad, warm water.",
         "B1": "You look for him, but the pickup's already gone — only its dust hangs on the far road, thinning in the heat. The lift was never real, never coming. You stand there cheated, in the middle of the empty road, with your bad warm water.",
-        "B2": "You turn to look for him, and the pickup is already gone; only its dust still hangs on the far road, thinning as you watch it. The lift was never real, of course — never once coming. You stand there in the middle of the empty road, plainly and completely cheated, holding your bad, warm, useless water, and there is no one left even to be angry at."
+        "B2": "You turn to look for him, but the pickup is already gone. Only its dust still hangs on the far road, thinning as you watch it. The lift was never real, of course — never once coming. You stand there in the middle of the empty road, plainly and completely cheated. You are holding your bad, warm, useless water, and there is no one left even to be angry at."
       },
       "choices": [
         {
@@ -1664,7 +1664,7 @@
       "text": {
         "A2": "Without your water, the heat finds you fast. Your mouth dries. Your head aches. You gave to help, and you would do it again. But the sun does not care about that. It just presses down. You have to keep your head, and keep moving.",
         "B1": "Without your water, the heat finds you fast — mouth drying, head aching. You gave to help, and you'd do it again; but the sun doesn't care about that. It just presses down. You have to keep your head, and keep moving.",
-        "B2": "Without your water, the heat finds you fast now: your mouth drying to paper, a dull ache setting up behind your eyes. You gave the bottle away to help someone, and you would do it again in a heartbeat — but the sun does not care in the least about that, and only goes on pressing down. So you keep your head, because it's all you have left to keep, and you keep moving."
+        "B2": "Without your water, the heat finds you fast now: your mouth drying to paper, a dull ache setting up behind your eyes. You gave the bottle away to help someone, and you would do it again in a heartbeat. But the sun does not care in the least about that, and only goes on pressing down. So you keep your head, because it's all you have left to keep, and you keep moving."
       },
       "choices": [
         {
@@ -1742,7 +1742,7 @@
       "text": {
         "A2": "Someone points down the road. A passenger has walked off, they say. Off toward the shimmer, dazed by the heat. Alone, in the open, in the sun. That way lies nothing but heat and distance. If no one goes, they will not come back.",
         "B1": "Someone points down the road: a passenger has wandered off, they say, out toward the shimmer, dazed by the heat. Alone, in the open sun, with nothing that way but heat and distance. If no one goes after them, they won't come back.",
-        "B2": "Someone catches your arm and points down the road: a passenger has wandered off, they say, out toward the shimmering line of the horizon, plainly dazed by the heat. Alone, in the open, under a sun like this, with nothing in that direction but more heat and more distance. If no one goes after them, everyone seems to understand, they will not come back on their own."
+        "B2": "Someone catches your arm and points down the road. A passenger has wandered off, they say, out toward the shimmering line of the horizon, plainly dazed by the heat. Alone, in the open, under a sun like this, with nothing in that direction but more heat and more distance. If no one goes after them, everyone seems to understand, they will not come back on their own."
       },
       "choices": [
         {
@@ -2200,7 +2200,7 @@
       "id": 78,
       "text": {
         "A2": "Inside, the place holds years of dust. The air is dry and old and still. Heat has cracked the wood. Nothing has moved here in a long time. And yet, somewhere, something did move. Someone lit that fire. Someone turned that windmill on.",
-        "B1": "Inside, the place holds years of dust — the air dry and old and still, the wood cracked with heat, nothing moved in a long time. And yet something did move here: someone lit that fire; someone set that windmill turning.",
+        "B1": "Inside, the place holds years of dust. The air is dry and old and still, the wood cracked with heat, nothing moved in a long time. And yet something did move here. Someone lit that fire. Someone set that windmill turning.",
         "B2": "Inside, the place holds years of undisturbed dust: the air dry and old and utterly still, the wood cracked and greyed with heat, nothing shifted in a very long time. And yet — and this is what keeps you moving forward — something did move here, and recently. Someone lit that fire. Someone set that old windmill turning again. Someone is here."
       },
       "choices": [
@@ -2288,7 +2288,7 @@
       "text": {
         "A2": "You are back at the bus, in the last of the worst heat. Your breath is dry. Your head pounds. And there is Sami, pale in the shade, too still. This is the hour that counts. Whatever you do now, do it well. The child's life is close.",
         "B1": "You're back at the bus, in the last of the worst heat, your breath dry, your head pounding. And there's Sami — pale in the shade, too still. This is the hour that counts; whatever you do now, do it well. The child's life is close.",
-        "B2": "You're back at the bus at last, in the very last of the worst heat, your breath dry and your head pounding with every step. And there is Sami, pale in the shade, gone too still for a child. This is the hour that counts, above all the others; whatever you do now, you had better do it well, because the child's life has come down close, and you can feel it."
+        "B2": "You're back at the bus at last, in the very last of the worst heat. Your breath is dry and your head pounds with every step. And there is Sami, pale in the shade, gone too still for a child. This is the hour that counts, above all the others. Whatever you do now, you had better do it well. The child's life has come down close, and you can feel it."
       },
       "choices": [
         {
@@ -2770,7 +2770,7 @@
       "text": {
         "A2": "From the bus, you watch the road. Far off, a plume of dust rises. It grows. Something is coming, at last. It is too far yet to see what. But dust, out here, means wheels. And wheels, right now, mean hope. You keep your eyes on it, and you wait.",
         "B1": "From the bus, you watch the road, where a plume of dust rises far off and grows. Something is coming at last — too far yet to make out, but dust out here means wheels, and wheels, right now, mean hope. You keep your eyes on it, and wait.",
-        "B2": "From the bus, you keep your eyes fixed on the road, where far off a plume of dust has risen and is slowly, steadily growing. Something is coming at last — too far away yet to make out what — but dust, out here, means wheels, and wheels, right now, at the end of a day like this one, mean hope. So you keep your eyes on it, and you wait, and you let yourself hope."
+        "B2": "From the bus, you keep your eyes fixed on the road. Far off, a plume of dust has risen and is slowly, steadily growing. Something is coming at last — too far away yet to make out what. But dust, out here, means wheels. And wheels, right now, at the end of a day like this one, mean hope. So you keep your eyes on it, and you wait, and you let yourself hope."
       },
       "choices": [
         {
@@ -3076,7 +3076,7 @@
       "id": 130,
       "text": {
         "A2": "You spent the day on the wrong things. A bad deal here. A wrong turn there. Time lost that you could not get back. And when at last you knelt by Sami, the heat had been in the child too long. By evening they carry the child to a truck, limp and grey. You got up. You went out. But you did not get there in time.",
-        "B1": "You spent the day on the wrong things — a bad deal here, a wrong turn there, time lost that you couldn't get back. And when at last you knelt by Sami, the heat had been in the child too long. By evening they carry the child to a truck, limp and grey. You got up, you went out — but you didn't get there in time.",
+        "B1": "You spent the day on the wrong things. A bad deal here, a wrong turn there, time lost that you couldn't get back. And when at last you knelt by Sami, the heat had been in the child too long. By evening they carry the child to a truck, limp and grey. You got up, you went out — but you didn't get there in time.",
         "B2": "You spent the day, in the end, on the wrong things: a bad deal here, a wrong turn there, hour after hour lost that you could never get back. And when at last you knelt down by Sami in the last of the light, the heat had already been in the child far too long. By evening they are carrying the child to a truck, limp and grey and terribly quiet. You got up. You went out into it. That mattered, and it was real. But you did not get there in time, and that, in the end, matters more."
       },
       "ending": "bad"

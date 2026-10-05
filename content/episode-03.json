@@ -1076,7 +1076,7 @@
     {
       "id": 35,
       "text": {
-        "A2": "You promise the family you will send help, and you mean it. But a promise is not heat, and the baby is still crying as you close the door. You feel the weight of it as you walk on. You can only be in one place at a time, tonight of all nights.",
+        "A2": "You promise the family you will send help, and you mean it. But a promise is not heat. The baby is still crying as you close the door. You feel the weight of it as you walk on. You can only be in one place at a time, tonight of all nights.",
         "B1": "You promise the family you'll send help, and you mean it. But a promise isn't heat, and the baby is still crying as you close the door behind you. You feel the weight of that as you walk on. You can only be in one place at a time, tonight of all nights.",
         "B2": "You promise the family you'll send help, and you mean every word of it — but a promise isn't heat, and the baby is still crying as you close the door softly behind you. You feel the whole weight of that as you walk on into the dark. You can only be in one place at a time, tonight of all nights."
       },
@@ -1848,7 +1848,7 @@
       "id": 64,
       "text": {
         "A2": "You stop for a moment and look at the town below. It is all dark. No street lights, no lit windows, only here and there the small gold of a candle. It is strange and beautiful and a little frightening. A whole town, holding its breath in the cold, waiting.",
-        "B1": "You stop a moment and look back at the town below. It's all dark — no street lights, no lit windows, only here and there the small gold of a candle. It's strange, and beautiful, and a little frightening: a whole town holding its breath in the cold, waiting for the dawn.",
+        "B1": "You stop a moment and look back at the town below. It's all dark. No street lights, no lit windows, only here and there the small gold of a candle. It's strange, and beautiful, and a little frightening. A whole town is holding its breath in the cold, waiting for the dawn.",
         "B2": "You stop a moment and look back down at the town below you. It's all dark — no street lights, no lit windows, only here and there the small, stubborn gold of a single candle. It's strange, and beautiful, and more than a little frightening: a whole town holding its breath in the cold, waiting for the dawn to come."
       },
       "choices": [
@@ -2388,7 +2388,7 @@
     {
       "id": 93,
       "text": {
-        "A2": "Now for warmth — and what you can do depends on what you carried up the hill. If you have the paraffin heater, you have real, steady heat. If not, you have candles, blankets, and your own body warmth. It is time to use everything you have, and use it well.",
+        "A2": "Now for warmth. What you can do depends on what you carried up the hill. If you have the paraffin heater, you have real, steady heat. If not, you have candles, blankets, and your own body warmth. It is time to use everything you have, and use it well.",
         "B1": "Now for warmth — and what you can do depends on what you carried up the hill. If you've got the paraffin heater, you have real, steady heat. If not, you have candles, blankets, and your own body warmth. It's time to use everything you have, and use it well.",
         "B2": "Now for warmth — and what you can actually do depends entirely on what you managed to carry up the hill. If you've got the paraffin heater, you have real, steady heat. If not, you have candles, blankets, and your own body warmth. It's time to use everything you have, and to use it well."
       },
@@ -2492,7 +2492,7 @@
     {
       "id": 97,
       "text": {
-        "A2": "You do everything you can, but the cold is deep, and Ada is old and weak. Blankets and body heat may not be enough to hold back a night like this. You need more — more heat, more hands, more help. And down the hill, if you rallied them, there are people who could still come.",
+        "A2": "You do everything you can. But the cold is deep, and Ada is old and weak. Blankets and body heat may not be enough to hold back a night like this. You need more — more heat, more hands, more help. And down the hill, people you rallied could still come.",
         "B1": "You do everything you can, but the cold is deep and Ada is old and weak. Blankets and body heat may not be enough to hold back a night like this. You need more — more heat, more hands, more help. And down the hill, if you rallied them earlier, there are people who could still come.",
         "B2": "You do everything you possibly can, but the cold is deep, and Ada is old and weak. Blankets and body heat alone may not be enough to hold back a night like this one. You need more — more heat, more hands, more help. And down the hill, if you rallied them earlier, there are people who could still come up."
       },
@@ -2708,7 +2708,7 @@
     {
       "id": 105,
       "text": {
-        "A2": "Dawn spreads over the frozen town, pale and clean and quiet. The snow turns from grey to soft white to gold at the edges. After the long black night, the light feels like a gift you had almost forgotten was coming. You stand at the window and watch the world come back.",
+        "A2": "Dawn spreads over the frozen town, pale and clean and quiet. The snow turns from grey to soft white to gold at the edges. After the long black night, the light feels like a gift. You had almost forgotten it was coming. You stand at the window and watch the world come back.",
         "B1": "Dawn spreads over the frozen town, pale and clean and quiet. The snow turns from grey to soft white to gold at the edges. After the long black night, the light feels like a gift you'd almost forgotten was coming. You stand at the window and watch the world come slowly back.",
         "B2": "Dawn spreads over the frozen town, pale and clean and utterly quiet. The snow turns from grey to soft white to gold at its edges. After the long black night, the light feels like a gift you'd half forgotten was even coming. You stand at the window and watch the whole world come slowly, gently back."
       },
@@ -2768,8 +2768,8 @@
     {
       "id": 107,
       "text": {
-        "A2": "From Ada's window, you can see the neighbours' fires burning all the way down the hill. Every window a small warm light. The whole street stayed awake together, kept each other going, refused to let the dark win. You started it, back at the bottom, hours and a lifetime ago.",
-        "B1": "From Ada's window, you can see the neighbours' fires burning all the way down the hill — every window a small warm light. The whole street stayed awake together, kept each other going, refused to let the dark win. You started it, back at the bottom, hours and a lifetime ago.",
+        "A2": "From Ada's window, you can see the neighbours' fires burning all the way down the hill. Every window a small warm light. The whole street stayed awake together. They kept each other going, and refused to let the dark win. You started it, back at the bottom, hours and a lifetime ago.",
+        "B1": "From Ada's window, you can see the neighbours' fires burning all the way down the hill. Every window is a small warm light. The whole street stayed awake together, kept each other going, refused to let the dark win. You started it, back at the bottom, hours and a lifetime ago.",
         "B2": "From Ada's window, you can see the neighbours' fires burning all the way down the hill — every window holding its own small warm light. The whole street stayed awake together tonight, kept each other going, and flatly refused to let the dark win. And you started it, back at the bottom of the hill, hours and a whole lifetime ago."
       },
       "choices": [
@@ -2834,7 +2834,7 @@
     {
       "id": 111,
       "text": {
-        "A2": "The night adds up now, choice by choice, into what it truly was. Everything you did, and everything you did not do, comes back to you here in the grey light. What did the night make of you?",
+        "A2": "The night adds up now, choice by choice, into what it truly was. Everything you did comes back to you now. So does everything you did not do, here in the grey light. What did the night make of you?",
         "B1": "The night adds up now, choice by choice, into what it truly was. Everything you did out there in the cold, and everything you chose not to do, comes back to you here in the grey morning light. You take a slow breath, and you weigh it.",
         "B2": "The night adds up now, slowly and honestly, choice by choice, into whatever it truly was. Everything you did out there in the cold and the dark, and everything you quietly chose not to do, comes back to you here in the grey morning light. You take a slow breath, and you make yourself weigh it, all of it, fairly."
       },
@@ -2874,7 +2874,7 @@
     {
       "id": 112,
       "text": {
-        "A2": "There is more still to weigh in what the night held. Not everything is a clean win or a clear loss. Some of it is smaller than that, and quieter, and still worth counting in the cold morning light.",
+        "A2": "There is more still to weigh in what the night held. Not everything is a clean win or a clear loss. Some of it is smaller than that, and quieter. It is still worth counting in the cold morning light.",
         "B1": "There is more still to weigh in what the night held. Not everything comes down to a clean win or a clear loss; some of it is smaller than that, and quieter, and easy to miss. But it is still worth counting here in the cold morning light.",
         "B2": "There is more still to weigh in what the night held, if you are honest about it. Not everything comes down to a clean win or a clear loss; a good deal of it is smaller than that, and quieter, and easy to miss in the telling. But it is still worth counting here in the cold, grey morning light."
       },
@@ -2914,8 +2914,8 @@
     {
       "id": 113,
       "text": {
-        "A2": "And then there is what the night simply leaves you with, when the winning and losing are done. Not a prize, and not a punishment. Just the plain truth of how it went, and who you were in it.",
-        "B1": "And then there is what the night simply leaves you with, when the winning and the losing are both done. Not a prize, and not a punishment. Just the plain truth of how it all went, and of who you turned out to be when the lights went out.",
+        "A2": "And then there is what the night simply leaves you with. It comes when the winning and losing are done. Not a prize, and not a punishment. Just the plain truth of how it went, and who you were in it.",
+        "B1": "And then there is what the night simply leaves you with. It comes when the winning and the losing are both done. Not a prize, and not a punishment. Just the plain truth of how it all went. And of who you turned out to be when the lights went out.",
         "B2": "And then there is what the night simply leaves you with, when the winning and the losing are both done and counted. Not a prize, exactly, and not a punishment either. Just the plain, quiet truth of how it all went in the end, and of who, exactly, you turned out to be when the lights went out and the cold came down."
       },
       "choices": [

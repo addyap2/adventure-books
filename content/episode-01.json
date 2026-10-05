@@ -1616,7 +1616,7 @@
       "text": {
         "A2": "Her name is Mara. She was on your train. She is here for work too. She does not know the city. For a few minutes, you are not alone. Her address is across the river. Yours is a street she does not know.",
         "B1": "Her name is Mara, and she came in on the same train. She is here for work too, and knows the city no better than you do. For a few minutes, in the cold light of the station, neither of you is quite alone. Her address is somewhere across the river; yours is a street she has never heard of.",
-        "B2": "Her name is Mara, and she came in on the same train — here for work too, and no more at home in this city than you are. For a few minutes, standing together in the flat cold light of the station, neither of you is quite alone. Her address lies somewhere across the river; yours is a street she has never so much as heard of, which does nothing to steady either of you."
+        "B2": "Her name is Mara, and she came in on the same train. She is here for work too, and no more at home in this city than you are. For a few minutes, standing together in the flat cold light of the station, neither of you is quite alone. Her address lies somewhere across the river. Yours is a street she has never so much as heard of, which does nothing to steady either of you."
       },
       "choices": [
         {
@@ -1711,7 +1711,7 @@
       "text": {
         "A2": "Half of Rosewater Street is behind builders' fences. On one, an old notice still has the firm's name. Under it, someone wrote one word in black pen, with an arrow to the east: MOVED.",
         "B1": "Half of Rosewater Street is hidden behind builders' hoarding. On it, a torn notice still carries the firm's name in faded print. Underneath, someone has written one word in thick marker, with an arrow pointing east, towards the water: MOVED.",
-        "B2": "Half of Rosewater Street has vanished behind builders' hoarding. On one panel a torn notice still bears the firm's name in faded, official print. Beneath it someone has written a single word in thick black marker, with an arrow driven hard to the east, towards the water: MOVED."
+        "B2": "Half of Rosewater Street has vanished behind builders' hoarding. On one panel a torn notice still bears the firm's name in faded, official print. Beneath it someone has written a single word in thick black marker. An arrow is driven hard beside it, to the east, towards the water: MOVED. You stand and read it twice, as if it might change."
       },
       "choices": [
         {
@@ -1740,7 +1740,7 @@
       "text": {
         "A2": "You almost miss it. There is a small side door behind the fence. A thin line of light is under it. Someone is inside, this late. You stand and look at that small yellow line.",
         "B1": "You almost miss it: a narrow side door, half hidden behind the hoarding. A thin line of light runs along the bottom of it. Someone is inside after all, this late. For a moment you simply stand and look at that small yellow line.",
-        "B2": "You very nearly miss it — a narrow side door, set half behind the hoarding, with a thin seam of light running along the bottom edge. Someone is inside after all, at this hour, and for a moment you simply stand in the dark and study that small yellow line as though it might tell you something."
+        "B2": "You very nearly miss it — a narrow side door, set half behind the hoarding. A thin seam of light runs along the bottom edge. Someone is inside after all, at this hour. For a moment you simply stand in the dark and study that small yellow line, as though it might tell you something."
       },
       "choices": [
         {
@@ -1957,7 +1957,7 @@
       "text": {
         "A2": "The morning is grey over the bench, and you let it come. You are too cold and too tired to move. Just a minute, you tell yourself. But by the time you can feel your feet, nine o'clock has gone. And so has the reason you came.",
         "B1": "The morning comes up grey over the station bench, and you let it. You are too cold and too tired to move. It is only for a minute, you tell yourself. But by the time you can feel your feet, nine o'clock has gone — and so has the reason you came.",
-        "B2": "The morning comes up grey over the station bench, and you let it come. You are too cold and too spent to move, and you tell yourself it is only for a minute more. But by the time the feeling has crept back into your feet, nine o'clock has been and gone — and gone with it is the single reason you came to this city at all."
+        "B2": "The morning comes up grey over the station bench, and you let it come. You are too cold and too spent to move, and you tell yourself it is only for a minute more. But by the time the feeling has crept back into your feet, nine o'clock has been and gone. And gone with it is the single reason you came to this city at all."
       },
       "ending": "bad"
     },
@@ -1966,7 +1966,7 @@
       "text": {
         "A2": "You take a wrong turn, then another. The same closed shop goes past twice. The map means nothing now. The streets are very quiet. At one in the morning, the city belongs to no one.",
         "B1": "You take a wrong turn, and then another. The same shuttered shop slides past twice. The map in your hand has stopped meaning anything at all. The streets have gone quiet in the way they do at one in the morning, when the city belongs to no one.",
-        "B2": "You take a wrong turning, and then another, until the same shuttered shop has slid past you twice and the map in your hand has ceased to mean anything at all. The streets have fallen into the particular silence they keep at one in the morning, the hour when a city belongs to no one and admits it."
+        "B2": "You take a wrong turning, and then another. The same shuttered shop slides past you twice, and the map in your hand has ceased to mean anything at all. The streets have fallen into the particular silence they keep at one in the morning. It is the hour when a city belongs to no one, and admits it."
       },
       "choices": [
         {
@@ -2000,7 +2000,7 @@
       "text": {
         "A2": "The light is a launderette, open all night. One man is inside, folding towels. He is happy to talk. He knows these streets well. He draws the way in the air with his hand.",
         "B1": "The light comes from a launderette, open all night and empty except for one attendant folding towels. He is glad of the company. He knows these streets by heart, he says, and draws the way in the air with a warm, certain hand.",
-        "B2": "The light turns out to be a launderette, open through the night and empty but for a single attendant folding towels, who is plainly glad of the company. He knows these streets the way you know your own hands, he says, and sketches the route in the air with a warm and absolute certainty you find yourself wanting to believe."
+        "B2": "The light turns out to be a launderette, open through the night. It is empty but for a single attendant folding towels, who is plainly glad of the company. He knows these streets, he says, the way you know your own hands. He sketches the route in the air with a warm and absolute certainty you find yourself wanting to believe."
       },
       "choices": [
         {
@@ -2032,7 +2032,7 @@
       "text": {
         "A2": "On a glass door at the back, a painted name is half gone. You can still read ROWE under the marks. Someone left in a hurry, or someone wanted it gone. In the dark, you can't tell.",
         "B1": "On the glass of an inner door at the back, a painted name is half scraped away. You can still read ROWE under the marks. Someone left in a hurry once, or someone wanted the name gone. In the dark, it is hard to say which is worse.",
-        "B2": "On the glass of an inner door at the back, a painted name has been half scraped away; you can still make out ROWE beneath the scars in the paint. Someone left in a hurry, once, or someone wanted the name gone for good — and standing there in the dark, you find it genuinely hard to say which reading is the more unsettling."
+        "B2": "On the glass of an inner door at the back, a painted name has been half scraped away. You can still make out ROWE beneath the scars in the paint. Someone left in a hurry, once. Or someone wanted the name gone for good. Standing there in the dark, you find it genuinely hard to say which reading is the more unsettling."
       },
       "choices": [
         {
@@ -2250,7 +2250,7 @@
       "text": {
         "A2": "The cleaner is kind about waking you. She pours you half a cup from a flask. \"Where have you come from?\" she asks. She is not really curious. She has asked this many times before.",
         "B1": "The cleaner who woke you is not unkind about it. She pours you half a cup from a flask before you can say no. \"Where've you come from, then,\" she asks, without much curiosity, in the way of someone who has asked it many times before.",
-        "B2": "The cleaner who woke you is decent about it, and pours you half a cup from a battered flask before you can think to refuse. \"Where've you come from, then,\" she asks, without any real curiosity, in the manner of someone who has put the same question to a great many people on a great many cold mornings."
+        "B2": "The cleaner who woke you is decent about it. She pours you half a cup from a battered flask before you can think to refuse. \"Where've you come from, then,\" she asks, without any real curiosity. It is the manner of someone who has put the same question to a great many people, on a great many cold mornings."
       },
       "choices": [
         {
@@ -2318,7 +2318,7 @@
       "text": {
         "A2": "A queue is already outside WORK FOR EVERYONE. Tired faces in the early light. You can see their breath. Near the front, a woman counts her last money, twice, as if it might change.",
         "B1": "A queue has already formed outside WORK FOR EVERYONE, before it is even open. Tired faces, early light, breath showing in the cold. Near the front a woman counts out the last of her notes, twice, as if the number might change if she is careful enough.",
-        "B2": "A queue has already gathered outside WORK FOR EVERYONE, though the door is not yet open: tired faces in the thin early light, breath hanging in the cold. Near the front a woman counts out the last of her notes, and then counts them a second time, as though the total might improve if only she is careful enough."
+        "B2": "A queue has already gathered outside WORK FOR EVERYONE, though the door is not yet open. Tired faces in the thin early light, breath hanging in the cold. Near the front a woman counts out the last of her notes. She counts them a second time, as though the total might improve if only she is careful enough."
       },
       "choices": [
         {
@@ -2518,7 +2518,7 @@
       "text": {
         "A2": "You watch the doors along the quay. Then you see him: the man in the good suit from the agency. He goes into a building two doors down. No sign, no name. The way he looks around first tells you everything.",
         "B1": "Watching the other doors along the quay, you see him: the man in the good suit from the agency. He lets himself into a building two doors down. There is no sign on it, and no name. Something about the way he looks around first tells you everything.",
-        "B2": "Watching the other doors strung along the quay, you catch sight of him: the man in the good suit from the agency, letting himself into a building two doors down. There is no sign on it and no name of any kind, and something in the careful, sidelong way he checks the street before he enters tells you everything you needed to know."
+        "B2": "Watching the other doors strung along the quay, you catch sight of him. It is the man in the good suit from the agency, letting himself into a building two doors down. There is no sign on it, and no name of any kind. Something in the careful, sidelong way he checks the street before he enters tells you everything you needed to know."
       },
       "choices": [
         {
@@ -2552,7 +2552,7 @@
       "text": {
         "A2": "In your bag: the letter, a little money, and a photo you do not take out. You read the letter again. You know every word. It is as if the words might change while you sleep.",
         "B1": "In your bag there is the letter, a little money that will not last long, and a photograph you do not take out. You read the letter again, though you know every word by heart. It is as if the words might have changed while you slept.",
-        "B2": "In your bag there is the letter, a little money that will plainly not stretch far, and a photograph you deliberately do not take out. You read the letter once more, though you have long since known it by heart, half persuaded that the words might have quietly altered themselves while you slept in your seat."
+        "B2": "In your bag there is the letter. There is a little money that will plainly not stretch far, and a photograph you deliberately do not take out. You read the letter once more, though you have long since known it by heart. You are half persuaded that the words might have quietly altered themselves while you slept in your seat."
       },
       "choices": [
         {
@@ -2686,7 +2686,7 @@
     {
       "id": 79,
       "text": {
-        "A2": "From the bus window the city goes by, dark and wet and strange. You could get off early and walk. Or you could stay on to the right stop, and trust the driver to know the way.",
+        "A2": "From the bus window the city goes by, dark and wet and strange. You could get off early and walk. Or you could stay on to the right stop. You could trust the driver to know the way.",
         "B1": "From the bus window the city slides past, dark and wet and unfamiliar. You could get off early and find your own feet. Or you could stay on to the proper stop, and trust the driver to know his route better than you.",
         "B2": "From the bus window the city unspools past you, dark and wet and wholly unfamiliar. You could get down early and trust your own two feet. Or you could stay aboard to the proper stop, and trust instead that the driver knows his route rather better than a stranger with a useless map."
       },
@@ -3110,7 +3110,7 @@
       "text": {
         "A2": "\"Mill Quay? Straight on, past the second bridge. Ten minutes.\" The rower does not stop, an oar on his shoulder. \"You're nearly there,\" he says, seeing your face. \"Nearly there now.\"",
         "B1": "\"Mill Quay? Straight along, past the second bridge. Ten minutes.\" The rower barely breaks step, an oar balanced on one shoulder. \"You're nearly there,\" he adds, seeing your face. \"Whatever it is, you're nearly there now.\"",
-        "B2": "\"Mill Quay? Straight along the bank, past the second bridge. Ten minutes, no more.\" The rower scarcely breaks his stride, an oar balanced across one shoulder. \"You're nearly there,\" he adds, catching something in your face, \"whatever it is you're chasing. You're nearly there now.\""
+        "B2": "\"Mill Quay? Straight along the bank, past the second bridge. Ten minutes, no more.\" The rower scarcely breaks his stride, an oar balanced across one shoulder. He points with his free hand towards the grey water. \"You're nearly there,\" he adds, catching something in your face, \"whatever it is you're chasing. You're nearly there now.\""
       },
       "choices": [
         {
@@ -3194,7 +3194,7 @@
       "text": {
         "A2": "An early customer looks up from his tea. \"Kessler and Rowe? I did their books, years ago. Good people.\" He laughs. \"Bad with letters, though. Always were. Ask anyone.\"",
         "B1": "One of the early regulars looks up from his tea. \"Kessler and Rowe? I did their books, years back. Good people.\" He laughs at some private joke. \"Bad with letters, mind. Always were. Ask anyone who ever waited on one.\"",
-        "B2": "One of the early regulars glances up from his tea. \"Kessler and Rowe? I kept their books, years back. Good people, the pair of them.\" He laughs at some joke of his own. \"Hopeless with letters, mind — always were. Ask anyone who ever sat waiting on one to arrive.\""
+        "B2": "\"Kessler and Rowe? I kept their books, years back. Good people, the pair of them.\" He laughs at some joke of his own, then shakes his head, still smiling. \"Hopeless with letters, mind — always were. Ask anyone who ever sat waiting on one to arrive.\" He taps the side of his cup, as if the old memory still amuses him, and goes back to his tea."
       },
       "choices": [
         {
@@ -3324,7 +3324,7 @@
       "text": {
         "A2": "The taxi goes through empty streets. Closed shops, one all-night café throwing yellow light on the wet road, a fox on a corner. The driver hums to the radio. For a few minutes, it is almost restful.",
         "B1": "The taxi carries you through streets with nobody on them. Shuttered shops, one all-night café throwing yellow light on the wet road, a fox at a corner. The driver hums to the radio. For a few minutes it is almost restful, being carried, deciding nothing.",
-        "B2": "The taxi bears you through streets with not a soul on them — shuttered shops, one all-night café throwing its yellow light across the wet road, a fox picking its way along a gutter. The driver hums quietly along to the radio, and for a few minutes it is almost restful, this business of being carried somewhere and deciding nothing at all."
+        "B2": "The taxi bears you through streets with not a soul on them. Shuttered shops, one all-night café throwing its yellow light across the wet road, a fox picking its way along a gutter. The driver hums quietly along to the radio. For a few minutes it is almost restful, this business of being carried somewhere and deciding nothing at all."
       },
       "choices": [
         {

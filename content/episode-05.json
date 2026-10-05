@@ -410,7 +410,7 @@
       "text": {
         "A2": "You go from cottage to cottage. You ask each door the same thing. Bring wood for a fire. Lend a hand on the rope. Help me hold the light. Some faces turn away. But some turn out into the storm. It only takes a few to start.",
         "B1": "You go cottage to cottage, asking each door the same thing. Bring wood for a signal fire, lend a hand on the rope, help me hold the light. Some turn away. But a few pull on their coats and come out into the storm — and it only takes a few to begin.",
-        "B2": "You go cottage to cottage, hammering on each door and asking the same thing: bring wood for a signal fire, lend a hand on the rope, help me hold the light. Some faces turn away from the cold and the risk. But a few pull on their coats and step out into the storm with you — and it only ever takes a few to begin the rest."
+        "B2": "You go cottage to cottage, hammering on each door and asking the same thing. Bring wood for a signal fire, lend a hand on the rope, help me hold the light. Some faces turn away from the cold and the risk. But a few pull on their coats and step out into the storm with you. And it only ever takes a few to begin the rest."
       },
       "choices": [
         {
@@ -542,8 +542,8 @@
       "id": 17,
       "text": {
         "A2": "You press on to keep the light. That comes first. Everything else can wait a while. But you still have to choose how. Do you get proper oil first? Or climb straight to the lamp?",
-        "B1": "You press on to keep the light; that comes first, and the rest can wait a moment. But you still have to decide how — secure proper oil first, or climb straight up to the lamp.",
-        "B2": "You press on to keep the light, because that comes before everything else and most of the rest can wait a little longer. Even so, you still have to decide the how of it: whether to secure proper oil first and carry it up, or climb straight to the lamp and coax what flame you can."
+        "B1": "You press on to keep the light. That comes first, and the rest can wait a moment. But you still have to decide how. Do you secure proper oil first, or climb straight up to the lamp?",
+        "B2": "You press on to keep the light, because that comes before everything else and most of the rest can wait a little longer. Even so, you still have to decide the how of it. Do you secure proper oil first and carry it up? Or climb straight to the lamp and coax what flame you can?"
       },
       "choices": [
         {
@@ -681,7 +681,7 @@
       "text": {
         "A2": "You take Carrick's words to heart. Mind the oil. Keep off the cliff. Don't trust the wrecker. Hold the light. It is good advice, and simple. Now you just have to follow it.",
         "B1": "You take Carrick's words to heart. Mind the oil carefully, keep well off the cliff, don't trust the wrecker, and hold the light above all else. It's simple advice, and good. Now you just have to actually follow it, out here in the dark and the wind.",
-        "B2": "You take Carrick's words to heart, one by one: mind the oil carefully, keep well off the cliff path, put no trust in the wrecker, and hold the light whatever it costs. It is simple advice, and good — the kind that is easy to nod at and hard, when the wind is screaming, to actually keep."
+        "B2": "You take Carrick's words to heart, one by one. Mind the oil carefully, keep well off the cliff path, put no trust in the wrecker, and hold the light whatever it costs. It is simple advice, and good. It is the kind that is easy to nod at, and hard, when the wind is screaming, to actually keep."
       },
       "choices": [
         {
@@ -941,7 +941,7 @@
       "id": 31,
       "text": {
         "A2": "A small boat is swamped on the slip. An old man is caught in the lines. The sea drags at him. He cannot pull free. If you stop, you lose time. If you don't, the next big wave may take him.",
-        "B1": "A small boat is swamped on the slip, an old man caught in the lines, the sea dragging at him — he can't pull free. Stop, and you lose time; don't, and the next big wave may take him.",
+        "B1": "A small boat is swamped on the slip, an old man caught in the lines. The sea drags at him, and he can't pull free. Stop, and you lose time. Don't, and the next big wave may take him.",
         "B2": "A small boat lies swamped on the slip, an old man caught fast in the lines, the sea dragging at him with every surge and hauling him toward the deep water. He cannot pull himself free. If you stop, you lose time you can't spare; if you don't, there's a real chance the next big wave takes him for good."
       },
       "choices": [
@@ -971,7 +971,7 @@
       "text": {
         "A2": "A family is in a low cottage. The sea is coming in under the door. They have no lamp. A child is crying in the dark. The parents look at you with tired eyes. You have a lamp and a coat. Not much. But more than they have.",
         "B1": "A family is trapped in a low cottage, the sea coming under the door, no lamp, a child crying in the dark. The parents look at you with tired, hopeless eyes. You've a lamp and a coat of your own — not much, but more than they've got.",
-        "B2": "A family is trapped in a low cottage with the sea already coming in under the door, no lamp lit, a small child crying somewhere in the dark. The parents turn to you with tired, half-hopeless eyes, not quite asking. You have a lamp and a coat of your own — not much, and every bit of it already spoken for, but more, all the same, than they have."
+        "B2": "A family is trapped in a low cottage, the sea already coming in under the door. No lamp is lit, and a small child is crying somewhere in the dark. The parents turn to you with tired, half-hopeless eyes, not quite asking. You have a lamp and a coat of your own — not much, and every bit of it already spoken for. But it is more, all the same, than they have."
       },
       "choices": [
         {
@@ -1007,7 +1007,7 @@
       "id": 33,
       "text": {
         "A2": "You go on through the worst of the storm. Each step is a fight now. The rain stings your face. Ahead, you have choices to make. The wrecker may be near. So may the strange light on the water. Or you can push for the tower.",
-        "B1": "You push on through the worst of the storm, each step a fight now, the rain stinging your face. Ahead lie choices: the wrecker may be near, or the strange light on the water — or you can just drive for the tower.",
+        "B1": "You push on through the worst of the storm. Each step is a fight now, the rain stinging your face. Ahead lie choices. The wrecker may be near, or the strange light on the water. Or you can just drive for the tower.",
         "B2": "You push on through the very worst of the storm, each step a fight against the wind, the rain stinging your face like grit. Ahead of you, the night fans out into choices again. The wrecker is somewhere near, and so is that strange second light on the water. Or you can put your head down and simply push for the tower and the lamp."
       },
       "choices": [
@@ -1471,7 +1471,7 @@
       "text": {
         "A2": "The frightened folk press their coins on him. Hands reach out, full of money. Voices beg him for oil, for a way out. And he takes it, slow, with that smile. He picks who to help by who can pay. Now you see the whole trick, plain and ugly.",
         "B1": "The frightened folk press their coins on him — hands full of money, voices begging for oil, for a way out. And he takes it, slow, with that smile, choosing who to help by who can pay. Now you see the whole trick, plain and ugly.",
-        "B2": "The frightened folk press in and shove their coins at him — hands full of money, voices begging him for oil, for a boat, for any way out of the dark. And he takes it, unhurried, with that same smile, choosing who to help by who can pay him most. Now you see the whole trick laid out plain in front of you, and it is an ugly, ugly thing to watch."
+        "B2": "The frightened folk press in and shove their coins at him. Hands full of money, voices begging him for oil, for a boat, for any way out of the dark. And he takes it, unhurried, with that same smile, choosing who to help by who can pay him most. Now you see the whole trick laid out plain in front of you. It is an ugly, ugly thing to watch."
       },
       "choices": [
         {
@@ -1525,7 +1525,7 @@
       "id": 51,
       "text": {
         "A2": "The ledge, the wind, the black drop below. Your foot slips on the wet rock. Your heart slams. This is the moment. Go off the edge into the dark. Or throw yourself back, now, while you still can.",
-        "B1": "The ledge, the wind, the black drop below — and your foot slips on the wet rock. This is the moment: go off the edge into the dark, or throw yourself back from it now, while you still can.",
+        "B1": "The ledge, the wind, the black drop below — and your foot slips on the wet rock. This is the moment. Go off the edge into the dark? Or throw yourself back from it now, while you still can?",
         "B2": "The ledge, the wind, the black drop yawning below — and then your foot slips on the streaming wet rock and your heart slams up into your throat. This is the moment, then, the one Carrick warned you about. Go off the edge into the dark, with no one to see — or throw yourself back from it now, hard, while some small part of you still can."
       },
       "choices": [
@@ -1662,7 +1662,7 @@
       "text": {
         "A2": "Without your coat, the cold and wet find you fast. Your teeth chatter. Your fingers go stiff. You gave it to help, and you would do it again. But the storm does not care about that. It just batters on. You have to keep your head, and keep moving.",
         "B1": "Without your coat, the cold and wet find you fast — teeth chattering, fingers going stiff. You gave it to help, and you'd do it again; but the storm doesn't care about that. It just batters on. You have to keep your head, and keep moving.",
-        "B2": "Without your coat, the cold and the wet find you fast now: your teeth chattering, your fingers going stiff and stupid. You gave it away to help someone, and you would do it again in a heartbeat — but the storm does not care in the least about that, and only goes on battering the coast. So you keep your head, because it's all you have left to keep, and you keep moving."
+        "B2": "Without your coat, the cold and the wet find you fast now: your teeth chattering, your fingers going stiff and stupid. You gave it away to help someone, and you would do it again in a heartbeat. But the storm does not care in the least about that, and only goes on battering the coast. So you keep your head, because it's all you have left to keep, and you keep moving."
       },
       "choices": [
         {
@@ -1714,7 +1714,7 @@
       "text": {
         "A2": "You press on into the storm, soaked to the bone. The wind fights every step. The rain blinds you. Each step is a small battle. But you keep them coming, one after the next. Slow is fine. Stopping is not.",
         "B1": "You press on into the storm, soaked to the bone, the wind fighting every step, the rain blinding you. Each step is a small battle — but you keep them coming, one after another. Slow is fine tonight. Stopping is what kills.",
-        "B2": "You press on into the storm, soaked to the bone, the wind fighting you for every single step and the rain driving so hard you can barely see the path. Every step is its own small battle against the wish to stop. But you keep them coming, one after another after another, because slow is survivable tonight — and stopping, you understand perfectly well, is what kills you and the light both."
+        "B2": "You press on into the storm, soaked to the bone, the wind fighting you for every single step. The rain drives so hard you can barely see the path. Every step is its own small battle against the wish to stop. But you keep them coming, one after another after another. Slow is survivable tonight — and stopping, you understand perfectly well, is what kills you and the light both."
       },
       "choices": [
         {
@@ -1925,7 +1925,7 @@
       "text": {
         "A2": "At the oil store, people rush the cans. Voices rise. Hands grab. Fear has caught, and it spreads fast. One more shove and it will be a fight. You have a choice. Calm them, and share it out. Or push your own way in.",
         "B1": "At the oil store, people are rushing the cans — voices rising, hands grabbing, fear catching and spreading fast. One more shove and it's a fight. You can try to calm them and share it out fairly, or push your own way through to the oil.",
-        "B2": "At the oil store, people have begun to rush the cans: voices climbing, hands grabbing, fear catching like a spark in dry grass and spreading down the line. One more shove and it becomes an outright fight over the oil. You have a choice to make, and quickly — try to calm them and share it out fairly, or simply push your own way through to what you need."
+        "B2": "At the oil store, people have begun to rush the cans. Voices climbing, hands grabbing, fear catching like a spark in dry grass and spreading down the line. One more shove and it becomes an outright fight over the oil. You have a choice to make, and quickly. Try to calm them and share it out fairly, or simply push your own way through to what you need."
       },
       "choices": [
         {
@@ -2286,7 +2286,7 @@
       "text": {
         "A2": "You are back at the tower, soaked to the bone. The last of the worst storm batters the glass. Below, Nan lies grey at the foot of the stairs. Above, the lamp burns low. This is the hour that counts. Whatever you do now, do it well. That boat is close to the rocks.",
         "B1": "You're back at the tower, soaked through, the last of the worst storm battering the glass. Below, Nan lies grey at the foot of the stairs; above, the lamp burns low. This is the hour that counts; whatever you do now, do it well. That boat is close to the rocks.",
-        "B2": "You're back at the tower at last, soaked to the bone, the last of the worst storm still battering the glass overhead. Below you, Nan lies grey and still at the foot of the stairs; above you, the great lamp burns low and hungry. This is the hour that counts, above all the others; whatever you do now, you had better do it well, because that boat has come down close to the rocks, and you can feel it."
+        "B2": "You're back at the tower at last, soaked to the bone, the last of the worst storm still battering the glass overhead. Below you, Nan lies grey and still at the foot of the stairs. Above you, the great lamp burns low and hungry. This is the hour that counts, above all the others. Whatever you do now, you had better do it well. That boat has come down close to the rocks, and you can feel it."
       },
       "choices": [
         {
@@ -2544,7 +2544,7 @@
       "text": {
         "A2": "The light on the water shows again. Out where everyone swears no boat would be. But a light means a hand to light it. A hand means a person. And a person, out there, on a night like this, is in real trouble. You can feel it.",
         "B1": "The light on the water shows again — out where everyone swears no boat would be. But a light means a hand to light it, and a hand means a person, and a person out there tonight is in real trouble. You can feel it.",
-        "B2": "The light on the water shows again, out where everyone on the coast swears no boat would ever be tonight. But a light means a hand to light it, and a hand means a person, and a person out there, on a night as wild as this one, is in real and mortal trouble. You can feel the truth of it, pulling at you like a hook set deep."
+        "B2": "The light on the water shows again, out where everyone on the coast swears no boat would ever be tonight. But a light means a hand to light it, and a hand means a person. And a person out there, on a night as wild as this one, is in real and mortal trouble. You can feel the truth of it, pulling at you like a hook set deep."
       },
       "choices": [
         {

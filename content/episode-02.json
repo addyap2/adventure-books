@@ -1566,7 +1566,7 @@
       "text": {
         "A2": "You press coins into the kid's hand and send them running for more pork and greens. They know every back way in the market and are gone before you finish the sentence. Now you must hold the stall alone until they return. You hope the stock lasts. You hope the kid is quick and honest. You think they are.",
         "B1": "You press coins into the kid's hand and send them running for more pork and greens. They know every back way in the market and are gone before you've finished the sentence. Now you must hold the stall alone until they're back. You hope the stock lasts, and that the kid is as quick and honest as you think.",
-        "B2": "You press coins into the kid's grubby hand and send them running for more pork and greens. They know every back way and shortcut in the market, and are gone before you've even finished the sentence. Now you must hold the stall alone until they get back — hoping the stock lasts the gap, and that the kid is every bit as quick and honest as you've decided to believe."
+        "B2": "You press coins into the kid's grubby hand and send them running for more pork and greens. They know every back way and shortcut in the market, and are gone before you've even finished the sentence. Now you must hold the stall alone until they get back. You can only hope the stock lasts the gap, and that the kid is as quick and honest as you've decided to believe."
       },
       "choices": [
         {
@@ -2267,7 +2267,7 @@
       "id": 83,
       "text": {
         "A2": "The big pot is nearly empty now. You can see the bottom through the last of the broth. This is the danger point of the night. Run dry too soon, and you stand at a cold stall while the market still moves. You can make the very last of it stretch. Or accept the pot is done and count what you have.",
-        "B1": "The big pot is nearly empty now — you can see the bottom through the last of the broth. This is the real danger point of the night. Run dry too early, and you'll stand at a cold, closed stall while the market still moves around you. You can make the very last of it stretch, or accept the pot is done and count what you've made.",
+        "B1": "The big pot is nearly empty now. You can see the bottom through the last of the broth. This is the real danger point of the night. Run dry too early, and you'll stand at a cold, closed stall while the market moves around you. You can make the last of it stretch. Or you can accept the pot is done and count what you've made.",
         "B2": "The big pot is nearly empty now — you can see the bottom through the last inch of broth. This is the real danger point of the whole night. Run dry too early, and you'll stand at a cold, closed stall while the market still moves and spends all around you. You can make the very last of it stretch, or you can accept the pot is done and count up what you've made."
       },
       "choices": [
@@ -2353,7 +2353,7 @@
       "id": 86,
       "text": {
         "A2": "A new stall has opened right across from you, selling bowls at half your price. The owner calls loud, waving people over. Some of your queue drifts across to him. Cheap and loud can pull a crowd fast. You can drop your price to match him, and fight. Or hold your price, and trust your food to hold your people.",
-        "B1": "A new stall has opened right across from you, selling bowls at half your price. The owner calls out loud, waving people over, and some of your queue drifts across to him. Cheap and loud can pull a crowd fast on a night like this. You can drop your price to match him and fight it out — or hold your price, and trust your food to hold your people.",
+        "B1": "A new stall has opened right across from you. It sells bowls at half your price. The owner calls out loud, waving people over. Some of your queue drifts across to him. Cheap and loud can pull a crowd fast on a night like this. You can drop your price to match him and fight it out. Or hold your price, and trust your food to hold your people.",
         "B2": "A new stall has opened up right across from you, selling bowls at half your price. The owner calls out loud and constant, waving people over, and some of your own queue begins to drift across to him. Cheap and loud can pull a crowd fast on a night like this. You can drop your price to match him and fight it out toe to toe — or you can hold your price steady, and trust your food to hold your people."
       },
       "choices": [
