@@ -1019,8 +1019,8 @@ function meaningHTML(){
   const g=GIST[String(node)];
   if(!g) return "";
   const dir=$("lang").value==="ar"?" dir=\"rtl\"":"";
-  return `<div class="meaning"><button id="meaningBtn">🌐 See the meaning</button>
-    <div class="mtext" id="mtext" hidden${dir}>${g}</div></div>`;
+  return `<div class="meaning"><button id="meaningBtn" aria-expanded="false" aria-controls="mtext">🌐 See the meaning</button>
+    <div class="mtext" id="mtext" role="region" aria-label="Meaning in your language" tabindex="-1" hidden${dir}>${g}</div></div>`;
 }
 
 function render(){
@@ -1088,7 +1088,7 @@ function wire(n){
     s.forEach(f=>flags.add(f)); node=c.goto; hideGloss(); window.scrollTo({top:0,behavior:"smooth"}); render();
   });
   const again=$("again"); if(again) again.onclick=()=>{node=BOOK.start;flags=new Set();hideGloss();window.scrollTo({top:0});render();};
-  const mb=$("meaningBtn"); if(mb) mb.onclick=()=>{ $("mtext").hidden=false; mb.hidden=true; };
+  const mb=$("meaningBtn"); if(mb) mb.onclick=()=>{ const mt=$("mtext"); mt.hidden=false; mb.setAttribute("aria-expanded","true"); mb.hidden=true; mt.focus(); };
 }
 
 function setProgress(frac){ $("progress").style.width=Math.round(Math.min(1,frac)*100)+"%"; }

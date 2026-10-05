@@ -131,6 +131,8 @@
   .langpick button:hover{color:#fff;background:rgba(255,255,255,.09)}
   .langpick button.on{color:var(--amber-hot);background:color-mix(in srgb,var(--amber) 18%,transparent)}
   .langpick button:focus-visible{outline:2px solid var(--amber-hot);outline-offset:2px}
+  /* global keyboard-focus fallback so every focusable element shows a ring */
+  a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--amber-hot);outline-offset:3px;border-radius:6px}
   .sub{font-size:clamp(1rem,1.5vw,1.18rem);color:#cdd4e2;max-width:46ch;margin:0;
     font-weight:400;text-wrap:pretty}
   .actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:4px}
