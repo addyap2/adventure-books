@@ -164,6 +164,35 @@ function frostfireScene(c) {
   <ellipse cx="660" cy="520" rx="64" ry="24" fill="url(#glow)" opacity="0.55"/>`;
 }
 
+function highwaterScene(c) {
+  // a dark flooded street at night: a row of house silhouettes with one warm-lit
+  // window, black floodwater rising with the window's reflection on it, a low
+  // sandbag wall held along the lane, and a lone figure with a lantern.
+  const dark = "#04121A";
+  const sand = "#8A7A56";
+  const house = (x, w, h, roof) => `<g fill="${dark}"><rect x="${x}" y="${470 - h}" width="${w}" height="${h}"/><path d="M${x - 6} ${470 - h} L${x + w / 2} ${470 - h - roof} L${x + w + 6} ${470 - h} Z"/></g>`;
+  const bag = (x, y) => `<ellipse cx="${x}" cy="${y}" rx="22" ry="12" fill="${sand}" stroke="${dark}" stroke-width="2"/>`;
+  let wall = "";
+  for (let x = 560; x <= 1180; x += 40) wall += bag(x, 452);
+  for (let x = 580; x <= 1160; x += 40) wall += bag(x, 436);
+  for (let x = 600; x <= 1140; x += 40) wall += bag(x, 420);
+  return `
+  <g fill="${c.secondary}" opacity="0.5"><circle cx="200" cy="80" r="1.5"/><circle cx="440" cy="130" r="1.1"/><circle cx="720" cy="72" r="1.3"/><circle cx="1000" cy="110" r="1.2"/><circle cx="1130" cy="64" r="1.4"/><circle cx="320" cy="180" r="1.0"/></g>
+  ${house(600, 110, 190, 46)}${house(726, 96, 230, 40)}${house(838, 118, 170, 48)}${house(972, 92, 210, 40)}${house(1080, 118, 180, 46)}
+  <ellipse cx="772" cy="320" rx="120" ry="140" fill="url(#glow)"/>
+  <rect x="756" y="300" width="34" height="46" rx="2" fill="${c.accentHot}"/>
+  <rect x="0" y="456" width="1200" height="174" fill="${dark}"/>
+  <rect x="0" y="456" width="1200" height="174" fill="${c.secondary}" opacity="0.10"/>
+  <g stroke="${c.secondary}" stroke-width="3" fill="none" opacity="0.28">
+    <path d="M0 500 q60 -12 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/>
+    <path d="M0 540 q60 -12 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/>
+    <path d="M0 580 q60 -12 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/>
+  </g>
+  <rect x="762" y="456" width="22" height="150" fill="${c.accentHot}" opacity="0.18"/>
+  ${wall}
+  <g transform="translate(220,0)"><ellipse cx="300" cy="470" rx="30" ry="14" fill="url(#glow)" opacity="0.55"/><path d="M300 414 C312 416 318 427 320 441 L326 470 L274 470 L280 441 C282 427 288 416 300 414 Z" fill="${dark}"/><circle cx="300" cy="405" r="10" fill="${dark}"/><path d="M300 432 v-14 M300 418 l12 5" stroke="${c.line || c.muted}" stroke-width="2" fill="none"/><circle cx="312" cy="423" r="3.5" fill="${c.accentHot}"/></g>`;
+}
+
 function ogHTML(book) {
   const p = (book.identity && book.identity.palette) || {};
   const ground = p.ground || "#0E1320", surface = p.surface || "#121a2c",
@@ -172,7 +201,8 @@ function ogHTML(book) {
         muted = p.muted || "#8A93A6";
   const c = { ground, surface, ink, accent, accentHot, secondary, muted };
   const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
-  const scene = kind === "frostfire" ? frostfireScene(c)
+  const scene = kind === "highwater" ? highwaterScene(c)
+              : kind === "frostfire" ? frostfireScene(c)
               : kind === "beacon" ? beaconScene(c)
               : kind === "highsun" ? highsunScene(c)
               : kind === "dusk" ? duskScene(c)
@@ -228,7 +258,8 @@ function coverHTML(book) {
         muted = p.muted || "#8A93A6", line = p.line || "#26304a";
   const c = { ground, surface, ink, accent, accentHot, secondary, muted, line };
   const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
-  const scene = kind === "frostfire" ? frostfireScene(c)
+  const scene = kind === "highwater" ? highwaterScene(c)
+              : kind === "frostfire" ? frostfireScene(c)
               : kind === "beacon" ? beaconScene(c)
               : kind === "highsun" ? highsunScene(c)
               : kind === "dusk" ? duskScene(c)
