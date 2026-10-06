@@ -9,6 +9,7 @@
     { "source": "/b/:slug", "destination": "/b/:slug.html" }
   ],
   "redirects": [
+    { "source": "/:path*", "has": [{ "type": "host", "value": "adventure-books-five.vercel.app" }], "destination": "https://books.antonyaddy.com/:path*", "permanent": true },
     { "source": "/the-address", "destination": "/b/the-address", "permanent": true },
     { "source": "/the-address.html", "destination": "/b/the-address", "permanent": true },
     { "source": "/arrival", "destination": "/b/the-address", "permanent": true },
