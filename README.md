@@ -31,7 +31,7 @@ reader sees can never disagree with the graph the app loads.
 ```bash
 npm run build          # build dist/
 npm run dev            # build and serve locally
-npm run validate       # flags and lexicon coverage across the whole series
+npm run validate       # flags, lexicon coverage, and palette contrast
 
 # validate one episode and render Markdown for every level
 python3 scripts/build_book.py content/episode-01.json \
@@ -43,6 +43,8 @@ every paragraph is reachable, endings carry no choices, no paragraph's choices a
 to the same place, every flag-gated node keeps an ungated "otherwise" path, every level
 has every paragraph, every glossed word exists in the lexicon in all eight languages, and
 that sentence and paragraph lengths sit inside each level's band. It runs on every push.
+The contrast check also runs during the site build, and rejects book or paper palettes
+whose reader text or control edges fall below their contrast targets.
 
 ## Content model
 

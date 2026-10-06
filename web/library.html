@@ -259,7 +259,7 @@
       <div class="shelf" id="shelf">
 
         <a class="book" data-static href="/b/the-address" style="--accent:#E8A24C">
-          <div class="cov" style="background-image:url(/cover-the-address.png);background-size:cover;background-position:center"></div>
+           <div class="cov" style="background-image:url(/cover-the-address.png);background-size:cover;background-position:54% 52%"></div>
           <div class="meta">
             <span class="ep">An Interactive Story</span>
             <h3>The Address</h3>
@@ -323,7 +323,7 @@
       a.style.setProperty('--accent',accent);
       var tags=((e.levels||[]).join(' · '))+(e.levels&&e.levels.length?' · ':'')+'8 languages';
       a.innerHTML=
-        '<div class="cov" style="background-image:url(/cover-'+slug+'.png);background-size:cover;background-position:center"></div>'+
+        '<div class="cov" style="background-image:url(/cover-'+slug+'.png);background-size:cover"></div>'+
         '<div class="meta">'+
           '<span class="ep">An Interactive Story</span>'+
           '<h3>'+esc(e.title)+'</h3>'+
@@ -331,6 +331,7 @@
           '<span class="tags">'+esc(tags)+'</span>'+
           '<span class="enter">Enter the story</span>'+
         '</div>';
+      a.querySelector('.cov').style.backgroundPosition=((e.identity&&e.identity.cover)||{}).focal||'center';
       frag.appendChild(a);
     });
     // swap the static fallback card(s) for the live ones

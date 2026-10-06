@@ -152,7 +152,7 @@ function frostfireScene(c) {
   // a frost-blue orchard night: a row of blossom trees in silhouette, warm fires
   // (smudge pots) glowing low between the rows, cold stars, a lone figure tending one.
   const dark = "#060A12";
-  const tree = (x, s) => `<g><rect x="${x - 3 * s}" y="330" width="${6 * s}" height="140" fill="${dark}"/><circle cx="${x}" cy="306" r="${46 * s}" fill="${dark}"/></g>`;
+  const tree = (x, s) => `<g><rect x="${x - 3 * s}" y="330" width="${6 * s}" height="140" fill="${dark}"/><circle cx="${x}" cy="306" r="${46 * s}" fill="${dark}"/><g fill="none" stroke="${c.secondary}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"><path d="M${x} 348 L${x} 312 L${x - 29 * s} 291 M${x} 316 L${x + 28 * s} 288"/><path d="M${x - 13 * s} 303 L${x - 19 * s} 289 M${x + 13 * s} 302 L${x + 19 * s} 287"/></g></g>`;
   const fire = (x, y, r) => `<ellipse cx="${x}" cy="${y}" rx="${r}" ry="${r * 0.62}" fill="url(#glow)"/><path d="M${x - 9} ${y + 6} q9 -22 9 -2 q0 -12 7 -3 q4 9 -2 13 z" fill="${c.accentHot}" opacity="0.92"/>`;
   return `
   <g fill="${c.secondary}" opacity="0.5"><circle cx="180" cy="90" r="1.6"/><circle cx="420" cy="140" r="1.2"/><circle cx="700" cy="78" r="1.4"/><circle cx="980" cy="120" r="1.2"/><circle cx="1120" cy="68" r="1.5"/><circle cx="300" cy="190" r="1.1"/><circle cx="860" cy="170" r="1.1"/></g>
@@ -219,7 +219,7 @@ function ogHTML(book) {
   const levels = (book.levels || []).join(" · ");
   const title = book.title || "";
   const titleSize = title.length > 20 ? 68 : title.length > 12 ? 92 : 104;
-  const lineSize = line.length > 130 ? 19 : line.length > 95 ? 21 : 26;
+  const lineSize = line.length > 95 ? 21 : 26;
   return `<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:${ground}}svg{display:block}</style></head><body>
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -240,9 +240,11 @@ function ogHTML(book) {
   <rect width="720" height="630" fill="url(#scrim)"/>
   <text x="72" y="250" font-family="ui-monospace, Menlo, monospace" font-size="17" letter-spacing="5" fill="${accent}">AN INTERACTIVE STORY</text>
   <text x="68" y="360" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="${titleSize}" fill="${ink}">${esc(title)}</text>
-  <text x="72" y="416" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="${lineSize}" fill="${kind === "highsun" ? muted : "#cdd4e2"}">${esc(line)}</text>
-  <line x1="74" y1="452" x2="330" y2="452" stroke="${accent}" stroke-width="1.5" opacity=".65"/>
-  <text x="72" y="486" font-family="ui-monospace, Menlo, monospace" font-size="13.5" letter-spacing="3" fill="${muted}">FOR ENGLISH LEARNERS &#183; ${esc(levels)} &#183; 8 LANGUAGES</text>
+  <foreignObject x="72" y="385" width="640" height="98">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:${lineSize}px;line-height:1.25;color:${kind === "highsun" ? muted : "#cdd4e2"};overflow-wrap:break-word">${esc(line)}</div>
+  </foreignObject>
+  <line x1="74" y1="496" x2="330" y2="496" stroke="${accent}" stroke-width="1.5" opacity=".65"/>
+  <text x="72" y="535" font-family="ui-monospace, Menlo, monospace" font-size="13.5" letter-spacing="3" fill="${muted}">FOR ENGLISH LEARNERS &#183; ${esc(levels)} &#183; 8 LANGUAGES</text>
 </svg></body></html>`;
 }
 
