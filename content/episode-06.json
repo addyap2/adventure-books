@@ -20,7 +20,9 @@
     },
     "cover": {
       "kind": "frostfire",
-      "glow": true
+      "glow": true,
+      "focal": "68% 55%",
+      "alt": "A frosted orchard at night: rows of blossom trees in silhouette with warm fires glowing low between them and a lone figure tending one."
     },
     "type": {
       "display": "Fraunces",

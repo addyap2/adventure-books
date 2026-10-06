@@ -20,7 +20,9 @@
     },
     "cover": {
       "kind": "highwater",
-      "glow": true
+      "glow": true,
+      "focal": "64% 50%",
+      "alt": "A dark flooded street at night: a row of houses with one warm-lit window, a sandbag wall held along the rising water, and a lone figure with a lantern."
     },
     "type": {
       "display": "Fraunces",

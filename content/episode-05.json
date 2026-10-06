@@ -20,7 +20,9 @@
     },
     "cover": {
       "kind": "beacon",
-      "glow": true
+      "glow": true,
+      "focal": "87% 37%",
+      "alt": "A lighthouse on the rocks at night throwing a gold beam across a stormy sea, with a small boat's light far out in the swell."
     },
     "type": {
       "display": "Fraunces",
