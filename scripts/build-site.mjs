@@ -2,6 +2,7 @@
 // and a manifest the reader uses to list episodes. No framework, no dependencies.
 import { readdir, readFile, writeFile, mkdir, cp, rm } from "node:fs/promises";
 import { join } from "node:path";
+import { execFileSync } from "node:child_process";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 
@@ -146,11 +147,39 @@ for (const e of episodes) {
 }
 
 // SEO: a sitemap of the library + every book page, and a robots.txt pointing to it.
+// lastmod reflects when each page's own inputs last changed (git commit date),
+// not the build time — a sitemap that stamps "today" on everything every deploy
+// teaches crawlers to ignore the signal. ISO dates sort lexicographically, so
+// `>` picks the most recent; git-less build envs fall back to today.
 const today = new Date().toISOString().slice(0, 10);
-const urls = ["/", ...episodes.map(e => `/b/${e.slug}`)];
+const gitDate = (paths) => {
+  let latest = "";
+  for (const p of paths) {
+    try {
+      const d = execFileSync("git", ["log", "-1", "--format=%cs", "--", p],
+        { cwd: ROOT, stdio: ["ignore", "pipe", "ignore"] }).toString().trim();
+      if (d && d > latest) latest = d;
+    } catch { /* unreadable path or no git — skip */ }
+  }
+  return latest || today;
+};
+// a book's landing page is rendered from its episode JSON + cover/og art + the
+// shared book.html template; the homepage lists every book from library.html.
+const bookDate = (e) => gitDate([
+  `content/${e.file}`, `web/cover-${e.slug}.png`, `web/og-${e.slug}.png`, "web/book.html",
+]);
+const homeDate = gitDate([
+  "web/library.html",
+  ...episodes.map(e => `content/${e.file}`),
+  ...episodes.map(e => `web/cover-${e.slug}.png`),
+]);
+const urls = [
+  { loc: "/", lastmod: homeDate },
+  ...episodes.map(e => ({ loc: `/b/${e.slug}`, lastmod: bookDate(e) })),
+];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n` +
   `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-  urls.map(u => `  <url><loc>${BASE}${u}</loc><lastmod>${today}</lastmod></url>`).join("\n") +
+  urls.map(u => `  <url><loc>${BASE}${u.loc}</loc><lastmod>${u.lastmod}</lastmod></url>`).join("\n") +
   `\n</urlset>\n`;
 await writeFile(join(DIST, "sitemap.xml"), sitemap);
 await writeFile(join(DIST, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${BASE}/sitemap.xml\n`);
