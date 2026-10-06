@@ -57,10 +57,12 @@ I (Claude) do phases 1–4 and prep the art; people do phase 5. Phase 5 is run *
 - `docs/flagship-design.md`, `docs/art-brief.md`, this playbook — the standards.
 
 **Re-author per book (same pattern, new content):**
-- `content/<book>.json` — the graph + three-level prose + embedded `lexicon`. The flagship's
-  `build_skeleton*.py` / `phase3_*.py` / `expand_lexicon*.py` are **worked examples** of how
-  each phase was built for book 1; a new book produces its own equivalents (or writes the JSON
-  directly), following the identical phase order and gates.
+- `content/<book>.json` — the graph + three-level prose + embedded `lexicon`. The spent
+  content generators live in `scripts/generators/` (`build_*_skeleton.py`, `phase3_*.py`,
+  `build_*_lexicon.py` / `enrich_*`, the gist builders `g_*` / `build_gists*`) as **worked
+  examples** of how each phase was built; a new book produces its own equivalents (or writes
+  the JSON directly), following the identical phase order and gates. The live pipeline at
+  `scripts/` top level is just `build_book.py`, `build-site.mjs`, `build_og.mjs`, `check_gists.py`.
 - `docs/<book>-design.md` and `docs/<book>-art-shotlist.md`.
 
 **Every book is a completely new subject, not linked.** Each book is its own world — new
