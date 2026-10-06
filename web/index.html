@@ -108,6 +108,9 @@
     color:hsl(var(--hue,190) 60% 72%); opacity:.94;
     filter:drop-shadow(0 6px 14px rgba(0,0,0,.4)); }
   .art.ph .emblem svg { width:auto; height:52px; display:block; }
+  /* endings get a bespoke, larger outcome scene instead of the slim passage band */
+  .art.ph.endscene { height:154px; }
+  .art.ph.endscene .emblem svg { height:104px; }
   :root[data-theme="light"] .art.ph .emblem { color:hsl(var(--hue,190) 42% 40%); }
   .art .tag { position:absolute; left:12px; bottom:10px; z-index:2;
     font-family:ui-sans-serif,system-ui,sans-serif; font-size:11px; letter-spacing:.14em;
@@ -653,6 +656,15 @@
     130:'pond',131:'door'
    }
   };
+  /* Bespoke ending scenes by outcome, in the same line-art voice ("warm light in
+     cold places"). Shown large on the ending card, tinted by the outcome hue, until
+     painted ending art (images/<series>/ep-NN/<id>.webp) is dropped in. */
+  var W='viewBox="0 0 120 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"';
+  window.__ENDSCENE={
+    good:'<svg '+W+'><path d="M8 46 H112"/><path d="M44 46 a16 16 0 0 1 32 0z" fill="currentColor" fill-opacity="0.18"/><path d="M60 22 V13 M46 28 l-5 -6 M74 28 l5 -6 M37 40 H29 M83 40 H91 M49 24 l-3 -5 M71 24 l3 -5" opacity="0.7"/><path d="M12 46 l8 -7 7 7 M93 46 l7 -6 8 6" opacity="0.5"/></svg>',
+    neutral:'<svg '+W+'><path d="M8 52 H112" opacity="0.6"/><path d="M47 52 L57 24 M73 52 L63 24"/><path d="M60 50 V46 M60 42 V38 M60 34 V30" opacity="0.6"/><circle cx="60" cy="23" r="2.2" fill="currentColor" stroke="none" opacity="0.75"/><path d="M78 30 a9 9 0 1 0 9 12 7 7 0 0 1 -9 -12z" fill="currentColor" fill-opacity="0.12"/></svg>',
+    bad:'<svg '+W+'><path d="M50 54 H78" opacity="0.6"/><path d="M57 54 h12 l-2 -17 h-8 z"/><path d="M63 36 c-2 -4 3 -5 2 -10 c3 3 2 8 -2 10z" fill="currentColor" fill-opacity="0.18"/><path d="M64 22 c3 -4 -1 -6 1 -9 M68 24 c3 -3 0 -6 2 -8" opacity="0.5" stroke-dasharray="2 3"/></svg>'
+  };
 })();
 </script>
 
@@ -943,19 +955,21 @@ function buildLevelSeg(){
 let introMode=false;
 // deterministic 0..n from a string, so a paragraph's placeholder looks the same every visit
 const hash=s=>{let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return h;};
-function artHTML(id,tag,cover){
+function artHTML(id,tag,cover,endKind){
   const key=cover?"cover":String(id);
+  const scene=(endKind && window.__ENDSCENE) ? window.__ENDSCENE[endKind] : null;
   const artMap=(window.__ART && BOOK && window.__ART[BOOK.series]) || null;
-  const motif=(!cover && artMap && window.__MOTIFS) ? window.__MOTIFS[artMap[id]] : null;
+  const motif=(!cover && !scene && artMap && window.__MOTIFS) ? window.__MOTIFS[artMap[id]] : null;
   const glyph=cover?"❦":["◆","✦","❖","◈","⬖","❂"][hash(key)%6];
-  const mark=motif ? `<span class="emblem" aria-hidden="true">${motif}</span>`
+  const mark=scene ? `<span class="emblem" aria-hidden="true">${scene}</span>`
+                   : motif ? `<span class="emblem" aria-hidden="true">${motif}</span>`
                    : `<span class="glyph">${glyph}</span>`;
   const tagHTML=tag?`<span class="tag">${tag}</span>`:"";
   const h=hash(key), vars=`--h:${h%54-27};--x:${12+h%30};--y:${8+(h>>3)%26}`;
   const img=haveImg.has(key)
     ? `<img alt="" loading="lazy" src="${imgBase()}/${key}.webp"
          onload="this.parentNode.classList.remove('ph')">` : "";
-  return `<div class="art ph" style="${vars}">
+  return `<div class="art ph${scene?' endscene':''}" style="${vars}">
       ${mark}${tagHTML}${img}
     </div>`;
 }
@@ -1036,7 +1050,7 @@ function render(){
     const label={good:"A good ending",bad:"It ends badly",neutral:"An ending"}[n.ending]||"The End";
     const badge={good:"🌟",bad:"🌑",neutral:"🌫️"}[n.ending]||"■";
     const stamps=endings.map(e=>`<i class="${seen.has(e.id)?'got':''}">${seen.has(e.id)?'★':'?'}</i>`).join("");
-    inner=`${artHTML(n.id,"The End")}
+    inner=`${artHTML(n.id,"The End",false,n.ending)}
       <div class="end">
         <div class="pnum">${n.id}</div><div class="srule"></div>
         <div class="badge">${badge}</div>
