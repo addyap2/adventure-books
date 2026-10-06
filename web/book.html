@@ -8,20 +8,20 @@
 <meta name="theme-color" content="#0E1320">
 <meta name="description" content="The Address — an Adventure Book. A story where you are the hero, for people learning English, at three levels, with meaning in eight languages.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="canonical" href="https://adventure-books-five.vercel.app/b/the-address">
+<link rel="canonical" href="https://books.antonyaddy.com/b/the-address">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="English Reading Adventures">
-<meta property="og:url" content="https://adventure-books-five.vercel.app/b/the-address">
+<meta property="og:url" content="https://books.antonyaddy.com/b/the-address">
 <meta property="og:title" content="The Address — an interactive story">
 <meta property="og:description" content="You arrive at night in a city you don't know. A story where you are the hero — for people learning English, at three levels, with meaning in eight languages.">
-<meta property="og:image" content="https://adventure-books-five.vercel.app/og-the-address.png">
+<meta property="og:image" content="https://books.antonyaddy.com/og-the-address.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="A lone traveller at night before a city by a river, one warm window lit.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Address — an interactive story">
 <meta name="twitter:description" content="You arrive at night in a city you don't know. A story where you are the hero — for English learners.">
-<meta name="twitter:image" content="https://adventure-books-five.vercel.app/og-the-address.png">
+<meta name="twitter:image" content="https://books.antonyaddy.com/og-the-address.png">
 <title>The Address — an interactive story</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -538,10 +538,10 @@
       for(var k in map){ if(pal[k]) root.style.setProperty(map[k],pal[k]); }
       document.title = book.title + ' — English Reading Adventures';
       var can=document.querySelector('link[rel=canonical]');
-      if(can) can.href='https://adventure-books-five.vercel.app/b/'+(book.slug||ep.slug);
+      if(can) can.href='https://books.antonyaddy.com/b/'+(book.slug||ep.slug);
       // Book structured data (JSON-LD) — helps search engines understand each story.
       try{
-        var base='https://adventure-books-five.vercel.app', bslug=(book.slug||ep.slug);
+        var base='https://books.antonyaddy.com', bslug=(book.slug||ep.slug);
         var ld={"@context":"https://schema.org","@type":"Book","name":book.title,
           "url":base+'/b/'+bslug,"inLanguage":"en","abstract":(book.blurb||''),
           "image":base+'/og-'+bslug+'.png',

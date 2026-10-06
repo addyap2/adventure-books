@@ -69,7 +69,7 @@ await writeFile(join(DIST, "manifest.json"), JSON.stringify(manifest, null, 2));
 
 // Prerender each book's introduction and reader entry with its own content and metadata.
 // Client JavaScript then adds language selection and the interactive reading experience.
-const BASE = "https://adventure-books-five.vercel.app";
+const BASE = "https://books.antonyaddy.com";
 const tmpl = await readFile(join(ROOT, "web", "book.html"), "utf8");
 const attr = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 const htmlText = (s) => attr(s).replace(/>/g, "&gt;");
