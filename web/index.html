@@ -33,6 +33,7 @@
   :root {
     --bg:#0E1320; --fg:#F4EFE6; --muted:#8A93A6; --line:#26304a;
     --accent:#E8A24C; --accent-2:#86C9B4; --accent-soft:#18223a; --card:#121a2c;
+    --accent-ink:#12101a; --control-edge:var(--accent);
     --gloss:#1a2338; --shadow:0 18px 50px rgba(0,0,0,.55);
     --r:18px;
     --serif:"Fraunces",Georgia,"Times New Roman",serif;
@@ -171,10 +172,10 @@
   .stamps i { width:34px; height:34px; border-radius:10px; border:1px solid var(--line);
     display:grid; place-items:center; font-style:normal; font-size:15px; color:var(--muted);
     background:var(--bg); }
-  .stamps i.got { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .stamps i.got { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
   .again { margin-top:20px; }
   .again button { width:100%; padding:15px; border-radius:14px; border:none; cursor:pointer;
-    background:var(--accent); color:#fff; font:inherit; font-family:ui-sans-serif,system-ui,sans-serif;
+    background:var(--accent); color:var(--accent-ink); font:inherit; font-family:ui-sans-serif,system-ui,sans-serif;
     font-size:16px; font-weight:600; }
 
   /* ---- intro / cover ---- */
@@ -196,7 +197,7 @@
     padding:5px 11px; border-radius:99px; background:var(--accent-soft);
     border:1px solid var(--line); color:var(--fg); }
   .start { width:100%; padding:16px; border:none; border-radius:14px; cursor:pointer;
-    background:var(--accent); color:#fff; font:inherit; font-family:ui-sans-serif,system-ui,sans-serif;
+    background:var(--accent); color:var(--accent-ink); font:inherit; font-family:ui-sans-serif,system-ui,sans-serif;
     font-size:17px; font-weight:650; }
 
   /* ---- library home ---- */
@@ -220,7 +221,7 @@
   .filters .lbl { font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
   .chipbtn { padding:6px 12px; border:1px solid var(--line); background:var(--card); color:var(--fg);
     border-radius:99px; font:inherit; font-size:13.5px; cursor:pointer; }
-  .chipbtn.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .chipbtn.on { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
   .shelf-title { font-family:ui-sans-serif,system-ui,sans-serif; font-size:12.5px; letter-spacing:.1em;
     text-transform:uppercase; color:var(--muted); margin:22px 2px 10px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:14px; }
@@ -275,7 +276,7 @@
   .seg { display:flex; gap:6px; }
   .seg button { padding:8px 13px; border:1px solid var(--line); background:var(--bg); color:var(--fg);
     border-radius:10px; font:inherit; font-size:14px; cursor:pointer; }
-  .seg button.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .seg button.on { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
   .sel { font:inherit; font-size:14px; padding:9px 11px; border-radius:10px;
     border:1px solid var(--line); background:var(--bg); color:var(--fg); }
 
@@ -326,8 +327,12 @@
   .ho-link { display:flex; gap:8px; margin-bottom:14px; }
   .ho-link input { flex:1; min-width:0; font:inherit; font-size:12.5px; padding:9px 10px;
     border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--fg); }
-  .ho-link button { border:1px solid var(--accent); background:var(--accent); color:#fff;
+  .ho-link button { border:1px solid var(--accent); background:var(--accent); color:var(--accent-ink);
     border-radius:10px; padding:9px 14px; font:inherit; font-size:13px; cursor:pointer; white-space:nowrap; }
+  /* Control edges need to remain visible before hover, especially on touch screens.
+     The quieter --line token remains for decorative separators. */
+  .iconbtn, .choices button, .meaning button, .chipbtn, .seg button,
+  .sel, .ho-link input { border-color:var(--control-edge); }
   /* ============================================================
      NOCTURNE SKIN — carry the landing's world into the reader.
      Reading stays calm serif on ink; the brand shows in the
@@ -387,20 +392,21 @@
   .cover p { color:color-mix(in srgb, var(--fg) 82%, transparent); }
   .cover .chips span { background:color-mix(in srgb, var(--fg) 7%, transparent);
     border:1px solid var(--line); color:var(--fg); }
-  .start { background:var(--accent); color:#12101a; font-family:var(--grot); font-weight:600;
+  .start { background:var(--accent); color:var(--accent-ink); font-family:var(--grot); font-weight:600;
     box-shadow:0 12px 40px -8px color-mix(in srgb, var(--accent) 55%, transparent); }
 
   /* home hero + panel on the nocturne */
   .home-hero h1 { font-weight:300; font-style:italic; letter-spacing:-.01em; }
   .panel { background:var(--card); }
-  .chipbtn.on, .seg button.on { background:var(--accent) !important; color:#12101a !important; border-color:var(--accent) !important; }
-  .again button, .stamps i.got { color:#12101a; }
+  .chipbtn.on, .seg button.on { background:var(--accent) !important; color:var(--accent-ink) !important; border-color:var(--accent) !important; }
+  .again button, .stamps i.got { color:var(--accent-ink); }
   .book { background:var(--card); }
 
   /* ---- light "paper" reading mode (opt-in; nocturne stays the default) ---- */
   :root[data-theme="light"]{
     --bg:#F4EFE6; --fg:#211d18; --muted:#6b6560; --line:#e5ddce;
-    --accent:#A85B22; --accent-2:#2F5D50; --accent-soft:#f3ecdf; --card:#FFFDF8;
+    --accent:#A65720; --accent-2:#2F5D50; --accent-soft:#f3ecdf; --card:#FFFDF8;
+    --accent-ink:#fff;
     --gloss:#fff8ec; --shadow:0 12px 40px rgba(30,25,20,.14);
     color-scheme:light;
   }
@@ -417,7 +423,7 @@
   [data-theme="light"] .cover .chips span{ background:#f2ead9; border-color:var(--line); color:#4b453d; }
   [data-theme="light"] .chipbtn.on, [data-theme="light"] .seg button.on,
   [data-theme="light"] .again button, [data-theme="light"] .stamps i.got,
-  [data-theme="light"] .start{ color:#fff !important; }
+  [data-theme="light"] .start{ color:var(--accent-ink) !important; }
   [data-theme="light"] .bar .brand .dot{ box-shadow:0 0 10px 1px rgba(168,91,34,.35); }
 
   /* ---- accessibility: visible keyboard focus + reduced-motion ---- */
@@ -1008,6 +1014,9 @@ function renderIntro(){
       </div>
       <button class="start" id="begin">Begin your adventure</button>
     </div></div>`;
+  const coverImg=$("main").querySelector(".cover-art img");
+  coverImg.alt=BOOK.identity?.cover?.alt||`${BOOK.title} cover artwork.`;
+  coverImg.style.objectPosition=BOOK.identity?.cover?.focal||"center";
   $("begin").onclick=()=>{introMode=false;node=BOOK.start;flags=new Set();render();window.scrollTo({top:0})};
   setProgress(0);
 }
