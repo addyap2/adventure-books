@@ -129,12 +129,14 @@ for (const e of episodes) {
   html = body + scripts;
   await writeFile(join(DIST, "b", `${e.slug}.html`), html);
 
-  const readerUrl = `${BASE}/read/${e.slug}.html`;
+  // The reader is the JS app for the story; its canonical (and matching og:url)
+  // point at the /b/<slug> landing page, so search/social signals consolidate on
+  // one indexable URL per book instead of splitting across /b and /read.
   const reader = readerTmpl
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${attr(e.title)} — English Reading Adventures</title>`)
     .replace(/(<meta name="description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
-    .replace(/(<link rel="canonical" href=")[^"]*(">)/, `$1${readerUrl}$2`)
-    .replace(/(<meta property="og:url" content=")[^"]*(">)/, `$1${readerUrl}$2`)
+    .replace(/(<link rel="canonical" href=")[^"]*(">)/, `$1${url}$2`)
+    .replace(/(<meta property="og:url" content=")[^"]*(">)/, `$1${url}$2`)
     .replace(/(<meta property="og:title" content=")[^"]*(">)/, `$1${attr(e.title)} — English Reading Adventures$2`)
     .replace(/(<meta property="og:description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
     .replace(/(<meta property="og:image" content=")[^"]*(">)/, `$1${og}$2`)
