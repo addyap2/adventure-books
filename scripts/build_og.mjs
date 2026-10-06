@@ -218,7 +218,8 @@ function ogHTML(book) {
   const line = (book.identity && book.identity.hero && book.identity.hero.line && book.identity.hero.line.en) || book.blurb || "";
   const levels = (book.levels || []).join(" · ");
   const title = book.title || "";
-  const titleSize = title.length > 20 ? 68 : title.length > 12 ? 92 : 104;
+  // Keep long names inside the quiet left side of the social card's scene.
+  const titleSize = title.length > 20 ? 68 : title.length > 14 ? 72 : title.length > 10 ? 92 : 104;
   const lineSize = line.length > 95 ? 21 : 26;
   return `<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:${ground}}svg{display:block}</style></head><body>
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
