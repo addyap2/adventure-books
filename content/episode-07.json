@@ -848,24 +848,24 @@
     {
       "id": 28,
       "text": {
-        "A2": "[stub §28 — prose to be written]",
-        "B1": "[stub §28 — prose to be written]",
-        "B2": "[stub §28 — prose to be written]"
+        "A2": "You step out onto the cornice, and at once it feels wrong. The drop waits below, black and far. Every step is a gamble now. You are out on it, alone. There is no going back once you start across.",
+        "B1": "You step out onto the cornice, and at once it feels wrong. The drop waits below, black and far and freezing. Every step is a gamble now — and you're out on it, alone. There is no going back once you start across.",
+        "B2": "You step out onto the cornice, and at once it feels wrong. The drop waits somewhere below, black and far and freezing in the dark. Every single step is a gamble now — and you are out on it, alone, with the wind trying to take you. There is no going back once you have started across."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §50]",
-            "B1": "[choice 1 → §50]",
-            "B2": "[choice 1 → §50]"
+            "A2": "Edge on.",
+            "B1": "Edge on.",
+            "B2": "Edge on."
           },
           "goto": 50
         },
         {
           "text": {
-            "A2": "[choice 2 → §51]",
-            "B1": "[choice 2 → §51]",
-            "B2": "[choice 2 → §51]"
+            "A2": "The snow gives under you.",
+            "B1": "The snow gives under you.",
+            "B2": "The snow gives under you."
           },
           "goto": 51
         }
@@ -874,24 +874,24 @@
     {
       "id": 29,
       "text": {
-        "A2": "[stub §29 — prose to be written]",
-        "B1": "[stub §29 — prose to be written]",
-        "B2": "[stub §29 — prose to be written]"
+        "A2": "The wood is damp and will not catch. It gives only a low, smoky flame. That is little use on a night like this. You will have to make do. Or go back to the store for dry wood.",
+        "B1": "The wood is damp and won't catch. It gives only a low, smoky flame. That's little use in a cold like this. You'll have to make do with it. Or go back to the store for dry wood.",
+        "B2": "The wood is damp and won't catch properly. It gives only a low, smoky flame that throws no real heat. That's little use on a night like this one. You'll have to make do with it — or go back to the store for dry wood and a better start. Either way, you'll lose a little time you can't spare."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §5]",
-            "B1": "[choice 1 → §5]",
-            "B2": "[choice 1 → §5]"
+            "A2": "Out and look down the slope.",
+            "B1": "Out and look down the slope.",
+            "B2": "Out and look down the slope."
           },
           "goto": 5
         },
         {
           "text": {
-            "A2": "[choice 2 → §9]",
-            "B1": "[choice 2 → §9]",
-            "B2": "[choice 2 → §9]"
+            "A2": "Back to the store for dry wood.",
+            "B1": "Back to the store for dry wood.",
+            "B2": "Back to the store for dry wood."
           },
           "goto": 9
         }
@@ -900,40 +900,40 @@
     {
       "id": 30,
       "text": {
-        "A2": "[stub §30 — prose to be written]",
-        "B1": "[stub §30 — prose to be written]",
-        "B2": "[stub §30 — prose to be written]"
+        "A2": "The path runs on along the slope, the cold deeper by the hour. Below, a bothy sits dark, with no fire in it. Ahead, the hard air seems to push back at you. And there is a marker post, half-buried in the snow.",
+        "B1": "The path runs on along the slope, the cold deepening by the hour. Below, a bothy sits dark, with no fire in it. Ahead, the still, hard air seems to push back at you. And there's a marker post, half-buried in the frozen snow.",
+        "B2": "The path runs on along the slope, the cold deepening by the hour until it aches in your teeth. Below, a bothy sits dark, with no fire lit in it. Ahead, the still, hard air of the storm seems to push back at you with every step. And there's a marker post, half-buried and leaning in the frozen snow."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §32]",
-            "B1": "[choice 1 → §32]",
-            "B2": "[choice 1 → §32]"
+            "A2": "A party with no fire.",
+            "B1": "A party with no fire.",
+            "B2": "A party with no fire."
           },
           "goto": 32
         },
         {
           "text": {
-            "A2": "[choice 2 → §33]",
-            "B1": "[choice 2 → §33]",
-            "B2": "[choice 2 → §33]"
+            "A2": "Press on.",
+            "B1": "Press on.",
+            "B2": "Press on."
           },
           "goto": 33
         },
         {
           "text": {
-            "A2": "[choice 3 → §65]",
-            "B1": "[choice 3 → §65]",
-            "B2": "[choice 3 → §65]"
+            "A2": "The cold nearly has you.",
+            "B1": "The cold nearly has you.",
+            "B2": "The cold nearly has you."
           },
           "goto": 65
         },
         {
           "text": {
-            "A2": "[choice 4 → §39]",
-            "B1": "[choice 4 → §39]",
-            "B2": "[choice 4 → §39]"
+            "A2": "A marker post, half down.",
+            "B1": "A marker post, half down.",
+            "B2": "A marker post, half down."
           },
           "goto": 39
         }
@@ -942,16 +942,16 @@
     {
       "id": 31,
       "text": {
-        "A2": "[stub §31 — prose to be written]",
-        "B1": "[stub §31 — prose to be written]",
-        "B2": "[stub §31 — prose to be written]"
+        "A2": "A walker has gone down in the snow and can't get up. The cold is already taking hold of them. Stop, and you lose time you do not have. Don't, and they may not last the hour.",
+        "B1": "A walker has gone down in the snow and can't get up. The cold is already taking hold of them. Stop, and you lose time you don't have. Don't, and they may not last the hour.",
+        "B2": "A walker has gone down in the deep snow and can't get up again. The cold is already taking hold of them, slow and quiet. Stop, and you lose time you don't have; don't, and they may not last the hour out here. And there's no one else on this path tonight to find them if you don't."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §34]",
-            "B1": "[choice 1 → §34]",
-            "B2": "[choice 1 → §34]"
+            "A2": "Get them up.",
+            "B1": "Get them up.",
+            "B2": "Get them up."
           },
           "goto": 34,
           "sets": [
@@ -960,9 +960,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §33]",
-            "B1": "[choice 2 → §33]",
-            "B2": "[choice 2 → §33]"
+            "A2": "You can't stop — the refuge.",
+            "B1": "You can't stop — the refuge.",
+            "B2": "You can't stop — the refuge."
           },
           "goto": 33
         }
@@ -1008,40 +1008,40 @@
     {
       "id": 33,
       "text": {
-        "A2": "[stub §33 — prose to be written]",
-        "B1": "[stub §33 — prose to be written]",
-        "B2": "[stub §33 — prose to be written]"
+        "A2": "You push on through the worst of the cold. Each step is a fight now, the snow stinging your face. Choices lie ahead. Vane may be near. There is that strange light down the slope. Or you can drive on for the hut.",
+        "B1": "You push on through the worst of the cold, each step a fight now, the snow stinging your face. Choices lie ahead. Vane may be near. There is that strange light out on the slope. Or you can just drive on for the hut.",
+        "B2": "You push on through the worst of the cold, each step a fight now, the driven snow stinging your face raw. Choices lie ahead of you in the dark. Vane may be near. There is that strange light out on the slope. Or you can simply drive on for the hut and the window."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §40]",
-            "B1": "[choice 1 → §40]",
-            "B2": "[choice 1 → §40]"
+            "A2": "Vane again.",
+            "B1": "Vane again.",
+            "B2": "Vane again."
           },
           "goto": 40
         },
         {
           "text": {
-            "A2": "[choice 2 → §70]",
-            "B1": "[choice 2 → §70]",
-            "B2": "[choice 2 → §70]"
+            "A2": "A light out on the slope.",
+            "B1": "A light out on the slope.",
+            "B2": "A light out on the slope."
           },
           "goto": 70
         },
         {
           "text": {
-            "A2": "[choice 3 → §90]",
-            "B1": "[choice 3 → §90]",
-            "B2": "[choice 3 → §90]"
+            "A2": "The last of the watch.",
+            "B1": "The last of the watch.",
+            "B2": "The last of the watch."
           },
           "goto": 90
         },
         {
           "text": {
-            "A2": "[choice 4 → §38]",
-            "B1": "[choice 4 → §38]",
-            "B2": "[choice 4 → §38]"
+            "A2": "The cold makes you doubt.",
+            "B1": "The cold makes you doubt.",
+            "B2": "The cold makes you doubt."
           },
           "goto": 38
         }
@@ -1050,24 +1050,24 @@
     {
       "id": 34,
       "text": {
-        "A2": "[stub §34 — prose to be written]",
-        "B1": "[stub §34 — prose to be written]",
-        "B2": "[stub §34 — prose to be written]"
+        "A2": "You get the walker up onto their feet. You warm them as best you can. Their eyes fill. They press a dry pair of mitts into your hands. 'Take them,' they say, 'for your trouble.' A small thing, freely given. You take it and move on.",
+        "B1": "You get the walker up onto their feet and warm them as best you can. Their eyes fill. They press a dry pair of mitts into your hands. 'Take them,' they say, 'for your trouble.' A small thing — but freely given, and you take it and move on.",
+        "B2": "You get the walker up onto their feet and warm them as best you can with your own body and a steady word. Their eyes fill, and they press a dry pair of mitts into your hands. 'Take them,' they say, 'for your trouble.' A small thing — but freely given, out here, and you take it and move on."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §33]",
-            "B1": "[choice 1 → §33]",
-            "B2": "[choice 1 → §33]"
+            "A2": "On your way.",
+            "B1": "On your way.",
+            "B2": "On your way."
           },
           "goto": 33
         },
         {
           "text": {
-            "A2": "[choice 2 → §70]",
-            "B1": "[choice 2 → §70]",
-            "B2": "[choice 2 → §70]"
+            "A2": "They tell you of the light on the slope.",
+            "B1": "They tell you of the light on the slope.",
+            "B2": "They tell you of the light on the slope."
           },
           "goto": 70
         }
@@ -1076,24 +1076,24 @@
     {
       "id": 35,
       "text": {
-        "A2": "[stub §35 — prose to be written]",
-        "B1": "[stub §35 — prose to be written]",
-        "B2": "[stub §35 — prose to be written]"
+        "A2": "You can't stop now. But you can't just leave them, either. So you promise to send help back soon. 'Hold on!' you shout. 'Stay warm, stay together — I won't forget you.' You mean it, too. And then you turn and go.",
+        "B1": "You can't stop now — but you can't just leave them, either. So you promise to send help back soon. 'Hold on!' you shout. 'Stay warm, stay together — I won't forget you.' You mean it, too. And then you turn and go.",
+        "B2": "You can't stop now — but you can't simply leave them, either. So you promise to send help back soon. 'Hold on!' you shout over the wind. 'Stay warm, stay together — I won't forget you.' You mean it, too; and then you turn and go, carrying the weight of it with you."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §12]",
-            "B1": "[choice 1 → §12]",
-            "B2": "[choice 1 → §12]"
+            "A2": "Raise the valley.",
+            "B1": "Raise the valley.",
+            "B2": "Raise the valley."
           },
           "goto": 12
         },
         {
           "text": {
-            "A2": "[choice 2 → §33]",
-            "B1": "[choice 2 → §33]",
-            "B2": "[choice 2 → §33]"
+            "A2": "On through the cold.",
+            "B1": "On through the cold.",
+            "B2": "On through the cold."
           },
           "goto": 33
         }
@@ -1102,24 +1102,24 @@
     {
       "id": 36,
       "text": {
-        "A2": "[stub §36 — prose to be written]",
-        "B1": "[stub §36 — prose to be written]",
-        "B2": "[stub §36 — prose to be written]"
+        "A2": "The valley lights one big signal fire out on the hill. A drum of wood ablaze, throwing light and heat into the storm. People crowd near it, the old and the weak given the best of it. It is not the whole night saved. But it is real warmth, and a start.",
+        "B1": "The valley lights one big signal fire out on the hill — a drum of wood ablaze, throwing light and heat into the storm. People crowd near it, the old and the weak given the best of it. It isn't the whole night won. But it's a real warmth, and a beginning.",
+        "B2": "The valley lights one big signal fire out on the hill — a drum of dry wood ablaze, throwing light and heat up into the driving storm. People crowd near it, the old and the weak given the best of the warmth. It isn't the whole night saved, not by a long way. But it's a real warmth, and a beginning, and a light that can be seen for miles."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §25]",
-            "B1": "[choice 1 → §25]",
-            "B2": "[choice 1 → §25]"
+            "A2": "Get the hut going as well.",
+            "B1": "Get the hut going as well.",
+            "B2": "Get the hut going as well."
           },
           "goto": 25
         },
         {
           "text": {
-            "A2": "[choice 2 → §37]",
-            "B1": "[choice 2 → §37]",
-            "B2": "[choice 2 → §37]"
+            "A2": "Fetch more hands.",
+            "B1": "Fetch more hands.",
+            "B2": "Fetch more hands."
           },
           "goto": 37
         }
@@ -1128,24 +1128,24 @@
     {
       "id": 37,
       "text": {
-        "A2": "[stub §37 — prose to be written]",
-        "B1": "[stub §37 — prose to be written]",
-        "B2": "[stub §37 — prose to be written]"
+        "A2": "Hut by hut, the frightened valley turns into a working one. People have jobs now: one feeds the fire, one carries wood, one watches the slope. Fear turns into doing. And doing beats waiting, every single time.",
+        "B1": "Hut by hut, the frightened valley turns into a working one. People have jobs now: one tends the fire, one carries wood, one watches the slope. Fear turns into doing. And doing beats waiting, every single time.",
+        "B2": "Hut by hut, door by door, the frightened valley turns into a working one. People have jobs now: one tends the signal fire, one carries wood up the track, one watches the slope for lights. Fear turns into doing — and doing beats waiting, out here, every single time. One by one, more lights come on along the dark hill."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §26]",
-            "B1": "[choice 1 → §26]",
-            "B2": "[choice 1 → §26]"
+            "A2": "To the far store.",
+            "B1": "To the far store.",
+            "B2": "To the far store."
           },
           "goto": 26
         },
         {
           "text": {
-            "A2": "[choice 2 → §90]",
-            "B1": "[choice 2 → §90]",
-            "B2": "[choice 2 → §90]"
+            "A2": "The last of the watch.",
+            "B1": "The last of the watch.",
+            "B2": "The last of the watch."
           },
           "goto": 90
         }
@@ -1154,24 +1154,24 @@
     {
       "id": 38,
       "text": {
-        "A2": "[stub §38 — prose to be written]",
-        "B1": "[stub §38 — prose to be written]",
-        "B2": "[stub §38 — prose to be written]"
+        "A2": "The long cold gnaws at your will. A small voice says: stop, go inside, rest. No one would blame you, and it would be so easy. But you think of the people out on the slope. And you push the voice away. Not yet. Not while they can still be reached.",
+        "B1": "The long cold gnaws at your will. A small voice says: stop, go inside, rest — no one would blame you, and it would be so easy. But you think of the people out on the slope. And you push the voice away. Not yet. Not while they can still be reached.",
+        "B2": "The long cold gnaws at your will. A small voice says: stop, go inside, rest — no one would blame you, and it would be so easy to do. But you think of whoever is still out on the slope in this. And you push the voice away. Not yet. Not while they can still be reached in time."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §90]",
-            "B1": "[choice 1 → §90]",
-            "B2": "[choice 1 → §90]"
+            "A2": "The last of the watch.",
+            "B1": "The last of the watch.",
+            "B2": "The last of the watch."
           },
           "goto": 90
         },
         {
           "text": {
-            "A2": "[choice 2 → §40]",
-            "B1": "[choice 2 → §40]",
-            "B2": "[choice 2 → §40]"
+            "A2": "Vane's lantern.",
+            "B1": "Vane's lantern.",
+            "B2": "Vane's lantern."
           },
           "goto": 40
         }
@@ -1180,24 +1180,24 @@
     {
       "id": 39,
       "text": {
-        "A2": "[stub §39 — prose to be written]",
-        "B1": "[stub §39 — prose to be written]",
-        "B2": "[stub §39 — prose to be written]"
+        "A2": "You reach the old marker post, but the snow has buried and half-toppled it. You can barely read it now. One arm points along the path. The other points out across the slope. Which way? You will have to guess, and guess right.",
+        "B1": "You reach the old marker post, but the snow has buried and half-toppled it. You can barely read it now. One arm points along the path. The other points out across the slope. Which way? You'll have to guess, and guess right.",
+        "B2": "You reach the old marker post, but the snow has buried its base and half-toppled it in the wind. You can barely read it now. One arm points on along the path; the other points out across the open slope. Which way? You'll have to guess, out here in the white dark — and guess right."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §26]",
-            "B1": "[choice 1 → §26]",
-            "B2": "[choice 1 → §26]"
+            "A2": "The path.",
+            "B1": "The path.",
+            "B2": "The path."
           },
           "goto": 26
         },
         {
           "text": {
-            "A2": "[choice 2 → §70]",
-            "B1": "[choice 2 → §70]",
-            "B2": "[choice 2 → §70]"
+            "A2": "The light on the slope.",
+            "B1": "The light on the slope.",
+            "B2": "The light on the slope."
           },
           "goto": 70
         }
