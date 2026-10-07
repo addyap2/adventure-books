@@ -1,4 +1,4 @@
-# The Refuge — book 7 design & build plan
+# The Refuge — book 8 design & build plan
 
 A **standalone** book. It shares nothing with *The Address*, *The Night Market*, *First Light*,
 *The Cool of Evening*, *The Keeper* or *The Orchard* except the method and the house tone — no arc,
@@ -217,7 +217,7 @@ cover the 12 endings. One zero-config route `/b/the-refuge` serves it.
 
 ## 8. Build phases & gates
 
-Gate each phase on `python3 scripts/build_book.py content/episode-07.json --lexicon
+Gate each phase on `python3 scripts/build_book.py content/episode-08.json --lexicon
 content/lexicon.json` coming back clean.
 
 1. **Design sign-off** — this document. → commit.

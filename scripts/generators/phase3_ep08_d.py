@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Phase 3 prose for The Refuge (episode-07), batch D: Act II part 2, nodes 60-80.
-Run: python3 scripts/generators/phase3_ep07_d.py"""
+"""Phase 3 prose for The Refuge (episode-08), batch D: Act II part 2, nodes 60-80.
+Run: python3 scripts/generators/phase3_ep08_d.py"""
 import json, os
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-P = os.path.join(ROOT, "content", "episode-07.json")
+P = os.path.join(ROOT, "content", "episode-08.json")
 
 D = {
  60: {"t": {

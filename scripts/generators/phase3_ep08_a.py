@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Phase 3 prose for The Refuge (episode-07), batch A: Act I opening, nodes 1-26.
-Writes A2/B1/B2 per node and the choice text. Run: python3 scripts/generators/phase3_ep07_a.py"""
+"""Phase 3 prose for The Refuge (episode-08), batch A: Act I opening, nodes 1-26.
+Writes A2/B1/B2 per node and the choice text. Run: python3 scripts/generators/phase3_ep08_a.py"""
 import json, os
-P = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "..", "content", "episode-07.json")
+P = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "..", "content", "episode-08.json")
 # normalise: build path relative to repo root
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-P = os.path.join(ROOT, "content", "episode-07.json")
+P = os.path.join(ROOT, "content", "episode-08.json")
 
 D = {
  1: {"t": {

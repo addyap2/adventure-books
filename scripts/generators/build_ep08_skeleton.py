@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-"""Phase 2: build The Refuge (episode-07) graph skeleton by transforming the shared
+"""Phase 2: build The Refuge (episode-08) graph skeleton by transforming the shared
 topology from The Orchard (episode-06): same node ids / edges / flag positions /
 ending valences, with the refuge's identity, flag names, and one-line stub prose.
 Phase 3 replaces the stubs with real A2/B1/B2 prose.
 
-Run: python3 scripts/generators/build_ep07_skeleton.py
+Run: python3 scripts/generators/build_ep08_skeleton.py
 """
 import json, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 SRC = os.path.join(ROOT, "content", "episode-06.json")
-OUT = os.path.join(ROOT, "content", "episode-07.json")
+OUT = os.path.join(ROOT, "content", "episode-08.json")
 
 FLAGMAP = {
     "has_fires": "has_stove",
@@ -62,7 +62,7 @@ LANGUAGE_FOCUS = {
 TITLE = "The Refuge"
 SLUG = "the-refuge"
 SERIES = "the-refuge"
-EPISODE = 7
+EPISODE = 8
 BLURB = ("A whiteout closes over a high mountain refuge at dusk, and the old warden is hurt "
          "inside. Keeping the stove lit and the lamp in the window — the one beacon for anyone "
          "caught out on the mountain — is on you now. You have until first light to hold the "
@@ -110,7 +110,7 @@ def main():
 
     json.dump(d, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     nodes = len(d["nodes"]); endings = sum(1 for n in d["nodes"] if n.get("ending"))
-    print(f"wrote episode-07.json: {nodes} nodes, {endings} endings, flags={d['state_out']}")
+    print(f"wrote episode-08.json: {nodes} nodes, {endings} endings, flags={d['state_out']}")
 
 
 if __name__ == "__main__":
