@@ -193,6 +193,33 @@ function highwaterScene(c) {
   <g transform="translate(220,0)"><ellipse cx="300" cy="470" rx="30" ry="14" fill="url(#glow)" opacity="0.55"/><path d="M300 414 C312 416 318 427 320 441 L326 470 L274 470 L280 441 C282 427 288 416 300 414 Z" fill="${dark}"/><circle cx="300" cy="405" r="10" fill="${dark}"/><path d="M300 432 v-14 M300 418 l12 5" stroke="${c.line || c.muted}" stroke-width="2" fill="none"/><circle cx="312" cy="423" r="3.5" fill="${c.accentHot}"/></g>`;
 }
 
+function refugeScene(c) {
+  // a whiteout night on a dark mountain: layered snow-slope silhouettes, driving
+  // snow, a stone refuge hut with one warm lit window, a lone figure on the slope.
+  const dark = "#060C16";
+  let snow = "";
+  for (let i = 0; i < 80; i++) {
+    const x = (i * 167 + ((i * 53) % 90)) % 1240 - 20;
+    const y = (i * 109 + ((i * 37) % 70)) % 600 + 8;
+    const l = 5 + ((i * 13) % 9);
+    const op = (0.16 + ((i * 7) % 6) / 20).toFixed(2);
+    snow += `<line x1="${x}" y1="${y}" x2="${x - l}" y2="${y + l * 1.7}" stroke="${c.secondary}" stroke-width="1.3" opacity="${op}"/>`;
+  }
+  const hx = 580, hy = 452;   // hut base-left / baseline
+  return `
+  <g fill="${c.secondary}" opacity="0.35"><circle cx="150" cy="70" r="1.3"/><circle cx="380" cy="110" r="1"/><circle cx="900" cy="58" r="1.2"/><circle cx="1090" cy="120" r="1"/></g>
+  <path d="M0 470 L360 250 L560 360 L840 180 L1200 430 L1200 630 L0 630 Z" fill="${dark}"/>
+  <path d="M0 548 L300 430 L640 528 L1000 408 L1200 500 L1200 630 L0 630 Z" fill="${c.surface}" opacity="0.55"/>
+  <ellipse cx="${hx + 44}" cy="${hy - 22}" rx="150" ry="150" fill="url(#glow)"/>
+  <rect x="${hx}" y="${hy - 66}" width="96" height="66" fill="${dark}"/>
+  <path d="M${hx - 10} ${hy - 66} L${hx + 48} ${hy - 100} L${hx + 106} ${hy - 66} Z" fill="${dark}"/>
+  <rect x="${hx + 34}" y="${hy - 50}" width="28" height="34" rx="2" fill="${c.accentHot}"/>
+  <rect x="${hx}" y="${hy - 66}" width="96" height="66" fill="none" stroke="${c.line}" stroke-width="2"/>
+  <ellipse cx="${hx + 48}" cy="${hy + 8}" rx="76" ry="12" fill="url(#glow)" opacity="0.5"/>
+  ${snow}
+  <g transform="translate(60,34)"><path d="M300 470 C312 472 318 483 320 497 L326 524 L274 524 L280 497 C282 483 288 472 300 470 Z" fill="${dark}"/><circle cx="300" cy="461" r="10" fill="${dark}"/></g>`;
+}
+
 function ogHTML(book) {
   const p = (book.identity && book.identity.palette) || {};
   const ground = p.ground || "#0E1320", surface = p.surface || "#121a2c",
@@ -201,7 +228,8 @@ function ogHTML(book) {
         muted = p.muted || "#8A93A6";
   const c = { ground, surface, ink, accent, accentHot, secondary, muted };
   const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
-  const scene = kind === "highwater" ? highwaterScene(c)
+  const scene = kind === "refuge" ? refugeScene(c)
+              : kind === "highwater" ? highwaterScene(c)
               : kind === "frostfire" ? frostfireScene(c)
               : kind === "beacon" ? beaconScene(c)
               : kind === "highsun" ? highsunScene(c)
@@ -261,7 +289,8 @@ function coverHTML(book) {
         muted = p.muted || "#8A93A6", line = p.line || "#26304a";
   const c = { ground, surface, ink, accent, accentHot, secondary, muted, line };
   const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
-  const scene = kind === "highwater" ? highwaterScene(c)
+  const scene = kind === "refuge" ? refugeScene(c)
+              : kind === "highwater" ? highwaterScene(c)
               : kind === "frostfire" ? frostfireScene(c)
               : kind === "beacon" ? beaconScene(c)
               : kind === "highsun" ? highsunScene(c)
