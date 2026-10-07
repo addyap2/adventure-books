@@ -80,32 +80,32 @@
     {
       "id": 1,
       "text": {
-        "A2": "[stub §1 — prose to be written]",
-        "B1": "[stub §1 — prose to be written]",
-        "B2": "[stub §1 — prose to be written]"
+        "A2": "It is the worst night of the winter. The whiteout comes down fast with the dark. Snow drives past the one window. The mountain is lost in white. Then old Marta falls on the loft ladder. She keeps this refuge, but now she cannot get up. The stove is low and the lamp is out. No help can come before morning. Holding the refuge is on you now.",
+        "B1": "It is the worst night of the winter, and the whiteout comes down fast with the dark. Snow drives past the one window, and the mountain is lost in white. Then old Marta, who has kept this refuge for thirty winters, goes over on the loft ladder and cannot get up. The stove is low, the lamp is out, and no rescue team can climb before morning. Holding the refuge is on you now.",
+        "B2": "It is the worst night of the winter, and the whiteout comes down fast with the falling dark. Snow drives flat past the hut's one window, and the whole mountain is lost somewhere in the white. Then old Marta, who has kept this refuge through thirty winters, goes over on the loft ladder and cannot get up again. The stove has burned low, the storm-lamp is out, and no rescue team will climb this slope before morning. Holding the refuge, and its one light in the window, has come down to you alone."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §2]",
-            "B1": "[choice 1 → §2]",
-            "B2": "[choice 1 → §2]"
+            "A2": "Take charge of the stove.",
+            "B1": "Take charge of the stove.",
+            "B2": "Take charge of the stove."
           },
           "goto": 2
         },
         {
           "text": {
-            "A2": "[choice 2 → §3]",
-            "B1": "[choice 2 → §3]",
-            "B2": "[choice 2 → §3]"
+            "A2": "Try the radio for help.",
+            "B1": "Try the radio for help.",
+            "B2": "Try the radio for help."
           },
           "goto": 3
         },
         {
           "text": {
-            "A2": "[choice 3 → §4]",
-            "B1": "[choice 3 → §4]",
-            "B2": "[choice 3 → §4]"
+            "A2": "See to Marta first.",
+            "B1": "See to Marta first.",
+            "B2": "See to Marta first."
           },
           "goto": 4
         }
@@ -114,32 +114,32 @@
     {
       "id": 2,
       "text": {
-        "A2": "[stub §2 — prose to be written]",
-        "B1": "[stub §2 — prose to be written]",
-        "B2": "[stub §2 — prose to be written]"
+        "A2": "You gather what the hut holds. There is a can of lamp-oil and some matches. There is a good storm-lamp and dry wood. Outside, the wind screams. The cold cuts under the door. Snow is creeping in. You must decide what to do, and do it fast.",
+        "B1": "You gather what the hut holds: a can of lamp-oil, matches, a good storm-lamp, an armful of dry wood. Outside, the wind screams and the cold cuts straight through the door. Snow is already creeping in white under it. You have to decide what to do, and do it quickly.",
+        "B2": "You gather what the hut holds: a can of lamp-oil, a box of matches, a good storm-lamp, an armful of dry wood from the bunk. Outside, the wind screams across the stone and the cold comes straight through the gap under the door. Snow is already creeping in, white along the floor. You have to decide what to do, and you have to do it quickly."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §5]",
-            "B1": "[choice 1 → §5]",
-            "B2": "[choice 1 → §5]"
+            "A2": "Step out and look down the slope.",
+            "B1": "Step out and look down the slope.",
+            "B2": "Step out and look down the slope."
           },
           "goto": 5
         },
         {
           "text": {
-            "A2": "[choice 2 → §6]",
-            "B1": "[choice 2 → §6]",
-            "B2": "[choice 2 → §6]"
+            "A2": "Stop and decide how to start.",
+            "B1": "Stop and decide how to start.",
+            "B2": "Stop and decide how to start."
           },
           "goto": 6
         },
         {
           "text": {
-            "A2": "[choice 3 → §29]",
-            "B1": "[choice 3 → §29]",
-            "B2": "[choice 3 → §29]"
+            "A2": "The wood is damp and won't take.",
+            "B1": "The wood is damp and won't take.",
+            "B2": "The wood is damp and won't take."
           },
           "goto": 29
         }
@@ -148,24 +148,24 @@
     {
       "id": 3,
       "text": {
-        "A2": "[stub §3 — prose to be written]",
-        "B1": "[stub §3 — prose to be written]",
-        "B2": "[stub §3 — prose to be written]"
+        "A2": "You try the radio. It hisses and crackles. Then at last Kerr answers from the glen post. No team can climb before morning, he says. Not in a storm like this. Keep the stove in, he tells you. Keep the lamp in the window. Hold on if you can.",
+        "B1": "You try the radio. It hisses and crackles, then at last Kerr's voice gets through from the glen post. No team can climb before morning, he says — not into a whiteout like this. Keep the stove in and the lamp in the window, he tells you, and hold on if you possibly can.",
+        "B2": "You try the radio. It hisses and spits static, and then at last Kerr's voice breaks through from the glen post far below. No team can climb before morning, he says — not into a whiteout like this one. Keep the stove drawing and the lamp bright in the window, he tells you, and hold on as long as you possibly can."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §6]",
-            "B1": "[choice 1 → §6]",
-            "B2": "[choice 1 → §6]"
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
           },
           "goto": 6
         },
         {
           "text": {
-            "A2": "[choice 2 → §8]",
-            "B1": "[choice 2 → §8]",
-            "B2": "[choice 2 → §8]"
+            "A2": "But people out there can't wait.",
+            "B1": "But people out there can't wait.",
+            "B2": "But people out there can't wait."
           },
           "goto": 8
         }
@@ -174,24 +174,24 @@
     {
       "id": 4,
       "text": {
-        "A2": "[stub §4 — prose to be written]",
-        "B1": "[stub §4 — prose to be written]",
-        "B2": "[stub §4 — prose to be written]"
+        "A2": "You get to Marta at the foot of the ladder. You make her warm and easy. But the hut is still cold. The window is dark. Shelter alone is not enough. People out there need the lamp and the stove. You need fuel, a plan, and a clear head first.",
+        "B1": "You get to Marta at the foot of the ladder. You make her as warm and easy as you can. But the hut is still cold and the window is dark. Shelter alone won't do. Anyone caught out there needs the lamp lit and the stove in. You need fuel, a plan, and a clear head first.",
+        "B2": "You reach Marta at the foot of the loft ladder and make her as warm and easy as you can. But the hut is still cold and the window is still dark. Shelter alone will not do: anyone caught out on the mountain tonight needs the stove drawing and the lamp bright in the glass. You need fuel, a plan, and a clear head before you can give them that."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §2]",
-            "B1": "[choice 1 → §2]",
-            "B2": "[choice 1 → §2]"
+            "A2": "Go and get the stove going.",
+            "B1": "Go and get the stove going.",
+            "B2": "Go and get the stove going."
           },
           "goto": 2
         },
         {
           "text": {
-            "A2": "[choice 2 → §8]",
-            "B1": "[choice 2 → §8]",
-            "B2": "[choice 2 → §8]"
+            "A2": "Feel how serious this is.",
+            "B1": "Feel how serious this is.",
+            "B2": "Feel how serious this is."
           },
           "goto": 8
         }
@@ -200,40 +200,40 @@
     {
       "id": 5,
       "text": {
-        "A2": "[stub §5 — prose to be written]",
-        "B1": "[stub §5 — prose to be written]",
-        "B2": "[stub §5 — prose to be written]"
+        "A2": "You step out into the storm. The wind nearly knocks you down. The snow drives flat and white. The cold presses down on the mountain. Then, far down the slope, you see it. A small light is moving. It is out where no one should be tonight.",
+        "B1": "You step out into the storm. The wind nearly takes you off your feet, and the snow drives flat and white. The cold presses down on the whole mountain like a hand. Then, far down the slope, you catch it: a small light moving, out where no one should be tonight.",
+        "B2": "You step out into the storm, and the wind nearly takes you off your feet; the snow drives flat and white past the one lit window. The cold presses down on the whole mountain like a hand laid over it. Then, far down the slope, you catch it — a small light, moving, out where no one on earth should be on a night like this."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §9]",
-            "B1": "[choice 1 → §9]",
-            "B2": "[choice 1 → §9]"
+            "A2": "Open the fuel store.",
+            "B1": "Open the fuel store.",
+            "B2": "Open the fuel store."
           },
           "goto": 9
         },
         {
           "text": {
-            "A2": "[choice 2 → §10]",
-            "B1": "[choice 2 → §10]",
-            "B2": "[choice 2 → §10]"
+            "A2": "Knock along the bunks for help.",
+            "B1": "Knock along the bunks for help.",
+            "B2": "Knock along the bunks for help."
           },
           "goto": 10
         },
         {
           "text": {
-            "A2": "[choice 3 → §6]",
-            "B1": "[choice 3 → §6]",
-            "B2": "[choice 3 → §6]"
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
           },
           "goto": 6
         },
         {
           "text": {
-            "A2": "[choice 4 → §60]",
-            "B1": "[choice 4 → §60]",
-            "B2": "[choice 4 → §60]"
+            "A2": "A light down the slope.",
+            "B1": "A light down the slope.",
+            "B2": "A light down the slope."
           },
           "goto": 60
         }
@@ -242,32 +242,32 @@
     {
       "id": 6,
       "text": {
-        "A2": "[stub §6 — prose to be written]",
-        "B1": "[stub §6 — prose to be written]",
-        "B2": "[stub §6 — prose to be written]"
+        "A2": "You stop and think. You could get the stove and the lamp going first. You could go to Marta and the walkers in the bunkroom. Or you could raise the valley for more hands. Each choice costs time you do not have. And out there, the cold is already working on people.",
+        "B1": "You make yourself stop and think. You could get the stove and the lamp going first, and worry about the rest after. You could go to Marta and the walkers in the bunkroom instead. Or you could raise the valley and bring more hands. Each choice costs time you don't have — and out there, the cold is already working on anyone caught in it.",
+        "B2": "You make yourself stop and think it through. You could get the stove drawing and the lamp in the window first, and worry about everything else after. You could go to Marta and the walkers in the bunkroom instead. Or you could raise the valley below and bring more hands up the hill. Each choice costs time you do not have — and out in the dark, the cold is already working on whoever is caught in it."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §9]",
-            "B1": "[choice 1 → §9]",
-            "B2": "[choice 1 → §9]"
+            "A2": "The fuel store.",
+            "B1": "The fuel store.",
+            "B2": "The fuel store."
           },
           "goto": 9
         },
         {
           "text": {
-            "A2": "[choice 2 → §11]",
-            "B1": "[choice 2 → §11]",
-            "B2": "[choice 2 → §11]"
+            "A2": "Straight to the stove.",
+            "B1": "Straight to the stove.",
+            "B2": "Straight to the stove."
           },
           "goto": 11
         },
         {
           "text": {
-            "A2": "[choice 3 → §12]",
-            "B1": "[choice 3 → §12]",
-            "B2": "[choice 3 → §12]"
+            "A2": "Raise the valley for help.",
+            "B1": "Raise the valley for help.",
+            "B2": "Raise the valley for help."
           },
           "goto": 12
         }
@@ -276,32 +276,32 @@
     {
       "id": 8,
       "text": {
-        "A2": "[stub §8 — prose to be written]",
-        "B1": "[stub §8 — prose to be written]",
-        "B2": "[stub §8 — prose to be written]"
+        "A2": "The cold settles into your chest like a weight. You think of the people out there. Someone is lost on the slope. The hut is the only warmth for miles. If the window stays dark, the cold wins by dawn. That is not a fear. It is a plain fact. No one else will do this. It is you, tonight, or no one.",
+        "B1": "The cold settles into your chest like a weight. You think of the people out there: a lost walker on the slope, and the hut the only warmth for miles. If the window stays dark much longer, the cold takes them by dawn. That isn't a fear; it's a plain fact. No one else is coming to do this. It is you, tonight, or no one.",
+        "B2": "The cold settles into your chest like a weight. You think of whoever is out there tonight — a lost walker somewhere on the slope — and of this hut, the only warmth and the only light for miles in any direction. If the window stays dark much longer, the cold takes them before dawn. That is not a fear; it is a plain fact. No one else is coming to climb into this and do it. It is you, tonight, or it is no one."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §6]",
-            "B1": "[choice 1 → §6]",
-            "B2": "[choice 1 → §6]"
+            "A2": "Decide how to start.",
+            "B1": "Decide how to start.",
+            "B2": "Decide how to start."
           },
           "goto": 6
         },
         {
           "text": {
-            "A2": "[choice 2 → §9]",
-            "B1": "[choice 2 → §9]",
-            "B2": "[choice 2 → §9]"
+            "A2": "To the fuel store.",
+            "B1": "To the fuel store.",
+            "B2": "To the fuel store."
           },
           "goto": 9
         },
         {
           "text": {
-            "A2": "[choice 3 → §68]",
-            "B1": "[choice 3 → §68]",
-            "B2": "[choice 3 → §68]"
+            "A2": "A scramble at the store.",
+            "B1": "A scramble at the store.",
+            "B2": "A scramble at the store."
           },
           "goto": 68
         }
@@ -384,24 +384,24 @@
     {
       "id": 11,
       "text": {
-        "A2": "[stub §11 — prose to be written]",
-        "B1": "[stub §11 — prose to be written]",
-        "B2": "[stub §11 — prose to be written]"
+        "A2": "You go straight to the stove and light what you can. A match, a flare of kindling, a small flame in the grate. But the fire is thin. The lamp gutters low. Without proper fuel they will not last an hour. You cannot just light them and hope.",
+        "B1": "You go straight to the stove and light what you can. A match, a flare of kindling, a low flame catching in the grate. But the fire is thin and the lamp gutters. Without proper fuel they won't last an hour. You can't just light them and hope the night is kind.",
+        "B2": "You go straight to the stove and light what you can — a match, a flare of kindling, a low flame catching at last in the cold grate. But the fire is thin and the storm-lamp gutters in the draught. Without proper fuel neither will last the hour. You cannot simply light them, turn your back, and hope the night turns out kind."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §21]",
-            "B1": "[choice 1 → §21]",
-            "B2": "[choice 1 → §21]"
+            "A2": "Decide how to get real fuel.",
+            "B1": "Decide how to get real fuel.",
+            "B2": "Decide how to get real fuel."
           },
           "goto": 21
         },
         {
           "text": {
-            "A2": "[choice 2 → §18]",
-            "B1": "[choice 2 → §18]",
-            "B2": "[choice 2 → §18]"
+            "A2": "The cold takes it out of you.",
+            "B1": "The cold takes it out of you.",
+            "B2": "The cold takes it out of you."
           },
           "goto": 18
         }
@@ -439,24 +439,24 @@
     {
       "id": 13,
       "text": {
-        "A2": "[stub §13 — prose to be written]",
-        "B1": "[stub §13 — prose to be written]",
-        "B2": "[stub §13 — prose to be written]"
+        "A2": "You take charge of the fuel and the dry wood. The drum is heavy. Every drop of oil matters now. Used well, it keeps the stove and lamp going all night. Wasted, the hut goes cold before dawn. So you hold it close and get to work.",
+        "B1": "You take charge of the fuel and the dry wood yourself. The drum is heavy, and every drop of oil matters now. Used well, it will keep the stove and the lamp going all night; wasted, and the hut goes cold and dark before dawn. So you hold it close and get to work.",
+        "B2": "You take charge of the fuel and the dry wood yourself. The drum is heavy against your chest, and every drop of oil in it matters now. Tended carefully, it will keep the stove drawing and the lamp bright all night; grabbed at and wasted, and the hut goes cold and dark long before dawn. So you hold it close and get to work."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §21]",
-            "B1": "[choice 1 → §21]",
-            "B2": "[choice 1 → §21]"
+            "A2": "Now, back to the stove and lamp.",
+            "B1": "Now, back to the stove and lamp.",
+            "B2": "Now, back to the stove and lamp."
           },
           "goto": 21
         },
         {
           "text": {
-            "A2": "[choice 2 → §15]",
-            "B1": "[choice 2 → §15]",
-            "B2": "[choice 2 → §15]"
+            "A2": "Ask old Doune about the hill.",
+            "B1": "Ask old Doune about the hill.",
+            "B2": "Ask old Doune about the hill."
           },
           "goto": 15
         }
@@ -465,24 +465,24 @@
     {
       "id": 14,
       "text": {
-        "A2": "[stub §14 — prose to be written]",
-        "B1": "[stub §14 — prose to be written]",
-        "B2": "[stub §14 — prose to be written]"
+        "A2": "You take just a storm-lamp and some kindling. They give you light and a way to start a flame. But not the stove itself. You have set no proper fuel aside. You will still need real fuel, and soon. If not, the window stays dark and the cold wins.",
+        "B1": "You take just a storm-lamp and a bundle of kindling. They give you light to work by and a way to start a flame. But not the stove itself, and you've set no proper fuel aside. You'll still need real fuel, and soon. If not, the window stays dark and the cold wins.",
+        "B2": "You take just a storm-lamp and a bundle of kindling. They give you light to work by and a way to start a flame — but not the stove itself, and you have set no proper fuel aside. You will still need real fuel, and soon. Without it the window stays dark, the hut cools, and the cold wins the night."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §21]",
-            "B1": "[choice 1 → §21]",
-            "B2": "[choice 1 → §21]"
+            "A2": "Now, find real fuel.",
+            "B1": "Now, find real fuel.",
+            "B2": "Now, find real fuel."
           },
           "goto": 21
         },
         {
           "text": {
-            "A2": "[choice 2 → §15]",
-            "B1": "[choice 2 → §15]",
-            "B2": "[choice 2 → §15]"
+            "A2": "Ask old Doune about the hill.",
+            "B1": "Ask old Doune about the hill.",
+            "B2": "Ask old Doune about the hill."
           },
           "goto": 15
         }
@@ -491,24 +491,24 @@
     {
       "id": 15,
       "text": {
-        "A2": "[stub §15 — prose to be written]",
-        "B1": "[stub §15 — prose to be written]",
-        "B2": "[stub §15 — prose to be written]"
+        "A2": "Old Doune knows this mountain in the dark. 'Keep off the cornice above the corrie,' he says. 'It looks quick. It is not. It is a long fall.' He warns you about Vane too, the smiling man from the company. 'Mind your fuel. Hold the lamp. That is the whole job tonight.'",
+        "B1": "Old Doune has walked this mountain in the dark more than anyone alive. 'Keep off the cornice above the corrie,' he says. 'It looks like a quick way down. It isn't — it's a long fall.' He warns you about Vane too, that smiling man from the company. 'Mind your fuel, hold the lamp — that's the whole of the job tonight.'",
+        "B2": "Old Doune has walked this mountain in the dark more than anyone alive. 'Keep well off the cornice above the corrie,' he says. 'It looks like a quick way across. It isn't — it's a long fall onto rock.' He warns you about Vane as well, that smiling man from the company. 'Mind your fuel, hold the lamp in the window — that's the whole of the job tonight, and don't let him tell you different.'"
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §22]",
-            "B1": "[choice 1 → §22]",
-            "B2": "[choice 1 → §22]"
+            "A2": "Take it to heart.",
+            "B1": "Take it to heart.",
+            "B2": "Take it to heart."
           },
           "goto": 22
         },
         {
           "text": {
-            "A2": "[choice 2 → §21]",
-            "B1": "[choice 2 → §21]",
-            "B2": "[choice 2 → §21]"
+            "A2": "On with it.",
+            "B1": "On with it.",
+            "B2": "On with it."
           },
           "goto": 21
         }
@@ -517,24 +517,24 @@
     {
       "id": 16,
       "text": {
-        "A2": "[stub §16 — prose to be written]",
-        "B1": "[stub §16 — prose to be written]",
-        "B2": "[stub §16 — prose to be written]"
+        "A2": "You get the stove going and settle Breck beside it with a blanket. Little by little, his shaking eases. 'Bless you,' he says, holding your hand hard. You promise to check on him again before morning. Then you turn back to the cold and the dark window.",
+        "B1": "You get the stove drawing and settle Breck beside it with a blanket. Little by little, his shaking eases. 'Bless you,' he says, gripping your hand hard. You promise to look in on him again before morning. Then you turn back out to the cold and the dark window.",
+        "B2": "You get the stove drawing and settle Breck beside it with a blanket round his shoulders. Little by little his shaking eases, and the grey goes out of his face. 'Bless you,' he says, gripping your hand hard. You promise to look in on him again before morning, then turn back out into the cold and the waiting, dark window."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §23]",
-            "B1": "[choice 1 → §23]",
-            "B2": "[choice 1 → §23]"
+            "A2": "On, to the stove and lamp.",
+            "B1": "On, to the stove and lamp.",
+            "B2": "On, to the stove and lamp."
           },
           "goto": 23
         },
         {
           "text": {
-            "A2": "[choice 2 → §12]",
-            "B1": "[choice 2 → §12]",
-            "B2": "[choice 2 → §12]"
+            "A2": "He asks you to check the others.",
+            "B1": "He asks you to check the others.",
+            "B2": "He asks you to check the others."
           },
           "goto": 12
         }
@@ -543,24 +543,24 @@
     {
       "id": 17,
       "text": {
-        "A2": "[stub §17 — prose to be written]",
-        "B1": "[stub §17 — prose to be written]",
-        "B2": "[stub §17 — prose to be written]"
+        "A2": "Keeping the hut warm and lit comes first. The rest can wait a moment. But you must choose how. You could get proper fuel from the store first. Or you could go straight to the stove and lamp and begin.",
+        "B1": "Keeping the hut warm and lit comes first. The rest can wait a moment. But you still have to choose how. You could get proper fuel from the store first. Or you could go straight to the stove and the lamp and begin.",
+        "B2": "Keeping the hut warm and the window lit comes first; the rest can wait a moment. But you still have to choose how to do it. You could fetch proper fuel from the store first and do it right. Or you could go straight to the stove and the lamp and begin with what's already to hand."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §9]",
-            "B1": "[choice 1 → §9]",
-            "B2": "[choice 1 → §9]"
+            "A2": "Get proper fuel first.",
+            "B1": "Get proper fuel first.",
+            "B2": "Get proper fuel first."
           },
           "goto": 9
         },
         {
           "text": {
-            "A2": "[choice 2 → §11]",
-            "B1": "[choice 2 → §11]",
-            "B2": "[choice 2 → §11]"
+            "A2": "Straight to the stove.",
+            "B1": "Straight to the stove.",
+            "B2": "Straight to the stove."
           },
           "goto": 11
         }
@@ -569,24 +569,24 @@
     {
       "id": 18,
       "text": {
-        "A2": "[stub §18 — prose to be written]",
-        "B1": "[stub §18 — prose to be written]",
-        "B2": "[stub §18 — prose to be written]"
+        "A2": "The work takes it out of you. Your legs burn. Your chest heaves. The wind fights you at every step. You are near your limit, and you know it. If you go down here, no one is left to keep the hut. So go slowly, and go carefully.",
+        "B1": "The work takes it out of you. Your legs burn, your chest heaves, and the wind fights you at every step. You are near your own limit, and you know it. If you go down out here, there is no one left to keep the hut. So go slowly, and go carefully.",
+        "B2": "The work takes it out of you. Your legs burn, your chest heaves, and the wind fights you for every single step. You are near your own limit, and you know it. If you go down out here in the dark, there is no one left to keep the hut and the lamp. So go slowly, and go carefully, and do not spend what you cannot get back."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §24]",
-            "B1": "[choice 1 → §24]",
-            "B2": "[choice 1 → §24]"
+            "A2": "Vane's lantern is ahead.",
+            "B1": "Vane's lantern is ahead.",
+            "B2": "Vane's lantern is ahead."
           },
           "goto": 24
         },
         {
           "text": {
-            "A2": "[choice 2 → §21]",
-            "B1": "[choice 2 → §21]",
-            "B2": "[choice 2 → §21]"
+            "A2": "Push on.",
+            "B1": "Push on.",
+            "B2": "Push on."
           },
           "goto": 21
         }
@@ -595,24 +595,24 @@
     {
       "id": 19,
       "text": {
-        "A2": "[stub §19 — prose to be written]",
-        "B1": "[stub §19 — prose to be written]",
-        "B2": "[stub §19 — prose to be written]"
+        "A2": "The valley wakes, and people start to move. One man carries up a drum of fuel. A woman brings dry wood and torches. Door by door, a plan takes shape. You are not doing this alone any more. And that changes everything.",
+        "B1": "The valley wakes to itself, and people begin to move. One man shoulders a drum of fuel. A woman drags out dry wood and head-torches. Door by door, a plan takes shape. You are not doing this alone any more. And that changes everything.",
+        "B2": "The valley wakes to itself, and people begin to move. One man shoulders a drum of fuel up the track; a woman drags out dry wood and a box of head-torches. Door by door, hand by hand, a plan takes shape in the dark. You are not doing this alone any more — and that, more than anything, changes the whole shape of the night."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §25]",
-            "B1": "[choice 1 → §25]",
-            "B2": "[choice 1 → §25]"
+            "A2": "Lead them up to the hut.",
+            "B1": "Lead them up to the hut.",
+            "B2": "Lead them up to the hut."
           },
           "goto": 25
         },
         {
           "text": {
-            "A2": "[choice 2 → §36]",
-            "B1": "[choice 2 → §36]",
-            "B2": "[choice 2 → §36]"
+            "A2": "Light a signal fire first.",
+            "B1": "Light a signal fire first.",
+            "B2": "Light a signal fire first."
           },
           "goto": 36
         }
@@ -621,24 +621,24 @@
     {
       "id": 20,
       "text": {
-        "A2": "[stub §20 — prose to be written]",
-        "B1": "[stub §20 — prose to be written]",
-        "B2": "[stub §20 — prose to be written]"
+        "A2": "No one stirs. Doors stay shut. Faces turn from the windows. They are afraid, and afraid people go quiet. You cannot force them out into this. So you turn away and go on alone. It is harder this way. But people out there cannot wait.",
+        "B1": "No one stirs. Doors stay shut, and faces turn from the windows. They are afraid, and afraid people go quiet. You can't force them to climb out into this. So you turn away and go on alone. It's harder this way. But the people out there can't wait for them.",
+        "B2": "No one stirs. Doors stay shut, and faces turn away from the windows. They are afraid, and afraid people go quiet. You cannot force them out into a night like this. So you turn away and go on alone; it is harder this way, step for step, but whoever is out there on the mountain cannot wait for them to find their courage."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §9]",
-            "B1": "[choice 1 → §9]",
-            "B2": "[choice 1 → §9]"
+            "A2": "The fuel store.",
+            "B1": "The fuel store.",
+            "B2": "The fuel store."
           },
           "goto": 9
         },
         {
           "text": {
-            "A2": "[choice 2 → §11]",
-            "B1": "[choice 2 → §11]",
-            "B2": "[choice 2 → §11]"
+            "A2": "On to the stove.",
+            "B1": "On to the stove.",
+            "B2": "On to the stove."
           },
           "goto": 11
         }
@@ -647,32 +647,32 @@
     {
       "id": 21,
       "text": {
-        "A2": "[stub §21 — prose to be written]",
-        "B1": "[stub §21 — prose to be written]",
-        "B2": "[stub §21 — prose to be written]"
+        "A2": "The stove is going and the lamp is in the window. Now for the far store and the fuel. There are two ways to reach it. The long path round the corrie is safe but slow. The cornice straight across is quick. But tonight, the cornice could give way.",
+        "B1": "The stove is drawing and the lamp is in the window. Now for the far store and the fuel cache. There are two ways to reach it. The long path round the corrie is safe but slow. The cornice straight across is quick. But on a night like this, the cornice could give way.",
+        "B2": "The stove is drawing and the lamp burns in the window at last. Now for the far store and the fuel cache beyond the corrie. There are two ways down to it: the long path round the head of the corrie, safe but slow, or the cornice straight across, quick and tempting. But on a night like this one, the cornice could give way under you."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §26]",
-            "B1": "[choice 1 → §26]",
-            "B2": "[choice 1 → §26]"
+            "A2": "Keep to the long path.",
+            "B1": "Keep to the long path.",
+            "B2": "Keep to the long path."
           },
           "goto": 26
         },
         {
           "text": {
-            "A2": "[choice 2 → §27]",
-            "B1": "[choice 2 → §27]",
-            "B2": "[choice 2 → §27]"
+            "A2": "Take the cornice.",
+            "B1": "Take the cornice.",
+            "B2": "Take the cornice."
           },
           "goto": 27
         },
         {
           "text": {
-            "A2": "[choice 3 → §24]",
-            "B1": "[choice 3 → §24]",
-            "B2": "[choice 3 → §24]"
+            "A2": "Vane's lantern ahead.",
+            "B1": "Vane's lantern ahead.",
+            "B2": "Vane's lantern ahead."
           },
           "goto": 24
         }
@@ -681,24 +681,24 @@
     {
       "id": 22,
       "text": {
-        "A2": "[stub §22 — prose to be written]",
-        "B1": "[stub §22 — prose to be written]",
-        "B2": "[stub §22 — prose to be written]"
+        "A2": "You take old Doune's words to heart. Mind the fuel. Keep off the cornice. Do not trust Vane. Hold the lamp in the window above all else. It is simple advice, and good. Now you just have to follow it.",
+        "B1": "You take old Doune's words to heart. Mind the fuel carefully. Keep well off the cornice. Don't trust Vane. And hold the lamp in the window above everything else. It's simple advice, and good. Now you just have to follow it.",
+        "B2": "You take old Doune's words to heart, one by one. Mind the fuel carefully. Keep well off the cornice above the corrie. Put no trust in Vane. And hold the lamp in the window above everything else. It is simple advice, and good — the hard part is following it when the wind is screaming and the easy way looks so close."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §21]",
-            "B1": "[choice 1 → §21]",
-            "B2": "[choice 1 → §21]"
+            "A2": "On the way.",
+            "B1": "On the way.",
+            "B2": "On the way."
           },
           "goto": 21
         },
         {
           "text": {
-            "A2": "[choice 2 → §9]",
-            "B1": "[choice 2 → §9]",
-            "B2": "[choice 2 → §9]"
+            "A2": "Back to the store.",
+            "B1": "Back to the store.",
+            "B2": "Back to the store."
           },
           "goto": 9
         }
@@ -707,24 +707,24 @@
     {
       "id": 23,
       "text": {
-        "A2": "[stub §23 — prose to be written]",
-        "B1": "[stub §23 — prose to be written]",
-        "B2": "[stub §23 — prose to be written]"
+        "A2": "You feel steadier for the good turn you did. Helping someone steadies you too. Your head is clearer. Your hands are surer. There is a hard night still ahead. But now you feel able to meet it.",
+        "B1": "You feel steadier for the good turn you did. Helping someone seems, oddly, to steady you too. Your head is clearer, and your hands are surer. There is a hard night still to go. But now you feel able to meet it.",
+        "B2": "You feel steadier for the good turn you did. Helping someone through the cold seems, oddly, to steady you as well. Your head is clearer now, and your hands are surer on the work. There is a long, hard night still to go — but you feel, for the first time since Marta went down, able to meet it."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §21]",
-            "B1": "[choice 1 → §21]",
-            "B2": "[choice 1 → §21]"
+            "A2": "On with the watch.",
+            "B1": "On with the watch.",
+            "B2": "On with the watch."
           },
           "goto": 21
         },
         {
           "text": {
-            "A2": "[choice 2 → §12]",
-            "B1": "[choice 2 → §12]",
-            "B2": "[choice 2 → §12]"
+            "A2": "Raise more hands.",
+            "B1": "Raise more hands.",
+            "B2": "Raise more hands."
           },
           "goto": 12
         }
@@ -733,24 +733,24 @@
     {
       "id": 24,
       "text": {
-        "A2": "[stub §24 — prose to be written]",
-        "B1": "[stub §24 — prose to be written]",
-        "B2": "[stub §24 — prose to be written]"
+        "A2": "A man stands out of the snow, a lantern in his fist — Vane. He has fuel to sell and a strong back to offer. He smiles too easily. 'The refuge isn't really your job tonight, friend,' he says. You have met his kind before.",
+        "B1": "A man stands out of the snow, a lantern swinging in his fist — Vane. He has fuel to sell and a strong back to offer, and he smiles too easily. 'The refuge isn't really your job tonight, friend,' he says. You've met his kind before.",
+        "B2": "A man stands out of the driving snow, a lantern swinging in his fist — Vane. He has fuel to sell and a strong back to lend, and he smiles far too easily for a night like this. 'The refuge isn't really your job tonight, friend,' he says. You have met his kind before, and you know a hook when it's dangled."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §40]",
-            "B1": "[choice 1 → §40]",
-            "B2": "[choice 1 → §40]"
+            "A2": "Hear him out.",
+            "B1": "Hear him out.",
+            "B2": "Hear him out."
           },
           "goto": 40
         },
         {
           "text": {
-            "A2": "[choice 2 → §26]",
-            "B1": "[choice 2 → §26]",
-            "B2": "[choice 2 → §26]"
+            "A2": "Go round him.",
+            "B1": "Go round him.",
+            "B2": "Go round him."
           },
           "goto": 26
         }
@@ -759,24 +759,24 @@
     {
       "id": 25,
       "text": {
-        "A2": "[stub §25 — prose to be written]",
-        "B1": "[stub §25 — prose to be written]",
-        "B2": "[stub §25 — prose to be written]"
+        "A2": "You lead a small band up toward the hut. Walking together, you all feel stronger. They carry fuel, wood, and torches. 'This way!' you call into the wind, and they come. It is a good feeling, in a hard hour.",
+        "B1": "You lead a small band up toward the hut. Walking together, you all feel stronger. They carry fuel, wood, and torches. 'This way!' you call into the wind, and they come. It's a good feeling, in a hard hour.",
+        "B2": "You lead a small band up the track toward the hut. Walking together into the wind, you all feel stronger than any of you would alone; they carry fuel, dry wood, torches. 'This way!' you call into the storm, and they come on behind your light. It is a good feeling to have, in a hard hour."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §26]",
-            "B1": "[choice 1 → §26]",
-            "B2": "[choice 1 → §26]"
+            "A2": "This way.",
+            "B1": "This way.",
+            "B2": "This way."
           },
           "goto": 26
         },
         {
           "text": {
-            "A2": "[choice 2 → §70]",
-            "B1": "[choice 2 → §70]",
-            "B2": "[choice 2 → §70]"
+            "A2": "A light down the slope.",
+            "B1": "A light down the slope.",
+            "B2": "A light down the slope."
           },
           "goto": 70
         }
@@ -785,32 +785,32 @@
     {
       "id": 26,
       "text": {
-        "A2": "[stub §26 — prose to be written]",
-        "B1": "[stub §26 — prose to be written]",
-        "B2": "[stub §26 — prose to be written]"
+        "A2": "The path is black and hard. The wind presses down it. There is no shelter anywhere. But it is solid under your feet. It runs where you need to go. So you keep walking, step after step.",
+        "B1": "The path is black and hard, the wind pressing down it, no shelter anywhere. But it's solid under your feet, and it runs where you need to go. So you keep walking, step after step.",
+        "B2": "The path is black and hard, the wind pressing straight down it, and there is no shelter anywhere along its length. But it is solid under your feet, and it runs where you need to go. The cold finds every gap in your coat as you go. So you keep walking into it, head down, step after step after step."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §30]",
-            "B1": "[choice 1 → §30]",
-            "B2": "[choice 1 → §30]"
+            "A2": "Press on.",
+            "B1": "Press on.",
+            "B2": "Press on."
           },
           "goto": 30
         },
         {
           "text": {
-            "A2": "[choice 2 → §31]",
-            "B1": "[choice 2 → §31]",
-            "B2": "[choice 2 → §31]"
+            "A2": "Someone's in trouble ahead.",
+            "B1": "Someone's in trouble ahead.",
+            "B2": "Someone's in trouble ahead."
           },
           "goto": 31
         },
         {
           "text": {
-            "A2": "[choice 3 → §64]",
-            "B1": "[choice 3 → §64]",
-            "B2": "[choice 3 → §64]"
+            "A2": "The whole mountain, white and still.",
+            "B1": "The whole mountain, white and still.",
+            "B2": "The whole mountain, white and still."
           },
           "goto": 64
         }
