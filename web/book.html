@@ -14,14 +14,14 @@
 <meta property="og:url" content="https://books.antonyaddy.com/b/the-address">
 <meta property="og:title" content="The Address — an interactive story">
 <meta property="og:description" content="You arrive at night in a city you don't know. A story where you are the hero — for people learning English, at three levels, with meaning in eight languages.">
-<meta property="og:image" content="https://books.antonyaddy.com/og-the-address.png">
+<meta property="og:image" content="https://books.antonyaddy.com/og-collection-the-address.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="A lone traveller at night before a city by a river, one warm window lit.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Address — an interactive story">
 <meta name="twitter:description" content="You arrive at night in a city you don't know. A story where you are the hero — for English learners.">
-<meta name="twitter:image" content="https://books.antonyaddy.com/og-the-address.png">
+<meta name="twitter:image" content="https://books.antonyaddy.com/og-collection-the-address.png">
 <title>The Address — an interactive story</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -535,7 +535,7 @@
                     : (man.episodes.find(function(e){return e.slug===slug;}) || man.episodes[0]);
       if(!ep) ep=man.episodes[0];
       var book=await fetch('/'+ep.file).then(function(r){return r.json();});
-      var id=book.identity||{}, pal=id.palette||{}, hero=id.hero||{};
+      var id=book.identity||{}, pal=id.palette||{}, hero=id.hero||{}, artwork=ep.art||wm.art||{};
       var map={ground:'--ink',surface:'--card',ink:'--fg',muted:'--muted',line:'--line',accent:'--amber',accentHot:'--amber-hot',secondary:'--dawn'};
       for(var k in map){ if(pal[k]) root.style.setProperty(map[k],pal[k]); }
       document.title = book.title + ' — English Reading Adventures';
@@ -546,7 +546,7 @@
         var base='https://books.antonyaddy.com', bslug=(book.slug||ep.slug);
         var ld={"@context":"https://schema.org","@type":"Book","name":book.title,
           "url":base+'/b/'+bslug,"inLanguage":"en","abstract":(book.blurb||''),
-          "image":base+'/og-'+bslug+'.png',
+          "image":base+(artwork.social||'/og-'+bslug+'.png'),
           "author":{"@type":"Person","name":"Antony Addy"},
           "publisher":{"@type":"Organization","name":"English Reading Adventures"},
           "isAccessibleForFree":true,"genre":"Interactive fiction",
@@ -558,10 +558,10 @@
       // before boot() picks the scene) so a book without a cover falls back to the shared
       // procedural nocturne instead of a blank stage.
       var stageEl=document.getElementById('stage'), artEl=document.getElementById('art');
-      var coverUrl='/cover-'+(book.slug||ep.slug)+'.png';
+      var coverUrl=artwork.cover||'/cover-'+(book.slug||ep.slug)+'.png';
       // focal point keeps each book's key element in frame when the landscape cover is
       // cropped to a portrait phone hero (identity.cover.focal, e.g. "80% 52%").
-      var focal=(id.cover&&id.cover.focal)||'center';
+      var focal=artwork.focal||(id.cover&&id.cover.focal)||'center';
       if(stageEl && artEl){
         await new Promise(function(res){
           var probe=new Image(), done=false, fin=function(ok){ if(done) return; done=true;
