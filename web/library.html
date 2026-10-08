@@ -427,7 +427,7 @@
     b.addEventListener("click", function(){ choose(idx); });
     pick.appendChild(b); return b;
   });
-  if(pill && pill.parentNode){ pill.parentNode.replaceChild(pick, pill); }
+  if(pill && pill.parentNode){ pill.remove(); document.querySelector(".hero-copy .byline").after(pick); }
 
   var rtlEls = ids.map(function(k){ return el[k]; });
   function setActive(idx){ btns.forEach(function(b,k){ var on=k===idx;

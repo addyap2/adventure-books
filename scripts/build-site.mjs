@@ -25,6 +25,9 @@ await cp(join(ROOT, "web", "library.html"), join(DIST, "index.html"));    // / â
 await cp(join(ROOT, "web", "index.html"), join(DIST, "read.html"));       // the reader app
 await cp(join(ROOT, "web", "favicon.svg"), join(DIST, "favicon.svg"));
 await cp(join(ROOT, "web", "visual-polish.css"), join(DIST, "visual-polish.css"));
+await cp(join(ROOT, "web", "reference-reader.css"), join(DIST, "reference-reader.css"));
+await cp(join(ROOT, "web", "cover-station.svg"), join(DIST, "cover-station.svg"));
+await cp(join(ROOT, "web", "scenes"), join(DIST, "scenes"), { recursive: true });
 // social cards (og-<slug>.png) and wordless library-card covers (cover-<slug>.png),
 // both generated locally by build_og.mjs
 for (const f of await readdir(join(ROOT, "web"))) {

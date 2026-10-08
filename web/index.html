@@ -8,7 +8,7 @@
 <base href="/">
 <title>Read a story — English Reading Adventures</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#0E1320">
+<meta name="theme-color" content="#f6f3ee">
 <meta name="description" content="Choose-your-own-adventure stories for English learners, at three levels, with a glossary in eight languages.">
 <link rel="canonical" href="https://books.antonyaddy.com/read.html">
 <meta property="og:type" content="website">
@@ -406,8 +406,8 @@
 
   /* ---- light "paper" reading mode (opt-in; nocturne stays the default) ---- */
   :root[data-theme="light"]{
-    --bg:#F4EFE6; --fg:#211d18; --muted:#6b6560; --line:#e5ddce;
-    --accent:#A65720; --accent-2:#2F5D50; --accent-soft:#f3ecdf; --card:#FFFDF8;
+    --bg:#f6f3ee; --fg:#1d1b19; --muted:#6b6560; --line:#e4dfd8;
+    --accent:#2f5d50; --accent-2:#985031; --accent-soft:#eaf1ee; --card:#fffdf9;
     --accent-ink:#fff;
     --gloss:#fff8ec; --shadow:0 12px 40px rgba(30,25,20,.14);
     color-scheme:light;
@@ -444,6 +444,7 @@
   }
 </style>
 <link rel="stylesheet" href="/visual-polish.css">
+<link rel="stylesheet" href="/reference-reader.css">
 </head>
 <body>
 <script>document.body.dataset.page="reader";</script>
@@ -794,19 +795,19 @@ async function applyLang(lang){
 
 /* theme — nocturne (dark) is the default; a paper "light" mode is opt-in and remembered */
 function applyTheme(t){
-  const light = t==="light";
+  const light = t!=="dark";
   document.documentElement.setAttribute("data-theme", light?"light":"dark");
   const b=$("theme");
   if(b){ b.textContent = light ? "☾" : "☀";
     b.setAttribute("aria-label", light ? "Switch to dark theme" : "Switch to light theme"); }
 }
 $("theme").onclick=()=>{
-  const next = (loadPrefs().theme==="light") ? "dark" : "light";
+  const next = document.documentElement.dataset.theme==="light" ? "dark" : "light";
   savePrefs({...loadPrefs(), theme:next}); applyTheme(next);
 };
 
 async function boot(){
-  applyTheme(loadPrefs().theme==="light" ? "light" : "dark");
+  applyTheme(loadPrefs().theme==="dark" ? "dark" : "light");
   document.documentElement.classList.toggle("fine", finePointer());
   MANIFEST=await (await fetch("manifest.json")).json();
   // shared series lexicon (a base every book inherits); a book may add/override its own
@@ -1018,34 +1019,55 @@ function artHTML(id,tag,cover,endKind){
     </div>`;
 }
 
+const levelDescriptions={A2:"Elementary",B1:"Intermediate",B2:"Upper intermediate"};
+const sceneTitles={station:"The night station",map:"Finding your way",taxi:"A ride through the city",
+ bus:"The next bus",kiosk:"The corner shop",building:"A door in the city",bed:"A place to rest",
+ window:"A light in the window",door:"At the doorway",bench:"A quiet moment",lamp:"A little light",
+ card:"An unexpected connection",quay:"Beside the river",cup:"A warm welcome",suit:"A stranger’s offer",
+ keys:"An open door",desk:"The appointment",coin:"The price of a choice",letter:"The letter",
+ notebook:"A new possibility",board:"Choosing a direction",companions:"Someone to trust",
+ sign:"A sign to follow",bridge:"Across the river",envelopes:"A message waiting",phone:"A call for help",
+ oars:"On the water",fence:"Another way through"};
+function sceneFor(n){
+  const motif=window.__ART?.[BOOK.series]?.[n.id];
+  const images={station:"station",map:"street",taxi:"street",bus:"bus",kiosk:"cafe",
+    building:"street",bed:"letter",window:"street",door:"street",bench:"river",lamp:"street",
+    card:"letter",quay:"river",cup:"cafe",suit:"office",keys:"street",desk:"office",coin:"letter",
+    letter:"letter",notebook:"office",board:"station",companions:"street",sign:"street",
+    bridge:"river",envelopes:"letter",phone:"office",oars:"river",fence:"street"};
+  const title=n.ending?({good:"A new beginning",neutral:"Another chance",bad:"The journey ends"}[n.ending]||"Your ending")
+    : BOOK.series==="new-city"?(sceneTitles[motif]||"Your next chapter")
+    : n.id===BOOK.start?BOOK.title:"Your next chapter";
+  const source=haveImg.has(String(n.id))?imgBase()+"/"+n.id+".webp":
+    BOOK.series==="new-city"?(images[motif]==="station"?"/cover-station.svg":"/scenes/"+(images[motif]||"letter")+".svg"):
+    "/cover-"+encodeURIComponent(BOOK.slug)+".png";
+  return {title,source};
+}
+const arrowIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>';
+const bookIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 5c4-1 6-1 9 1 3-2 5-2 9-1v14c-4-1-6-1-9 1-3-2-5-2-9-1zM12 6v14"/></svg>';
 function renderIntro(){
-  cancelRender();
+  cancelRender(); hideGloss();
   introMode=true; $("main").classList.add("intro");
   const endings=BOOK.nodes.filter(n=>n.ending).length;
-  const focus=(at(BOOK.language_focus)||[])[0]||"";
-  $("main").innerHTML=`<div class="cover card">
-    <div class="cover-art"><img src="/cover-${encodeURIComponent(BOOK.slug)}.png" alt=""></div>
-    <div class="body">
-      <div class="kicker">An Interactive Story</div>
-      <h1>${BOOK.title}</h1>
-      <p class="tagline">An adventure where you are the hero.</p>
-      <p>You choose what happens next. Every choice turns you to a new section — read it more than once to find all ${endings} endings.</p>
-      <div class="chips">
-        <span>${BOOK.nodes.length} sections</span>
-        <span>${endings} endings</span>
-        <span>${BOOK.levels.join(" · ")}</span>
-        <span>Tap words to translate</span>
+  const cover=BOOK.series==="new-city"?"/cover-station.svg":"/cover-"+encodeURIComponent(BOOK.slug)+".png";
+  const synopsis=BOOK.series==="new-city"?"A new city. A letter in your bag. An address that could change everything.":BOOK.blurb;
+  $("main").innerHTML=`<div class="intro-heading"><span class="eyebrow">Learn English. Live a story.</span><span class="edition">The adventure collection</span></div>
+    <article class="cover" aria-labelledby="story-title">
+      <div class="cover-visual"><div class="art"><img src="${cover}" alt="" fetchpriority="high"></div>
+        <div class="cover-episode">Episode ${pad(BOOK.episode)}</div>
+        <div class="cover-caption">Every choice<br>opens a new chapter.<small>A story with more than one ending</small></div>
       </div>
-      <fieldset class="intro-levels"><legend>Choose your reading level</legend><div>
-        ${BOOK.levels.map(l=>`<button data-intro-level="${l}" aria-pressed="${l===level}"><strong>${l}</strong><span>${{A2:"Easier sentences",B1:"Everyday English",B2:"Richer detail"}[l]||l}</span></button>`).join("")}
-      </div></fieldset>
-      <button class="start" id="begin">Begin your adventure</button>
-    </div></div>`;
-  const coverImg=$("main").querySelector(".cover-art img");
-  coverImg.alt=BOOK.identity?.cover?.alt||`${BOOK.title} cover artwork.`;
-  coverImg.style.objectPosition=BOOK.identity?.cover?.focal||"center";
+      <div class="body"><div class="kicker">An interactive story in English</div>
+        <h1 id="story-title">${BOOK.title}</h1><p class="synopsis">${synopsis||"A new story. A choice at every turn."}</p>
+        <p class="invitation">Read, make your choices, and find your own ending.</p>
+        <dl class="story-facts"><div><dt>moments</dt><dd>${BOOK.nodes.length}</dd></div><div><dt>endings</dt><dd>${endings}</dd></div><div><dt>glossary languages</dt><dd>8</dd></div></dl>
+        <fieldset class="intro-levels"><legend>Choose your reading level</legend><div>${BOOK.levels.map(l=>`<button data-intro-level="${l}" aria-pressed="${l===level}"><strong>${l}</strong><span>${levelDescriptions[l]||l}</span></button>`).join("")}</div></fieldset>
+        <button class="start" id="begin">Start reading${arrowIcon}</button>
+        <p class="word-help">${bookIcon}Tap underlined words for help as you read.</p>
+      </div>
+    </article><p class="intro-footer">One story. Many paths. Your ending.</p>`;
   $("main").querySelectorAll("[data-intro-level]").forEach(b=>b.onclick=()=>{
-    level=b.dataset.introLevel; savePrefs({...loadPrefs(),level}); buildLevelSeg();
+    level=b.dataset.introLevel;savePrefs({...loadPrefs(),level});buildLevelSeg();
     $("main").querySelectorAll("[data-intro-level]").forEach(el=>el.setAttribute("aria-pressed",el.dataset.introLevel===level));
   });
   $("begin").onclick=()=>{introMode=false;node=BOOK.start;flags=new Set();render();window.scrollTo({top:0})};
@@ -1093,61 +1115,48 @@ function meaningHTML(){
 }
 
 function render(moveFocus=true){
-  cancelRender();
+  cancelRender(); hideGloss();
   $("main").classList.remove("intro");
-  const n=byId(node);
-  // remember state for "Continue" — but a finished path resets to "Start" next time
-  if(curKey){ n.ending ? clearProgress(curKey) : saveProgress(curKey, node, flags); }
+  const n=byId(node),scene=sceneFor(n);
+  if(curKey){n.ending?clearProgress(curKey):saveProgress(curKey,node,flags);}
   const endings=BOOK.nodes.filter(x=>x.ending);
-
+  const found=endings.filter(e=>seen.has(e.id)).length+(n.ending&&!seen.has(n.id)?1:0);
   let inner;
   if(n.ending){
-    seen.add(n.id); saveSeen();
-    const label={good:"A good ending",bad:"It ends badly",neutral:"An ending"}[n.ending]||"The End";
-    const badge={good:"🌟",bad:"🌑",neutral:"🌫️"}[n.ending]||"■";
-    const stamps=endings.map(e=>`<i class="${seen.has(e.id)?'got':''}">${seen.has(e.id)?'★':'?'}</i>`).join("");
-    inner=`${artHTML(n.id,"The End",false,n.ending)}
-      <div class="end">
-        <div class="pnum" id="sectionTitle" tabindex="-1" role="heading" aria-level="2" aria-label="Section ${n.id}">${n.id}</div><div class="srule"></div>
-        <div class="badge">${badge}</div>
-        <h2>${label}</h2>
-        <div class="para" style="font-size:17px;margin-top:8px">${markup(at(n.text)||"")}</div>
-        ${meaningHTML()}
-        <div class="stamps">${stamps}</div>
-        <p>${seen.size} of ${endings.length} endings found${seen.size<endings.length?" — there are others.":" — you found them all."}</p>
-        <div class="again"><button id="again">Read it again</button></div>
-      </div>`;
+    seen.add(n.id);saveSeen();
+    const label={good:"A good ending",neutral:"An open ending",bad:"A difficult ending"}[n.ending]||"The End";
+    inner=`<div class="reading-page end"><div class="reading-kicker">${label}</div>
+      <h2 class="moment-heading" id="sectionTitle" tabindex="-1">${scene.title}</h2>
+      <div class="para">${markup(at(n.text)||"")}</div>${meaningHTML()}
+      <section class="ending-collection" aria-label="Your ending collection"><h3>${found} of ${endings.length} endings discovered</h3>
+      <div class="stamps">${endings.map((e,i)=>`<i class="${seen.has(e.id)?'got':''}" aria-label="Ending ${i+1}: ${seen.has(e.id)?'found':'not found'}">${seen.has(e.id)?'✓':i+1}</i>`).join("")}</div>
+      <p class="collection-note">${found<endings.length?"There are other paths through this story. Where will you go next?":"You have discovered every ending. Try a different reading level."}</p></section>
+      <div class="again"><button class="start" id="again">Read it again${arrowIcon}</button></div>
+      <button class="cover-link" id="backCover">Back to the story cover</button></div>`;
   }else{
-    const tag=n.id===BOOK.start?"Begin":null;
-    const btns=(n.choices||[])
-      .filter(c=>{let r=c.requires||[];if(typeof r==="string")r=[r];return r.every(f=>flags.has(f))})
-      .map((c,i)=>`<button data-i="${i}"><span class="k">${i+1}</span>${at(c.text)}<b class="goto">${c.goto}</b></button>`).join("");
-    inner=`${artHTML(n.id,tag)}
-      <div class="body">
-        <div class="pnum" id="sectionTitle" tabindex="-1" role="heading" aria-level="2" aria-label="Section ${n.id}">${n.id}</div><div class="srule"></div>
-        <div class="para">${markup(at(n.text)||"")}</div>
-        <div class="choices-lead">What do you do?</div>
-        <div class="choices">${btns}</div>
-        ${meaningHTML()}
-      </div>`;
+    const visible=(n.choices||[]).filter(c=>{const r=typeof c.requires==="string"?[c.requires]:(c.requires||[]);return r.every(f=>flags.has(f));});
+    inner=`<div class="reading-page"><div class="reading-kicker">${n.id===BOOK.start?"Your adventure begins":"The story continues"}</div>
+      <h2 class="moment-heading" id="sectionTitle" tabindex="-1">${scene.title}</h2><div class="para">${markup(at(n.text)||"")}</div>
+      <section class="decision" aria-labelledby="decisionLabel"><h3 id="decisionLabel">What will you do?</h3><div class="choices">${visible.map((c,i)=>`<button data-i="${i}"><span class="choice-letter" aria-hidden="true">${String.fromCharCode(65+i)}</span><span class="choice-text">${at(c.text)}</span>${arrowIcon}</button>`).join("")}</div></section>
+      ${meaningHTML()}</div>`;
   }
-
-  const card=document.createElement("div");
-  card.className="card";
-  card.dataset.node=n.id;
-  if(n.ending) card.classList.add("is-end");
-  // each section carries its own colour; endings are tinted by outcome (green/amber/blue)
-  card.style.setProperty("--hue", n.ending ? ({good:150,neutral:40,bad:212}[n.ending]||190)
-                                            : (hash("h"+n.id)%360));
-  card.innerHTML=inner;
-  const main=$("main"); const old=main.firstElementChild;
-  if(old){ old.classList.add("leaving");
-    renderTimer=setTimeout(()=>{ main.innerHTML=""; main.appendChild(card); wire(n,moveFocus); },matchMedia("(prefers-reduced-motion:reduce)").matches?0:200); }
-  else { main.innerHTML=""; main.appendChild(card); wire(n,moveFocus); }
+  const paint=()=>{
+    $("main").innerHTML=`<div class="reader-heading"><span class="eyebrow">Your adventure · Episode ${pad(BOOK.episode)}</span><button class="level-shortcut" id="levelShortcut" aria-label="Change reading level: ${level}">${level}<span> · ${levelDescriptions[level]||level}</span></button></div>
+      <article class="card moment-card${n.ending?' is-end':''}" data-node="${n.id}" aria-labelledby="sectionTitle">
+      <figure class="moment-visual"><div class="art"><img src="${scene.source}" alt="" loading="eager"></div><div class="scene-label">${n.ending?'The end':'An adventure in English'}</div>
+      <figcaption class="scene-caption"><strong>${BOOK.title}</strong><span>${n.ending?'One ending. More possibilities.':'A story shaped by your choices.'}</span></figcaption></figure>${inner}</article>
+      <p class="reader-footer">${bookIcon}Tap underlined words for help. Choose your own way.</p>`;
+    wire(n,moveFocus);
+  };
+  const old=$("main").querySelector(".moment-card");
+  if(old&&!matchMedia("(prefers-reduced-motion:reduce)").matches){old.classList.add("leaving");old.inert=true;renderTimer=setTimeout(paint,180);}
+  else paint();
   setProgress(n.ending?1:(depth[node]||0)/Math.max(maxDepth,1));
 }
 
 function wire(n,moveFocus){
+  $("levelShortcut").onclick=openSheet;
+  if($("backCover")) $("backCover").onclick=()=>{renderIntro();window.scrollTo({top:0});$("begin").focus();};
   if(moveFocus&&!$("sheet").classList.contains("on")) $("sectionTitle")?.focus({preventScroll:true});
   const fine=finePointer();
   $("main").querySelectorAll(".gloss-word").forEach(el=>{
@@ -1192,7 +1201,7 @@ const openSheet=()=>{
 const closeSheet=()=>{
   $("sheet").classList.remove("on"); $("scrim").classList.remove("on");
   $("sheet").inert=true; $("main").inert=false; document.querySelector(".bar").inert=false;
-  document.body.style.overflow=""; settingsTrigger?.focus({preventScroll:true});
+  document.body.style.overflow=""; (settingsTrigger?.isConnected?settingsTrigger:settingsTrigger?.id==="levelShortcut"?$("levelShortcut"):$("cog"))?.focus({preventScroll:true});
 };
 $("cog").onclick=openSheet; $("scrim").onclick=closeSheet; $("closeSheet").onclick=closeSheet;
 document.addEventListener("keydown",e=>{

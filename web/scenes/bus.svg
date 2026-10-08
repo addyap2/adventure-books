@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+<defs><linearGradient id="inside" x2="800" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#203e3e"/><stop offset="1" stop-color="#708772"/></linearGradient><linearGradient id="glass" x1="230" y1="200" x2="600" y2="780" gradientUnits="userSpaceOnUse"><stop stop-color="#1c4041"/><stop offset="1" stop-color="#799c88"/></linearGradient><linearGradient id="seat" x2="800" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#678878"/><stop offset="1" stop-color="#234b44"/></linearGradient></defs>
+<path fill="url(#inside)" d="M0 0h800v1000H0z"/><path d="m0 94 800 71v36L0 128z" fill="#b0b096"/><path d="m0 104 800 71" stroke="#e2d2a9" stroke-width="7" opacity=".7"/>
+<path d="M144 219h563v480H144z" fill="#193b3b" stroke="#b1b99c" stroke-width="14"/><path d="M157 233h536v452H157z" fill="url(#glass)"/>
+<path d="M157 585V486h77v-58h71v157h60V457h86v135h82V375h55v-37h42v254h63v93H157z" fill="#234a48" opacity=".8"/>
+<g fill="#e0c089" opacity=".5"><path d="M260 466h16v24h-16zm115 31h17v25h-17zm192-104h17v24h-17zm31 60h15v25h-15z"/></g>
+<path d="M422 225v470" stroke="#b2b397" stroke-width="9"/><path d="m184 264 490 339m-483-258 166 118" stroke="#c5d3ba" stroke-width="24" opacity=".05"/>
+<g stroke="#a6b59a" stroke-opacity=".2"><path d="m217 244-30 126m383-94-31 132m43 128-28 117m-273-41-11 49"/></g>
+<path d="M95 78v789" stroke="#c3b78a" stroke-width="12"/><path d="M643 155v604" stroke="#c3b78a" stroke-width="12"/>
+<path d="M645 253h-62c-17 0-17 43 0 43h40" stroke="#c3b78a" stroke-width="8" stroke-linecap="round"/>
+<path d="M0 961V741c0-93 266-91 266 0v219z" fill="url(#seat)" stroke="#24473e" stroke-width="9"/><path d="M0 975v-72l296-38 72 113z" fill="#365e4c"/>
+<path d="M557 1000V798c0-80 243-80 243 0v202z" fill="url(#seat)" stroke="#24473e" stroke-width="9"/><path d="m530 1000 45-80 225 39v41z" fill="#365e4c"/>
+<path d="M164 717v140m468-67v138" stroke="#9bac88" opacity=".2" stroke-width="3"/>
+<path d="m314 815 110-20 97 35-95 24z" fill="#ccb88b"/><path d="m314 815 108 29 2-49m-2 49 99-14" stroke="#9d9776" stroke-width="2"/>
+<path d="m374 890 99-18 17 40-84 15z" fill="#203f38" opacity=".4"/>
+</svg>

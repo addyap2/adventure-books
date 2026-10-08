@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+<defs><linearGradient id="sky" x2="800" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#183a3d"/><stop offset="1" stop-color="#819884"/></linearGradient><linearGradient id="road" x1="400" y1="510" x2="400" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#719285"/><stop offset="1" stop-color="#18363a"/></linearGradient><radialGradient id="glow"><stop stop-color="#eac58b" stop-opacity=".5"/><stop offset="1" stop-color="#eac58b" stop-opacity="0"/></radialGradient><pattern id="rain" width="97" height="127" patternUnits="userSpaceOnUse"><path d="m25 8-10 30m63 69-7 20" stroke="#dee1ce" stroke-opacity=".12"/></pattern></defs>
+<path fill="url(#sky)" d="M0 0h800v1000H0z"/>
+<path d="M286 602V350h79v-49h71v260h59V404h84v198z" fill="#284d4b"/>
+<path d="M0 0h100l177 195v518L0 875z" fill="#274b47"/><path d="M0 132h70l212 137v26L0 153zM0 404l279 1v20L0 440z" fill="#5a7969"/>
+<path d="M800 76 562 288v402l238 164z" fill="#395c51"/><path d="m800 172-238 167v22l238-155zm0 287-238-27v25l238 46z" fill="#829580" opacity=".5"/>
+<g fill="#122f33" stroke="#73927d" stroke-width="5"><path d="M70 208 161 248v117l-91-22zm128 75 45 20v88l-45-11zM66 480l96-11v117l-96 26zm132-17 47-5v95l-47 13zM695 275l66-49v130l-66 34zm-49 36-44 30v83l44-22zm49 208 68 16v127l-68-32zm-49-12-44-10v91l44 19z"/></g>
+<g fill="#d4b381" opacity=".6"><path d="m76 218 79 34v103l-79-18zm626 68 50-37v102l-50 25zm-63 230-30-6v73l30 14z"/></g>
+<path d="m0 870 278-164h284l238 148v146H0z" fill="url(#road)"/>
+<path d="M347 540h72v164h-72z" fill="#849e87" opacity=".35"/>
+<path d="m278 707-48 293m332-293 88 293M0 860h800M0 954h800" stroke="#a2b19b" stroke-opacity=".16" stroke-width="2"/>
+<ellipse cx="547" cy="479" rx="100" ry="120" fill="url(#glow)"/>
+<path d="M549 773V446m-27 328h52" stroke="#173639" stroke-width="9" stroke-linecap="round"/>
+<path d="m531 412 18-15 18 15-5 40h-27z" fill="#e8c894" stroke="#24433e" stroke-width="5"/>
+<path d="m536 788-15 49h48l-7-49z" fill="#d6b781" opacity=".3"/>
+<path d="M3 674 130 640l74 22v81l-201 84z" fill="#173737"/><path d="m0 662 130-38 85 25-16 22-68-21L0 690z" fill="#9d9f7a"/>
+<path d="m32 711 95-31v70l-95 38z" fill="#47685b"/><path d="m163 684 21-8v45l-21 8z" fill="#d1b283"/>
+<path fill="url(#rain)" d="M0 0h800v1000H0z"/>
+</svg>

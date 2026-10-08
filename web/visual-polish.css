@@ -114,3 +114,66 @@
 [data-page="reader"] .intro-levels button strong { font:500 18px var(--grot); }
 [data-page="reader"] .intro-levels button span { display:block; margin-top:4px; font:11px var(--grot); }
 [data-page="reader"] .intro-levels button[aria-pressed="true"] { background:var(--accent); color:var(--accent-ink); }
+
+
+/* The library and book details use the same paper-and-teal collection identity. */
+body[data-page="library"] {--ink:#f6f3ee;--card:#fffdf9;--fg:#1d1b19;--muted:#6b6560;--line:#e4dfd8;--amber:#2f5d50;--amber-hot:#244b40;--dawn:#2f5d50;background-image:none;}
+body[data-page="library"] .bar {background:#f6f3eef0;border-bottom:1px solid var(--line);backdrop-filter:blur(12px);}
+body[data-page="library"] .mark {box-shadow:none;border-radius:3px;}
+body[data-page="library"] h1,body[data-page="library"] .step h4 {color:var(--fg);}
+body[data-page="library"] .tagline {color:var(--amber);}
+body[data-page="library"] .intro,body[data-page="library"] .mobile-summary,body[data-page="library"] .step p,body[data-page="library"] .book p {color:var(--muted);}
+body[data-page="library"] .hero-cta {color:#fff;}
+body[data-page="library"] .book {border-color:var(--line);box-shadow:0 4px 8px #14231c03,0 24px 64px #14231c0d;}
+body[data-page="library"] .book:hover {box-shadow:0 24px 60px -18px #14231c2a;}
+body[data-page="library"] .book .enter {color:#2f5d50;}
+body[data-page="library"] .hero-art::after {background:#14231c33;filter:blur(24px);}
+body[data-page="library"] .hero-book {filter:drop-shadow(24px 32px 24px #14231c26);}
+body[data-page="library"] .hero-art::before {border-color:#2f5d5020;background:radial-gradient(circle,#2f5d5010,transparent 70%);}
+body[data-page="library"] .hero::before {background:radial-gradient(circle,#2f5d5012,transparent 68%);}
+body[data-page="book"] {background:#f6f3ee;color:#1d1b19;}
+body[data-page="book"] .beat {background:#f6f3ee;}
+body[data-page="book"] .beat .body,body[data-page="book"] .pillar p {color:#6b6560;}
+body[data-page="book"] .statement em,body[data-page="book"] .close h2 em {color:#2f5d50;}
+body[data-page="book"] .beat .klabel,body[data-page="book"] .pillar .n {color:#985031;}
+body[data-page="book"] .pillar,body[data-page="book"] .ep {background:#fffdf9;}
+body[data-page="book"] .pillar h3 {color:#1d1b19;}
+body[data-page="book"] .pillar .chip,body[data-page="book"] .pillar .pgo {color:#2f5d50;}
+body[data-page="book"] .close {background:radial-gradient(ellipse at top,#eaf1ee,#f6f3ee 70%);}
+body[data-page="book"] .close .libbtn {color:#2f5d50;border-color:#2f5d50;}
+body[data-page="book"] .close .textlink {color:#6b6560;}
+/* Keep the over-art book hero legible while its language control has a clear surface. */
+body[data-page] .langpick {display:flex;align-items:center;gap:8px;width:100%;max-width:600px;padding:16px;margin:20px 0 16px;border:1px solid #d1dcd6;border-radius:16px;background:#fffdf9;box-shadow:0 4px 16px #14231c08;}
+body[data-page] .langpick .lbl,body[data-page] .langpick .lp-lbl {display:flex;align-items:center;gap:8px;width:100%;margin:0 0 4px;font:600 13px/1.4 var(--grot);letter-spacing:0;text-transform:none;color:#2f5d50;}
+body[data-page] .langpick button {min-height:44px;padding:10px 14px;border:1px solid #d9ded8;border-radius:8px;background:#fffdf9;color:#4c534e;font:500 14px/1.4 var(--grot);transition:background .15s,border-color .15s;}
+body[data-page] .langpick button:hover {background:#eaf1ee;border-color:#2f5d50;color:#2f5d50;}
+body[data-page] .langpick button.on {background:#2f5d50;border-color:#2f5d50;color:#fff;box-shadow:none;}
+body[data-page] .langpick button:focus-visible {outline:3px solid #2f5d50;outline-offset:3px;}
+body[data-page="book"] .hero-copy .langpick {max-width:640px;background:#fffdf9f5;box-shadow:0 8px 32px #0002;}
+@media(max-width:700px) {
+ body[data-page="library"] .hero-copy #heroMorph {order:0;}
+ body[data-page="library"] .langpick {order:1;}
+ body[data-page="library"] .mobile-summary {order:2;}
+ body[data-page="library"] .hero-cta {order:3;}
+ body[data-page] .langpick {padding:16px;gap:8px;margin-block:20px 16px;}
+ body[data-page] .langpick button {flex:1 0 calc(33.33% - 8px);padding:10px 4px;font-size:13px;}
+ body[data-page="book"] .hero-copy {padding-top:100px;}
+}
+
+body[data-page] .langpick .lbl,body[data-page] .langpick .lp-lbl {font-size:15px;}
+body[data-page] .langpick button {min-height:48px;font-size:16px;}
+@media(max-width:700px){
+ body[data-page="library"] .hero-copy #heroMorph {order:2;}
+ body[data-page="library"] .hero-copy .langpick {order:0;}
+ body[data-page="library"] .hero-art {order:3;}
+ body[data-page="library"] .mobile-summary {display:none;}
+ body[data-page="library"] .hero-cta {order:1;}
+ body[data-page] .langpick button {font-size:14px;}
+}
+
+body[data-page] .langpick .lbl svg,body[data-page] .langpick .lp-lbl svg {width:20px;height:20px;color:#2f5d50;flex-shrink:0;}
+body[data-page="book"] .bar {color:#f4efe6;}
+body[data-page="book"] .beat .libbtn {color:#2f5d50;border-color:#2f5d50;}
+body[data-page="book"] .beat .textlink {color:#6b6560;}
+body[data-page="book"] .beat a:focus-visible,body[data-page="book"] .close a:focus-visible {outline-color:#2f5d50;}
+body[data-page="book"] .beat .ep .tag,body[data-page="book"] .footline,body[data-page="book"] .footline b {color:#6b6560;}
