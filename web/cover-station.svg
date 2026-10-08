@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <defs>
+    <linearGradient id="sky" x2="800" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#142f35"/><stop offset=".6" stop-color="#34665f"/><stop offset="1" stop-color="#a0a58b"/></linearGradient>
+    <linearGradient id="stone" x1="200" y1="380" x2="540" y2="800" gradientUnits="userSpaceOnUse"><stop stop-color="#59776c"/><stop offset="1" stop-color="#223e3d"/></linearGradient>
+    <linearGradient id="light" x1="400" y1="550" x2="400" y2="790" gradientUnits="userSpaceOnUse"><stop stop-color="#edce95"/><stop offset="1" stop-color="#b67a50"/></linearGradient>
+    <linearGradient id="ground" x1="400" y1="680" x2="400" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#49736a"/><stop offset="1" stop-color="#142f35"/></linearGradient>
+    <linearGradient id="reflection" x1="410" y1="710" x2="390" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#dfbd80" stop-opacity=".5"/><stop offset="1" stop-color="#dfbd80" stop-opacity="0"/></linearGradient>
+    <radialGradient id="haze"><stop stop-color="#b8c6a4" stop-opacity=".24"/><stop offset="1" stop-color="#b8c6a4" stop-opacity="0"/></radialGradient>
+    <radialGradient id="lamp"><stop stop-color="#efc687" stop-opacity=".65"/><stop offset="1" stop-color="#efc687" stop-opacity="0"/></radialGradient>
+    <pattern id="rain" width="93" height="121" patternUnits="userSpaceOnUse"><path d="m12 8-9 25m68 52-7 20" stroke="#d6ddd0" stroke-opacity=".1" stroke-width="1"/></pattern>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h800v1000H0z"/>
+  <ellipse cx="500" cy="460" rx="440" ry="350" fill="url(#haze)"/>
+  <circle cx="580" cy="204" r="43" fill="#d6d9b6" opacity=".8"/>
+  <circle cx="564" cy="188" r="42" fill="#244c4d"/>
+  <g fill="#d7ddbd" opacity=".65"><circle cx="120" cy="176" r="2"/><circle cx="330" cy="120" r="1.5"/><circle cx="465" cy="241" r="1.5"/><circle cx="694" cy="323" r="2"/><circle cx="184" cy="291" r="1.5"/></g>
+  <!-- A quiet city beyond the station. -->
+  <path d="M0 510V388h74v-47h81v134h48v-84h87v122h33V361h81v-31h45v181h43V426h94v91h44V376h66v-35h52v169h52v190H0z" fill="#1c3c3e" opacity=".65"/>
+  <g fill="#d8b97d" opacity=".45"><path d="M89 370h10v17H89zm34 39h10v17h-10zm212-17h11v21h-11zm210 54h12v18h-12zm105-37h11v19h-11zm48-35h11v19h-11z"/></g>
+  <!-- Station frontage, with an illuminated entrance and clock. -->
+  <path d="M72 700V467h193V398l133-76 139 76v69h196v241z" fill="url(#stone)"/>
+  <path d="m249 404 149-92 155 92-14 19-141-80-134 80z" fill="#173738"/>
+  <path d="M56 454h211v22H56zm477 0h216v22H533z" fill="#183a3b"/>
+  <path d="M284 428h233v15H284z" fill="#9ba48a" opacity=".3"/>
+  <path d="M317 703V576a83 83 0 0 1 166 0v127z" fill="#1c3939" stroke="#7b8f7b" stroke-width="10"/>
+  <path d="M337 704V579a63 63 0 0 1 126 0v125z" fill="url(#light)"/>
+  <path d="M397 517v188m-60-126h126" stroke="#374e46" stroke-width="7"/>
+  <path d="M344 702v-93h47v93m13 0v-93h51v93" fill="#34514a" opacity=".55"/>
+  <circle cx="400" cy="424" r="36" fill="#203f3d" stroke="#9ba48a" stroke-width="5"/>
+  <circle cx="400" cy="424" r="27" fill="#d4c79e"/>
+  <path d="M400 404v20l-13-20m13-3v4m23 19h-4m-19 23v-4m-23-19h4" stroke="#344b44" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#173638" stroke="#718774" stroke-width="5"><path d="M110 623v-66a30 30 0 0 1 60 0v66zm95 0v-66a30 30 0 0 1 60 0v66zm331 0v-66a30 30 0 0 1 60 0v66zm96 0v-66a30 30 0 0 1 60 0v66z"/></g>
+  <g fill="#c9ae79" opacity=".6"><path d="M118 566h44v49h-44zm95 0h44v49h-44zm331 0h44v49h-44zm96 0h44v49h-44z"/></g>
+  <g stroke="#34534b" stroke-width="4"><path d="M140 531v94m95-94v94m331-94v94m96-94v94M112 585h59m37 0h55m275 0h55m39 0h57"/></g>
+  <path d="M63 699h686v19H63z" fill="#9ba48a" opacity=".6"/>
+  <path d="M0 719h800v281H0z" fill="url(#ground)"/>
+  <path d="m346 718-97 282h321l-117-282z" fill="url(#reflection)"/>
+  <g stroke="#96a690" opacity=".18"><path d="M0 760h800M0 826h800M0 931h800M200 719 56 1000m285-281-53 281m182-281 64 281m65-281 158 281"/></g>
+  <g stroke="#d1b786" stroke-width="3" opacity=".35"><path d="M349 748h86m-111 23h125m-80 25h40m-105 22h142m-124 40h84m-104 27h152"/></g>
+  <!-- Warm pools of light against the cool street. -->
+  <ellipse cx="109" cy="585" rx="80" ry="100" fill="url(#lamp)"/>
+  <ellipse cx="693" cy="585" rx="80" ry="100" fill="url(#lamp)"/>
+  <g stroke="#173638" stroke-width="7"><path d="M109 809V593m584 216V593"/></g>
+  <g fill="#e9c68c" stroke="#23433f" stroke-width="5"><path d="m93 555 16-13 16 13-4 35H97zm584 0 16-13 16 13-4 35h-24z"/></g>
+  <path d="M88 813h43m540 0h44" stroke="#173638" stroke-width="9" stroke-linecap="round"/>
+  <!-- A letter on a nearby bench leaves the reader's identity open. -->
+  <path d="m-40 916 218-44 238 96-26 32H0z" fill="#19363a"/>
+  <path d="m-40 898 218-44 238 96-4 18-232-95-220 43z" fill="#647869"/>
+  <path d="m47 917 142-27 116 46-145 34z" fill="#112e32" opacity=".45"/>
+  <path d="m54 901 134-26 117 46-139 30z" fill="#dacaa4"/>
+  <path d="m54 901 127 20 124 0m-124 0-15 30" stroke="#aa9b7b" stroke-width="2"/>
+  <circle cx="181" cy="922" r="7" fill="#b35e40"/>
+  <path fill="url(#rain)" d="M0 0h800v1000H0z"/>
+</svg>

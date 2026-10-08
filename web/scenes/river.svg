@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+<defs><linearGradient id="sky" x1="400" y1="0" x2="400" y2="650" gradientUnits="userSpaceOnUse"><stop stop-color="#416e66"/><stop offset="1" stop-color="#d6c7a1"/></linearGradient><linearGradient id="water" x1="400" y1="500" x2="400" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#99b29a"/><stop offset="1" stop-color="#244c4b"/></linearGradient><linearGradient id="glass" x2="700" y2="750" gradientUnits="userSpaceOnUse"><stop stop-color="#416b63"/><stop offset="1" stop-color="#afbd9e"/></linearGradient></defs>
+<path fill="url(#sky)" d="M0 0h800v1000H0z"/><circle cx="591" cy="285" r="58" fill="#ebd7a2" opacity=".75"/>
+<path d="M0 488V420h65v-71h73v139h77V330h60v-50h42v213h113V372h69v111h73V400h85v88h143v108H0z" fill="#486f65" opacity=".45"/>
+<path d="M0 546h800v454H0z" fill="url(#water)"/>
+<path d="m542 549-56 274h218l-60-274z" fill="#d6c899" opacity=".18"/>
+<g stroke="#d7d8b9" stroke-opacity=".35" stroke-width="3"><path d="M422 616h207m-448 31h124m203 41h216m-391 29h126m147 48h227M54 798h205m211 50h158m-283 43h-89"/></g>
+<path d="m35 520 345-72 211 48v140L35 674z" fill="#223e3d"/><path d="m35 489 341-78 215 57v168l-216-44L35 664z" fill="url(#glass)"/>
+<path d="m376 411-1 182m-231-129v175m115-204v184m183-190v177m75-157v173m-478-42 337-64 215 43" stroke="#d1ceb0" stroke-width="7"/>
+<path d="m21 487 356-85 223 59v16l-222-53-357 81z" fill="#adb497"/>
+<path d="m0 829 395-153 405 141v183H0z" fill="#51766a"/><path d="m0 827 395-155 405 142v23L395 698 0 852z" fill="#afba9d"/>
+<g stroke="#203f3f" stroke-width="7"><path d="M44 933V753m114 134V711m126 130V663m-245 77 350-124m-346 185 346-127"/></g>
+<path d="m559 914 80-66 103 8 48 61z" fill="#1d403d"/><path d="m579 849 60-26 89 12-1 28-88-15-50 24z" fill="#9a9f7d"/>
+<path d="M657 766v63" stroke="#35574a" stroke-width="9"/><g fill="#274f43"><ellipse cx="632" cy="746" rx="33" ry="19" transform="rotate(35 632 746)"/><ellipse cx="680" cy="716" rx="37" ry="20" transform="rotate(-30 680 716)"/><ellipse cx="631" cy="695" rx="31" ry="18" transform="rotate(36 631 695)"/></g>
+<g stroke="#e4d6ab" stroke-width="2" opacity=".4"><path d="M58 240q18-17 36 0 18-17 36 0m46 73q14-12 28 0 14-12 28 0"/></g>
+</svg>
