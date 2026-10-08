@@ -17,6 +17,14 @@ async function scanImages(series, episode) {
 
 const CONTENT = join(ROOT, "content");
 const DIST = join(ROOT, "dist");
+const catalog = JSON.parse(await readFile(join(ROOT, "web", "illustrations", "catalog.json"), "utf8"));
+for (const [slug, art] of Object.entries(catalog)) {
+  const assets = [art.cover, art.social, ...Object.values(art.scenes || {}), ...Object.values(art.endings || {})];
+  for (const asset of new Set(assets)) {
+    if (!asset?.startsWith("/") || !existsSync(join(ROOT, "web", asset.slice(1))))
+      throw new Error(`Missing collection artwork for ${slug}: ${asset}`);
+  }
+}
 
 await rm(DIST, { recursive: true, force: true });
 await mkdir(DIST, { recursive: true });
@@ -28,8 +36,9 @@ await cp(join(ROOT, "web", "visual-polish.css"), join(DIST, "visual-polish.css")
 await cp(join(ROOT, "web", "reference-reader.css"), join(DIST, "reference-reader.css"));
 await cp(join(ROOT, "web", "cover-station.svg"), join(DIST, "cover-station.svg"));
 await cp(join(ROOT, "web", "scenes"), join(DIST, "scenes"), { recursive: true });
-// social cards (og-<slug>.png) and wordless library-card covers (cover-<slug>.png),
-// both generated locally by build_og.mjs
+await cp(join(ROOT, "web", "illustrations"), join(DIST, "illustrations"), { recursive: true });
+// Sharing cards and legacy covers are prebuilt and committed. The collection
+// cards are regenerated with npm run build:social, independently of deployment.
 for (const f of await readdir(join(ROOT, "web"))) {
   if (/^(og|cover).*\.png$/.test(f)) await cp(join(ROOT, "web", f), join(DIST, f));
 }
@@ -56,6 +65,7 @@ for (const f of files) {
     title: json.title ?? f,
     blurb: json.blurb ?? "",
     levels: json.levels ?? [],
+    art: catalog[json.slug] ?? null,
     identity: json.identity ?? null,          // palette + cover, so the library card can skin itself
     paragraphs: json.nodes.length,
     endings: json.nodes.filter(n => n.ending).length,
@@ -84,8 +94,8 @@ for (const e of episodes) {
   const book = JSON.parse(await readFile(join(CONTENT, e.file), "utf8"));
   const desc = e.blurb || "An interactive story for English learners — you choose what happens.";
   const url = `${BASE}/b/${e.slug}`;
-  const og = `${BASE}/og-${e.slug}.png`;
-  const coverAlt = e.identity?.cover?.alt || `${e.title} cover artwork.`;
+  const og = BASE + (e.art?.social || `/og-${e.slug}.png`);
+  const coverAlt = e.art?.alt || e.identity?.cover?.alt || `${e.title} cover artwork.`;
   let html = tmpl
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${attr(e.title)} — an interactive story</title>`)
     .replace(/(<meta name="description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
@@ -98,7 +108,7 @@ for (const e of episodes) {
     .replace(/(<meta name="twitter:title" content=")[^"]*(">)/, `$1${attr(e.title)} — an interactive story$2`)
     .replace(/(<meta name="twitter:description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
     .replace(/(<meta name="twitter:image" content=")[^"]*(">)/, `$1${og}$2`)
-    .replace(/<body>/, `<body>\n<script>window.__WM_BOOK=${JSON.stringify({ slug: e.slug, file: e.file })}</script>`);
+    .replace(/<body>/, `<body>\n<script>window.__WM_BOOK=${JSON.stringify({ slug: e.slug, file: e.file, art: e.art })}</script>`);
   // Keep the first painted page specific to this book, including with JavaScript disabled.
   // The hydration script remains after this boundary and can still enhance the page.
   const boundary = html.indexOf('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js');
@@ -114,11 +124,12 @@ for (const e of episodes) {
     .replaceAll('/read.html?book=episode-01.json&amp;', `/read/${e.slug}.html?`)
     .replaceAll('/read.html?book=episode-01.json', `/read/${e.slug}.html`)
     .replace('href="/read.html"', `href="/read/${e.slug}.html"`);
-  if (existsSync(join(ROOT, "web", `cover-${e.slug}.png`))) {
-    const focal = e.identity?.cover?.focal || "center";
+  const cover = e.art?.cover || `/cover-${e.slug}.png`;
+  if (existsSync(join(ROOT, "web", cover.slice(1)))) {
+    const focal = e.art?.focal || e.identity?.cover?.focal || "center";
     body = body.replace('class="stage" id="stage"', 'class="stage has-art" id="stage"')
       .replace('id="art" data-depth="0.05" aria-hidden="true"',
-        `id="art" data-depth="0.05" aria-hidden="true" style="background-image:url('/cover-${e.slug}.png');background-position:${attr(focal)}"`);
+        `id="art" data-depth="0.05" aria-hidden="true" style="background-image:url('${attr(cover)}');background-position:${attr(focal)}"`);
   }
   if (e.slug !== "the-address") {
     body = body
@@ -172,12 +183,14 @@ const gitDate = (paths) => {
 // a book's landing page is rendered from its episode JSON + cover/og art + the
 // shared book.html template; the homepage lists every book from library.html.
 const bookDate = (e) => gitDate([
-  `content/${e.file}`, `web/cover-${e.slug}.png`, `web/og-${e.slug}.png`, "web/book.html",
+  `content/${e.file}`, `web${e.art?.cover || `/cover-${e.slug}.png`}`,
+  `web${e.art?.social || `/og-${e.slug}.png`}`, "web/illustrations/catalog.json", "web/book.html",
 ]);
 const homeDate = gitDate([
   "web/library.html",
   ...episodes.map(e => `content/${e.file}`),
-  ...episodes.map(e => `web/cover-${e.slug}.png`),
+  ...episodes.map(e => `web${e.art?.cover || `/cover-${e.slug}.png`}`),
+  "web/illustrations/catalog.json",
 ]);
 const urls = [
   { loc: "/", lastmod: homeDate },

@@ -14,18 +14,18 @@
 <meta property="og:url" content="https://books.antonyaddy.com/">
 <meta property="og:title" content="English Reading Adventures — interactive stories for people learning English">
 <meta property="og:description" content="Find your way, one story at a time. Branching stories where you are the hero — read at your level, with meaning in eight languages.">
-<meta property="og:image" content="https://books.antonyaddy.com/og-english-adventures.png">
+<meta property="og:image" content="https://books.antonyaddy.com/og-collection.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="English Reading Adventures — interactive stories for people learning English">
 <meta name="twitter:description" content="Find your way, one story at a time. Stories where you are the hero, for English learners.">
-<meta name="twitter:image" content="https://books.antonyaddy.com/og-english-adventures.png">
+<meta name="twitter:image" content="https://books.antonyaddy.com/og-collection.png">
 <title>English Reading Adventures</title>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"WebSite","@id":"https://books.antonyaddy.com/#website","url":"https://books.antonyaddy.com/","name":"English Reading Adventures","description":"Interactive stories where you are the hero, for people learning English. Read at your level, with meaning in eight languages.","inLanguage":"en"},
-{"@type":"Organization","@id":"https://books.antonyaddy.com/#org","name":"English Reading Adventures","url":"https://books.antonyaddy.com/","logo":"https://books.antonyaddy.com/og-english-adventures.png","founder":{"@type":"Person","name":"Antony Addy"}}
+{"@type":"Organization","@id":"https://books.antonyaddy.com/#org","name":"English Reading Adventures","url":"https://books.antonyaddy.com/","logo":"https://books.antonyaddy.com/og-collection.png","founder":{"@type":"Person","name":"Antony Addy"}}
 ]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -209,7 +209,7 @@
       <div class="hero-art" aria-hidden="true">
         <div class="hero-book">
           <div class="hero-book-cover">
-            <div class="hero-book-face is-active"><div class="hero-book-illustration" style="background-image:url('/cover-the-address.png')"></div><div class="hero-book-type"><span>English Reading Adventures</span><strong>The Address</strong><small>Antony Addy</small></div></div>
+            <div class="hero-book-face is-active"><div class="hero-book-illustration" style="background-image:url('/cover-station.svg')"></div><div class="hero-book-type"><span>English Reading Adventures</span><strong>The Address</strong><small>Antony Addy</small></div></div>
             <div class="hero-book-face"><div class="hero-book-illustration"></div><div class="hero-book-type"><span>English Reading Adventures</span><strong></strong><small>Antony Addy</small></div></div>
           </div>
         </div>
@@ -263,7 +263,7 @@
       <div class="shelf" id="shelf">
 
         <a class="book" data-static href="/b/the-address" style="--accent:#E8A24C">
-           <div class="cov" style="background-image:url(/cover-the-address.png);background-size:cover;background-position:54% 52%"></div>
+           <div class="cov" style="background-image:url(/cover-station.svg);background-size:cover;background-position:center"></div>
           <div class="meta">
             <span class="ep">An Interactive Story</span>
             <h3>The Address</h3>
@@ -298,8 +298,8 @@
       function showBook(e,face){
         var slug=e.slug||e.file.replace(/\.json$/,'');
         var art=face.querySelector('.hero-book-illustration');
-        art.style.backgroundImage='url("/cover-'+encodeURIComponent(slug)+'.png")';
-        art.style.backgroundPosition=((e.identity&&e.identity.cover)||{}).focal||'center';
+        art.style.backgroundImage='url("'+(e.art&&e.art.cover||'/cover-'+encodeURIComponent(slug)+'.png')+'")';
+        art.style.backgroundPosition=(e.art&&e.art.focal)||((e.identity&&e.identity.cover)||{}).focal||'center';
         face.querySelector('strong').textContent=e.title;
         face.querySelector('.hero-book-type').style.borderTopColor=((e.identity&&e.identity.palette)||{}).accent||'#E8A24C';
       }
@@ -327,7 +327,7 @@
       a.style.setProperty('--accent',accent);
       var tags=((e.levels||[]).join(' · '))+(e.levels&&e.levels.length?' · ':'')+'8 languages';
       a.innerHTML=
-        '<div class="cov" style="background-image:url(/cover-'+slug+'.png);background-size:cover"></div>'+
+        '<div class="cov" style="background-image:url('+esc(e.art&&e.art.cover||'/cover-'+slug+'.png')+');background-size:cover;background-position:'+esc(e.art&&e.art.focal||'center')+'"></div>'+
         '<div class="meta">'+
           '<span class="ep">An Interactive Story</span>'+
           '<h3>'+esc(e.title)+'</h3>'+

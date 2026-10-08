@@ -16,14 +16,14 @@
 <meta property="og:url" content="https://books.antonyaddy.com/read.html">
 <meta property="og:title" content="Read a story — English Reading Adventures">
 <meta property="og:description" content="Choose-your-own-adventure stories for English learners, at three levels, with a glossary in eight languages.">
-<meta property="og:image" content="https://books.antonyaddy.com/og-english-adventures.png">
+<meta property="og:image" content="https://books.antonyaddy.com/og-collection.png">
 <meta property="og:image:alt" content="English Reading Adventures book collection artwork.">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Read a story — English Reading Adventures">
 <meta name="twitter:description" content="A story where you are the hero — for people learning English.">
-<meta name="twitter:image" content="https://books.antonyaddy.com/og-english-adventures.png">
+<meta name="twitter:image" content="https://books.antonyaddy.com/og-collection.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -724,8 +724,9 @@ function setReaderMeta(book){
   const desc=book?(book.blurb||"An interactive story for English learners."):
     "Choose-your-own-adventure stories for English learners, at three levels, with a glossary in eight languages.";
   const path=slug?`/read/${slug}.html`:"/read.html";
-  const image=SITE+(slug?`/og-${slug}.png`:"/og-english-adventures.png");
-  const imageAlt=slug?(book.identity?.cover?.alt||`${book.title} cover artwork.`):
+  const art=MANIFEST?.episodes.find(e=>e.slug===slug)?.art;
+  const image=SITE+(slug?(art?.social||`/og-${slug}.png`):"/og-collection.png");
+  const imageAlt=slug?(art?.alt||book.identity?.cover?.alt||`${book.title} cover artwork.`):
     "English Reading Adventures book collection artwork.";
   document.title=title;
   const fields=[['link[rel="canonical"]','href',SITE+path],
@@ -741,7 +742,7 @@ function setReaderMeta(book){
     history.replaceState(null,'',path+(search?'?'+search:''));
 }
 let MANIFEST=null, BOOK=null, LEX={}, BASELEX={}, DICT={}, dictLang=null, GIST={}, gistLang=null, level=null, node=null;
-let flags=new Set(), seen=new Set(), maxDepth=0, depth={}, haveImg=new Set();
+let flags=new Set(), seen=new Set(), maxDepth=0, depth={}, haveImg=new Set(), bookArt=null;
 let view="home", curKey=null, curFile=null;   // "home" (the library) or "book" (reading)
 
 const prefKey="ab:prefs";
@@ -903,9 +904,10 @@ function bookCard(e){
   const key=`${e.series}:${e.episode}`, started=getProgress()[key]!=null;
   const h=hash(e.title||e.file), vars=`--h:${h%54-27};--x:${12+h%30};--y:${8+(h>>3)%26}`;
   const slug=e.slug||e.file.replace(/\.json$/,"");
-  const focal=(e.identity&&e.identity.cover&&e.identity.cover.focal)||"center";
+  const focal=e.art?.focal||e.identity?.cover?.focal||"center";
+  const cover=e.art?.cover||`/cover-${slug}.png`;
   // the book's own generated cover; falls back to the placeholder tint if it 404s
-  const img=`<img alt="" loading="lazy" src="cover-${slug}.png" style="object-position:${focal}"
+  const img=`<img alt="" loading="lazy" src="${cover}" style="object-position:${focal}"
          onload="this.parentNode.classList.remove('ph')" onerror="this.remove()">`;
   return `<button class="book" data-file="${e.file}">
     <div class="art ph" style="${vars}"><span class="glyph">❦</span>${img}</div>
@@ -965,6 +967,7 @@ async function openEpisode(file,preferLevel,intro,resume){
   applyIdentity(BOOK);
   const meta=MANIFEST.episodes.find(e=>e.file===file)||{};
   haveImg=new Set(meta.images||[]);
+  bookArt=meta.art||null;
   // this book's lexicon = shared base + the book's own chosen words (book wins)
   LEX={...BASELEX};
   const own=BOOK.lexicon&&(BOOK.lexicon.entries||BOOK.lexicon);
@@ -1037,10 +1040,10 @@ function sceneFor(n){
     bridge:"river",envelopes:"letter",phone:"office",oars:"river",fence:"street"};
   const title=n.ending?({good:"A new beginning",neutral:"Another chance",bad:"The journey ends"}[n.ending]||"Your ending")
     : BOOK.series==="new-city"?(sceneTitles[motif]||"Your next chapter")
-    : n.id===BOOK.start?BOOK.title:"Your next chapter";
+    : n.id===BOOK.start?BOOK.title:(bookArt?.sceneTitles?.[motif]||BOOK.title);
   const source=haveImg.has(String(n.id))?imgBase()+"/"+n.id+".webp":
     BOOK.series==="new-city"?(images[motif]==="station"?"/cover-station.svg":"/scenes/"+(images[motif]||"letter")+".svg"):
-    "/cover-"+encodeURIComponent(BOOK.slug)+".png";
+    (n.ending?bookArt?.endings?.[n.ending]:bookArt?.scenes?.[motif])||bookArt?.cover||"/cover-"+encodeURIComponent(BOOK.slug)+".png";
   return {title,source};
 }
 const arrowIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>';
@@ -1049,7 +1052,7 @@ function renderIntro(){
   cancelRender(); hideGloss();
   introMode=true; $("main").classList.add("intro");
   const endings=BOOK.nodes.filter(n=>n.ending).length;
-  const cover=BOOK.series==="new-city"?"/cover-station.svg":"/cover-"+encodeURIComponent(BOOK.slug)+".png";
+  const cover=bookArt?.cover||(BOOK.series==="new-city"?"/cover-station.svg":"/cover-"+encodeURIComponent(BOOK.slug)+".png");
   const synopsis=BOOK.series==="new-city"?"A new city. A letter in your bag. An address that could change everything.":BOOK.blurb;
   $("main").innerHTML=`<div class="intro-heading"><span class="eyebrow">Learn English. Live a story.</span><span class="edition">The adventure collection</span></div>
     <article class="cover" aria-labelledby="story-title">
