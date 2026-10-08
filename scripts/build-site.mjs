@@ -24,6 +24,7 @@ await mkdir(DIST, { recursive: true });
 await cp(join(ROOT, "web", "library.html"), join(DIST, "index.html"));    // / — the English Reading Adventures library (cards from manifest)
 await cp(join(ROOT, "web", "index.html"), join(DIST, "read.html"));       // the reader app
 await cp(join(ROOT, "web", "favicon.svg"), join(DIST, "favicon.svg"));
+await cp(join(ROOT, "web", "visual-polish.css"), join(DIST, "visual-polish.css"));
 // social cards (og-<slug>.png) and wordless library-card covers (cover-<slug>.png),
 // both generated locally by build_og.mjs
 for (const f of await readdir(join(ROOT, "web"))) {

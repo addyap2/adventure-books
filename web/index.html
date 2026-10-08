@@ -443,8 +443,10 @@
       transition-duration:.001ms !important; scroll-behavior:auto !important; }
   }
 </style>
+<link rel="stylesheet" href="/visual-polish.css">
 </head>
 <body>
+<script>document.body.dataset.page="reader";</script>
 <div class="bar">
   <button class="iconbtn" id="back" hidden aria-label="Back to the library">←</button>
   <span class="brand"><span class="dot"></span><span id="brand">English Reading Adventures</span></span>
@@ -453,12 +455,13 @@
   <div class="progress" id="progress"></div>
 </div>
 
-<main id="main"></main>
+<main id="main"><div class="loading-state" role="status">Opening your library…</div></main>
 
-<div class="gloss" id="gloss" role="status" aria-live="polite"></div>
+<div class="gloss" id="gloss" role="region" aria-label="Word help" aria-live="polite" inert></div>
 
 <div class="scrim" id="scrim"></div>
-<div class="sheet" id="sheet" role="dialog" aria-label="Reading settings">
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="settingsTitle" inert>
+  <div class="sheet-head"><h2 id="settingsTitle">Make it yours</h2><button class="iconbtn" id="closeSheet" aria-label="Close settings">×</button></div>
   <div class="grab"></div>
   <div class="row"><span>Reading level</span><span class="seg" id="segLevel"></span></div>
   <div class="row"><span>Word help</span>
@@ -786,7 +789,7 @@ async function loadGist(lang){
 async function applyLang(lang){
   savePrefs({...loadPrefs(),lang}); $("lang").value=lang;
   await loadDict(lang); await loadGist(lang);
-  if(view==="book" && !introMode && node!=null) render();
+  if(view==="book" && !introMode && node!=null) render(false);
 }
 
 /* theme — nocturne (dark) is the default; a paper "light" mode is opt-in and remembered */
@@ -860,6 +863,7 @@ function handoffURL(){
 
 /* ---- the library home ---- */
 function renderHome(){
+  cancelRender();
   view="home"; introMode=false; node=null; curKey=null; hideGloss();
   setReaderMeta(null);
   $("main").className="home";
@@ -983,14 +987,16 @@ async function openEpisode(file,preferLevel,intro,resume){
 
 function buildLevelSeg(){
   $("segLevel").innerHTML=BOOK.levels.map(l=>
-    `<button data-l="${l}" class="${l===level?'on':''}">${l}</button>`).join("");
+    `<button data-l="${l}" class="${l===level?'on':''}" aria-pressed="${l===level}">${l}</button>`).join("");
   $("segLevel").querySelectorAll("button").forEach(b=>b.onclick=()=>{
     level=b.dataset.l; savePrefs({...loadPrefs(),level});
-    buildLevelSeg(); node!=null&&!introMode?render():renderIntro();
+    buildLevelSeg(); node!=null&&!introMode?render(false):renderIntro();
+    $("segLevel").querySelector(`[data-l="${level}"]`).focus();
   });
 }
 
-let introMode=false;
+let introMode=false, renderTimer;
+const cancelRender=()=>{clearTimeout(renderTimer); renderTimer=null;};
 // deterministic 0..n from a string, so a paragraph's placeholder looks the same every visit
 const hash=s=>{let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return h;};
 function artHTML(id,tag,cover,endKind){
@@ -1013,6 +1019,7 @@ function artHTML(id,tag,cover,endKind){
 }
 
 function renderIntro(){
+  cancelRender();
   introMode=true; $("main").classList.add("intro");
   const endings=BOOK.nodes.filter(n=>n.ending).length;
   const focus=(at(BOOK.language_focus)||[])[0]||"";
@@ -1029,11 +1036,18 @@ function renderIntro(){
         <span>${BOOK.levels.join(" · ")}</span>
         <span>Tap words to translate</span>
       </div>
+      <fieldset class="intro-levels"><legend>Choose your reading level</legend><div>
+        ${BOOK.levels.map(l=>`<button data-intro-level="${l}" aria-pressed="${l===level}"><strong>${l}</strong><span>${{A2:"Easier sentences",B1:"Everyday English",B2:"Richer detail"}[l]||l}</span></button>`).join("")}
+      </div></fieldset>
       <button class="start" id="begin">Begin your adventure</button>
     </div></div>`;
   const coverImg=$("main").querySelector(".cover-art img");
   coverImg.alt=BOOK.identity?.cover?.alt||`${BOOK.title} cover artwork.`;
   coverImg.style.objectPosition=BOOK.identity?.cover?.focal||"center";
+  $("main").querySelectorAll("[data-intro-level]").forEach(b=>b.onclick=()=>{
+    level=b.dataset.introLevel; savePrefs({...loadPrefs(),level}); buildLevelSeg();
+    $("main").querySelectorAll("[data-intro-level]").forEach(el=>el.setAttribute("aria-pressed",el.dataset.introLevel===level));
+  });
   $("begin").onclick=()=>{introMode=false;node=BOOK.start;flags=new Set();render();window.scrollTo({top:0})};
   setProgress(0);
 }
@@ -1063,8 +1077,8 @@ function resolveIn(word,map){
 function markup(text){
   return text.replace(/[A-Za-z]+(?:'[A-Za-z]+)?/g,m=>{
     const feat=resolveIn(m,LEX);
-    if(feat) return `<w class="hl" data-w="${m}">${m}</w>`;
-    if(resolveIn(m,DICT)) return `<w data-w="${m}">${m}</w>`;
+    if(feat) return `<button class="gloss-word hl" data-w="${m}" aria-label="Word help: ${m}">${m}</button>`;
+    if(resolveIn(m,DICT)) return `<button class="gloss-word" data-w="${m}" aria-label="Word help: ${m}">${m}</button>`;
     return m;
   });
 }
@@ -1078,7 +1092,8 @@ function meaningHTML(){
     <div class="mtext" id="mtext" role="region" aria-label="Meaning in your language" tabindex="-1" hidden${dir}>${g}</div></div>`;
 }
 
-function render(){
+function render(moveFocus=true){
+  cancelRender();
   $("main").classList.remove("intro");
   const n=byId(node);
   // remember state for "Continue" — but a finished path resets to "Start" next time
@@ -1093,7 +1108,7 @@ function render(){
     const stamps=endings.map(e=>`<i class="${seen.has(e.id)?'got':''}">${seen.has(e.id)?'★':'?'}</i>`).join("");
     inner=`${artHTML(n.id,"The End",false,n.ending)}
       <div class="end">
-        <div class="pnum">${n.id}</div><div class="srule"></div>
+        <div class="pnum" id="sectionTitle" tabindex="-1" role="heading" aria-level="2" aria-label="Section ${n.id}">${n.id}</div><div class="srule"></div>
         <div class="badge">${badge}</div>
         <h2>${label}</h2>
         <div class="para" style="font-size:17px;margin-top:8px">${markup(at(n.text)||"")}</div>
@@ -1109,7 +1124,7 @@ function render(){
       .map((c,i)=>`<button data-i="${i}"><span class="k">${i+1}</span>${at(c.text)}<b class="goto">${c.goto}</b></button>`).join("");
     inner=`${artHTML(n.id,tag)}
       <div class="body">
-        <div class="pnum">${n.id}</div><div class="srule"></div>
+        <div class="pnum" id="sectionTitle" tabindex="-1" role="heading" aria-level="2" aria-label="Section ${n.id}">${n.id}</div><div class="srule"></div>
         <div class="para">${markup(at(n.text)||"")}</div>
         <div class="choices-lead">What do you do?</div>
         <div class="choices">${btns}</div>
@@ -1119,6 +1134,7 @@ function render(){
 
   const card=document.createElement("div");
   card.className="card";
+  card.dataset.node=n.id;
   if(n.ending) card.classList.add("is-end");
   // each section carries its own colour; endings are tinted by outcome (green/amber/blue)
   card.style.setProperty("--hue", n.ending ? ({good:150,neutral:40,bad:212}[n.ending]||190)
@@ -1126,16 +1142,17 @@ function render(){
   card.innerHTML=inner;
   const main=$("main"); const old=main.firstElementChild;
   if(old){ old.classList.add("leaving");
-    setTimeout(()=>{ main.innerHTML=""; main.appendChild(card); wire(n,endings); },200); }
-  else { main.innerHTML=""; main.appendChild(card); wire(n,endings); }
+    renderTimer=setTimeout(()=>{ main.innerHTML=""; main.appendChild(card); wire(n,moveFocus); },matchMedia("(prefers-reduced-motion:reduce)").matches?0:200); }
+  else { main.innerHTML=""; main.appendChild(card); wire(n,moveFocus); }
   setProgress(n.ending?1:(depth[node]||0)/Math.max(maxDepth,1));
 }
 
-function wire(n){
+function wire(n,moveFocus){
+  if(moveFocus&&!$("sheet").classList.contains("on")) $("sectionTitle")?.focus({preventScroll:true});
   const fine=finePointer();
-  $("main").querySelectorAll("w").forEach(el=>{
-    el.onclick=()=>showGloss(el.dataset.w);
-    if(fine && el.classList.contains("hl")) el.onmouseenter=()=>showGloss(el.dataset.w); // desktop: hover previews featured words
+  $("main").querySelectorAll(".gloss-word").forEach(el=>{
+    el.onclick=()=>showGloss(el.dataset.w,el);
+    if(fine && el.classList.contains("hl")) el.onmouseenter=()=>showGloss(el.dataset.w,el); // desktop: hover previews featured words
   });
   const visible=(n.choices||[]).filter(c=>{let r=c.requires||[];if(typeof r==="string")r=[r];return r.every(f=>flags.has(f))});
   $("main").querySelectorAll(".choices button").forEach(b=>b.onclick=()=>{
@@ -1148,23 +1165,49 @@ function wire(n){
 
 function setProgress(frac){ $("progress").style.width=Math.round(Math.min(1,frac)*100)+"%"; }
 
-function showGloss(word){
+let glossTrigger;
+function showGloss(word,trigger){
+  glossTrigger=trigger;
   const g=$("gloss"), lang=$("lang").value;
   const lb=resolveIn(word,LEX);
   let hw=word, pos="", en="", tr="", tag="";
   if(lb){ const e=LEX[lb]; hw=lb; pos=e.pos||""; en=e.en||""; tr=(lang&&e[lang])||""; }
   else { const db=resolveIn(word,DICT); if(db){ hw=db; tr=DICT[db]||""; tag="dictionary"; } }
-  g.innerHTML=`<div><span class="hw">${hw}</span>${pos?`<span class="pos">${pos}</span>`:""}${tag?`<span class="pos">· ${tag}</span>`:""}</div>
-    ${en?`<div class="en">${en}</div>`:""}${tr?`<div class="tr">${tr}</div>`:""}`;
-  g.dir=lang==="ar"?"rtl":"ltr"; g.classList.add("on");
-  clearTimeout(g._t); g._t=setTimeout(hideGloss,7000);
+  g.innerHTML=`<button class="close-gloss" id="closeGloss" aria-label="Close word help">×</button><div><span class="hw">${hw}</span>${pos?`<span class="pos">${pos}</span>`:""}${tag?`<span class="pos">· ${tag}</span>`:""}</div>
+    ${en?`<div class="en">${en}</div>`:""}${tr?`<div class="tr" lang="${lang}" dir="${lang==="ar"?"rtl":"ltr"}">${tr}</div>`:""}`;
+  g.dir="ltr"; g.inert=false; g.classList.add("on");
+  $("closeGloss").onclick=()=>{hideGloss();glossTrigger?.focus({preventScroll:true});};
 }
-const hideGloss=()=>$("gloss").classList.remove("on");
+const hideGloss=()=>{$("gloss").classList.remove("on");$("gloss").inert=true;};
 
 /* settings sheet */
-const openSheet=()=>{$("sheet").classList.add("on");$("scrim").classList.add("on")};
-const closeSheet=()=>{$("sheet").classList.remove("on");$("scrim").classList.remove("on")};
-$("cog").onclick=openSheet; $("scrim").onclick=closeSheet;
+let settingsTrigger;
+const openSheet=()=>{
+  settingsTrigger=document.activeElement;
+  hideGloss(); $("sheet").inert=false;
+  $("sheet").classList.add("on"); $("scrim").classList.add("on");
+  $("main").inert=true; document.querySelector(".bar").inert=true;
+  $("closeSheet").focus(); document.body.style.overflow="hidden";
+};
+const closeSheet=()=>{
+  $("sheet").classList.remove("on"); $("scrim").classList.remove("on");
+  $("sheet").inert=true; $("main").inert=false; document.querySelector(".bar").inert=false;
+  document.body.style.overflow=""; settingsTrigger?.focus({preventScroll:true});
+};
+$("cog").onclick=openSheet; $("scrim").onclick=closeSheet; $("closeSheet").onclick=closeSheet;
+document.addEventListener("keydown",e=>{
+  if($("sheet").classList.contains("on")){
+    if(e.key==="Escape"){e.preventDefault();closeSheet();}
+    if(e.key==="Tab"){
+      const controls=[...$("sheet").querySelectorAll("button,select,input,a[href]")].filter(el=>!el.hidden);
+      const first=controls[0], last=controls.at(-1);
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    }
+  } else if(e.key==="Escape"&&$("gloss").classList.contains("on")){
+    hideGloss(); glossTrigger?.focus({preventScroll:true});
+  }
+});
 $("lang").onchange=e=>applyLang(e.target.value);
 $("back").onclick=renderHome;
 $("toLibrary").onclick=()=>{closeSheet();renderHome();};
@@ -1202,12 +1245,12 @@ $("hoCopy").onclick=async()=>{
   catch{ $("hoLink").select(); try{ document.execCommand("copy"); $("hoCopy").textContent="Copied ✓"; }catch{} }
 };
 
-document.addEventListener("click",e=>{ if(!e.target.closest("w")&&!e.target.closest(".gloss")) hideGloss(); });
+document.addEventListener("click",e=>{ if(!e.target.closest(".gloss-word")&&!e.target.closest(".gloss")) hideGloss(); });
 
 // desktop keyboard: number keys pick a choice; Enter starts / reads again
 document.addEventListener("keydown",e=>{
-  if(view!=="book"||e.metaKey||e.ctrlKey||e.altKey) return;
-  if(e.target instanceof Element && e.target.matches("input,select,textarea")) return;
+  if(view!=="book"||e.metaKey||e.ctrlKey||e.altKey||$("sheet").classList.contains("on")||$("handoff").classList.contains("on")) return;
+  if(e.target instanceof Element && e.target.matches("input,select,textarea,button,a")) return;
   if(introMode){ if(e.key==="Enter"){ e.preventDefault(); $("begin")&&$("begin").click(); } return; }
   if(byId(node)?.ending){ if(e.key==="Enter"){ e.preventDefault(); $("again")&&$("again").click(); } return; }
   if(/^[1-9]$/.test(e.key)){
@@ -1216,7 +1259,10 @@ document.addEventListener("keydown",e=>{
   }
 });
 
-boot().catch(err=>{ $("main").innerHTML=`<div class="card"><div class="body"><h1>Could not load the story</h1><p>${err}</p></div></div>`; });
+boot().catch(()=>{
+  $("main").innerHTML=`<div class="card loading-state"><h1>The story couldn’t open</h1><p>Check your connection and try again.</p><button class="start" id="retryLoad">Try again</button></div>`;
+  $("retryLoad").onclick=()=>location.reload();
+});
 </script>
 </body>
 </html>
