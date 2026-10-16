@@ -21,22 +21,6 @@
     {
       "source": "/books/read/:slug((?!.*\\.html$).*)",
       "destination": "/books/read/:slug.html"
-    },
-    {
-      "source": "/",
-      "destination": "/books/index.html"
-    },
-    {
-      "source": "/b/:slug",
-      "destination": "/books/b/:slug.html"
-    },
-    {
-      "source": "/read/:slug((?!.*\\.html$).*)",
-      "destination": "/books/read/:slug.html"
-    },
-    {
-      "source": "/:path((?!books(?:/|$)|_vercel/).+)",
-      "destination": "/books/:path"
     }
   ],
   "redirects": [
@@ -69,6 +53,39 @@
     {
       "source": "/arrival.html",
       "destination": "https://www.antonyaddy.com/books/b/the-address",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "books.antonyaddy.com"
+        }
+      ],
+      "destination": "https://www.antonyaddy.com/books",
+      "permanent": true
+    },
+    {
+      "source": "/read/:slug.html",
+      "has": [
+        {
+          "type": "host",
+          "value": "books.antonyaddy.com"
+        }
+      ],
+      "destination": "https://www.antonyaddy.com/books/read/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/:path((?!books(?:/|$)|_vercel/).+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "books.antonyaddy.com"
+        }
+      ],
+      "destination": "https://www.antonyaddy.com/books/:path",
       "permanent": true
     }
   ],
