@@ -16,7 +16,23 @@ async function scanImages(series, episode) {
 }
 
 const CONTENT = join(ROOT, "content");
-const DIST = join(ROOT, "dist");
+// The site is served at www.antonyaddy.com/books: the main site forwards
+// /books/* here. web/ is written as if it sat at the site root; mount() moves
+// every page onto /books as it's written, and the files land in dist/books.
+const PREFIX = "/books";
+const SITE = "https://www.antonyaddy.com";
+const OUT = join(ROOT, "dist");
+const DIST = join(OUT, PREFIX.slice(1));
+const ROOT_PATHS = /(["'`(])\/(?=(?:read\.html|read\/|b\/|cover-|og-|manifest\.json|scenes\/|illustrations\/|images\/|dict\/|gist\/|visual-polish\.css|reference-reader\.css|favicon\.svg))/g;
+const mount = (text) => text
+  .replace('<base href="/">', `<base href="${PREFIX}/">`)
+  .replace(/https:\/\/books\.antonyaddy\.com\/(?=["'#])/g, `${SITE}${PREFIX}`)
+  .replace(/https:\/\/books\.antonyaddy\.com\//g, `${SITE}${PREFIX}/`)
+  .replace(/https:\/\/books\.antonyaddy\.com/g, SITE)
+  .replace(ROOT_PATHS, `$1${PREFIX}/`)
+  .replace(/href="\/"/g, `href="${PREFIX}"`)
+  .replace("fetch('/'+ep.file)", `fetch('${PREFIX}/'+ep.file)`);
+const mountFile = async (from, to) => writeFile(to, mount(await readFile(from, "utf8")));
 const catalog = JSON.parse(await readFile(join(ROOT, "web", "illustrations", "catalog.json"), "utf8"));
 for (const [slug, art] of Object.entries(catalog)) {
   const assets = [art.cover, art.social, ...Object.values(art.scenes || {}), ...Object.values(art.endings || {})];
@@ -26,11 +42,11 @@ for (const [slug, art] of Object.entries(catalog)) {
   }
 }
 
-await rm(DIST, { recursive: true, force: true });
+await rm(OUT, { recursive: true, force: true });
 await mkdir(DIST, { recursive: true });
 // English Reading Adventures: the library is the root; each book has its own page; the reader app is /read.html
-await cp(join(ROOT, "web", "library.html"), join(DIST, "index.html"));    // / — the English Reading Adventures library (cards from manifest)
-await cp(join(ROOT, "web", "index.html"), join(DIST, "read.html"));       // the reader app
+await mountFile(join(ROOT, "web", "library.html"), join(DIST, "index.html"));    // / — the English Reading Adventures library (cards from manifest)
+await mountFile(join(ROOT, "web", "index.html"), join(DIST, "read.html"));       // the reader app
 await cp(join(ROOT, "web", "favicon.svg"), join(DIST, "favicon.svg"));
 await cp(join(ROOT, "web", "visual-polish.css"), join(DIST, "visual-polish.css"));
 await cp(join(ROOT, "web", "reference-reader.css"), join(DIST, "reference-reader.css"));
@@ -79,7 +95,7 @@ const manifest = {
   lexicon: "lexicon.json",
   episodes,
 };
-await writeFile(join(DIST, "manifest.json"), JSON.stringify(manifest, null, 2));
+await writeFile(join(DIST, "manifest.json"), mount(JSON.stringify(manifest, null, 2)));
 
 // Prerender each book's introduction and reader entry with its own content and metadata.
 // Client JavaScript then adds language selection and the interactive reading experience.
@@ -142,7 +158,7 @@ for (const e of episodes) {
         'The story begins. The next choice is <em>yours</em>.');
   }
   html = body + scripts;
-  await writeFile(join(DIST, "b", `${e.slug}.html`), html);
+  await writeFile(join(DIST, "b", `${e.slug}.html`), mount(html));
 
   // The reader is the JS app for the story; its canonical (and matching og:url)
   // point at the /b/<slug> landing page, so search/social signals consolidate on
@@ -160,7 +176,7 @@ for (const e of episodes) {
     .replace(/(<meta name="twitter:description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
     .replace(/(<meta name="twitter:image" content=")[^"]*(">)/, `$1${og}$2`)
     .replace(/<body>/, `<body>\n<script>window.__WM_READER_BOOK=${JSON.stringify(e.file)}</script>`);
-  await writeFile(join(DIST, "read", `${e.slug}.html`), reader);
+  await writeFile(join(DIST, "read", `${e.slug}.html`), mount(reader));
 }
 
 // SEO: a sitemap of the library + every book page, and a robots.txt pointing to it.
@@ -193,15 +209,15 @@ const homeDate = gitDate([
   "web/illustrations/catalog.json",
 ]);
 const urls = [
-  { loc: "/", lastmod: homeDate },
+  { loc: "", lastmod: homeDate },
   ...episodes.map(e => ({ loc: `/b/${e.slug}`, lastmod: bookDate(e) })),
 ];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n` +
   `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-  urls.map(u => `  <url><loc>${BASE}${u.loc}</loc><lastmod>${u.lastmod}</lastmod></url>`).join("\n") +
+  urls.map(u => `  <url><loc>${SITE}${PREFIX}${u.loc}</loc><lastmod>${u.lastmod}</lastmod></url>`).join("\n") +
   `\n</urlset>\n`;
 await writeFile(join(DIST, "sitemap.xml"), sitemap);
-await writeFile(join(DIST, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${BASE}/sitemap.xml\n`);
+await writeFile(join(OUT, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}${PREFIX}/sitemap.xml\n`);
 console.log("Wrote sitemap.xml + robots.txt");
 
 console.log(`Built ${episodes.length} episode(s) into dist/`);

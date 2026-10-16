@@ -30,7 +30,7 @@ reader sees can never disagree with the graph the app loads.
 
 ```bash
 npm run build          # build dist/
-npm run dev            # build and serve locally
+npm run dev            # build and serve locally — open /books/
 npm run validate       # flags, lexicon coverage, and palette contrast
 
 # validate one episode and render Markdown for every level
@@ -88,3 +88,9 @@ wrong gloss is worse than no gloss, because the learner cannot detect it.
 ## Deployment
 
 Static. Vercel builds with `npm run build` and serves `dist/`.
+
+The site lives at **www.antonyaddy.com/books**: the main site (addys-english-pro)
+forwards `/books/*` to this project at books.antonyaddy.com. `web/` is written
+as if it sat at the site root; `mount()` in `build-site.mjs` prefixes every
+path with `/books` and switches the domain to www as it writes each page into
+`dist/books/`. Canonicals and the sitemap use www addresses.

@@ -6,23 +6,90 @@
   "cleanUrls": false,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/b/:slug", "destination": "/b/:slug.html" }
+    {
+      "source": "/books",
+      "destination": "/books/index.html"
+    },
+    {
+      "source": "/books/read",
+      "destination": "/books/read.html"
+    },
+    {
+      "source": "/books/b/:slug",
+      "destination": "/books/b/:slug.html"
+    },
+    {
+      "source": "/books/read/:slug((?!.*\\.html$).*)",
+      "destination": "/books/read/:slug.html"
+    },
+    {
+      "source": "/",
+      "destination": "/books/index.html"
+    },
+    {
+      "source": "/b/:slug",
+      "destination": "/books/b/:slug.html"
+    },
+    {
+      "source": "/read/:slug((?!.*\\.html$).*)",
+      "destination": "/books/read/:slug.html"
+    },
+    {
+      "source": "/:path((?!books(?:/|$)|_vercel/).+)",
+      "destination": "/books/:path"
+    }
   ],
   "redirects": [
-    { "source": "/:path*", "has": [{ "type": "host", "value": "adventure-books-five.vercel.app" }], "destination": "https://books.antonyaddy.com/:path*", "permanent": true },
-    { "source": "/the-address", "destination": "/b/the-address", "permanent": true },
-    { "source": "/the-address.html", "destination": "/b/the-address", "permanent": true },
-    { "source": "/arrival", "destination": "/b/the-address", "permanent": true },
-    { "source": "/arrival.html", "destination": "/b/the-address", "permanent": true }
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "adventure-books-five.vercel.app"
+        }
+      ],
+      "destination": "https://www.antonyaddy.com/books/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/the-address",
+      "destination": "https://www.antonyaddy.com/books/b/the-address",
+      "permanent": true
+    },
+    {
+      "source": "/the-address.html",
+      "destination": "https://www.antonyaddy.com/books/b/the-address",
+      "permanent": true
+    },
+    {
+      "source": "/arrival",
+      "destination": "https://www.antonyaddy.com/books/b/the-address",
+      "permanent": true
+    },
+    {
+      "source": "/arrival.html",
+      "destination": "https://www.antonyaddy.com/books/b/the-address",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/(.*)\\.json",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
     },
     {
       "source": "/(.*)\\.(png|svg|webp|jpg|jpeg|ico|woff2)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
     }
   ]
 }
