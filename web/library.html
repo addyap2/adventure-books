@@ -192,8 +192,30 @@
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.book{transition:none}}
 </style>
 <link rel="stylesheet" href="/visual-polish.css">
+<style>
+/* Antony Addy bar: identical in every app served under www.antonyaddy.com.
+   Links visitors back to the main site; colours match its brand. */
+.aa-bar{position:relative;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:12px;height:36px;padding:0 16px;background:#111731;color:#e9e9f2;font:500 12.5px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;letter-spacing:0;text-transform:none}
+.aa-bar a{color:inherit;text-decoration:none}
+.aa-bar-home{display:inline-flex;min-width:0;align-items:center;gap:10px}
+.aa-bar-mark{display:inline-flex;flex:none;align-items:flex-end;gap:2px;height:14px}
+.aa-bar-mark i{display:block;width:3px;height:100%;border-radius:2px;background:#e8473b}
+.aa-bar-mark i:nth-child(2){height:75%;background:#8f78ff}
+.aa-bar-mark i:nth-child(3){height:50%;background:#f6a463}
+.aa-bar-home strong{flex:none;color:#fff;font-weight:650}
+.aa-bar-sub{overflow:hidden;color:#9aa2c0;white-space:nowrap;text-overflow:ellipsis}
+.aa-bar-contact{flex:none;padding:5px 12px;border:1px solid rgba(255,255,255,.22);border-radius:999px}
+.aa-bar-contact:hover{background:rgba(255,255,255,.1)}
+.aa-bar a:focus-visible{outline:2px solid #f6a463;outline-offset:2px;border-radius:4px}
+@media (max-width:560px){.aa-bar-sub{display:none}}
+@media print{.aa-bar{display:none}}
+</style>
 </head>
 <body>
+<nav class="aa-bar" aria-label="Antony Addy">
+  <a class="aa-bar-home" href="https://www.antonyaddy.com/"><span class="aa-bar-mark" aria-hidden="true"><i></i><i></i><i></i></span><strong>Antony Addy</strong><span class="aa-bar-sub">Formations d'anglais · antonyaddy.com</span></a>
+  <a class="aa-bar-contact" href="https://www.antonyaddy.com/contact">Contact</a>
+</nav>
 <script>document.body.dataset.page="library";</script>
 
 <header class="bar">
