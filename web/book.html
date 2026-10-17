@@ -23,9 +23,9 @@
 <meta name="twitter:description" content="You arrive at night in a city you don't know. A story where you are the hero — for English learners.">
 <meta name="twitter:image" content="https://books.antonyaddy.com/og-collection-the-address.png">
 <title>The Address — an interactive story</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<!-- Self-hosted fonts (web/fonts); Fraunces paints the headings, so it is preloaded. -->
+<link rel="preload" href="/fonts/fraunces-latin-normal-300-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
   :root{
     --ink:#0E1320; --ink-2:#0a0e19; --teal-deep:#173A34; --teal:#2F5D50;
@@ -465,6 +465,17 @@
       <p class="footline reveal d2"><b>English Reading Adventures</b> by Antony Addy</p>
     </div>
   </section>
+  <aside class="trainer-cta" aria-labelledby="trainerCtaTitle">
+    <div class="wrap">
+      <div class="trainer-cta-box">
+        <div>
+          <h2 id="trainerCtaTitle">Prefer to learn with a real trainer?</h2>
+          <p>Antony Addy, the certified trainer who writes these stories, runs English courses for professionals: one-to-one or for teams, remotely or in person.</p>
+        </div>
+        <a href="https://www.antonyaddy.com/contact?sujet=anglais">Talk to Antony <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </aside>
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>

@@ -24,9 +24,9 @@
 <meta name="twitter:title" content="Read a story — English Reading Adventures">
 <meta name="twitter:description" content="A story where you are the hero — for people learning English.">
 <meta name="twitter:image" content="https://books.antonyaddy.com/og-collection.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<!-- Self-hosted fonts (web/fonts); Fraunces paints the headings, so it is preloaded. -->
+<link rel="preload" href="/fonts/fraunces-latin-normal-300-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
 <script>/* set theme before paint to avoid a flash */try{var _p=JSON.parse(localStorage.getItem("ab:prefs")||"{}");document.documentElement.setAttribute("data-theme",_p.theme==="light"?"light":"dark");}catch(e){document.documentElement.setAttribute("data-theme","dark");}</script>
 <style>
   /* Nocturne — the reader shares the landing's world: ink night, one warm
@@ -907,7 +907,7 @@ function renderHome(){
     </div>
     <div class="panel">
       <div class="row"><span>I read English at</span><span class="seg" id="homeLevel">${levelSeg}</span></div>
-      <div class="row"><span>Word help</span><select class="sel" id="homeLang">${langOpts}</select></div>
+      <div class="row"><span>Word help</span><select class="sel" id="homeLang" aria-label="Word help language">${langOpts}</select></div>
     </div>
     <div class="filters"><span class="lbl">Browse</span>${viewSeg}</div>
     <div id="library"></div>`;
@@ -918,6 +918,16 @@ function renderHome(){
   window.scrollTo({top:0});
 }
 
+// Artwork images clear their placeholder tint once loaded; covers that 404 are
+// dropped so the tint stays. load/error don't bubble, so listen in the capture
+// phase — inline onload/onerror attributes would be blocked by the CSP.
+document.addEventListener("load", function(ev){
+  var t=ev.target; if(t && t.matches && t.matches("img[data-art]")) t.parentNode.classList.remove("ph");
+}, true);
+document.addEventListener("error", function(ev){
+  var t=ev.target; if(t && t.matches && t.matches("img[data-drop-on-error]")) t.remove();
+}, true);
+
 function bookCard(e){
   const key=`${e.series}:${e.episode}`, started=getProgress()[key]!=null;
   const h=hash(e.title||e.file), vars=`--h:${h%54-27};--x:${12+h%30};--y:${8+(h>>3)%26}`;
@@ -925,8 +935,8 @@ function bookCard(e){
   const focal=e.art?.focal||e.identity?.cover?.focal||"center";
   const cover=e.art?.cover||`/cover-${slug}.png`;
   // the book's own generated cover; falls back to the placeholder tint if it 404s
-  const img=`<img alt="" loading="lazy" src="${cover}" style="object-position:${focal}"
-         onload="this.parentNode.classList.remove('ph')" onerror="this.remove()">`;
+  // load/error are handled by the listener on document below (no inline handlers: CSP)
+  const img=`<img alt="" loading="lazy" src="${cover}" style="object-position:${focal}" data-art data-drop-on-error>`;
   return `<button class="book" data-file="${e.file}">
     <div class="art ph" style="${vars}"><span class="glyph">❦</span>${img}</div>
     <div class="book-body">
@@ -1033,8 +1043,7 @@ function artHTML(id,tag,cover,endKind){
   const tagHTML=tag?`<span class="tag">${tag}</span>`:"";
   const h=hash(key), vars=`--h:${h%54-27};--x:${12+h%30};--y:${8+(h>>3)%26}`;
   const img=haveImg.has(key)
-    ? `<img alt="" loading="lazy" src="${imgBase()}/${key}.webp"
-         onload="this.parentNode.classList.remove('ph')">` : "";
+    ? `<img alt="" loading="lazy" src="${imgBase()}/${key}.webp" data-art>` : "";
   return `<div class="art ph${scene?' endscene':''}" style="${vars}">
       ${mark}${tagHTML}${img}
     </div>`;
