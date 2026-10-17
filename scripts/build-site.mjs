@@ -3,6 +3,7 @@
 import { readdir, readFile, writeFile, mkdir, cp, rm } from "node:fs/promises";
 import { join } from "node:path";
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 
@@ -23,7 +24,7 @@ const PREFIX = "/books";
 const SITE = "https://www.antonyaddy.com";
 const OUT = join(ROOT, "dist");
 const DIST = join(OUT, PREFIX.slice(1));
-const ROOT_PATHS = /(["'`(])\/(?=(?:read\.html|read\/|b\/|cover-|og-|manifest\.json|scenes\/|illustrations\/|images\/|dict\/|gist\/|visual-polish\.css|reference-reader\.css|favicon\.svg))/g;
+const ROOT_PATHS = /(["'`(])\/(?=(?:fonts\/|read\.html|read\/|b\/|cover-|og-|manifest\.json|scenes\/|illustrations\/|images\/|dict\/|gist\/|visual-polish\.css|reference-reader\.css|favicon\.svg))/g;
 const mount = (text) => text
   .replace('<base href="/">', `<base href="${PREFIX}/">`)
   .replace(/https:\/\/books\.antonyaddy\.com\/(?=["'#])/g, `${SITE}${PREFIX}`)
@@ -32,7 +33,24 @@ const mount = (text) => text
   .replace(ROOT_PATHS, `$1${PREFIX}/`)
   .replace(/href="\/"/g, `href="${PREFIX}"`)
   .replace("fetch('/'+ep.file)", `fetch('${PREFIX}/'+ep.file)`);
-const mountFile = async (from, to) => writeFile(to, mount(await readFile(from, "utf8")));
+// Inline <script> blocks move into content-hashed files under /books/js, so
+// the Content-Security-Policy can stay at script-src 'self' with no hashes to
+// maintain. Order and blocking behaviour are unchanged: a plain
+// <script src> runs at the same point in parsing as the inline block did.
+const externalizeScripts = async (html) => {
+  await mkdir(join(DIST, "js"), { recursive: true });
+  const out = [];
+  let last = 0;
+  for (const m of html.matchAll(/<script>([\s\S]*?)<\/script>/g)) {
+    const name = createHash("sha256").update(m[1]).digest("hex").slice(0, 12) + ".js";
+    await writeFile(join(DIST, "js", name), m[1]);
+    out.push(html.slice(last, m.index), `<script src="${PREFIX}/js/${name}"></script>`);
+    last = m.index + m[0].length;
+  }
+  return out.join("") + html.slice(last);
+};
+const writeHtml = async (to, html) => writeFile(to, await externalizeScripts(mount(html)));
+const mountFile = async (from, to) => writeHtml(to, await readFile(from, "utf8"));
 const catalog = JSON.parse(await readFile(join(ROOT, "web", "illustrations", "catalog.json"), "utf8"));
 for (const [slug, art] of Object.entries(catalog)) {
   const assets = [art.cover, art.social, ...Object.values(art.scenes || {}), ...Object.values(art.endings || {})];
@@ -48,6 +66,7 @@ await mkdir(DIST, { recursive: true });
 await mountFile(join(ROOT, "web", "library.html"), join(DIST, "index.html"));    // / — the English Reading Adventures library (cards from manifest)
 await mountFile(join(ROOT, "web", "index.html"), join(DIST, "read.html"));       // the reader app
 await cp(join(ROOT, "web", "favicon.svg"), join(DIST, "favicon.svg"));
+await cp(join(ROOT, "web", "fonts"), join(DIST, "fonts"), { recursive: true });
 await cp(join(ROOT, "web", "visual-polish.css"), join(DIST, "visual-polish.css"));
 await cp(join(ROOT, "web", "reference-reader.css"), join(DIST, "reference-reader.css"));
 await cp(join(ROOT, "web", "cover-station.svg"), join(DIST, "cover-station.svg"));
@@ -158,7 +177,7 @@ for (const e of episodes) {
         'The story begins. The next choice is <em>yours</em>.');
   }
   html = body + scripts;
-  await writeFile(join(DIST, "b", `${e.slug}.html`), mount(html));
+  await writeHtml(join(DIST, "b", `${e.slug}.html`), html);
 
   // The reader is the JS app for the story; its canonical (and matching og:url)
   // point at the /b/<slug> landing page, so search/social signals consolidate on
@@ -176,7 +195,7 @@ for (const e of episodes) {
     .replace(/(<meta name="twitter:description" content=")[^"]*(">)/, `$1${attr(desc)}$2`)
     .replace(/(<meta name="twitter:image" content=")[^"]*(">)/, `$1${og}$2`)
     .replace(/<body>/, `<body>\n<script>window.__WM_READER_BOOK=${JSON.stringify(e.file)}</script>`);
-  await writeFile(join(DIST, "read", `${e.slug}.html`), mount(reader));
+  await writeHtml(join(DIST, "read", `${e.slug}.html`), reader);
 }
 
 // SEO: a sitemap of the library + every book page, and a robots.txt pointing to it.

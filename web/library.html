@@ -28,9 +28,9 @@
 {"@type":"Organization","@id":"https://books.antonyaddy.com/#org","name":"English Reading Adventures","url":"https://books.antonyaddy.com/","logo":"https://books.antonyaddy.com/og-collection.png","founder":{"@type":"Person","name":"Antony Addy"}}
 ]}
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<!-- Self-hosted fonts (web/fonts); Fraunces paints the headings, so it is preloaded. -->
+<link rel="preload" href="/fonts/fraunces-latin-normal-300-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
   :root{
     /* neutral shell — books supply the colour; the library stays restrained */
@@ -115,7 +115,7 @@
   .langpick button:focus-visible{outline:2px solid var(--amber-hot);outline-offset:2px}
   /* global keyboard-focus fallback so every focusable element shows a ring */
   a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--amber-hot);outline-offset:3px;border-radius:6px}
-  .tagline[dir=rtl],.intro[dir=rtl],.step h4[dir=rtl],.step p[dir=rtl]{text-align:right}
+  .tagline[dir=rtl],.intro[dir=rtl],.step h3[dir=rtl],.step p[dir=rtl]{text-align:right}
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
   /* how it works */
@@ -124,7 +124,7 @@
   @media(min-width:720px){.how-grid{grid-template-columns:repeat(3,1fr);gap:34px}}
   .step{display:flex;flex-direction:column;gap:8px}
   .step .n{font-family:var(--mono);font-size:12px;letter-spacing:.24em;color:var(--amber)}
-  .step h4{font-family:var(--serif);font-weight:400;font-size:1.3rem;margin:0;letter-spacing:-.01em;color:#fff}
+  .step h3{font-family:var(--serif);font-weight:400;font-size:1.3rem;margin:0;letter-spacing:-.01em;color:#fff}
   .step p{margin:0;color:#aeb6c6;font-size:.98rem;line-height:1.55}
   .langs{margin:clamp(26px,5vh,42px) 0 0;display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px}
   .langs .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
@@ -252,17 +252,17 @@
       <div class="how-grid" id="howGrid">
         <div class="step">
           <span class="n">01</span>
-          <h4 class="morph" id="s1h">Pick your level</h4>
+          <h3 class="morph" id="s1h">Pick your level</h3>
           <p class="morph" id="s1b">Read at A2, B1, or B2 &mdash; beginner to advanced &mdash; and change it any time, even mid-story. Every level follows the same path, so a whole class can read one book together.</p>
         </div>
         <div class="step">
           <span class="n">02</span>
-          <h4 class="morph" id="s2h">Read and choose</h4>
+          <h3 class="morph" id="s2h">Read and choose</h3>
           <p class="morph" id="s2b">Every page ends in a decision, and you decide what happens next. Choosing well means understanding what you just read.</p>
         </div>
         <div class="step">
           <span class="n">03</span>
-          <h4 class="morph" id="s3h">Tap any word</h4>
+          <h3 class="morph" id="s3h">Tap any word</h3>
           <p class="morph" id="s3b">See its meaning in your own language, right where you are &mdash; the English first, your language as the safety net beneath it.</p>
         </div>
       </div>
@@ -461,6 +461,18 @@
   show(0);
 })();
 </script>
+
+<aside class="trainer-cta" aria-labelledby="trainerCtaTitle">
+  <div class="wrap">
+    <div class="trainer-cta-box">
+      <div>
+        <h2 id="trainerCtaTitle">Prefer to learn with a real trainer?</h2>
+        <p>Antony Addy, the certified trainer who writes these stories, runs English courses for professionals: one-to-one or for teams, remotely or in person.</p>
+      </div>
+      <a href="https://www.antonyaddy.com/contact?sujet=anglais">Talk to Antony <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</aside>
 
 <footer><div class="wrap"><b>English Reading Adventures</b> by Antony Addy &nbsp;&middot;&nbsp; A2 B1 B2 &nbsp;&middot;&nbsp; 8 languages</div></footer>
 
