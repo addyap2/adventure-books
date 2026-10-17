@@ -579,8 +579,8 @@
         var ld={"@context":"https://schema.org","@type":"Book","name":book.title,
           "url":base+'/b/'+bslug,"inLanguage":"en","abstract":(book.blurb||''),
           "image":base+(artwork.social||'/og-'+bslug+'.png'),
-          "author":{"@type":"Person","name":"Antony Addy"},
-          "publisher":{"@type":"Organization","name":"English Reading Adventures"},
+          "author":{"@type":"Person","@id":"https://www.antonyaddy.com/#antony-addy","name":"Antony Addy","url":"https://www.antonyaddy.com"},
+          "publisher":{"@type":"ProfessionalService","@id":"https://www.antonyaddy.com/#business","name":"Antony Addy","url":"https://www.antonyaddy.com"},
           "isAccessibleForFree":true,"genre":"Interactive fiction",
           "audience":{"@type":"Audience","audienceType":"English language learners"}};
         var lds=document.createElement('script'); lds.type='application/ld+json';
