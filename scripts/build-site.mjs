@@ -156,9 +156,10 @@ for (const e of episodes) {
     .replace(/(<span class="sr-only">)[^<]*(<\/span>)/, `$1${headline}$2`)
     .replace(/(<span class="morph" aria-hidden="true" id="morph">)[^<]*(<\/span>)/, `$1${headline}$2`)
     .replace(/(<p class="sub">)[\s\S]*?(<\/p>)/, `$1${sub}$2`)
-    .replaceAll('/read.html?book=episode-01.json&amp;', `/read/${e.slug}.html?`)
-    .replaceAll('/read.html?book=episode-01.json', `/read/${e.slug}.html`)
-    .replace('href="/read.html"', `href="/read/${e.slug}.html"`);
+    // Clean reader URLs: vercel.json redirects /read/<slug>.html to /read/<slug>.
+    .replaceAll('/read.html?book=episode-01.json&amp;', `/read/${e.slug}?`)
+    .replaceAll('/read.html?book=episode-01.json', `/read/${e.slug}`)
+    .replace('href="/read.html"', `href="/read/${e.slug}"`);
   const cover = e.art?.cover || `/cover-${e.slug}.png`;
   if (existsSync(join(ROOT, "web", cover.slice(1)))) {
     const focal = e.art?.focal || e.identity?.cover?.focal || "center";

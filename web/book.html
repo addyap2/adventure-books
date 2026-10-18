@@ -621,7 +621,7 @@
       }
       var eb=document.querySelector('.eyebrow'); if(eb) eb.textContent='An Interactive Story';
       var sub=document.querySelector('.sub'); if(sub && hero.sub) sub.textContent=hero.sub;
-      var readHref='/read/'+(book.slug||ep.slug)+'.html';
+      var readHref='/read/'+(book.slug||ep.slug);
       document.querySelectorAll('a[href^="/read.html?book=episode-01.json"]').forEach(function(a){
         var old=new URL(a.getAttribute('href'),location.origin);
         old.searchParams.delete('book');
