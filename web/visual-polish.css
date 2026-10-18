@@ -157,7 +157,7 @@ body[data-page="book"] .hero-copy .langpick {max-width:640px;background:#fffdf9f
  body[data-page="library"] .hero-cta {order:3;}
  body[data-page] .langpick {padding:16px;gap:8px;margin-block:20px 16px;}
  body[data-page] .langpick button {flex:1 0 calc(33.33% - 8px);padding:10px 4px;font-size:13px;}
- body[data-page="book"] .hero-copy {padding-top:100px;}
+ body[data-page="book"] .hero-copy {padding-top:156px;} /* clears the fixed bar + header */
 }
 
 body[data-page] .langpick .lbl,body[data-page] .langpick .lp-lbl {font-size:15px;}
