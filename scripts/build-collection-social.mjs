@@ -29,11 +29,11 @@ try {
     .collection .footer{display:flex;justify-content:space-between;margin-top:32px}
   </style>`;
   for (const book of books) {
-    await page.setContent(style + `<main><img class="art" src="${book.image}" alt=""><div class="copy"><span class="eyebrow">An adventure in English</span><h1>${esc(book.title)}</h1><p>A story shaped by your choices.</p><div class="footer">A2 · B1 · B2 &nbsp; / &nbsp; Free to read<br><br>English Reading Adventures · Antony Addy</div></div></main>`);
+    await page.setContent(style + `<main><img class="art" src="${book.image}" alt=""><div class="copy"><span class="eyebrow">An adventure in English</span><h1>${esc(book.title)}</h1><p>A story shaped by your choices.</p><div class="footer">A2 · B1 · B2 &nbsp; / &nbsp; Free during launch<br><br>English Reading Adventures · Antony Addy</div></div></main>`);
     await page.locator('img').evaluate(img => img.decode());
     await page.screenshot({ path: new URL(book.art.social.slice(1), web).pathname });
   }
-  await page.setContent(style + `<main class="collection"><span class="eyebrow">English Reading Adventures</span><h1>Eight stories. Your own way through.</h1><div class="covers">${books.map(book => `<img src="${book.image}" alt="">`).join('')}</div><div class="footer"><span>Learn English. Live a story.</span><span>A2 · B1 · B2 &nbsp; / &nbsp; Free to read</span></div></main>`);
+  await page.setContent(style + `<main class="collection"><span class="eyebrow">English Reading Adventures</span><h1>Eight stories. Your own way through.</h1><div class="covers">${books.map(book => `<img src="${book.image}" alt="">`).join('')}</div><div class="footer"><span>Learn English. Live a story.</span><span>A2 · B1 · B2 &nbsp; / &nbsp; Free during launch</span></div></main>`);
   await page.locator('img').evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
   await page.screenshot({ path: new URL('og-collection.png', web).pathname });
   console.log(`Built ${books.length} book sharing cards and the collection card.`);
