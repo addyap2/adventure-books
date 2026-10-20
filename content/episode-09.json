@@ -1740,16 +1740,16 @@
     {
       "id": 60,
       "text": {
-        "A2": "[stub §60 — prose to be written]",
-        "B1": "[stub §60 — prose to be written]",
-        "B2": "[stub §60 — prose to be written]"
+        "A2": "A neighbour stops you. 'There's someone down the road,' they say, 'out in the rain, lost. Been there an hour. No coat, no umbrella.' Out there is just the dark and the cold. If no one goes to them, they'll be there all night.",
+        "B1": "A neighbour stops you. 'There's someone down the road,' they say, 'standing out in the rain, lost. Been there an hour. No coat, no umbrella.' Out there is just the dark and the cold. If no one goes to them, they'll be there all night.",
+        "B2": "A neighbour stops you in the street. 'There's someone down the road,' they say, 'standing out in the rain, quite lost. Been there the best part of an hour. No coat, no umbrella, nothing.' Out there is just the dark and the cold. If no one goes to them tonight, they'll be there until morning."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §61]",
-            "B1": "[choice 1 → §61]",
-            "B2": "[choice 1 → §61]"
+            "A2": "Go to them.",
+            "B1": "Go to them.",
+            "B2": "Go to them."
           },
           "goto": 61,
           "sets": [
@@ -1758,9 +1758,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §62]",
-            "B1": "[choice 2 → §62]",
-            "B2": "[choice 2 → §62]"
+            "A2": "Send someone else.",
+            "B1": "Send someone else.",
+            "B2": "Send someone else."
           },
           "goto": 62
         }
@@ -1769,24 +1769,24 @@
     {
       "id": 61,
       "text": {
-        "A2": "[stub §61 — prose to be written]",
-        "B1": "[stub §61 — prose to be written]",
-        "B2": "[stub §61 — prose to be written]"
+        "A2": "You find them down the road, soaked through and shaking, lost. The cold has got right into them. They don't seem to know where they are. You take a firm hold of their arm. 'Come with me,' you say. 'You're all right now. I've got you.'",
+        "B1": "You find them down the road, soaked through and shaking, lost. The cold has got right into them. They don't seem to know quite where they are. You take a firm hold of their arm. 'Come with me,' you say. 'You're all right now. I've got you.'",
+        "B2": "You find them down the road, soaked through and shaking, utterly lost. The cold has got right into them. They don't seem to know quite where they are, or who you are. You take a firm hold of their arm. 'Come with me,' you say, over the rain. 'You're all right now. I've got you.'"
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §63]",
-            "B1": "[choice 1 → §63]",
-            "B2": "[choice 1 → §63]"
+            "A2": "Walk them in.",
+            "B1": "Walk them in.",
+            "B2": "Walk them in."
           },
           "goto": 63
         },
         {
           "text": {
-            "A2": "[choice 2 → §33]",
-            "B1": "[choice 2 → §33]",
-            "B2": "[choice 2 → §33]"
+            "A2": "Back to the dinner.",
+            "B1": "Back to the dinner.",
+            "B2": "Back to the dinner."
           },
           "goto": 33
         }
@@ -1795,24 +1795,24 @@
     {
       "id": 62,
       "text": {
-        "A2": "[stub §62 — prose to be written]",
-        "B1": "[stub §62 — prose to be written]",
-        "B2": "[stub §62 — prose to be written]"
+        "A2": "You can't do it all at once, and the dinner needs you most. So you send word for someone else to go to them, and press on home. It sits badly with you. But tonight you have to choose, and keep choosing.",
+        "B1": "You can't do it all at once, and the dinner needs you most of all. So you send word for someone else to go to them, and press on home. It sits badly with you. But tonight you have to choose, and keep on choosing.",
+        "B2": "You can't do it all at once, and the dinner needs you most of all tonight. So you send word for someone else to go to them, and press on home through the rain. It sits badly with you, and will for a while. But tonight you have to choose, and keep on choosing."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §6]",
-            "B1": "[choice 1 → §6]",
-            "B2": "[choice 1 → §6]"
+            "A2": "On home.",
+            "B1": "On home.",
+            "B2": "On home."
           },
           "goto": 6
         },
         {
           "text": {
-            "A2": "[choice 2 → §33]",
-            "B1": "[choice 2 → §33]",
-            "B2": "[choice 2 → §33]"
+            "A2": "Get on with it.",
+            "B1": "Get on with it.",
+            "B2": "Get on with it."
           },
           "goto": 33
         }
@@ -1821,24 +1821,24 @@
     {
       "id": 63,
       "text": {
-        "A2": "[stub §63 — prose to be written]",
-        "B1": "[stub §63 — prose to be written]",
-        "B2": "[stub §63 — prose to be written]"
+        "A2": "You walk them safely to a warm doorway, where friends take them in. Their faces fill with relief. They wrap the stranger in a dry coat and sit them down by the fire. 'Thank you,' they keep saying to you. But your own kitchen is waiting, and you can't stay long.",
+        "B1": "You walk them safely to a warm doorway, where friends take them in. Their faces fill with relief. They wrap the stranger in a dry coat and sit them down by the fire. 'Thank you,' they keep saying to you. But your own kitchen is waiting, and you can't stay long tonight.",
+        "B2": "You walk them safely to a warm doorway, where friends take them in at once. Their faces fill with relief at the sight. They wrap the stranger in a dry coat and sit them down by the fire. 'Thank you,' they keep saying to you, over and over. But your own kitchen is waiting across the dark, and you can't stay long."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §33]",
-            "B1": "[choice 1 → §33]",
-            "B2": "[choice 1 → §33]"
+            "A2": "Back out into it.",
+            "B1": "Back out into it.",
+            "B2": "Back out into it."
           },
           "goto": 33
         },
         {
           "text": {
-            "A2": "[choice 2 → §90]",
-            "B1": "[choice 2 → §90]",
-            "B2": "[choice 2 → §90]"
+            "A2": "Home at last.",
+            "B1": "Home at last.",
+            "B2": "Home at last."
           },
           "goto": 90
         }
@@ -1847,24 +1847,24 @@
     {
       "id": 64,
       "text": {
-        "A2": "[stub §64 — prose to be written]",
-        "B1": "[stub §64 — prose to be written]",
-        "B2": "[stub §64 — prose to be written]"
+        "A2": "You stop and look down the long wet street. The rain falls through the lamplight, soft and steady. The houses are dark, the curtains drawn, everyone in for the night. Only one small light moves, far off. The whole street seems to hold its breath.",
+        "B1": "You stop and look down the long wet street. The rain falls through the lamplight, soft and steady. The houses are dark, the curtains drawn, everyone in for the night. Only one small light moves, far off down the road. The whole street seems to hold its breath.",
+        "B2": "You stop and look down the long, wet street. The rain falls through the lamplight, soft and steady and endless. The houses are dark, the curtains drawn, everyone in for the night. Only one small light moves, far off down the road, where it has no business being. The whole street seems to hold its breath and wait."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §30]",
-            "B1": "[choice 1 → §30]",
-            "B2": "[choice 1 → §30]"
+            "A2": "On down the street.",
+            "B1": "On down the street.",
+            "B2": "On down the street."
           },
           "goto": 30
         },
         {
           "text": {
-            "A2": "[choice 2 → §70]",
-            "B1": "[choice 2 → §70]",
-            "B2": "[choice 2 → §70]"
+            "A2": "That light, far off.",
+            "B1": "That light, far off.",
+            "B2": "That light, far off."
           },
           "goto": 70
         }
@@ -1873,24 +1873,24 @@
     {
       "id": 65,
       "text": {
-        "A2": "[stub §65 — prose to be written]",
-        "B1": "[stub §65 — prose to be written]",
-        "B2": "[stub §65 — prose to be written]"
+        "A2": "The night turns as hard as it gets. The rain comes down in sheets now, and the cold bites through your coat. It's hard to think, hard to move, hard to care. Your bags feel like lead. This is the worst of it.",
+        "B1": "The night turns as hard as it gets now. The rain comes down in sheets, and the cold bites through your coat. It's hard to think, hard to move, hard to care. Your bags feel like lead in your hands. This is the worst of it — the hardest part of the whole evening.",
+        "B2": "The night turns as hard as it is going to get. The rain comes down in sheets now, and the cold bites straight through your coat. It's hard to think, hard to move, hard to care about any of it. Your bags feel like lead in your hands. This is the worst of it — the hardest part of the whole long evening."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §32]",
-            "B1": "[choice 1 → §32]",
-            "B2": "[choice 1 → §32]"
+            "A2": "A house with no dinner.",
+            "B1": "A house with no dinner.",
+            "B2": "A house with no dinner."
           },
           "goto": 32
         },
         {
           "text": {
-            "A2": "[choice 2 → §33]",
-            "B1": "[choice 2 → §33]",
-            "B2": "[choice 2 → §33]"
+            "A2": "Keep going.",
+            "B1": "Keep going.",
+            "B2": "Keep going."
           },
           "goto": 33
         }
@@ -1899,24 +1899,24 @@
     {
       "id": 67,
       "text": {
-        "A2": "[stub §67 — prose to be written]",
-        "B1": "[stub §67 — prose to be written]",
-        "B2": "[stub §67 — prose to be written]"
+        "A2": "Old Sam presses a parcel into your hands — the last good cut of meat in the shop. 'For the table,' he says. 'Go on, take it. I'll put it on the tab.' His face is kind under the shop light. It's what he has to give tonight, and he gives it gladly.",
+        "B1": "Old Sam presses a parcel into your hands — the last good cut of meat in the shop. 'For the table,' he says. 'Go on, take it. I'll put it on your tab.' His face is kind under the shop light. It's what he has to give tonight, and he gives all of it gladly.",
+        "B2": "Old Sam presses a wrapped parcel into your hands — the last good cut of meat left in the shop. 'For the table,' he says. 'Go on, take it. I'll put it on your tab.' His face is kind under the shop light. It's what he has to give tonight, and he gives every bit of it gladly."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §21]",
-            "B1": "[choice 1 → §21]",
-            "B2": "[choice 1 → §21]"
+            "A2": "Thank him and go.",
+            "B1": "Thank him and go.",
+            "B2": "Thank him and go."
           },
           "goto": 21
         },
         {
           "text": {
-            "A2": "[choice 2 → §22]",
-            "B1": "[choice 2 → §22]",
-            "B2": "[choice 2 → §22]"
+            "A2": "Ask what else you'll need.",
+            "B1": "Ask what else you'll need.",
+            "B2": "Ask what else you'll need."
           },
           "goto": 22
         }
@@ -1925,24 +1925,24 @@
     {
       "id": 68,
       "text": {
-        "A2": "[stub §68 — prose to be written]",
-        "B1": "[stub §68 — prose to be written]",
-        "B2": "[stub §68 — prose to be written]"
+        "A2": "At the shop door, people are grabbing the last of the food. Voices rise, hands push, fear spreading fast. One more shove and it's a fight. You can try to calm them and share it out fairly. Or you can grab what's yours and go.",
+        "B1": "At the shop door, people are grabbing the last of the food. Voices rise, hands push, fear spreading fast through the queue. One more shove and it's a fight. You can try to calm them and share it out fairly. Or you can grab what's yours and go.",
+        "B2": "At the shop door, people are grabbing the last of the food off the shelves. Voices rise, hands push, fear spreading fast through the queue. One more shove and it tips into a fight. You can try to calm them down and share it out fairly. Or you can grab what's yours and go."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §19]",
-            "B1": "[choice 1 → §19]",
-            "B2": "[choice 1 → §19]"
+            "A2": "Calm them, share it out.",
+            "B1": "Calm them, share it out.",
+            "B2": "Calm them, share it out."
           },
           "goto": 19
         },
         {
           "text": {
-            "A2": "[choice 2 → §9]",
-            "B1": "[choice 2 → §9]",
-            "B2": "[choice 2 → §9]"
+            "A2": "Grab yours and go.",
+            "B1": "Grab yours and go.",
+            "B2": "Grab yours and go."
           },
           "goto": 9
         }
@@ -1951,16 +1951,16 @@
     {
       "id": 69,
       "text": {
-        "A2": "[stub §69 — prose to be written]",
-        "B1": "[stub §69 — prose to be written]",
-        "B2": "[stub §69 — prose to be written]"
+        "A2": "A dark, quiet corner by the gate, where nothing seems to move. The rain drips. The cold creeps in. Then you hear it — breathing, weak and close, out of the dark. Someone is here after all, huddled down against the wall.",
+        "B1": "A dark, quiet corner by the gate, where nothing seems to move at all. The rain drips. The cold creeps in. Then you hear it — breathing, weak and close, out of the dark. Someone is here after all, huddled down against the wall.",
+        "B2": "A dark, quiet corner by the gate, where nothing seems to move at all. The rain drips from the eaves. The cold creeps in around you. Then you hear it — breathing, weak and close, somewhere out of the dark. Someone is here after all, huddled down against the cold wall."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §74]",
-            "B1": "[choice 1 → §74]",
-            "B2": "[choice 1 → §74]"
+            "A2": "Reach them.",
+            "B1": "Reach them.",
+            "B2": "Reach them."
           },
           "goto": 74,
           "sets": [
@@ -1969,9 +1969,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §90]",
-            "B1": "[choice 2 → §90]",
-            "B2": "[choice 2 → §90]"
+            "A2": "Hurry inside.",
+            "B1": "Hurry inside.",
+            "B2": "Hurry inside."
           },
           "goto": 90
         }
@@ -1980,24 +1980,24 @@
     {
       "id": 70,
       "text": {
-        "A2": "[stub §70 — prose to be written]",
-        "B1": "[stub §70 — prose to be written]",
-        "B2": "[stub §70 — prose to be written]"
+        "A2": "Far down the dark street, a small light lifts and fades. It's out where no one should be, this late, in this rain. Showing, then gone, then showing again. You can't explain it. And something in you wants to go and answer it.",
+        "B1": "Far down the dark street, a small light lifts and fades. It's out where no one should be, this late, in this rain. Showing, then gone, then showing again. No one could explain it. And something in you wants to go and answer it.",
+        "B2": "Far down the dark street, a small light lifts and fades, lifts and fades. It's out where no one should be, this late, in this kind of rain. Showing, then gone, then showing again, patient as anything. No one could explain it. And something in you wants to go and answer it."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §71]",
-            "B1": "[choice 1 → §71]",
-            "B2": "[choice 1 → §71]"
+            "A2": "Go and see.",
+            "B1": "Go and see.",
+            "B2": "Go and see."
           },
           "goto": 71
         },
         {
           "text": {
-            "A2": "[choice 2 → §90]",
-            "B1": "[choice 2 → §90]",
-            "B2": "[choice 2 → §90]"
+            "A2": "Leave it, get home.",
+            "B1": "Leave it, get home.",
+            "B2": "Leave it, get home."
           },
           "goto": 90
         }
@@ -2006,32 +2006,32 @@
     {
       "id": 71,
       "text": {
-        "A2": "[stub §71 — prose to be written]",
-        "B1": "[stub §71 — prose to be written]",
-        "B2": "[stub §71 — prose to be written]"
+        "A2": "You go down toward the light and call into the dark. No answer comes but the rain. Then you see it — a small shape, down low against a wall, half-hidden in the dark. Someone is out here after all. And they are barely moving.",
+        "B1": "You go down toward the light and call into the dark. No answer comes back but the rain. Then you see it — a small shape, down low against a wall, half-hidden in the dark. Someone is out here after all. And they are barely moving.",
+        "B2": "You go on down toward the light and call into the dark. No answer comes back but the rain and the wind. Then you see it — a small shape, down low against a wall, half-hidden in the dark. Someone is out here after all, alone. And they are barely moving now."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §72]",
-            "B1": "[choice 1 → §72]",
-            "B2": "[choice 1 → §72]"
+            "A2": "Go to them.",
+            "B1": "Go to them.",
+            "B2": "Go to them."
           },
           "goto": 72
         },
         {
           "text": {
-            "A2": "[choice 2 → §73]",
-            "B1": "[choice 2 → §73]",
-            "B2": "[choice 2 → §73]"
+            "A2": "Call again.",
+            "B1": "Call again.",
+            "B2": "Call again."
           },
           "goto": 73
         },
         {
           "text": {
-            "A2": "[choice 3 → §78]",
-            "B1": "[choice 3 → §78]",
-            "B2": "[choice 3 → §78]"
+            "A2": "Look closer first.",
+            "B1": "Look closer first.",
+            "B2": "Look closer first."
           },
           "goto": 78
         }
@@ -2040,16 +2040,16 @@
     {
       "id": 72,
       "text": {
-        "A2": "[stub §72 — prose to be written]",
-        "B1": "[stub §72 — prose to be written]",
-        "B2": "[stub §72 — prose to be written]"
+        "A2": "You reach them, and your heart turns over. It's a young woman — Nora — huddled against the wall, soaked and shaking, barely awake. The cold has got right into her. There's no time to stop and think. You have to do something now.",
+        "B1": "You reach them, and your heart turns over. It's a young woman — Nora — huddled against the wall, soaked and shaking, barely awake. The cold has got right into her. There's no time to stop and think about it. You have to do something now.",
+        "B2": "You reach them, and your heart turns right over. It's a young woman — Nora — huddled against the wall, soaked and shaking, barely awake at all. The cold has got right into her now. There's no time to stop and think it through. You have to do something, and do it now."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §74]",
-            "B1": "[choice 1 → §74]",
-            "B2": "[choice 1 → §74]"
+            "A2": "Get her up.",
+            "B1": "Get her up.",
+            "B2": "Get her up."
           },
           "goto": 74,
           "sets": [
@@ -2058,9 +2058,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §75]",
-            "B1": "[choice 2 → §75]",
-            "B2": "[choice 2 → §75]"
+            "A2": "Run for help.",
+            "B1": "Run for help.",
+            "B2": "Run for help."
           },
           "goto": 75
         }
@@ -2069,24 +2069,24 @@
     {
       "id": 73,
       "text": {
-        "A2": "[stub §73 — prose to be written]",
-        "B1": "[stub §73 — prose to be written]",
-        "B2": "[stub §73 — prose to be written]"
+        "A2": "You call again into the dark, and for a moment there's nothing. Then a thin voice comes back, shaking with cold: 'Here! Over here!' Someone is out in the rain, and they need help. And they don't sound strong at all.",
+        "B1": "You call again into the dark, and for a moment there's nothing at all. Then a thin voice comes back, shaking with cold: 'Here! Over here!' Someone is out in the rain, and they need help. And they don't sound strong at all.",
+        "B2": "You call again into the dark, and for a long moment there's nothing at all. Then a thin voice comes back, torn and shaking with cold: 'Here! Over here!' Someone is out in the rain, and they need help badly. And they don't sound strong at all. You cup your hands and shout back into the rain."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §72]",
-            "B1": "[choice 1 → §72]",
-            "B2": "[choice 1 → §72]"
+            "A2": "Go to the voice.",
+            "B1": "Go to the voice.",
+            "B2": "Go to the voice."
           },
           "goto": 72
         },
         {
           "text": {
-            "A2": "[choice 2 → §75]",
-            "B1": "[choice 2 → §75]",
-            "B2": "[choice 2 → §75]"
+            "A2": "Run for help.",
+            "B1": "Run for help.",
+            "B2": "Run for help."
           },
           "goto": 75
         }
@@ -2095,24 +2095,24 @@
     {
       "id": 74,
       "text": {
-        "A2": "[stub §74 — prose to be written]",
-        "B1": "[stub §74 — prose to be written]",
-        "B2": "[stub §74 — prose to be written]"
+        "A2": "You get Nora up out of the wet and wrap her tight in your coat. Slowly she comes round, gripping your arm. 'The door,' she whispers. 'Is the door still open...?' Even now, half-frozen, she's thinking of someone's door.",
+        "B1": "You get Nora up out of the wet and wrap her tight in your own coat. Slowly she comes round, gripping your arm. 'The door,' she whispers. 'Is the door still open...?' Even now, half-frozen, she's thinking of someone's door.",
+        "B2": "You get Nora up out of the wet and wrap her tight in your own coat. Slowly she comes round, gripping your arm hard. 'The door,' she whispers. 'Is the door still open...?' Even now, half-frozen in the rain, she's thinking of someone's door. You keep your arm around her, and hold on."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §76]",
-            "B1": "[choice 1 → §76]",
-            "B2": "[choice 1 → §76]"
+            "A2": "Ask what she means.",
+            "B1": "Ask what she means.",
+            "B2": "Ask what she means."
           },
           "goto": 76
         },
         {
           "text": {
-            "A2": "[choice 2 → §90]",
-            "B1": "[choice 2 → §90]",
-            "B2": "[choice 2 → §90]"
+            "A2": "Get her home and warm.",
+            "B1": "Get her home and warm.",
+            "B2": "Get her home and warm."
           },
           "goto": 90
         }
@@ -2121,24 +2121,24 @@
     {
       "id": 75,
       "text": {
-        "A2": "[stub §75 — prose to be written]",
-        "B1": "[stub §75 — prose to be written]",
-        "B2": "[stub §75 — prose to be written]"
+        "A2": "You turn to run for help — then stop short. There's no one out here to call, not at this hour. No neighbours up, no one coming. It's you or no one, and she knows it too. Her frightened eyes follow you in the dark.",
+        "B1": "You turn to run for help — then stop short. There's no one out here to call, not at this hour. No neighbours up, no one coming for you. It's you or no one now, and she knows it too. Her frightened eyes follow you in the dark.",
+        "B2": "You turn to run for help — then stop short. There's no one out here to call on, not at this hour of the night. No neighbours up, no one coming for either of you. It's you or no one now, and she knows it too. Her frightened eyes follow you in the dark."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §72]",
-            "B1": "[choice 1 → §72]",
-            "B2": "[choice 1 → §72]"
+            "A2": "Then it's you. Go to her.",
+            "B1": "Then it's you. Go to her.",
+            "B2": "Then it's you. Go to her."
           },
           "goto": 72
         },
         {
           "text": {
-            "A2": "[choice 2 → §90]",
-            "B1": "[choice 2 → §90]",
-            "B2": "[choice 2 → §90]"
+            "A2": "Panic and run home.",
+            "B1": "Panic and run home.",
+            "B2": "Panic and run home."
           },
           "goto": 90
         }
@@ -2147,24 +2147,24 @@
     {
       "id": 76,
       "text": {
-        "A2": "[stub §76 — prose to be written]",
-        "B1": "[stub §76 — prose to be written]",
-        "B2": "[stub §76 — prose to be written]"
+        "A2": "Nora looks up at you, her eyes clearer now. 'Ivy's my gran,' she says. 'We haven't spoken in years. Not since my mum and her fell out. It's a long, sad story.' And you hear just how long it is.",
+        "B1": "Nora looks up at you, her eyes clearer now. 'Ivy's my gran,' she says. 'We haven't spoken in years. Not since my mum and her fell out. It's a long, sad story.' And you can hear just how long it is.",
+        "B2": "Nora looks up at you, her eyes a little clearer now. 'Ivy's my gran,' she says. 'We haven't spoken in years. Not since my mum and her fell out, back then. It's a long, sad story.' And you can hear, in her voice, just how long it is."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §77]",
-            "B1": "[choice 1 → §77]",
-            "B2": "[choice 1 → §77]"
+            "A2": "Bring them together tonight.",
+            "B1": "Bring them together tonight.",
+            "B2": "Bring them together tonight."
           },
           "goto": 77
         },
         {
           "text": {
-            "A2": "[choice 2 → §90]",
-            "B1": "[choice 2 → §90]",
-            "B2": "[choice 2 → §90]"
+            "A2": "Just get her warm first.",
+            "B1": "Just get her warm first.",
+            "B2": "Just get her warm first."
           },
           "goto": 90
         }
@@ -2173,24 +2173,24 @@
     {
       "id": 77,
       "text": {
-        "A2": "[stub §77 — prose to be written]",
-        "B1": "[stub §77 — prose to be written]",
-        "B2": "[stub §77 — prose to be written]"
+        "A2": "You decide to get them face to face before the night is out. Nora and old Gran Ivy, after all these years. It's a small thing, next to everything else tonight. But it's not nothing. Some shut doors can still be opened.",
+        "B1": "You decide to get them face to face before the night is out. Nora and old Gran Ivy, after all these years apart. It's a small thing, next to everything else tonight. But it's not nothing. Some shut doors can still be opened.",
+        "B2": "You decide to get them face to face before the night is out. Nora and old Gran Ivy, after all these long years apart. It's a small thing, perhaps, next to everything else tonight. But it is not nothing. Some shut doors can still be opened, if someone tries. And tonight, it seems, that someone is you."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §90]",
-            "B1": "[choice 1 → §90]",
-            "B2": "[choice 1 → §90]"
+            "A2": "Home, with Nora.",
+            "B1": "Home, with Nora.",
+            "B2": "Home, with Nora."
           },
           "goto": 90
         },
         {
           "text": {
-            "A2": "[choice 2 → §74]",
-            "B1": "[choice 2 → §74]",
-            "B2": "[choice 2 → §74]"
+            "A2": "Get her warm first.",
+            "B1": "Get her warm first.",
+            "B2": "Get her warm first."
           },
           "goto": 74
         }
@@ -2199,24 +2199,24 @@
     {
       "id": 78,
       "text": {
-        "A2": "[stub §78 — prose to be written]",
-        "B1": "[stub §78 — prose to be written]",
-        "B2": "[stub §78 — prose to be written]"
+        "A2": "The small shape isn't moving, and the cold is working on it, slow and patient. And yet someone came all this way out here, in the rain, alone. You can't just leave them lying in the wet. You have to go closer and see who it is.",
+        "B1": "The small shape isn't moving, and the cold is working on it, slow and patient. And yet someone came all this way out here, in the rain, alone. You can't just leave them lying there in the wet. You have to go closer and see who it is.",
+        "B2": "The small shape isn't moving at all, and the cold is working on it, slow and patient. And yet someone came all this way out here, in the rain, quite alone. You can't just leave them lying there in the wet. You have to go closer and see who it is."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §72]",
-            "B1": "[choice 1 → §72]",
-            "B2": "[choice 1 → §72]"
+            "A2": "Go to them.",
+            "B1": "Go to them.",
+            "B2": "Go to them."
           },
           "goto": 72
         },
         {
           "text": {
-            "A2": "[choice 2 → §79]",
-            "B1": "[choice 2 → §79]",
-            "B2": "[choice 2 → §79]"
+            "A2": "Closer still.",
+            "B1": "Closer still.",
+            "B2": "Closer still."
           },
           "goto": 79
         }
@@ -2225,16 +2225,16 @@
     {
       "id": 79,
       "text": {
-        "A2": "[stub §79 — prose to be written]",
-        "B1": "[stub §79 — prose to be written]",
-        "B2": "[stub §79 — prose to be written]"
+        "A2": "You go closer, and you know her at once. It's Nora — Gran Ivy's own granddaughter, not seen round here in years, not since the family fell out. Then a weak sound comes from the dark at your feet. You move fast now.",
+        "B1": "You go closer, and you know her at once. It's Nora — Gran Ivy's own granddaughter, not seen round here in years, not since the family fell out. Then a weak sound comes from the dark at your feet. You move fast now.",
+        "B2": "You go closer still, and you know her at once. It's Nora — Gran Ivy's own granddaughter, not seen round here in years, not since the family fell out so badly. Then a weak sound comes from the dark at your feet. You move fast now. There is no time left to lose, none at all."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §74]",
-            "B1": "[choice 1 → §74]",
-            "B2": "[choice 1 → §74]"
+            "A2": "Get her up.",
+            "B1": "Get her up.",
+            "B2": "Get her up."
           },
           "goto": 74,
           "sets": [
@@ -2243,9 +2243,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §69]",
-            "B1": "[choice 2 → §69]",
-            "B2": "[choice 2 → §69]"
+            "A2": "Down into the dark.",
+            "B1": "Down into the dark.",
+            "B2": "Down into the dark."
           },
           "goto": 69
         }
@@ -2254,16 +2254,16 @@
     {
       "id": 80,
       "text": {
-        "A2": "[stub §80 — prose to be written]",
-        "B1": "[stub §80 — prose to be written]",
-        "B2": "[stub §80 — prose to be written]"
+        "A2": "Dale turns up one last time, his bags swinging. 'Still at it?' he says. 'Give it up. Let me sort your dinner — last chance to take the easy road, friend.' The same easy smile. The same old lie.",
+        "B1": "Dale turns up one last time, his bags swinging. 'Still at it?' he says. 'Give it up. Let me sort your dinner out — last chance to take the easy road, friend.' The same easy smile. The same old lie.",
+        "B2": "Dale turns up one last time, his bags swinging in the rain. 'Still at it?' he says. 'Give it up, love. Let me sort your dinner out — last chance to take the easy road, friend.' The same easy smile. The same old lie underneath it. You've seen exactly where that road goes."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §43]",
-            "B1": "[choice 1 → §43]",
-            "B2": "[choice 1 → §43]"
+            "A2": "Give in to Dale.",
+            "B1": "Give in to Dale.",
+            "B2": "Give in to Dale."
           },
           "goto": 43,
           "sets": [
@@ -2272,9 +2272,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §91]",
-            "B1": "[choice 2 → §91]",
-            "B2": "[choice 2 → §91]"
+            "A2": "Send him packing.",
+            "B1": "Send him packing.",
+            "B2": "Send him packing."
           },
           "goto": 91,
           "sets": [
