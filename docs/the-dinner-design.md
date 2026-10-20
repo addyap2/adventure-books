@@ -212,3 +212,59 @@ content/lexicon.json` coming back clean.
    apply; painted art optional later.
 
 Built on branch `book-09-the-dinner`; merges to `main` only after the definition-of-done.
+
+---
+
+## 9. Art handoff — scene illustrations (and the template for the next book)
+
+This records **what shipped** for book 9's visuals and the **drop-in brief** used to upgrade
+them, so the next book can follow the same hand-off. There are three art surfaces in the repo;
+know which one you're touching.
+
+**The three surfaces**
+
+1. **Per-passage scene art** (what the reader shows in the left panel). Driven by
+   `web/illustrations/catalog.json` → each book maps every passage's *motif* (from
+   `window.__ART[series]` in `web/index.html`) to a **scene SVG**, with a per-motif
+   `sceneTitles`. The Dinner reuses **four** portrait SVGs across its 23 motifs:
+   `the-dinner-kitchen.svg` · `-street.svg` · `-doorway.svg` · `-table.svg`
+   (`viewBox="0 0 800 1000"`, shown `object-fit:cover`). Endings: good→table, neutral→kitchen,
+   bad→street; cover→table.
+2. **Reproducibility.** `scripts/build-illustrations.mjs` rewrites `catalog.json` wholesale on
+   every run. Books whose scenes it *generates* live in its `books` array; books whose art is
+   **hand-made** (The Address, The Dinner) have their catalog entry **declared explicitly** in
+   that script so a regen reproduces them instead of wiping them. If you add/replace hand-made
+   scenes, keep the four filenames fixed so neither `catalog.json` nor that script needs editing.
+3. **Social / OG card.** `web/og-<slug>.png` (1200×630) from `scripts/build_og.mjs` (per-book
+   scene branch — The Dinner's is `kitchen`); collection cards from
+   `scripts/build-collection-social.mjs` (update its story-count string when the book count
+   changes). Optional higher fidelity per passage: painted WebP at
+   `images/<series>/ep-NN/<id>.webp` overrides the scene for that node — see `docs/art-brief.md`.
+
+**Upgrade brief (paste to an agent/tool with repo access).** Replace the four scene SVGs *in
+place*, portrait `0 0 800 1000`, within the book palette (`ground #1A1210`, `surface #241A16`,
+`ink #F6EFE6`, `muted #A2938A`, `line #38281F`, `accent #E8903A`, `accentHot #F4B46A`,
+`secondary #93B88A`), collection mood *"warm light in cold, dark places."* Scene briefs:
+
+- **kitchen** — the heart: warm lit kitchen at night; hob with a steaming pot, oven, counter,
+  rainy window, pendant light. (Into the kitchen / On the hob / A proper dinner / A knock at the
+  gate / Many hands / Two hours to seven / Looking in on Gran / A warm welcome / A call for help;
+  neutral ending.)
+- **street** — dark wet night street; glowing street lamp, dark houses with one gold-lit window,
+  oncoming car headlights, a lone figure. (Out in the rain / The main road / A light down the
+  street / The long way home / The corner shop / Good advice / Which way to go; bad ending.)
+- **doorway** — a warm open doorway spilling light onto a wet step, a figure before it in the
+  rain — the Nora/stranger/reunion thread and the secret good ending "the door reopened." (An open
+  door / A helping hand / The easy way out / Someone counting on you / After all these years.)
+- **table** — the payoff + cover: a dinner table laid under warm light — roast, plates, bread,
+  candle, pendant glow. (The table laid / Enough to share; good ending.)
+
+**Do not change:** the four filenames; `catalog.json` scene map & titles; `window.__ART[series]`
+and `__MOTIFS`; the JSON/gists/lexicon; the other books' art. **Verify:** `npm run build` passes
+(it validates every catalog asset exists + contrast); spot-check the four scenes in the reader.
+
+**Template for the next book:** pick 3–5 scenes that cover the story's motifs, title each motif,
+map endings (good/neutral/bad), either register the book in `build-illustrations.mjs`'s `books`
+array (generated vector scenes) or declare its entry explicitly (hand-made art), add its OG scene
+branch to `build_og.mjs`, and bump the collection-card count. Keep filenames stable so art is a
+pure drop-in.
