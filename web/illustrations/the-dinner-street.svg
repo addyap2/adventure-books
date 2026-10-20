@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none"><defs>
+  <linearGradient id="sky" x1="400" y1="0" x2="400" y2="620" gradientUnits="userSpaceOnUse"><stop stop-color="#120d0b"/><stop offset="1" stop-color="#2d211b"/></linearGradient>
+  <linearGradient id="road" x1="0" y1="620" x2="0" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#241a16"/><stop offset="1" stop-color="#120d0b"/></linearGradient>
+  <linearGradient id="warm" x2="0" y2="1"><stop stop-color="#f4b46a"/><stop offset="1" stop-color="#c47a32"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#f4b46a" stop-opacity=".5"/><stop offset="1" stop-color="#f4b46a" stop-opacity="0"/></radialGradient>
+  <radialGradient id="head"><stop stop-color="#f6efe6" stop-opacity=".55"/><stop offset="1" stop-color="#f6efe6" stop-opacity="0"/></radialGradient>
+  <pattern id="rain" width="94" height="124" patternUnits="userSpaceOnUse"><path d="m14 8-10 28m66 44-8 24m-30-70-9 26" stroke="#93b88a" stroke-opacity=".16"/></pattern>
+  </defs>
+  <rect width="800" height="1000" fill="url(#sky)"/>
+  <g opacity=".55" fill="#f4b46a"><circle cx="140" cy="120" r="2.4"/><circle cx="330" cy="80" r="1.8"/><circle cx="600" cy="130" r="2.2"/><circle cx="710" cy="70" r="1.6"/></g>
+  <g fill="#1a1210"><path d="M0 360h190v260H0z"/><path d="M210 300h160v320H210z"/><path d="M210 300l80-46 80 46z"/><path d="M560 340h240v280H560z"/><path d="M560 340l120-52 120 52z"/></g>
+  <g fill="#241a16"><path d="M400 280h150v340H400z"/><path d="M400 280l75-44 75 44z"/></g>
+  <ellipse cx="475" cy="430" rx="170" ry="170" fill="url(#glow)"/>
+  <rect x="438" y="380" width="74" height="96" rx="4" fill="url(#warm)" stroke="#e8903a" stroke-width="4"/><line x1="475" y1="380" x2="475" y2="476" stroke="#241a16" stroke-width="4"/><line x1="438" y1="428" x2="512" y2="428" stroke="#241a16" stroke-width="4"/>
+  <g stroke="#5a4433" stroke-width="7"><path d="M120 300v320"/></g><ellipse cx="120" cy="300" rx="120" ry="120" fill="url(#glow)"/><rect x="104" y="270" width="32" height="40" rx="6" fill="url(#warm)"/>
+  <rect width="800" height="1000" fill="url(#rain)"/>
+  <rect x="0" y="620" width="800" height="380" fill="url(#road)"/>
+  <path d="M438 476h74L560 620H390z" fill="#e8903a" opacity=".16"/>
+  <ellipse cx="475" cy="680" rx="90" ry="20" fill="#f4b46a" opacity=".1"/>
+  <g opacity=".85"><ellipse cx="690" cy="760" rx="130" ry="60" fill="url(#head)"/><circle cx="690" cy="742" r="10" fill="#f6efe6"/><circle cx="724" cy="742" r="10" fill="#f6efe6"/></g>
+  <g><ellipse cx="300" cy="880" rx="46" ry="9" fill="#000" opacity=".4"/><path d="M300 806c16 2 22 14 24 30l8 44H268l8-44c2-16 8-28 24-30z" fill="#0d0907"/><circle cx="300" cy="792" r="13" fill="#0d0907"/></g>
+</svg>

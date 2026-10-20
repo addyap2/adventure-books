@@ -88,6 +88,32 @@ function candlelightScene(c) {
   <g transform="translate(320,0)"><ellipse cx="300" cy="556" rx="46" ry="7" fill="#000" opacity=".3"/><path d="M300 502 C313 504 319 515 321 529 L327 556 L273 556 L279 529 C281 515 287 504 300 502 Z" fill="#060b14"/><circle cx="300" cy="493" r="10" fill="#060b14"/><path d="M289 490 q11 -9 22 0 z" fill="#060b14"/></g>`;
 }
 
+function kitchenScene(c) {
+  // a dark wet street at night, a row of unlit houses, and one big warm-lit kitchen
+  // window: a pot on the hob with rising steam, the table laid behind the glass, rain
+  // falling, gold spilling onto the wet pavement, a lone figure heading home toward it.
+  return `
+  <g fill="${c.ink}" opacity="0.5"><circle cx="640" cy="120" r="1.6"/><circle cx="880" cy="92" r="1.3"/><circle cx="1040" cy="132" r="1.8"/><circle cx="1150" cy="94" r="1.4"/></g>
+  <g fill="${c.surface}"><rect x="552" y="252" width="150" height="248"/><rect x="800" y="214" width="120" height="286"/><rect x="936" y="268" width="150" height="232"/><rect x="1096" y="238" width="104" height="262"/></g>
+  <g stroke="${c.line}" stroke-width="2" opacity="0.7"><path d="M552 252 l75 -34 l75 34"/><path d="M800 214 l60 -30 l60 30"/><path d="M936 268 l75 -34 l75 34"/><path d="M1096 238 l52 -30 l52 30"/></g>
+  <g fill="${c.surface}" opacity="0.85"><rect x="840" y="300" width="26" height="34"/><rect x="980" y="340" width="26" height="34"/><rect x="1120" y="320" width="26" height="34"/></g>
+  <ellipse cx="672" cy="372" rx="200" ry="186" fill="url(#glow)"/>
+  <rect x="576" y="300" width="192" height="150" rx="3" fill="${c.accentHot}"/>
+  <rect x="576" y="300" width="192" height="150" rx="3" fill="none" stroke="${c.accent}" stroke-width="3"/>
+  <line x1="672" y1="300" x2="672" y2="450" stroke="${c.accent}" stroke-width="2" opacity="0.55"/>
+  <line x1="576" y1="372" x2="768" y2="372" stroke="${c.accent}" stroke-width="2" opacity="0.55"/>
+  <rect x="576" y="420" width="192" height="30" fill="${c.ground}" opacity="0.9"/>
+  <path d="M636 420 q0 -36 36 -36 q36 0 36 36 z" fill="${c.ground}"/>
+  <rect x="664" y="380" width="16" height="8" rx="3" fill="${c.ground}"/>
+  <g fill="none" stroke="${c.ink}" stroke-width="3" opacity="0.4"><path d="M654 380 c-7 -11 7 -17 0 -28"/><path d="M690 380 c-7 -11 7 -17 0 -28"/></g>
+  <g stroke="${c.ink}" stroke-width="1.5" opacity="0.16"><path d="M620 120 l-26 70"/><path d="M760 90 l-26 70"/><path d="M900 150 l-26 70"/><path d="M1040 110 l-26 70"/><path d="M1160 160 l-26 70"/><path d="M500 180 l-26 70"/></g>
+  <rect x="0" y="500" width="1200" height="130" fill="${c.surface}"/>
+  <path d="M600 500 h600 v130 h-600z" fill="${c.ground}" opacity="0.25"/>
+  <path d="M576 450 L768 450 L856 500 L488 500 Z" fill="${c.accent}" opacity=".16"/>
+  <rect x="0" y="588" width="1200" height="42" fill="${c.ground}"/>
+  <g transform="translate(316,0)"><ellipse cx="300" cy="556" rx="46" ry="7" fill="#000" opacity=".3"/><path d="M300 502 C313 504 319 515 321 529 L327 556 L273 556 L279 529 C281 515 287 504 300 502 Z" fill="#160b06"/><circle cx="300" cy="493" r="10" fill="#160b06"/><path d="M289 490 q11 -9 22 0 z" fill="#160b06"/></g>`;
+}
+
 function highsunScene(c) {
   // a desert road at high noon: a bleached sky, a low sand ridge, a heat-shimmer
   // over the flats, a stalled bus and a lone figure by the road, a white sun.
@@ -236,6 +262,7 @@ function ogHTML(book) {
               : kind === "dusk" ? duskScene(c)
               : kind === "daybreak" ? daybreakScene(c)
               : kind === "lantern" ? lanternScene(c)
+              : kind === "kitchen" ? kitchenScene(c)
               : kind === "candlelight" ? candlelightScene(c)
               : nocturneScene(c);
   const skyStops = kind === "highsun"
@@ -297,6 +324,7 @@ function coverHTML(book) {
               : kind === "dusk" ? duskScene(c)
               : kind === "daybreak" ? daybreakScene(c)
               : kind === "lantern" ? lanternScene(c)
+              : kind === "kitchen" ? kitchenScene(c)
               : kind === "candlelight" ? candlelightScene(c)
               : nocturneScene(c);
   const skyStops = kind === "highsun"

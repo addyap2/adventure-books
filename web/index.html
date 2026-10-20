@@ -611,7 +611,15 @@
     frost:'<svg '+S+'><g stroke-width="2"><path d="M32 10 V54 M13 21 L51 43 M51 21 L13 43"/><path d="M32 17 l-5 5 M32 17 l5 5 M32 47 l-5 -5 M32 47 l5 -5 M18 24 v6 M18 24 l6 -1 M46 24 v6 M46 24 l-6 -1 M18 40 v-6 M18 40 l6 1 M46 40 v-6 M46 40 l-6 1" opacity="0.6"/></g></svg>',
     pond:'<svg '+S+'><ellipse cx="32" cy="34" rx="24" ry="14"/><path d="M20 30 l8 6 M38 28 l6 8 M27 41 l11 -4" opacity="0.5"/></svg>',
     rows:'<svg '+S+'><path d="M8 54 L27 22 M56 54 L37 22 M20 54 L31 22 M44 54 L33 22" opacity="0.8"/><circle cx="29" cy="20" r="3"/><circle cx="36" cy="20" r="3"/><path d="M6 54 h52" opacity="0.5"/></svg>',
-    straw:'<svg '+S+'><rect x="16" y="26" width="32" height="22" rx="3"/><path d="M16 33 h32 M16 41 h32" opacity="0.5"/><path d="M22 26 v22 M30 26 v22 M38 26 v22" opacity="0.3"/><path d="M14 30 c6 -6 10 -6 16 -4 M34 30 c6 -6 10 -6 16 -4" opacity="0.5"/></svg>'
+    straw:'<svg '+S+'><rect x="16" y="26" width="32" height="22" rx="3"/><path d="M16 33 h32 M16 41 h32" opacity="0.5"/><path d="M22 26 v22 M30 26 v22 M38 26 v22" opacity="0.3"/><path d="M14 30 c6 -6 10 -6 16 -4 M34 30 c6 -6 10 -6 16 -4" opacity="0.5"/></svg>',
+    /* --- The Dinner's set (warm kitchen / everyday evening) --- */
+    oven:'<svg '+S+'><rect x="14" y="14" width="36" height="38" rx="3"/><line x1="18" y1="24" x2="46" y2="24"/><rect x="20" y="30" width="24" height="18" rx="2" fill="currentColor" fill-opacity="0.14"/><line x1="22" y1="19" x2="31" y2="19" opacity="0.7"/><circle cx="41" cy="19" r="1.7" fill="currentColor" stroke="none"/></svg>',
+    roast:'<svg '+S+'><path d="M16 42a16 10 0 0 1 32 0z" fill="currentColor" fill-opacity="0.16"/><path d="M10 42h44"/><path d="M27 26c-2 4 2 6 0 10M37 26c-2 4 2 6 0 10" opacity="0.6"/><path d="M22 33l-6-4M42 33l6-4" opacity="0.5"/></svg>',
+    table:'<svg '+S+'><path d="M8 34h48"/><path d="M14 34v18M50 34v18"/><ellipse cx="32" cy="30" rx="12" ry="4"/><path d="M24 30a8 3 0 0 0 16 0" opacity="0.5"/></svg>',
+    loaf:'<svg '+S+'><path d="M12 42a20 12 0 0 1 40 0z" fill="currentColor" fill-opacity="0.12"/><path d="M12 42h40"/><path d="M24 30l-3 9M32 28v10M40 30l3 9" opacity="0.6"/></svg>',
+    basket:'<svg '+S+'><path d="M14 30h36l-4 22H18z"/><path d="M12 30h40"/><path d="M22 30a10 10 0 0 1 20 0" opacity="0.7"/><path d="M23 36l3 12M32 36v12M41 36l-3 12" opacity="0.45"/></svg>',
+    car:'<svg '+S+'><path d="M10 40l5-12h34l5 12"/><rect x="6" y="40" width="52" height="10" rx="3"/><path d="M19 28h26" opacity="0.5"/><circle cx="18" cy="50" r="4"/><circle cx="46" cy="50" r="4"/><path d="M10 38l-5-1M54 38l5-1" opacity="0.6"/></svg>',
+    clock:'<svg '+S+'><circle cx="32" cy="32" r="20"/><path d="M32 20v12l8 5"/><path d="M32 10v4M32 50v4M10 32h4M50 32h4" opacity="0.6"/></svg>'
   };
   /* series -> { node id -> the motif that sums up that passage }. One set per book. */
   window.__ART={
@@ -729,6 +737,21 @@
     113:'dawn',114:'snowflake',
     120:'heater',121:'child',122:'companions',123:'coin',124:'blanket',125:'blanket',126:'dawn',127:'house',128:'coin',129:'ridge',
     130:'snowflake',131:'door'
+   },
+   "the-dinner":{
+    1:'clock',2:'oven',3:'phone',4:'cup',5:'window',6:'clock',8:'companions',9:'basket',10:'door',
+    11:'pot',12:'companions',13:'table',14:'pot',15:'sign',16:'cup',17:'oven',18:'clock',19:'companions',20:'phone',
+    21:'map',22:'sign',23:'hand',24:'coin',25:'companions',26:'rain',27:'car',28:'car',29:'oven',30:'rain',
+    31:'hand',32:'child',33:'rain',34:'hand',35:'companions',36:'pot',37:'companions',38:'clock',39:'lamp',40:'coin',
+    41:'coin',42:'coin',43:'coin',44:'coin',45:'pot',46:'pot',47:'coin',48:'coin',49:'coin',50:'car',
+    51:'car',52:'rain',53:'car',54:'pot',55:'child',56:'clock',57:'cup',58:'rain',60:'lamp',
+    61:'hand',62:'clock',63:'house',64:'lamp',65:'rain',67:'roast',68:'companions',69:'lamp',70:'lamp',71:'lamp',72:'hand',
+    73:'lamp',74:'hand',75:'lamp',76:'photo',77:'door',78:'lamp',79:'companions',80:'coin',
+    90:'house',91:'oven',92:'companions',93:'basket',94:'bed',95:'roast',96:'pot',97:'pot',98:'lamp',99:'lamp',100:'clock',
+    101:'table',102:'clock',103:'window',104:'companions',105:'door',106:'companions',107:'lamp',110:'clock',111:'table',112:'hand',
+    113:'clock',114:'coin',
+    120:'table',121:'door',122:'companions',123:'oven',124:'hand',125:'loaf',126:'table',127:'companions',128:'coin',129:'car',
+    130:'oven',131:'bed'
    }
   };
   /* Bespoke ending scenes by outcome, in the same line-art voice ("warm light in
