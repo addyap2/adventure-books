@@ -33,7 +33,7 @@ try {
     await page.locator('img').evaluate(img => img.decode());
     await page.screenshot({ path: new URL(book.art.social.slice(1), web).pathname });
   }
-  await page.setContent(style + `<main class="collection"><span class="eyebrow">English Reading Adventures</span><h1>Eight stories. Your own way through.</h1><div class="covers">${books.map(book => `<img src="${book.image}" alt="">`).join('')}</div><div class="footer"><span>Learn English. Live a story.</span><span>A2 · B1 · B2 &nbsp; / &nbsp; Free during launch</span></div></main>`);
+  await page.setContent(style + `<main class="collection"><span class="eyebrow">English Reading Adventures</span><h1>Nine stories. Your own way through.</h1><div class="covers">${books.map(book => `<img src="${book.image}" alt="">`).join('')}</div><div class="footer"><span>Learn English. Live a story.</span><span>A2 · B1 · B2 &nbsp; / &nbsp; Free during launch</span></div></main>`);
   await page.locator('img').evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
   await page.screenshot({ path: new URL('og-collection.png', web).pathname });
   console.log(`Built ${books.length} book sharing cards and the collection card.`);

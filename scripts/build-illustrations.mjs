@@ -139,5 +139,27 @@ for(const [slug,kind,cover,scenes]of books){
   entry.alt={market:'Warm paper lanterns above a family food stall in a quiet night market.',winter:'A snowbound hillside town with one warm doorway beneath a winter sky.',desert:'A bus on an empty desert road, with distant hills and a low golden sun.',coast:'A stone lighthouse casting a warm beam across a stormy sea.',orchard:'Blossoming orchard trees on a frosty night, with warm fires along the rows.',flood:'A flooded village street with warm windows and a sandbag wall against the river.',refuge:'A stone mountain refuge with a glowing window in a snowy mountain landscape.'}[kind];
   catalog[slug]=entry;
 }
+// The Dinner's scenes are hand-drawn SVGs (kept in web/illustrations/), not generated
+// from the renderers above, so — like The Address — its catalog entry is declared here
+// and reproduced on every regen instead of being wiped.
+{
+  const K='/illustrations/the-dinner-kitchen.svg', S='/illustrations/the-dinner-street.svg',
+        D='/illustrations/the-dinner-doorway.svg', T='/illustrations/the-dinner-table.svg';
+  const sceneOf={clock:K,oven:K,phone:K,cup:K,window:K,companions:K,pot:K,roast:K,bed:K,
+    table:T,loaf:T, basket:S,sign:S,map:S,rain:S,car:S,lamp:S,house:S,
+    door:D,hand:D,coin:D,child:D,photo:D};
+  const titleOf={clock:'Two hours to seven',oven:'Into the kitchen',phone:'A call for help',
+    cup:'A warm welcome',window:'A knock at the gate',companions:'Many hands',pot:'On the hob',
+    roast:'A proper dinner',bed:'Looking in on Gran',table:'The table laid',loaf:'Enough to share',
+    basket:'The corner shop',sign:'Good advice',map:'Which way to go',rain:'Out in the rain',
+    car:'The main road',lamp:'A light down the street',house:'The long way home',door:'An open door',
+    hand:'A helping hand',coin:'The easy way out',child:'Someone counting on you',
+    photo:'After all these years'};
+  const scenes={}, sceneTitles={};
+  for(const m of Object.keys(sceneOf)){scenes[m]=sceneOf[m];sceneTitles[m]=titleOf[m];}
+  catalog['the-dinner']={cover:T,focal:'center',social:'/og-the-dinner.png',scenes,sceneTitles,
+    endings:{good:T,neutral:K,bad:S},
+    alt:'A warm, lit kitchen on a dark winter night, with a pot on the hob and a table laid for dinner.'};
+}
 await writeFile(new URL('catalog.json',out),JSON.stringify(catalog,null,2)+'\n');
 console.log(`Built ${books.length} illustrated book identities and their scene sets.`);
