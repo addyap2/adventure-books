@@ -310,16 +310,16 @@
     {
       "id": 9,
       "text": {
-        "A2": "[stub §9 — prose to be written]",
-        "B1": "[stub §9 — prose to be written]",
-        "B2": "[stub §9 — prose to be written]"
+        "A2": "The shop is still open. Old Sam waves you in out of the rain. 'Take what you need,' he says. 'Pay me later.' He points to the shelves. Flour, eggs, a bit of meat, some veg. Everything for a proper dinner. He's a good sort, Sam.",
+        "B1": "The shop is still open, and old Sam waves you in out of the rain. 'Take what you need,' he says. 'Pay me when you can.' He points to the shelves. Flour, eggs, a bit of meat, some veg. Everything you need for a proper dinner is here. He's a good sort, Sam.",
+        "B2": "The shop is still open, and old Sam waves you in out of the rain. 'Take what you need,' he says. 'Pay me when you're able.' He points to the shelves. Flour, eggs, a bit of meat, some veg. Everything you'd want for a proper dinner is here, under one roof. He's a good sort, Sam, and always has been."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §13]",
-            "B1": "[choice 1 → §13]",
-            "B2": "[choice 1 → §13]"
+            "A2": "Load the basket.",
+            "B1": "Load the basket.",
+            "B2": "Load the basket."
           },
           "goto": 13,
           "sets": [
@@ -328,25 +328,25 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §14]",
-            "B1": "[choice 2 → §14]",
-            "B2": "[choice 2 → §14]"
+            "A2": "Grab the basics and run.",
+            "B1": "Grab the basics and run.",
+            "B2": "Grab the basics and run."
           },
           "goto": 14
         },
         {
           "text": {
-            "A2": "[choice 3 → §15]",
-            "B1": "[choice 3 → §15]",
-            "B2": "[choice 3 → §15]"
+            "A2": "Ask Joan's advice first.",
+            "B1": "Ask Joan's advice first.",
+            "B2": "Ask Joan's advice first."
           },
           "goto": 15
         },
         {
           "text": {
-            "A2": "[choice 4 → §67]",
-            "B1": "[choice 4 → §67]",
-            "B2": "[choice 4 → §67]"
+            "A2": "Ask Sam what he'd cook.",
+            "B1": "Ask Sam what he'd cook.",
+            "B2": "Ask Sam what he'd cook."
           },
           "goto": 67
         }
@@ -355,16 +355,16 @@
     {
       "id": 10,
       "text": {
-        "A2": "[stub §10 — prose to be written]",
-        "B1": "[stub §10 — prose to be written]",
-        "B2": "[stub §10 — prose to be written]"
+        "A2": "Next door, you hear knocking. Mr Doyle is locked out, shivering on his step in the rain. He can't get in, and his hands are too cold to work the key. 'Can you help?' he asks. You've a dinner to cook. But he's here, cold and asking you.",
+        "B1": "Next door, you hear knocking. Mr Doyle is locked out, shivering on his step in the rain. He can't get in, and his hands are too cold to work the key. 'Can you give me a hand?' he asks. You've a dinner to cook and no time. But he's right here, cold and asking you.",
+        "B2": "Next door, you hear a knocking. Mr Doyle is locked out, shivering on his own step in the rain. He can't get in, and his hands are far too cold to work the key. 'Can you give me a hand?' he asks. You've a dinner to cook and precious little time. But he's right here in front of you, cold and asking you for help."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §16]",
-            "B1": "[choice 1 → §16]",
-            "B2": "[choice 1 → §16]"
+            "A2": "Help him in.",
+            "B1": "Help him in.",
+            "B2": "Help him in."
           },
           "goto": 16,
           "sets": [
@@ -373,9 +373,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §17]",
-            "B1": "[choice 2 → §17]",
-            "B2": "[choice 2 → §17]"
+            "A2": "The dinner comes first.",
+            "B1": "The dinner comes first.",
+            "B2": "The dinner comes first."
           },
           "goto": 17
         }
@@ -410,16 +410,16 @@
     {
       "id": 12,
       "text": {
-        "A2": "[stub §12 — prose to be written]",
-        "B1": "[stub §12 — prose to be written]",
-        "B2": "[stub §12 — prose to be written]"
+        "A2": "You go round the doors and make your calls, asking the same thing each time. Come and help with the dinner. Bring a dish, bring a chair, bring yourself. Some say no, too busy, too tired. But a few say yes, and start pulling on their coats. Tonight, a few is enough.",
+        "B1": "You go round the doors and make your calls, asking the same thing each time. Come and help with the dinner. Bring a dish, bring a chair, bring yourself. Some say no — too busy, too tired, another night. But a few say yes, and start pulling on their coats. Tonight, a few is more than enough.",
+        "B2": "You go round the doors and make your phone calls, asking the same thing each time. Come and help with the dinner tonight. Bring a dish, bring a chair, bring yourself and an appetite. Some say no — too busy, too tired, another night maybe. But a few say yes, and start pulling on their coats at once. Tonight, a few willing hands is more than enough to begin."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §19]",
-            "B1": "[choice 1 → §19]",
-            "B2": "[choice 1 → §19]"
+            "A2": "See who turns up.",
+            "B1": "See who turns up.",
+            "B2": "See who turns up."
           },
           "goto": 19,
           "sets": [
@@ -428,9 +428,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §20]",
-            "B1": "[choice 2 → §20]",
-            "B2": "[choice 2 → §20]"
+            "A2": "No one can come.",
+            "B1": "No one can come.",
+            "B2": "No one can come."
           },
           "goto": 20
         }
@@ -819,16 +819,16 @@
     {
       "id": 27,
       "text": {
-        "A2": "[stub §27 — prose to be written]",
-        "B1": "[stub §27 — prose to be written]",
-        "B2": "[stub §27 — prose to be written]"
+        "A2": "Cutting across the main road would halve your walk, and home lies just beyond it. But the traffic is fast, the rain is hard, and the cars won't see you well. Joan told you to keep off that road. And she wasn't joking.",
+        "B1": "Cutting straight across the main road would halve your walk, and home lies just beyond it. But the traffic is fast, the rain is hard, and the cars won't see you well in the dark. Joan told you to keep off that road. And she wasn't joking about it.",
+        "B2": "Cutting straight across the main road would halve your walk, and home lies just beyond it now. But the traffic is fast, the rain is coming hard, and the cars won't see you at all well in the dark. Joan told you, plainly, to keep off that road. And she wasn't joking when she said it."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §28]",
-            "B1": "[choice 1 → §28]",
-            "B2": "[choice 1 → §28]"
+            "A2": "Chance the road.",
+            "B1": "Chance the road.",
+            "B2": "Chance the road."
           },
           "goto": 28,
           "sets": [
@@ -837,9 +837,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §26]",
-            "B1": "[choice 2 → §26]",
-            "B2": "[choice 2 → §26]"
+            "A2": "Go the long way.",
+            "B1": "Go the long way.",
+            "B2": "Go the long way."
           },
           "goto": 26
         }
@@ -971,16 +971,16 @@
     {
       "id": 32,
       "text": {
-        "A2": "[stub §32 — prose to be written]",
-        "B1": "[stub §32 — prose to be written]",
-        "B2": "[stub §32 — prose to be written]"
+        "A2": "At one house the lights are low and a child is crying. A family here has no dinner tonight — bare cupboards, no money till Friday, and hungry kids. The two parents look at you, tired and ashamed. You've bags of food of your own. Not a lot, but more than they have.",
+        "B1": "At one house the lights are low and a child is crying inside. A family here has no dinner tonight — bare cupboards, no money till Friday, and hungry kids. The two parents look at you, tired and ashamed. You've bags of food of your own in your hands. Not a lot, but a good deal more than they have.",
+        "B2": "At one house the lights are low and a child is crying somewhere inside. A family here has no dinner tonight — bare cupboards, no money until Friday, and two hungry kids. The two parents look at you, tired and ashamed to be seen like this. You've bags of food of your own in your hands. Not a lot, maybe, but a good deal more than they have got."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §55]",
-            "B1": "[choice 1 → §55]",
-            "B2": "[choice 1 → §55]"
+            "A2": "Give them your food.",
+            "B1": "Give them your food.",
+            "B2": "Give them your food."
           },
           "goto": 55,
           "sets": [
@@ -989,17 +989,17 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §35]",
-            "B1": "[choice 2 → §35]",
-            "B2": "[choice 2 → §35]"
+            "A2": "Promise help, then go.",
+            "B1": "Promise help, then go.",
+            "B2": "Promise help, then go."
           },
           "goto": 35
         },
         {
           "text": {
-            "A2": "[choice 3 → §54]",
-            "B1": "[choice 3 → §54]",
-            "B2": "[choice 3 → §54]"
+            "A2": "Help them cook what's there.",
+            "B1": "Help them cook what's there.",
+            "B2": "Help them cook what's there."
           },
           "goto": 54
         }
