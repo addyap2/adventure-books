@@ -80,32 +80,32 @@
     {
       "id": 1,
       "text": {
-        "A2": "[stub §1 — prose to be written]",
-        "B1": "[stub §1 — prose to be written]",
-        "B2": "[stub §1 — prose to be written]"
+        "A2": "It is five o'clock. The family come for dinner at seven. But Gran Ivy is ill in bed upstairs, and tonight she can't cook. The chicken is still in the fridge. The cake is half made. The table is bare. Getting a good dinner on the table is on you now.",
+        "B1": "It is five o'clock, and the family come for dinner at seven. But Gran Ivy, who cooks this dinner every year, is ill in bed upstairs. The chicken is still in the fridge, the cake is half made, and the table is bare. For the first time, getting dinner on the table is all on you.",
+        "B2": "It is five o'clock, and the whole family come for dinner at seven. But Gran Ivy, who has cooked this dinner for thirty years, is ill in bed upstairs and can't come down. The chicken is still in the fridge, the cake is only half made, and the table is bare. For the first time, getting a good dinner on the table is all on you."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §2]",
-            "B1": "[choice 1 → §2]",
-            "B2": "[choice 1 → §2]"
+            "A2": "Take charge of the cooking.",
+            "B1": "Take charge of the cooking.",
+            "B2": "Take charge of the cooking."
           },
           "goto": 2
         },
         {
           "text": {
-            "A2": "[choice 2 → §3]",
-            "B1": "[choice 2 → §3]",
-            "B2": "[choice 2 → §3]"
+            "A2": "Call someone for help.",
+            "B1": "Call someone for help.",
+            "B2": "Call someone for help."
           },
           "goto": 3
         },
         {
           "text": {
-            "A2": "[choice 3 → §4]",
-            "B1": "[choice 3 → §4]",
-            "B2": "[choice 3 → §4]"
+            "A2": "See to Gran first.",
+            "B1": "See to Gran first.",
+            "B2": "See to Gran first."
           },
           "goto": 4
         }
@@ -114,32 +114,32 @@
     {
       "id": 2,
       "text": {
-        "A2": "[stub §2 — prose to be written]",
-        "B1": "[stub §2 — prose to be written]",
-        "B2": "[stub §2 — prose to be written]"
+        "A2": "You see what the kitchen holds. There is a chicken, potatoes, flour, and butter. There is a big pan and a good oven. The clock is already at five. You have to decide what to do, and start soon.",
+        "B1": "You see what the kitchen holds: a chicken, potatoes, flour, butter, a big pan, a good oven. The clock is already past five, and the room smells of nothing cooking. You have to decide what to do, and start soon.",
+        "B2": "You take stock of what the kitchen holds: a chicken, a bag of potatoes, flour and butter, a big roasting pan, a good oven. The clock is already past five, and there's that quiet, empty feeling of a kitchen where nothing is cooking yet. You have to decide what to do, and you have to start soon."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §5]",
-            "B1": "[choice 1 → §5]",
-            "B2": "[choice 1 → §5]"
+            "A2": "Get started in the kitchen.",
+            "B1": "Get started in the kitchen.",
+            "B2": "Get started in the kitchen."
           },
           "goto": 5
         },
         {
           "text": {
-            "A2": "[choice 2 → §6]",
-            "B1": "[choice 2 → §6]",
-            "B2": "[choice 2 → §6]"
+            "A2": "Stop and plan it out.",
+            "B1": "Stop and plan it out.",
+            "B2": "Stop and plan it out."
           },
           "goto": 6
         },
         {
           "text": {
-            "A2": "[choice 3 → §29]",
-            "B1": "[choice 3 → §29]",
-            "B2": "[choice 3 → §29]"
+            "A2": "The oven won't come on.",
+            "B1": "The oven won't come on.",
+            "B2": "The oven won't come on."
           },
           "goto": 29
         }
@@ -148,24 +148,24 @@
     {
       "id": 3,
       "text": {
-        "A2": "[stub §3 — prose to be written]",
-        "B1": "[stub §3 — prose to be written]",
-        "B2": "[stub §3 — prose to be written]"
+        "A2": "You call your mum to ask what to do. The phone rings and rings. At last she answers. She can't come over tonight, she says. She is too far away. But she talks you through Gran's recipe, step by step. 'You can do this,' she says.",
+        "B1": "You call your mum to ask what to do. The phone rings and rings, then at last she answers. She can't come over tonight — she's too far away to help. But she talks you through Gran's recipe, step by step. 'You can do this,' she says, and somehow you start to believe her.",
+        "B2": "You call your mum to ask what to do. The phone rings and rings, and then at last she answers. She can't come over tonight — she's an hour away, and the buses have stopped. But she talks you calmly through Gran's recipe, step by step, down the crackly line. 'You can do this,' she says, and somehow you start to believe her."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §6]",
-            "B1": "[choice 1 → §6]",
-            "B2": "[choice 1 → §6]"
+            "A2": "Plan it out.",
+            "B1": "Plan it out.",
+            "B2": "Plan it out."
           },
           "goto": 6
         },
         {
           "text": {
-            "A2": "[choice 2 → §8]",
-            "B1": "[choice 2 → §8]",
-            "B2": "[choice 2 → §8]"
+            "A2": "But there's so little time.",
+            "B1": "But there's so little time.",
+            "B2": "But there's so little time."
           },
           "goto": 8
         }
@@ -174,24 +174,24 @@
     {
       "id": 4,
       "text": {
-        "A2": "[stub §4 — prose to be written]",
-        "B1": "[stub §4 — prose to be written]",
-        "B2": "[stub §4 — prose to be written]"
+        "A2": "You go up to Gran first. You bring her tea and make her warm. But the kitchen is still cold and empty. Being kind to Gran is good. But the dinner still needs cooking. You need a plan, and a clear head, before seven.",
+        "B1": "You go up to Gran first. You bring her tea and make her comfortable. But the kitchen is still cold and empty downstairs. Sitting with Gran won't cook the dinner. The family will be hungry at seven. You need the shopping, a plan, and a clear head before you start.",
+        "B2": "You go up to Gran first, bringing her tea and making her comfortable in bed. But the kitchen is still cold and empty downstairs, and sitting with Gran won't get the dinner cooked. The family will be at the door at seven, hungry and happy. You need the shopping, a plan, and a clear head before you can give them that."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §2]",
-            "B1": "[choice 1 → §2]",
-            "B2": "[choice 1 → §2]"
+            "A2": "Go down and start cooking.",
+            "B1": "Go down and start cooking.",
+            "B2": "Go down and start cooking."
           },
           "goto": 2
         },
         {
           "text": {
-            "A2": "[choice 2 → §8]",
-            "B1": "[choice 2 → §8]",
-            "B2": "[choice 2 → §8]"
+            "A2": "Feel how little time there is.",
+            "B1": "Feel how little time there is.",
+            "B2": "Feel how little time there is."
           },
           "goto": 8
         }
@@ -200,40 +200,40 @@
     {
       "id": 5,
       "text": {
-        "A2": "[stub §5 — prose to be written]",
-        "B1": "[stub §5 — prose to be written]",
-        "B2": "[stub §5 — prose to be written]"
+        "A2": "You roll up your sleeves in the kitchen. The oven hums as it warms. Outside, the street is dark and wet. Then there is a knock at the gate — soft, once, then nothing. Someone is out there in the dark. But you weren't expecting anyone yet.",
+        "B1": "You roll up your sleeves and get into the kitchen. The oven hums as it warms, and the window begins to steam. Outside, the street is dark and wet. Then you hear it: a knock at the gate — soft, once, then nothing. Someone is out there in the dark, and you weren't expecting anyone this early.",
+        "B2": "You roll up your sleeves and get into the kitchen. The oven hums as it warms, and the window begins to steam up against the cold. Outside, the street is dark and wet and empty. Then you hear it: a knock at the gate — soft, just once, then nothing. Someone is out there in the dark tonight, and you weren't expecting a soul this early."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §9]",
-            "B1": "[choice 1 → §9]",
-            "B2": "[choice 1 → §9]"
+            "A2": "Pop to the corner shop.",
+            "B1": "Pop to the corner shop.",
+            "B2": "Pop to the corner shop."
           },
           "goto": 9
         },
         {
           "text": {
-            "A2": "[choice 2 → §10]",
-            "B1": "[choice 2 → §10]",
-            "B2": "[choice 2 → §10]"
+            "A2": "Knock next door for help.",
+            "B1": "Knock next door for help.",
+            "B2": "Knock next door for help."
           },
           "goto": 10
         },
         {
           "text": {
-            "A2": "[choice 3 → §6]",
-            "B1": "[choice 3 → §6]",
-            "B2": "[choice 3 → §6]"
+            "A2": "Plan it out.",
+            "B1": "Plan it out.",
+            "B2": "Plan it out."
           },
           "goto": 6
         },
         {
           "text": {
-            "A2": "[choice 4 → §60]",
-            "B1": "[choice 4 → §60]",
-            "B2": "[choice 4 → §60]"
+            "A2": "The knock at the gate.",
+            "B1": "The knock at the gate.",
+            "B2": "The knock at the gate."
           },
           "goto": 60
         }
@@ -242,32 +242,32 @@
     {
       "id": 6,
       "text": {
-        "A2": "[stub §6 — prose to be written]",
-        "B1": "[stub §6 — prose to be written]",
-        "B2": "[stub §6 — prose to be written]"
+        "A2": "You stop and think. You could start cooking right now. You could go up to Gran and the family first. Or you could call friends to come and help. Each choice costs time you do not have. And the clock keeps moving toward seven.",
+        "B1": "You make yourself stop and think. You could start the cooking right now and sort the rest later. You could go to Gran and get things straight first. Or you could call a few friends to come and help. Each choice costs time you don't have — and the clock keeps moving toward seven.",
+        "B2": "You make yourself stop and think it through. You could start the cooking right now and worry about everything else after. You could go up to Gran and the family and get things straight first. Or you could call a few friends and get more hands in the kitchen. Each choice costs time you don't have — and the clock keeps ticking, steadily, toward seven."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §9]",
-            "B1": "[choice 1 → §9]",
-            "B2": "[choice 1 → §9]"
+            "A2": "The corner shop.",
+            "B1": "The corner shop.",
+            "B2": "The corner shop."
           },
           "goto": 9
         },
         {
           "text": {
-            "A2": "[choice 2 → §11]",
-            "B1": "[choice 2 → §11]",
-            "B2": "[choice 2 → §11]"
+            "A2": "Straight into the cooking.",
+            "B1": "Straight into the cooking.",
+            "B2": "Straight into the cooking."
           },
           "goto": 11
         },
         {
           "text": {
-            "A2": "[choice 3 → §12]",
-            "B1": "[choice 3 → §12]",
-            "B2": "[choice 3 → §12]"
+            "A2": "Call friends to help.",
+            "B1": "Call friends to help.",
+            "B2": "Call friends to help."
           },
           "goto": 12
         }
@@ -276,32 +276,32 @@
     {
       "id": 8,
       "text": {
-        "A2": "[stub §8 — prose to be written]",
-        "B1": "[stub §8 — prose to be written]",
-        "B2": "[stub §8 — prose to be written]"
+        "A2": "The time presses on you like a weight. You think of the family at seven: the kids, the aunts, Gran's friends from the street. A whole evening, and it rests on you. That is not a worry; it is a plain fact. No one else is going to cook it. It is you, tonight, or no one.",
+        "B1": "The time presses on you like a weight. You think of the family coming at seven — the kids, the aunts, Gran's old friends from the street — all of them hungry and happy. A whole evening rests on you now. That isn't a worry; it's a plain fact. No one else is going to cook it. It is you, tonight, or no one.",
+        "B2": "The time presses on you like a weight. You think of the family coming at seven — the kids, the aunts, Gran's old friends from down the street — all of them hungry and happy and expecting her roast. A whole evening rests on you now. That isn't a worry; it's a plain fact. No one else is going to step in and cook it. It is you, tonight, or it is no one."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §6]",
-            "B1": "[choice 1 → §6]",
-            "B2": "[choice 1 → §6]"
+            "A2": "Plan it out.",
+            "B1": "Plan it out.",
+            "B2": "Plan it out."
           },
           "goto": 6
         },
         {
           "text": {
-            "A2": "[choice 2 → §9]",
-            "B1": "[choice 2 → §9]",
-            "B2": "[choice 2 → §9]"
+            "A2": "To the corner shop.",
+            "B1": "To the corner shop.",
+            "B2": "To the corner shop."
           },
           "goto": 9
         },
         {
           "text": {
-            "A2": "[choice 3 → §68]",
-            "B1": "[choice 3 → §68]",
-            "B2": "[choice 3 → §68]"
+            "A2": "A rush at the shop.",
+            "B1": "A rush at the shop.",
+            "B2": "A rush at the shop."
           },
           "goto": 68
         }
@@ -384,24 +384,24 @@
     {
       "id": 11,
       "text": {
-        "A2": "[stub §11 — prose to be written]",
-        "B1": "[stub §11 — prose to be written]",
-        "B2": "[stub §11 — prose to be written]"
+        "A2": "You get straight into the cooking. You turn on the hob, put a pan on, cut a few things. But you have no proper plan. Half the food is still in the bags. This will not come together on its own. You can't just throw things in a pan and hope.",
+        "B1": "You get straight into the cooking. You turn on the hob, put a pan on, start cutting. But you've no proper plan, and half the food is still in the bags. Rushing like this, it won't come together on its own. You can't just throw things in a pan and hope for the best.",
+        "B2": "You get straight into the cooking. You turn on the hob, slap a pan down, start cutting whatever's to hand. But you've no proper plan, and half the food is still sitting in the shopping bags. Rushed like this, it won't come together on its own. You can't just throw things in a pan and hope the evening turns out well."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §21]",
-            "B1": "[choice 1 → §21]",
-            "B2": "[choice 1 → §21]"
+            "A2": "Sort out a proper plan.",
+            "B1": "Sort out a proper plan.",
+            "B2": "Sort out a proper plan."
           },
           "goto": 21
         },
         {
           "text": {
-            "A2": "[choice 2 → §18]",
-            "B1": "[choice 2 → §18]",
-            "B2": "[choice 2 → §18]"
+            "A2": "The rush tires you out.",
+            "B1": "The rush tires you out.",
+            "B2": "The rush tires you out."
           },
           "goto": 18
         }
@@ -439,24 +439,24 @@
     {
       "id": 13,
       "text": {
-        "A2": "[stub §13 — prose to be written]",
-        "B1": "[stub §13 — prose to be written]",
-        "B2": "[stub §13 — prose to be written]"
+        "A2": "You take charge of the food and the recipe. You lay it all out on the table: chicken, potatoes, butter, the cake things. Done well, this makes a real dinner for seven. Rushed and wasted, and there's nothing on the table. So you start, carefully.",
+        "B1": "You take charge of the food and Gran's recipe. You lay it all out on the table — chicken, potatoes, butter, the things for the cake. Done well, this makes a real dinner for seven. Rushed or wasted, and the table stays bare. So you take a breath and start, carefully.",
+        "B2": "You take charge of the food and Gran's recipe. You lay it all out along the table — the chicken, the bag of potatoes, the butter, the things for the cake. Done properly, this is a real dinner for the whole family at seven. Rushed or wasted, and the table stays bare. So you take a breath, and you start, carefully."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §21]",
-            "B1": "[choice 1 → §21]",
-            "B2": "[choice 1 → §21]"
+            "A2": "Now, into the cooking.",
+            "B1": "Now, into the cooking.",
+            "B2": "Now, into the cooking."
           },
           "goto": 21
         },
         {
           "text": {
-            "A2": "[choice 2 → §15]",
-            "B1": "[choice 2 → §15]",
-            "B2": "[choice 2 → §15]"
+            "A2": "Ask Joan next door for tips.",
+            "B1": "Ask Joan next door for tips.",
+            "B2": "Ask Joan next door for tips."
           },
           "goto": 15
         }
@@ -465,24 +465,24 @@
     {
       "id": 14,
       "text": {
-        "A2": "[stub §14 — prose to be written]",
-        "B1": "[stub §14 — prose to be written]",
-        "B2": "[stub §14 — prose to be written]"
+        "A2": "You grab just a pan and a knife and start. They let you begin, and that feels good. But it is not a plan, and you've bought nothing extra. You'll still need the shopping, and soon. If not, there won't be enough for seven.",
+        "B1": "You grab just a pan and a knife and make a start. They let you begin, and that feels like something. But it isn't a plan, and you've bought nothing extra. You'll still need the shopping, and soon. If not, there won't be enough for everyone at seven.",
+        "B2": "You grab just a pan and a knife and make a start. They let you begin, and that feels like something, at least. But it isn't a plan, and you've bought nothing extra for the table. You'll still need to get the shopping, and soon. Without it, there simply won't be enough to go round at seven."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §21]",
-            "B1": "[choice 1 → §21]",
-            "B2": "[choice 1 → §21]"
+            "A2": "Now, get the shopping.",
+            "B1": "Now, get the shopping.",
+            "B2": "Now, get the shopping."
           },
           "goto": 21
         },
         {
           "text": {
-            "A2": "[choice 2 → §15]",
-            "B1": "[choice 2 → §15]",
-            "B2": "[choice 2 → §15]"
+            "A2": "Ask Joan next door for tips.",
+            "B1": "Ask Joan next door for tips.",
+            "B2": "Ask Joan next door for tips."
           },
           "goto": 15
         }
@@ -491,24 +491,24 @@
     {
       "id": 15,
       "text": {
-        "A2": "[stub §15 — prose to be written]",
-        "B1": "[stub §15 — prose to be written]",
-        "B2": "[stub §15 — prose to be written]"
+        "A2": "Old Joan next door has cooked a thousand dinners. 'Don't run across the main road,' she says. 'It saves ten minutes. It's not worth it in the dark.' She warns you about Dale too, from the takeaway. 'Cook your own food. Watch the oven. That's the whole job tonight.'",
+        "B1": "Old Joan next door has cooked a thousand dinners in her time. 'Don't run across the main road,' she says. 'It saves ten minutes — and it's not worth it in the dark and the rain.' She warns you about Dale too, from the takeaway. 'Cook your own food, keep an eye on the oven. That's the whole job tonight.'",
+        "B2": "Old Joan next door has cooked a thousand dinners in her time, and she knows a panic when she sees one. 'Don't run across the main road,' she says. 'It saves you ten minutes — and it's not worth it, not in the dark and the rain.' She warns you about Dale as well, the fellow from the takeaway. 'Cook your own food, and keep one eye on the oven. That's the whole job tonight.'"
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §22]",
-            "B1": "[choice 1 → §22]",
-            "B2": "[choice 1 → §22]"
+            "A2": "Take it to heart.",
+            "B1": "Take it to heart.",
+            "B2": "Take it to heart."
           },
           "goto": 22
         },
         {
           "text": {
-            "A2": "[choice 2 → §21]",
-            "B1": "[choice 2 → §21]",
-            "B2": "[choice 2 → §21]"
+            "A2": "On with it.",
+            "B1": "On with it.",
+            "B2": "On with it."
           },
           "goto": 21
         }
@@ -517,24 +517,24 @@
     {
       "id": 16,
       "text": {
-        "A2": "[stub §16 — prose to be written]",
-        "B1": "[stub §16 — prose to be written]",
-        "B2": "[stub §16 — prose to be written]"
+        "A2": "You help your neighbour, Mr Doyle, who is locked out in the cold. You get him inside and sit him down with tea. Little by little, he warms up. 'Bless you,' he says, holding your hand. You promise to pop back later. Then you go back to your kitchen and the clock.",
+        "B1": "You help your neighbour, Mr Doyle, who's locked out of his flat in the cold. You get him inside and sit him down with a cup of tea. Little by little, he warms up and stops shivering. 'Bless you,' he says, gripping your hand. You promise to look in on him later, then go back to your own kitchen and the clock.",
+        "B2": "You help your neighbour, Mr Doyle, who's locked out of his flat and shivering on the step. You get him inside, sit him down, and put the kettle on. Little by little he warms up and the colour comes back to his face. 'Bless you,' he says, gripping your hand. You promise to look in on him later, then turn back to your own kitchen and the ticking clock."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §23]",
-            "B1": "[choice 1 → §23]",
-            "B2": "[choice 1 → §23]"
+            "A2": "On with the cooking.",
+            "B1": "On with the cooking.",
+            "B2": "On with the cooking."
           },
           "goto": 23
         },
         {
           "text": {
-            "A2": "[choice 2 → §12]",
-            "B1": "[choice 2 → §12]",
-            "B2": "[choice 2 → §12]"
+            "A2": "He asks you to check the others.",
+            "B1": "He asks you to check the others.",
+            "B2": "He asks you to check the others."
           },
           "goto": 12
         }
@@ -543,24 +543,24 @@
     {
       "id": 17,
       "text": {
-        "A2": "[stub §17 — prose to be written]",
-        "B1": "[stub §17 — prose to be written]",
-        "B2": "[stub §17 — prose to be written]"
+        "A2": "The cooking comes first. The rest can wait a moment. But you still have to choose how. You could go to the shop for what you need first. Or you could start with what you've got and sort it as you go.",
+        "B1": "The cooking comes first. The rest can wait a moment. But you still have to choose how. You could go to the shop for what you need first. Or you could start with what you've got and sort the rest as you go.",
+        "B2": "Getting the cooking going comes first; the rest can wait a moment. But you still have to choose how to do it. You could go to the shop for what you need and set yourself up properly. Or you could start with what you've already got, and sort the rest out as you go along."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §9]",
-            "B1": "[choice 1 → §9]",
-            "B2": "[choice 1 → §9]"
+            "A2": "Get the shopping first.",
+            "B1": "Get the shopping first.",
+            "B2": "Get the shopping first."
           },
           "goto": 9
         },
         {
           "text": {
-            "A2": "[choice 2 → §11]",
-            "B1": "[choice 2 → §11]",
-            "B2": "[choice 2 → §11]"
+            "A2": "Start with what you've got.",
+            "B1": "Start with what you've got.",
+            "B2": "Start with what you've got."
           },
           "goto": 11
         }
@@ -569,24 +569,24 @@
     {
       "id": 18,
       "text": {
-        "A2": "[stub §18 — prose to be written]",
-        "B1": "[stub §18 — prose to be written]",
-        "B2": "[stub §18 — prose to be written]"
+        "A2": "The rush catches up with you. Your back aches, your hands shake, and the clock keeps moving. You are doing too much at once, and you know it. If you tire yourself out now, nothing gets finished. So slow down, and do one thing at a time.",
+        "B1": "The rush catches up with you. Your back aches, your hands are shaking, and the clock won't stop. You're trying to do too much at once, and you know it. If you tire yourself out now, nothing gets finished. So slow down, and do one thing at a time.",
+        "B2": "The rush catches up with you all at once. Your back aches, your hands are shaking, and the clock on the wall will not stop moving. You're trying to do far too much at once, and you know it. If you burn yourself out now, nothing gets finished at all. So slow down, breathe, and do one thing at a time."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §24]",
-            "B1": "[choice 1 → §24]",
-            "B2": "[choice 1 → §24]"
+            "A2": "Dale knocks at the door.",
+            "B1": "Dale knocks at the door.",
+            "B2": "Dale knocks at the door."
           },
           "goto": 24
         },
         {
           "text": {
-            "A2": "[choice 2 → §21]",
-            "B1": "[choice 2 → §21]",
-            "B2": "[choice 2 → §21]"
+            "A2": "Push on.",
+            "B1": "Push on.",
+            "B2": "Push on."
           },
           "goto": 21
         }
@@ -595,24 +595,24 @@
     {
       "id": 19,
       "text": {
-        "A2": "[stub §19 — prose to be written]",
-        "B1": "[stub §19 — prose to be written]",
-        "B2": "[stub §19 — prose to be written]"
+        "A2": "You call round, and friends start to come. One brings a dish. One brings chairs. Another just rolls up their sleeves. Bit by bit, a plan takes shape. You are not doing this alone any more. And that changes everything.",
+        "B1": "You call round, and friends start to arrive. One brings a dish of their own. One brings extra chairs. Another just rolls up their sleeves and asks what to chop. Bit by bit, a plan takes shape. You're not doing this alone any more — and that changes everything.",
+        "B2": "You call round, and friends start to arrive at the door. One brings a dish of their own to add to the table. One brings extra chairs under both arms. Another just rolls up their sleeves and asks what needs chopping. Bit by bit, hand by hand, a plan takes shape in the warm kitchen. You're not doing this alone any more — and that, more than anything, changes the evening."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §25]",
-            "B1": "[choice 1 → §25]",
-            "B2": "[choice 1 → §25]"
+            "A2": "Get everyone cooking.",
+            "B1": "Get everyone cooking.",
+            "B2": "Get everyone cooking."
           },
           "goto": 25
         },
         {
           "text": {
-            "A2": "[choice 2 → §36]",
-            "B1": "[choice 2 → §36]",
-            "B2": "[choice 2 → §36]"
+            "A2": "Lay the big table first.",
+            "B1": "Lay the big table first.",
+            "B2": "Lay the big table first."
           },
           "goto": 36
         }
@@ -621,24 +621,24 @@
     {
       "id": 20,
       "text": {
-        "A2": "[stub §20 — prose to be written]",
-        "B1": "[stub §20 — prose to be written]",
-        "B2": "[stub §20 — prose to be written]"
+        "A2": "No one can come. One is working, one is out, one just doesn't pick up. You can't make them. So you turn back to the kitchen and go on alone. It is harder this way. But the family still come at seven.",
+        "B1": "No one can come. One is working late, one is already out, one just doesn't pick up the phone. You can't make them. So you turn back to the kitchen and go on alone. It's harder this way. But the family still come at seven, ready or not.",
+        "B2": "No one can come, in the end. One is working late, one is already out for the evening, one simply doesn't pick up. You can't make anyone help you. So you turn back to the kitchen and go on alone; it's harder this way, dish by dish — but the family still come at seven, ready or not."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §9]",
-            "B1": "[choice 1 → §9]",
-            "B2": "[choice 1 → §9]"
+            "A2": "The corner shop.",
+            "B1": "The corner shop.",
+            "B2": "The corner shop."
           },
           "goto": 9
         },
         {
           "text": {
-            "A2": "[choice 2 → §11]",
-            "B1": "[choice 2 → §11]",
-            "B2": "[choice 2 → §11]"
+            "A2": "On with the cooking.",
+            "B1": "On with the cooking.",
+            "B2": "On with the cooking."
           },
           "goto": 11
         }
@@ -647,32 +647,32 @@
     {
       "id": 21,
       "text": {
-        "A2": "[stub §21 — prose to be written]",
-        "B1": "[stub §21 — prose to be written]",
-        "B2": "[stub §21 — prose to be written]"
+        "A2": "The first dishes are on. Now you need a few things from the shop. There are two ways there. The long way round the block is safe but slow. Straight across the main road is quick. But it's dark and wet, and cars come fast.",
+        "B1": "The first dishes are on. Now you need a few things from the shop to finish. There are two ways there. The long way round the block is safe but slow. Straight across the main road is quick. But it's dark and wet, and the cars come fast.",
+        "B2": "The first dishes are on and ticking over. Now you need a few last things from the shop to finish the meal. There are two ways to get there: the long way round the block, safe but slow, or straight across the main road, quick and tempting. But it's dark and wet out, and the cars come fast along that road."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §26]",
-            "B1": "[choice 1 → §26]",
-            "B2": "[choice 1 → §26]"
+            "A2": "Go the long way round.",
+            "B1": "Go the long way round.",
+            "B2": "Go the long way round."
           },
           "goto": 26
         },
         {
           "text": {
-            "A2": "[choice 2 → §27]",
-            "B1": "[choice 2 → §27]",
-            "B2": "[choice 2 → §27]"
+            "A2": "Cross the main road.",
+            "B1": "Cross the main road.",
+            "B2": "Cross the main road."
           },
           "goto": 27
         },
         {
           "text": {
-            "A2": "[choice 3 → §24]",
-            "B1": "[choice 3 → §24]",
-            "B2": "[choice 3 → §24]"
+            "A2": "Dale's offer ahead.",
+            "B1": "Dale's offer ahead.",
+            "B2": "Dale's offer ahead."
           },
           "goto": 24
         }
@@ -681,24 +681,24 @@
     {
       "id": 22,
       "text": {
-        "A2": "[stub §22 — prose to be written]",
-        "B1": "[stub §22 — prose to be written]",
-        "B2": "[stub §22 — prose to be written]"
+        "A2": "You take old Joan's words to heart. Cook your own food. Watch the oven. Don't trust Dale. And stay off that main road. It is simple advice, and good. Now you just have to follow it.",
+        "B1": "You take old Joan's words to heart. Cook your own food. Keep an eye on the oven. Don't trust Dale. And stay well off that main road. It's simple advice, and good. Now you just have to follow it, with the clock running.",
+        "B2": "You take old Joan's words to heart, one by one. Cook your own food. Keep one eye on the oven. Don't trust a word Dale says. And stay well off that main road in the dark. It's simple advice, and good — the hard part is following it when you're tired and the clock is running down."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §21]",
-            "B1": "[choice 1 → §21]",
-            "B2": "[choice 1 → §21]"
+            "A2": "On with it.",
+            "B1": "On with it.",
+            "B2": "On with it."
           },
           "goto": 21
         },
         {
           "text": {
-            "A2": "[choice 2 → §9]",
-            "B1": "[choice 2 → §9]",
-            "B2": "[choice 2 → §9]"
+            "A2": "Back to the shop.",
+            "B1": "Back to the shop.",
+            "B2": "Back to the shop."
           },
           "goto": 9
         }
@@ -707,24 +707,24 @@
     {
       "id": 23,
       "text": {
-        "A2": "[stub §23 — prose to be written]",
-        "B1": "[stub §23 — prose to be written]",
-        "B2": "[stub §23 — prose to be written]"
+        "A2": "You feel better for helping someone. Oddly, it steadies you too. Your head is clearer, and your hands are surer. There's still a lot to do before seven. But now you feel able to do it.",
+        "B1": "You feel better for the good turn you did. Helping someone, oddly, seems to steady you too. Your head is clearer, and your hands are surer. There's still a lot to do before seven. But now you feel able to meet it.",
+        "B2": "You feel better for the good turn you did. Helping someone out, oddly enough, seems to steady you as well. Your head is clearer now, and your hands are surer on the work. There's still a great deal to do before seven — but you feel, for the first time since Gran called down, able to meet it."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §21]",
-            "B1": "[choice 1 → §21]",
-            "B2": "[choice 1 → §21]"
+            "A2": "On with the cooking.",
+            "B1": "On with the cooking.",
+            "B2": "On with the cooking."
           },
           "goto": 21
         },
         {
           "text": {
-            "A2": "[choice 2 → §12]",
-            "B1": "[choice 2 → §12]",
-            "B2": "[choice 2 → §12]"
+            "A2": "Call more people in.",
+            "B1": "Call more people in.",
+            "B2": "Call more people in."
           },
           "goto": 12
         }
@@ -733,24 +733,24 @@
     {
       "id": 24,
       "text": {
-        "A2": "[stub §24 — prose to be written]",
-        "B1": "[stub §24 — prose to be written]",
-        "B2": "[stub §24 — prose to be written]"
+        "A2": "Dale from the takeaway is at the door, all smiles. He has hot food in bags and an easy way out. 'Why cook, love?' he says. 'Buy mine, tip it in your dishes. No one will ever know.' You've heard that kind of thing before.",
+        "B1": "Dale from the takeaway is at the door, all smiles. He has hot food in bags and an easy way out to sell you. 'Why go to all that trouble, love?' he says. 'Buy mine, tip it into your own dishes — no one will ever know.' You've heard that kind of offer before.",
+        "B2": "Dale from the takeaway on the corner is at your door, all smiles, steam rising off the bags in his hands. He has hot food to sell and an easy way out to go with it. 'Why go to all that trouble, love?' he says. 'Buy mine, tip it into your own dishes — no one will ever know the difference.' You've heard that kind of offer before, and you know a hook when it's dangled."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §40]",
-            "B1": "[choice 1 → §40]",
-            "B2": "[choice 1 → §40]"
+            "A2": "Hear him out.",
+            "B1": "Hear him out.",
+            "B2": "Hear him out."
           },
           "goto": 40
         },
         {
           "text": {
-            "A2": "[choice 2 → §26]",
-            "B1": "[choice 2 → §26]",
-            "B2": "[choice 2 → §26]"
+            "A2": "Say no and get on.",
+            "B1": "Say no and get on.",
+            "B2": "Say no and get on."
           },
           "goto": 26
         }
@@ -759,24 +759,24 @@
     {
       "id": 25,
       "text": {
-        "A2": "[stub §25 — prose to be written]",
-        "B1": "[stub §25 — prose to be written]",
-        "B2": "[stub §25 — prose to be written]"
+        "A2": "You get everyone busy in the kitchen. Working together, it all feels lighter. One peels, one stirs, one lays the table. 'This bit next,' you say, and they follow. It's a good feeling, with the clock running.",
+        "B1": "You get everyone busy in the kitchen. Working together, the whole thing feels lighter. One peels the potatoes, one stirs a pot, one lays the table. 'This bit next,' you say, and they follow your lead. It's a good feeling, with the clock running down.",
+        "B2": "You get everyone busy in the warm kitchen. Working together, the whole evening suddenly feels lighter than it did. One peels the potatoes, one stirs a pot, one lays the table under your eye. 'This bit next,' you say, and they follow your lead. It's a good feeling to have, with the clock running down toward seven."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §26]",
-            "B1": "[choice 1 → §26]",
-            "B2": "[choice 1 → §26]"
+            "A2": "This way.",
+            "B1": "This way.",
+            "B2": "This way."
           },
           "goto": 26
         },
         {
           "text": {
-            "A2": "[choice 2 → §70]",
-            "B1": "[choice 2 → §70]",
-            "B2": "[choice 2 → §70]"
+            "A2": "The knock at the gate again.",
+            "B1": "The knock at the gate again.",
+            "B2": "The knock at the gate again."
           },
           "goto": 70
         }
@@ -785,32 +785,32 @@
     {
       "id": 26,
       "text": {
-        "A2": "[stub §26 — prose to be written]",
-        "B1": "[stub §26 — prose to be written]",
-        "B2": "[stub §26 — prose to be written]"
+        "A2": "The long way round is dark and cold. The rain is on your face, and there is no shelter. But it is safe under your feet, and it gets you to the shop. So you keep walking, as fast as you dare.",
+        "B1": "The long way round is dark and cold, the rain on your face, no shelter at all. But it's safe under your feet, and it gets you to the shop and back. So you keep walking, as fast as you dare, step after step.",
+        "B2": "The long way round the block is dark and cold, the rain stinging your face, with no shelter at all along the way. But it's safe under your feet, and it gets you to the shop and back in one piece. So you keep walking into it, as fast as you dare, step after step after step."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §30]",
-            "B1": "[choice 1 → §30]",
-            "B2": "[choice 1 → §30]"
+            "A2": "Press on.",
+            "B1": "Press on.",
+            "B2": "Press on."
           },
           "goto": 30
         },
         {
           "text": {
-            "A2": "[choice 2 → §31]",
-            "B1": "[choice 2 → §31]",
-            "B2": "[choice 2 → §31]"
+            "A2": "Someone needs a hand.",
+            "B1": "Someone needs a hand.",
+            "B2": "Someone needs a hand."
           },
           "goto": 31
         },
         {
           "text": {
-            "A2": "[choice 3 → §64]",
-            "B1": "[choice 3 → §64]",
-            "B2": "[choice 3 → §64]"
+            "A2": "The quiet street, all lit windows.",
+            "B1": "The quiet street, all lit windows.",
+            "B2": "The quiet street, all lit windows."
           },
           "goto": 64
         }
