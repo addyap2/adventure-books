@@ -2286,32 +2286,32 @@
     {
       "id": 90,
       "text": {
-        "A2": "[stub §90 — prose to be written]",
-        "B1": "[stub §90 — prose to be written]",
-        "B2": "[stub §90 — prose to be written]"
+        "A2": "You reach the office at last, soaked and worn out, with two almost here. Up on the top floor, the panel is waiting behind a closed door. The waiting room is cold and quiet, the clock loud on the wall. This is the moment it all rests on. Everything now comes down to what you do next.",
+        "B1": "You reach the office at last, soaked and worn out, with two almost here. Up on the top floor, the panel is waiting behind a closed door. The waiting room is cold and quiet, the clock loud on the wall. This is the moment it all rests on. Everything now comes down to what you do in the next hour.",
+        "B2": "You reach the office at last, soaked to the skin and worn right out, with two o'clock almost upon you. Up on the top floor, the panel is waiting behind a closed door. The waiting room is cold and quiet, the clock loud on the bare wall. This is the moment the whole day rests on. Everything now comes down to what you do in the next short hour."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §91]",
-            "B1": "[choice 1 → §91]",
-            "B2": "[choice 1 → §91]"
+            "A2": "Sign in and get ready.",
+            "B1": "Sign in and get ready.",
+            "B2": "Sign in and get ready."
           },
           "goto": 91
         },
         {
           "text": {
-            "A2": "[choice 2 → §80]",
-            "B1": "[choice 2 → §80]",
-            "B2": "[choice 2 → §80]"
+            "A2": "Reese, at the door again.",
+            "B1": "Reese, at the door again.",
+            "B2": "Reese, at the door again."
           },
           "goto": 80
         },
         {
           "text": {
-            "A2": "[choice 3 → §92]",
-            "B1": "[choice 3 → §92]",
-            "B2": "[choice 3 → §92]"
+            "A2": "A friendly face arrives.",
+            "B1": "A friendly face arrives.",
+            "B2": "A friendly face arrives."
           },
           "goto": 92
         }
@@ -2320,32 +2320,32 @@
     {
       "id": 91,
       "text": {
-        "A2": "[stub §91 — prose to be written]",
-        "B1": "[stub §91 — prose to be written]",
-        "B2": "[stub §91 — prose to be written]"
+        "A2": "You reach the desk and sign in: your name, the time, a stiff nod from the clerk. Out there, the day is still working against you. You have to get yourself ready and your head straight. And you have to choose what matters most, right now.",
+        "B1": "You reach the desk and sign in: your name, the time, a stiff nod from the clerk. Out there, the day is still working against you. You have to get yourself ready and your head straight again. And you have to choose what matters most, right now.",
+        "B2": "You reach the desk and sign in at last: your name, the time, a stiff nod from the clerk. Out there, the day is still working against you. You have to get yourself ready and your head straight again, and fast. And you have to choose what matters most of all, right now, with no time to spare."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §93]",
-            "B1": "[choice 1 → §93]",
-            "B2": "[choice 1 → §93]"
+            "A2": "Get yourself ready.",
+            "B1": "Get yourself ready.",
+            "B2": "Get yourself ready."
           },
           "goto": 93
         },
         {
           "text": {
-            "A2": "[choice 2 → §94]",
-            "B1": "[choice 2 → §94]",
-            "B2": "[choice 2 → §94]"
+            "A2": "Call home first.",
+            "B1": "Call home first.",
+            "B2": "Call home first."
           },
           "goto": 94
         },
         {
           "text": {
-            "A2": "[choice 3 → §98]",
-            "B1": "[choice 3 → §98]",
-            "B2": "[choice 3 → §98]"
+            "A2": "That figure again.",
+            "B1": "That figure again.",
+            "B2": "That figure again."
           },
           "goto": 98
         }
@@ -2354,32 +2354,32 @@
     {
       "id": 92,
       "text": {
-        "A2": "[stub §92 — prose to be written]",
-        "B1": "[stub §92 — prose to be written]",
-        "B2": "[stub §92 — prose to be written]"
+        "A2": "Then help reaches you at last. A text, a friend in the lobby, a kind word from someone who's done this. You're not alone with it now. Others have your back. It's like setting down something heavy you carried too far, too long.",
+        "B1": "Then help reaches you at last — a text, a friend in the lobby, a kind word from someone who's done this before. You're not alone with it now. Others have your back. It's like setting down something heavy you'd carried too far, for too long.",
+        "B2": "Then help reaches you at last — a text, a friend waiting in the lobby, a kind word from someone who's done this before and come out the other side. You're not alone with it any more. Others have your back now. It's like finally setting down something heavy that you'd carried too far, and for far too long."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §93]",
-            "B1": "[choice 1 → §93]",
-            "B2": "[choice 1 → §93]"
+            "A2": "Set to work on yourself.",
+            "B1": "Set to work on yourself.",
+            "B2": "Set to work on yourself."
           },
           "goto": 93
         },
         {
           "text": {
-            "A2": "[choice 2 → §100]",
-            "B1": "[choice 2 → §100]",
-            "B2": "[choice 2 → §100]"
+            "A2": "Settle in for the wait.",
+            "B1": "Settle in for the wait.",
+            "B2": "Settle in for the wait."
           },
           "goto": 100
         },
         {
           "text": {
-            "A2": "[choice 3 → §107]",
-            "B1": "[choice 3 → §107]",
-            "B2": "[choice 3 → §107]"
+            "A2": "Watch the lifts.",
+            "B1": "Watch the lifts.",
+            "B2": "Watch the lifts."
           },
           "goto": 107
         }
@@ -2388,24 +2388,24 @@
     {
       "id": 93,
       "text": {
-        "A2": "[stub §93 — prose to be written]",
-        "B1": "[stub §93 — prose to be written]",
-        "B2": "[stub §93 — prose to be written]"
+        "A2": "Now you get yourself ready. What you can do depends on what you brought with you. With your papers in order, you've plenty to work with. Without them, you must make every word count. Either way, the work is the same: keep calm, keep going.",
+        "B1": "Now you get yourself ready. What you can do depends on what you brought with you. With your papers in order, you've plenty to work with. Without them, you have to make every word count. Either way, the work is the same: keep calm, keep going.",
+        "B2": "Now you get yourself ready, come what may. What you can do depends on what you carried in with you. With your papers in order, you've plenty to work with. Without them, you have to make every single word count. Either way, the work in front of you is the same: keep calm, and keep going."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §95]",
-            "B1": "[choice 1 → §95]",
-            "B2": "[choice 1 → §95]"
+            "A2": "Papers all in order.",
+            "B1": "Papers all in order.",
+            "B2": "Papers all in order."
           },
           "goto": 95
         },
         {
           "text": {
-            "A2": "[choice 2 → §96]",
-            "B1": "[choice 2 → §96]",
-            "B2": "[choice 2 → §96]"
+            "A2": "Next to nothing ready.",
+            "B1": "Next to nothing ready.",
+            "B2": "Next to nothing ready."
           },
           "goto": 96
         }
@@ -2414,24 +2414,24 @@
     {
       "id": 94,
       "text": {
-        "A2": "[stub §94 — prose to be written]",
-        "B1": "[stub §94 — prose to be written]",
-        "B2": "[stub §94 — prose to be written]"
+        "A2": "You step outside and call home. Your dad picks up, and his voice is there at once. There's worry in it — then, hearing you steady, a bit less worry. 'You're nearly there,' he says. 'I am,' you tell him softly. 'Now let me go and do it.'",
+        "B1": "You step outside and call home. Your dad picks up, and his voice is there at once. There's worry in it — then, hearing you steady, a little less worry. 'You're nearly there,' he says. 'I am,' you tell him softly. 'Now let me go and do it.'",
+        "B2": "You step outside the room and call home. Your dad picks up, and his voice is there at once, like it always is. There's worry in it at first — then, hearing you sound steady, a little less worry. 'You're nearly there,' he says. 'I am,' you tell him softly. 'Now let me go in and do it.'"
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §93]",
-            "B1": "[choice 1 → §93]",
-            "B2": "[choice 1 → §93]"
+            "A2": "Back in, ready.",
+            "B1": "Back in, ready.",
+            "B2": "Back in, ready."
           },
           "goto": 93
         },
         {
           "text": {
-            "A2": "[choice 2 → §95]",
-            "B1": "[choice 2 → §95]",
-            "B2": "[choice 2 → §95]"
+            "A2": "Papers in order.",
+            "B1": "Papers in order.",
+            "B2": "Papers in order."
           },
           "goto": 95
         }
@@ -2440,24 +2440,24 @@
     {
       "id": 95,
       "text": {
-        "A2": "[stub §95 — prose to be written]",
-        "B1": "[stub §95 — prose to be written]",
-        "B2": "[stub §95 — prose to be written]"
+        "A2": "Your papers do it. You lay them out, read your notes, and slowly the answers come clear in your head. Your breathing settles. The room feels warmer, your nerves quieter. This, you think, is what being ready feels like.",
+        "B1": "Your papers do it. You lay them out, read over your notes, and slowly the answers come clear in your head. Your breathing settles. The room feels warmer, your nerves quieter now. This, you think to yourself, is what being ready feels like.",
+        "B2": "Your papers do the trick. You lay them out, read over your notes, and slowly the answers come clear in your head, one by one. Your breathing settles at last. The whole room feels warmer, and your nerves quieter now. This, you think to yourself, is exactly what being ready feels like."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §100]",
-            "B1": "[choice 1 → §100]",
-            "B2": "[choice 1 → §100]"
+            "A2": "The long wait now.",
+            "B1": "The long wait now.",
+            "B2": "The long wait now."
           },
           "goto": 100
         },
         {
           "text": {
-            "A2": "[choice 2 → §92]",
-            "B1": "[choice 2 → §92]",
-            "B2": "[choice 2 → §92]"
+            "A2": "A friend checks in.",
+            "B1": "A friend checks in.",
+            "B2": "A friend checks in."
           },
           "goto": 92
         }
@@ -2466,24 +2466,24 @@
     {
       "id": 96,
       "text": {
-        "A2": "[stub §96 — prose to be written]",
-        "B1": "[stub §96 — prose to be written]",
-        "B2": "[stub §96 — prose to be written]"
+        "A2": "You've not much ready, so you make the most of every scrap. A few good lines, a clear head, and a lot of nerve. You run them over and over. It's thin, and bare. It may be enough — or it may not.",
+        "B1": "You've not much ready, so you make the most of every last scrap. A few good lines, a clear head, and a lot of nerve. You run them over and over. It's thin, and bare. It may just be enough — or it may not.",
+        "B2": "You've not much ready at all, so you make the most of every last scrap. A few good lines, a clear head, and a great deal of nerve. You run them over and over in your mind. It's thin, and bare, and honest. It may just about be enough — or, then again, it may not."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §100]",
-            "B1": "[choice 1 → §100]",
-            "B2": "[choice 1 → §100]"
+            "A2": "The long wait now.",
+            "B1": "The long wait now.",
+            "B2": "The long wait now."
           },
           "goto": 100
         },
         {
           "text": {
-            "A2": "[choice 2 → §97]",
-            "B1": "[choice 2 → §97]",
-            "B2": "[choice 2 → §97]"
+            "A2": "You need more.",
+            "B1": "You need more.",
+            "B2": "You need more."
           },
           "goto": 97
         }
@@ -2492,24 +2492,24 @@
     {
       "id": 97,
       "text": {
-        "A2": "[stub §97 — prose to be written]",
-        "B1": "[stub §97 — prose to be written]",
-        "B2": "[stub §97 — prose to be written]"
+        "A2": "What you have is thin, and you're afraid it won't carry you through the room. You've done all you can with what little you brought. But it may still fall short at the table. You need more now — more notes, more calm, or both.",
+        "B1": "What you have is thin, and you're afraid it won't carry you through the room. You've done all you can with the little you brought. But it may still fall short in the end. You need more now — more notes, more calm, or both.",
+        "B2": "What you have is thin, and you're honestly afraid it won't carry you through the room. You've done all you possibly can with the little you brought. But even so, it may still fall short when they start to ask. You need more now — more notes, more calm, or, if you're to manage this, probably both."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §100]",
-            "B1": "[choice 1 → §100]",
-            "B2": "[choice 1 → §100]"
+            "A2": "The long wait anyway.",
+            "B1": "The long wait anyway.",
+            "B2": "The long wait anyway."
           },
           "goto": 100
         },
         {
           "text": {
-            "A2": "[choice 2 → §12]",
-            "B1": "[choice 2 → §12]",
-            "B2": "[choice 2 → §12]"
+            "A2": "Call round for help.",
+            "B1": "Call round for help.",
+            "B2": "Call round for help."
           },
           "goto": 12
         }
@@ -2518,24 +2518,24 @@
     {
       "id": 98,
       "text": {
-        "A2": "[stub §98 — prose to be written]",
-        "B1": "[stub §98 — prose to be written]",
-        "B2": "[stub §98 — prose to be written]"
+        "A2": "You glance across the waiting room and see it. By the far window, that figure again — still, half-turned, watching. It's where no one you'd expect would be. It pulls at your eye. And it pulls at something deeper than that.",
+        "B1": "You glance across the waiting room and see it. By the far window, that figure again — still, half-turned, watching. It's where no one you'd expect to see would be. It pulls at your eye. And it pulls at something deeper than that.",
+        "B2": "You glance across the waiting room and you see it. By the far window, that figure again — quite still, half-turned, watching the room. It's standing where no one you'd ever expect to see would be. It pulls at your eye, that figure. And it pulls, if you're honest, at something a good deal deeper than that."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §93]",
-            "B1": "[choice 1 → §93]",
-            "B2": "[choice 1 → §93]"
+            "A2": "Keep to your papers.",
+            "B1": "Keep to your papers.",
+            "B2": "Keep to your papers."
           },
           "goto": 93
         },
         {
           "text": {
-            "A2": "[choice 2 → §99]",
-            "B1": "[choice 2 → §99]",
-            "B2": "[choice 2 → §99]"
+            "A2": "Go to the figure.",
+            "B1": "Go to the figure.",
+            "B2": "Go to the figure."
           },
           "goto": 99
         }
@@ -2544,24 +2544,24 @@
     {
       "id": 99,
       "text": {
-        "A2": "[stub §99 — prose to be written]",
-        "B1": "[stub §99 — prose to be written]",
-        "B2": "[stub §99 — prose to be written]"
+        "A2": "The figure by the window shows again. It stands where you'd swear no one you knew would be. But a face you half know means a story. A story means a choice. A person right there, from your past, on today of all days.",
+        "B1": "The figure by the window shows again. It stands where you'd swear no one you knew would be. But a face you half know means a story. A story means a choice. A person right there, from your past, on today of all days.",
+        "B2": "The figure by the window shows itself again. It stands where you'd swear blind that no one you knew would be. But a face you half know means a story behind it. And a story means a choice to make. A person standing right there, out of your past, on today of all days — and you can't un-see it now."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §94]",
-            "B1": "[choice 1 → §94]",
-            "B2": "[choice 1 → §94]"
+            "A2": "Call home first.",
+            "B1": "Call home first.",
+            "B2": "Call home first."
           },
           "goto": 94
         },
         {
           "text": {
-            "A2": "[choice 2 → §100]",
-            "B1": "[choice 2 → §100]",
-            "B2": "[choice 2 → §100]"
+            "A2": "The long wait now.",
+            "B1": "The long wait now.",
+            "B2": "The long wait now."
           },
           "goto": 100
         }
@@ -2570,32 +2570,32 @@
     {
       "id": 100,
       "text": {
-        "A2": "[stub §100 — prose to be written]",
-        "B1": "[stub §100 — prose to be written]",
-        "B2": "[stub §100 — prose to be written]"
+        "A2": "Now comes the long wait. You sit, you breathe, you watch the clock crawl toward two. It's not exciting — just the slow, hard work of keeping your nerve. But it's the whole job right now. And it's yours to do.",
+        "B1": "Now comes the long wait. You sit, you breathe, you watch the clock crawl slowly toward two. It's not exciting — just the slow, hard work of keeping your nerve. But it's the whole job right now. And it's yours to do.",
+        "B2": "Now comes the long wait of it. You sit, you breathe, you watch the clock crawl slowly toward two o'clock. It isn't exciting work — just the slow, hard work of keeping your nerve steady. But it's the whole job right now, start to finish. And it's yours, and no one else's."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §101]",
-            "B1": "[choice 1 → §101]",
-            "B2": "[choice 1 → §101]"
+            "A2": "Nearly your turn.",
+            "B1": "Nearly your turn.",
+            "B2": "Nearly your turn."
           },
           "goto": 101
         },
         {
           "text": {
-            "A2": "[choice 2 → §70]",
-            "B1": "[choice 2 → §70]",
-            "B2": "[choice 2 → §70]"
+            "A2": "That figure again.",
+            "B1": "That figure again.",
+            "B2": "That figure again."
           },
           "goto": 70
         },
         {
           "text": {
-            "A2": "[choice 3 → §102]",
-            "B1": "[choice 3 → §102]",
-            "B2": "[choice 3 → §102]"
+            "A2": "The hardest wait.",
+            "B1": "The hardest wait.",
+            "B2": "The hardest wait."
           },
           "goto": 102
         }
@@ -2604,24 +2604,24 @@
     {
       "id": 101,
       "text": {
-        "A2": "[stub §101 — prose to be written]",
-        "B1": "[stub §101 — prose to be written]",
-        "B2": "[stub §101 — prose to be written]"
+        "A2": "And then, at last, it turns. The door opens. A name is called. The one before you comes out, pale and relieved. It's almost two now. You've nearly got yourself through the whole wait. Soon it will be your name on the clerk's lips.",
+        "B1": "And then, at last, it turns. The door opens. A name is called. The one before you comes out, pale and relieved. It's almost two now. You've nearly got yourself through the whole wait. Soon it will be your name on the clerk's lips.",
+        "B2": "And then, at long last, it turns. The door opens. A name is called out. The one before you comes out, pale and relieved, and it's over for them. It's almost two now, almost time. You've very nearly got yourself through the whole long wait. Soon it will be your name they call across the room."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §110]",
-            "B1": "[choice 1 → §110]",
-            "B2": "[choice 1 → §110]"
+            "A2": "Your name is called.",
+            "B1": "Your name is called.",
+            "B2": "Your name is called."
           },
           "goto": 110
         },
         {
           "text": {
-            "A2": "[choice 2 → §105]",
-            "B1": "[choice 2 → §105]",
-            "B2": "[choice 2 → §105]"
+            "A2": "Two o'clock.",
+            "B1": "Two o'clock.",
+            "B2": "Two o'clock."
           },
           "goto": 105
         }
@@ -2630,24 +2630,24 @@
     {
       "id": 102,
       "text": {
-        "A2": "[stub §102 — prose to be written]",
-        "B1": "[stub §102 — prose to be written]",
-        "B2": "[stub §102 — prose to be written]"
+        "A2": "This is the hardest wait, the last one before your name. Nothing has happened yet. Your heart pounds, your mouth is dry. But you can feel yourself coming together, somewhere under the fear. Hold on a little longer.",
+        "B1": "This is the hardest wait, the last one before your name is called. Nothing has happened yet. Your heart pounds, and your mouth is dry. But you can feel yourself coming together, somewhere under the fear. Hold on a little longer now.",
+        "B2": "This is the hardest wait of the whole day, the last one before your name is called. Nothing has happened yet, not really. Your heart pounds, and your mouth is dry as dust. But you can feel yourself starting to come together, somewhere under the fear. Just hold on a little longer now."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §101]",
-            "B1": "[choice 1 → §101]",
-            "B2": "[choice 1 → §101]"
+            "A2": "Nearly your turn.",
+            "B1": "Nearly your turn.",
+            "B2": "Nearly your turn."
           },
           "goto": 101
         },
         {
           "text": {
-            "A2": "[choice 2 → §103]",
-            "B1": "[choice 2 → §103]",
-            "B2": "[choice 2 → §103]"
+            "A2": "You're not alone in here.",
+            "B1": "You're not alone in here.",
+            "B2": "You're not alone in here."
           },
           "goto": 103
         }
@@ -2656,24 +2656,24 @@
     {
       "id": 103,
       "text": {
-        "A2": "[stub §103 — prose to be written]",
-        "B1": "[stub §103 — prose to be written]",
-        "B2": "[stub §103 — prose to be written]"
+        "A2": "You look round the waiting room. Other people sit with their nerves, same as you. Other hopes, other mornings just as hard. You all got here, through all of it. You were never quite as alone as you felt.",
+        "B1": "You look round the waiting room. Other people sit with their nerves, same as you. Other hopes, other mornings just as hard. You all got here, through all of it. You were never quite as alone as you'd felt.",
+        "B2": "You look round the waiting room at the others. Other people sit with their nerves, exactly the same as you. Other hopes, other mornings every bit as hard. You all got here in the end, through all of it. You were never, it turns out, quite as alone as you'd felt."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §110]",
-            "B1": "[choice 1 → §110]",
-            "B2": "[choice 1 → §110]"
+            "A2": "Your name is called.",
+            "B1": "Your name is called.",
+            "B2": "Your name is called."
           },
           "goto": 110
         },
         {
           "text": {
-            "A2": "[choice 2 → §104]",
-            "B1": "[choice 2 → §104]",
-            "B2": "[choice 2 → §104]"
+            "A2": "The door opens.",
+            "B1": "The door opens.",
+            "B2": "The door opens."
           },
           "goto": 104
         }
@@ -2682,24 +2682,24 @@
     {
       "id": 104,
       "text": {
-        "A2": "[stub §104 — prose to be written]",
-        "B1": "[stub §104 — prose to be written]",
-        "B2": "[stub §104 — prose to be written]"
+        "A2": "At last, the door opens and your name is said. A hand waves you in — the panel, warm light, three faces turning to you. You stand, your legs shaking under you now. But the worst of the waiting is behind you.",
+        "B1": "At last, the door opens and your name is said. A hand waves you in — the panel, warm light, three faces turning to you. You stand, your legs shaking under you now. But the worst of the waiting is behind you.",
+        "B2": "At last, the door opens and your name is said aloud. A hand waves you in — the panel, warm light, three faces turning to you at once. You stand, your legs shaking under you now that the moment's here. But the worst of the long waiting is well and truly behind you."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §110]",
-            "B1": "[choice 1 → §110]",
-            "B2": "[choice 1 → §110]"
+            "A2": "See it all added up.",
+            "B1": "See it all added up.",
+            "B2": "See it all added up."
           },
           "goto": 110
         },
         {
           "text": {
-            "A2": "[choice 2 → §114]",
-            "B1": "[choice 2 → §114]",
-            "B2": "[choice 2 → §114]"
+            "A2": "Too much, too fast.",
+            "B1": "Too much, too fast.",
+            "B2": "Too much, too fast."
           },
           "goto": 114
         }
@@ -2708,32 +2708,32 @@
     {
       "id": 105,
       "text": {
-        "A2": "[stub §105 — prose to be written]",
-        "B1": "[stub §105 — prose to be written]",
-        "B2": "[stub §105 — prose to be written]"
+        "A2": "Two o'clock comes round. The door opens, and your name is called clear. You walk in. The panel is set, the light is warm, the room is ready. The worst has passed at last. You made it to the hour.",
+        "B1": "Two o'clock comes round. The door opens, and your name is called out clear. You walk in. The panel is set, the light is warm, and the room is ready. The worst has passed at last. You made it to the hour.",
+        "B2": "Two o'clock comes round at last. The door opens, and your name is called out clear across the room. You walk in. The panel is set, the light is warm, the room is ready for you. The worst has passed at last, and you can feel it go. You made it, somehow, all the way to the hour."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §110]",
-            "B1": "[choice 1 → §110]",
-            "B2": "[choice 1 → §110]"
+            "A2": "See it all added up.",
+            "B1": "See it all added up.",
+            "B2": "See it all added up."
           },
           "goto": 110
         },
         {
           "text": {
-            "A2": "[choice 2 → §92]",
-            "B1": "[choice 2 → §92]",
-            "B2": "[choice 2 → §92]"
+            "A2": "A friend's last word.",
+            "B1": "A friend's last word.",
+            "B2": "A friend's last word."
           },
           "goto": 92
         },
         {
           "text": {
-            "A2": "[choice 3 → §106]",
-            "B1": "[choice 3 → §106]",
-            "B2": "[choice 3 → §106]"
+            "A2": "A small, good moment.",
+            "B1": "A small, good moment.",
+            "B2": "A small, good moment."
           },
           "goto": 106
         }
@@ -2742,24 +2742,24 @@
     {
       "id": 106,
       "text": {
-        "A2": "[stub §106 — prose to be written]",
-        "B1": "[stub §106 — prose to be written]",
-        "B2": "[stub §106 — prose to be written]"
+        "A2": "Then it comes — a small laugh across the table, the first of the day. The room warms, just like that. After the morning you've had, it seems almost absurd. And it's good, and you let yourself breathe at last.",
+        "B1": "Then it comes — a small laugh across the table, the first real one of the day. The room warms, just like that. After the morning you've had, it seems almost absurd. And it's good, and you let yourself breathe at last.",
+        "B2": "Then it comes — a small laugh across the table, the first real one of the whole day. The room warms, just like that, all at once. After the morning you've just had, it seems almost absurd that such a thing could happen. And it's good, honestly good, and you let yourself breathe at last."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §110]",
-            "B1": "[choice 1 → §110]",
-            "B2": "[choice 1 → §110]"
+            "A2": "See it all added up.",
+            "B1": "See it all added up.",
+            "B2": "See it all added up."
           },
           "goto": 110
         },
         {
           "text": {
-            "A2": "[choice 2 → §92]",
-            "B1": "[choice 2 → §92]",
-            "B2": "[choice 2 → §92]"
+            "A2": "Back to it, steadier.",
+            "B1": "Back to it, steadier.",
+            "B2": "Back to it, steadier."
           },
           "goto": 92
         }
@@ -2768,24 +2768,24 @@
     {
       "id": 107,
       "text": {
-        "A2": "[stub §107 — prose to be written]",
-        "B1": "[stub §107 — prose to be written]",
-        "B2": "[stub §107 — prose to be written]"
+        "A2": "From the waiting room you watch the lifts. People come and go, nervy and quick, too far to read. Something is coming, one way or another. But a lift means someone arriving. And someone, today, is better than facing it all alone.",
+        "B1": "From the waiting room you watch the lifts. People come and go, nervy and quick, too far off to read. Something is coming, one way or another. But a lift means someone arriving. And someone, today, is better than facing it all alone.",
+        "B2": "From the waiting room you watch the lifts open and close. People come and go, nervy and quick, still too far off to read properly. Something is coming, one way or another, down there. But a lift means someone arriving. And someone, on a day like this one, is far better than facing it all alone."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §93]",
-            "B1": "[choice 1 → §93]",
-            "B2": "[choice 1 → §93]"
+            "A2": "Keep to your papers.",
+            "B1": "Keep to your papers.",
+            "B2": "Keep to your papers."
           },
           "goto": 93
         },
         {
           "text": {
-            "A2": "[choice 2 → §100]",
-            "B1": "[choice 2 → §100]",
-            "B2": "[choice 2 → §100]"
+            "A2": "The long wait now.",
+            "B1": "The long wait now.",
+            "B2": "The long wait now."
           },
           "goto": 100
         }
@@ -2794,16 +2794,16 @@
     {
       "id": 110,
       "text": {
-        "A2": "[stub §110 — prose to be written]",
-        "B1": "[stub §110 — prose to be written]",
-        "B2": "[stub §110 — prose to be written]"
+        "A2": "Two o'clock, and the morning adds up to what it is. Whatever you did out there comes with you into the room now. Some of it to be proud of, some not. Let's see, then, what it all came to.",
+        "B1": "Two o'clock, and the morning adds up to what it is. Whatever you did out there comes with you into the room now. Some of it to be proud of, some of it not. Let's see, then, what it all came to.",
+        "B2": "Two o'clock, and the morning adds up to just exactly what it is. Whatever you did out there, in the cold and the rain, comes with you into the room now, all of it. Some of it to be proud of, and some of it not so much. Let's see, then, what the whole hard morning finally came to."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §120]",
-            "B1": "[choice 1 → §120]",
-            "B2": "[choice 1 → §120]"
+            "A2": "You earned it straight.",
+            "B1": "You earned it straight.",
+            "B2": "You earned it straight."
           },
           "goto": 120,
           "requires": [
@@ -2812,9 +2812,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §121]",
-            "B1": "[choice 2 → §121]",
-            "B2": "[choice 2 → §121]"
+            "A2": "You faced the past.",
+            "B1": "You faced the past.",
+            "B2": "You faced the past."
           },
           "goto": 121,
           "requires": [
@@ -2823,9 +2823,9 @@
         },
         {
           "text": {
-            "A2": "[choice 3 → §111]",
-            "B1": "[choice 3 → §111]",
-            "B2": "[choice 3 → §111]"
+            "A2": "What else it came to.",
+            "B1": "What else it came to.",
+            "B2": "What else it came to."
           },
           "goto": 111
         }
@@ -2834,16 +2834,16 @@
     {
       "id": 111,
       "text": {
-        "A2": "[stub §111 — prose to be written]",
-        "B1": "[stub §111 — prose to be written]",
-        "B2": "[stub §111 — prose to be written]"
+        "A2": "The morning adds up — not with one big move, but with many small ones. What you got ready, what you refused, who you stopped for on the way. It all counts in the end. It all made the day what it was.",
+        "B1": "The morning adds up — not with one big move, but with many small ones. What you got ready, what you refused, and who you stopped for on the way. It all counts in the end. It all made the day what it was.",
+        "B2": "The morning adds up — not, in the end, with one big move, but with a great many small ones. What you got ready, what you refused to do, and who you stopped for along the way. It all counts in the end, every bit of it. It all made the day into exactly what it was."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §122]",
-            "B1": "[choice 1 → §122]",
-            "B2": "[choice 1 → §122]"
+            "A2": "You lifted the whole room.",
+            "B1": "You lifted the whole room.",
+            "B2": "You lifted the whole room."
           },
           "goto": 122,
           "requires": [
@@ -2852,9 +2852,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §123]",
-            "B1": "[choice 2 → §123]",
-            "B2": "[choice 2 → §123]"
+            "A2": "You did it honestly.",
+            "B1": "You did it honestly.",
+            "B2": "You did it honestly."
           },
           "goto": 123,
           "requires": [
@@ -2863,9 +2863,9 @@
         },
         {
           "text": {
-            "A2": "[choice 3 → §112]",
-            "B1": "[choice 3 → §112]",
-            "B2": "[choice 3 → §112]"
+            "A2": "What else it came to.",
+            "B1": "What else it came to.",
+            "B2": "What else it came to."
           },
           "goto": 112
         }
@@ -2874,16 +2874,16 @@
     {
       "id": 112,
       "text": {
-        "A2": "[stub §112 — prose to be written]",
-        "B1": "[stub §112 — prose to be written]",
-        "B2": "[stub §112 — prose to be written]"
+        "A2": "There's more to weigh; the day held other things too. A stranger you stopped for in the rain. Your own notes, given away with an open hand. Small choices, made in the cold, when it would have been easier not to.",
+        "B1": "There's more to weigh; the day held other things too. A stranger you stopped for out in the rain. Your own notes, given away with an open hand. Small choices, made in the cold, when it would have been far easier not to.",
+        "B2": "There's more still to weigh up; the day held other things too, quieter ones. A stranger you stopped for out in the rain. Your own notes, given away freely with an open hand. Small choices, all of them, made out in the cold, when it would have been so much easier simply not to bother."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §124]",
-            "B1": "[choice 1 → §124]",
-            "B2": "[choice 1 → §124]"
+            "A2": "A kindness came back.",
+            "B1": "A kindness came back.",
+            "B2": "A kindness came back."
           },
           "goto": 124,
           "requires": [
@@ -2892,9 +2892,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §125]",
-            "B1": "[choice 2 → §125]",
-            "B2": "[choice 2 → §125]"
+            "A2": "You gave it away.",
+            "B1": "You gave it away.",
+            "B2": "You gave it away."
           },
           "goto": 125,
           "requires": [
@@ -2903,9 +2903,9 @@
         },
         {
           "text": {
-            "A2": "[choice 3 → §113]",
-            "B1": "[choice 3 → §113]",
-            "B2": "[choice 3 → §113]"
+            "A2": "What it leaves you with.",
+            "B1": "What it leaves you with.",
+            "B2": "What it leaves you with."
           },
           "goto": 113
         }
@@ -2914,32 +2914,32 @@
     {
       "id": 113,
       "text": {
-        "A2": "[stub §113 — prose to be written]",
-        "B1": "[stub §113 — prose to be written]",
-        "B2": "[stub §113 — prose to be written]"
+        "A2": "And what does the day leave you with? Maybe not the perfect interview. Maybe just the fact that you tried, that you kept going. When it was cold and late and easy to give up, you didn't. That counts for something.",
+        "B1": "And what does the day leave you with? Maybe not the perfect interview. Maybe just the fact that you tried, and that you kept going. When it was cold and late and easy to give up, you didn't. That counts for something.",
+        "B2": "And what, in the end, does the day leave you with? Maybe not the perfect interview, no. Maybe just the plain fact that you tried, and that you kept going when you could have stopped. When it was cold and late and so easy to give the whole thing up, you simply didn't. And that, whatever else, counts for something."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §126]",
-            "B1": "[choice 1 → §126]",
-            "B2": "[choice 1 → §126]"
+            "A2": "A bit shaky, but good.",
+            "B1": "A bit shaky, but good.",
+            "B2": "A bit shaky, but good."
           },
           "goto": 126
         },
         {
           "text": {
-            "A2": "[choice 2 → §127]",
-            "B1": "[choice 2 → §127]",
-            "B2": "[choice 2 → §127]"
+            "A2": "They'll remember you tried.",
+            "B1": "They'll remember you tried.",
+            "B2": "They'll remember you tried."
           },
           "goto": 127
         },
         {
           "text": {
-            "A2": "[choice 3 → §114]",
-            "B1": "[choice 3 → §114]",
-            "B2": "[choice 3 → §114]"
+            "A2": "The hard end of it.",
+            "B1": "The hard end of it.",
+            "B2": "The hard end of it."
           },
           "goto": 114
         }
@@ -2948,16 +2948,16 @@
     {
       "id": 114,
       "text": {
-        "A2": "[stub §114 — prose to be written]",
-        "B1": "[stub §114 — prose to be written]",
-        "B2": "[stub §114 — prose to be written]"
+        "A2": "But not every day ends well. Some choices cost more than you knew at the time. Some things, once done, can't be undone. This is the hard end of the day, where the worst of it comes home.",
+        "B1": "But not every day ends well. Some choices cost more than you knew at the time. Some things, once done, simply can't be undone. This is the hard end of the day, where the worst of it comes home.",
+        "B2": "But not every day ends well, and this is the truth of it. Some choices cost a great deal more than you knew at the time you made them. Some things, once done, simply can't be undone again. This is the hard end of the day, where the worst of it all comes home to roost."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §128]",
-            "B1": "[choice 1 → §128]",
-            "B2": "[choice 1 → §128]"
+            "A2": "They found out.",
+            "B1": "They found out.",
+            "B2": "They found out."
           },
           "goto": 128,
           "requires": [
@@ -2966,17 +2966,17 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §130]",
-            "B1": "[choice 2 → §130]",
-            "B2": "[choice 2 → §130]"
+            "A2": "Too late, too thin.",
+            "B1": "Too late, too thin.",
+            "B2": "Too late, too thin."
           },
           "goto": 130
         },
         {
           "text": {
-            "A2": "[choice 3 → §126]",
-            "B1": "[choice 3 → §126]",
-            "B2": "[choice 3 → §126]"
+            "A2": "A bit shaky, but good.",
+            "B1": "A bit shaky, but good.",
+            "B2": "A bit shaky, but good."
           },
           "goto": 126
         }
@@ -2985,108 +2985,108 @@
     {
       "id": 120,
       "text": {
-        "A2": "[stub ending §120 — good — prose to be written]",
-        "B1": "[stub ending §120 — good — prose to be written]",
-        "B2": "[stub ending §120 — good — prose to be written]"
+        "A2": "You earned it straight. You answered as yourself, honest and clear, and by the end the room had warmed to you. 'We'll be in touch,' they say — but the handshake says more. You'll get the call. It all came good because you went in as yourself and would not fake it. That is the whole of it.",
+        "B1": "You earned it straight. You answered as yourself, honest and clear, and by the end the room had warmed to you. 'We'll be in touch,' they say — but the handshake says more. You'll get the call. It all came good because you went in as yourself and wouldn't fake it. That is the whole of it.",
+        "B2": "You earned it straight. You answered as yourself, honest and clear, and by the end the whole room had warmed to you. 'We'll be in touch,' they say — but the handshake says a good deal more than that. You'll get the call, you're sure of it. It all came good, every bit of it, because you went in as yourself and would not fake a word. That, in the end, is the whole of it."
       },
       "ending": "good"
     },
     {
       "id": 121,
       "text": {
-        "A2": "[stub ending §121 — good — prose to be written]",
-        "B1": "[stub ending §121 — good — prose to be written]",
-        "B2": "[stub ending §121 — good — prose to be written]"
+        "A2": "You faced the past no one could change. You found Maya before the room. You said the thing you'd left unsaid for years, and let the old rift heal. And more than one thing was mended today. Across the table, Maya meets your eye. Not as a stranger, but as the partner you lost and found. A door everyone thought shut swings open.",
+        "B1": "You faced the past no one could change. You found Maya before the room, said the thing you'd left unsaid for years, and let the old rift heal. And more than one thing was mended today. Across the table, Maya meets your eye — not as a stranger, but as the partner you lost and found again. A door everyone thought shut for good swings open.",
+        "B2": "You faced the past that no one could change. You found Maya before the room, said the thing you'd left unsaid for years, and let the old rift finally heal. And more than one thing was mended today, as it turns out. Across the table, Maya meets your eye — not as a stranger, but as the partner you once lost and have somehow found again. A door everyone had thought shut for good swings quietly open, and the day becomes something far bigger than a job."
       },
       "ending": "good"
     },
     {
       "id": 122,
       "text": {
-        "A2": "[stub ending §122 — good — prose to be written]",
-        "B1": "[stub ending §122 — good — prose to be written]",
-        "B2": "[stub ending §122 — good — prose to be written]"
+        "A2": "There was no clever trick — there was something far better. You turned a room full of frightened strangers into people helping each other. One shared notes, one steadied another, one cheered the next one in. You all walked in better for it. No one faced it alone today, and they won't forget who started that.",
+        "B1": "There was no clever trick — there was something far better. You turned a room full of frightened strangers into people helping each other. One shared notes, one steadied another, one cheered the next one in. You all walked in better for it. No one faced it alone today, and they won't forget who started that.",
+        "B2": "There was no clever trick that got you through — there was something far better than that. You turned a whole room full of frightened strangers into people helping each other out. One shared notes, one steadied another's hands, one cheered the next one in through the door. You all walked in better for it. No one faced it alone today, not one of them, and they won't soon forget who started that."
       },
       "ending": "good"
     },
     {
       "id": 123,
       "text": {
-        "A2": "[stub ending §123 — good — prose to be written]",
-        "B1": "[stub ending §123 — good — prose to be written]",
-        "B2": "[stub ending §123 — good — prose to be written]"
+        "A2": "You refused the con. You saw Reese's trick for what it was, and turned your back on it. You kept your nerve, and earned your place in that room by honest work. It wasn't a perfect day. You stumbled on a question, and came close to the wire. But every word was yours, and real. And that's worth more than any shortcut.",
+        "B1": "You refused the con — saw Reese's trick for what it was and turned your back on it. You kept your nerve, and earned your place in that room by honest work. It wasn't a perfect day. You stumbled on a question, and ran it close. But every word was yours, and real, and that's worth more than any shortcut.",
+        "B2": "You refused the con outright — saw Reese's little trick for exactly what it was and turned your back on it. You kept your nerve, and earned your place in that room by honest work and nothing else. It wasn't a perfect day, mind. You stumbled badly on one question, and ran it close to the wire. But every last word was yours, and real, and that is worth a great deal more than any shortcut he was ever selling."
       },
       "ending": "good"
     },
     {
       "id": 124,
       "text": {
-        "A2": "[stub ending §124 — neutral — prose to be written]",
-        "B1": "[stub ending §124 — neutral — prose to be written]",
-        "B2": "[stub ending §124 — neutral — prose to be written]"
+        "A2": "You fell short of doing it all on your own. But the stranger you stopped for earlier turns up again. They quietly put in a word for you at the desk. It opens a door you couldn't. It's not quite the perfect day. But a kindness, it turns out, has a way of coming back round.",
+        "B1": "You fell short of doing it all on your own. But the stranger you stopped for earlier turns up again — and quietly puts in a word for you at the desk. It opens a door you couldn't. It's not quite the perfect day. But a kindness, it turns out, has a way of coming back round.",
+        "B2": "You fell short of doing it all on your own, in the end. But the stranger you stopped for earlier turns up again — and quietly puts in a word for you at the desk, where it counts. It opens a door you couldn't have opened yourself. It's not quite the perfect day you'd pictured. But a kindness, it turns out, has a quiet way of coming back round to you when you least expect it."
       },
       "ending": "neutral"
     },
     {
       "id": 125,
       "text": {
-        "A2": "[stub ending §125 — neutral — prose to be written]",
-        "B1": "[stub ending §125 — neutral — prose to be written]",
-        "B2": "[stub ending §125 — neutral — prose to be written]"
+        "A2": "You gave your own notes away to someone with less. So you walked in with less in your own hand. Just your bare words, your clear head, and nothing more. You didn't get everything you wanted. But the one you helped got their chance, and so did you. And somehow, shared out, there was just about enough.",
+        "B1": "You gave your own notes away to someone with less. So you walked in with less in your own hand — your bare words, your clear head, and nothing more. You didn't get everything you wanted. But the one you helped got their chance, and so did you. And somehow, shared out, there was just about enough.",
+        "B2": "You gave your own notes away to someone with less than you. So you walked in with less in your own hand — your bare words, your clear head, and nothing else besides. You didn't get everything you wanted out of the day. But the one you helped got their chance, and so, in the end, did you. And somehow, shared out between you, there turned out to be just about enough to go round."
       },
       "ending": "neutral"
     },
     {
       "id": 126,
       "text": {
-        "A2": "[stub ending §126 — neutral — prose to be written]",
-        "B1": "[stub ending §126 — neutral — prose to be written]",
-        "B2": "[stub ending §126 — neutral — prose to be written]"
+        "A2": "You scrape through the worst of it. The interview's a bit rough round the edges. A lost word here, a shaky start there. But you get through it. It's no triumph, and no one will tell stories about it. But you sat in that room, answered straight, and held your nerve. You got through the day, and that'll do.",
+        "B1": "You scrape through the worst of it. The interview's a bit rough round the edges — a lost word here, a shaky start there — but you get through it in the end. It's no triumph, and no one will tell stories about it. But you sat in that room, answered straight, and held your nerve. You got through the day, and that will do.",
+        "B2": "You scrape through the worst of it, somehow. The interview's a bit rough round the edges here and there — a lost word, a shaky start — but you get through it in the end, which is what counts. It's no triumph, and no one will be telling stories about it. But you sat in that room, answered straight, and held your nerve to the last. You got through the day in one piece, and today, that will do nicely."
       },
       "ending": "neutral"
     },
     {
       "id": 127,
       "text": {
-        "A2": "[stub ending §127 — neutral — prose to be written]",
-        "B1": "[stub ending §127 — neutral — prose to be written]",
-        "B2": "[stub ending §127 — neutral — prose to be written]"
+        "A2": "You didn't land it this time. But the people across that table saw you try. They saw you come in soaked, steady yourself, and keep going when you could have folded. They won't forget it. 'Not this role,' one says. 'But stay in touch.' From today, you're the one who showed up and gave it everything. And that stays.",
+        "B1": "You didn't land it this time. But the people across that table saw you try — saw you come in soaked, and steady yourself, and keep going when you could have folded. They won't forget it. 'Not this role,' one says, 'but stay in touch.' From today on, you're the one who showed up and gave it everything. And that stays.",
+        "B2": "You didn't land it this time, not quite. But the people across that table saw you try — saw you come in soaked to the skin, and steady yourself, and keep going when you could so easily have folded. They won't forget it in a hurry. 'Not this role,' one says, kindly, 'but do stay in touch.' From today on, you're the one who showed up and gave it everything. And that, whatever else, stays with people."
       },
       "ending": "neutral"
     },
     {
       "id": 128,
       "text": {
-        "A2": "[stub ending §128 — bad — prose to be written]",
-        "B1": "[stub ending §128 — bad — prose to be written]",
-        "B2": "[stub ending §128 — bad — prose to be written]"
+        "A2": "You took Reese's deal, and in the room it all comes out. A question turns, and your borrowed answer doesn't fit. The panel glance at each other. The story unravels, line by line. The job's gone, the money's gone, and the room goes cold and quiet. You won't forget the look on Maya's face in a hurry.",
+        "B1": "You took Reese's deal, and in the room it all comes out. A question turns, and your borrowed answer doesn't fit. The panel glance at each other. The story unravels, line by line. The job's gone, the money's gone, and the room goes cold and quiet. You won't forget the look on Maya's face in a hurry.",
+        "B2": "You took Reese's deal, and in the room it all comes out in the end. A question turns, and your borrowed answer doesn't fit it at all. The panel glance at each other. The story unravels after that, line by line, in front of everyone. The job's gone, the money's gone, and the whole room goes cold and quiet. You won't forget the look on Maya's face today in a hurry — nor, you suspect, will she."
       },
       "ending": "bad"
     },
     {
       "id": 129,
       "text": {
-        "A2": "[stub ending §129 — bad — prose to be written]",
-        "B1": "[stub ending §129 — bad — prose to be written]",
-        "B2": "[stub ending §129 — bad — prose to be written]"
+        "A2": "The queue was a trap, just as Frank warned. The guard pulled you out of the crush, and there was no talking your way clear. By the time it's sorted, you've missed your slot and your name is mud. You limp away, soaked and shaken and hours too late. You should have waited your turn, and you know it now.",
+        "B1": "The queue was a trap, just as Frank warned you. The guard pulled you out of the crush, and there was no talking your way clear. By the time it's sorted, you've missed your slot and your name is mud. You limp away, soaked and shaken, and hours too late. You should have waited your turn, and you know it now.",
+        "B2": "The queue was a trap, just exactly as Frank had warned you it would be. The guard pulled you out of the crush, and there was no talking your way clear of it. By the time it's all sorted, you've missed your slot and your name is mud. You limp away after that, soaked and shaken and hours too late for any of it. You should have waited your turn, like he said, and you know it now, too late."
       },
       "ending": "bad"
     },
     {
       "id": 130,
       "text": {
-        "A2": "[stub ending §130 — bad — prose to be written]",
-        "B1": "[stub ending §130 — bad — prose to be written]",
-        "B2": "[stub ending §130 — bad — prose to be written]"
+        "A2": "You spent the morning on the wrong things, and the interview paid for it. You walked in late and unready, your head a mess, your words gone. By the time you find them, the panel have moved on. You did try, in your own way. But trying, today, was not quite enough.",
+        "B1": "You spent the morning on the wrong things, and the interview paid for it. You walked in late and unready, your head a mess, your words gone. By the time you find them again, the panel have moved on. You did try, in your own way. But trying, today, was not quite enough.",
+        "B2": "You spent the morning on the wrong things, one after another, and the interview paid the price for it. You walked in late and unready, your head a mess, your words gone just when you needed them. By the time you find them again, the panel have already moved on. You did try, in your own way, you really did. But trying, today of all days, was not quite enough to carry the room."
       },
       "ending": "bad"
     },
     {
       "id": 131,
       "text": {
-        "A2": "[stub ending §131 — bad — prose to be written]",
-        "B1": "[stub ending §131 — bad — prose to be written]",
-        "B2": "[stub ending §131 — bad — prose to be written]"
+        "A2": "In the end, you gave up. You turned back, went home, and told yourself the day was too much for one person. You said no one could blame you. You said they'd understand. And maybe they would. But the chair stayed empty, and the room moved on without you. You never found out what the day might have been.",
+        "B1": "In the end, you gave up. You turned back, went home, and told yourself the day was too much for one person. You said no one could blame you. You said they'd understand. And maybe they would have. But the chair stayed empty, the room moved on without you, and you never found out what the day might have been.",
+        "B2": "In the end, you simply gave up. You turned back, went home, and told yourself the day was far too much for one person to manage alone. You said no one could possibly blame you. You said, over and over, that they'd understand. And maybe, in time, they would have. But the chair stayed empty, the room moved on without you, and you never did find out what the day might have been, if only you'd kept going."
       },
       "ending": "bad"
     }
