@@ -848,24 +848,24 @@
     {
       "id": 28,
       "text": {
-        "A2": "[stub §28 — prose to be written]",
-        "B1": "[stub §28 — prose to be written]",
-        "B2": "[stub §28 — prose to be written]"
+        "A2": "You push into the front of the queue, past everyone waiting. At once it feels wrong. People glare and mutter, and a guard turns his head. Every step forward is a gamble now. And there's no going back once you've jumped the line.",
+        "B1": "You push into the front of the queue, past everyone waiting. At once it feels wrong. People glare and mutter, and a guard turns his head your way. Every step forward is a gamble now — and there's no going back once you've jumped the line.",
+        "B2": "You push your way into the front of the queue, past everyone patiently waiting. At once it feels wrong, deep down. People glare and mutter, and a guard turns his head slowly your way. Every step forward is a gamble now — and there's no going back once you've jumped the line in front of them all."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §50]",
-            "B1": "[choice 1 → §50]",
-            "B2": "[choice 1 → §50]"
+            "A2": "Almost through.",
+            "B1": "Almost through.",
+            "B2": "Almost through."
           },
           "goto": 50
         },
         {
           "text": {
-            "A2": "[choice 2 → §51]",
-            "B1": "[choice 2 → §51]",
-            "B2": "[choice 2 → §51]"
+            "A2": "A guard steps out.",
+            "B1": "A guard steps out.",
+            "B2": "A guard steps out."
           },
           "goto": 51
         }
@@ -874,24 +874,24 @@
     {
       "id": 29,
       "text": {
-        "A2": "[stub §29 — prose to be written]",
-        "B1": "[stub §29 — prose to be written]",
-        "B2": "[stub §29 — prose to be written]"
+        "A2": "Your phone blinks red and dies in your hand — no map, no address, no tickets. You can still ask people the way, but it's slow, and the clock is loud. You'll have to manage without it. Or dash to the print shop and sort it out there.",
+        "B1": "Your phone blinks red and dies in your hand — no map, no address, no tickets. You can still ask people the way, but it's slow, and the clock is loud. You'll have to manage without it. Or dash to the print shop and sort it all out there.",
+        "B2": "Your phone blinks red and dies right in your hand — no map, no address, no tickets, nothing. You can still ask people the way, but it's slow going, and the clock is loud in your ears. You'll have to manage without it somehow. Or dash to the print shop and sort it all out there, properly."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §5]",
-            "B1": "[choice 1 → §5]",
-            "B2": "[choice 1 → §5]"
+            "A2": "Push on regardless.",
+            "B1": "Push on regardless.",
+            "B2": "Push on regardless."
           },
           "goto": 5
         },
         {
           "text": {
-            "A2": "[choice 2 → §9]",
-            "B1": "[choice 2 → §9]",
-            "B2": "[choice 2 → §9]"
+            "A2": "To the print shop.",
+            "B1": "To the print shop.",
+            "B2": "To the print shop."
           },
           "goto": 9
         }
@@ -900,40 +900,40 @@
     {
       "id": 30,
       "text": {
-        "A2": "[stub §30 — prose to be written]",
-        "B1": "[stub §30 — prose to be written]",
-        "B2": "[stub §30 — prose to be written]"
+        "A2": "The street goes on, cold and wet, the rain coming harder. One shop sits dark and shut. Ahead, the wind pushes back at you. And there's a café on the corner, warm and bright through the glass.",
+        "B1": "The street goes on, cold and wet, the rain coming harder by the minute. One shop sits dark and shut. Ahead, the wind pushes back at you. And there's a café on the corner, warm and bright through the fogged glass.",
+        "B2": "The street goes on and on, cold and wet, the rain coming harder by the minute now. One shop sits dark and shut up for the day. Ahead of you, the wind pushes back with every step. And there's a café on the corner, warm and bright through the fogged-up glass, pulling at you."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §32]",
-            "B1": "[choice 1 → §32]",
-            "B2": "[choice 1 → §32]"
+            "A2": "Someone in real trouble.",
+            "B1": "Someone in real trouble.",
+            "B2": "Someone in real trouble."
           },
           "goto": 32
         },
         {
           "text": {
-            "A2": "[choice 2 → §33]",
-            "B1": "[choice 2 → §33]",
-            "B2": "[choice 2 → §33]"
+            "A2": "Press on.",
+            "B1": "Press on.",
+            "B2": "Press on."
           },
           "goto": 33
         },
         {
           "text": {
-            "A2": "[choice 3 → §65]",
-            "B1": "[choice 3 → §65]",
-            "B2": "[choice 3 → §65]"
+            "A2": "The rain nearly beats you.",
+            "B1": "The rain nearly beats you.",
+            "B2": "The rain nearly beats you."
           },
           "goto": 65
         },
         {
           "text": {
-            "A2": "[choice 4 → §39]",
-            "B1": "[choice 4 → §39]",
-            "B2": "[choice 4 → §39]"
+            "A2": "The café's warm glow.",
+            "B1": "The café's warm glow.",
+            "B2": "The café's warm glow."
           },
           "goto": 39
         }
@@ -942,16 +942,16 @@
     {
       "id": 31,
       "text": {
-        "A2": "[stub §31 — prose to be written]",
-        "B1": "[stub §31 — prose to be written]",
-        "B2": "[stub §31 — prose to be written]"
+        "A2": "A young woman has slipped on the wet steps and spilled her things everywhere. She's shaken and near tears. Stop, and you lose time you don't have. Don't, and she's left there alone in the rain.",
+        "B1": "A young woman has slipped on the wet steps and spilled her things everywhere. She's shaken and near tears. Stop, and you lose time you don't have. Don't, and she's left there alone in the cold rain.",
+        "B2": "A young woman has slipped on the wet steps and spilled her things everywhere across the pavement. She's shaken, and near tears with it. Stop, and you lose time you simply don't have. Don't, and she's left there alone in the cold rain, with no one else about to help."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §34]",
-            "B1": "[choice 1 → §34]",
-            "B2": "[choice 1 → §34]"
+            "A2": "Help her up.",
+            "B1": "Help her up.",
+            "B2": "Help her up."
           },
           "goto": 34,
           "sets": [
@@ -960,9 +960,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §33]",
-            "B1": "[choice 2 → §33]",
-            "B2": "[choice 2 → §33]"
+            "A2": "You can't stop — the time.",
+            "B1": "You can't stop — the time.",
+            "B2": "You can't stop — the time."
           },
           "goto": 33
         }
@@ -1008,40 +1008,40 @@
     {
       "id": 33,
       "text": {
-        "A2": "[stub §33 — prose to be written]",
-        "B1": "[stub §33 — prose to be written]",
-        "B2": "[stub §33 — prose to be written]"
+        "A2": "You hurry on through the cold and the rain, head down. Choices lie ahead. Reese may be near. There's that strange message still to think about. Or you can just keep moving toward the office.",
+        "B1": "You hurry on through the cold and the rain, head down against it. Choices lie ahead. Reese may be near. There's that strange message still to think about. Or you can just keep moving toward the office.",
+        "B2": "You hurry on through the cold and the rain, head down against the worst of it. Choices lie ahead of you. Reese may be near with his offer. There's that strange message still to think about, nagging at you. Or you can simply keep moving toward the office and the clock."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §40]",
-            "B1": "[choice 1 → §40]",
-            "B2": "[choice 1 → §40]"
+            "A2": "Reese again.",
+            "B1": "Reese again.",
+            "B2": "Reese again."
           },
           "goto": 40
         },
         {
           "text": {
-            "A2": "[choice 2 → §70]",
-            "B1": "[choice 2 → §70]",
-            "B2": "[choice 2 → §70]"
+            "A2": "A face you know.",
+            "B1": "A face you know.",
+            "B2": "A face you know."
           },
           "goto": 70
         },
         {
           "text": {
-            "A2": "[choice 3 → §90]",
-            "B1": "[choice 3 → §90]",
-            "B2": "[choice 3 → §90]"
+            "A2": "The last stretch.",
+            "B1": "The last stretch.",
+            "B2": "The last stretch."
           },
           "goto": 90
         },
         {
           "text": {
-            "A2": "[choice 4 → §38]",
-            "B1": "[choice 4 → §38]",
-            "B2": "[choice 4 → §38]"
+            "A2": "The nerves get to you.",
+            "B1": "The nerves get to you.",
+            "B2": "The nerves get to you."
           },
           "goto": 38
         }
@@ -1050,24 +1050,24 @@
     {
       "id": 34,
       "text": {
-        "A2": "[stub §34 — prose to be written]",
-        "B1": "[stub §34 — prose to be written]",
-        "B2": "[stub §34 — prose to be written]"
+        "A2": "You help the young woman up and gather her things. Her eyes fill. She presses a card into your hand — a name at the very firm you're headed to. 'Ask for her,' she says. 'Tell her I sent you.' A small thing, freely given. You take it and go on.",
+        "B1": "You help the young woman up and gather her things. Her eyes fill. She presses a card into your hand — a name at the very firm you're headed to. 'Ask for her,' she says. 'Tell her I sent you.' A small thing — but freely given, and you take it and go on.",
+        "B2": "You help the young woman up and gather her scattered things. Her eyes fill with relief. She presses a small card into your hand — a name at the very firm you're headed to. 'Ask for her,' she says. 'Tell her I sent you.' A small thing — but freely given, in the rain, and you take it and go on your way."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §33]",
-            "B1": "[choice 1 → §33]",
-            "B2": "[choice 1 → §33]"
+            "A2": "On your way.",
+            "B1": "On your way.",
+            "B2": "On your way."
           },
           "goto": 33
         },
         {
           "text": {
-            "A2": "[choice 2 → §70]",
-            "B1": "[choice 2 → §70]",
-            "B2": "[choice 2 → §70]"
+            "A2": "She knows the panel.",
+            "B1": "She knows the panel.",
+            "B2": "She knows the panel."
           },
           "goto": 70
         }
@@ -1076,24 +1076,24 @@
     {
       "id": 35,
       "text": {
-        "A2": "[stub §35 — prose to be written]",
-        "B1": "[stub §35 — prose to be written]",
-        "B2": "[stub §35 — prose to be written]"
+        "A2": "You can't stop now — but you can't just leave her, either. So you promise to send help soon. 'Hang on,' you say. 'Stay here, stay dry — someone will come.' You mean it, too. And then you turn and go.",
+        "B1": "You can't stop now — but you can't just leave her, either. So you promise to send help soon. 'Hang on,' you say. 'Stay here, stay dry — someone will come for you.' You mean it, too. And then you turn and go.",
+        "B2": "You can't stop now — but you can't simply leave her there, either. So you promise to send help soon. 'Hang on,' you say, over the rain. 'Stay here, stay dry — someone will come for you.' You mean it, too; and then you turn and go, carrying the weight of it with you."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §12]",
-            "B1": "[choice 1 → §12]",
-            "B2": "[choice 1 → §12]"
+            "A2": "Call someone for her.",
+            "B1": "Call someone for her.",
+            "B2": "Call someone for her."
           },
           "goto": 12
         },
         {
           "text": {
-            "A2": "[choice 2 → §33]",
-            "B1": "[choice 2 → §33]",
-            "B2": "[choice 2 → §33]"
+            "A2": "On through the rain.",
+            "B1": "On through the rain.",
+            "B2": "On through the rain."
           },
           "goto": 33
         }
@@ -1102,24 +1102,24 @@
     {
       "id": 36,
       "text": {
-        "A2": "[stub §36 — prose to be written]",
-        "B1": "[stub §36 — prose to be written]",
-        "B2": "[stub §36 — prose to be written]"
+        "A2": "You get one good thing going — you help calm the whole waiting room at once. People breathe easier. Someone shares water, someone shares a laugh. It isn't the interview itself. But it's real, and it's a start.",
+        "B1": "You get one good thing going — you help calm the whole waiting room at once. People breathe easier around you. Someone shares water, someone shares a laugh. It isn't the interview itself. But it's real, and it's a good start.",
+        "B2": "You get one good thing going — you help calm the whole tense waiting room at once. People breathe easier around you now. Someone shares a bottle of water, someone shares a nervous laugh. It isn't the interview itself, not by a long way. But it's real, and it's a good start, and the room feels warmer for it."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §25]",
-            "B1": "[choice 1 → §25]",
-            "B2": "[choice 1 → §25]"
+            "A2": "Help each one get ready.",
+            "B1": "Help each one get ready.",
+            "B2": "Help each one get ready."
           },
           "goto": 25
         },
         {
           "text": {
-            "A2": "[choice 2 → §37]",
-            "B1": "[choice 2 → §37]",
-            "B2": "[choice 2 → §37]"
+            "A2": "Turn nerves into doing.",
+            "B1": "Turn nerves into doing.",
+            "B2": "Turn nerves into doing."
           },
           "goto": 37
         }
@@ -1128,24 +1128,24 @@
     {
       "id": 37,
       "text": {
-        "A2": "[stub §37 — prose to be written]",
-        "B1": "[stub §37 — prose to be written]",
-        "B2": "[stub §37 — prose to be written]"
+        "A2": "Person by person, the panic turns into a calm room. People have focus now: one reads notes, one breathes slow, one cheers the next in. Worry turns into doing. And doing beats worrying, every time. The room fills with a quiet, steady warmth.",
+        "B1": "Person by person, the panic turns into a calm room. People have focus now: one reads notes, one breathes slow, one cheers the next one in. Worry turns into doing. And doing beats worrying, every single time. The room fills with a quiet, steady warmth.",
+        "B2": "Person by person, nerve by nerve, the panic turns into a calm room. People have focus now: one reads over notes, one breathes slow, one quietly cheers the next one in. Worry turns into doing — and doing beats worrying, in a waiting room, every single time. The room fills with a quiet, steady warmth, and the worst of the fear lifts."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §26]",
-            "B1": "[choice 1 → §26]",
-            "B2": "[choice 1 → §26]"
+            "A2": "Back out and on.",
+            "B1": "Back out and on.",
+            "B2": "Back out and on."
           },
           "goto": 26
         },
         {
           "text": {
-            "A2": "[choice 2 → §90]",
-            "B1": "[choice 2 → §90]",
-            "B2": "[choice 2 → §90]"
+            "A2": "Your turn soon.",
+            "B1": "Your turn soon.",
+            "B2": "Your turn soon."
           },
           "goto": 90
         }
@@ -1154,24 +1154,24 @@
     {
       "id": 38,
       "text": {
-        "A2": "[stub §38 — prose to be written]",
-        "B1": "[stub §38 — prose to be written]",
-        "B2": "[stub §38 — prose to be written]"
+        "A2": "The long morning wears at you. A voice says: give up, go home, tell them you were ill. No one would blame you, and it would be easy. But you think of your dad's face, and the room at two. And you push the voice away. Not yet.",
+        "B1": "The long morning wears at you. A small voice says: give up, go home, tell them you were ill — no one would blame you, and it would be so easy. But you think of your dad's face, and the room at two. And you push the voice away. Not yet. Not while it can still go right.",
+        "B2": "The long morning wears at you. A small voice says: give up, go home, tell them you were ill — no one would blame you, and it would be so easy to do. But you think of your dad's face, and the room waiting at two. And you push the voice away. Not yet. Not while this can still go right."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §90]",
-            "B1": "[choice 1 → §90]",
-            "B2": "[choice 1 → §90]"
+            "A2": "The last stretch.",
+            "B1": "The last stretch.",
+            "B2": "The last stretch."
           },
           "goto": 90
         },
         {
           "text": {
-            "A2": "[choice 2 → §40]",
-            "B1": "[choice 2 → §40]",
-            "B2": "[choice 2 → §40]"
+            "A2": "Reese, one more time.",
+            "B1": "Reese, one more time.",
+            "B2": "Reese, one more time."
           },
           "goto": 40
         }
@@ -1180,24 +1180,24 @@
     {
       "id": 39,
       "text": {
-        "A2": "[stub §39 — prose to be written]",
-        "B1": "[stub §39 — prose to be written]",
-        "B2": "[stub §39 — prose to be written]"
+        "A2": "You duck under a café awning to read your notes again. Half the ink has run in the rain. You could push on and trust what you remember. Or something makes you look up — and across the street, a face you half know.",
+        "B1": "You duck under a café awning to read your notes again. Half the ink has run in the rain. You could push on and trust what you remember. Or something makes you look up — and there, across the street, a face you half know.",
+        "B2": "You duck under a café awning to read your notes one more time. Half the ink has run and smudged in the rain. You could push on and trust what you remember. Or something makes you look up — and there, across the wet street, a face you half know, half dread."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §26]",
-            "B1": "[choice 1 → §26]",
-            "B2": "[choice 1 → §26]"
+            "A2": "Push on.",
+            "B1": "Push on.",
+            "B2": "Push on."
           },
           "goto": 26
         },
         {
           "text": {
-            "A2": "[choice 2 → §70]",
-            "B1": "[choice 2 → §70]",
-            "B2": "[choice 2 → §70]"
+            "A2": "That face again.",
+            "B1": "That face again.",
+            "B2": "That face again."
           },
           "goto": 70
         }
