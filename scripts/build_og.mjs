@@ -5,6 +5,7 @@ import { readdir, readFile, writeFile, mkdtemp } from "node:fs/promises";
 import { execFileSync } from "node:child_process";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import { readFileSync } from "node:fs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const CONTENT = join(ROOT, "content");
@@ -246,6 +247,16 @@ function refugeScene(c) {
   <g transform="translate(60,34)"><path d="M300 470 C312 472 318 483 320 497 L326 524 L274 524 L280 497 C282 483 288 472 300 470 Z" fill="${dark}"/><circle cx="300" cy="461" r="10" fill="${dark}"/></g>`;
 }
 
+// Book 10 shares its painted café scene with the reader instead of falling back
+// to the generic night skyline when legacy covers or sharing cards are rebuilt.
+function officeScene(cover = false) {
+  const source = readFileSync(join(WEB, "illustrations/the-interview-cafe.svg"), "utf8");
+  const frame = cover
+    ? 'x="348" width="504" height="630" preserveAspectRatio="xMidYMid meet"'
+    : 'x="520" width="680" height="630" preserveAspectRatio="xMidYMid slice"';
+  return source.replace("<svg ", `<svg ${frame} `);
+}
+
 function ogHTML(book) {
   const p = (book.identity && book.identity.palette) || {};
   const ground = p.ground || "#0E1320", surface = p.surface || "#121a2c",
@@ -254,7 +265,8 @@ function ogHTML(book) {
         muted = p.muted || "#8A93A6";
   const c = { ground, surface, ink, accent, accentHot, secondary, muted };
   const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
-  const scene = kind === "refuge" ? refugeScene(c)
+  const scene = kind === "office" ? officeScene()
+              : kind === "refuge" ? refugeScene(c)
               : kind === "highwater" ? highwaterScene(c)
               : kind === "frostfire" ? frostfireScene(c)
               : kind === "beacon" ? beaconScene(c)
@@ -316,7 +328,8 @@ function coverHTML(book) {
         muted = p.muted || "#8A93A6", line = p.line || "#26304a";
   const c = { ground, surface, ink, accent, accentHot, secondary, muted, line };
   const kind = (book.identity && book.identity.cover && book.identity.cover.kind) || "nocturne";
-  const scene = kind === "refuge" ? refugeScene(c)
+  const scene = kind === "office" ? officeScene(true)
+              : kind === "refuge" ? refugeScene(c)
               : kind === "highwater" ? highwaterScene(c)
               : kind === "frostfire" ? frostfireScene(c)
               : kind === "beacon" ? beaconScene(c)
@@ -346,27 +359,32 @@ function coverHTML(book) {
 }
 
 const files = (await readdir(CONTENT)).filter((f) => f.endsWith(".json"));
+// Optional focused regeneration leaves every other book's committed PNGs alone.
+const onlySlug = process.argv.find(arg => arg.startsWith("--slug="))?.slice(7);
+const htmlOnly = process.argv.includes("--html-only");
 const tmp = await mkdtemp(join(tmpdir(), "wm-og-"));
 let n = 0;
 for (const f of files) {
   const book = JSON.parse(await readFile(join(CONTENT, f), "utf8"));
   if (!book.nodes) continue;                       // skip the lexicon
   const slug = book.slug || f.replace(/\.json$/, "");
+  if (onlySlug && slug !== onlySlug) continue;
   const htmlPath = join(tmp, slug + ".html");
   const out = join(WEB, `og-${slug}.png`);
   await writeFile(htmlPath, ogHTML(book));
-  execFileSync(CHROME, ["--headless", "--disable-gpu", "--hide-scrollbars",
+  if (!htmlOnly) execFileSync(CHROME, ["--headless", "--disable-gpu", "--hide-scrollbars",
     "--force-device-scale-factor=1", "--window-size=1200,630",
     `--screenshot=${out}`, `file://${htmlPath}`], { stdio: "ignore" });
-  console.log(`og-${slug}.png  ← ${book.title}`);
+  console.log(htmlOnly ? htmlPath : `og-${slug}.png  ← ${book.title}`);
   // wordless library-card cover (same scene, no text)
   const covPath = join(tmp, slug + "-cover.html");
   const covOut = join(WEB, `cover-${slug}.png`);
   await writeFile(covPath, coverHTML(book));
-  execFileSync(CHROME, ["--headless", "--disable-gpu", "--hide-scrollbars",
+  if (!htmlOnly) execFileSync(CHROME, ["--headless", "--disable-gpu", "--hide-scrollbars",
     "--force-device-scale-factor=1", "--window-size=1200,630",
     `--screenshot=${covOut}`, `file://${covPath}`], { stdio: "ignore" });
-  console.log(`cover-${slug}.png  ← ${book.title}`);
+  console.log(htmlOnly ? covPath : `cover-${slug}.png  ← ${book.title}`);
   n++;
 }
-console.log(`Generated ${n} per-book OG card(s) and cover(s).`);
+if (onlySlug && !n) throw new Error(`Unknown book slug: ${onlySlug}`);
+console.log(`Generated ${n} per-book ${htmlOnly ? "HTML preview pair(s)" : "OG card(s) and cover(s)"}.`);

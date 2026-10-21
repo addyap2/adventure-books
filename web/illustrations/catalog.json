@@ -466,5 +466,60 @@
       "bad": "/illustrations/the-dinner-street.svg"
     },
     "alt": "A warm, lit kitchen on a dark winter night, with a pot on the hob and a table laid for dinner."
+  },
+  "the-interview": {
+    "cover": "/illustrations/the-interview-cafe.svg",
+    "focal": "center",
+    "social": "/og-the-interview.png",
+    "scenes": {
+      "clock": "/illustrations/the-interview-commute.svg",
+      "station": "/illustrations/the-interview-commute.svg",
+      "rain": "/illustrations/the-interview-commute.svg",
+      "map": "/illustrations/the-interview-commute.svg",
+      "sign": "/illustrations/the-interview-commute.svg",
+      "kiosk": "/illustrations/the-interview-commute.svg",
+      "hand": "/illustrations/the-interview-waiting.svg",
+      "suit": "/illustrations/the-interview-waiting.svg",
+      "companions": "/illustrations/the-interview-waiting.svg",
+      "coin": "/illustrations/the-interview-waiting.svg",
+      "board": "/illustrations/the-interview-waiting.svg",
+      "window": "/illustrations/the-interview-waiting.svg",
+      "photo": "/illustrations/the-interview-waiting.svg",
+      "bench": "/illustrations/the-interview-waiting.svg",
+      "door": "/illustrations/the-interview-room.svg",
+      "desk": "/illustrations/the-interview-room.svg",
+      "notebook": "/illustrations/the-interview-cafe.svg",
+      "phone": "/illustrations/the-interview-cafe.svg",
+      "cup": "/illustrations/the-interview-cafe.svg",
+      "letter": "/illustrations/the-interview-cafe.svg"
+    },
+    "sceneTitles": {
+      "clock": "One hour to two",
+      "station": "The stalled commute",
+      "rain": "Through the rain",
+      "map": "Across the city",
+      "sign": "Good advice",
+      "kiosk": "What you need for the room",
+      "hand": "A good turn",
+      "suit": "Reese’s offer",
+      "companions": "You are not alone",
+      "coin": "The easy way in",
+      "board": "At the sign-in desk",
+      "window": "A familiar face",
+      "photo": "After all these years",
+      "bench": "Keeping your nerve",
+      "door": "Your name is called",
+      "desk": "The moment of truth",
+      "notebook": "Getting ready",
+      "phone": "A steadying voice",
+      "cup": "Out of the rain",
+      "letter": "The papers in your hand"
+    },
+    "endings": {
+      "good": "/illustrations/the-interview-cafe.svg",
+      "neutral": "/illustrations/the-interview-room.svg",
+      "bad": "/illustrations/the-interview-commute.svg"
+    },
+    "alt": "A steaming cup, a phone and interview notes on a warm café table, with rain and cool office towers beyond the window."
   }
 }
