@@ -161,5 +161,25 @@ for(const [slug,kind,cover,scenes]of books){
     endings:{good:T,neutral:K,bad:S},
     alt:'A warm, lit kitchen on a dark winter night, with a pot on the hob and a table laid for dinner.'};
 }
+// The Interview's scenes are hand-drawn SVGs too (upgraded via ChatGPT), so its catalog
+// entry is declared here and reproduced on every regen rather than being wiped.
+{
+  const C='/illustrations/the-interview-commute.svg', W='/illustrations/the-interview-waiting.svg',
+        R='/illustrations/the-interview-room.svg', F='/illustrations/the-interview-cafe.svg';
+  const sceneOf={clock:C,suit:C,phone:C,house:C,card:C,station:C,map:C,rain:C,sign:C,
+    companions:W,coin:W,notebook:W,desk:W,hand:W,building:W,
+    cup:F, door:R,photo:R};
+  const titleOf={clock:'The clock to two',suit:'Getting ready',phone:'A call for help',
+    house:'A word from home',card:'At the print shop',station:'The crush at the station',
+    map:'Which way across town',rain:'Out in the rain',sign:'Good advice',
+    companions:'The waiting room',coin:'The easy way out',notebook:'Going over your notes',
+    desk:'Signing in',hand:'A helping hand',building:'The tower at two',
+    cup:'A warm café',door:'An open door',photo:'A face from the past'};
+  const scenes={}, sceneTitles={};
+  for(const m of Object.keys(sceneOf)){scenes[m]=sceneOf[m];sceneTitles[m]=titleOf[m];}
+  catalog['the-interview']={cover:F,focal:'center',social:'/og-the-interview.png',scenes,sceneTitles,
+    endings:{good:F,neutral:R,bad:C},
+    alt:'A warm-lit interview-room window high in a cool glass tower at dusk, rain on the street below.'};
+}
 await writeFile(new URL('catalog.json',out),JSON.stringify(catalog,null,2)+'\n');
 console.log(`Built ${books.length} illustrated book identities and their scene sets.`);

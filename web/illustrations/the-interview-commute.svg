@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none"><defs>
+  <linearGradient id="sky" x1="400" y1="0" x2="400" y2="640" gradientUnits="userSpaceOnUse"><stop stop-color="#0c0f14"/><stop offset="1" stop-color="#1b2129"/></linearGradient>
+  <linearGradient id="floor" x1="0" y1="640" x2="0" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#1b2129"/><stop offset="1" stop-color="#0c0f14"/></linearGradient>
+  <linearGradient id="warm" x2="0" y2="1"><stop stop-color="#f0b36a"/><stop offset="1" stop-color="#c47a32"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#f0b36a" stop-opacity=".5"/><stop offset="1" stop-color="#f0b36a" stop-opacity="0"/></radialGradient>
+  <pattern id="rain" width="94" height="124" patternUnits="userSpaceOnUse"><path d="m14 8-10 28m66 44-8 24m-30-70-9 26" stroke="#7fa8c9" stroke-opacity=".18"/></pattern>
+  </defs>
+  <rect width="800" height="1000" fill="url(#sky)"/>
+  <g fill="#1b2129"><path d="M0 120h800v120H0z"/></g>
+  <path d="M60 240 H740" stroke="#2a323d" stroke-width="4"/>
+  <ellipse cx="400" cy="330" rx="170" ry="170" fill="url(#glow)"/>
+  <circle cx="400" cy="330" r="92" fill="#12161c" stroke="#d98a3d" stroke-width="6"/>
+  <path d="M400 268 V330 L444 360" stroke="#f0b36a" stroke-width="7" stroke-linecap="round"/>
+  <g stroke="#d98a3d" stroke-width="4" opacity=".6"><path d="M400 250 v10M400 410 v-10M320 330 h10M480 330 h-10"/></g>
+  <g fill="#1b2129"><rect x="120" y="470" width="230" height="56" rx="4"/><rect x="450" y="470" width="230" height="56" rx="4"/></g>
+  <g fill="#7fa8c9" opacity=".3"><rect x="136" y="486" width="120" height="10"/><rect x="136" y="504" width="80" height="8"/><rect x="466" y="486" width="120" height="10"/><rect x="466" y="504" width="80" height="8"/></g>
+  <rect width="800" height="1000" fill="url(#rain)"/>
+  <rect x="0" y="640" width="800" height="360" fill="url(#floor)"/>
+  <ellipse cx="400" cy="720" rx="120" ry="22" fill="#f0b36a" opacity=".08"/>
+  <g transform="translate(100,0)"><ellipse cx="300" cy="880" rx="46" ry="9" fill="#000" opacity=".4"/><path d="M300 806c16 2 22 14 24 32l8 42H268l8-42c2-18 8-30 24-32z" fill="#06080b"/><circle cx="300" cy="792" r="13" fill="#06080b"/></g>
+</svg>

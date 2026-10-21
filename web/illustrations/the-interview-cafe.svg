@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none"><defs>
+  <linearGradient id="night" x1="400" y1="0" x2="400" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#0c0f14"/><stop offset="1" stop-color="#1b2129"/></linearGradient>
+  <linearGradient id="win" x1="0" y1="180" x2="0" y2="620" gradientUnits="userSpaceOnUse"><stop stop-color="#f0b36a"/><stop offset="1" stop-color="#d4842f"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#f0b36a" stop-opacity=".55"/><stop offset="1" stop-color="#f0b36a" stop-opacity="0"/></radialGradient>
+  <pattern id="rain" width="94" height="124" patternUnits="userSpaceOnUse"><path d="m14 8-10 28m66 44-8 24" stroke="#7fa8c9" stroke-opacity=".13"/></pattern>
+  </defs>
+  <rect width="800" height="1000" fill="url(#night)"/>
+  <g opacity=".4" fill="#f0b36a"><circle cx="130" cy="120" r="2"/><circle cx="680" cy="100" r="1.6"/></g>
+  <ellipse cx="400" cy="420" rx="340" ry="320" fill="url(#glow)"/>
+  <rect x="180" y="180" width="440" height="460" rx="6" fill="url(#win)" opacity=".9"/>
+  <g stroke="#b56f28" stroke-width="5" opacity=".5"><path d="M400 180v460M180 410h440"/></g>
+  <rect width="800" height="1000" fill="url(#rain)"/>
+  <rect x="150" y="640" width="500" height="20" fill="#2a323d"/>
+  <g><path d="M360 600 h70 l-6 34 a6 6 0 0 1 -6 5 h-46 a6 6 0 0 1 -6 -5 z" fill="#161b22" stroke="#3a4552" stroke-width="3"/><path d="M430 606 a12 12 0 0 1 0 24" fill="none" stroke="#3a4552" stroke-width="3"/><path d="M382 586 c-4 8 4 10 0 18 M408 586 c-4 8 4 10 0 18" fill="none" stroke="#f6efe6" stroke-width="4" opacity=".4"/></g>
+  <rect x="0" y="660" width="800" height="340" fill="#12161c"/>
+  <path d="M180 640 L620 640 L720 1000 L80 1000 Z" fill="#f0b36a" opacity=".07"/>
+</svg>

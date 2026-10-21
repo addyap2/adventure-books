@@ -114,6 +114,28 @@ function kitchenScene(c) {
   <g transform="translate(316,0)"><ellipse cx="300" cy="556" rx="46" ry="7" fill="#000" opacity=".3"/><path d="M300 502 C313 504 319 515 321 529 L327 556 L273 556 L279 529 C281 515 287 504 300 502 Z" fill="#160b06"/><circle cx="300" cy="493" r="10" fill="#160b06"/><path d="M289 490 q11 -9 22 0 z" fill="#160b06"/></g>`;
 }
 
+function officeScene(c) {
+  // a cool glass tower at dusk in the rain: a grid of cold dark windows with one warm-lit
+  // interview-room window glowing among them, wet pavement below, a lone figure heading in.
+  return `
+  <g fill="${c.ink}" opacity="0.35"><circle cx="150" cy="120" r="1.4"/><circle cx="300" cy="90" r="1.1"/><circle cx="1080" cy="110" r="1.3"/></g>
+  <g fill="${c.surface}"><rect x="560" y="120" width="300" height="400"/></g>
+  <rect x="560" y="120" width="300" height="400" fill="none" stroke="${c.line}" stroke-width="3"/>
+  <g fill="${c.ground}" opacity="0.9">${(() => { let s = ""; for (let r = 0; r < 7; r++) for (let col = 0; col < 4; col++) { const x = 578 + col * 70, y = 140 + r * 54; if (r === 2 && col === 2) continue; s += `<rect x="${x}" y="${y}" width="54" height="40"/>`; } return s; })()}</g>
+  <g fill="${c.secondary}" opacity="0.12">${(() => { let s = ""; for (let r = 0; r < 7; r++) for (let col = 0; col < 4; col++) { if (r === 2 && col === 2) continue; if ((r + col) % 3 === 0) { const x = 578 + col * 70, y = 140 + r * 54; s += `<rect x="${x}" y="${y}" width="54" height="40"/>`; } } return s; })()}</g>
+  <ellipse cx="755" cy="268" rx="180" ry="150" fill="url(#glow)"/>
+  <rect x="718" y="248" width="54" height="40" fill="${c.accentHot}"/>
+  <rect x="718" y="248" width="54" height="40" fill="none" stroke="${c.accent}" stroke-width="2"/>
+  <g stroke="${c.ink}" stroke-width="1.5" opacity="0.14"><path d="M300 150 l-26 70"/><path d="M460 120 l-26 70"/><path d="M980 160 l-26 70"/><path d="M1120 120 l-26 70"/><path d="M180 200 l-26 70"/></g>
+  <g fill="${c.surface}"><rect x="200" y="300" width="150" height="220"/><rect x="980" y="260" width="170" height="260"/></g>
+  <g fill="${c.ground}" opacity="0.8"><rect x="214" y="320" width="28" height="22"/><rect x="258" y="320" width="28" height="22"/><rect x="302" y="320" width="28" height="22"/><rect x="996" y="286" width="30" height="24"/><rect x="1050" y="286" width="30" height="24"/></g>
+  <rect x="0" y="500" width="1200" height="130" fill="${c.surface}"/>
+  <path d="M600 500 h600 v130 h-600z" fill="${c.ground}" opacity="0.25"/>
+  <path d="M718 288 L772 288 L840 500 L650 500 Z" fill="${c.accent}" opacity=".12"/>
+  <rect x="0" y="588" width="1200" height="42" fill="${c.ground}"/>
+  <g transform="translate(360,0)"><ellipse cx="300" cy="556" rx="46" ry="7" fill="#000" opacity=".3"/><path d="M300 502 C313 504 319 515 321 529 L327 556 L273 556 L279 529 C281 515 287 504 300 502 Z" fill="#070a0e"/><circle cx="300" cy="493" r="10" fill="#070a0e"/><path d="M289 490 q11 -9 22 0 z" fill="#070a0e"/></g>`;
+}
+
 function highsunScene(c) {
   // a desert road at high noon: a bleached sky, a low sand ridge, a heat-shimmer
   // over the flats, a stalled bus and a lone figure by the road, a white sun.
@@ -262,6 +284,7 @@ function ogHTML(book) {
               : kind === "dusk" ? duskScene(c)
               : kind === "daybreak" ? daybreakScene(c)
               : kind === "lantern" ? lanternScene(c)
+              : kind === "office" ? officeScene(c)
               : kind === "kitchen" ? kitchenScene(c)
               : kind === "candlelight" ? candlelightScene(c)
               : nocturneScene(c);
@@ -324,6 +347,7 @@ function coverHTML(book) {
               : kind === "dusk" ? duskScene(c)
               : kind === "daybreak" ? daybreakScene(c)
               : kind === "lantern" ? lanternScene(c)
+              : kind === "office" ? officeScene(c)
               : kind === "kitchen" ? kitchenScene(c)
               : kind === "candlelight" ? candlelightScene(c)
               : nocturneScene(c);

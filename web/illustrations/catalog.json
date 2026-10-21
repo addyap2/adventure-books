@@ -466,5 +466,56 @@
       "bad": "/illustrations/the-dinner-street.svg"
     },
     "alt": "A warm, lit kitchen on a dark winter night, with a pot on the hob and a table laid for dinner."
+  },
+  "the-interview": {
+    "cover": "/illustrations/the-interview-cafe.svg",
+    "focal": "center",
+    "social": "/og-the-interview.png",
+    "scenes": {
+      "clock": "/illustrations/the-interview-commute.svg",
+      "suit": "/illustrations/the-interview-commute.svg",
+      "phone": "/illustrations/the-interview-commute.svg",
+      "house": "/illustrations/the-interview-commute.svg",
+      "card": "/illustrations/the-interview-commute.svg",
+      "station": "/illustrations/the-interview-commute.svg",
+      "map": "/illustrations/the-interview-commute.svg",
+      "rain": "/illustrations/the-interview-commute.svg",
+      "sign": "/illustrations/the-interview-commute.svg",
+      "companions": "/illustrations/the-interview-waiting.svg",
+      "coin": "/illustrations/the-interview-waiting.svg",
+      "notebook": "/illustrations/the-interview-waiting.svg",
+      "desk": "/illustrations/the-interview-waiting.svg",
+      "hand": "/illustrations/the-interview-waiting.svg",
+      "building": "/illustrations/the-interview-waiting.svg",
+      "cup": "/illustrations/the-interview-cafe.svg",
+      "door": "/illustrations/the-interview-room.svg",
+      "photo": "/illustrations/the-interview-room.svg"
+    },
+    "sceneTitles": {
+      "clock": "The clock to two",
+      "suit": "Getting ready",
+      "phone": "A call for help",
+      "house": "A word from home",
+      "card": "At the print shop",
+      "station": "The crush at the station",
+      "map": "Which way across town",
+      "rain": "Out in the rain",
+      "sign": "Good advice",
+      "companions": "The waiting room",
+      "coin": "The easy way out",
+      "notebook": "Going over your notes",
+      "desk": "Signing in",
+      "hand": "A helping hand",
+      "building": "The tower at two",
+      "cup": "A warm café",
+      "door": "An open door",
+      "photo": "A face from the past"
+    },
+    "endings": {
+      "good": "/illustrations/the-interview-cafe.svg",
+      "neutral": "/illustrations/the-interview-room.svg",
+      "bad": "/illustrations/the-interview-commute.svg"
+    },
+    "alt": "A warm-lit interview-room window high in a cool glass tower at dusk, rain on the street below."
   }
 }

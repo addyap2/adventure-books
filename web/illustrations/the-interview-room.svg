@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none"><defs>
+  <linearGradient id="room" x1="400" y1="0" x2="400" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#20272f"/><stop offset="1" stop-color="#12161c"/></linearGradient>
+  <linearGradient id="win" x1="0" y1="120" x2="0" y2="470" gradientUnits="userSpaceOnUse"><stop stop-color="#f0b36a"/><stop offset="1" stop-color="#c47a32"/></linearGradient>
+  <linearGradient id="table" x1="0" y1="600" x2="0" y2="820" gradientUnits="userSpaceOnUse"><stop stop-color="#2a323d"/><stop offset="1" stop-color="#161b22"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#f0b36a" stop-opacity=".5"/><stop offset="1" stop-color="#f0b36a" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#room)"/>
+  <ellipse cx="400" cy="320" rx="330" ry="260" fill="url(#glow)" opacity=".7"/>
+  <rect x="250" y="120" width="300" height="350" rx="4" fill="url(#win)" opacity=".85"/>
+  <g stroke="#1b2129" stroke-width="5" opacity=".5"><path d="M400 120v350M250 295h300"/></g>
+  <g fill="#161b22"><ellipse cx="250" cy="560" rx="46" ry="46"/><ellipse cx="400" cy="560" rx="46" ry="46"/><ellipse cx="550" cy="560" rx="46" ry="46"/></g>
+  <g fill="#0f1319"><path d="M214 560c0-20 16-34 36-34s36 14 36 60h-72z"/><path d="M364 560c0-20 16-34 36-34s36 14 36 60h-72z"/><path d="M514 560c0-20 16-34 36-34s36 14 36 60h-72z"/></g>
+  <path d="M120 600 H680 L760 820 H40 Z" fill="url(#table)" stroke="#3a4552" stroke-width="3"/>
+  <g fill="#1b2129" stroke="#3a4552" stroke-width="2"><rect x="300" y="650" width="90" height="60" rx="3"/><rect x="430" y="650" width="90" height="60" rx="3"/></g>
+  <circle cx="560" cy="690" r="6" fill="#d98a3d"/>
+  <rect x="0" y="820" width="800" height="180" fill="#0f1319"/>
+</svg>
