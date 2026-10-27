@@ -310,16 +310,16 @@
     {
       "id": 9,
       "text": {
-        "A2": "[stub §9 — prose to be written]",
-        "B1": "[stub §9 — prose to be written]",
-        "B2": "[stub §9 — prose to be written]"
+        "A2": "The caretaker, old Reg, meets you at the new flat with a smile. 'Let me get that,' he says, and props the stiff door wide. He waves you in. Mum's bed here, the chair by the window, boxes down the hall. Everything can go straight in now. He's a good sort, Reg.",
+        "B1": "The caretaker, old Reg, meets you at the new flat with a smile. 'Let me get that,' he says, and props the stiff door wide. He waves you in. Mum's bed here, the chair by the window, boxes down the hall. Everything can go straight in now. He's a good sort, Reg.",
+        "B2": "The caretaker, old Reg, meets you at the new flat with a smile. 'Let me get that for you,' he says, and props the stiff door wide open. He waves you in. Mum's bed here, the big chair by the window, boxes down the hall. Everything can go straight in now, no waiting. He's a good sort, Reg, and always has been."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §13]",
-            "B1": "[choice 1 → §13]",
-            "B2": "[choice 1 → §13]"
+            "A2": "Carry it all in.",
+            "B1": "Carry it all in.",
+            "B2": "Carry it all in."
           },
           "goto": 13,
           "sets": [
@@ -328,25 +328,25 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §14]",
-            "B1": "[choice 2 → §14]",
-            "B2": "[choice 2 → §14]"
+            "A2": "Just the basics first.",
+            "B1": "Just the basics first.",
+            "B2": "Just the basics first."
           },
           "goto": 14
         },
         {
           "text": {
-            "A2": "[choice 3 → §15]",
-            "B1": "[choice 3 → §15]",
-            "B2": "[choice 3 → §15]"
+            "A2": "Ask an old hand first.",
+            "B1": "Ask an old hand first.",
+            "B2": "Ask an old hand first."
           },
           "goto": 15
         },
         {
           "text": {
-            "A2": "[choice 4 → §67]",
-            "B1": "[choice 4 → §67]",
-            "B2": "[choice 4 → §67]"
+            "A2": "Ask Reg where things go.",
+            "B1": "Ask Reg where things go.",
+            "B2": "Ask Reg where things go."
           },
           "goto": 67
         }
@@ -355,16 +355,16 @@
     {
       "id": 10,
       "text": {
-        "A2": "[stub §10 — prose to be written]",
-        "B1": "[stub §10 — prose to be written]",
-        "B2": "[stub §10 — prose to be written]"
+        "A2": "On the stairs, you hear a call. An old woman is stuck with her shopping — two heavy bags, no lift, bad knees. She can't get them up, and no one stops. 'Could you?' she asks. You've a flat to fill before dark. But she's right here, stuck, and asking you.",
+        "B1": "On the stairs, you hear a call. An old woman is stuck with her shopping — two heavy bags, no lift, and bad knees. She can't get them up, and no one stops for her. 'Could you?' she asks. You've a flat to fill before dark. But she's right here, stuck, and asking you.",
+        "B2": "On the stairs, you hear a call. An old woman is stuck with her shopping — two heavy bags, no lift in the building, and bad knees. She can't get them up, and no one stops for her. 'Could you?' she asks. You've a whole flat to fill before dark. But she's right here in front of you, stuck, and asking you."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §16]",
-            "B1": "[choice 1 → §16]",
-            "B2": "[choice 1 → §16]"
+            "A2": "Help her up.",
+            "B1": "Help her up.",
+            "B2": "Help her up."
           },
           "goto": 16,
           "sets": [
@@ -373,9 +373,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §17]",
-            "B1": "[choice 2 → §17]",
-            "B2": "[choice 2 → §17]"
+            "A2": "The move comes first.",
+            "B1": "The move comes first.",
+            "B2": "The move comes first."
           },
           "goto": 17
         }
@@ -410,16 +410,16 @@
     {
       "id": 12,
       "text": {
-        "A2": "[stub §12 — prose to be written]",
-        "B1": "[stub §12 — prose to be written]",
-        "B2": "[stub §12 — prose to be written]"
+        "A2": "You knock round the doors, asking the same thing each time. Can you lend a hand? Take an end of the sofa. Carry a box. Mind Mum for ten minutes. Some say no — busy, tired, bad back. But a few say yes, and come down. Today, a few is enough.",
+        "B1": "You knock round the doors, asking the same thing each time. Can you lend a hand? Take an end of the sofa. Carry a box or two. Mind Mum for ten minutes. Some say no — busy, tired, bad back. But a few say yes, and come down. Today, a few is more than enough.",
+        "B2": "You knock round the doors, asking the same thing each time. Can you lend a hand? Take an end of the sofa. Carry a box or two down. Mind Mum for ten minutes. Some say no — too busy, too tired, a bad back. But a few say yes, and come down at once. Today, a few willing neighbours is more than enough."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §19]",
-            "B1": "[choice 1 → §19]",
-            "B2": "[choice 1 → §19]"
+            "A2": "See who comes down.",
+            "B1": "See who comes down.",
+            "B2": "See who comes down."
           },
           "goto": 19,
           "sets": [
@@ -428,9 +428,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §20]",
-            "B1": "[choice 2 → §20]",
-            "B2": "[choice 2 → §20]"
+            "A2": "No one can help.",
+            "B1": "No one can help.",
+            "B2": "No one can help."
           },
           "goto": 20
         }
@@ -819,16 +819,16 @@
     {
       "id": 27,
       "text": {
-        "A2": "[stub §27 — prose to be written]",
-        "B1": "[stub §27 — prose to be written]",
-        "B2": "[stub §27 — prose to be written]"
+        "A2": "Piling the boxes high would halve your trips, and the van's nearly full. But the stairs are steep and worn, your arms are tired, and you won't see your feet. Tom told you not to carry too much at once. And he wasn't joking.",
+        "B1": "Piling the boxes high would halve your trips, and the van's nearly full. But the stairs are steep and worn, your arms are tired, and you won't see your feet. Tom told you not to carry too much at once. And he wasn't joking about it.",
+        "B2": "Piling the boxes high in your arms would halve your trips, and the van's nearly full now. But the stairs are steep and worn, your arms are tired, and you won't see your feet at all. Tom told you, plainly, not to carry too much at once. And he wasn't joking when he said it."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §28]",
-            "B1": "[choice 1 → §28]",
-            "B2": "[choice 1 → §28]"
+            "A2": "Pile it high.",
+            "B1": "Pile it high.",
+            "B2": "Pile it high."
           },
           "goto": 28,
           "sets": [
@@ -837,9 +837,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §26]",
-            "B1": "[choice 2 → §26]",
-            "B2": "[choice 2 → §26]"
+            "A2": "One at a time, the safe way.",
+            "B1": "One at a time, the safe way.",
+            "B2": "One at a time, the safe way."
           },
           "goto": 26
         }
@@ -971,16 +971,16 @@
     {
       "id": 32,
       "text": {
-        "A2": "[stub §32 — prose to be written]",
-        "B1": "[stub §32 — prose to be written]",
-        "B2": "[stub §32 — prose to be written]"
+        "A2": "At the next door, a young mum is packing to move too. But she's on her own, with a baby and no help at all. She looks at you, tired and near tears. You've a van, a strong pair of hands, and a little time. Not much, but more than she has.",
+        "B1": "At the next door, a young mum is packing to move too. But she's on her own, with a baby and no help at all. She looks at you, tired and near tears. You've a van, a strong pair of hands, and a little time. Not much, but more than she has.",
+        "B2": "At the next door, a young mum is packing up to move too. But she's on her own, with a baby on her hip and no help at all. She looks at you, tired and near tears with it. You've a van outside, a strong pair of hands, and a little time left. Not much, maybe, but a good deal more than she has got."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §55]",
-            "B1": "[choice 1 → §55]",
-            "B2": "[choice 1 → §55]"
+            "A2": "Lend her your van and hands.",
+            "B1": "Lend her your van and hands.",
+            "B2": "Lend her your van and hands."
           },
           "goto": 55,
           "sets": [
@@ -989,17 +989,17 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §35]",
-            "B1": "[choice 2 → §35]",
-            "B2": "[choice 2 → §35]"
+            "A2": "Wish her luck and go.",
+            "B1": "Wish her luck and go.",
+            "B2": "Wish her luck and go."
           },
           "goto": 35
         },
         {
           "text": {
-            "A2": "[choice 3 → §54]",
-            "B1": "[choice 3 → §54]",
-            "B2": "[choice 3 → §54]"
+            "A2": "Help her get started.",
+            "B1": "Help her get started.",
+            "B2": "Help her get started."
           },
           "goto": 54
         }
