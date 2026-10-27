@@ -1,0 +1,3098 @@
+{
+  "schema": "adventure-book/episode@1",
+  "series": "moving-day",
+  "episode": 11,
+  "title": "Moving Day",
+  "slug": "moving-day",
+  "blurb": "Today you're moving your mum into a new ground-floor flat — she can't manage the stairs any more, and it all has to be done before dark. With the van running late, a removal man ramping up his price, and a box of your dad's things gone missing, you have one short afternoon to get her home honestly — and to decide who you let carry the load with you.",
+  "identity": {
+    "name": "Home by Dark",
+    "mood": "The last day in the old place and the first in the new; boxes, bare rooms, and a short autumn afternoon to get your mum home before dark.",
+    "palette": {
+      "ground": "#14110D",
+      "surface": "#201A14",
+      "ink": "#F2ECE2",
+      "muted": "#9C9286",
+      "line": "#322820",
+      "accent": "#CE7A4A",
+      "accentHot": "#E9A05F",
+      "secondary": "#88A0B8"
+    },
+    "cover": {
+      "kind": "moving",
+      "glow": true,
+      "focal": "52% 54%",
+      "alt": "A small removal van at the kerb at dusk, its back open and boxes on the wet pavement, with a warm-lit doorway and a figure carrying a box toward it."
+    },
+    "type": {
+      "display": "Fraunces",
+      "ui": "Hanken Grotesk",
+      "mono": "JetBrains Mono"
+    },
+    "hero": {
+      "line": {
+        "en": "You're moving your mum into a new place today, and the light is going. Get her home before dark — the honest way, with whoever will carry it with you.",
+        "fr": "Aujourd'hui, tu installes ta mère dans un nouveau logement, et le jour baisse. Ramène-la chez elle avant la nuit — honnêtement, avec ceux qui voudront bien porter avec toi.",
+        "es": "Hoy trasladas a tu madre a un piso nuevo, y la luz se va. Llévala a casa antes de que anochezca, de forma honrada, con quien quiera cargar contigo.",
+        "it": "Oggi trasferisci tua madre in una casa nuova, e la luce se ne va. Portala a casa prima del buio, in modo onesto, con chi vorrà portare il peso con te.",
+        "de": "Heute ziehst du deine Mutter in eine neue Wohnung, und das Licht schwindet. Bring sie vor der Dunkelheit heim — ehrlich, mit allen, die mit dir tragen wollen.",
+        "pt": "Hoje mudas a tua mãe para uma casa nova, e a luz está a ir-se. Leva-a a casa antes de escurecer, de forma honesta, com quem quiser carregar contigo.",
+        "ru": "Сегодня ты перевозишь маму в новую квартиру, и свет уходит. Успей привезти её домой до темноты — честно, с теми, кто готов нести это вместе с тобой.",
+        "zh": "今天你要把妈妈搬进新家，而天色正在暗下来。赶在天黑前把她安顿好——用正当的法子，和愿意陪你一起扛的人。",
+        "ar": "اليوم تنقل أمك إلى بيت جديد، والضوء يخبو. أوصلها إلى البيت قبل حلول الظلام — بطريقة نزيهة، مع كل من يريد أن يحمل الحمل معك."
+      },
+      "sub": "A story where you are the hero — and every choice turns you to a new page. Written for people learning English, at your level, with meaning in your language whenever you need it."
+    }
+  },
+  "levels": [
+    "A2",
+    "B1",
+    "B2"
+  ],
+  "start": 1,
+  "language_focus": {
+    "A2": [
+      "the present and 'going to'",
+      "the house, moving and carrying"
+    ],
+    "B1": [
+      "the first conditional and modals of ability",
+      "lifting, lending and letting go"
+    ],
+    "B2": [
+      "inference and register",
+      "home, memory and starting over"
+    ]
+  },
+  "state_in": [],
+  "state_out": [
+    "moved_in",
+    "dodged_bray",
+    "paid_bray",
+    "welcomed_cass",
+    "rallied_block",
+    "helped_stranger",
+    "shared_load",
+    "overloaded"
+  ],
+  "arc_flags": [],
+  "nodes": [
+    {
+      "id": 1,
+      "text": {
+        "A2": "[stub §1 — prose to be written]",
+        "B1": "[stub §1 — prose to be written]",
+        "B2": "[stub §1 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §2]",
+            "B1": "[choice 1 → §2]",
+            "B2": "[choice 1 → §2]"
+          },
+          "goto": 2
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §3]",
+            "B1": "[choice 2 → §3]",
+            "B2": "[choice 2 → §3]"
+          },
+          "goto": 3
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §4]",
+            "B1": "[choice 3 → §4]",
+            "B2": "[choice 3 → §4]"
+          },
+          "goto": 4
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": {
+        "A2": "[stub §2 — prose to be written]",
+        "B1": "[stub §2 — prose to be written]",
+        "B2": "[stub §2 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §5]",
+            "B1": "[choice 1 → §5]",
+            "B2": "[choice 1 → §5]"
+          },
+          "goto": 5
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §6]",
+            "B1": "[choice 2 → §6]",
+            "B2": "[choice 2 → §6]"
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §29]",
+            "B1": "[choice 3 → §29]",
+            "B2": "[choice 3 → §29]"
+          },
+          "goto": 29
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": {
+        "A2": "[stub §3 — prose to be written]",
+        "B1": "[stub §3 — prose to be written]",
+        "B2": "[stub §3 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §6]",
+            "B1": "[choice 1 → §6]",
+            "B2": "[choice 1 → §6]"
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §8]",
+            "B1": "[choice 2 → §8]",
+            "B2": "[choice 2 → §8]"
+          },
+          "goto": 8
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": {
+        "A2": "[stub §4 — prose to be written]",
+        "B1": "[stub §4 — prose to be written]",
+        "B2": "[stub §4 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §2]",
+            "B1": "[choice 1 → §2]",
+            "B2": "[choice 1 → §2]"
+          },
+          "goto": 2
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §8]",
+            "B1": "[choice 2 → §8]",
+            "B2": "[choice 2 → §8]"
+          },
+          "goto": 8
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": {
+        "A2": "[stub §5 — prose to be written]",
+        "B1": "[stub §5 — prose to be written]",
+        "B2": "[stub §5 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §9]",
+            "B1": "[choice 1 → §9]",
+            "B2": "[choice 1 → §9]"
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §10]",
+            "B1": "[choice 2 → §10]",
+            "B2": "[choice 2 → §10]"
+          },
+          "goto": 10
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §6]",
+            "B1": "[choice 3 → §6]",
+            "B2": "[choice 3 → §6]"
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "[choice 4 → §60]",
+            "B1": "[choice 4 → §60]",
+            "B2": "[choice 4 → §60]"
+          },
+          "goto": 60
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": {
+        "A2": "[stub §6 — prose to be written]",
+        "B1": "[stub §6 — prose to be written]",
+        "B2": "[stub §6 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §9]",
+            "B1": "[choice 1 → §9]",
+            "B2": "[choice 1 → §9]"
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §11]",
+            "B1": "[choice 2 → §11]",
+            "B2": "[choice 2 → §11]"
+          },
+          "goto": 11
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §12]",
+            "B1": "[choice 3 → §12]",
+            "B2": "[choice 3 → §12]"
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": {
+        "A2": "[stub §8 — prose to be written]",
+        "B1": "[stub §8 — prose to be written]",
+        "B2": "[stub §8 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §6]",
+            "B1": "[choice 1 → §6]",
+            "B2": "[choice 1 → §6]"
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §9]",
+            "B1": "[choice 2 → §9]",
+            "B2": "[choice 2 → §9]"
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §68]",
+            "B1": "[choice 3 → §68]",
+            "B2": "[choice 3 → §68]"
+          },
+          "goto": 68
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": {
+        "A2": "[stub §9 — prose to be written]",
+        "B1": "[stub §9 — prose to be written]",
+        "B2": "[stub §9 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §13]",
+            "B1": "[choice 1 → §13]",
+            "B2": "[choice 1 → §13]"
+          },
+          "goto": 13,
+          "sets": [
+            "moved_in"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §14]",
+            "B1": "[choice 2 → §14]",
+            "B2": "[choice 2 → §14]"
+          },
+          "goto": 14
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §15]",
+            "B1": "[choice 3 → §15]",
+            "B2": "[choice 3 → §15]"
+          },
+          "goto": 15
+        },
+        {
+          "text": {
+            "A2": "[choice 4 → §67]",
+            "B1": "[choice 4 → §67]",
+            "B2": "[choice 4 → §67]"
+          },
+          "goto": 67
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": {
+        "A2": "[stub §10 — prose to be written]",
+        "B1": "[stub §10 — prose to be written]",
+        "B2": "[stub §10 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §16]",
+            "B1": "[choice 1 → §16]",
+            "B2": "[choice 1 → §16]"
+          },
+          "goto": 16,
+          "sets": [
+            "helped_stranger"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §17]",
+            "B1": "[choice 2 → §17]",
+            "B2": "[choice 2 → §17]"
+          },
+          "goto": 17
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": {
+        "A2": "[stub §11 — prose to be written]",
+        "B1": "[stub §11 — prose to be written]",
+        "B2": "[stub §11 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §21]",
+            "B1": "[choice 1 → §21]",
+            "B2": "[choice 1 → §21]"
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §18]",
+            "B1": "[choice 2 → §18]",
+            "B2": "[choice 2 → §18]"
+          },
+          "goto": 18
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": {
+        "A2": "[stub §12 — prose to be written]",
+        "B1": "[stub §12 — prose to be written]",
+        "B2": "[stub §12 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §19]",
+            "B1": "[choice 1 → §19]",
+            "B2": "[choice 1 → §19]"
+          },
+          "goto": 19,
+          "sets": [
+            "rallied_block"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §20]",
+            "B1": "[choice 2 → §20]",
+            "B2": "[choice 2 → §20]"
+          },
+          "goto": 20
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": {
+        "A2": "[stub §13 — prose to be written]",
+        "B1": "[stub §13 — prose to be written]",
+        "B2": "[stub §13 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §21]",
+            "B1": "[choice 1 → §21]",
+            "B2": "[choice 1 → §21]"
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §15]",
+            "B1": "[choice 2 → §15]",
+            "B2": "[choice 2 → §15]"
+          },
+          "goto": 15
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": {
+        "A2": "[stub §14 — prose to be written]",
+        "B1": "[stub §14 — prose to be written]",
+        "B2": "[stub §14 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §21]",
+            "B1": "[choice 1 → §21]",
+            "B2": "[choice 1 → §21]"
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §15]",
+            "B1": "[choice 2 → §15]",
+            "B2": "[choice 2 → §15]"
+          },
+          "goto": 15
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": {
+        "A2": "[stub §15 — prose to be written]",
+        "B1": "[stub §15 — prose to be written]",
+        "B2": "[stub §15 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §22]",
+            "B1": "[choice 1 → §22]",
+            "B2": "[choice 1 → §22]"
+          },
+          "goto": 22
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §21]",
+            "B1": "[choice 2 → §21]",
+            "B2": "[choice 2 → §21]"
+          },
+          "goto": 21
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "text": {
+        "A2": "[stub §16 — prose to be written]",
+        "B1": "[stub §16 — prose to be written]",
+        "B2": "[stub §16 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §23]",
+            "B1": "[choice 1 → §23]",
+            "B2": "[choice 1 → §23]"
+          },
+          "goto": 23
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §12]",
+            "B1": "[choice 2 → §12]",
+            "B2": "[choice 2 → §12]"
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "text": {
+        "A2": "[stub §17 — prose to be written]",
+        "B1": "[stub §17 — prose to be written]",
+        "B2": "[stub §17 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §9]",
+            "B1": "[choice 1 → §9]",
+            "B2": "[choice 1 → §9]"
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §11]",
+            "B1": "[choice 2 → §11]",
+            "B2": "[choice 2 → §11]"
+          },
+          "goto": 11
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "text": {
+        "A2": "[stub §18 — prose to be written]",
+        "B1": "[stub §18 — prose to be written]",
+        "B2": "[stub §18 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §24]",
+            "B1": "[choice 1 → §24]",
+            "B2": "[choice 1 → §24]"
+          },
+          "goto": 24
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §21]",
+            "B1": "[choice 2 → §21]",
+            "B2": "[choice 2 → §21]"
+          },
+          "goto": 21
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "text": {
+        "A2": "[stub §19 — prose to be written]",
+        "B1": "[stub §19 — prose to be written]",
+        "B2": "[stub §19 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §25]",
+            "B1": "[choice 1 → §25]",
+            "B2": "[choice 1 → §25]"
+          },
+          "goto": 25
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §36]",
+            "B1": "[choice 2 → §36]",
+            "B2": "[choice 2 → §36]"
+          },
+          "goto": 36
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "text": {
+        "A2": "[stub §20 — prose to be written]",
+        "B1": "[stub §20 — prose to be written]",
+        "B2": "[stub §20 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §9]",
+            "B1": "[choice 1 → §9]",
+            "B2": "[choice 1 → §9]"
+          },
+          "goto": 9
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §11]",
+            "B1": "[choice 2 → §11]",
+            "B2": "[choice 2 → §11]"
+          },
+          "goto": 11
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "text": {
+        "A2": "[stub §21 — prose to be written]",
+        "B1": "[stub §21 — prose to be written]",
+        "B2": "[stub §21 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §26]",
+            "B1": "[choice 1 → §26]",
+            "B2": "[choice 1 → §26]"
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §27]",
+            "B1": "[choice 2 → §27]",
+            "B2": "[choice 2 → §27]"
+          },
+          "goto": 27
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §24]",
+            "B1": "[choice 3 → §24]",
+            "B2": "[choice 3 → §24]"
+          },
+          "goto": 24
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "text": {
+        "A2": "[stub §22 — prose to be written]",
+        "B1": "[stub §22 — prose to be written]",
+        "B2": "[stub §22 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §21]",
+            "B1": "[choice 1 → §21]",
+            "B2": "[choice 1 → §21]"
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §9]",
+            "B1": "[choice 2 → §9]",
+            "B2": "[choice 2 → §9]"
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "text": {
+        "A2": "[stub §23 — prose to be written]",
+        "B1": "[stub §23 — prose to be written]",
+        "B2": "[stub §23 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §21]",
+            "B1": "[choice 1 → §21]",
+            "B2": "[choice 1 → §21]"
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §12]",
+            "B1": "[choice 2 → §12]",
+            "B2": "[choice 2 → §12]"
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "text": {
+        "A2": "[stub §24 — prose to be written]",
+        "B1": "[stub §24 — prose to be written]",
+        "B2": "[stub §24 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §40]",
+            "B1": "[choice 1 → §40]",
+            "B2": "[choice 1 → §40]"
+          },
+          "goto": 40
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §26]",
+            "B1": "[choice 2 → §26]",
+            "B2": "[choice 2 → §26]"
+          },
+          "goto": 26
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "text": {
+        "A2": "[stub §25 — prose to be written]",
+        "B1": "[stub §25 — prose to be written]",
+        "B2": "[stub §25 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §26]",
+            "B1": "[choice 1 → §26]",
+            "B2": "[choice 1 → §26]"
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §70]",
+            "B1": "[choice 2 → §70]",
+            "B2": "[choice 2 → §70]"
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "text": {
+        "A2": "[stub §26 — prose to be written]",
+        "B1": "[stub §26 — prose to be written]",
+        "B2": "[stub §26 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §30]",
+            "B1": "[choice 1 → §30]",
+            "B2": "[choice 1 → §30]"
+          },
+          "goto": 30
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §31]",
+            "B1": "[choice 2 → §31]",
+            "B2": "[choice 2 → §31]"
+          },
+          "goto": 31
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §64]",
+            "B1": "[choice 3 → §64]",
+            "B2": "[choice 3 → §64]"
+          },
+          "goto": 64
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "text": {
+        "A2": "[stub §27 — prose to be written]",
+        "B1": "[stub §27 — prose to be written]",
+        "B2": "[stub §27 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §28]",
+            "B1": "[choice 1 → §28]",
+            "B2": "[choice 1 → §28]"
+          },
+          "goto": 28,
+          "sets": [
+            "overloaded"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §26]",
+            "B1": "[choice 2 → §26]",
+            "B2": "[choice 2 → §26]"
+          },
+          "goto": 26
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "text": {
+        "A2": "[stub §28 — prose to be written]",
+        "B1": "[stub §28 — prose to be written]",
+        "B2": "[stub §28 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §50]",
+            "B1": "[choice 1 → §50]",
+            "B2": "[choice 1 → §50]"
+          },
+          "goto": 50
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §51]",
+            "B1": "[choice 2 → §51]",
+            "B2": "[choice 2 → §51]"
+          },
+          "goto": 51
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "text": {
+        "A2": "[stub §29 — prose to be written]",
+        "B1": "[stub §29 — prose to be written]",
+        "B2": "[stub §29 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §5]",
+            "B1": "[choice 1 → §5]",
+            "B2": "[choice 1 → §5]"
+          },
+          "goto": 5
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §9]",
+            "B1": "[choice 2 → §9]",
+            "B2": "[choice 2 → §9]"
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "text": {
+        "A2": "[stub §30 — prose to be written]",
+        "B1": "[stub §30 — prose to be written]",
+        "B2": "[stub §30 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §32]",
+            "B1": "[choice 1 → §32]",
+            "B2": "[choice 1 → §32]"
+          },
+          "goto": 32
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §33]",
+            "B1": "[choice 2 → §33]",
+            "B2": "[choice 2 → §33]"
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §65]",
+            "B1": "[choice 3 → §65]",
+            "B2": "[choice 3 → §65]"
+          },
+          "goto": 65
+        },
+        {
+          "text": {
+            "A2": "[choice 4 → §39]",
+            "B1": "[choice 4 → §39]",
+            "B2": "[choice 4 → §39]"
+          },
+          "goto": 39
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "text": {
+        "A2": "[stub §31 — prose to be written]",
+        "B1": "[stub §31 — prose to be written]",
+        "B2": "[stub §31 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §34]",
+            "B1": "[choice 1 → §34]",
+            "B2": "[choice 1 → §34]"
+          },
+          "goto": 34,
+          "sets": [
+            "helped_stranger"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §33]",
+            "B1": "[choice 2 → §33]",
+            "B2": "[choice 2 → §33]"
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "text": {
+        "A2": "[stub §32 — prose to be written]",
+        "B1": "[stub §32 — prose to be written]",
+        "B2": "[stub §32 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §55]",
+            "B1": "[choice 1 → §55]",
+            "B2": "[choice 1 → §55]"
+          },
+          "goto": 55,
+          "sets": [
+            "shared_load"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §35]",
+            "B1": "[choice 2 → §35]",
+            "B2": "[choice 2 → §35]"
+          },
+          "goto": 35
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §54]",
+            "B1": "[choice 3 → §54]",
+            "B2": "[choice 3 → §54]"
+          },
+          "goto": 54
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "text": {
+        "A2": "[stub §33 — prose to be written]",
+        "B1": "[stub §33 — prose to be written]",
+        "B2": "[stub §33 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §40]",
+            "B1": "[choice 1 → §40]",
+            "B2": "[choice 1 → §40]"
+          },
+          "goto": 40
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §70]",
+            "B1": "[choice 2 → §70]",
+            "B2": "[choice 2 → §70]"
+          },
+          "goto": 70
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §90]",
+            "B1": "[choice 3 → §90]",
+            "B2": "[choice 3 → §90]"
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "[choice 4 → §38]",
+            "B1": "[choice 4 → §38]",
+            "B2": "[choice 4 → §38]"
+          },
+          "goto": 38
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "text": {
+        "A2": "[stub §34 — prose to be written]",
+        "B1": "[stub §34 — prose to be written]",
+        "B2": "[stub §34 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §33]",
+            "B1": "[choice 1 → §33]",
+            "B2": "[choice 1 → §33]"
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §70]",
+            "B1": "[choice 2 → §70]",
+            "B2": "[choice 2 → §70]"
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "text": {
+        "A2": "[stub §35 — prose to be written]",
+        "B1": "[stub §35 — prose to be written]",
+        "B2": "[stub §35 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §12]",
+            "B1": "[choice 1 → §12]",
+            "B2": "[choice 1 → §12]"
+          },
+          "goto": 12
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §33]",
+            "B1": "[choice 2 → §33]",
+            "B2": "[choice 2 → §33]"
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "text": {
+        "A2": "[stub §36 — prose to be written]",
+        "B1": "[stub §36 — prose to be written]",
+        "B2": "[stub §36 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §25]",
+            "B1": "[choice 1 → §25]",
+            "B2": "[choice 1 → §25]"
+          },
+          "goto": 25
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §37]",
+            "B1": "[choice 2 → §37]",
+            "B2": "[choice 2 → §37]"
+          },
+          "goto": 37
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "text": {
+        "A2": "[stub §37 — prose to be written]",
+        "B1": "[stub §37 — prose to be written]",
+        "B2": "[stub §37 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §26]",
+            "B1": "[choice 1 → §26]",
+            "B2": "[choice 1 → §26]"
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §90]",
+            "B1": "[choice 2 → §90]",
+            "B2": "[choice 2 → §90]"
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "text": {
+        "A2": "[stub §38 — prose to be written]",
+        "B1": "[stub §38 — prose to be written]",
+        "B2": "[stub §38 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §90]",
+            "B1": "[choice 1 → §90]",
+            "B2": "[choice 1 → §90]"
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §40]",
+            "B1": "[choice 2 → §40]",
+            "B2": "[choice 2 → §40]"
+          },
+          "goto": 40
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "text": {
+        "A2": "[stub §39 — prose to be written]",
+        "B1": "[stub §39 — prose to be written]",
+        "B2": "[stub §39 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §26]",
+            "B1": "[choice 1 → §26]",
+            "B2": "[choice 1 → §26]"
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §70]",
+            "B1": "[choice 2 → §70]",
+            "B2": "[choice 2 → §70]"
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "text": {
+        "A2": "[stub §40 — prose to be written]",
+        "B1": "[stub §40 — prose to be written]",
+        "B2": "[stub §40 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §41]",
+            "B1": "[choice 1 → §41]",
+            "B2": "[choice 1 → §41]"
+          },
+          "goto": 41
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §42]",
+            "B1": "[choice 2 → §42]",
+            "B2": "[choice 2 → §42]"
+          },
+          "goto": 42,
+          "sets": [
+            "dodged_bray"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "text": {
+        "A2": "[stub §41 — prose to be written]",
+        "B1": "[stub §41 — prose to be written]",
+        "B2": "[stub §41 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §43]",
+            "B1": "[choice 1 → §43]",
+            "B2": "[choice 1 → §43]"
+          },
+          "goto": 43,
+          "sets": [
+            "paid_bray"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §42]",
+            "B1": "[choice 2 → §42]",
+            "B2": "[choice 2 → §42]"
+          },
+          "goto": 42,
+          "sets": [
+            "dodged_bray"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §44]",
+            "B1": "[choice 3 → §44]",
+            "B2": "[choice 3 → §44]"
+          },
+          "goto": 44
+        },
+        {
+          "text": {
+            "A2": "[choice 4 → §49]",
+            "B1": "[choice 4 → §49]",
+            "B2": "[choice 4 → §49]"
+          },
+          "goto": 49
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "text": {
+        "A2": "[stub §42 — prose to be written]",
+        "B1": "[stub §42 — prose to be written]",
+        "B2": "[stub §42 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §26]",
+            "B1": "[choice 1 → §26]",
+            "B2": "[choice 1 → §26]"
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §9]",
+            "B1": "[choice 2 → §9]",
+            "B2": "[choice 2 → §9]"
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "text": {
+        "A2": "[stub §43 — prose to be written]",
+        "B1": "[stub §43 — prose to be written]",
+        "B2": "[stub §43 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §45]",
+            "B1": "[choice 1 → §45]",
+            "B2": "[choice 1 → §45]"
+          },
+          "goto": 45
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §46]",
+            "B1": "[choice 2 → §46]",
+            "B2": "[choice 2 → §46]"
+          },
+          "goto": 46
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "text": {
+        "A2": "[stub §44 — prose to be written]",
+        "B1": "[stub §44 — prose to be written]",
+        "B2": "[stub §44 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §42]",
+            "B1": "[choice 1 → §42]",
+            "B2": "[choice 1 → §42]"
+          },
+          "goto": 42,
+          "sets": [
+            "dodged_bray"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §43]",
+            "B1": "[choice 2 → §43]",
+            "B2": "[choice 2 → §43]"
+          },
+          "goto": 43,
+          "sets": [
+            "paid_bray"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "text": {
+        "A2": "[stub §45 — prose to be written]",
+        "B1": "[stub §45 — prose to be written]",
+        "B2": "[stub §45 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §47]",
+            "B1": "[choice 1 → §47]",
+            "B2": "[choice 1 → §47]"
+          },
+          "goto": 47
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §90]",
+            "B1": "[choice 2 → §90]",
+            "B2": "[choice 2 → §90]"
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "text": {
+        "A2": "[stub §46 — prose to be written]",
+        "B1": "[stub §46 — prose to be written]",
+        "B2": "[stub §46 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §90]",
+            "B1": "[choice 1 → §90]",
+            "B2": "[choice 1 → §90]"
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §48]",
+            "B1": "[choice 2 → §48]",
+            "B2": "[choice 2 → §48]"
+          },
+          "goto": 48
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "text": {
+        "A2": "[stub §47 — prose to be written]",
+        "B1": "[stub §47 — prose to be written]",
+        "B2": "[stub §47 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §90]",
+            "B1": "[choice 1 → §90]",
+            "B2": "[choice 1 → §90]"
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §48]",
+            "B1": "[choice 2 → §48]",
+            "B2": "[choice 2 → §48]"
+          },
+          "goto": 48
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "text": {
+        "A2": "[stub §48 — prose to be written]",
+        "B1": "[stub §48 — prose to be written]",
+        "B2": "[stub §48 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §90]",
+            "B1": "[choice 1 → §90]",
+            "B2": "[choice 1 → §90]"
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §38]",
+            "B1": "[choice 2 → §38]",
+            "B2": "[choice 2 → §38]"
+          },
+          "goto": 38
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "text": {
+        "A2": "[stub §49 — prose to be written]",
+        "B1": "[stub §49 — prose to be written]",
+        "B2": "[stub §49 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §41]",
+            "B1": "[choice 1 → §41]",
+            "B2": "[choice 1 → §41]"
+          },
+          "goto": 41
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §42]",
+            "B1": "[choice 2 → §42]",
+            "B2": "[choice 2 → §42]"
+          },
+          "goto": 42,
+          "sets": [
+            "dodged_bray"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "text": {
+        "A2": "[stub §50 — prose to be written]",
+        "B1": "[stub §50 — prose to be written]",
+        "B2": "[stub §50 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §52]",
+            "B1": "[choice 1 → §52]",
+            "B2": "[choice 1 → §52]"
+          },
+          "goto": 52
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §51]",
+            "B1": "[choice 2 → §51]",
+            "B2": "[choice 2 → §51]"
+          },
+          "goto": 51
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "text": {
+        "A2": "[stub §51 — prose to be written]",
+        "B1": "[stub §51 — prose to be written]",
+        "B2": "[stub §51 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §129]",
+            "B1": "[choice 1 → §129]",
+            "B2": "[choice 1 → §129]"
+          },
+          "goto": 129,
+          "requires": [
+            "overloaded"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §53]",
+            "B1": "[choice 2 → §53]",
+            "B2": "[choice 2 → §53]"
+          },
+          "goto": 53
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "text": {
+        "A2": "[stub §52 — prose to be written]",
+        "B1": "[stub §52 — prose to be written]",
+        "B2": "[stub §52 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §90]",
+            "B1": "[choice 1 → §90]",
+            "B2": "[choice 1 → §90]"
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §96]",
+            "B1": "[choice 2 → §96]",
+            "B2": "[choice 2 → §96]"
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "text": {
+        "A2": "[stub §53 — prose to be written]",
+        "B1": "[stub §53 — prose to be written]",
+        "B2": "[stub §53 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §26]",
+            "B1": "[choice 1 → §26]",
+            "B2": "[choice 1 → §26]"
+          },
+          "goto": 26
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §131]",
+            "B1": "[choice 2 → §131]",
+            "B2": "[choice 2 → §131]"
+          },
+          "goto": 131
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "text": {
+        "A2": "[stub §54 — prose to be written]",
+        "B1": "[stub §54 — prose to be written]",
+        "B2": "[stub §54 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §55]",
+            "B1": "[choice 1 → §55]",
+            "B2": "[choice 1 → §55]"
+          },
+          "goto": 55,
+          "sets": [
+            "shared_load"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §35]",
+            "B1": "[choice 2 → §35]",
+            "B2": "[choice 2 → §35]"
+          },
+          "goto": 35
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "text": {
+        "A2": "[stub §55 — prose to be written]",
+        "B1": "[stub §55 — prose to be written]",
+        "B2": "[stub §55 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §56]",
+            "B1": "[choice 1 → §56]",
+            "B2": "[choice 1 → §56]"
+          },
+          "goto": 56
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §70]",
+            "B1": "[choice 2 → §70]",
+            "B2": "[choice 2 → §70]"
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "text": {
+        "A2": "[stub §56 — prose to be written]",
+        "B1": "[stub §56 — prose to be written]",
+        "B2": "[stub §56 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §33]",
+            "B1": "[choice 1 → §33]",
+            "B2": "[choice 1 → §33]"
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §57]",
+            "B1": "[choice 2 → §57]",
+            "B2": "[choice 2 → §57]"
+          },
+          "goto": 57
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "text": {
+        "A2": "[stub §57 — prose to be written]",
+        "B1": "[stub §57 — prose to be written]",
+        "B2": "[stub §57 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §33]",
+            "B1": "[choice 1 → §33]",
+            "B2": "[choice 1 → §33]"
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §58]",
+            "B1": "[choice 2 → §58]",
+            "B2": "[choice 2 → §58]"
+          },
+          "goto": 58
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "text": {
+        "A2": "[stub §58 — prose to be written]",
+        "B1": "[stub §58 — prose to be written]",
+        "B2": "[stub §58 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §90]",
+            "B1": "[choice 1 → §90]",
+            "B2": "[choice 1 → §90]"
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §33]",
+            "B1": "[choice 2 → §33]",
+            "B2": "[choice 2 → §33]"
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "text": {
+        "A2": "[stub §60 — prose to be written]",
+        "B1": "[stub §60 — prose to be written]",
+        "B2": "[stub §60 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §61]",
+            "B1": "[choice 1 → §61]",
+            "B2": "[choice 1 → §61]"
+          },
+          "goto": 61,
+          "sets": [
+            "helped_stranger"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §62]",
+            "B1": "[choice 2 → §62]",
+            "B2": "[choice 2 → §62]"
+          },
+          "goto": 62
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "text": {
+        "A2": "[stub §61 — prose to be written]",
+        "B1": "[stub §61 — prose to be written]",
+        "B2": "[stub §61 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §63]",
+            "B1": "[choice 1 → §63]",
+            "B2": "[choice 1 → §63]"
+          },
+          "goto": 63
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §33]",
+            "B1": "[choice 2 → §33]",
+            "B2": "[choice 2 → §33]"
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "text": {
+        "A2": "[stub §62 — prose to be written]",
+        "B1": "[stub §62 — prose to be written]",
+        "B2": "[stub §62 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §6]",
+            "B1": "[choice 1 → §6]",
+            "B2": "[choice 1 → §6]"
+          },
+          "goto": 6
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §33]",
+            "B1": "[choice 2 → §33]",
+            "B2": "[choice 2 → §33]"
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "text": {
+        "A2": "[stub §63 — prose to be written]",
+        "B1": "[stub §63 — prose to be written]",
+        "B2": "[stub §63 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §33]",
+            "B1": "[choice 1 → §33]",
+            "B2": "[choice 1 → §33]"
+          },
+          "goto": 33
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §90]",
+            "B1": "[choice 2 → §90]",
+            "B2": "[choice 2 → §90]"
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "text": {
+        "A2": "[stub §64 — prose to be written]",
+        "B1": "[stub §64 — prose to be written]",
+        "B2": "[stub §64 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §30]",
+            "B1": "[choice 1 → §30]",
+            "B2": "[choice 1 → §30]"
+          },
+          "goto": 30
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §70]",
+            "B1": "[choice 2 → §70]",
+            "B2": "[choice 2 → §70]"
+          },
+          "goto": 70
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "text": {
+        "A2": "[stub §65 — prose to be written]",
+        "B1": "[stub §65 — prose to be written]",
+        "B2": "[stub §65 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §32]",
+            "B1": "[choice 1 → §32]",
+            "B2": "[choice 1 → §32]"
+          },
+          "goto": 32
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §33]",
+            "B1": "[choice 2 → §33]",
+            "B2": "[choice 2 → §33]"
+          },
+          "goto": 33
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "text": {
+        "A2": "[stub §67 — prose to be written]",
+        "B1": "[stub §67 — prose to be written]",
+        "B2": "[stub §67 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §21]",
+            "B1": "[choice 1 → §21]",
+            "B2": "[choice 1 → §21]"
+          },
+          "goto": 21
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §22]",
+            "B1": "[choice 2 → §22]",
+            "B2": "[choice 2 → §22]"
+          },
+          "goto": 22
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "text": {
+        "A2": "[stub §68 — prose to be written]",
+        "B1": "[stub §68 — prose to be written]",
+        "B2": "[stub §68 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §19]",
+            "B1": "[choice 1 → §19]",
+            "B2": "[choice 1 → §19]"
+          },
+          "goto": 19
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §9]",
+            "B1": "[choice 2 → §9]",
+            "B2": "[choice 2 → §9]"
+          },
+          "goto": 9
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "text": {
+        "A2": "[stub §69 — prose to be written]",
+        "B1": "[stub §69 — prose to be written]",
+        "B2": "[stub §69 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §74]",
+            "B1": "[choice 1 → §74]",
+            "B2": "[choice 1 → §74]"
+          },
+          "goto": 74,
+          "sets": [
+            "welcomed_cass"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §90]",
+            "B1": "[choice 2 → §90]",
+            "B2": "[choice 2 → §90]"
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "text": {
+        "A2": "[stub §70 — prose to be written]",
+        "B1": "[stub §70 — prose to be written]",
+        "B2": "[stub §70 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §71]",
+            "B1": "[choice 1 → §71]",
+            "B2": "[choice 1 → §71]"
+          },
+          "goto": 71
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §90]",
+            "B1": "[choice 2 → §90]",
+            "B2": "[choice 2 → §90]"
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "text": {
+        "A2": "[stub §71 — prose to be written]",
+        "B1": "[stub §71 — prose to be written]",
+        "B2": "[stub §71 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §72]",
+            "B1": "[choice 1 → §72]",
+            "B2": "[choice 1 → §72]"
+          },
+          "goto": 72
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §73]",
+            "B1": "[choice 2 → §73]",
+            "B2": "[choice 2 → §73]"
+          },
+          "goto": 73
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §78]",
+            "B1": "[choice 3 → §78]",
+            "B2": "[choice 3 → §78]"
+          },
+          "goto": 78
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "text": {
+        "A2": "[stub §72 — prose to be written]",
+        "B1": "[stub §72 — prose to be written]",
+        "B2": "[stub §72 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §74]",
+            "B1": "[choice 1 → §74]",
+            "B2": "[choice 1 → §74]"
+          },
+          "goto": 74,
+          "sets": [
+            "welcomed_cass"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §75]",
+            "B1": "[choice 2 → §75]",
+            "B2": "[choice 2 → §75]"
+          },
+          "goto": 75
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "text": {
+        "A2": "[stub §73 — prose to be written]",
+        "B1": "[stub §73 — prose to be written]",
+        "B2": "[stub §73 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §72]",
+            "B1": "[choice 1 → §72]",
+            "B2": "[choice 1 → §72]"
+          },
+          "goto": 72
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §75]",
+            "B1": "[choice 2 → §75]",
+            "B2": "[choice 2 → §75]"
+          },
+          "goto": 75
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "text": {
+        "A2": "[stub §74 — prose to be written]",
+        "B1": "[stub §74 — prose to be written]",
+        "B2": "[stub §74 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §76]",
+            "B1": "[choice 1 → §76]",
+            "B2": "[choice 1 → §76]"
+          },
+          "goto": 76
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §90]",
+            "B1": "[choice 2 → §90]",
+            "B2": "[choice 2 → §90]"
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "text": {
+        "A2": "[stub §75 — prose to be written]",
+        "B1": "[stub §75 — prose to be written]",
+        "B2": "[stub §75 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §72]",
+            "B1": "[choice 1 → §72]",
+            "B2": "[choice 1 → §72]"
+          },
+          "goto": 72
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §90]",
+            "B1": "[choice 2 → §90]",
+            "B2": "[choice 2 → §90]"
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "text": {
+        "A2": "[stub §76 — prose to be written]",
+        "B1": "[stub §76 — prose to be written]",
+        "B2": "[stub §76 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §77]",
+            "B1": "[choice 1 → §77]",
+            "B2": "[choice 1 → §77]"
+          },
+          "goto": 77
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §90]",
+            "B1": "[choice 2 → §90]",
+            "B2": "[choice 2 → §90]"
+          },
+          "goto": 90
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "text": {
+        "A2": "[stub §77 — prose to be written]",
+        "B1": "[stub §77 — prose to be written]",
+        "B2": "[stub §77 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §90]",
+            "B1": "[choice 1 → §90]",
+            "B2": "[choice 1 → §90]"
+          },
+          "goto": 90
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §74]",
+            "B1": "[choice 2 → §74]",
+            "B2": "[choice 2 → §74]"
+          },
+          "goto": 74
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "text": {
+        "A2": "[stub §78 — prose to be written]",
+        "B1": "[stub §78 — prose to be written]",
+        "B2": "[stub §78 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §72]",
+            "B1": "[choice 1 → §72]",
+            "B2": "[choice 1 → §72]"
+          },
+          "goto": 72
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §79]",
+            "B1": "[choice 2 → §79]",
+            "B2": "[choice 2 → §79]"
+          },
+          "goto": 79
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "text": {
+        "A2": "[stub §79 — prose to be written]",
+        "B1": "[stub §79 — prose to be written]",
+        "B2": "[stub §79 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §74]",
+            "B1": "[choice 1 → §74]",
+            "B2": "[choice 1 → §74]"
+          },
+          "goto": 74,
+          "sets": [
+            "welcomed_cass"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §69]",
+            "B1": "[choice 2 → §69]",
+            "B2": "[choice 2 → §69]"
+          },
+          "goto": 69
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "text": {
+        "A2": "[stub §80 — prose to be written]",
+        "B1": "[stub §80 — prose to be written]",
+        "B2": "[stub §80 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §43]",
+            "B1": "[choice 1 → §43]",
+            "B2": "[choice 1 → §43]"
+          },
+          "goto": 43,
+          "sets": [
+            "paid_bray"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §91]",
+            "B1": "[choice 2 → §91]",
+            "B2": "[choice 2 → §91]"
+          },
+          "goto": 91,
+          "sets": [
+            "dodged_bray"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "text": {
+        "A2": "[stub §90 — prose to be written]",
+        "B1": "[stub §90 — prose to be written]",
+        "B2": "[stub §90 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §91]",
+            "B1": "[choice 1 → §91]",
+            "B2": "[choice 1 → §91]"
+          },
+          "goto": 91
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §80]",
+            "B1": "[choice 2 → §80]",
+            "B2": "[choice 2 → §80]"
+          },
+          "goto": 80
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §92]",
+            "B1": "[choice 3 → §92]",
+            "B2": "[choice 3 → §92]"
+          },
+          "goto": 92
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "text": {
+        "A2": "[stub §91 — prose to be written]",
+        "B1": "[stub §91 — prose to be written]",
+        "B2": "[stub §91 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §93]",
+            "B1": "[choice 1 → §93]",
+            "B2": "[choice 1 → §93]"
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §94]",
+            "B1": "[choice 2 → §94]",
+            "B2": "[choice 2 → §94]"
+          },
+          "goto": 94
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §98]",
+            "B1": "[choice 3 → §98]",
+            "B2": "[choice 3 → §98]"
+          },
+          "goto": 98
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "text": {
+        "A2": "[stub §92 — prose to be written]",
+        "B1": "[stub §92 — prose to be written]",
+        "B2": "[stub §92 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §93]",
+            "B1": "[choice 1 → §93]",
+            "B2": "[choice 1 → §93]"
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §100]",
+            "B1": "[choice 2 → §100]",
+            "B2": "[choice 2 → §100]"
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §107]",
+            "B1": "[choice 3 → §107]",
+            "B2": "[choice 3 → §107]"
+          },
+          "goto": 107
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "text": {
+        "A2": "[stub §93 — prose to be written]",
+        "B1": "[stub §93 — prose to be written]",
+        "B2": "[stub §93 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §95]",
+            "B1": "[choice 1 → §95]",
+            "B2": "[choice 1 → §95]"
+          },
+          "goto": 95
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §96]",
+            "B1": "[choice 2 → §96]",
+            "B2": "[choice 2 → §96]"
+          },
+          "goto": 96
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "text": {
+        "A2": "[stub §94 — prose to be written]",
+        "B1": "[stub §94 — prose to be written]",
+        "B2": "[stub §94 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §93]",
+            "B1": "[choice 1 → §93]",
+            "B2": "[choice 1 → §93]"
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §95]",
+            "B1": "[choice 2 → §95]",
+            "B2": "[choice 2 → §95]"
+          },
+          "goto": 95
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "text": {
+        "A2": "[stub §95 — prose to be written]",
+        "B1": "[stub §95 — prose to be written]",
+        "B2": "[stub §95 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §100]",
+            "B1": "[choice 1 → §100]",
+            "B2": "[choice 1 → §100]"
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §92]",
+            "B1": "[choice 2 → §92]",
+            "B2": "[choice 2 → §92]"
+          },
+          "goto": 92
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "text": {
+        "A2": "[stub §96 — prose to be written]",
+        "B1": "[stub §96 — prose to be written]",
+        "B2": "[stub §96 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §100]",
+            "B1": "[choice 1 → §100]",
+            "B2": "[choice 1 → §100]"
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §97]",
+            "B1": "[choice 2 → §97]",
+            "B2": "[choice 2 → §97]"
+          },
+          "goto": 97
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "text": {
+        "A2": "[stub §97 — prose to be written]",
+        "B1": "[stub §97 — prose to be written]",
+        "B2": "[stub §97 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §100]",
+            "B1": "[choice 1 → §100]",
+            "B2": "[choice 1 → §100]"
+          },
+          "goto": 100
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §12]",
+            "B1": "[choice 2 → §12]",
+            "B2": "[choice 2 → §12]"
+          },
+          "goto": 12
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "text": {
+        "A2": "[stub §98 — prose to be written]",
+        "B1": "[stub §98 — prose to be written]",
+        "B2": "[stub §98 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §93]",
+            "B1": "[choice 1 → §93]",
+            "B2": "[choice 1 → §93]"
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §99]",
+            "B1": "[choice 2 → §99]",
+            "B2": "[choice 2 → §99]"
+          },
+          "goto": 99
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "text": {
+        "A2": "[stub §99 — prose to be written]",
+        "B1": "[stub §99 — prose to be written]",
+        "B2": "[stub §99 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §94]",
+            "B1": "[choice 1 → §94]",
+            "B2": "[choice 1 → §94]"
+          },
+          "goto": 94
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §100]",
+            "B1": "[choice 2 → §100]",
+            "B2": "[choice 2 → §100]"
+          },
+          "goto": 100
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "text": {
+        "A2": "[stub §100 — prose to be written]",
+        "B1": "[stub §100 — prose to be written]",
+        "B2": "[stub §100 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §101]",
+            "B1": "[choice 1 → §101]",
+            "B2": "[choice 1 → §101]"
+          },
+          "goto": 101
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §70]",
+            "B1": "[choice 2 → §70]",
+            "B2": "[choice 2 → §70]"
+          },
+          "goto": 70
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §102]",
+            "B1": "[choice 3 → §102]",
+            "B2": "[choice 3 → §102]"
+          },
+          "goto": 102
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "text": {
+        "A2": "[stub §101 — prose to be written]",
+        "B1": "[stub §101 — prose to be written]",
+        "B2": "[stub §101 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §110]",
+            "B1": "[choice 1 → §110]",
+            "B2": "[choice 1 → §110]"
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §105]",
+            "B1": "[choice 2 → §105]",
+            "B2": "[choice 2 → §105]"
+          },
+          "goto": 105
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "text": {
+        "A2": "[stub §102 — prose to be written]",
+        "B1": "[stub §102 — prose to be written]",
+        "B2": "[stub §102 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §101]",
+            "B1": "[choice 1 → §101]",
+            "B2": "[choice 1 → §101]"
+          },
+          "goto": 101
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §103]",
+            "B1": "[choice 2 → §103]",
+            "B2": "[choice 2 → §103]"
+          },
+          "goto": 103
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "text": {
+        "A2": "[stub §103 — prose to be written]",
+        "B1": "[stub §103 — prose to be written]",
+        "B2": "[stub §103 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §110]",
+            "B1": "[choice 1 → §110]",
+            "B2": "[choice 1 → §110]"
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §104]",
+            "B1": "[choice 2 → §104]",
+            "B2": "[choice 2 → §104]"
+          },
+          "goto": 104
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "text": {
+        "A2": "[stub §104 — prose to be written]",
+        "B1": "[stub §104 — prose to be written]",
+        "B2": "[stub §104 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §110]",
+            "B1": "[choice 1 → §110]",
+            "B2": "[choice 1 → §110]"
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §114]",
+            "B1": "[choice 2 → §114]",
+            "B2": "[choice 2 → §114]"
+          },
+          "goto": 114
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "text": {
+        "A2": "[stub §105 — prose to be written]",
+        "B1": "[stub §105 — prose to be written]",
+        "B2": "[stub §105 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §110]",
+            "B1": "[choice 1 → §110]",
+            "B2": "[choice 1 → §110]"
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §92]",
+            "B1": "[choice 2 → §92]",
+            "B2": "[choice 2 → §92]"
+          },
+          "goto": 92
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §106]",
+            "B1": "[choice 3 → §106]",
+            "B2": "[choice 3 → §106]"
+          },
+          "goto": 106
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "text": {
+        "A2": "[stub §106 — prose to be written]",
+        "B1": "[stub §106 — prose to be written]",
+        "B2": "[stub §106 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §110]",
+            "B1": "[choice 1 → §110]",
+            "B2": "[choice 1 → §110]"
+          },
+          "goto": 110
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §92]",
+            "B1": "[choice 2 → §92]",
+            "B2": "[choice 2 → §92]"
+          },
+          "goto": 92
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "text": {
+        "A2": "[stub §107 — prose to be written]",
+        "B1": "[stub §107 — prose to be written]",
+        "B2": "[stub §107 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §93]",
+            "B1": "[choice 1 → §93]",
+            "B2": "[choice 1 → §93]"
+          },
+          "goto": 93
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §100]",
+            "B1": "[choice 2 → §100]",
+            "B2": "[choice 2 → §100]"
+          },
+          "goto": 100
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "text": {
+        "A2": "[stub §110 — prose to be written]",
+        "B1": "[stub §110 — prose to be written]",
+        "B2": "[stub §110 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §120]",
+            "B1": "[choice 1 → §120]",
+            "B2": "[choice 1 → §120]"
+          },
+          "goto": 120,
+          "requires": [
+            "moved_in"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §121]",
+            "B1": "[choice 2 → §121]",
+            "B2": "[choice 2 → §121]"
+          },
+          "goto": 121,
+          "requires": [
+            "welcomed_cass"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §111]",
+            "B1": "[choice 3 → §111]",
+            "B2": "[choice 3 → §111]"
+          },
+          "goto": 111
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "text": {
+        "A2": "[stub §111 — prose to be written]",
+        "B1": "[stub §111 — prose to be written]",
+        "B2": "[stub §111 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §122]",
+            "B1": "[choice 1 → §122]",
+            "B2": "[choice 1 → §122]"
+          },
+          "goto": 122,
+          "requires": [
+            "rallied_block"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §123]",
+            "B1": "[choice 2 → §123]",
+            "B2": "[choice 2 → §123]"
+          },
+          "goto": 123,
+          "requires": [
+            "dodged_bray"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §112]",
+            "B1": "[choice 3 → §112]",
+            "B2": "[choice 3 → §112]"
+          },
+          "goto": 112
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "text": {
+        "A2": "[stub §112 — prose to be written]",
+        "B1": "[stub §112 — prose to be written]",
+        "B2": "[stub §112 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §124]",
+            "B1": "[choice 1 → §124]",
+            "B2": "[choice 1 → §124]"
+          },
+          "goto": 124,
+          "requires": [
+            "helped_stranger"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §125]",
+            "B1": "[choice 2 → §125]",
+            "B2": "[choice 2 → §125]"
+          },
+          "goto": 125,
+          "requires": [
+            "shared_load"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §113]",
+            "B1": "[choice 3 → §113]",
+            "B2": "[choice 3 → §113]"
+          },
+          "goto": 113
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "text": {
+        "A2": "[stub §113 — prose to be written]",
+        "B1": "[stub §113 — prose to be written]",
+        "B2": "[stub §113 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §126]",
+            "B1": "[choice 1 → §126]",
+            "B2": "[choice 1 → §126]"
+          },
+          "goto": 126
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §127]",
+            "B1": "[choice 2 → §127]",
+            "B2": "[choice 2 → §127]"
+          },
+          "goto": 127
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §114]",
+            "B1": "[choice 3 → §114]",
+            "B2": "[choice 3 → §114]"
+          },
+          "goto": 114
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "text": {
+        "A2": "[stub §114 — prose to be written]",
+        "B1": "[stub §114 — prose to be written]",
+        "B2": "[stub §114 — prose to be written]"
+      },
+      "choices": [
+        {
+          "text": {
+            "A2": "[choice 1 → §128]",
+            "B1": "[choice 1 → §128]",
+            "B2": "[choice 1 → §128]"
+          },
+          "goto": 128,
+          "requires": [
+            "paid_bray"
+          ]
+        },
+        {
+          "text": {
+            "A2": "[choice 2 → §130]",
+            "B1": "[choice 2 → §130]",
+            "B2": "[choice 2 → §130]"
+          },
+          "goto": 130
+        },
+        {
+          "text": {
+            "A2": "[choice 3 → §126]",
+            "B1": "[choice 3 → §126]",
+            "B2": "[choice 3 → §126]"
+          },
+          "goto": 126
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "text": {
+        "A2": "[stub ending §120 — good — prose to be written]",
+        "B1": "[stub ending §120 — good — prose to be written]",
+        "B2": "[stub ending §120 — good — prose to be written]"
+      },
+      "ending": "good"
+    },
+    {
+      "id": 121,
+      "text": {
+        "A2": "[stub ending §121 — good — prose to be written]",
+        "B1": "[stub ending §121 — good — prose to be written]",
+        "B2": "[stub ending §121 — good — prose to be written]"
+      },
+      "ending": "good"
+    },
+    {
+      "id": 122,
+      "text": {
+        "A2": "[stub ending §122 — good — prose to be written]",
+        "B1": "[stub ending §122 — good — prose to be written]",
+        "B2": "[stub ending §122 — good — prose to be written]"
+      },
+      "ending": "good"
+    },
+    {
+      "id": 123,
+      "text": {
+        "A2": "[stub ending §123 — good — prose to be written]",
+        "B1": "[stub ending §123 — good — prose to be written]",
+        "B2": "[stub ending §123 — good — prose to be written]"
+      },
+      "ending": "good"
+    },
+    {
+      "id": 124,
+      "text": {
+        "A2": "[stub ending §124 — neutral — prose to be written]",
+        "B1": "[stub ending §124 — neutral — prose to be written]",
+        "B2": "[stub ending §124 — neutral — prose to be written]"
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 125,
+      "text": {
+        "A2": "[stub ending §125 — neutral — prose to be written]",
+        "B1": "[stub ending §125 — neutral — prose to be written]",
+        "B2": "[stub ending §125 — neutral — prose to be written]"
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 126,
+      "text": {
+        "A2": "[stub ending §126 — neutral — prose to be written]",
+        "B1": "[stub ending §126 — neutral — prose to be written]",
+        "B2": "[stub ending §126 — neutral — prose to be written]"
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 127,
+      "text": {
+        "A2": "[stub ending §127 — neutral — prose to be written]",
+        "B1": "[stub ending §127 — neutral — prose to be written]",
+        "B2": "[stub ending §127 — neutral — prose to be written]"
+      },
+      "ending": "neutral"
+    },
+    {
+      "id": 128,
+      "text": {
+        "A2": "[stub ending §128 — bad — prose to be written]",
+        "B1": "[stub ending §128 — bad — prose to be written]",
+        "B2": "[stub ending §128 — bad — prose to be written]"
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 129,
+      "text": {
+        "A2": "[stub ending §129 — bad — prose to be written]",
+        "B1": "[stub ending §129 — bad — prose to be written]",
+        "B2": "[stub ending §129 — bad — prose to be written]"
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 130,
+      "text": {
+        "A2": "[stub ending §130 — bad — prose to be written]",
+        "B1": "[stub ending §130 — bad — prose to be written]",
+        "B2": "[stub ending §130 — bad — prose to be written]"
+      },
+      "ending": "bad"
+    },
+    {
+      "id": 131,
+      "text": {
+        "A2": "[stub ending §131 — bad — prose to be written]",
+        "B1": "[stub ending §131 — bad — prose to be written]",
+        "B2": "[stub ending §131 — bad — prose to be written]"
+      },
+      "ending": "bad"
+    }
+  ],
+  "lexicon": {
+    "_comment": "Moving Day's chosen lexicon. Grown in phase 4. Base-keyed; everyday words.",
+    "entries": {}
+  }
+}
