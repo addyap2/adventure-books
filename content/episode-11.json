@@ -848,24 +848,24 @@
     {
       "id": 28,
       "text": {
-        "A2": "[stub §28 — prose to be written]",
-        "B1": "[stub §28 — prose to be written]",
-        "B2": "[stub §28 — prose to be written]"
+        "A2": "You stack the boxes high in your arms, more than you should. At once it feels wrong. You can't see your feet, and the top box wobbles. Every step up the stairs is a gamble now. And there's no setting it down safely once you've started to climb.",
+        "B1": "You stack the boxes high in your arms, more than you should. At once it feels wrong. You can't see your feet, and the top box wobbles with each step. Every step up the stairs is a gamble now — and there's no setting it down safely once you've started to climb.",
+        "B2": "You stack the boxes high in your arms, far more than you should. At once it feels wrong, deep down. You can't see your feet at all, and the top box wobbles with each step. Every step up the stairs is a gamble now — and there's no setting the whole lot down safely once you've started to climb."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §50]",
-            "B1": "[choice 1 → §50]",
-            "B2": "[choice 1 → §50]"
+            "A2": "Almost up.",
+            "B1": "Almost up.",
+            "B2": "Almost up."
           },
           "goto": 50
         },
         {
           "text": {
-            "A2": "[choice 2 → §51]",
-            "B1": "[choice 2 → §51]",
-            "B2": "[choice 2 → §51]"
+            "A2": "The pile tips.",
+            "B1": "The pile tips.",
+            "B2": "The pile tips."
           },
           "goto": 51
         }
@@ -874,24 +874,24 @@
     {
       "id": 29,
       "text": {
-        "A2": "[stub §29 — prose to be written]",
-        "B1": "[stub §29 — prose to be written]",
-        "B2": "[stub §29 — prose to be written]"
+        "A2": "You try the new key, and it won't turn. It sticks halfway, then jams. You can't get Mum's things in until the door opens. You can work at it slowly and hope. Or run down and find the caretaker to sort it.",
+        "B1": "You try the new key, and it won't turn. It sticks halfway, then jams. You can't get Mum's things in until the door opens. You can work at it slowly and hope it gives. Or run down and find the caretaker to sort it out.",
+        "B2": "You try the new key in the new lock, and it won't turn. It sticks halfway, then jams solid. You can't get a single one of Mum's things in until that door opens. You can work at it slowly and hope it gives. Or run down and find the caretaker to sort it out properly."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §5]",
-            "B1": "[choice 1 → §5]",
-            "B2": "[choice 1 → §5]"
+            "A2": "Keep working the lock.",
+            "B1": "Keep working the lock.",
+            "B2": "Keep working the lock."
           },
           "goto": 5
         },
         {
           "text": {
-            "A2": "[choice 2 → §9]",
-            "B1": "[choice 2 → §9]",
-            "B2": "[choice 2 → §9]"
+            "A2": "Find the caretaker.",
+            "B1": "Find the caretaker.",
+            "B2": "Find the caretaker."
           },
           "goto": 9
         }
@@ -900,40 +900,40 @@
     {
       "id": 30,
       "text": {
-        "A2": "[stub §30 — prose to be written]",
-        "B1": "[stub §30 — prose to be written]",
-        "B2": "[stub §30 — prose to be written]"
+        "A2": "The afternoon wears on, grey and cooling, the light dropping by the hour. One flat on the landing is dark and shut. On the stairs, your legs begin to shake. And there's a door propped open at the end, with a trolley just inside.",
+        "B1": "The afternoon wears on, grey and cooling, the light dropping by the hour. One flat on the landing is dark and shut up. On the stairs, your legs begin to shake. And there's a door propped open at the end, with a trolley just inside it.",
+        "B2": "The afternoon wears on, grey and cooling, the light dropping by the hour now. One flat on the landing is dark and shut up for good. On the stairs, your legs begin to shake under the weight. And there's a door propped open at the end of the landing, with a handy trolley just inside it."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §32]",
-            "B1": "[choice 1 → §32]",
-            "B2": "[choice 1 → §32]"
+            "A2": "A neighbour with less.",
+            "B1": "A neighbour with less.",
+            "B2": "A neighbour with less."
           },
           "goto": 32
         },
         {
           "text": {
-            "A2": "[choice 2 → §33]",
-            "B1": "[choice 2 → §33]",
-            "B2": "[choice 2 → §33]"
+            "A2": "Press on.",
+            "B1": "Press on.",
+            "B2": "Press on."
           },
           "goto": 33
         },
         {
           "text": {
-            "A2": "[choice 3 → §65]",
-            "B1": "[choice 3 → §65]",
-            "B2": "[choice 3 → §65]"
+            "A2": "The stairs nearly beat you.",
+            "B1": "The stairs nearly beat you.",
+            "B2": "The stairs nearly beat you."
           },
           "goto": 65
         },
         {
           "text": {
-            "A2": "[choice 4 → §39]",
-            "B1": "[choice 4 → §39]",
-            "B2": "[choice 4 → §39]"
+            "A2": "The open door.",
+            "B1": "The open door.",
+            "B2": "The open door."
           },
           "goto": 39
         }
@@ -942,16 +942,16 @@
     {
       "id": 31,
       "text": {
-        "A2": "[stub §31 — prose to be written]",
-        "B1": "[stub §31 — prose to be written]",
-        "B2": "[stub §31 — prose to be written]"
+        "A2": "A man on the landing has dropped a heavy box and can't lift it back. He's winded, holding his side. Stop, and you lose time you don't have. Don't, and he's stuck there with it, alone in the cold stairwell.",
+        "B1": "A man on the landing has dropped a heavy box and can't lift it back. He's winded, holding his side. Stop, and you lose time you don't have. Don't, and he's stuck there with it, alone in the cold stairwell.",
+        "B2": "A man on the landing has dropped a heavy box and can't lift it back up. He's winded, holding his side and wincing. Stop, and you lose time you simply don't have. Don't, and he's stuck there with it, alone in the cold stairwell, with no one else about. You have to decide, and fast."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §34]",
-            "B1": "[choice 1 → §34]",
-            "B2": "[choice 1 → §34]"
+            "A2": "Help him up.",
+            "B1": "Help him up.",
+            "B2": "Help him up."
           },
           "goto": 34,
           "sets": [
@@ -960,9 +960,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §33]",
-            "B1": "[choice 2 → §33]",
-            "B2": "[choice 2 → §33]"
+            "A2": "You can't stop — the light.",
+            "B1": "You can't stop — the light.",
+            "B2": "You can't stop — the light."
           },
           "goto": 33
         }
@@ -1008,40 +1008,40 @@
     {
       "id": 33,
       "text": {
-        "A2": "[stub §33 — prose to be written]",
-        "B1": "[stub §33 — prose to be written]",
-        "B2": "[stub §33 — prose to be written]"
+        "A2": "You carry on up and down, head down, breathing hard. Choices lie ahead. Bray may be near with his van. There's that knock at the door still to answer. Or you can just keep shifting the boxes.",
+        "B1": "You carry on up and down the stairs, head down, breathing hard. Choices lie ahead. Bray may be near with his van. There's that knock at the door still to answer. Or you can just keep shifting the boxes.",
+        "B2": "You carry on up and down the stairs, head down, breathing hard through it. Choices lie ahead of you. Bray may be near with his van and his offer. There's that knock at the door still to answer, nagging at you. Or you can simply keep shifting the boxes, one by one."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §40]",
-            "B1": "[choice 1 → §40]",
-            "B2": "[choice 1 → §40]"
+            "A2": "Bray again.",
+            "B1": "Bray again.",
+            "B2": "Bray again."
           },
           "goto": 40
         },
         {
           "text": {
-            "A2": "[choice 2 → §70]",
-            "B1": "[choice 2 → §70]",
-            "B2": "[choice 2 → §70]"
+            "A2": "A face you know.",
+            "B1": "A face you know.",
+            "B2": "A face you know."
           },
           "goto": 70
         },
         {
           "text": {
-            "A2": "[choice 3 → §90]",
-            "B1": "[choice 3 → §90]",
-            "B2": "[choice 3 → §90]"
+            "A2": "The last of it.",
+            "B1": "The last of it.",
+            "B2": "The last of it."
           },
           "goto": 90
         },
         {
           "text": {
-            "A2": "[choice 4 → §38]",
-            "B1": "[choice 4 → §38]",
-            "B2": "[choice 4 → §38]"
+            "A2": "The ache gets to you.",
+            "B1": "The ache gets to you.",
+            "B2": "The ache gets to you."
           },
           "goto": 38
         }
@@ -1050,24 +1050,24 @@
     {
       "id": 34,
       "text": {
-        "A2": "[stub §34 — prose to be written]",
-        "B1": "[stub §34 — prose to be written]",
-        "B2": "[stub §34 — prose to be written]"
+        "A2": "You help the man lift the box and carry it to his door. He catches his breath. 'Here,' he says, and presses a key into your hand. It opens the back gate, so you can bring the van close. 'Saves your legs,' he says. A small thing, freely given, and you take it and go on.",
+        "B1": "You help the man lift the box and carry it to his door. He catches his breath. 'Here,' he says, and presses a key into your hand. It opens the back gate, so you can bring the van right up close. 'Saves your legs,' he says. A small thing — but freely given, and you take it and go on.",
+        "B2": "You help the man lift the box and carry it the last few feet to his door. He catches his breath, leaning on the frame. 'Here,' he says, and presses a key into your hand. It opens the back gate, so you can bring the van right up to the stairs. 'Saves your legs,' he says, with a tired nod. A small thing — but freely given, and you take it and go on your way."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §33]",
-            "B1": "[choice 1 → §33]",
-            "B2": "[choice 1 → §33]"
+            "A2": "On your way.",
+            "B1": "On your way.",
+            "B2": "On your way."
           },
           "goto": 33
         },
         {
           "text": {
-            "A2": "[choice 2 → §70]",
-            "B1": "[choice 2 → §70]",
-            "B2": "[choice 2 → §70]"
+            "A2": "He knows your sister.",
+            "B1": "He knows your sister.",
+            "B2": "He knows your sister."
           },
           "goto": 70
         }
@@ -1076,24 +1076,24 @@
     {
       "id": 35,
       "text": {
-        "A2": "[stub §35 — prose to be written]",
-        "B1": "[stub §35 — prose to be written]",
-        "B2": "[stub §35 — prose to be written]"
+        "A2": "You can't stop now — but you can't just leave him, either. So you promise to send help soon. 'Hang on,' you say. 'Catch your breath — I'll send someone down.' You mean it, too. And then you turn and carry on.",
+        "B1": "You can't stop now — but you can't just leave him, either. So you promise to send help soon. 'Hang on,' you say. 'Catch your breath — I'll send someone down to you.' You mean it, too. And then you turn and carry on.",
+        "B2": "You can't stop now — but you can't simply leave him, either. So you promise to send help soon. 'Hang on,' you say, over your shoulder. 'Catch your breath — I'll send someone down to you.' You mean it, too; and then you turn and carry on up the stairs, carrying the weight of it."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §12]",
-            "B1": "[choice 1 → §12]",
-            "B2": "[choice 1 → §12]"
+            "A2": "Knock up help for him.",
+            "B1": "Knock up help for him.",
+            "B2": "Knock up help for him."
           },
           "goto": 12
         },
         {
           "text": {
-            "A2": "[choice 2 → §33]",
-            "B1": "[choice 2 → §33]",
-            "B2": "[choice 2 → §33]"
+            "A2": "On up the stairs.",
+            "B1": "On up the stairs.",
+            "B2": "On up the stairs."
           },
           "goto": 33
         }
@@ -1102,24 +1102,24 @@
     {
       "id": 36,
       "text": {
-        "A2": "[stub §36 — prose to be written]",
-        "B1": "[stub §36 — prose to be written]",
-        "B2": "[stub §36 — prose to be written]"
+        "A2": "You get one good thing going — you set up a chain on the stairs. One hands a box down, the next takes it, the next stacks it in the van. People breathe easier. It isn't the whole move. But it's real, and it's a good start.",
+        "B1": "You get one good thing going — you set up a steady chain on the stairs. One hands a box down, the next takes it, the next stacks it in the van. People breathe easier. It isn't the whole move. But it's real, and it's a good start.",
+        "B2": "You get one good thing going — you set up a steady chain on the stairs. One hands a box down, the next takes it, the next stacks it tight in the van. People breathe easier with a system. It isn't the whole move, not by a long way. But it's real, and it's a good start, and the stairwell hums with it."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §25]",
-            "B1": "[choice 1 → §25]",
-            "B2": "[choice 1 → §25]"
+            "A2": "Get everyone a job.",
+            "B1": "Get everyone a job.",
+            "B2": "Get everyone a job."
           },
           "goto": 25
         },
         {
           "text": {
-            "A2": "[choice 2 → §37]",
-            "B1": "[choice 2 → §37]",
-            "B2": "[choice 2 → §37]"
+            "A2": "Turn worry into work.",
+            "B1": "Turn worry into work.",
+            "B2": "Turn worry into work."
           },
           "goto": 37
         }
@@ -1128,24 +1128,24 @@
     {
       "id": 37,
       "text": {
-        "A2": "[stub §37 — prose to be written]",
-        "B1": "[stub §37 — prose to be written]",
-        "B2": "[stub §37 — prose to be written]"
+        "A2": "Hand by hand, the panic turns into a working chain. Everyone has a job now: one lifts, one carries, one packs the van tight. Worry turns into doing. And doing beats worrying, every time. The stairwell fills with footsteps and quiet, steady work.",
+        "B1": "Hand by hand, the panic turns into a working chain. Everyone has a job now: one lifts, one carries, one packs the van tight. Worry turns into doing. And doing beats worrying, every single time. The stairwell fills with footsteps and quiet, steady work.",
+        "B2": "Hand by hand, box by box, the panic turns into a working chain. Everyone has a job now: one lifts, one carries down, one packs the van tight. Worry turns into doing — and doing beats worrying, on a moving day, every single time. The stairwell fills with footsteps and quiet, steady work, and the worst of the panic lifts."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §26]",
-            "B1": "[choice 1 → §26]",
-            "B2": "[choice 1 → §26]"
+            "A2": "Back to the stairs.",
+            "B1": "Back to the stairs.",
+            "B2": "Back to the stairs."
           },
           "goto": 26
         },
         {
           "text": {
-            "A2": "[choice 2 → §90]",
-            "B1": "[choice 2 → §90]",
-            "B2": "[choice 2 → §90]"
+            "A2": "The last load soon.",
+            "B1": "The last load soon.",
+            "B2": "The last load soon."
           },
           "goto": 90
         }
@@ -1154,24 +1154,24 @@
     {
       "id": 38,
       "text": {
-        "A2": "[stub §38 — prose to be written]",
-        "B1": "[stub §38 — prose to be written]",
-        "B2": "[stub §38 — prose to be written]"
+        "A2": "The long afternoon wears at you. A voice says: give up, leave the rest, finish tomorrow. No one would blame you, and it would be easy. But you think of Mum, home before dark. And you push the voice away. Not yet. Not while there's light.",
+        "B1": "The long afternoon wears at you. A small voice says: give up, leave the rest, finish tomorrow — no one would blame you, and it would be so easy. But you think of Mum, home before dark. And you push the voice away. Not yet. Not while there's still light.",
+        "B2": "The long afternoon wears at you. A small voice says: give up, leave the rest, finish it tomorrow — no one would blame you, and it would be so easy to do. But you think of Mum, home and settled before dark. And you push the voice away. Not yet. Not while there's still light in the sky."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §90]",
-            "B1": "[choice 1 → §90]",
-            "B2": "[choice 1 → §90]"
+            "A2": "The last of it.",
+            "B1": "The last of it.",
+            "B2": "The last of it."
           },
           "goto": 90
         },
         {
           "text": {
-            "A2": "[choice 2 → §40]",
-            "B1": "[choice 2 → §40]",
-            "B2": "[choice 2 → §40]"
+            "A2": "Bray, one more time.",
+            "B1": "Bray, one more time.",
+            "B2": "Bray, one more time."
           },
           "goto": 40
         }
@@ -1180,24 +1180,24 @@
     {
       "id": 39,
       "text": {
-        "A2": "[stub §39 — prose to be written]",
-        "B1": "[stub §39 — prose to be written]",
-        "B2": "[stub §39 — prose to be written]"
+        "A2": "You sit on a step a moment. You check the list of what's left. Half of it is done; the hard half isn't. You could push on and clear the rest. Or something makes you look down the stairs — and there, at the door, a face you half know.",
+        "B1": "You sit on a step a moment and check the list of what's left. Half of it is done; the hard half isn't. You could push on and clear the rest. Or something makes you look down the stairs — and there, at the door below, a face you half know.",
+        "B2": "You sit on a step a moment and check the list of what's left to shift. Half of it is done; the hard, heavy half isn't. You could push on and clear the rest before dark. Or something makes you look down the stairs — and there, at the door below, a face you half know, half dread."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §26]",
-            "B1": "[choice 1 → §26]",
-            "B2": "[choice 1 → §26]"
+            "A2": "Push on.",
+            "B1": "Push on.",
+            "B2": "Push on."
           },
           "goto": 26
         },
         {
           "text": {
-            "A2": "[choice 2 → §70]",
-            "B1": "[choice 2 → §70]",
-            "B2": "[choice 2 → §70]"
+            "A2": "That face again.",
+            "B1": "That face again.",
+            "B2": "That face again."
           },
           "goto": 70
         }
