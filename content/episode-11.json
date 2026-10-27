@@ -1740,16 +1740,16 @@
     {
       "id": 60,
       "text": {
-        "A2": "[stub §60 — prose to be written]",
-        "B1": "[stub §60 — prose to be written]",
-        "B2": "[stub §60 — prose to be written]"
+        "A2": "A neighbour stops you. 'There's a lad round the back,' she says. 'On his own with a wardrobe, about to drop it. No one's helping.' Round the corner, a young man leans against the weight, going red. If no one lends a hand, it'll come down on him.",
+        "B1": "A neighbour stops you. 'There's a lad round the back,' she says, 'struggling with a wardrobe on his own, about to drop it. No one's helping.' Round the corner, a young man leans against the weight, going red in the face. If no one lends a hand, it'll come down on him.",
+        "B2": "A neighbour stops you. 'There's a lad round the back,' she says, 'struggling with a wardrobe all on his own, about to drop it. No one's helping.' Round the corner, a young man leans against the weight of it, going red in the face. If no one lends a hand now, it'll come down on top of him."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §61]",
-            "B1": "[choice 1 → §61]",
-            "B2": "[choice 1 → §61]"
+            "A2": "Go and help.",
+            "B1": "Go and help.",
+            "B2": "Go and help."
           },
           "goto": 61,
           "sets": [
@@ -1758,9 +1758,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §62]",
-            "B1": "[choice 2 → §62]",
-            "B2": "[choice 2 → §62]"
+            "A2": "Send someone else.",
+            "B1": "Send someone else.",
+            "B2": "Send someone else."
           },
           "goto": 62
         }
@@ -1769,24 +1769,24 @@
     {
       "id": 61,
       "text": {
-        "A2": "[stub §61 — prose to be written]",
-        "B1": "[stub §61 — prose to be written]",
-        "B2": "[stub §61 — prose to be written]"
+        "A2": "You get a shoulder under the wardrobe just in time. Together you lower it safe. He's shaking, out of breath, too winded to speak. 'Easy,' you say. 'I've got this end. Let's set it down.' And slowly the weight comes off you both.",
+        "B1": "You get a shoulder under the wardrobe just in time. Together you lower it down safe. He's shaking, out of breath, too winded to speak. 'Easy,' you say. 'I've got this end. Let's set it down.' And slowly the weight comes off you both.",
+        "B2": "You get a shoulder under the wardrobe just in time. Together, straining, you lower it down safe. He's shaking, out of breath, too winded to speak. 'Easy,' you say, steady. 'I've got this end. Let's set it down slow.' And slowly the weight comes off the two of you."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §63]",
-            "B1": "[choice 1 → §63]",
-            "B2": "[choice 1 → §63]"
+            "A2": "See it to his door.",
+            "B1": "See it to his door.",
+            "B2": "See it to his door."
           },
           "goto": 63
         },
         {
           "text": {
-            "A2": "[choice 2 → §33]",
-            "B1": "[choice 2 → §33]",
-            "B2": "[choice 2 → §33]"
+            "A2": "Back to your own move.",
+            "B1": "Back to your own move.",
+            "B2": "Back to your own move."
           },
           "goto": 33
         }
@@ -1795,24 +1795,24 @@
     {
       "id": 62,
       "text": {
-        "A2": "[stub §62 — prose to be written]",
-        "B1": "[stub §62 — prose to be written]",
-        "B2": "[stub §62 — prose to be written]"
+        "A2": "You can't do it all at once, and Mum's move needs you most. So you call over a couple of the others to take the weight, and press on. It sits badly with you. But today you have to choose, and keep on choosing.",
+        "B1": "You can't do it all at once, and Mum's move needs you most of all. So you call over a couple of the others to take the weight, and press on. It sits badly with you. But today you have to choose, and keep on choosing.",
+        "B2": "You can't do it all at once, and Mum's move needs you most of all today. So you call over a couple of the others to take the weight for him, and press on. It sits badly with you, and will for a while. But today you have to choose, and keep on choosing."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §6]",
-            "B1": "[choice 1 → §6]",
-            "B2": "[choice 1 → §6]"
+            "A2": "On with the move.",
+            "B1": "On with the move.",
+            "B2": "On with the move."
           },
           "goto": 6
         },
         {
           "text": {
-            "A2": "[choice 2 → §33]",
-            "B1": "[choice 2 → §33]",
-            "B2": "[choice 2 → §33]"
+            "A2": "Get on with it.",
+            "B1": "Get on with it.",
+            "B2": "Get on with it."
           },
           "goto": 33
         }
@@ -1821,24 +1821,24 @@
     {
       "id": 63,
       "text": {
-        "A2": "[stub §63 — prose to be written]",
-        "B1": "[stub §63 — prose to be written]",
-        "B2": "[stub §63 — prose to be written]"
+        "A2": "You help him walk the wardrobe to his door and set it down. His face fills with relief. His mates crowd round and clap you on the back. 'Thanks, pal,' they keep saying. But your own van's waiting, and you can't stay long.",
+        "B1": "You help him walk the wardrobe to his door and set it down. His face fills with relief. His mates crowd round and clap you on the back. 'Thanks, pal,' they keep saying to you. But your own van's waiting, and you can't stay long today.",
+        "B2": "You help him walk the wardrobe to his door and set it down at last. His face fills with relief at the sight. His mates crowd round and clap you on the back. 'Thanks, pal,' they keep saying to you, over and over. But your own van's waiting at the kerb, and you can't stay long today."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §33]",
-            "B1": "[choice 1 → §33]",
-            "B2": "[choice 1 → §33]"
+            "A2": "Back out and on.",
+            "B1": "Back out and on.",
+            "B2": "Back out and on."
           },
           "goto": 33
         },
         {
           "text": {
-            "A2": "[choice 2 → §90]",
-            "B1": "[choice 2 → §90]",
-            "B2": "[choice 2 → §90]"
+            "A2": "To the new place at last.",
+            "B1": "To the new place at last.",
+            "B2": "To the new place at last."
           },
           "goto": 90
         }
@@ -1847,24 +1847,24 @@
     {
       "id": 64,
       "text": {
-        "A2": "[stub §64 — prose to be written]",
-        "B1": "[stub §64 — prose to be written]",
-        "B2": "[stub §64 — prose to be written]"
+        "A2": "You stop a moment and look down the street. Movers and cars go by, everyone busy, everyone in their own day. The light is nearly gone. Only one person stands still at your gate, looking up. Something about them stops your breath.",
+        "B1": "You stop a moment and look down the street. Movers and cars go by, everyone busy, everyone in their own day. The light is nearly gone now. Only one person stands still at your gate, looking up. Something about them stops your breath.",
+        "B2": "You stop a moment and look down the street. Movers and cars go by, everyone busy, everyone wrapped up in their own day. The light is nearly gone now. Only one person stands quite still at your gate, looking up at the flat. And something about them, something you can't name, stops your breath."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §30]",
-            "B1": "[choice 1 → §30]",
-            "B2": "[choice 1 → §30]"
+            "A2": "On with the move.",
+            "B1": "On with the move.",
+            "B2": "On with the move."
           },
           "goto": 30
         },
         {
           "text": {
-            "A2": "[choice 2 → §70]",
-            "B1": "[choice 2 → §70]",
-            "B2": "[choice 2 → §70]"
+            "A2": "That person at the gate.",
+            "B1": "That person at the gate.",
+            "B2": "That person at the gate."
           },
           "goto": 70
         }
@@ -1873,24 +1873,24 @@
     {
       "id": 65,
       "text": {
-        "A2": "[stub §65 — prose to be written]",
-        "B1": "[stub §65 — prose to be written]",
-        "B2": "[stub §65 — prose to be written]"
+        "A2": "The work turns as hard as it gets now. Your arms are dead, your back aches, your legs won't lift. It's hard to think, hard to carry, hard to care. The last boxes feel like stone. This is the worst of it.",
+        "B1": "The work turns as hard as it gets now. Your arms are dead, your back aches, your legs won't lift. It's hard to think, hard to carry, hard to care. The last boxes feel like stone in your hands. This is the worst of it — the hardest part of the whole day.",
+        "B2": "The work turns as hard as it is going to get now. Your arms are dead, your back aches, your legs won't lift another step. It's hard to think, hard to carry, hard to care about any of it. The last boxes feel like stone in your hands. This is the worst of it — the hardest part of the whole long day."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §32]",
-            "B1": "[choice 1 → §32]",
-            "B2": "[choice 1 → §32]"
+            "A2": "A neighbour with less.",
+            "B1": "A neighbour with less.",
+            "B2": "A neighbour with less."
           },
           "goto": 32
         },
         {
           "text": {
-            "A2": "[choice 2 → §33]",
-            "B1": "[choice 2 → §33]",
-            "B2": "[choice 2 → §33]"
+            "A2": "Keep going.",
+            "B1": "Keep going.",
+            "B2": "Keep going."
           },
           "goto": 33
         }
@@ -1899,24 +1899,24 @@
     {
       "id": 67,
       "text": {
-        "A2": "[stub §67 — prose to be written]",
-        "B1": "[stub §67 — prose to be written]",
-        "B2": "[stub §67 — prose to be written]"
+        "A2": "Old Reg presses something on you — a proper sack trolley from the store cupboard. 'For the heavy stuff,' he says. 'Go on, take it. Saves your back the worst of it.' His face is kind in the stairwell light. It's what he has to give today, and he gives it gladly.",
+        "B1": "Old Reg presses something on you — a proper sack trolley from the store cupboard. 'For the heavy stuff,' he says. 'Go on, take it. Saves your back the worst of it.' His face is kind in the stairwell light. It's what he has to give today, and he gives all of it gladly.",
+        "B2": "Old Reg presses something on you — a proper sack trolley from the store cupboard. 'For the heavy stuff,' he says. 'Go on, take it. It'll save your back the worst of it.' His face is kind in the stairwell light. It's what he has to give today, and he gives every bit of it gladly."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §21]",
-            "B1": "[choice 1 → §21]",
-            "B2": "[choice 1 → §21]"
+            "A2": "Thank him and on.",
+            "B1": "Thank him and on.",
+            "B2": "Thank him and on."
           },
           "goto": 21
         },
         {
           "text": {
-            "A2": "[choice 2 → §22]",
-            "B1": "[choice 2 → §22]",
-            "B2": "[choice 2 → §22]"
+            "A2": "Ask what else to watch for.",
+            "B1": "Ask what else to watch for.",
+            "B2": "Ask what else to watch for."
           },
           "goto": 22
         }
@@ -1925,24 +1925,24 @@
     {
       "id": 68,
       "text": {
-        "A2": "[stub §68 — prose to be written]",
-        "B1": "[stub §68 — prose to be written]",
-        "B2": "[stub §68 — prose to be written]"
+        "A2": "At the van, people are grabbing for space — your boxes, the mum's, a neighbour's bags, all at once. Voices rise, arms reach, it's getting fraught. One more shove and something breaks. You can try to calm it and pack it fair. Or you can get your own in and go.",
+        "B1": "At the van, people are grabbing for space — your boxes, the mum's, a neighbour's bags, all at once. Voices rise, arms reach, it's getting fraught. One more shove and something breaks. You can try to calm it down and pack it fair. Or you can get your own in and go.",
+        "B2": "At the van, people are grabbing for space — your boxes, the young mum's, a neighbour's bags, all at once. Voices rise, arms reach across each other, it's getting fraught. One more shove and something breaks. You can try to calm it all down and pack it fair. Or you can get your own in and go."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §19]",
-            "B1": "[choice 1 → §19]",
-            "B2": "[choice 1 → §19]"
+            "A2": "Calm it, pack it fair.",
+            "B1": "Calm it, pack it fair.",
+            "B2": "Calm it, pack it fair."
           },
           "goto": 19
         },
         {
           "text": {
-            "A2": "[choice 2 → §9]",
-            "B1": "[choice 2 → §9]",
-            "B2": "[choice 2 → §9]"
+            "A2": "Get yours in and go.",
+            "B1": "Get yours in and go.",
+            "B2": "Get yours in and go."
           },
           "goto": 9
         }
@@ -1951,16 +1951,16 @@
     {
       "id": 69,
       "text": {
-        "A2": "[stub §69 — prose to be written]",
-        "B1": "[stub §69 — prose to be written]",
-        "B2": "[stub §69 — prose to be written]"
+        "A2": "A quiet spot by the back gate, where the noise falls away. You stop to breathe. Then you see her — by the wall, half-turned, achingly familiar. Someone you knew all your life, and lost. Your heart goes still.",
+        "B1": "A quiet spot by the back gate, where the noise falls away. You stop to breathe for a moment. Then you see her — by the wall, half-turned, achingly familiar. Someone you knew all your life, and lost. Your heart goes still.",
+        "B2": "A quiet spot by the back gate, where the noise falls away to almost nothing. You stop a moment just to breathe. Then you see her — standing by the wall, half-turned, achingly familiar. Someone you knew all your life, and grew up beside, and lost. And your heart goes quite still in your chest."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §74]",
-            "B1": "[choice 1 → §74]",
-            "B2": "[choice 1 → §74]"
+            "A2": "Go to her.",
+            "B1": "Go to her.",
+            "B2": "Go to her."
           },
           "goto": 74,
           "sets": [
@@ -1969,9 +1969,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §90]",
-            "B1": "[choice 2 → §90]",
-            "B2": "[choice 2 → §90]"
+            "A2": "Slip past, head down.",
+            "B1": "Slip past, head down.",
+            "B2": "Slip past, head down."
           },
           "goto": 90
         }
@@ -1980,24 +1980,24 @@
     {
       "id": 70,
       "text": {
-        "A2": "[stub §70 — prose to be written]",
-        "B1": "[stub §70 — prose to be written]",
-        "B2": "[stub §70 — prose to be written]"
+        "A2": "At the gate, a figure stands where the light is thin. They seem to be looking right at you — then away, then back. You can't place them, and yet you can. Something in you needs to know. And something in you is afraid to.",
+        "B1": "At the gate, a figure stands where the light is thin. They seem to be looking right at you — then away, then back again. You can't place them, and yet you can. Something in you needs to know. And something in you is afraid to.",
+        "B2": "At the gate, a figure stands where the light is thin. They seem to be looking right at you — then away, then back again, slowly. You can't quite place them, and yet somehow you can. Something in you needs to know who it is. And something in you, just as strong, is afraid to."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §71]",
-            "B1": "[choice 1 → §71]",
-            "B2": "[choice 1 → §71]"
+            "A2": "Go and see.",
+            "B1": "Go and see.",
+            "B2": "Go and see."
           },
           "goto": 71
         },
         {
           "text": {
-            "A2": "[choice 2 → §90]",
-            "B1": "[choice 2 → §90]",
-            "B2": "[choice 2 → §90]"
+            "A2": "Leave it, carry on.",
+            "B1": "Leave it, carry on.",
+            "B2": "Leave it, carry on."
           },
           "goto": 90
         }
@@ -2006,32 +2006,32 @@
     {
       "id": 71,
       "text": {
-        "A2": "[stub §71 — prose to be written]",
-        "B1": "[stub §71 — prose to be written]",
-        "B2": "[stub §71 — prose to be written]"
+        "A2": "You cross the yard toward them and lift a hand. They don't move, or don't let on. Then you catch their face in the last light — and the years fall away. You know that face. You've known it your whole life.",
+        "B1": "You cross the yard toward them and lift a hand. They don't move, or don't let on. Then you catch their face in the last of the light — and the years fall away. You know that face. You've known it your whole life.",
+        "B2": "You cross the yard toward them and lift a hand. They don't move, or don't choose to let on. Then you catch their face in the last of the light — and all the years fall away at once. You know that face. You've known it your whole life. And your feet carry you on toward it."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §72]",
-            "B1": "[choice 1 → §72]",
-            "B2": "[choice 1 → §72]"
+            "A2": "Go to her.",
+            "B1": "Go to her.",
+            "B2": "Go to her."
           },
           "goto": 72
         },
         {
           "text": {
-            "A2": "[choice 2 → §73]",
-            "B1": "[choice 2 → §73]",
-            "B2": "[choice 2 → §73]"
+            "A2": "Say her name.",
+            "B1": "Say her name.",
+            "B2": "Say her name."
           },
           "goto": 73
         },
         {
           "text": {
-            "A2": "[choice 3 → §78]",
-            "B1": "[choice 3 → §78]",
-            "B2": "[choice 3 → §78]"
+            "A2": "Look again, be sure.",
+            "B1": "Look again, be sure.",
+            "B2": "Look again, be sure."
           },
           "goto": 78
         }
@@ -2040,16 +2040,16 @@
     {
       "id": 72,
       "text": {
-        "A2": "[stub §72 — prose to be written]",
-        "B1": "[stub §72 — prose to be written]",
-        "B2": "[stub §72 — prose to be written]"
+        "A2": "You reach her, and your heart turns over. It's Cass — your sister, older now, the same tired eyes, a bag at her feet. She came. The one you fell out with, years ago, and never put right. No time to think. You have to speak now.",
+        "B1": "You reach her, and your heart turns over. It's Cass — your sister, older now, the same tired eyes, a bag at her feet. She came. The one you fell out with, years ago, and never put right. There's no time to think. You have to say something now.",
+        "B2": "You reach her, and your heart turns right over. It's Cass — your sister, older now, the same tired eyes, a packed bag at her feet. She came. The one you fell out with, years ago, and never once put right. There's no time to stop and think. You have to say something, and say it now."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §74]",
-            "B1": "[choice 1 → §74]",
-            "B2": "[choice 1 → §74]"
+            "A2": "Face it with her.",
+            "B1": "Face it with her.",
+            "B2": "Face it with her."
           },
           "goto": 74,
           "sets": [
@@ -2058,9 +2058,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §75]",
-            "B1": "[choice 2 → §75]",
-            "B2": "[choice 2 → §75]"
+            "A2": "Lose your nerve.",
+            "B1": "Lose your nerve.",
+            "B2": "Lose your nerve."
           },
           "goto": 75
         }
@@ -2069,24 +2069,24 @@
     {
       "id": 73,
       "text": {
-        "A2": "[stub §73 — prose to be written]",
-        "B1": "[stub §73 — prose to be written]",
-        "B2": "[stub §73 — prose to be written]"
+        "A2": "You say her name across the yard, and for a moment there's nothing. Then she turns, and her face changes — surprise, then something softer, harder to read. 'It's you,' she says. And you hear how much is in those two words.",
+        "B1": "You say her name across the yard, and for a moment there's nothing at all. Then she turns, and her face changes — surprise, then something softer, harder to read. 'It's you,' she says. And you can hear how much is in those two words.",
+        "B2": "You say her name across the yard, and for a long moment there's nothing at all. Then she turns, and her whole face changes — surprise first, then something softer, and much harder to read. 'It's you,' she says, quietly. And you can hear just how much is packed into those two small words."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §72]",
-            "B1": "[choice 1 → §72]",
-            "B2": "[choice 1 → §72]"
+            "A2": "Go to her.",
+            "B1": "Go to her.",
+            "B2": "Go to her."
           },
           "goto": 72
         },
         {
           "text": {
-            "A2": "[choice 2 → §75]",
-            "B1": "[choice 2 → §75]",
-            "B2": "[choice 2 → §75]"
+            "A2": "Lose your nerve.",
+            "B1": "Lose your nerve.",
+            "B2": "Lose your nerve."
           },
           "goto": 75
         }
@@ -2095,24 +2095,24 @@
     {
       "id": 74,
       "text": {
-        "A2": "[stub §74 — prose to be written]",
-        "B1": "[stub §74 — prose to be written]",
-        "B2": "[stub §74 — prose to be written]"
+        "A2": "You face Cass at last, and all the years come up between you. Slowly, the stiffness in her shoulders eases. She looks past you at the van. 'Mum's really going, then,' she says quietly. 'Let me help carry.' Even now, she's thinking of Mum, and the door home.",
+        "B1": "You face Cass at last, and all the years come up between you. Slowly, the stiffness in her shoulders eases. She looks past you at the van. 'Mum's really going, then,' she says quietly. 'Let me help carry.' Even now, she's thinking of Mum, and the door home.",
+        "B2": "You face Cass at last, and all the years come up between you at once. Slowly, the stiffness in her shoulders eases a little. She looks past you at the loaded van. 'Mum's really going, then,' she says quietly. 'Let me help carry.' Even now, standing here, she's thinking of Mum, and the door home. You keep your eyes on hers, and you don't look away."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §76]",
-            "B1": "[choice 1 → §76]",
-            "B2": "[choice 1 → §76]"
+            "A2": "Ask what went wrong.",
+            "B1": "Ask what went wrong.",
+            "B2": "Ask what went wrong."
           },
           "goto": 76
         },
         {
           "text": {
-            "A2": "[choice 2 → §90]",
-            "B1": "[choice 2 → §90]",
-            "B2": "[choice 2 → §90]"
+            "A2": "Carry on together.",
+            "B1": "Carry on together.",
+            "B2": "Carry on together."
           },
           "goto": 90
         }
@@ -2121,24 +2121,24 @@
     {
       "id": 75,
       "text": {
-        "A2": "[stub §75 — prose to be written]",
-        "B1": "[stub §75 — prose to be written]",
-        "B2": "[stub §75 — prose to be written]"
+        "A2": "You turn to carry on and say nothing — then stop short. There's no avoiding it, not now, not today. Not with Mum's things between you and her stood right there. It's face it or lose it, and she knows it too. Her eyes follow you across the yard.",
+        "B1": "You turn to carry on and say nothing — then stop short. There's no avoiding it, not now, not today. Not with Mum's things between you and her standing right there. It's face it or lose it now, and she knows it too. Her eyes follow you across the yard.",
+        "B2": "You turn to carry on and say nothing — then stop short. There's no avoiding it, not now, not today of all days. Not with Mum's whole life between you and her standing right there. It's face it or lose the chance now, and she knows it too. Her eyes follow you across the yard, steady and sad."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §72]",
-            "B1": "[choice 1 → §72]",
-            "B2": "[choice 1 → §72]"
+            "A2": "Then face her. Go.",
+            "B1": "Then face her. Go.",
+            "B2": "Then face her. Go."
           },
           "goto": 72
         },
         {
           "text": {
-            "A2": "[choice 2 → §90]",
-            "B1": "[choice 2 → §90]",
-            "B2": "[choice 2 → §90]"
+            "A2": "Turn away, head down.",
+            "B1": "Turn away, head down.",
+            "B2": "Turn away, head down."
           },
           "goto": 90
         }
@@ -2147,24 +2147,24 @@
     {
       "id": 76,
       "text": {
-        "A2": "[stub §76 — prose to be written]",
-        "B1": "[stub §76 — prose to be written]",
-        "B2": "[stub §76 — prose to be written]"
+        "A2": "Cass looks at you, her eyes clearer now. 'We stopped talking after Dad,' she says. 'Too much said, too much not said. My fault as much as yours. It's a long, sad story.' And you hear just how long it is.",
+        "B1": "Cass looks at you, her eyes clearer now. 'We stopped talking after Dad,' she says. 'Too much said, and too much not said. My fault as much as yours. It's a long, sad story.' And you can hear just how long it is.",
+        "B2": "Cass looks at you, her eyes a little clearer now. 'We stopped talking after Dad went,' she says. 'Too much said, and far too much left unsaid. My fault as much as yours. It's a long, sad story.' And you can hear, in her voice, just how long it is."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §77]",
-            "B1": "[choice 1 → §77]",
-            "B2": "[choice 1 → §77]"
+            "A2": "Clear the air now.",
+            "B1": "Clear the air now.",
+            "B2": "Clear the air now."
           },
           "goto": 77
         },
         {
           "text": {
-            "A2": "[choice 2 → §90]",
-            "B1": "[choice 2 → §90]",
-            "B2": "[choice 2 → §90]"
+            "A2": "Just carry on first.",
+            "B1": "Just carry on first.",
+            "B2": "Just carry on first."
           },
           "goto": 90
         }
@@ -2173,24 +2173,24 @@
     {
       "id": 77,
       "text": {
-        "A2": "[stub §77 — prose to be written]",
-        "B1": "[stub §77 — prose to be written]",
-        "B2": "[stub §77 — prose to be written]"
+        "A2": "You decide to clear the air before the light goes. You and Cass, after all these years apart. It's a small thing, next to the whole day's weight. But it's not nothing. Some shut doors can still be opened.",
+        "B1": "You decide to clear the air before the light goes. You and Cass, after all these years apart. It's a small thing, next to the whole day's weight. But it's not nothing. Some shut doors can still be opened.",
+        "B2": "You decide to clear the air before the light goes for good. You and Cass, after all these long years apart. It's a small thing, perhaps, next to the whole day's weight. But it is not nothing. Some shut doors can still be opened, if someone tries. And today, it seems, that someone is you."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §90]",
-            "B1": "[choice 1 → §90]",
-            "B2": "[choice 1 → §90]"
+            "A2": "On together.",
+            "B1": "On together.",
+            "B2": "On together."
           },
           "goto": 90
         },
         {
           "text": {
-            "A2": "[choice 2 → §74]",
-            "B1": "[choice 2 → §74]",
-            "B2": "[choice 2 → §74]"
+            "A2": "Say it properly first.",
+            "B1": "Say it properly first.",
+            "B2": "Say it properly first."
           },
           "goto": 74
         }
@@ -2199,24 +2199,24 @@
     {
       "id": 78,
       "text": {
-        "A2": "[stub §78 — prose to be written]",
-        "B1": "[stub §78 — prose to be written]",
-        "B2": "[stub §78 — prose to be written]"
+        "A2": "The figure stands still, and your nerve works at you, slow and cruel. And yet they came all this way, to your gate, on today of all days. You can't just carry on and pretend. You have to go closer and be sure who it is.",
+        "B1": "The figure stands still, and your nerve works at you, slow and cruel. And yet they came all this way, to your gate, on today of all days. You can't just carry on and pretend. You have to go closer and be sure who it is.",
+        "B2": "The figure stands quite still, and your nerve works away at you, slow and cruel. And yet they came all this way, right to your gate, on today of all days. You can't just carry on and pretend you didn't see. You have to go closer and be sure who it is."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §72]",
-            "B1": "[choice 1 → §72]",
-            "B2": "[choice 1 → §72]"
+            "A2": "Go to her.",
+            "B1": "Go to her.",
+            "B2": "Go to her."
           },
           "goto": 72
         },
         {
           "text": {
-            "A2": "[choice 2 → §79]",
-            "B1": "[choice 2 → §79]",
-            "B2": "[choice 2 → §79]"
+            "A2": "Closer still.",
+            "B1": "Closer still.",
+            "B2": "Closer still."
           },
           "goto": 79
         }
@@ -2225,16 +2225,16 @@
     {
       "id": 79,
       "text": {
-        "A2": "[stub §79 — prose to be written]",
-        "B1": "[stub §79 — prose to be written]",
-        "B2": "[stub §79 — prose to be written]"
+        "A2": "You go closer, and you know her at once. It's Cass — your own sister, not seen in years, not since the day it all fell apart. Then she looks up and sees you too. There's no hiding now.",
+        "B1": "You go closer, and you know her at once. It's Cass — your own sister, not seen in years, not since the day it all fell apart. Then she looks up and sees you too. There's no hiding from it now.",
+        "B2": "You go closer still, and you know her at once. It's Cass — your own sister, not seen in years, not since the day it all fell so badly apart. Then she looks up and sees you too, and her eyes widen. There's no hiding from it now, for either of you."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §74]",
-            "B1": "[choice 1 → §74]",
-            "B2": "[choice 1 → §74]"
+            "A2": "Face it with her.",
+            "B1": "Face it with her.",
+            "B2": "Face it with her."
           },
           "goto": 74,
           "sets": [
@@ -2243,9 +2243,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §69]",
-            "B1": "[choice 2 → §69]",
-            "B2": "[choice 2 → §69]"
+            "A2": "Duck into the back.",
+            "B1": "Duck into the back.",
+            "B2": "Duck into the back."
           },
           "goto": 69
         }
@@ -2254,16 +2254,16 @@
     {
       "id": 80,
       "text": {
-        "A2": "[stub §80 — prose to be written]",
-        "B1": "[stub §80 — prose to be written]",
-        "B2": "[stub §80 — prose to be written]"
+        "A2": "Bray swings by one last time, engine running. 'Still at it the hard way?' he says. 'Give it up. Let me finish it off — last chance, cash, done by dark.' The same easy smile. The same old con.",
+        "B1": "Bray swings by one last time, engine running. 'Still at it the hard way?' he says. 'Give it up. Let me finish it off for you — last chance, cash, done by dark.' The same easy smile. The same old con.",
+        "B2": "Bray swings by one last time, engine still running. 'Still at it the hard way?' he says. 'Give it up, love. Let me finish it off for you — last chance, cash, done by dark.' The same easy smile. The same old con underneath it. You've seen exactly where that road goes."
       },
       "choices": [
         {
           "text": {
-            "A2": "[choice 1 → §43]",
-            "B1": "[choice 1 → §43]",
-            "B2": "[choice 1 → §43]"
+            "A2": "Give in to Bray.",
+            "B1": "Give in to Bray.",
+            "B2": "Give in to Bray."
           },
           "goto": 43,
           "sets": [
@@ -2272,9 +2272,9 @@
         },
         {
           "text": {
-            "A2": "[choice 2 → §91]",
-            "B1": "[choice 2 → §91]",
-            "B2": "[choice 2 → §91]"
+            "A2": "Send him off.",
+            "B1": "Send him off.",
+            "B2": "Send him off."
           },
           "goto": 91,
           "sets": [
