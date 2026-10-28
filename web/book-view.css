@@ -1,0 +1,176 @@
+/* Optional book view. The story graph, glossary and saved place are shared with story view. */
+@font-face{font-family:"Book Cinzel";src:url("fonts/cinzel.woff2") format("woff2");font-display:swap}
+@font-face{font-family:"Book Garamond";src:url("fonts/eb-garamond.woff2") format("woff2");font-display:swap}
+@font-face{font-family:"Book Garamond";src:url("fonts/eb-garamond-italic.woff2") format("woff2");font-style:italic;font-display:swap}
+
+body[data-page="reader"] .view-toggle{font-family:Georgia,serif;font-size:23px;line-height:1}
+body[data-page="reader"] #segView button[aria-pressed="true"]{
+  background:var(--accent);color:var(--accent-ink);border-color:var(--accent);
+}
+
+html[data-reading-view="book"] body[data-page="reader"]:has(main.reading){
+  background:radial-gradient(ellipse at 50% 30%,#2a261f 0%,#13120f 72%) fixed;
+}
+html[data-reading-view="book"] body[data-page="reader"]:has(main.reading) > .bar{
+  background:rgba(19,18,15,.94);border-bottom-color:#594a31;color:#eee1c9;
+}
+html[data-reading-view="book"] body[data-page="reader"]:has(main.reading) > .bar .iconbtn{
+  background:#211e18;border-color:#665539;color:#e8d2a6;
+}
+html[data-reading-view="book"] body[data-page="reader"]:has(main.reading) > .bar .brand .dot{
+  background:#c9a45c;box-shadow:0 0 0 4px rgba(201,164,92,.19);
+}
+html[data-reading-view="book"] body[data-page="reader"]:has(main.reading) #theme{display:none}
+html[data-reading-view="book"] body[data-page="reader"] main.reading{
+  max-width:1180px;padding:32px clamp(12px,3vw,32px) 64px;
+}
+html[data-reading-view="book"] body[data-page="reader"] .reader-heading{
+  max-width:1060px;margin:0 auto 18px;color:#dbc7a1;
+}
+html[data-reading-view="book"] body[data-page="reader"] .reader-heading .eyebrow{
+  font-family:"Book Cinzel",Georgia,serif;font-size:11px;letter-spacing:.17em;
+}
+html[data-reading-view="book"] body[data-page="reader"] .moment-card{
+  max-width:1060px;margin:auto;grid-template-columns:1fr 1fr;
+  min-height:min(720px,calc(100svh - 175px));
+  overflow:visible;border:1px solid #d9caaa;border-radius:4px;
+  background:#f4ecda;color:#2a2119;
+  box-shadow:0 2px 0 #e3d6b9,0 5px 0 #c9b99a,0 8px 0 #ae9d7f,
+    0 24px 65px rgba(0,0,0,.48);
+  transform-style:preserve-3d;
+}
+html[data-reading-view="book"] body[data-page="reader"] .moment-card::after{
+  right:-7px;width:6px;background:repeating-linear-gradient(180deg,#eee1c6 0 1px,#c5b497 1px 2px);
+}
+html[data-reading-view="book"] body[data-page="reader"] .moment-visual{
+  min-height:100%;margin:0;padding:clamp(34px,4vw,62px);
+  border-right:1px solid #cdbf9f;border-radius:3px 0 0 3px;
+  background:linear-gradient(90deg,#ebdfc4,#f5eddb 6%,#f4ecda 72%,#e5d8bb 100%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:inset -16px 0 28px -22px #614f35;
+}
+html[data-reading-view="book"] body[data-page="reader"] .moment-visual::after{display:none}
+html[data-reading-view="book"] body[data-page="reader"] .moment-visual .art{
+  width:min(100%,310px);height:auto;min-height:0;aspect-ratio:3/4;
+  margin:18px auto 24px;padding:9px;border:1px solid #b9a77f;
+  background:#e9ddc3;box-shadow:0 12px 23px rgba(65,45,23,.16);
+}
+html[data-reading-view="book"] body[data-page="reader"] .moment-visual .art img{
+  position:static;width:100%;height:100%;object-fit:cover;
+}
+html[data-reading-view="book"] body[data-page="reader"] .scene-label{
+  position:static;color:#745d37;font:500 11px/1.5 "Book Cinzel",Georgia,serif;
+  letter-spacing:.18em;text-align:center;
+}
+html[data-reading-view="book"] body[data-page="reader"] .scene-caption{
+  position:static;color:#3e3021;text-align:center;
+}
+html[data-reading-view="book"] body[data-page="reader"] .scene-caption strong{
+  font:500 clamp(27px,3vw,40px)/1.12 "Book Cinzel",Georgia,serif;
+  text-wrap:balance;
+}
+html[data-reading-view="book"] body[data-page="reader"] .scene-caption span{
+  display:block;color:#75634b;font:italic 19px/1.4 "Book Garamond",Georgia,serif;
+}
+html[data-reading-view="book"] body[data-page="reader"] .reading-page,
+html[data-reading-view="book"] body[data-page="reader"] .reading-page.end{
+  min-height:inherit;padding:clamp(32px,4vw,60px) clamp(30px,4vw,60px) 22px;
+  border-radius:0 3px 3px 0;
+  background:linear-gradient(90deg,#e5d8bb,#f4ecda 7%,#f4ecda 90%,#eee2ca);
+  color:#2a2119;
+}
+html[data-reading-view="book"] body[data-page="reader"] .reading-kicker{
+  color:#8b6b32;font:500 11px/1.5 "Book Cinzel",Georgia,serif;letter-spacing:.17em;
+}
+html[data-reading-view="book"] body[data-page="reader"] .moment-heading{
+  color:#3a2b1b;font:500 clamp(26px,2.5vw,35px)/1.24 "Book Cinzel",Georgia,serif;
+  letter-spacing:.02em;text-align:center;margin:18px 0 29px;
+}
+html[data-reading-view="book"] body[data-page="reader"] .moment-heading::after{
+  content:"";display:block;width:7px;height:7px;margin:17px auto 0;
+  background:#a7803d;transform:rotate(45deg);
+}
+html[data-reading-view="book"] body[data-page="reader"] .para,
+html[data-reading-view="book"] body[data-page="reader"] .reading-page.end .para{
+  color:#2a2119;font:calc(22px * var(--reading-scale,1))/1.5 "Book Garamond",Georgia,serif !important;
+  text-align:left;max-width:none;
+}
+html[data-reading-view="book"] body[data-page="reader"] .decision,
+html[data-reading-view="book"] body[data-page="reader"] .ending-collection{
+  border-top:1px solid #d2c19e;margin-top:28px;padding-top:22px;
+}
+html[data-reading-view="book"] body[data-page="reader"] .decision h3,
+html[data-reading-view="book"] body[data-page="reader"] .ending-collection h3{
+  color:#725a37;font:500 11px/1.4 "Book Cinzel",Georgia,serif;
+  letter-spacing:.1em;text-transform:uppercase;
+}
+html[data-reading-view="book"] body[data-page="reader"] .choices button{
+  min-height:48px;padding:10px 12px;gap:10px;border:1px solid #d5c6a6;
+  border-radius:2px;background:rgba(255,255,255,.2);color:#35291c;
+  font:20px/1.25 "Book Garamond",Georgia,serif;
+}
+html[data-reading-view="book"] body[data-page="reader"] .choices button:hover,
+html[data-reading-view="book"] body[data-page="reader"] .choices button:focus-visible{
+  border-color:#a7803d;background:#fff8e9;
+}
+html[data-reading-view="book"] body[data-page="reader"] .choice-letter{
+  width:24px;height:24px;border-radius:50%;background:#e9dabb;color:#795b2c;
+  font:500 12px/1 "Book Cinzel",Georgia,serif;
+}
+html[data-reading-view="book"] body[data-page="reader"] .choice-destination{
+  color:#8c7554;font:12px/1 "Book Garamond",Georgia,serif;
+}
+html[data-reading-view="book"] body[data-page="reader"] .choices button svg{width:15px;color:#8c6b35}
+html[data-reading-view="book"] body[data-page="reader"] .page-folio{
+  color:#806d50;border-top:1px solid #d5c6a6;
+  font:12px/1.4 "Book Cinzel",Georgia,serif;letter-spacing:.03em;
+}
+html[data-reading-view="book"] body[data-page="reader"] .page-back,
+html[data-reading-view="book"] body[data-page="reader"] .cover-link{
+  color:#795b2c;font-family:"Book Garamond",Georgia,serif;font-size:18px;
+}
+html[data-reading-view="book"] body[data-page="reader"] .reader-footer{
+  color:#c7b694;font:italic 16px/1.5 "Book Garamond",Georgia,serif;
+}
+html[data-reading-view="book"] body[data-page="reader"] .reader-footer svg{color:#d5b671}
+html[data-reading-view="book"] body[data-page="reader"] .reading-page .gloss-word{
+  border-color:#a7803d;color:inherit;
+}
+html[data-reading-view="book"] body[data-page="reader"] .reading-page .gloss-word:hover{
+  background:#e9dabb;
+}
+@keyframes book-leaf-out{
+  from{transform:rotateY(0);opacity:1}
+  to{transform:rotateY(-18deg);opacity:0}
+}
+@keyframes book-leaf-in{
+  from{transform:rotateY(13deg);opacity:.55}
+  to{transform:rotateY(0);opacity:1}
+}
+html[data-reading-view="book"] body[data-page="reader"] .moment-card.page-turning{
+  transform-origin:left center;animation:book-leaf-out .34s ease-in forwards;
+}
+html[data-reading-view="book"] body[data-page="reader"] .moment-card.page-arriving{
+  transform-origin:left center;animation:book-leaf-in .32s ease-out both;
+}
+@media(max-width:720px){
+  html[data-reading-view="book"] body[data-page="reader"] main.reading{padding:18px 12px 36px}
+  html[data-reading-view="book"] body[data-page="reader"] .moment-card{display:block;min-height:0}
+  html[data-reading-view="book"] body[data-page="reader"] .moment-visual{display:none}
+  html[data-reading-view="book"] body[data-page="reader"] .reading-page,
+  html[data-reading-view="book"] body[data-page="reader"] .reading-page.end{
+    min-height:calc(100svh - 170px);padding:30px clamp(24px,6vw,40px) 18px;
+  }
+  html[data-reading-view="book"] body[data-page="reader"] .para,
+  html[data-reading-view="book"] body[data-page="reader"] .reading-page.end .para{
+    font-size:calc(21px * var(--reading-scale,1)) !important;
+  }
+  html[data-reading-view="book"] body[data-page="reader"] .moment-heading{font-size:25px}
+  html[data-reading-view="book"] body[data-page="reader"] .page-folio{font-size:10px}
+  html[data-reading-view="book"] body[data-page="reader"] .choice-destination{display:none}
+  html[data-reading-view="book"] body[data-page="reader"] .choices button{font-size:19px}
+}
+@media(prefers-reduced-motion:reduce){
+  html[data-reading-view="book"] body[data-page="reader"] .moment-card.page-turning,
+  html[data-reading-view="book"] body[data-page="reader"] .moment-card.page-arriving{animation:none}
+}
