@@ -220,5 +220,24 @@ for(const [slug,kind,cover,scenes]of books){
 };
   catalog['the-interview'] = entry;
 }
+// Moving Day's painted scenes are maintained by hand; regeneration preserves them.
+{
+  const E='/illustrations/moving-day-empty.svg', V='/illustrations/moving-day-van.svg',
+        W='/illustrations/moving-day-stairwell.svg', N='/illustrations/moving-day-newplace.svg';
+  const sceneOf={clock:E,crate:E,phone:E, van:V,coin:V,rain:V,sign:V,
+    keys:W,door:W,hand:W,companions:W,window:W,photo:W,
+    lamp:N,bed:N,house:N,cup:N,blanket:N};
+  const titleOf={clock:'The light going',crate:'Boxes to shift',phone:'A voice on the line',
+    van:'The van at the kerb',coin:"Bray's offer",rain:'The wet pavement',sign:"Old Tom's warning",
+    keys:'The stiff new key',door:'At the doorway',hand:'A good turn',companions:'The block pitches in',
+    window:'A face you half know',photo:'After all these years',
+    lamp:'A little light',bed:'Setting up home',house:'The new place',cup:'Home, and a cup of tea',
+    blanket:'Settling her in'};
+  const scenes={}, sceneTitles={};
+  for(const m of Object.keys(sceneOf)){scenes[m]=sceneOf[m];sceneTitles[m]=titleOf[m];}
+  catalog['moving-day']={cover:N,focal:'center',social:'/og-moving-day.png',scenes,sceneTitles,
+    endings:{good:N,neutral:W,bad:E},
+    alt:'A small removal van at the kerb at dusk, its back open and boxes on the wet pavement, with a warm-lit doorway and a figure carrying a box toward it.'};
+}
 await writeFile(new URL('catalog.json',out),JSON.stringify(catalog,null,2)+'\n');
 console.log(`Built ${books.length} illustrated book identities and their scene sets.`);

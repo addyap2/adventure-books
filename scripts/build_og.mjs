@@ -89,6 +89,48 @@ function candlelightScene(c) {
   <g transform="translate(320,0)"><ellipse cx="300" cy="556" rx="46" ry="7" fill="#000" opacity=".3"/><path d="M300 502 C313 504 319 515 321 529 L327 556 L273 556 L279 529 C281 515 287 504 300 502 Z" fill="#060b14"/><circle cx="300" cy="493" r="10" fill="#060b14"/><path d="M289 490 q11 -9 22 0 z" fill="#060b14"/></g>`;
 }
 
+function movingScene(c) {
+  // moving day at dusk: a terrace of dark houses, one warm-lit ground-floor doorway,
+  // a small removal van at the kerb with its back open, boxes on the wet pavement,
+  // and a lone figure carrying a box toward the light.
+  return `
+  <g fill="${c.surface}"><path d="M740 300 h150 v200 h-150z"/><path d="M905 270 h150 v230 h-150z"/><path d="M1070 300 h140 v200 h-140z"/></g>
+  <g stroke="${c.line}" stroke-width="2" opacity="0.7"><path d="M740 300 l75 -30 l75 30"/><path d="M905 270 l75 -30 l75 30"/><path d="M1070 300 l70 -28 l70 28"/></g>
+  <g fill="${c.surface}" opacity="0.85"><rect x="770" y="340" width="26" height="34"/><rect x="830" y="340" width="26" height="34"/><rect x="940" y="320" width="26" height="34"/><rect x="1000" y="320" width="26" height="34"/><rect x="1110" y="340" width="26" height="34"/></g>
+  <ellipse cx="980" cy="420" rx="150" ry="150" fill="url(#glow)"/>
+  <rect x="958" y="392" width="44" height="108" rx="1" fill="${c.accentHot}"/>
+  <rect x="958" y="392" width="44" height="108" rx="1" fill="none" stroke="${c.accent}" stroke-width="2"/>
+  <line x1="980" y1="392" x2="980" y2="500" stroke="${c.accent}" stroke-width="1.5" opacity="0.6"/>
+  <g fill="${c.ink}" opacity="0.5"><circle cx="700" cy="150" r="2"/><circle cx="860" cy="100" r="1.6"/><circle cx="1010" cy="150" r="2.2"/><circle cx="1150" cy="90" r="1.8"/><circle cx="780" cy="220" r="1.6"/><circle cx="1090" cy="210" r="1.8"/></g>
+  <rect x="0" y="500" width="1200" height="130" fill="${c.surface}"/>
+  <path d="M700 500 h500 v130 h-500z" fill="${c.ground}" opacity="0.25"/>
+  <path d="M958 500 L1002 500 L1050 560 L910 560 Z" fill="${c.accent}" opacity=".15"/>
+  <!-- removal van at the kerb, back open toward the door -->
+  <g>
+    <rect x="300" y="396" width="300" height="118" rx="6" fill="#0c0a07"/>
+    <rect x="300" y="396" width="300" height="118" rx="6" fill="none" stroke="${c.line}" stroke-width="2"/>
+    <path d="M600 420 h78 l28 40 v54 h-106z" fill="#0c0a07" stroke="${c.line}" stroke-width="2"/>
+    <rect x="612" y="432" width="56" height="30" rx="2" fill="${c.secondary}" opacity="0.5"/>
+    <rect x="316" y="410" width="268" height="92" rx="3" fill="${c.ground}" stroke="${c.line}" stroke-width="2"/>
+    <rect x="336" y="430" width="70" height="60" rx="2" fill="${c.surface}"/>
+    <rect x="414" y="446" width="60" height="46" rx="2" fill="${c.surface}"/>
+    <circle cx="372" cy="522" r="26" fill="#060504"/><circle cx="372" cy="522" r="11" fill="${c.line}"/>
+    <circle cx="648" cy="522" r="26" fill="#060504"/><circle cx="648" cy="522" r="11" fill="${c.line}"/>
+  </g>
+  <!-- boxes on the pavement -->
+  <g fill="${c.surface}" stroke="${c.line}" stroke-width="2">
+    <rect x="648" y="470" width="52" height="42" rx="2"/><rect x="706" y="482" width="44" height="30" rx="2"/>
+  </g>
+  <g stroke="${c.accent}" stroke-width="1.5" opacity="0.6"><line x1="648" y1="491" x2="700" y2="491"/><line x1="674" y1="470" x2="674" y2="512"/></g>
+  <!-- figure carrying a box toward the lit door -->
+  <g transform="translate(470,0)">
+    <ellipse cx="300" cy="556" rx="42" ry="7" fill="#000" opacity=".3"/>
+    <rect x="276" y="452" width="48" height="36" rx="2" fill="${c.surface}" stroke="${c.line}" stroke-width="2"/>
+    <path d="M300 492 C312 494 318 504 320 518 L326 556 L274 556 L280 518 C282 504 288 494 300 492 Z" fill="#060b14"/>
+    <circle cx="300" cy="446" r="10" fill="#060b14"/>
+  </g>`;
+}
+
 function kitchenScene(c) {
   // a dark wet street at night, a row of unlit houses, and one big warm-lit kitchen
   // window: a pot on the hob with rising steam, the table laid behind the glass, rain
@@ -276,6 +318,7 @@ function ogHTML(book) {
               : kind === "lantern" ? lanternScene(c)
               : kind === "kitchen" ? kitchenScene(c)
               : kind === "candlelight" ? candlelightScene(c)
+              : kind === "moving" ? movingScene(c)
               : nocturneScene(c);
   const skyStops = kind === "highsun"
     ? `<stop offset="0" stop-color="#D8E4EA"/><stop offset="0.5" stop-color="#ECE0C6"/><stop offset="1" stop-color="${surface}"/>`
@@ -339,6 +382,7 @@ function coverHTML(book) {
               : kind === "lantern" ? lanternScene(c)
               : kind === "kitchen" ? kitchenScene(c)
               : kind === "candlelight" ? candlelightScene(c)
+              : kind === "moving" ? movingScene(c)
               : nocturneScene(c);
   const skyStops = kind === "highsun"
     ? `<stop offset="0" stop-color="#D8E4EA"/><stop offset="0.5" stop-color="#ECE0C6"/><stop offset="1" stop-color="${surface}"/>`

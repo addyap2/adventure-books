@@ -521,5 +521,56 @@
       "bad": "/illustrations/the-interview-commute.svg"
     },
     "alt": "A steaming cup, a phone and interview notes on a warm café table, with rain and cool office towers beyond the window."
+  },
+  "moving-day": {
+    "cover": "/illustrations/moving-day-newplace.svg",
+    "focal": "center",
+    "social": "/og-moving-day.png",
+    "scenes": {
+      "clock": "/illustrations/moving-day-empty.svg",
+      "crate": "/illustrations/moving-day-empty.svg",
+      "phone": "/illustrations/moving-day-empty.svg",
+      "van": "/illustrations/moving-day-van.svg",
+      "coin": "/illustrations/moving-day-van.svg",
+      "rain": "/illustrations/moving-day-van.svg",
+      "sign": "/illustrations/moving-day-van.svg",
+      "keys": "/illustrations/moving-day-stairwell.svg",
+      "door": "/illustrations/moving-day-stairwell.svg",
+      "hand": "/illustrations/moving-day-stairwell.svg",
+      "companions": "/illustrations/moving-day-stairwell.svg",
+      "window": "/illustrations/moving-day-stairwell.svg",
+      "photo": "/illustrations/moving-day-stairwell.svg",
+      "lamp": "/illustrations/moving-day-newplace.svg",
+      "bed": "/illustrations/moving-day-newplace.svg",
+      "house": "/illustrations/moving-day-newplace.svg",
+      "cup": "/illustrations/moving-day-newplace.svg",
+      "blanket": "/illustrations/moving-day-newplace.svg"
+    },
+    "sceneTitles": {
+      "clock": "The light going",
+      "crate": "Boxes to shift",
+      "phone": "A voice on the line",
+      "van": "The van at the kerb",
+      "coin": "Bray's offer",
+      "rain": "The wet pavement",
+      "sign": "Old Tom's warning",
+      "keys": "The stiff new key",
+      "door": "At the doorway",
+      "hand": "A good turn",
+      "companions": "The block pitches in",
+      "window": "A face you half know",
+      "photo": "After all these years",
+      "lamp": "A little light",
+      "bed": "Setting up home",
+      "house": "The new place",
+      "cup": "Home, and a cup of tea",
+      "blanket": "Settling her in"
+    },
+    "endings": {
+      "good": "/illustrations/moving-day-newplace.svg",
+      "neutral": "/illustrations/moving-day-stairwell.svg",
+      "bad": "/illustrations/moving-day-empty.svg"
+    },
+    "alt": "A small removal van at the kerb at dusk, its back open and boxes on the wet pavement, with a warm-lit doorway and a figure carrying a box toward it."
   }
 }

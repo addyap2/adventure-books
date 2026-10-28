@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none" role="img" aria-labelledby="t d">
+  <title id="t">The new place</title>
+  <desc id="d">The new ground-floor flat filling with warm lamplight at dusk: a box half-unpacked, a chair by the window with a cool evening sky beyond, and a lamp making the bare room a home.</desc>
+  <defs>
+    <linearGradient id="nwall" x2="0" y2="1"><stop stop-color="#201A14"/><stop offset="1" stop-color="#14110D"/></linearGradient>
+    <linearGradient id="nwin" x2="0" y2="1"><stop stop-color="#88A0B8" stop-opacity=".5"/><stop offset="1" stop-color="#322820" stop-opacity=".2"/></linearGradient>
+    <radialGradient id="lamp" cx="30%" cy="60%" r="55%"><stop offset="0" stop-color="#E9A05F" stop-opacity=".6"/><stop offset="1" stop-color="#E9A05F" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#nwall)"/>
+  <rect x="0" y="760" width="800" height="240" fill="#14110D"/>
+  <line x1="0" y1="760" x2="800" y2="760" stroke="#322820" stroke-width="3"/>
+  <!-- window with dusk sky -->
+  <rect x="440" y="140" width="300" height="340" rx="4" fill="url(#nwin)" stroke="#322820" stroke-width="6"/>
+  <line x1="590" y1="140" x2="590" y2="480" stroke="#322820" stroke-width="5"/>
+  <line x1="440" y1="310" x2="740" y2="310" stroke="#322820" stroke-width="5"/>
+  <g fill="#F2ECE2" opacity=".4"><circle cx="500" cy="210" r="2.4"/><circle cx="660" cy="190" r="2"/><circle cx="690" cy="270" r="2.2"/></g>
+  <!-- warm lamplight -->
+  <ellipse cx="240" cy="560" rx="300" ry="340" fill="url(#lamp)"/>
+  <!-- lamp -->
+  <g stroke="#CE7A4A" stroke-width="4" fill="#201A14"><path d="M190 420 h100 l-18 70 h-64z" fill="#E9A05F" fill-opacity=".55"/><line x1="240" y1="490" x2="240" y2="690"/><path d="M200 690 h80"/></g>
+  <!-- chair by the window -->
+  <g stroke="#9C9286" stroke-width="5" fill="#201A14">
+    <path d="M470 560 h150 v140 h-150z"/><path d="M470 560 v-120 h40 v120" fill="none"/>
+    <line x1="480" y1="700" x2="480" y2="760"/><line x1="610" y1="700" x2="610" y2="760"/>
+  </g>
+  <!-- half-unpacked box -->
+  <g stroke="#E9A05F" stroke-width="4" fill="#201A14">
+    <rect x="150" y="610" width="150" height="120"/>
+    <path d="M150 610 l30 -34 h90 l30 34" fill="none"/>
+    <line x1="195" y1="576" x2="255" y2="576"/>
+  </g>
+</svg>
