@@ -24,7 +24,7 @@ const PREFIX = "/books";
 const SITE = "https://www.antonyaddy.com";
 const OUT = join(ROOT, "dist");
 const DIST = join(OUT, PREFIX.slice(1));
-const ROOT_PATHS = /(["'`(])\/(?=(?:fonts\/|read\.html|read\/|b\/|cover-|og-|manifest\.json|scenes\/|illustrations\/|images\/|dict\/|gist\/|visual-polish\.css|reference-reader\.css|favicon\.svg))/g;
+const ROOT_PATHS = /(["'`(])\/(?=(?:fonts\/|read\.html|read\/|b\/|cover-|og-|manifest\.json|scenes\/|illustrations\/|images\/|dict\/|gist\/|visual-polish\.css|reference-reader\.css|book-pages\.css|favicon\.svg))/g;
 const mount = (text) => text
   .replace('<base href="/">', `<base href="${PREFIX}/">`)
   .replace(/https:\/\/books\.antonyaddy\.com\/(?=["'#])/g, `${SITE}${PREFIX}`)
@@ -69,6 +69,7 @@ await cp(join(ROOT, "web", "favicon.svg"), join(DIST, "favicon.svg"));
 await cp(join(ROOT, "web", "fonts"), join(DIST, "fonts"), { recursive: true });
 await cp(join(ROOT, "web", "visual-polish.css"), join(DIST, "visual-polish.css"));
 await cp(join(ROOT, "web", "reference-reader.css"), join(DIST, "reference-reader.css"));
+await cp(join(ROOT, "web", "book-pages.css"), join(DIST, "book-pages.css"));
 await cp(join(ROOT, "web", "cover-station.svg"), join(DIST, "cover-station.svg"));
 await cp(join(ROOT, "web", "scenes"), join(DIST, "scenes"), { recursive: true });
 await cp(join(ROOT, "web", "illustrations"), join(DIST, "illustrations"), { recursive: true });

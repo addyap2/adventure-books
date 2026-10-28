@@ -7,6 +7,7 @@
   "scripts": {
     "build": "node scripts/check-contrast.mjs && node scripts/build-site.mjs",
     "validate": "python3 scripts/build_book.py --series content/ --lexicon content/lexicon.json && node scripts/check-contrast.mjs",
+    "test:reader": "node tests/book-reader.mjs",
     "dev": "npm run build && npx --yes serve dist",
     "build:illustrations": "node scripts/build-illustrations.mjs",
     "build:social": "node scripts/build-collection-social.mjs"

@@ -26,6 +26,15 @@ dist/                 generated — do not edit
 `content/` is the single source of truth. Prose is generated from it, so the paragraph a
 reader sees can never disagree with the graph the app loads.
 
+The reader presents each story section as a numbered book page. A choice turns to its
+destination section; Previous page restores the earlier section and its story flags.
+The paper and night themes, text size, reading level, word help, and last position are
+remembered on the device. The link/QR handoff also carries the latest part of the path.
+After `npm run build`, serve `dist/` at port 8874 (for example,
+`python3 -m http.server 8874 --directory dist`) and run `npm run test:reader`.
+The browser check covers page turns, back navigation, saved story flags, resuming,
+and text controls in Chromium and WebKit.
+
 ## Working on it
 
 ```bash
