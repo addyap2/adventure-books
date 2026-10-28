@@ -1270,18 +1270,25 @@ function bookPages(article,scene){
   if(again) right.append(again);if(cover) right.append(cover);if(folio) right.append(folio);
   page.replaceChildren(left,right);
 }
-function turnBookPage(article,oldRight,direction,epoch){
-  if(!oldRight||matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+function turnBookPage(article,oldPage,direction,epoch){
+  if(!oldPage||matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+  const mobile=matchMedia("(max-width:760px)").matches;
   const leaf=document.createElement("div"),front=document.createElement("div"),back=document.createElement("div");
   leaf.className="book-turn-leaf";front.className="book-turn-front";back.className="book-turn-back";
   leaf.inert=true;leaf.setAttribute("aria-hidden","true");
-  const source=direction<0?article.querySelector(".book-page-right"):oldRight;
-  front.append(...[...source.childNodes].map(n=>n.cloneNode(true)));
+  const source=direction<0?article.querySelector(mobile?".reading-page":".book-page-right").cloneNode(true):oldPage;
+  if(mobile){
+    front.classList.add("whole-page");front.append(source);
+  }else front.append(...[...source.childNodes].map(n=>n.cloneNode(true)));
   leaf.append(front,back);article.append(leaf);
+  if(mobile&&direction>0) source.scrollTop=oldPage._scrollTop||0;
   pageTurning=true;
   const from=direction<0?-180:0,to=direction<0?0:-180;
-  const animation=leaf.animate([{transform:`rotateY(${from}deg)`},{transform:`rotateY(${to}deg)`}],
-    {duration:650,easing:"cubic-bezier(.48,.08,.34,.95)",fill:"forwards"});
+  const animation=leaf.animate([
+    {transform:`rotateY(${from}deg)`,offset:0},
+    {transform:`rotateY(${(from+to)/2}deg)`,offset:.52},
+    {transform:`rotateY(${to}deg)`,offset:1}],
+    {duration:900,easing:"cubic-bezier(.42,.08,.26,.98)",fill:"forwards"});
   animation.finished.catch(()=>{}).then(()=>{leaf.remove();if(renderEpoch===epoch)pageTurning=false;});
 }
 function render(moveFocus=true,turn=false,turnDirection=1){
@@ -1313,7 +1320,8 @@ function render(moveFocus=true,turn=false,turnDirection=1){
   }
   inner=inner.replace(/<\/div>$/,`<footer class="page-folio"><button class="page-back" id="bookBack" ${trail.length?"":"disabled"} aria-label="Turn back to the previous page">← Previous page</button><span>${BOOK.title} <b aria-hidden="true">·</b> § ${n.id}</span></footer></div>`);
   const old=$("main").querySelector(".moment-card");
-  const oldRight=turn&&readingView==="book"?old?.querySelector(".book-page-right")?.cloneNode(true):null;
+  const oldBookPage=turn&&readingView==="book"?old?.querySelector(matchMedia("(max-width:760px)").matches?".reading-page":".book-page-right")?.cloneNode(true):null;
+  if(oldBookPage&&matchMedia("(max-width:760px)").matches) oldBookPage._scrollTop=old.querySelector(".reading-page").scrollTop;
   const epoch=renderEpoch;
   const paint=()=>{
     $("main").innerHTML=`<div class="reader-heading"><span class="eyebrow">Your adventure · Episode ${pad(BOOK.episode)}</span><button class="level-shortcut" id="levelShortcut" aria-label="Change reading level: ${level}">${level}<span> · ${levelDescriptions[level]||level}</span></button></div>
@@ -1324,7 +1332,7 @@ function render(moveFocus=true,turn=false,turnDirection=1){
     const article=$("main").querySelector(".moment-card");
     if(readingView==="book") bookPages(article,scene);
     wire(n,moveFocus); pageTurning=false;
-    if(readingView==="book"&&turn) turnBookPage(article,oldRight,turnDirection,epoch);
+    if(readingView==="book"&&turn) turnBookPage(article,oldBookPage,turnDirection,epoch);
   };
   if(old&&turn&&readingView!=="book"&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
     pageTurning=true; old.classList.add(turn?"page-turning":"leaving");old.inert=true;
