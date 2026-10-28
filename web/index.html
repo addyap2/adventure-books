@@ -1136,8 +1136,8 @@ function buildLevelSeg(){
   });
 }
 
-let introMode=false, renderTimer;
-const cancelRender=()=>{clearTimeout(renderTimer); renderTimer=null; pageTurning=false;};
+let introMode=false, renderTimer, renderEpoch=0;
+const cancelRender=()=>{clearTimeout(renderTimer); renderTimer=null; pageTurning=false; renderEpoch++;};
 // deterministic 0..n from a string, so a paragraph's placeholder looks the same every visit
 const hash=s=>{let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return h;};
 function artHTML(id,tag,cover,endKind){
@@ -1254,7 +1254,37 @@ function meaningHTML(){
     <div class="mtext" id="mtext" role="region" aria-label="Meaning in your language" tabindex="-1" hidden${dir}>${g}</div></div>`;
 }
 
-function render(moveFocus=true,turn=false){
+function bookPages(article,scene){
+  const page=article.querySelector(".reading-page");
+  const left=document.createElement("div"),right=document.createElement("div");
+  left.className="book-page-left";right.className="book-page-right";
+  left.append(page.querySelector(".reading-kicker"),page.querySelector(".moment-heading"),page.querySelector(".para"));
+  const meaning=page.querySelector(".meaning");if(meaning) left.append(meaning);
+  const illustration=document.createElement("img");
+  illustration.className="book-illustration";illustration.src=scene.source;
+  illustration.alt="";illustration.loading="lazy";
+  left.append(illustration);
+  const decisions=page.querySelector(".decision,.ending-collection");
+  if(decisions) right.append(decisions);
+  const again=page.querySelector(".again"),cover=page.querySelector(".cover-link"),folio=page.querySelector(".page-folio");
+  if(again) right.append(again);if(cover) right.append(cover);if(folio) right.append(folio);
+  page.replaceChildren(left,right);
+}
+function turnBookPage(article,oldRight,direction,epoch){
+  if(!oldRight||matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+  const leaf=document.createElement("div"),front=document.createElement("div"),back=document.createElement("div");
+  leaf.className="book-turn-leaf";front.className="book-turn-front";back.className="book-turn-back";
+  leaf.inert=true;leaf.setAttribute("aria-hidden","true");
+  const source=direction<0?article.querySelector(".book-page-right"):oldRight;
+  front.append(...[...source.childNodes].map(n=>n.cloneNode(true)));
+  leaf.append(front,back);article.append(leaf);
+  pageTurning=true;
+  const from=direction<0?-180:0,to=direction<0?0:-180;
+  const animation=leaf.animate([{transform:`rotateY(${from}deg)`},{transform:`rotateY(${to}deg)`}],
+    {duration:650,easing:"cubic-bezier(.48,.08,.34,.95)",fill:"forwards"});
+  animation.finished.catch(()=>{}).then(()=>{leaf.remove();if(renderEpoch===epoch)pageTurning=false;});
+}
+function render(moveFocus=true,turn=false,turnDirection=1){
   cancelRender(); hideGloss();
   $("viewToggle").hidden=false;
   $("main").classList.remove("intro");
@@ -1282,16 +1312,21 @@ function render(moveFocus=true,turn=false){
       ${meaningHTML()}</div>`;
   }
   inner=inner.replace(/<\/div>$/,`<footer class="page-folio"><button class="page-back" id="bookBack" ${trail.length?"":"disabled"} aria-label="Turn back to the previous page">← Previous page</button><span>${BOOK.title} <b aria-hidden="true">·</b> § ${n.id}</span></footer></div>`);
+  const old=$("main").querySelector(".moment-card");
+  const oldRight=turn&&readingView==="book"?old?.querySelector(".book-page-right")?.cloneNode(true):null;
+  const epoch=renderEpoch;
   const paint=()=>{
     $("main").innerHTML=`<div class="reader-heading"><span class="eyebrow">Your adventure · Episode ${pad(BOOK.episode)}</span><button class="level-shortcut" id="levelShortcut" aria-label="Change reading level: ${level}">${level}<span> · ${levelDescriptions[level]||level}</span></button></div>
       <article class="card moment-card${n.ending?' is-end':''}${turn?' page-arriving':''}" data-node="${n.id}" aria-labelledby="sectionTitle">
       <figure class="moment-visual"><div class="art"><img src="${scene.source}" alt="" loading="eager"></div><div class="scene-label">${n.ending?'The end':'An adventure in English'}</div>
       <figcaption class="scene-caption"><strong>${BOOK.title}</strong><span>${n.ending?'One ending. More possibilities.':'A story shaped by your choices.'}</span></figcaption></figure>${inner}</article>
       <p class="reader-footer">${bookIcon}Tap underlined words for help. Choose your own way.</p>`;
+    const article=$("main").querySelector(".moment-card");
+    if(readingView==="book") bookPages(article,scene);
     wire(n,moveFocus); pageTurning=false;
+    if(readingView==="book"&&turn) turnBookPage(article,oldRight,turnDirection,epoch);
   };
-  const old=$("main").querySelector(".moment-card");
-  if(old&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+  if(old&&turn&&readingView!=="book"&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
     pageTurning=true; old.classList.add(turn?"page-turning":"leaving");old.inert=true;
     renderTimer=setTimeout(paint,turn?330:180);
   }
@@ -1304,7 +1339,7 @@ function wire(n,moveFocus){
   const backPage=$("bookBack"); if(backPage) backPage.onclick=()=>{
     if(pageTurning||!trail.length) return;
     const previous=trail.pop();node=previous.n;flags=new Set(previous.f);hideGloss();
-    window.scrollTo({top:0,behavior:"smooth"});render(true,true);
+    window.scrollTo({top:0,behavior:"smooth"});render(true,true,-1);
   };
   if($("backCover")) $("backCover").onclick=()=>{renderIntro();window.scrollTo({top:0});$("begin").focus();};
   if(moveFocus&&!$("sheet").classList.contains("on")) $("sectionTitle")?.focus({preventScroll:true});
