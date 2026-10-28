@@ -916,6 +916,7 @@ function applyTextSize(value){
   document.documentElement.style.setProperty("--reading-scale",String(size/100));
   $("textSizeValue").value=size+"%";
   $("textSmaller").disabled=size<=85; $("textLarger").disabled=size>=125;
+  requestAnimationFrame(updateBookFades);
   return size;
 }
 function changeTextSize(delta){
@@ -1256,11 +1257,17 @@ function meaningHTML(){
 
 function updateBookFades(){
   if(readingView!=="book") return;
-  document.querySelectorAll(".book-page-left,.book-page-right").forEach(col=>{
-    const can=col.scrollHeight>col.clientHeight+2;
-    col.classList.toggle("can-scroll",can);
-    col.classList.toggle("at-end",!can||col.scrollTop+col.clientHeight>=col.scrollHeight-2);
-  });
+  const article=document.querySelector(".moment-card");
+  if(!article) return;
+  const mobile=matchMedia("(max-width:760px)").matches;
+  for(const [side,selector] of [["left",".book-page-left"],["right",".book-page-right"],["mobile",".reading-page"]]){
+    const cue=article.querySelector(`.book-scroll-cue-${side}`);
+    if(!cue) continue;
+    const col=article.querySelector(selector);
+    const active=side==="mobile"?mobile:!mobile;
+    cue.classList.toggle("is-visible",active&&col.scrollHeight>col.clientHeight+2&&
+      col.scrollTop+col.clientHeight<col.scrollHeight-2);
+  }
 }
 addEventListener("resize",updateBookFades);
 function bookPages(article,scene){
@@ -1278,9 +1285,10 @@ function bookPages(article,scene){
   const again=page.querySelector(".again"),cover=page.querySelector(".cover-link"),folio=page.querySelector(".page-folio");
   if(again) right.append(again);if(cover) right.append(cover);if(folio) right.append(folio);
   page.replaceChildren(left,right);
-  [left,right].forEach(col=>col.addEventListener("scroll",()=>{
-    col.classList.toggle("at-end",col.scrollTop+col.clientHeight>=col.scrollHeight-2);
-  },{passive:true}));
+  article.insertAdjacentHTML("beforeend",["left","right","mobile"].map(side=>
+    `<div class="book-scroll-cue book-scroll-cue-${side}" aria-hidden="true"></div>`).join(""));
+  [left,right,page].forEach(col=>col.addEventListener("scroll",()=>requestAnimationFrame(updateBookFades),{passive:true}));
+  illustration.addEventListener("load",updateBookFades,{once:true});
   requestAnimationFrame(updateBookFades);
   // the serif webfont can reflow the page taller after the first measure, so re-check once it is ready
   document.fonts?.ready.then(updateBookFades);
@@ -1379,7 +1387,7 @@ function wire(n,moveFocus){
     s.forEach(f=>flags.add(f)); node=c.goto; hideGloss(); window.scrollTo({top:0,behavior:"smooth"}); render(true,true);
   });
   const again=$("again"); if(again) again.onclick=()=>{node=BOOK.start;flags=new Set();trail=[];hideGloss();window.scrollTo({top:0});render(true,true);};
-  const mb=$("meaningBtn"); if(mb) mb.onclick=()=>{ const mt=$("mtext"); mt.hidden=false; mb.setAttribute("aria-expanded","true"); mb.hidden=true; mt.focus(); };
+  const mb=$("meaningBtn"); if(mb) mb.onclick=()=>{ const mt=$("mtext"); mt.hidden=false; mb.setAttribute("aria-expanded","true"); mb.hidden=true; mt.focus(); requestAnimationFrame(updateBookFades); };
 }
 
 function setProgress(frac){ $("progress").style.width=Math.round(Math.min(1,frac)*100)+"%"; }
