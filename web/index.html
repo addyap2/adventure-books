@@ -446,6 +446,7 @@
 <link rel="stylesheet" href="/visual-polish.css">
 <link rel="stylesheet" href="/reference-reader.css">
 <link rel="stylesheet" href="/book-pages.css">
+<link rel="stylesheet" href="/book-view.css">
 <style>
 /* Antony Addy bar: identical in every app served under www.antonyaddy.com.
    Links visitors back to the main site; colours match its brand. */
@@ -485,6 +486,7 @@
 <div class="bar">
   <button class="iconbtn" id="back" hidden aria-label="Back to the library">←</button>
   <span class="brand"><span class="dot"></span><span id="brand">English Reading Adventures</span></span>
+  <button class="iconbtn view-toggle" id="viewToggle" type="button" hidden aria-label="Switch to book view" title="Switch to book view">▤</button>
   <button class="iconbtn" id="theme" aria-label="Switch to light theme">☀</button>
   <button class="iconbtn" id="cog" aria-label="Settings">Aa</button>
   <div class="progress" id="progress"></div>
@@ -499,6 +501,7 @@
   <div class="sheet-head"><h2 id="settingsTitle">Make it yours</h2><button class="iconbtn" id="closeSheet" aria-label="Close settings">×</button></div>
   <div class="grab"></div>
   <div class="row"><span>Reading level</span><span class="seg" id="segLevel"></span></div>
+  <div class="row"><span>Reading view</span><span class="seg" id="segView"><button type="button" data-reading-view="story">Story</button><button type="button" data-reading-view="book">Book</button></span></div>
   <div class="row"><span>Text size</span><span class="text-size-control"><button class="chipbtn" id="textSmaller" aria-label="Make story text smaller">A−</button><output id="textSizeValue" aria-live="polite">100%</output><button class="chipbtn" id="textLarger" aria-label="Make story text larger">A+</button></span></div>
   <div class="row"><span>Word help</span>
     <select class="sel" id="lang">
@@ -833,11 +836,28 @@ let MANIFEST=null, BOOK=null, LEX={}, BASELEX={}, DICT={}, dictLang=null, GIST={
 let flags=new Set(), seen=new Set(), maxDepth=0, depth={}, haveImg=new Set(), bookArt=null;
 let trail=[], pageTurning=false;
 let view="home", curKey=null, curFile=null;   // "home" (the library) or "book" (reading)
+let readingView="story";
 
 const prefKey="ab:prefs";
 const seenKey=()=>`ab:seen:${BOOK.series}:${BOOK.episode}`;
 const loadPrefs=()=>{try{return JSON.parse(localStorage.getItem(prefKey)||"{}")}catch{return{}}};
 const savePrefs=p=>{try{localStorage.setItem(prefKey,JSON.stringify(p))}catch{}};
+function applyReadingView(value, refresh=false){
+  readingView=value==="book"?"book":"story";
+  document.documentElement.dataset.readingView=readingView;
+  const toggle=$("viewToggle");
+  const label=readingView==="book"?"Switch to story view":"Switch to book view";
+  toggle.textContent=readingView==="book"?"▦":"▤";
+  toggle.setAttribute("aria-label",label);toggle.title=label;
+  $("segView").querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.readingView===readingView)));
+  if(refresh&&view==="book"&&!introMode&&node!=null) render(false);
+}
+function chooseReadingView(value){
+  applyReadingView(value,true);
+  savePrefs({...loadPrefs(),readingView});
+}
+$("viewToggle").onclick=()=>chooseReadingView(readingView==="book"?"story":"book");
+$("segView").querySelectorAll("button").forEach(b=>b.onclick=()=>chooseReadingView(b.dataset.readingView));
 const loadSeen=()=>{try{seen=new Set(JSON.parse(localStorage.getItem(seenKey())||"[]"))}catch{seen=new Set()}};
 const saveSeen=()=>{try{localStorage.setItem(seenKey(),JSON.stringify([...seen]))}catch{}};
 // remember where the reader got to in each book — the passage AND the flags collected —
@@ -910,6 +930,7 @@ $("theme").onclick=()=>{
 };
 
 async function boot(){
+  applyReadingView(loadPrefs().readingView);
   applyTheme(loadPrefs().theme==="dark" ? "dark" : "light");
   applyTextSize(loadPrefs().textSize);
   document.documentElement.classList.toggle("fine", finePointer());
@@ -972,7 +993,7 @@ function renderHome(){
   view="home"; introMode=false; node=null; curKey=null; trail=[]; hideGloss();
   setReaderMeta(null);
   $("main").className="home";
-  $("back").hidden=true; $("cog").hidden=true;
+  $("back").hidden=true; $("cog").hidden=true; $("viewToggle").hidden=true;
   applyIdentity(null);   // the in-app library uses the neutral English Reading Adventures nocturne
   $("brand").textContent="English Reading Adventures"; setProgress(0);
   const p=loadPrefs(), lvl=p.level||"B1", vw=p.homeView||"all";
@@ -1089,6 +1110,7 @@ async function openEpisode(file,preferLevel,intro,resume){
   level=BOOK.levels.includes(preferLevel)?preferLevel:BOOK.levels[0];
   curKey=`${BOOK.series}:${BOOK.episode}`; curFile=file;
   $("brand").textContent=BOOK.title; $("back").hidden=false; $("cog").hidden=false;
+  $("viewToggle").hidden=Boolean(intro&&!resume);
   buildLevelSeg();
   // compute depth of each node from start for the progress bar
   depth={}; const q=[[BOOK.start,0]]; depth[BOOK.start]=0; maxDepth=0;
@@ -1164,6 +1186,7 @@ const arrowIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stro
 const bookIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 5c4-1 6-1 9 1 3-2 5-2 9-1v14c-4-1-6-1-9 1-3-2-5-2-9-1zM12 6v14"/></svg>';
 function renderIntro(){
   cancelRender(); hideGloss();
+  $("viewToggle").hidden=true;
   introMode=true; $("main").classList.add("intro");
   const endings=BOOK.nodes.filter(n=>n.ending).length;
   const cover=bookArt?.cover||(BOOK.series==="new-city"?"/cover-station.svg":"/cover-"+encodeURIComponent(BOOK.slug)+".png");
@@ -1233,6 +1256,7 @@ function meaningHTML(){
 
 function render(moveFocus=true,turn=false){
   cancelRender(); hideGloss();
+  $("viewToggle").hidden=false;
   $("main").classList.remove("intro");
   const n=byId(node),scene=sceneFor(n);
   if(curKey){n.ending?clearProgress(curKey):saveProgress(curKey,node,flags);}
