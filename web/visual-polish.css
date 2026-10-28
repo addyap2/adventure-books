@@ -181,6 +181,26 @@ body[data-page="book"] .beat .textlink {color:#6b6560;}
 body[data-page="book"] .beat a:focus-visible,body[data-page="book"] .close a:focus-visible {outline-color:#2f5d50;}
 body[data-page="book"] .beat .ep .tag,body[data-page="book"] .footline,body[data-page="book"] .footline b {color:#6b6560;}
 
+/* Keep the first reading action in view on phones; language choices remain one tap away. */
+body[data-page] .langpick .langpick-options{display:contents}
+body[data-page] .langpick button.langpick-toggle{display:none}
+@media(max-width:700px){
+ body[data-page="book"] .hero-copy{padding-top:132px}
+ body[data-page="book"] .hero-copy .langpick{order:1}
+ body[data-page] .langpick{margin-block:8px 10px;padding:8px 14px}
+ body[data-page] .langpick button.langpick-toggle{
+   display:flex;align-items:center;justify-content:space-between;gap:12px;
+   flex:none;width:100%;min-height:44px;padding:0;border:0;background:transparent;
+   color:#2f5d50;text-align:left;font:600 14px/1.35 var(--grot)
+ }
+ body[data-page] .langpick button.langpick-toggle:hover{background:transparent;color:#244a3f}
+ body[data-page] .langpick .langpick-toggle span:last-child{font-size:22px;line-height:1;transition:transform .2s}
+ body[data-page] .langpick.open .langpick-toggle span:last-child{transform:rotate(180deg)}
+ body[data-page] .langpick:not(.open) .langpick-options{display:none}
+ body[data-page] .langpick.open .langpick-options{display:flex;flex-wrap:wrap;gap:8px;width:100%;padding:4px 0 8px}
+ body[data-page] .langpick-options button{flex:1 1 calc(33.333% - 8px)}
+}
+
 /* "Prefer to learn with a real trainer?" card at the end of the library and
    of each book page. Inherits the page's text colour so it works on both the
    light library and the darker book pages. */

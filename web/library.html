@@ -451,14 +451,24 @@
   var pick=document.createElement("div");
   pick.className="langpick"; pick.setAttribute("role","group");
   pick.setAttribute("aria-label","Show this page in your language");
+  var pickToggle=document.createElement("button"); pickToggle.type="button";
+  pickToggle.className="langpick-toggle"; pickToggle.setAttribute("aria-expanded","false");
+  pickToggle.setAttribute("aria-controls","pageLanguageOptions");
+  pickToggle.innerHTML='<span>Read this page in your language</span><span aria-hidden="true">⌄</span>';
+  pickToggle.addEventListener("click",function(){
+    var open=pick.classList.toggle("open"); pickToggle.setAttribute("aria-expanded",String(open));
+  });
+  pick.appendChild(pickToggle);
+  var pickOptions=document.createElement("div"); pickOptions.className="langpick-options"; pickOptions.id="pageLanguageOptions";
+  pick.appendChild(pickOptions);
   var lbl=document.createElement("span"); lbl.className="lbl";
   lbl.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.8 2.6 15.6 0 18.4M12 2.8c-2.6 2.8-2.6 15.6 0 18.4"/></svg><span>View this page in</span>';
-  pick.appendChild(lbl);
+  pickOptions.appendChild(lbl);
   var btns=S.map(function(s,idx){
     var b=document.createElement("button"); b.type="button"; b.textContent=s.c;
     b.setAttribute("dir", s.d); b.setAttribute("aria-pressed","false");
     b.addEventListener("click", function(){ choose(idx); });
-    pick.appendChild(b); return b;
+    pickOptions.appendChild(b); return b;
   });
   if(pill && pill.parentNode){ pill.remove(); document.querySelector(".hero-copy .byline").after(pick); }
 
@@ -469,7 +479,9 @@
   function apply(s,idx){ rtlEls.forEach(function(e){ e.setAttribute("dir", s.d); e.setAttribute("lang",codes[idx]); });
     ids.forEach(function(k){ el[k].textContent = s[k]; }); }
   function fade(on){ rtlEls.forEach(function(e){ e.classList.toggle("fading", on); }); }
-  function show(idx){ apply(S[idx],idx); setActive(idx); }
+  function show(idx){ apply(S[idx],idx); setActive(idx);
+    pickToggle.firstElementChild.textContent=idx===0?"Read this page in your language":"Page language: "+S[idx].c;
+    pick.classList.remove("open"); pickToggle.setAttribute("aria-expanded","false"); }
   function choose(idx){ if(reduce){show(idx);return;} fade(true);
     setTimeout(function(){ show(idx); fade(false); }, 180); }
   show(0);
