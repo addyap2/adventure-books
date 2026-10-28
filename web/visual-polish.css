@@ -144,6 +144,7 @@ body[data-page="book"] .close .libbtn {color:#2f5d50;border-color:#2f5d50;}
 body[data-page="book"] .close .textlink {color:#6b6560;}
 /* Keep the over-art book hero legible while its language control has a clear surface. */
 body[data-page] .langpick {display:flex;align-items:center;gap:8px;width:100%;max-width:600px;padding:16px;margin:20px 0 16px;border:1px solid #d1dcd6;border-radius:16px;background:#fffdf9;box-shadow:0 4px 16px #14231c08;}
+body[data-page] .langpick:empty {display:none;}
 body[data-page] .langpick .lbl,body[data-page] .langpick .lp-lbl {display:flex;align-items:center;gap:8px;width:100%;margin:0 0 4px;font:600 13px/1.4 var(--grot);letter-spacing:0;text-transform:none;color:#2f5d50;}
 body[data-page] .langpick button {min-height:44px;padding:10px 14px;border:1px solid #d9ded8;border-radius:8px;background:#fffdf9;color:#4c534e;font:500 14px/1.4 var(--grot);transition:background .15s,border-color .15s;}
 body[data-page] .langpick button:hover {background:#eaf1ee;border-color:#2f5d50;color:#2f5d50;}
