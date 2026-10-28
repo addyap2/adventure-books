@@ -512,7 +512,7 @@
   /* ---------- language selector: the introduction in any language, one tap away ----------
      The selected language stays put until the visitor chooses another. The headline is
      book-specific; the supporting line is shared. The rest of the page stays English. */
-  var pickBtns=[], HL={};
+  var pickBtns=[], HL={}, pickToggle;
   // the hero sub-line is the same across all books, so translate it once here.
   var SUB={
     en:"A story where you are the hero — and every choice turns you to a new page. Written for people learning English, at your level, with meaning in your language whenever you need it.",
@@ -535,15 +535,30 @@
     if(sr){ sr.textContent=HL[code]||HL.en||''; sr.setAttribute('lang',code); sr.setAttribute('dir',rtl?'rtl':'ltr'); }
     if(sub){ sub.style.opacity='1'; sub.textContent=SUB[code]||SUB.en; sub.setAttribute('lang',code); sub.setAttribute('dir', rtl?'rtl':'ltr'); }
     setActive(code);
+    var box=document.getElementById('bookLangPick');
+    if(box&&pickToggle){
+      var selected=pickBtns.find(function(b){return b.dataset.code===code;});
+      pickToggle.firstElementChild.textContent=code==='en'?'Read this introduction in your language':'Introduction language: '+(selected?selected.textContent:code);
+      box.classList.remove('open'); pickToggle.setAttribute('aria-expanded','false');
+    }
   }
   function buildLangPick(L){
     var box=document.getElementById('bookLangPick'); if(!box) return;
     var NAMES={en:'English',fr:'Français',es:'Español',pt:'Português',it:'Italiano',de:'Deutsch',ru:'Русский',ar:'العربية',zh:'中文'};
     var SEL=['en','fr','es','pt','it','de','ru','ar','zh'];
     box.innerHTML='';
+    pickToggle=document.createElement('button'); pickToggle.type='button';
+    pickToggle.className='langpick-toggle'; pickToggle.setAttribute('aria-expanded','false');
+    pickToggle.setAttribute('aria-controls','bookLanguageOptions');
+    pickToggle.innerHTML='<span>Read this introduction in your language</span><span aria-hidden="true">⌄</span>';
+    pickToggle.addEventListener('click',function(){
+      var open=box.classList.toggle('open'); pickToggle.setAttribute('aria-expanded',String(open));
+    });
+    box.appendChild(pickToggle);
+    var options=document.createElement('div'); options.className='langpick-options'; options.id='bookLanguageOptions'; box.appendChild(options);
     var lbl=document.createElement('span'); lbl.className='lp-lbl';
     lbl.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.8 2.6 15.6 0 18.4M12 2.8c-2.6 2.8-2.6 15.6 0 18.4"/></svg><span>View this introduction in</span>';
-    box.appendChild(lbl);
+    options.appendChild(lbl);
     pickBtns=[]; HL={en:(L.en||'')};
     SEL.forEach(function(code){
       var txt = code==='en' ? (L.en||'') : (L[code]||'');
@@ -553,7 +568,7 @@
       b.setAttribute('dir', code==='ar'?'rtl':'ltr'); b.setAttribute('aria-pressed','false');
       b.dataset.code=code;
       b.addEventListener('click', function(){ setLang(code); });
-      box.appendChild(b); pickBtns.push(b);
+      options.appendChild(b); pickBtns.push(b);
     });
     var lc=document.getElementById('langcode'); if(lc) lc.style.display='none';
     setActive('en');
