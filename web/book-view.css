@@ -77,6 +77,16 @@ html[data-reading-view="book"] body[data-page="reader"] .book-page-right::before
   color:#897455;font:500 10px/1 "Book Cinzel",Georgia,serif;letter-spacing:.17em;
 }
 html[data-reading-view="book"] body[data-page="reader"] .book-page-right::before{content:"THE STORY CONTINUES"}
+/* "more below" cue: a soft fade at the foot of a page that scrolls, hidden once it reaches the end */
+html[data-reading-view="book"] body[data-page="reader"] .book-page-left::after,
+html[data-reading-view="book"] body[data-page="reader"] .book-page-right::after{
+  content:"";flex:none;position:sticky;bottom:-42px;z-index:2;
+  display:block;height:62px;margin:-62px 0 0;pointer-events:none;
+  opacity:0;transition:opacity .25s ease;
+  background:linear-gradient(rgba(244,236,218,0),#f4ecda 80%);
+}
+html[data-reading-view="book"] body[data-page="reader"] .book-page-left.can-scroll:not(.at-end)::after,
+html[data-reading-view="book"] body[data-page="reader"] .book-page-right.can-scroll:not(.at-end)::after{opacity:1}
 html[data-reading-view="book"] body[data-page="reader"] .reading-kicker{
   text-align:center;color:#94723d;font:500 10px/1.4 "Book Cinzel",Georgia,serif;
   letter-spacing:.18em;text-transform:uppercase;

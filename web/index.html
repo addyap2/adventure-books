@@ -1254,6 +1254,15 @@ function meaningHTML(){
     <div class="mtext" id="mtext" role="region" aria-label="Meaning in your language" tabindex="-1" hidden${dir}>${g}</div></div>`;
 }
 
+function updateBookFades(){
+  if(readingView!=="book") return;
+  document.querySelectorAll(".book-page-left,.book-page-right").forEach(col=>{
+    const can=col.scrollHeight>col.clientHeight+2;
+    col.classList.toggle("can-scroll",can);
+    col.classList.toggle("at-end",!can||col.scrollTop+col.clientHeight>=col.scrollHeight-2);
+  });
+}
+addEventListener("resize",updateBookFades);
 function bookPages(article,scene){
   const page=article.querySelector(".reading-page");
   const left=document.createElement("div"),right=document.createElement("div");
@@ -1269,6 +1278,12 @@ function bookPages(article,scene){
   const again=page.querySelector(".again"),cover=page.querySelector(".cover-link"),folio=page.querySelector(".page-folio");
   if(again) right.append(again);if(cover) right.append(cover);if(folio) right.append(folio);
   page.replaceChildren(left,right);
+  [left,right].forEach(col=>col.addEventListener("scroll",()=>{
+    col.classList.toggle("at-end",col.scrollTop+col.clientHeight>=col.scrollHeight-2);
+  },{passive:true}));
+  requestAnimationFrame(updateBookFades);
+  // the serif webfont can reflow the page taller after the first measure, so re-check once it is ready
+  document.fonts?.ready.then(updateBookFades);
 }
 function turnBookPage(article,oldPage,direction,epoch){
   if(!oldPage||matchMedia("(prefers-reduced-motion:reduce)").matches) return;
