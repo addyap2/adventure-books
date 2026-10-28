@@ -842,8 +842,18 @@ const prefKey="ab:prefs";
 const seenKey=()=>`ab:seen:${BOOK.series}:${BOOK.episode}`;
 const loadPrefs=()=>{try{return JSON.parse(localStorage.getItem(prefKey)||"{}")}catch{return{}}};
 const savePrefs=p=>{try{localStorage.setItem(prefKey,JSON.stringify(p))}catch{}};
+// Book view's serif faces live only in book-view.css, so they would otherwise download
+// on first book render (a flash + reflow). Start them the moment book view is chosen.
+let bookFontsWarmed=false;
+function warmBookFonts(){
+  if(bookFontsWarmed||!document.fonts) return;
+  bookFontsWarmed=true;
+  ['500 1em "Book Cinzel"','1em "Book Garamond"','italic 1em "Book Garamond"']
+    .forEach(f=>{try{document.fonts.load(f);}catch{}});
+}
 function applyReadingView(value, refresh=false){
   readingView=value==="book"?"book":"story";
+  if(readingView==="book") warmBookFonts();
   document.documentElement.dataset.readingView=readingView;
   const toggle=$("viewToggle");
   const label=readingView==="book"?"Switch to story view":"Switch to book view";
@@ -1168,6 +1178,17 @@ const sceneTitles={station:"The night station",map:"Finding your way",taxi:"A ri
  notebook:"A new possibility",board:"Choosing a direction",companions:"Someone to trust",
  sign:"A sign to follow",bridge:"Across the river",envelopes:"A message waiting",phone:"A call for help",
  oars:"On the water",fence:"Another way through"};
+// Warm the scenes the reader is one tap away from, so turning the page shows art instantly.
+const scenePrefetched=new Set();
+function prefetchNextScenes(n){
+  if(!n||n.ending) return;
+  const vis=(n.choices||[]).filter(c=>{let r=c.requires||[];if(typeof r==="string")r=[r];return r.every(f=>flags.has(f));});
+  for(const c of vis){
+    const t=byId(c.goto); if(!t) continue;
+    const src=sceneFor(t).source;
+    if(src && !scenePrefetched.has(src)){ scenePrefetched.add(src); const im=new Image(); im.decoding="async"; im.src=src; }
+  }
+}
 function sceneFor(n){
   const motif=window.__ART?.[BOOK.series]?.[n.id];
   const images={station:"station",map:"street",taxi:"street",bus:"bus",kiosk:"cafe",
@@ -1356,6 +1377,7 @@ function render(moveFocus=true,turn=false,turnDirection=1){
     if(readingView==="book") bookPages(article,scene);
     wire(n,moveFocus); pageTurning=false;
     if(readingView==="book"&&turn) turnBookPage(article,oldBookPage,turnDirection,epoch);
+    (window.requestIdleCallback||requestAnimationFrame)(()=>prefetchNextScenes(n));
   };
   if(old&&turn&&readingView!=="book"&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
     pageTurning=true; old.classList.add(turn?"page-turning":"leaving");old.inert=true;
