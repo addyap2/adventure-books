@@ -4,6 +4,7 @@ import { readdir, readFile, writeFile, mkdir, cp, rm } from "node:fs/promises";
 import { join } from "node:path";
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
+import { optimize as optimizeSvg } from "svgo";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 
@@ -24,7 +25,7 @@ const PREFIX = "/books";
 const SITE = "https://www.antonyaddy.com";
 const OUT = join(ROOT, "dist");
 const DIST = join(OUT, PREFIX.slice(1));
-const ROOT_PATHS = /(["'`(])\/(?=(?:fonts\/|read\.html|read\/|b\/|cover-|og-|manifest\.json|scenes\/|illustrations\/|images\/|dict\/|gist\/|visual-polish\.css|reference-reader\.css|book-pages\.css|book-view\.css|favicon\.svg))/g;
+const ROOT_PATHS = /(["'`(])\/(?=(?:fonts\/|read\.html|read\/|b\/|cover-|og-|manifest\.json|app\.webmanifest|sw\.js|icon-|icon\.svg|scenes\/|illustrations\/|images\/|dict\/|gist\/|visual-polish\.css|reference-reader\.css|book-pages\.css|book-view\.css|favicon\.svg))/g;
 const mount = (text) => text
   .replace('<base href="/">', `<base href="${PREFIX}/">`)
   .replace(/https:\/\/books\.antonyaddy\.com\/(?=["'#])/g, `${SITE}${PREFIX}`)
@@ -66,6 +67,27 @@ await mkdir(DIST, { recursive: true });
 await mountFile(join(ROOT, "web", "library.html"), join(DIST, "index.html"));    // / — the English Reading Adventures library (cards from manifest)
 await mountFile(join(ROOT, "web", "index.html"), join(DIST, "read.html"));       // the reader app
 await cp(join(ROOT, "web", "favicon.svg"), join(DIST, "favicon.svg"));
+// PWA: offline service worker, installable manifest, and app icons.
+await cp(join(ROOT, "web", "sw.js"), join(DIST, "sw.js"));
+await cp(join(ROOT, "web", "icon.svg"), join(DIST, "icon.svg"));
+await cp(join(ROOT, "web", "icon-192.png"), join(DIST, "icon-192.png"));
+await cp(join(ROOT, "web", "icon-512.png"), join(DIST, "icon-512.png"));
+await writeFile(join(DIST, "app.webmanifest"), JSON.stringify({
+  name: "English Reading Adventures",
+  short_name: "Reading",
+  description: "Interactive stories for English learners — read, make choices, find your own ending.",
+  start_url: `${PREFIX}/read.html`,
+  scope: `${PREFIX}/`,
+  display: "standalone",
+  orientation: "portrait",
+  background_color: "#17130d",
+  theme_color: "#17130d",
+  icons: [
+    { src: `${PREFIX}/icon-192.png`, sizes: "192x192", type: "image/png", purpose: "any maskable" },
+    { src: `${PREFIX}/icon-512.png`, sizes: "512x512", type: "image/png", purpose: "any maskable" },
+    { src: `${PREFIX}/icon.svg`, sizes: "any", type: "image/svg+xml" },
+  ],
+}, null, 2));
 await cp(join(ROOT, "web", "fonts"), join(DIST, "fonts"), { recursive: true });
 await cp(join(ROOT, "web", "visual-polish.css"), join(DIST, "visual-polish.css"));
 await cp(join(ROOT, "web", "reference-reader.css"), join(DIST, "reference-reader.css"));
@@ -74,6 +96,18 @@ await cp(join(ROOT, "web", "book-view.css"), join(DIST, "book-view.css"));
 await cp(join(ROOT, "web", "cover-station.svg"), join(DIST, "cover-station.svg"));
 await cp(join(ROOT, "web", "scenes"), join(DIST, "scenes"), { recursive: true });
 await cp(join(ROOT, "web", "illustrations"), join(DIST, "illustrations"), { recursive: true });
+// Minify the delivered scene SVGs (source art in web/ is left untouched).
+{
+  const dir = join(DIST, "illustrations");
+  let before = 0, after = 0, n = 0;
+  for (const f of (await readdir(dir)).filter(f => f.endsWith(".svg"))) {
+    const src = await readFile(join(dir, f), "utf8");
+    const { data } = optimizeSvg(src, { multipass: true, plugins: ["preset-default"] });
+    before += src.length; after += data.length; n++;
+    await writeFile(join(dir, f), data);
+  }
+  console.log(`Minified ${n} scene SVGs: ${(before/1024|0)}K → ${(after/1024|0)}K`);
+}
 // Sharing cards and legacy covers are prebuilt and committed. The collection
 // cards are regenerated with npm run build:social, independently of deployment.
 for (const f of await readdir(join(ROOT, "web"))) {

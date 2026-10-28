@@ -28,7 +28,6 @@ html[data-reading-view="book"] body[data-page="reader"]:has(main.reading:not(.in
   width:40px;height:40px;border-radius:3px;border:1px solid rgba(201,164,92,.5);
   background:transparent;color:#e2c17e;
 }
-html[data-reading-view="book"] body[data-page="reader"]:has(main.reading:not(.intro)) #theme{display:none}
 html[data-reading-view="book"] body[data-page="reader"]:has(main.reading:not(.intro)) > .bar .progress{background:#c9a45c}
 
 html[data-reading-view="book"] body[data-page="reader"] main.reading:not(.intro){
@@ -222,4 +221,76 @@ html[data-reading-view="book"] body[data-page="reader"] .book-turn-back{
 }
 @media(prefers-reduced-motion:reduce){
   html[data-reading-view="book"] body[data-page="reader"] .book-turn-leaf{display:none}
+}
+
+/* ---- Night mode: when the reader theme is dark, the page itself is dark parchment.
+   The outer backdrop is already dark; these rules recolour the paper and its ink. ---- */
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .moment-card{
+  border-color:#3b3022;background:#241d14;color:#e7dcc5;
+  box-shadow:0 2px 0 #1f1910,0 5px 0 #18120a,0 8px 0 #110c05,0 24px 65px rgba(0,0,0,.6);
+}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .moment-card::after{
+  background:repeating-linear-gradient(180deg,#2f2719 0 1px,#161007 1px 2px);
+}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .reading-page,
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .reading-page.end{color:#e7dcc5}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .book-page-left{
+  border-right-color:#372c1d;
+  background:linear-gradient(90deg,#1e170e,#271f13 5%,#241d14 80%,#1a130b);
+  box-shadow:inset -13px 0 22px -18px #000;
+}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .book-page-right{
+  background:linear-gradient(90deg,#1a130b,#241d14 7%,#241d14 90%,#1e170e);
+  box-shadow:inset 13px 0 22px -18px #000;
+}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .book-page-left::before,
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .book-page-right::before{color:#9a845a}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .reading-kicker{color:#c09a5d}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .moment-heading{color:#ebd5a7}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .moment-heading::after{background:#c9a45c}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .para,
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .reading-page.end .para{color:#e7dcc5}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .para::first-letter{color:#d9b063}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .book-illustration{
+  opacity:.92;filter:none;mix-blend-mode:normal;
+}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .decision h3,
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .ending-collection h3{
+  color:#b49a66;border-bottom-color:#3b3022;
+}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .choices button{
+  border-color:#403424;background:rgba(233,208,160,.05);color:#e7dcc5;
+}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .choices button:hover,
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .choices button:focus-visible{
+  border-color:#c9a45c;background:rgba(233,208,160,.12);
+}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .choice-letter{background:#3a2f1f;color:#e2bd7c}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .choice-destination{color:#9a845c}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .choices button svg{color:#c9a45c}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .page-folio{color:#9a855f}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .page-back,
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .cover-link{color:#d6ab66}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .reading-page .gloss-word{border-color:#c9a45c}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .reading-page .gloss-word:hover{background:#3a2f1f}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .collection-note{color:#b3a079}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .stamps li{border-color:#4a3c28;color:#b09a6f}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .stamps li.got{background:#c9a45c;border-color:#c9a45c;color:#1c160f}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .again .start{background:#c9a45c;color:#1c160f}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .book-turn-front,
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .book-turn-back{
+  color:#e7dcc5;background:linear-gradient(90deg,#1a130b,#241d14 7%,#241d14 90%,#1e170e);
+}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .book-turn-back{
+  background:linear-gradient(90deg,#20190f,#241d14 92%,#19120a);
+}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .book-scroll-cue{
+  background:linear-gradient(transparent,#241d14 83%);
+}
+html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .book-scroll-cue::after{color:#d6ab66}
+@media(max-width:760px){
+  html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .reading-page,
+  html[data-reading-view="book"][data-theme="dark"] body[data-page="reader"] .reading-page.end{
+    background:linear-gradient(90deg,#1e170e,#241d14 5%,#241d14 91%,#1e170e);
+  }
 }

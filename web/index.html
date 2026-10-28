@@ -8,6 +8,9 @@
 <base href="/">
 <title>Read a story — English Reading Adventures</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/app.webmanifest">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<meta name="apple-mobile-web-app-title" content="Reading">
 <meta name="theme-color" content="#f6f3ee">
 <meta name="description" content="Choose-your-own-adventure stories for English learners, at three levels, with a glossary in eight languages.">
 <link rel="canonical" href="https://books.antonyaddy.com/read.html">
@@ -1513,6 +1516,11 @@ boot().catch(()=>{
   $("main").innerHTML=`<div class="card loading-state"><h1>The story couldn’t open</h1><p>Check your connection and try again.</p><button class="start" id="retryLoad">Try again</button></div>`;
   $("retryLoad").onclick=()=>location.reload();
 });
+
+// Offline support: cache the reader shell and whatever the reader loads, so a
+// started book keeps working without a connection. Relative to <base> → /books/sw.js.
+if("serviceWorker" in navigator)
+  addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
 </script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="English Reading Adventures">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="34%" r="80%">
+      <stop offset="0%" stop-color="#2b2419"/>
+      <stop offset="72%" stop-color="#17130d"/>
+    </radialGradient>
+    <linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f2ece2"/>
+      <stop offset="100%" stop-color="#e3d6b9"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="104" fill="url(#bg)"/>
+  <!-- warm doorway glow, echoing the series' "light in the dark" motif -->
+  <ellipse cx="256" cy="252" rx="150" ry="150" fill="#e9a05f" opacity="0.14"/>
+  <!-- open book -->
+  <g transform="translate(256 262)">
+    <path d="M0 -88 C-46 -118 -96 -120 -150 -104 L-150 92 C-96 76 -46 78 0 108 C46 78 96 76 150 92 L150 -104 C96 -120 46 -118 0 -88 Z"
+          fill="url(#page)" stroke="#322820" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M0 -88 L0 108" fill="none" stroke="#322820" stroke-width="7"/>
+    <g stroke="#ce7a4a" stroke-width="7" stroke-linecap="round" opacity="0.85">
+      <path d="M-118 -70 H-28 M-118 -40 H-28 M-118 -10 H-28 M-118 20 H-40"/>
+      <path d="M28 -70 H118 M28 -40 H118 M28 -10 H118 M40 20 H118"/>
+    </g>
+  </g>
+</svg>

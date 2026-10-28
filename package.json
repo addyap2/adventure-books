@@ -16,6 +16,8 @@
     "node": ">=20"
   },
   "devDependencies": {
-    "playwright": "^1.49.1"
+    "@resvg/resvg-js": "^2.6.2",
+    "playwright": "^1.49.1",
+    "svgo": "^4.1.0"
   }
 }
