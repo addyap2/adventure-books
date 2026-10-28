@@ -445,6 +445,7 @@
 </style>
 <link rel="stylesheet" href="/visual-polish.css">
 <link rel="stylesheet" href="/reference-reader.css">
+<link rel="stylesheet" href="/book-pages.css">
 <style>
 /* Antony Addy bar: identical in every app served under www.antonyaddy.com.
    Links visitors back to the main site; colours match its brand. */
@@ -498,6 +499,7 @@
   <div class="sheet-head"><h2 id="settingsTitle">Make it yours</h2><button class="iconbtn" id="closeSheet" aria-label="Close settings">×</button></div>
   <div class="grab"></div>
   <div class="row"><span>Reading level</span><span class="seg" id="segLevel"></span></div>
+  <div class="row"><span>Text size</span><span class="text-size-control"><button class="chipbtn" id="textSmaller" aria-label="Make story text smaller">A−</button><output id="textSizeValue" aria-live="polite">100%</output><button class="chipbtn" id="textLarger" aria-label="Make story text larger">A+</button></span></div>
   <div class="row"><span>Word help</span>
     <select class="sel" id="lang">
       <option value="">English only</option>
@@ -829,6 +831,7 @@ function setReaderMeta(book){
 }
 let MANIFEST=null, BOOK=null, LEX={}, BASELEX={}, DICT={}, dictLang=null, GIST={}, gistLang=null, level=null, node=null;
 let flags=new Set(), seen=new Set(), maxDepth=0, depth={}, haveImg=new Set(), bookArt=null;
+let trail=[], pageTurning=false;
 let view="home", curKey=null, curFile=null;   // "home" (the library) or "book" (reading)
 
 const prefKey="ab:prefs";
@@ -841,7 +844,7 @@ const saveSeen=()=>{try{localStorage.setItem(seenKey(),JSON.stringify([...seen])
 // so "Continue" restores the exact state. All in the browser (localStorage); no back end.
 const getProgress=()=>{try{return loadPrefs().progress||{}}catch{return{}}};
 const saveProgress=(k,nd,fl)=>{const p=loadPrefs();p.progress=p.progress||{};
-  p.progress[k]={n:nd,f:[...fl]};savePrefs(p);};
+  p.progress[k]={n:nd,f:[...fl],trail:trail.map(s=>({n:s.n,f:[...s.f]}))};savePrefs(p);};
 const clearProgress=k=>{const p=loadPrefs();if(p.progress){delete p.progress[k];savePrefs(p);}};
 
 const byId=id=>BOOK.nodes.find(n=>n.id===id);
@@ -888,6 +891,19 @@ function applyTheme(t){
   if(b){ b.textContent = light ? "☾" : "☀";
     b.setAttribute("aria-label", light ? "Switch to dark theme" : "Switch to light theme"); }
 }
+function applyTextSize(value){
+  const size=Math.max(85,Math.min(125,Number(value)||100));
+  document.documentElement.style.setProperty("--reading-scale",String(size/100));
+  $("textSizeValue").value=size+"%";
+  $("textSmaller").disabled=size<=85; $("textLarger").disabled=size>=125;
+  return size;
+}
+function changeTextSize(delta){
+  const size=applyTextSize((loadPrefs().textSize||100)+delta);
+  savePrefs({...loadPrefs(),textSize:size});
+}
+$("textSmaller").onclick=()=>changeTextSize(-10);
+$("textLarger").onclick=()=>changeTextSize(10);
 $("theme").onclick=()=>{
   const next = document.documentElement.dataset.theme==="light" ? "dark" : "light";
   savePrefs({...loadPrefs(), theme:next}); applyTheme(next);
@@ -895,6 +911,7 @@ $("theme").onclick=()=>{
 
 async function boot(){
   applyTheme(loadPrefs().theme==="dark" ? "dark" : "light");
+  applyTextSize(loadPrefs().textSize);
   document.documentElement.classList.toggle("fine", finePointer());
   MANIFEST=await (await fetch("manifest.json")).json();
   // shared series lexicon (a base every book inherits); a book may add/override its own
@@ -911,7 +928,7 @@ async function boot(){
     savePrefs({...loadPrefs(), lang:inc.lg??p.lang, level:inc.lv??p.level});
     if(inc.lg!=null){ $("lang").value=inc.lg; await loadDict(inc.lg); await loadGist(inc.lg); }
     history.replaceState(null,"",location.pathname+location.search);  // drop the #c= from the URL
-    await openEpisode(inc.f, inc.lv, false, {n:inc.n, f:inc.x||[]});
+    await openEpisode(inc.f, inc.lv, false, {n:inc.n, f:inc.x||[], trail:inc.t||[]});
     return;
   }
   // deep link from the landing site: ?book=episode-01.json opens that episode at its cover.
@@ -943,7 +960,7 @@ function parseHandoff(){
   }catch{ return null; }
 }
 function handoffURL(){
-  const state={f:curFile, n:node, x:[...flags], lv:level, lg:$("lang").value||""};
+  const state={f:curFile, n:node, x:[...flags], t:trail.slice(-12), lv:level, lg:$("lang").value||""};
   const b64=btoa(unescape(encodeURIComponent(JSON.stringify(state))))
     .replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
   return location.origin+location.pathname+"#c="+b64;
@@ -952,7 +969,7 @@ function handoffURL(){
 /* ---- the library home ---- */
 function renderHome(){
   cancelRender();
-  view="home"; introMode=false; node=null; curKey=null; hideGloss();
+  view="home"; introMode=false; node=null; curKey=null; trail=[]; hideGloss();
   setReaderMeta(null);
   $("main").className="home";
   $("back").hidden=true; $("cog").hidden=true;
@@ -1077,9 +1094,11 @@ async function openEpisode(file,preferLevel,intro,resume){
   depth={}; const q=[[BOOK.start,0]]; depth[BOOK.start]=0; maxDepth=0;
   while(q.length){const [id,d]=q.shift(); maxDepth=Math.max(maxDepth,d);
     for(const c of byId(id)?.choices||[]){ if(depth[c.goto]==null){depth[c.goto]=d+1; q.push([c.goto,d+1]);}}}
-  loadSeen(); flags=new Set();
+  loadSeen(); flags=new Set(); trail=[];
   savePrefs({...loadPrefs(),file,level});
-  if(resume){ introMode=false; node=resume.n; flags=new Set(resume.f||[]); render(); }
+  if(resume){ introMode=false; node=resume.n; flags=new Set(resume.f||[]);
+    trail=Array.isArray(resume.trail)?resume.trail.filter(s=>byId(s.n)).map(s=>({n:s.n,f:Array.isArray(s.f)?s.f:[]})):[];
+    render(); }
   else if(intro){ node=BOOK.start; renderIntro(); }
   else { node=BOOK.start; render(); }
   window.scrollTo({top:0});
@@ -1096,7 +1115,7 @@ function buildLevelSeg(){
 }
 
 let introMode=false, renderTimer;
-const cancelRender=()=>{clearTimeout(renderTimer); renderTimer=null;};
+const cancelRender=()=>{clearTimeout(renderTimer); renderTimer=null; pageTurning=false;};
 // deterministic 0..n from a string, so a paragraph's placeholder looks the same every visit
 const hash=s=>{let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return h;};
 function artHTML(id,tag,cover,endKind){
@@ -1168,7 +1187,7 @@ function renderIntro(){
     level=b.dataset.introLevel;savePrefs({...loadPrefs(),level});buildLevelSeg();
     $("main").querySelectorAll("[data-intro-level]").forEach(el=>el.setAttribute("aria-pressed",el.dataset.introLevel===level));
   });
-  $("begin").onclick=()=>{introMode=false;node=BOOK.start;flags=new Set();render();window.scrollTo({top:0})};
+  $("begin").onclick=()=>{introMode=false;node=BOOK.start;flags=new Set();trail=[];render();window.scrollTo({top:0})};
   setProgress(0);
 }
 
@@ -1195,11 +1214,11 @@ function resolveIn(word,map){
 // everyday-word dictionary for the selected language (quick translation, faint dotted).
 // A word is wrapped only if it has some gloss, so plain function words stay untouched.
 function markup(text){
-  return text.replace(/[A-Za-z]+(?:'[A-Za-z]+)?/g,m=>{
-    const feat=resolveIn(m,LEX);
-    if(feat) return `<button class="gloss-word hl" data-w="${m}" aria-label="Word help: ${m}">${m}</button>`;
-    if(resolveIn(m,DICT)) return `<button class="gloss-word" data-w="${m}" aria-label="Word help: ${m}">${m}</button>`;
-    return m;
+  return text.replace(/([A-Za-z]+(?:'[A-Za-z]+)?)([.,;:!?]?)/g,(_,word,punctuation)=>{
+    const feat=resolveIn(word,LEX), display=word+punctuation;
+    if(feat) return `<button class="gloss-word hl" data-w="${word}" aria-label="Word help: ${word}">${display}</button>`;
+    if(resolveIn(word,DICT)) return `<button class="gloss-word" data-w="${word}" aria-label="Word help: ${word}">${display}</button>`;
+    return display;
   });
 }
 
@@ -1212,7 +1231,7 @@ function meaningHTML(){
     <div class="mtext" id="mtext" role="region" aria-label="Meaning in your language" tabindex="-1" hidden${dir}>${g}</div></div>`;
 }
 
-function render(moveFocus=true){
+function render(moveFocus=true,turn=false){
   cancelRender(); hideGloss();
   $("main").classList.remove("intro");
   const n=byId(node),scene=sceneFor(n);
@@ -1235,25 +1254,34 @@ function render(moveFocus=true){
     const visible=(n.choices||[]).filter(c=>{const r=typeof c.requires==="string"?[c.requires]:(c.requires||[]);return r.every(f=>flags.has(f));});
     inner=`<div class="reading-page"><div class="reading-kicker">${n.id===BOOK.start?"Your adventure begins":"The story continues"}</div>
       <h2 class="moment-heading" id="sectionTitle" tabindex="-1">${scene.title}</h2><div class="para">${markup(at(n.text)||"")}</div>
-      <section class="decision" aria-labelledby="decisionLabel"><h3 id="decisionLabel">What will you do?</h3><div class="choices">${visible.map((c,i)=>`<button data-i="${i}"><span class="choice-letter" aria-hidden="true">${String.fromCharCode(65+i)}</span><span class="choice-text">${at(c.text)}</span>${arrowIcon}</button>`).join("")}</div></section>
+      <section class="decision" aria-labelledby="decisionLabel"><h3 id="decisionLabel">Choose a path to turn the page</h3><div class="choices">${visible.map((c,i)=>`<button data-i="${i}"><span class="choice-letter" aria-hidden="true">${String.fromCharCode(65+i)}</span><span class="choice-text">${at(c.text)}</span><span class="choice-destination" aria-hidden="true">§ ${c.goto}</span>${arrowIcon}</button>`).join("")}</div></section>
       ${meaningHTML()}</div>`;
   }
+  inner=inner.replace(/<\/div>$/,`<footer class="page-folio"><button class="page-back" id="bookBack" ${trail.length?"":"disabled"} aria-label="Turn back to the previous page">← Previous page</button><span>${BOOK.title} <b aria-hidden="true">·</b> § ${n.id}</span></footer></div>`);
   const paint=()=>{
     $("main").innerHTML=`<div class="reader-heading"><span class="eyebrow">Your adventure · Episode ${pad(BOOK.episode)}</span><button class="level-shortcut" id="levelShortcut" aria-label="Change reading level: ${level}">${level}<span> · ${levelDescriptions[level]||level}</span></button></div>
-      <article class="card moment-card${n.ending?' is-end':''}" data-node="${n.id}" aria-labelledby="sectionTitle">
+      <article class="card moment-card${n.ending?' is-end':''}${turn?' page-arriving':''}" data-node="${n.id}" aria-labelledby="sectionTitle">
       <figure class="moment-visual"><div class="art"><img src="${scene.source}" alt="" loading="eager"></div><div class="scene-label">${n.ending?'The end':'An adventure in English'}</div>
       <figcaption class="scene-caption"><strong>${BOOK.title}</strong><span>${n.ending?'One ending. More possibilities.':'A story shaped by your choices.'}</span></figcaption></figure>${inner}</article>
       <p class="reader-footer">${bookIcon}Tap underlined words for help. Choose your own way.</p>`;
-    wire(n,moveFocus);
+    wire(n,moveFocus); pageTurning=false;
   };
   const old=$("main").querySelector(".moment-card");
-  if(old&&!matchMedia("(prefers-reduced-motion:reduce)").matches){old.classList.add("leaving");old.inert=true;renderTimer=setTimeout(paint,180);}
+  if(old&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+    pageTurning=true; old.classList.add(turn?"page-turning":"leaving");old.inert=true;
+    renderTimer=setTimeout(paint,turn?330:180);
+  }
   else paint();
   setProgress(n.ending?1:(depth[node]||0)/Math.max(maxDepth,1));
 }
 
 function wire(n,moveFocus){
   $("levelShortcut").onclick=openSheet;
+  const backPage=$("bookBack"); if(backPage) backPage.onclick=()=>{
+    if(pageTurning||!trail.length) return;
+    const previous=trail.pop();node=previous.n;flags=new Set(previous.f);hideGloss();
+    window.scrollTo({top:0,behavior:"smooth"});render(true,true);
+  };
   if($("backCover")) $("backCover").onclick=()=>{renderIntro();window.scrollTo({top:0});$("begin").focus();};
   if(moveFocus&&!$("sheet").classList.contains("on")) $("sectionTitle")?.focus({preventScroll:true});
   const fine=finePointer();
@@ -1263,10 +1291,12 @@ function wire(n,moveFocus){
   });
   const visible=(n.choices||[]).filter(c=>{let r=c.requires||[];if(typeof r==="string")r=[r];return r.every(f=>flags.has(f))});
   $("main").querySelectorAll(".choices button").forEach(b=>b.onclick=()=>{
+    if(pageTurning) return;
     const c=visible[+b.dataset.i]; let s=c.sets||[]; if(typeof s==="string")s=[s];
-    s.forEach(f=>flags.add(f)); node=c.goto; hideGloss(); window.scrollTo({top:0,behavior:"smooth"}); render();
+    trail.push({n:node,f:[...flags]});
+    s.forEach(f=>flags.add(f)); node=c.goto; hideGloss(); window.scrollTo({top:0,behavior:"smooth"}); render(true,true);
   });
-  const again=$("again"); if(again) again.onclick=()=>{node=BOOK.start;flags=new Set();hideGloss();window.scrollTo({top:0});render();};
+  const again=$("again"); if(again) again.onclick=()=>{node=BOOK.start;flags=new Set();trail=[];hideGloss();window.scrollTo({top:0});render(true,true);};
   const mb=$("meaningBtn"); if(mb) mb.onclick=()=>{ const mt=$("mtext"); mt.hidden=false; mb.setAttribute("aria-expanded","true"); mb.hidden=true; mt.focus(); };
 }
 
@@ -1359,6 +1389,7 @@ document.addEventListener("keydown",e=>{
   if(view!=="book"||e.metaKey||e.ctrlKey||e.altKey||$("sheet").classList.contains("on")||$("handoff").classList.contains("on")) return;
   if(e.target instanceof Element && e.target.matches("input,select,textarea,button,a")) return;
   if(introMode){ if(e.key==="Enter"){ e.preventDefault(); $("begin")&&$("begin").click(); } return; }
+  if(e.key==="ArrowLeft"&&trail.length){ e.preventDefault(); $("bookBack")?.click(); return; }
   if(byId(node)?.ending){ if(e.key==="Enter"){ e.preventDefault(); $("again")&&$("again").click(); } return; }
   if(/^[1-9]$/.test(e.key)){
     const b=$("main").querySelectorAll(".choices button")[+e.key-1];
